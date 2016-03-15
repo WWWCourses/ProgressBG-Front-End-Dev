@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>flag_with_css</title>
+    <!-- С примера илюстрирам каскадността в CSS, като използвам възможно най-прости селектори.
+         В реалността - те биха били по-сложни. -->
+    <style type="text/css">
+        .flag{
+            display: inline-block;
+            line-height: 2em;
+            width: 20em;
+            border: .2em solid #333;
+        }
+        /*тези правила са в сила за всички span елементи*/
+        span{
+            display: block;
+            color: #CCC;
+        }
+        /*само за първия span елемент*/
+        span:nth-child(1){
+            background: white;
+        }
+        /*само за втория span елемент*/
+        span:nth-child(2){
+            background: green;
+        }
+        /*само за третия span елемент*/
+        span:nth-child(3){
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="flag bg">
+        <span>Бяло</span><span>Зелено</span><span>Червено</span>
+    </div>
+</body>
+</html>

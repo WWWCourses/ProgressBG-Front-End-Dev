@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+}
+p {
+    font-size: 200%;
+    color : green;
+}
+h2 {
+    text-indent:5%;
+    font-size: 1.5em;
+    color : blue;
+}
