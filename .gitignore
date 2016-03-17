@@ -1,0 +1,11 @@
+# ignore everything
+*
+
+# allow only next:
+!**/.gitignore
+!/lib
+!/lib/**
+!/outfit/**
+!/pages/**
+!/pages/themes/beginners/*/*.html
+!/pages/themes/beginners/*/examples/**
