@@ -7,5 +7,5 @@
 !/lib/**
 !/outfit/**
 !/pages/**
-!/pages/themes/beginners/*/*.html
-!/pages/themes/beginners/*/examples/**
+!/pages/themes/beginners/**/*.html
+!/pages/themes/beginners/**/examples/**
