@@ -101,6 +101,9 @@
         }
 
         /*~~~~~~~~~~ The list  ~~~~~~~~~~*/
+        .iep_syllabus_themes{
+            margin-bottom: 1em;
+        }
         .iep_syllabus_themes>li{
                     margin: 1em 0 0 0;
                     list-style-type: none;
