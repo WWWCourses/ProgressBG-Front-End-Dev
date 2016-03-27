@@ -209,10 +209,10 @@ div.results_h{
   border-top: 1px solid #999;
 }
 .reveal pre{
-  font-size: .4em;
+  font-size: .6em;
+  line-height: 1;
 }
 .reveal code{
-  /*background: rgba(0, 0, 0, 0.2);*/
 }
 /*********************************************
  * OTHER

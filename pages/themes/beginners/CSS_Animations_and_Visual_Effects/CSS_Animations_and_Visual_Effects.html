@@ -22,13 +22,12 @@
         link.href = window.location.search.match( /print-pdf/gi ) ? '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/paper.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
-    <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
-    <![endif]-->
+    <!--[if lt IE 9]><script src="lib/js/html5shiv.js"></script><![endif]-->
     <!-- CUSTOM -->
     <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/outfit/css/reveal.js.css">
     <link rel="stylesheet" type="text/css" href="/ProgressBG-Front-End-Dev/outfit/css/custom_hljs.css">
-
+    <!-- CSS for slides examples -->
+    <link rel="stylesheet" type="text/css" href="slides_examples/css/shadows.css">
     <base target="_blank">
 </head>
 <body>
@@ -59,7 +58,7 @@
         </div>
         <div class="company">
             <a href="http://progressbg.net/kurs-po-web-design/">
-            <img style="height:80%" src="/ProgressBG-Front-End-Dev/outfit/images/logos/ProgressBG_logo_529_127.png">
+            <img style="height:80%" src="/ProgressBG-Front-End-Dev/outfit/images/ts_demos/ProgressBG_ts_demo_529_127.png">
             </a>
         </div>
         <div class="author">
@@ -69,21 +68,175 @@
     </div>
 </section>
 
-<section><h2>CSS3 Shadow Effects</h2>
-    <section><h3>CSS3 text-shadow</h3>
-    <a href="http://www.w3schools.com/cssref/css3_pr_text-shadow.asp">CSS3 text-shadow Property</a>
+<section><h2>CSS3 text-shadow</h2>
+        <section>
+            <div class="example bg_blue">
+                <div class="shadow ts_demo">
+                    <span class="code">Text Shadow</span>
+                    <div class="hr">**********</div>
+                </div>
+            </div>
+        </section>
+        <section><h3>Синтаксис</h3>
+        <pre><code class="html">
+text-shadow: h-shadow v-shadow [blur-radius] color;
+        </code></pre>
+        <dl class="fa">
+            <dt>h-shadow</dt>
+                <dd>Задава хоризонтално отместване на сянката спрямо текста. Ако е отрицателно число, отместването е в ляво. Стойностите са единствено в <a href="https://developer.mozilla.org/en/docs/Web/CSS/length">CSS Length Units</a>.</dd>
+            <dt>v-shadow</dt>
+                <dd>Задава вертикално отместване на сянката спрямо текста. Ако е отрицателно число, отместването е над-текста. Стойностите са единствено в <a href="https://developer.mozilla.org/en/docs/Web/CSS/length">CSS Length Units</a>.</dd>
+        </dl>
     </section>
-    <section><h3>CSS3 box-shadow</h3>
+        <section><h3>Синтаксис</h3>
+        <pre><code class="html">
+    text-shadow: h-shadow v-shadow [blur-radius] color;
+            </code></pre>
+        <dl class="fa">
+            <dt>blur-radius</dt>
+                <dd>Опционален параметър: задава радиус на blur ефекта. Стойностите са единствено в <a href="https://developer.mozilla.org/en/docs/Web/CSS/length">CSS Length Units</a>.</dd>
+            <dt>color</dt>
+                <dd>Задава цвета на сянката. Стойностите са <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">стандартизираните стойности за цвят</a>.</dd>
+        </dl>
+    </section>
+        <section><h4>Вдясно</h4>
+        <pre><code>
+text-shadow: .1em 0 0 #D1D8B5;
+        </code></pre>
+        <div class="example bg_blue">
+            <p class="ts_simple_right">Примерен текст</p>
+        </div>
+    </section>
+        <section><h4>Вляво</h4>
+        <pre><code>
+text-shadow: -.1em 0 0 #D1D8B5;
+        </code></pre>
+        <div class="example bg_blue">
+            <p class="ts_simple_left">Примерен текст</p>
+        </div>
+    </section>
+        <section><h4>Долу</h4>
+        <pre><code>
+text-shadow: 0 .1em 0 #D1D8B5;
+        </code></pre>
+        <div class="example bg_blue">
+            <p class="ts_simple_bottom">Примерен текст</p>
+        </div>
+    </section>
+        <section><h4>Горе</h4>
+        <pre><code>
+text-shadow: 0 -.1em 0 #D1D8B5;
+        </code></pre>
+        <div class="example bg_blue">
+            <p class="ts_simple_top">Примерен текст</p>
+        </div>
+    </section>
+        <section><h4>Долу, вдясно</h4>
+        <pre><code>
+text-shadow: .1em .1em 0 #D1D8B5;
+        </code></pre>
+        <div class="example bg_blue">
+            <p class="ts_simple_right_bottom">Примерен текст</p>
+        </div>
+    </section>
+        <section><h4>Горе, вляво</h4>
+        <pre><code>
+text-shadow: .1em .1em 0 #D1D8B5;
+        </code></pre>
+        <div class="example bg_blue">
+            <p class="ts_simple_left_top">Примерен текст</p>
+        </div>
+    </section>
+        <section><h4>Blur ефект</h4>
+        <pre><code>
+text-shadow: .1em .1em .3em #D1D8B5;
+        </code></pre>
+        <div class="example bg_blue">
+            <p class="ts_simple_blur">Примерен текст</p>
+        </div>
+    </section>
+        <section><h3>Добавяне на повече от една сянка</h3>
+        <pre><code>
+text-shadow:
+            h-shadow v-shadow [blur-radius] color,
+            h-shadow v-shadow [blur-radius] color,
+            h-shadow v-shadow [blur-radius] color,
+            ...;
+        </code></pre>
+        <p class="note">Разделят се със запетая ','. Накрая се поставя ';'</p>
+
+    </section>
+        <section><h4>Преливащи се цветове</h4>
+        <pre><code>
+color: hsl(0, 100%, 70%);
+text-shadow:
+    1px 1px 0 hsl(360, 100%, 70%),
+    2px 2px 0 hsl(320, 100%, 70%),
+    3px 3px 0 hsl(280, 100%, 70%),
+    4px 4px 0 hsl(240, 100%, 70%),
+    5px 5px 0 hsl(200, 100%, 70%),
+    6px 6px 0 hsl(160, 100%, 70%),
+    7px 7px 0 hsl(120, 100%, 70%),
+    8px 8px 0 hsl(80,  100%, 70%),
+    9px 9px 0 hsl(40,  100%, 70%);
+        </code></pre>
+        <div class="example bg_blue">
+            <p class="ts_faded_red">Примерен текст</p>
+        </div>
+    </section>
+        <section><h4>Редуващи се цветове</h4>
+        <pre><code>
+color: hsl(120, 50%, 50%);
+text-shadow:
+    1px 1px 0px hsl(120, 100%, 50%),
+    2px 2px 0px hsl(60,  100%, 50%),
+    3px 3px 0px hsl(120, 100%, 50%),
+    4px 4px 0px hsl(60,  100%, 50%),
+    5px 5px 0px hsl(120, 100%, 50%),
+    6px 6px 0px hsl(60,  100%, 50%),
+    7px 7px 0px hsl(120, 100%, 50%),
+    8px 8px 0px hsl( 60, 100%, 50%),
+    9px 9px 0px hsl(120, 100%, 50%);
+        </code></pre>
+        <div class="example bg_blue">
+            <p class="green_to_yellow">Примерен текст</p>
+        </div>
+    </section>
+        <section><h3>Resources</h3>
+        <a href="http://www.w3schools.com/cssref/css3_pr_text-shadow.asp">CSS3 text-shadow Property</a>
+    </section>
+    </section>
+
+<section><h2>CSS3 box-shadow</h2>
+    <section>
+        <div class="example bg_white">
+            <div class="box bg_blue bs_simple_center">
+                <span class="code">Box Shadow</span>
+            </div>
+        </div>
+    </section>
+    <section><h3>Синтаксис</h3>
+        <pre><code class="html">
+box-shadow: h-shadow v-shadow blur spread color
+        </code></pre>
+        <dl class="fa">
+            <dt>h-shadow</dt>
+                <dd>Задава хоризонтално отместване на сянката спрямо текста. Ако е отрицателно число, отместването е в ляво. Стойностите са единствено в <a href="https://developer.mozilla.org/en/docs/Web/CSS/length">CSS Length Units</a>.</dd>
+            <dt>v-shadow</dt>
+                <dd>Задава вертикално отместване на сянката спрямо текста. Ако е отрицателно число, отместването е над-текста. Стойностите са единствено в <a href="https://developer.mozilla.org/en/docs/Web/CSS/length">CSS Length Units</a>.</dd>
+        </dl>
+    </section>
+
+    <section><h3></h3>
         <a href="http://www.w3schools.com/cssref/css3_pr_box-shadow.asp">CSS3 box-shadow Property</a>
     </section>
+    <section><h2>CSS3 Gradients</h2>
+        <a href="http://www.w3schools.com/css/css3_gradients.asp">CSS3 Gradients</a>
+    </section>
 </section>
-<section><h2>CSS3 Gradients</h2>
-    <a href="http://www.w3schools.com/css/css3_gradients.asp">CSS3 Gradients</a>
-</section>
-
-<section data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
-    <!-- <img class="the_end" src="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg"> -->
-</section>
+    <section data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
+        <!-- <img class="the_end" src="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg"> -->
+    </section>
 <!--
 ########################################################
 ##################### SLIDES END   #####################
