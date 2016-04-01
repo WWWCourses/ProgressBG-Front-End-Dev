@@ -167,9 +167,84 @@
   }
 /* multiple shadows }*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* bs_demo {*/
-
-/* bs_demo }*/
+/* bs_demo   {*/
+  div.example .bs_demo{
+    background:#34495e;
+    color: #CCC;
+  }
+  div.example .shadow{
+    font-size: 90px !important;
+    line-height: 2em !important;
+    font-weight: bold;
+    color: #34495e;
+    /* background-color: #34495e; */
+    box-shadow: 0px 0px 0 #222f3d,
+     1px 1px 0 #222f3d,
+     1px 1px 0 #222f3d,
+     2px 2px 0 #222f3d,
+     3px 3px 0 #222f3d,
+     4px 4px 0 #222f3d,
+     4px 4px 0 #222f3d,
+     5px 5px 0 #222f3d,
+     6px 6px 0 #222f3d,
+     6px 6px 0 #222f3d,
+     7px 7px 0 #222f3d,
+     8px 8px 0 #222f3d,
+     8px 8px 0 #222f3d,
+     9px 9px 0 #222f3d,
+     10px 10px 0 #222f3d,
+     11px 11px 0 #222f3d,
+     11px 11px 0 #222f3d,
+     12px 12px 0 #222f3d,
+     13px 13px 0 #222f3d,
+     13px 13px 0 #222f3d,
+     14px 14px 0 #222f3d,
+     15px 15px 0 #222f3d,
+     16px 16px 0 #222f3d,
+     16px 16px 0 #222f3d,
+     17px 17px 0 #222f3d,
+     18px 18px 0 #222f3d,
+     18px 18px 0 #222f3d,
+     19px 19px 0 #222f3d,
+     20px 20px 0 #222f3d,
+     21px 21px 0 #222f3d,
+     21px 21px 0 #222f3d,
+     22px 22px 0 #222f3d,
+     23px 23px 0 #222f3d,
+     23px 23px 0 #222f3d,
+     24px 24px 0 #222f3d,
+     25px 25px 0 #222f3d,
+     25px 25px 0 #222f3d,
+     26px 26px 0 #222f3d,
+     27px 27px 0 #222f3d,
+     28px 28px 0 #222f3d,
+     28px 28px 0 #222f3d,
+     29px 29px 0 #222f3d,
+     30px 30px 0 #222f3d,
+     30px 30px 0 #222f3d,
+     31px 31px 0 #222f3d,
+     32px 32px 0 #222f3d,
+     33px 33px 0 #222f3d,
+     33px 33px 0 #222f3d,
+     34px 34px 0 #222f3d,
+     35px 35px 0 #222f3d;
+    color: #6789ab;
+    transform: skew(0deg);
+  }
+  div.example .ts_demo .code {
+    font-family: courier;
+    font-size: 120px;
+    color: #fff;
+  }
+  div.example .ts_demo .hr {
+    position: relative;
+  }
+  div.example p{
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+  }
+/* bs_demo   }*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* simple box shadow {*/
   div.example bs_simple_center{
