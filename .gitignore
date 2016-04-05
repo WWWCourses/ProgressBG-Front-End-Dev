@@ -6,6 +6,6 @@
 !/lib
 !/lib/**
 !/outfit/**
-!/pages/themes/beginners/**/*.html
+!/pages/themes/beginners/*/*.html
 !/pages/themes/beginners/**/examples/**
 !/pages/themes/beginners/**/images/**
