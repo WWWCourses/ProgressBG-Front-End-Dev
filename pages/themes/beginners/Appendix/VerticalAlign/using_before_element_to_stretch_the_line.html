@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Vertical Align - using_before_element_to_stretch_the_line</title>
+    <style type="text/css">
+        html, body{
+            height: 100%;
+        }
+        .wrapper{
+            width: 20em;
+            height: 10%;
+            background: red;
+        }
+        .palceholder{
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-left: -.25em;
+            /* border: 1px solid blue; */
+        }
+        .v_centered{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        span{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="palceholder"></div>
+        <div class="v_centered">
+            <span>Вертикално  центриранцентриран блок.Вертикално  центриранцентриран блок</span>
+        </div>
+    </div>
+    <div>Нормално поставен блок</div>
+</body>
+</html>
