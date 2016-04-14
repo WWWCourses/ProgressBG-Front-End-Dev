@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JS_HTML_DOM</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/lib/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/sky.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/obsidian.min.css">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- CUSTOM -->
+    <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/outfit/css/reveal.js.css">
+    <link rel="stylesheet" type="text/css" href="/ProgressBG-Front-End-Dev/outfit/css/custom_hljs.css">
+    <link rel="stylesheet" type="text/css" href="/ProgressBG-Front-End-Dev/outfit/css/common/themes/MatDes/text_schemes.css">
+    <base target="_blank">
+</head>
+<body>
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <a class="home_link" href="../../../agenda/beginners.html#JS_HTML_DOM_id" target="_top"><i class="fa fa-home"></i></a>
+        <div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/white.css'); return false;">White</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/league.css'); return false;">League</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/sky.css'); return false;">Sky</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/beige.css'); return false;">Beige</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/simple.css'); return false;">Simple</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/serif.css'); return false;">Serif</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/night.css'); return false;">Night</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/moon.css'); return false;">Moon</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/solarized.css'); return false;">Solarized</a>
+        </div>
+        <div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>HTML DOM</h1></section>
+<section data-transition="zoom">
+    <div class="copyright">
+        <div class="note">
+            <p>Created for</p>
+        </div>
+        <div class="company">
+            <a href="http://progressbg.net/kurs-po-web-design/">
+            <img style="height:80%" src="/ProgressBG-Front-End-Dev/outfit/images/logos/ProgressBG_logo_529_127.png">
+            </a>
+        </div>
+        <div class="author">
+            <span>Iva E. Popova, 2016,</span>
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+        </div>
+    </div>
+</section>
+
+<section><h2>Какво е HTML DOM?</h2>
+    <dl class="fa">
+            <dt><abbr>DOM</abbr><dfn><span>Document</span><span>Object</span><span>Model</span></dfn></dt>
+            <dt><span class="note">платформено-независима</span> и <span class="note">езиково-независима</span> конвенция за представяне и взаимодействие с обектите в <span class="code">HTML</span>, <span class="code">XHTML</span> и <span class="code">XML</span> документи.</dt>
+            <dt>В ДОМ всичко е възел (<span class="note code">node</span>)</dt>
+                <dd>Самият html документ е възел: <span class="note code">document node</span>.</dd>
+                <dd>Всички HTML елементи са възли: <span class="note code">elements nodes</span></dd>
+                <dd>Всички HTML атрибути са възли: <span class="note code">attribute nodes</span></dd>
+                <dd>Текстовото съдържание на един елемент също е възел: <span class="note code">text node</span></dd>
+                <dd>Коментарите са възли: <span class="note code">comment node</span></dd>
+    </dl>
+</section>
+
+<section><h2>The Document Object</h2>
+    <dl class="fa">
+        <dt>Когато браузера зареди една Уеб страница, той създава кореспондиращият й обектен модел.</dt>
+        <dt>На главния HTML елемент съпоставя обекта <span class="note code">document object</span>.</dt>
+        <dt><span class="note code">document object</span> предоставя всички методи и свойства за достъпване на всички възли в документа чрез JavaScript.</dt>
+            <dd><a href="http://www.w3schools.com/jsref/dom_obj_document.asp">w3schools: The HTML DOM Document Object</a></dd>
+    </dl>
+</section>
+
+<section><h2>The Element Object</h2>
+    <dl class="fa">
+        <dt>В HTML DOM, на всеки един HTML елемент се съпоставя един обект - <span class="code note">element object</span>, който е възел в DOM.</dt>
+        <dt>Всеки един <span class="code note">element node</span> може да бъде родител на други element nodes или text nodes или comment nodes</dt>
+        <dt>element nodes притежават следните методи и свойства: <a href="http://www.w3schools.com/jsref/dom_obj_all.asp">The HTML DOM Element Object</a></dt>
+    </dl>
+</section>
+
+<section><h2>The HTML DOM Attribute Object</h2>
+    <dl class="fa">
+        <dt>Всеки един HTMl атрибут в DOM се предсавя като <span class="note code">attribute object</span></dt>
+        <dt>attribute object винаги се разглежда като част от element object.</dt>
+        <dt>attribute objects притежават следните методи и свойства: <a href="http://www.w3schools.com/jsref/dom_obj_attributes.asp">The HTML DOM Attribute Object</a></dt>
+    </dl>
+</section>
+<section><h2>The HTML DOM Attribute Object</h2>
+    <dl class="fa">
+        <dt></dt>
+    </dl>
+</section>
+
+<section><h2>References</h2>
+    <dl class="fa">
+        <dt><a href="https://en.wikipedia.org/wiki/Document_Object_Model">wikipedia.org: Document Object Model</a></dt>
+        <dt><a href="http://www.w3schools.com/jsref/dom_obj_document.asp">w3schools: The HTML DOM Document Object</a></dt>
+    </dl>
+</section>
+
+<section data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
+    <!-- <img class="the_end" src="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg"> -->
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+        </div>
+    </div>
+    <!-- external scripts -->
+    <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
+    <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
+     <!-- init reveal -->
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            width: 1024,
+            height: 850,
+            // Bounds for smallest/largest possible scale to apply to content
+            // minScale: .5,
+            maxScale: 1,
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+</body>
+</html>
