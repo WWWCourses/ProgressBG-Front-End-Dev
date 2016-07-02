@@ -3,7 +3,6 @@
 
 # allow only next:
 !**/.gitignore
-!**/*sublime-*
 !/lib
 !/lib/**
 !/outfit/**
