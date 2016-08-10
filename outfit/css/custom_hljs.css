@@ -6,6 +6,8 @@ code[rel]::before{
     margin-top: -0.5em;
     padding-top: .3em;
     padding-bottom: .3em;
+    padding-left: 0;
+    padding-right: 0;
     overflow: auto;
     text-align: center;
     border-bottom-left-radius:  3px;

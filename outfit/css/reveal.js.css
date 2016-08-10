@@ -13,7 +13,7 @@
   text-transform: none;
 }
 /*the presentation title ( all slides )*/
-.reveal .slides h1{
+.reveal>.slides h1{
   margin: 0;
   padding: 0;
   font-size: 2em;
@@ -200,19 +200,33 @@ a.home_link{
   height: 40vh !important;
   /*height: auto;*/
 }
-div.results_h{
-  width: 90%;
-  margin: 20px auto;
-  padding: 1em 0 0 0;
-  text-align: left;
-  font-size: .6em;
-  border-top: 1px solid #999;
-}
 .reveal pre{
   font-size: .6em;
   line-height: 1;
 }
-.reveal code{
+.reveal pre code{
+  padding-left: 0;
+  padding-right: 0
+}
+.reveal pre code.tabs3 .xml{
+  display: block;
+  margin-left: -5.25em;
+  /* background: red; */
+}
+.reveal pre code.tabs4 .xml{
+  display: block;
+  margin-left: -7em;
+  /* background: red; */
+}
+.reveal pre code.tabs5 .xml{
+  display: block;
+  margin-left: -8.75em;
+  /* background: red; */
+}
+.reveal pre code.tabs5 .xml{
+  display: block;
+  margin-left: -10.5em;
+  /* background: red; */
 }
 /*********************************************
  * OTHER

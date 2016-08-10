@@ -44,7 +44,7 @@
     font-style: italic;
     color: #ef9a9a;
 }
-.reveal .keyconcept{
+.reveal .keyconcept, .reveal .keyword{
     color: #C5E1A5;
     font-style: italic;
 }
