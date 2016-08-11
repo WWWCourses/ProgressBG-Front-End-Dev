@@ -79,14 +79,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.reveal section dl>dt>i{
+/* .reveal section dl>dt>i{
   margin: 0 .5em 0 -1.5em;
   opacity: .5;
   vertical-align: middle;
   font-style: normal;
   font-weight: normal;
   text-decoration: inherit;
-}
+} */
 .reveal section dl.fa>dd:before{
   position: relative;
   bottom: .2em;
@@ -107,6 +107,15 @@
    /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.reveal section dl.fa dt blockquote{
+  width: 93%;
+  margin-left: .5em;
+  /* font-size: .8em; */
+}
+.reveal section dl.fa dt blockquote cite{
+  display: block;
+  font-size: .8em;
 }
 i.img{
   margin: 1.5em .2em 0 .2em;
@@ -203,10 +212,16 @@ a.home_link{
 .reveal pre{
   font-size: .6em;
   line-height: 1;
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 .reveal pre code{
   padding-left: 0;
-  padding-right: 0
+  padding-right: 0;
+  line-height: 1.2em;
 }
 .reveal pre code.tabs3 .xml{
   display: block;

@@ -8,12 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
     <!-- css & themes include -->
     <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/lib/reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/sky.css" id="theme">
-    <!-- Code syntax highlighting -->
-    <!-- <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/lib/reveal.js/lib/css/zenburn.css"> -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/obsidian.min.css">
-    <!--DARK:  tomorrow-night/monokai-sublime/obsidian/tomorrow-night-eighties/ -->
-    <!-- LIGHT:tomorrow/ -->
+    <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css" id="theme">
     <!-- Printing and PDF exports -->
     <script>
         var link = document.createElement( 'link' );
@@ -25,23 +20,15 @@
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
-    <!-- custom -->
-    <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/outfit/css/reveal.js.css">
+    <!-- CUSTOM -->
     <base target="_blank">
 </head>
 <body>
     <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
         <a class="home_link" href="../../../agenda/beginners.html#HTML_Bases" target="_top"><i class="fa fa-home"></i></a>
         <div class="footer theme_switch">
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/white.css'); return false;">White</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/league.css'); return false;">League</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/sky.css'); return false;">Sky</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/beige.css'); return false;">Beige</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/simple.css'); return false;">Simple</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/serif.css'); return false;">Serif</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/night.css'); return false;">Night</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/moon.css'); return false;">Moon</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/solarized.css'); return false;">Solarized</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css'); return false;">Dark</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/light.css'); return false;">Light</a>
         </div>
         <div class="slides">
 <!--
@@ -226,7 +213,6 @@
     <section><h3>Елемента meta</h3>
         <p>Дефинира мета-данни за документа</p>
         <pre><code>
-        &lt;meta http­equiv="content­type" content="text/html; charset=UTF­8"&gt;
         &lt;meta charset="UTF­8"&gt;
         &lt;meta name="robots" content="selection"&gt;
         &lt;meta name="keywords" content="WebDesign, Course, HTML, CSS, JavaScript"&gt;
@@ -266,6 +252,18 @@
             <dd><a href="http://www.javascripttoolbox.com/bestpractices/#comments">http://www.javascripttoolbox.com/bestpractices/#comments</a></dd>
         </dl>
 
+    </section>
+</section>
+<section><h2>HTML validator</h2>
+    <section>
+        <a href="https://validator.w3.org/">W3C Markup Validation Service</a>
+    </section>
+    <section><h3>Защо да валидираме кода?</h3>
+        <dl class="fa">
+            <dt><span class="keyword">SEO: </span>Валидния HTML код е необходима предпоставка за точното индексиране на сайта( search engines, crowlers, etc.), респективно - за оптимизацията на нашия сайт.</dt>
+            <dt><span class="keyword">UX: </span>Точно индексирания код позволява на търсачките да представят сайта ни в резултатите по най-удобния за потребителя начин.</dt>
+            <dt>Това е единствения сигурен начин да си открием грешка в кода, която дори да не рефлектира визулно върху страницата, ще ни спести много време за оправяне на <em>проблеми</em> с CSS и JS.</dt>
+        </dl>
     </section>
 </section>
 <section data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">

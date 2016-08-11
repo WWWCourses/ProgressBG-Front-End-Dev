@@ -6,6 +6,7 @@
 !**/*.sublime-project
 !/lib
 !/lib/**
+!/outfit
 !/outfit/**
 !/pages/themes/beginners/*/*.html
 !/pages/themes/beginners/**/examples/**
