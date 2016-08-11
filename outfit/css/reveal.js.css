@@ -218,14 +218,14 @@ a.home_link{
   margin-left: -7em;
   /* background: red; */
 }
-.reveal pre code.tabs5 .xml{
+.tabs5, .reveal pre code.tabs5 .xml{
   display: block;
-  margin-left: -8.75em;
+  margin-left: -9.5em;
   /* background: red; */
 }
-.reveal pre code.tabs5 .xml{
+.reveal pre code.tabs6 .xml{
   display: block;
-  margin-left: -10.5em;
+  margin-left: -12em;
   /* background: red; */
 }
 /*********************************************
