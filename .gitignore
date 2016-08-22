@@ -3,6 +3,7 @@
 
 # allow only next:
 !**/.gitignore
+!apache_vhost_local.conf
 !gh-pages.sublime-project
 !/lib
 !/lib/**
