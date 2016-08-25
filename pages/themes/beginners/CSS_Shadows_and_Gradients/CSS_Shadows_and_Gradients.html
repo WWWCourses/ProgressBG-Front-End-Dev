@@ -68,8 +68,8 @@
             </div>
         </section>
     <section><h3>Синтаксис</h3>
-        <pre><code class="html">
-text-shadow: h-shadow v-shadow [blur-radius] color;
+        <pre><code rel="Formal syntax" class="JSON">
+            text-shadow: h-shadow v-shadow [blur-radius] color;
         </code></pre>
         <dl class="fa">
             <dt><span class="note">h-shadow</span></dt>
@@ -79,9 +79,9 @@ text-shadow: h-shadow v-shadow [blur-radius] color;
         </dl>
     </section>
     <section><h3>Синтаксис</h3>
-        <pre><code class="html">
-    text-shadow: h-shadow v-shadow [blur-radius] color;
-            </code></pre>
+        <pre><code rel="Formal syntax" class="JSON">
+            text-shadow: h-shadow v-shadow [blur-radius] color;
+        </code></pre>
         <dl class="fa">
             <dt><span class="note">blur-radius</span></dt>
                 <dd>Опционален параметър: задава радиус на blur ефекта. Стойностите са единствено в <a href="https://developer.mozilla.org/en/docs/Web/CSS/length">CSS Length Units</a>.</dd>
@@ -90,102 +90,102 @@ text-shadow: h-shadow v-shadow [blur-radius] color;
         </dl>
     </section>
     <section><h4>Вдясно</h4>
-        <pre><code>
-text-shadow: .1em 0 0 #D1D8B5;
+        <pre><code rel="CSS">
+            text-shadow: .1em 0 0 #D1D8B5;
         </code></pre>
         <div class="example bg_blue">
             <p class="ts_simple_right">Примерен текст</p>
         </div>
     </section>
     <section><h4>Вляво</h4>
-        <pre><code>
-text-shadow: -.1em 0 0 #D1D8B5;
+        <pre><code rel="CSS">
+            text-shadow: -.1em 0 0 #D1D8B5;
         </code></pre>
         <div class="example bg_blue">
             <p class="ts_simple_left">Примерен текст</p>
         </div>
     </section>
     <section><h4>Долу</h4>
-        <pre><code>
-text-shadow: 0 .1em 0 #D1D8B5;
+        <pre><code rel="CSS">
+            text-shadow: 0 .1em 0 #D1D8B5;
         </code></pre>
         <div class="example bg_blue">
             <p class="ts_simple_bottom">Примерен текст</p>
         </div>
     </section>
     <section><h4>Горе</h4>
-        <pre><code>
-text-shadow: 0 -.1em 0 #D1D8B5;
+        <pre><code rel="CSS">
+            text-shadow: 0 -.1em 0 #D1D8B5;
         </code></pre>
         <div class="example bg_blue">
             <p class="ts_simple_top">Примерен текст</p>
         </div>
     </section>
     <section><h4>Долу, вдясно</h4>
-        <pre><code>
-text-shadow: .1em .1em 0 #D1D8B5;
+        <pre><code rel="CSS">
+            text-shadow: .1em .1em 0 #D1D8B5;
         </code></pre>
         <div class="example bg_blue">
             <p class="ts_simple_right_bottom">Примерен текст</p>
         </div>
     </section>
     <section><h4>Горе, вляво</h4>
-        <pre><code>
-text-shadow: .1em .1em 0 #D1D8B5;
+        <pre><code rel="CSS">
+            text-shadow: .1em .1em 0 #D1D8B5;
         </code></pre>
         <div class="example bg_blue">
             <p class="ts_simple_left_top">Примерен текст</p>
         </div>
     </section>
     <section><h4>Blur ефект</h4>
-        <pre><code>
-text-shadow: .1em .1em .3em #D1D8B5;
+        <pre><code rel="CSS">
+            text-shadow: .1em .1em .3em #D1D8B5;
         </code></pre>
         <div class="example bg_blue">
             <p class="ts_simple_blur">Примерен текст</p>
         </div>
     </section>
     <section><h3>Добавяне на повече от една сянка</h3>
-        <pre><code>
-text-shadow:
-            h-shadow v-shadow [blur-radius] color,
-            h-shadow v-shadow [blur-radius] color,
-            h-shadow v-shadow [blur-radius] color,
-            ...;
+        <pre><code rel="Formal syntax" class="JSON">
+            text-shadow:
+                h-shadow v-shadow [blur-radius] color,
+                h-shadow v-shadow [blur-radius] color,
+                h-shadow v-shadow [blur-radius] color,
+                ...;
         </code></pre>
         <p class="note">Разделят се със запетая ','. Накрая се поставя ';'</p>
     </section>
     <section><h4>Преливащи се цветове</h4>
-        <pre><code>
-color: hsl(0, 100%, 70%);
-text-shadow:
-    1px 1px 0 hsl(360, 100%, 70%),
-    2px 2px 0 hsl(320, 100%, 70%),
-    3px 3px 0 hsl(280, 100%, 70%),
-    4px 4px 0 hsl(240, 100%, 70%),
-    5px 5px 0 hsl(200, 100%, 70%),
-    6px 6px 0 hsl(160, 100%, 70%),
-    7px 7px 0 hsl(120, 100%, 70%),
-    8px 8px 0 hsl(80,  100%, 70%),
-    9px 9px 0 hsl(40,  100%, 70%);
+        <pre><code rel="CSS">
+            color: hsl(0, 100%, 70%);
+            text-shadow:
+                1px 1px 0 hsl(360, 100%, 70%),
+                2px 2px 0 hsl(320, 100%, 70%),
+                3px 3px 0 hsl(280, 100%, 70%),
+                4px 4px 0 hsl(240, 100%, 70%),
+                5px 5px 0 hsl(200, 100%, 70%),
+                6px 6px 0 hsl(160, 100%, 70%),
+                7px 7px 0 hsl(120, 100%, 70%),
+                8px 8px 0 hsl(80,  100%, 70%),
+                9px 9px 0 hsl(40,  100%, 70%);
         </code></pre>
         <div class="example bg_blue">
             <p class="ts_faded_red">Примерен текст</p>
         </div>
     </section>
     <section><h4>Редуващи се цветове</h4>
-        <pre><code>
-color: hsl(120, 50%, 50%);
-text-shadow:
-    1px 1px 0px hsl(120, 100%, 50%),
-    2px 2px 0px hsl(60,  100%, 50%),
-    3px 3px 0px hsl(120, 100%, 50%),
-    4px 4px 0px hsl(60,  100%, 50%),
-    5px 5px 0px hsl(120, 100%, 50%),
-    6px 6px 0px hsl(60,  100%, 50%),
-    7px 7px 0px hsl(120, 100%, 50%),
-    8px 8px 0px hsl( 60, 100%, 50%),
-    9px 9px 0px hsl(120, 100%, 50%);
+        <pre><code rel="CSS">
+            color: hsl(120, 50%, 50%);
+            text-shadow:
+                1px 1px 0px hsl(120, 100%, 50%),
+                2px 2px 0px hsl(60,  100%, 50%),
+                3px 3px 0px hsl(120, 100%, 50%),
+                4px 4px 0px hsl(60,  100%, 50%),
+                5px 5px 0px hsl(120, 100%, 50%),
+                6px 6px 0px hsl(60,  100%, 50%),
+                7px 7px 0px hsl(120, 100%, 50%),
+                8px 8px 0px hsl( 60, 100%, 50%),
+                9px 9px 0px hsl(120, 100%, 50%);
         </code></pre>
         <div class="example bg_blue">
             <p class="green_to_yellow">Примерен текст</p>
@@ -205,7 +205,7 @@ text-shadow:
         </div>
     </section>
     <section id="syntax"><h3>Синтаксис</h3>
-        <pre><code class="css">
+        <pre><code class="nohighlight">
 box-shadow: [inset] h-shadow v-shadow blur-radius spread-radius color;
         </code></pre>
         <dl class="fa">
@@ -253,6 +253,8 @@ box-shadow: [inset] h-shadow v-shadow blur-radius spread-radius color;
 -->
         </div>
     </div>
+    <!-- Custom processing -->
+    <script src="/ProgressBG-Front-End-Dev/outfit/js/slides.js"></script>
     <!-- external scripts -->
     <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
     <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>

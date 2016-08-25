@@ -97,7 +97,7 @@
 
 <section><h2>Селектори за елементи</h2>
     <section class="text_left"><h3>Element (type) selectors</h3>
-        <pre><code>
+        <pre><code rel="CSS">
             /* Всички параграфи в документа ще бъдат с червен шрифт */
             p {
                 color: red;
@@ -107,7 +107,7 @@
         <p><a href="examples/type_selectors_example.html">Пример: "Цитати на известни личности"</a></p>
     </section>
     <section class="text_left"><h3>Универсален селектор (Universal selector)</h3>
-        <pre><code>
+        <pre><code rel="CSS">
             * {
                 marging: 0;
                 padding: 0
@@ -120,14 +120,14 @@
 <section><h2>Селектори за class и id</h2>
     <section><h3>Селектор за class</h3>
         <p>Записва се с точка ("<b>.</b>") последвана от стойност на class.</p>
-         <pre><code>
+         <pre><code rel="CSS">
             /* Селектира всички HTML елементи, които са дефинирали class="blue" */
             .blue{
                 color: blue;
             }
         </code></pre>
         <p>Може да бъде специфициран допълнително, като пред него непосдредствено се запише тип на елемент, </p>
-        <pre><code>
+        <pre><code rel="CSS">
             /* Селектира всички HTML елементи, от тип 'p', които са дефинирали class="red" */
             p.red{
                 color: red;
@@ -140,7 +140,7 @@
         <p> Например: <code>p#vip{...}</code> няма смисъл и не се препоръчва да се използва.</p>
     </section>
     <section><h3>Пример</h3>
-        <pre><code>
+        <pre><code rel="CSS">
         /* Селектира всички HTML елементи, които са дефинирали class="c1" */
         .c1{
             color: purple;
@@ -159,7 +159,7 @@
                 2px 2px #c000c0;
         }
         </code></pre>
-        <pre><code>
+        <pre><code rel="HTML">
         <h1 class="c1">Заглавие</h1>
         <p class="c1">Параграф 1</p>
         <h2 class="c1">Под заглавие</h2>
@@ -229,6 +229,8 @@
 -->
         </div>
     </div>
+    <!-- Custom processing -->
+    <script src="/ProgressBG-Front-End-Dev/outfit/js/slides.js"></script>
     <!-- external scripts -->
     <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
     <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>

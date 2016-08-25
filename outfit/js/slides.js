@@ -13,6 +13,9 @@ function  PrettyPreCode(){
         var lines = content.split('\n');
         // console.log("lines:", lines);
 
+        if ( !lines[1] ){
+            continue;
+        }
         var tab_index = lines[1].search(/\S/);
         // console.log("tab_index", tab_index);
 
