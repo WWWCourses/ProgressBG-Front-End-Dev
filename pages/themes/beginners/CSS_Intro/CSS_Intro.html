@@ -62,8 +62,10 @@
 
 <section><h2>Какво е CSS?</h2>
     <section>
-        <p><strong>CSS</strong> = Cascading Style Sheets.</p>
-        <p>Съвкупност от форматиращи препоръки, правила, които указват <b>КАК</b> да се представи документа от браузера.</p>
+        <dl class="fa">
+            <dt><abbr>CSS</abbr><dfn id="CSS"><span>Cascading</span><span>Style</span><span>Sheets</span></dfn></dt>
+            <dt>Съвкупност от форматиращи препоръки, правила, които указват <b>КАК</b> да се представи документа от браузера.</dt>
+        </dl>
     </section>
     <section><h3>Cascading?</h3>
         <p>Комбиниране (каскадно) на различни стилови шаблони.</p>
@@ -97,21 +99,21 @@
         <img class="norm" src="images/CSS_DRY.png">
     </section>
     <section>
-        <p>Структуриран, концентриран единствено върху съдържанието, четим код.</p>
-        <pre><code>
-&lt;body bgcolor="#000000"&gt;
-    &lt;div border="1" bordercolor="red"&gt;
-        &lt;p&gt;&lt;font face="verdana" color="blue"&gt; Това е параграф оцветен в синьо !&lt;/font&gt;&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-</code></pre>
-<p>VS.</p>
-<pre><code>
-&lt;body&gt;
-    &lt;div&gt;
-        &lt;p&gt;Това е параграф оцветен в синьо !&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
+        <p>Структуриран, концентриран единствено върху съдържанието, четим HTML код.</p>
+        <pre><code rel="HTML">
+            &lt;body bgcolor=&quot;#000000&quot;&gt;
+                &lt;div border=&quot;1&quot; bordercolor=&quot;red&quot;&gt;
+                    &lt;p&gt;&lt;font face=&quot;verdana&quot; color=&quot;blue&quot;&gt; Това е параграф оцветен в синьо !&lt;/font&gt;&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/body&gt;
+        </code></pre>
+        <p>VS.</p>
+        <pre><code rel="HTML">
+            &lt;body&gt;
+                &lt;div&gt;
+                    &lt;p&gt;Това е параграф оцветен в синьо !&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/body&gt;
         </code></pre>
     </section>
 </section>
@@ -119,44 +121,43 @@
 <section><h2>Как?</h2>
     <section><h3><a href="http://www.w3schools.com/css/css_howto.asp">Inline CSS</a></h3>
         <p>Чрез <em>атрибутa</em> <code>style</code> за всеки един HTML елемент: </p>
-        <pre><code>
-&lt;tag style="[property : value;]+"&gt;
+        <pre><code rel="Formal Syntax">
+            &lt;tag style="[property : value;]+"&gt;
         </code></pre>
         <p>Например:</p>
-        <pre><code>
-&lt;p style="color : green;"&gt;текст в зелено&lt;/p&gt;
+        <pre><code rel="HTML">
+            &lt;p style="color : green;"&gt;текст в зелено&lt;/p&gt;
         </code></pre>
         <p><i>Предимства? Недостатъци?</i></p>
     </section>
-
     <section><h3><a href="http://www.w3schools.com/css/css_howto.asp">Internal CSS</a></h3>
         <p>В HEAD секцията, в ‘style’ елемента:</p>
-        <pre><code>
-&lt;head&gt;
-    &lt;style type=”text/css”&gt;
-        p {
-            text-indent:5%;
-            color : black;
-        }
+        <pre><code rel="HTML">
+            &lt;head&gt;
+                &lt;style type=”text/css”&gt;
+                    p {
+                        text-indent:5%;
+                        color : black;
+                    }
 
-        h2 {
-            text-indent:5%;
-            font-size: 1.5em;
-            color : red;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
+                    h2 {
+                        text-indent:5%;
+                        font-size: 1.5em;
+                        color : red;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
         </code></pre>
         <p><i>Предимства? Недостатъци?</i></p>
     </section>
-
     <section><h3><a href="http://www.w3schools.com/css/css_howto.asp">External CSS</a></h3>
         <p>Чрез дефиниране на CSS правилата в отделен файл ( *.css ). Свързва се с документа посредством елемента <code>link</code> в заглавната част на документа:</p>
-        <pre><code>
-&lt;head&gt;
-    &lt;link rel=StyleSheet href="css/basic.css " type="text/css" media=screen &gt;
-&lt;/head&gt;
+        <pre><code rel="HTML">
+            &lt;head&gt;
+                &lt;link rel="stylesheet" type="text/css" href="css/basic.css" &gt;
+            &lt;/head&gt;
         </code></pre>
+        <p><span class="note">NB! </span>Атрибута <code>type</code> може да се пропуска, тъй като в HTML5 се подразбира <code>type="text/css"</code></p>
         <p><i>Предимства? Недостатъци?</i></p>
     </section>
 </section>
@@ -164,81 +165,84 @@
 <section><h2>CSS правила - синтаксис</h2>
     <section>
         <p>Общ синтаксис на едно CSS правило:</p>
-        <pre><code>
-selector {
-    property1: value1;
-    property2: value2;
-       ...
-}
+        <pre><code rel="Formal Syntax">
+            selector {
+                property1: value1;
+                property2: value2;
+                   ...
+            }
+        </code></pre>
+        <p>Пример:</p>
+        <pre><code rel="CSS">
+            h1{
+                background-color: red;
+                color: white;
+            }
         </code></pre>
     </section>
-
     <section><p>Общ синтаксис на едно CSS правило:</p>
         <img class="norm" src="images/CSS_syntax_image.png">
     </section>
-
     <section>
         <p>Селекторите могат да се групират - отделят се със запетайка ‘ , ’</p>
-        <pre><code>
-h2,h4 {
-    color: white;
-}
+        <pre><code rel="CSS">
+            h2,h4 {
+                color: white;
+            }
         </code></pre>
     </section>
-
     <section>
         <p>Декларациите също могат да се групират – отделят се с точка и запетая ‘ ; ’</p>
-        <pre><code>
-h4 {
-    background-color: red;
-    color: white;
-    border: 5px solid gray;
-}
+        <pre><code rel="CSS">
+            h4 {
+                background-color: red;
+                color: white;
+                border: 5px solid gray;
+            }
         </code></pre>
         <p>' ; ' след последна декларация не е задължителна, но е добра практика да се поставя винаги – улеснява редактирането на кода.</p>
     </section>
 
     <section>
         <p>Пример</p>
-        <pre><code>
-        <div class="flag bg">
-            <span>Бяло</span><span>Зелено</span><span>Червено</span>
-        </div>
+        <pre><code rel="HTML">
+            <div class="flag bg">
+                <span>Бяло</span><span>Зелено</span><span>Червено</span>
+            </div>
         </code></pre>
         <a  href="examples/flag_without_css.html">резултат (без CSS)...</a>
-        <pre class="fragment"><code >
-        .flag{
-            display: inline-block;
-            line-height: 2em;
-            width: 20em;
-            border: .2em solid #333;
-        }
-        .flag>span{
-            display: block;
-        }
-        .bg>span:nth-child(1){
-            background: white;
-            color: #CCC;
-        }
-        .bg>span:nth-child(2){
-            background: green;
-            color: #CCC;
-        }
-        .bg>span:nth-child(3){
-            background: red;
-            color: #CCC;
-        }
+        <pre class="fragment"><code rel="CSS">
+            .flag{
+                display: inline-block;
+                line-height: 2em;
+                width: 20em;
+                border: .2em solid #333;
+            }
+            .flag>span{
+                display: block;
+            }
+            .bg>span:nth-child(1){
+                background: white;
+                color: #CCC;
+            }
+            .bg>span:nth-child(2){
+                background: green;
+                color: #CCC;
+            }
+            .bg>span:nth-child(3){
+                background: red;
+                color: #CCC;
+            }
         </code></pre>
         <a class="fragment" href="examples/flag_with_css.html">резултат (със CSS)...</a>
     </section>
-
     <section><h3>Коментари в CSS</h3>
         <dl>
             <dt><code>/*</code> - за начало на коментар</dt>
             <dt><code>*/</code> - за край на коментар</dt>
         </dl>
         <p>Пример:</p>
-        <pre><code>
+        <pre><code rel="CSS">
             /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
               Пример за многоредов коментар
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -262,7 +266,7 @@ h4 {
     </section>
     <section><h3>Специфичност (specificity)</h3>
         <p>Определя се от типа на селектора - колкото по-специфичен е един селектор, с толкова по-висок приоритет ще бъде той.</p>
-        <p>(ще разгледаме подробно в темата за CSS селектори)</p>
+        <p><i>(ще разгледаме подробно в темата за CSS селектори)</i></p>
     </section>
     <section><h3>Наследяване (inheritance)</h3>
         <h3>Дървовидна структура на HTML документ</h3>
@@ -270,15 +274,15 @@ h4 {
     </section>
     <section>
         <h3>От елементи-родители в HTML дървото</h3>
-        <pre><code>
-        body{
-            /*Всички елементи в body, ще се изобразят с черен на цвят шрифт*/
-            color: black;
-        }
-        /*Всички елементи в div, ще се изобразят с бял на цвят шрифт*/
-        div{
-            color: white;
-        }
+        <pre><code rel="CSS">
+            body{
+                /*Всички елементи в body, ще се изобразят с черен на цвят шрифт*/
+                color: black;
+            }
+            /*Всички елементи в div, ще се изобразят с бял на цвят шрифт*/
+            div{
+                color: white;
+            }
         </code></pre>
         <p style="font-size: .5em"><a href="examples/CSS_rules_inheritance_on_tree.html">Пример</a></p>
         <img class="norm" src="images/CSS_rules_inheritance_on_tree.png">
@@ -286,29 +290,29 @@ h4 {
     <section><h3>Наследяване (inheritance)</h3>
         <p><strong>Не всички свойства се наследяват!</strong></p>
         <p>Експериментирайте със следния код:</p>
-        <pre><code>
-        body{
-            background-color: lightblue;
-            color: black;
-        }
-        div{
-            background-color: red;
-            color: white;
-            /*забележете дали свойството border се наследява, така както color*/
-            border: 5px solid green;
-        }
+        <pre><code rel="CSS">
+            body{
+                background-color: lightblue;
+                color: black;
+            }
+            div{
+                background-color: red;
+                color: white;
+                /*забележете дали свойството border се наследява, така както color*/
+                border: 5px solid green;
+            }
         </code></pre>
-        <pre><code>
-        <h2>Заглавие</h2>
-        <div>
-            <p>текст в параграф...</p>
-            <ul>
-                <li>Елемент1</li>
-                <li>Елемент2</li>
-                <li>Елемент3</li>
-            </ul>
-        </div>
-        <p>друг параграф...</p>
+        <pre><code rel="HTMl">
+            <h2>Заглавие</h2>
+            <div>
+                <p>текст в параграф...</p>
+                <ul>
+                    <li>Елемент1</li>
+                    <li>Елемент2</li>
+                    <li>Елемент3</li>
+                </ul>
+            </div>
+            <p>друг параграф...</p>
         </code></pre>
     </section>
     <section><h3>Местоположение (location)</h3>
@@ -329,14 +333,14 @@ h4 {
     </section>
     <section>
         <h3>Пример за !important</h3>
-        <pre><code>
-        p{
-            background: red !important;
-            color: white;
-        }
+        <pre><code rel="CSS">
+            p{
+                background: red !important;
+                color: white;
+            }
         </code></pre>
-        <pre><code>
-        <p style="background-color: gray; color: black">текст в параграф...</p>
+        <pre><code rel="HTML">
+            <p style="background-color: gray; color: black">текст в параграф...</p>
         </code></pre>
         <p>Как ще бъде оцветен параграфа и текста в него?</p>
         <a class="fragment" href="examples/CSS_rules_precedence_important.html">Резултат...</a>
@@ -352,6 +356,8 @@ h4 {
 -->
         </div>
     </div>
+    <!-- Custom processing -->
+    <script src="/ProgressBG-Front-End-Dev/outfit/js/slides.js"></script>
     <!-- external scripts -->
     <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
     <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>

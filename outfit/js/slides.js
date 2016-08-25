@@ -8,7 +8,7 @@ function  PrettyPreCode(){
     for (var i = 0; i < codeNodes.length; i++)
     {
         var content = codeNodes[i].innerHTML;
-        // console.log("content:", content);
+        console.log("content:", content);
 
         var lines = content.split('\n');
         // console.log("lines:", lines);
