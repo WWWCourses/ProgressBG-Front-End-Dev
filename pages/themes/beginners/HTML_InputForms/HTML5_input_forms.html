@@ -59,7 +59,7 @@
 
 <section><h3>Елемент form</h3>
     <p>Контейнер, в който се разполагат елементите на формата</p>
-    <pre><code rel="html" class="tabs4">
+    <pre><code rel="html">
         <form action="registration.py" method="POST">
             <div>Име: <input type="text" name="uname"></div>
             <div>Парола: <input type="password" name="pass"></div>
@@ -69,14 +69,14 @@
 </section>
 
 <section><h3>Допустими елементи във <code><b>form</b></code></h3>
-<pre>
+    <pre>
 
-    <a href="http://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>       <a href="http://www.w3schools.com/tags/tag_textarea.asp">&lt;textarea&gt;</a>        <a href="http://www.w3schools.com/tags/tag_button.asp">&lt;button&gt;</a>
+        <a href="http://www.w3schools.com/tags/tag_input.asp">input</a>       <a href="http://www.w3schools.com/tags/tag_textarea.asp">textarea</a>        <a href="http://www.w3schools.com/tags/tag_button.asp">button</a>
 
-    <a href="http://www.w3schools.com/tags/tag_option.asp">&lt;option&gt;</a>      <a href="http://www.w3schools.com/tags/tag_optgroup.asp">&lt;optgroup&gt;</a>        <a href="http://www.w3schools.com/tags/tag_select.asp">&lt;select&gt;</a>
+        <a href="http://www.w3schools.com/tags/tag_option.asp">option</a>      <a href="http://www.w3schools.com/tags/tag_optgroup.asp">optgroup</a>        <a href="http://www.w3schools.com/tags/tag_select.asp">select</a>
 
-    <a href="http://www.w3schools.com/tags/tag_label.asp">&lt;label&gt;</a>       <a href="http://www.w3schools.com/tags/tag_fieldset.asp">&lt;fieldset&gt;</a>
-</pre>
+        <a href="http://www.w3schools.com/tags/tag_label.asp">label</a>       <a href="http://www.w3schools.com/tags/tag_fieldset.asp">fieldset</a>
+    </pre>
 </section>
 
 <section>
@@ -85,18 +85,18 @@
         <p>Създава поле за въвеждане на данни от потребителя</p>
         <p>Елемента е празен. Типът му се регулира от атрибута <a href="http://www.w3schools.com/tags/att_input_type.asp">type</a>.</p>
         <div class="left half">
-            <pre><code style="line-height: 2em">
-    Text type: <input type="text">
-    Pass type: <input type="password">
-    Checkbox: <input type="checkbox">
-    Radio: <input type="radio">
-    File: <input type="file">
-    Color: <input type="color">
-    Submit button: <input type="submit">
-    Reset button: <input type="reset">
+            <pre><code>
+                Text type: <input type="text">
+                Pass type: <input type="password">
+                Checkbox: <input type="checkbox">
+                Radio: <input type="radio">
+                File: <input type="file">
+                Color: <input type="color">
+                Submit button: <input type="submit">
+                Reset button: <input type="reset">
             </code></pre>
         </div>
-        <div class="right half small_font">
+        <div class="right half">
             Text type: <input type="text"><br>
             Pass type: <input type="password"><br>
             Checkbox: <input type="checkbox"><br>
@@ -165,10 +165,12 @@
 -->
         </div>
     </div>
+    <!-- Custom processing -->
+    <script src="/ProgressBG-Front-End-Dev/outfit/js/slides.js"></script>
     <!-- external scripts -->
     <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
     <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
-     <!-- init reveal -->
+    <!-- init reveal -->
     <script>
         // Full list of configuration options available at:
         // https://github.com/hakimel/reveal.js#configuration

@@ -76,3 +76,14 @@
     color: #000;
 }
 
+/* tabs indent */
+.tabs1{ margin-left: -4em !important; }
+.tabs2{ margin-left: -8em !important; }
+.tabs3{ margin-left: -12em !important; }
+.tabs4{
+    padding: 0 !important;
+    margin-left: -16em !important;
+
+}
+.tabs5{ margin-left: -20em !important; }
+
