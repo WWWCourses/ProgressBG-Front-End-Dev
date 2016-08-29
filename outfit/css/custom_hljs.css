@@ -14,6 +14,8 @@ code[rel]::before{
     border-bottom-right-radius: 3px;
     font-weight: bold;
     font-family: 'PT Serif',serif;
+    background: #99D78E;
+    color: #000;
 }
 code[rel="HTML"]::before{
     background: rgba(95, 24, 38, .5);

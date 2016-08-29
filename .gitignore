@@ -1,14 +1,10 @@
-# ignore everything
-*
+# all tmp/old files:
+**/*.tmp
+**/*.old
 
-# allow only next:
-!**/.gitignore
-!apache_vhost_local.conf
-!gh-pages.sublime-project
-!/lib
-!/lib/**
-!/outfit
-!/outfit/**
+*.sublime-workspace
+
+/pages/themes/beginners/*/*
 !/pages/themes/beginners/*/*.html
 !/pages/themes/beginners/**/examples/**
 !/pages/themes/beginners/**/images/**

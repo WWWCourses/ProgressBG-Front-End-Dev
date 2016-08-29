@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sublime Text</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/lib/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css" id="theme">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- CUSTOM -->
+    <base target="_blank">
+</head>
+<body>
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <a class="home_link" href="../../../agenda/beginners.html#Tools_ST3" target="_top"><i class="fa fa-home"></i></a>
+        <div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css'); return false;">Dark</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/light.css'); return false;">Light</a>
+        </div>
+        <div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section>
+    <h1>Sublime Text</h1>
+    <h3>Редактора, в който ще се влюбите</h3>
+</section>
+<section data-transition="zoom">
+    <div class="copyright">
+        <div class="note">
+            <p>Created for</p>
+        </div>
+        <div class="company">
+            <a href="http://progressbg.net/kurs-po-web-design/">
+            <img style="height:80%" src="/ProgressBG-Front-End-Dev/outfit/images/logos/ProgressBG_logo_529_127.png">
+            </a>
+        </div>
+        <div class="author">
+            <span>Iva E. Popova, 2016,</span>
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+        </div>
+    </div>
+</section>
+
+<section><h3>Защо избрах Sublime Text?</h3>
+    <dl class="fa">
+        <dt>Мултиплатформен: <span class="note">Linux</span>,<span class="note"> Windows</span>,<span class="note"> Mac OS X</span>.</dt>
+        <dt>Гъвкав, мощен и изключително бърз!</dt>
+        <dt>Може да се използва за обучение безплатно, без ограничения във функционалността и времето.</dt>
+        <dt>Изчерпателна документация документация: <a href="http://docs.sublimetext.info/en/latest/">Sublime Text Unofficial Documentation</a>.</dt>
+        <dt>Многобройна общност, създаваща непрекъснато множество полезни добавки за най-новите технологии: <a href="https://packagecontrol.io/">Package Control - The Sublime Text package manager</a>.</dt>
+        <dt>Python-базиран, с добре разработен API позволяващ да добавяте нова функционалност.</dt>
+    </dl>
+</section>
+<section><h3>Инсталиране</h3>
+    <p>От официалния сайт, където е последната версия: <a href="http://www.sublimetext.com/3">Sublime Text 3 - Download</a></p>
+    <p>Повече информация: <a href="http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/getting_started/install.html">ST3 installation notes</a></p>
+</section>
+<section><h2>Настройки</h2>
+    <section>
+        <h3>Глобални настройки</h3>
+        <dl class="fa">
+            <dt>Използват се 2 файла:</dt>
+            <dd>Sublime Text 3 => Preferences => Settings – Deafult</dd>
+            <dd>Sublime Text 3 => Preferences => Settings – User</dd>
+            <dt>Файлът, в който записваме промените е <span class="note">Settings – User</span>.Това гарантира, че настройките ни ще се запазят дори и след ъпдейт на Sublime.</dt>
+        </dl>
+    </section>
+    <section><h4>Настройки за проект</h4>
+        <p>Задават се във файла: Sublime Text 3 => Project => Edit Project. Структурата му е описана тук: <a href="https://www.sublimetext.com/docs/3/projects.html">Sublime Text 3 Documentation: Projects</a></p>
+    </section>
+    <section><h4>Примерни потребителски настройки</h4>
+        <pre><code rel="JSON">
+            {
+                "color_scheme": "Packages/User/Solarized (Light) (SL).tmTheme",
+                "font_face": "Courier New",
+                "font_size": 11,
+                "draw_white_space": "all",
+                "rulers": [80],
+                "tab_size": 4,
+                "translate_tabs_to_spaces": true,
+                "theme": "Soda Light 3.sublime­theme",
+                "show_encoding": true,
+            }
+        </code></pre>
+    </section>
+</section>
+<section><h3>Клавишни комбинации (Keyboard Shortcuts)</h3>
+    <dl class="fa">
+        <dt>Default:</dt>
+        <dd>Sublime Text 3 => Preferences => Key Bindings ­ Default</dd>
+        <dt>Потребителски:</dt>
+        <dd>Sublime Text 3 => Preferences => Key Bindings – User</dd>
+        <dt>Детайлна информация: <a href="http://sublime-text-unofficial-documentation.readthedocs.org/
+en/latest/reference/keyboard_shortcuts_win.html">http://sublime-text-unofficial-documentation.readthedocs.org/
+en/latest/reference/keyboard_shortcuts_win.html</a></dt>
+    </dl>
+</section>
+<section><h3>Пример:</h3>
+    <p>В Sublime Text 3 => Preferences => Key Bindings - User:</p>
+    <pre><code rel="JSON">
+        [
+            { "keys": ["alt+shift+up"], "command": "select_lines", "args": 
+            {"forward": false} },
+            { "keys": ["alt+shift+down"], "command": "select_lines", "args": 
+            {"forward": true} },
+        ]
+    </code></pre>
+</section>
+<section><h3>Въвеждане на команди</h3><br>
+    <h3>The Command Palette</h3><br>
+    <dl class="fa">
+        <dt>Активиране: <span class="code">Ctrl+Shift+P</span></dt>
+        <dd>Дава бърз достъп до всички поддържани от ST команди</dd>
+        <dd>Филтриране/търсене по произволна част от низа</dd>
+    </dl>
+</section>
+<section><h3>Инсталиране на Package Control</h3>
+    <dl class="fa">
+        <dt>Отворете: <a href="https://packagecontrol.io/installation">https://packagecontrol.io/installation</a></dt>
+        <dt>Копирайте точно съдържанието на блока в сиво, под надписа SUBLIME TEXT 3</dt>
+        <dt>Отворете Sublime Text 3</dt>
+        <dt>Активирайте конзолата на Sublime, чрез чрез натискане на <span class="code">ctrl+`</span> (Control + BackTick)</dt>
+        <dt>Поставете копираното съдържание в конзолата.</dt>
+        <dt>Добре е да рестартирате ST (задължително под Windows).</dt>
+    </dl>
+</section>
+<section><h3>Справочници:</h3>
+    <dl class="fa">
+        <dt><a href="http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/">Неофициална, но изчерпателна, документация</a></dt>
+        <dt>Video Tutorials:</dt>
+            <dd><a href="https://www.youtube.com/watch?v=SVkR1ZkNusI&list=PLpcSpRrAaOaqQMDlCzE_Y6IUUzaSfYocK&index=1">Sublime Text Tutorial</a> - 12 videos by <a href="https://www.youtube.com/channel/UCHRp19HU7Y2LwfI0Ai6WAGQ">LearnWebCode</a></dd>
+
+    </dl>
+</section>
+
+<section data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
+    <!-- <img class="the_end" src="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg"> -->
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+        </div>
+    </div>
+    <!-- Custom processing -->
+    <script src="/ProgressBG-Front-End-Dev/outfit/js/slides.js"></script>
+    <!-- external scripts -->
+    <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
+    <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
+     <!-- init reveal -->
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            width: 1024,
+            height: 850,
+            // Bounds for smallest/largest possible scale to apply to content
+            // minScale: .5,
+            maxScale: 1,
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+</body>
+</html>
