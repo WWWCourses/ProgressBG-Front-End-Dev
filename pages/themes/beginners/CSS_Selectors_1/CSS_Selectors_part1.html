@@ -104,7 +104,7 @@
             }
         </code></pre>
         <p><u>Действие</u>: селектира всички HTML елементи от дадения тип.</p>
-        <p><a href="examples/type_selectors_example.html">Пример: "Цитати на известни личности"</a></p>
+        <p><a href="slides_examples/type_selectors_example.html">Пример: "Цитати на известни личности"</a></p>
     </section>
     <section class="text_left"><h3>Универсален селектор (Universal selector)</h3>
         <pre><code rel="CSS">
@@ -114,6 +114,7 @@
             }
         </code></pre>
         <p><u>Действие</u>: селектира всички HTML елементи в документа.</p>
+        <p>Не се препоръчва да се използва, тъй като забавя обработката на страницата.</p>
     </section>
 </section>
 
@@ -160,13 +161,13 @@
         }
         </code></pre>
         <pre><code rel="HTML">
-        <h1 class="c1">Заглавие</h1>
-        <p class="c1">Параграф 1</p>
-        <h2 class="c1">Под заглавие</h2>
-        <p class="c1">Параграф 2</p>
-        <p id="vip">Съществува само един елемент с id="vip"</p>
+            <h1 class="c1">Заглавие</h1>
+            <p class="c1">Параграф 1</p>
+            <h2 class="c1">Под заглавие</h2>
+            <p class="c1">Параграф 2</p>
+            <p id="vip">Съществува само един елемент с id="vip"</p>
         </code></pre>
-        <a href="examples/class_selectors.html">резултат</a>
+        <a href="slides_examples/class_selectors.html">резултат</a>
     </section>
 </section>
 
@@ -195,20 +196,27 @@
             </div>
             <hr>
             <ul>
-                <li>DIV3: Child of DIV2; Descendant of DIV2 and DIV3</li>
-                <li><a href="examples/html_nodes_types_code_and_preview.html">Пример</a></li>
+                <li>DIV3: Child of DIV2; Descendant of DIV2 and DIV1</li>
+                <li><a href="slides_examples/html_nodes_types_code_and_preview.html">Пример</a></li>
             </ul>
         </div>
     </section>
     <section>
-        <p>Поради съображения за сигурност не можем да селектираме елементи и в ляво по  дървото. Поради това няма селектор за предшественик.</p>
-        <p>Селекторите, чрез които можем да избираме елементи в HTML дървото са:</p>
+        <p>Селекторите, чрез които можем да избираме елементи според позицията им в HTML дървото се образуват чрез <span class="note">комбинатори</span>:</p>
+        <p>Комбинаторите, са символи, чрез които се задава връзка между селектори и така чрез тях се образува съставен селектор.</p>
+    </section>
+    <section>
+        <p>CSS3 комбинатори:</p>
         <ul>
-            <li>селектор за наследници (descendant selector): '<b>space</b>'</li>
-            <li>селектор за деца (child selector): '<b>></b>'</li>
-            <li>селектор за брат - без значение дали следва непосредствено брат си (general sibling selector): '<b>~</b>'</li>
-            <li>селектор за брат, който е разположен непосредствено след брат си (adjacent sibling selector):  '<b>+</b>'</li>
+            <li>за наследници (descendant nodes): '&nbsp;&nbsp;'</li>
+            <li>за деца (child nodes): '<span class="note">></span>'</li>
+            <li>за брат - без значение дали следва непосредствено брат си (general sibling nodes): '<span class="note">~</span>'</li>
+            <li>за брат, който е разположен непосредствено след брат си (adjacent sibling nodes):  '<span class="note">+</span>'</li>
         </ul>
+    </section>
+    <section>
+        <p>Поради съображения за сигурност, засега, не можем да селектираме елементи <span class="note">нагоре</span> и в <span class="note">ляво</span> по  дървото. Поради това няма селектор за предшественик.</p>
+
     </section>
 </section>
 
@@ -217,6 +225,9 @@
         <a href="http://www.w3schools.com/css/css_attribute_selectors.asp">w3schools - CSS Attribute Selector</a>
         <hr>
         <p>Дават възможност да се селектират елементи с произволни атрибути и стойности за тях.</p>
+    </section>
+    <section><h3>Пример:</h3>
+    <a href="http://codepen.io/webdesigncourse/pen/pEzRQA/">Attribute selectors in codepen</a>
     </section>
 </section>
 <section data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">

@@ -6,5 +6,7 @@
 
 /pages/themes/beginners/*/*
 !/pages/themes/beginners/*/*.html
-!/pages/themes/beginners/**/examples/**
+!/pages/themes/beginners/**/*examples/
+!/pages/themes/beginners/**/*examples/**
+!/pages/themes/beginners/**/images/
 !/pages/themes/beginners/**/images/**
