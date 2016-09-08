@@ -60,18 +60,22 @@
     </div>
 </section>
 
-<section><h2>Какво е The Box Model</h2>
+<section><h2>CSS Visual Formating Model: the Box Model</h2>
+    <section><h3>Какво е The Box Model</h3>
+        <dl class="fa">
+            <dt>Съществен елемент от Визуалния Модел за Форматиране (Visual Formating Model)– алгоритъма по който браузера визуализира и подрежда елементите от страницата.</dt>
+            <dt>Всеки елемент от дървото на HTML документа се интерпретира като правоъгълна кутийка.</dt>
+        </dl>
+        <p>Пример: <a href="slides_examples/DocumentVisualFormatingModel_single.html">Visual Formating Model Simplpe Example</a></p>
+    </section>
     <section>
         <dl class="fa">
-            <dt>Съществен елемент от Визуалния Модел за Форматиране (Visual Formating Model)– алгоритъма по който браузера визуализира елементите от страницата.</dt>
-            <dt>Всеки елемент от дървото на HTML документа се интерпретира като правоъгълна кутийка.</dt>
             <dt>Подреждането на кутийките зависи от:</dt>
+            <dd>Позицията на елементите в дървовидната структура на документа (document tree)</dd>
             <dd>размера на кутийката</dd>
             <dd>типа на елемента (блоков, поредов)</dd>
             <dd>схема за позициониране ( normal, float, absolute)</dd>
-            <dd>връзките между елементите в дървовидната структура на документа (document tree)</dd>
         </dl>
-        <p>Пример: <a href="slides_examples/DocumentVisualFormatingModel_single.html">DocumentVisualFormatingModel_single.html</a> или в <a href="http://codepen.io/webdesigncourse/pen/gaZaVE">codepen</a></p>
     </section>
 </section>
 <section><h2>Структура на една кутия</h2>
@@ -90,8 +94,8 @@
 <section><h2>Как да зададем размери на кутийката?</h2>
     <section>
         <dl class="fa">
-            <dt>Свойства: <code>width</code> и <code>height</code></dt>
-            <dt>Задават ширината(width) и височината(height) на <span class="i b red">съдържанието</span> за елемент от тип блок.</dt>
+            <dt>Свойства: <code class="note">width</code> и <code class="note">height</code></dt>
+            <dt>Задават широчината (width) и височината (height) на <span class="i b red">съдържанието</span> за елемент от тип блок.</dt>
             <dt>Ако желаем в зададените размери браузера да включи вътрешния отстъп и рамката, то трябва да използваме: <code>box-sizing: border-box;</code></dt>
             <dt>Възможни стойности за width и height:</dt>
                 <dd>Абсолютни (px, pt, cm, ...)</dd>
@@ -101,9 +105,12 @@
     </section>
     <section>
         <dl class="fa">
-            <dt>Дефинирани са и свойствата min-width, max-width, min-heigh и max-heigth, чрез които по-детайлно можем да ограничим размерите на елемент.</dt>
-                <dt>Когато са зададени едновременно width, min-width и max-width, то приоритета е: 1.min-width; 2.max-width; 3.width </dt>
-                <dd>За височината е в сила същата приоритетна схема.</dd>
+            <dt>Дефинирани са и свойствата <code class="note">min-width</code>, <code class="note">max-width</code>, <code class="note">min-heigh</code> и <code class="note">max-heigth</code>, чрез които по-детайлно можем да ограничим размерите на елемент.</dt>
+                <dt>Когато са зададени едновременно width, min-width и max-width, то приоритета е: </dt>
+                <dd>1.min-width</dd>
+                <dd>2.max-width</dd>
+                <dd>3.width</dd>
+                <dt>За височината е в сила същата приоритетна схема.</dt>
         </dl>
     </section>
 </section>
@@ -111,7 +118,7 @@
     <section><h4>За всяка една страна, поотделно:</h4><br>
         <div class="text_left">
             <dl class="fa">
-                <dt>Вътрешен отстъп (padding):</dt>
+                <dt>Вътрешен отстъп (<code class="note">padding</code>):</dt>
                     <dd><code>padding­-top</code> : горен вътрешен отстъп</dd>
                     <dd><code>padding­-right</code> : десен вътрешен отстъп</dd>
                     <dd><code>padding­-bottom</code> : долен вътрешен отстъп</dd>
@@ -119,7 +126,7 @@
             </dl>
             <hr>
             <dl class="fa">
-                <dt>Външен отстъп (margin):</dt>
+                <dt>Външен отстъп (<code class="note">margin</code>):</dt>
                     <dd><code>margin-top</code> : горен външен отстъп</dd>
                     <dd><code>margin-right</code> : десен външен отстъп</dd>
                     <dd><code>margin-bottom</code> : долен външен отстъп</dd>
@@ -160,7 +167,7 @@
     <section><h3>Поредови елементи</h3>
         <p>Поредовите елементи (<span class="lightgreen">inline elements</span>) генерират кутия, която се изобразява в рамките на текущия ред. Tе се позиционират непосредствено след предхождащият ги елемент, като браузерът поставя спейс между тях за разделител. Заемат толкова място, колкото е необходимо за да се представи съдържанието им.</p>
         <p><span class="nb darkred">NB!</span> Поредовите елементи не могат да съдържат блокови елементи.</p>
-        <p><span class="nb darkred">NB!</span> CSS свойствата <code>width</code> и <code>height</code> нямат влияние над тях.</p>
+        <p><span class="nb darkred">NB!</span> CSS свойствата <code>width</code> и <code>height</code> <b>нямат</b> влияние над тях.</p>
     </section>
     <section><h4>Поредови елементи са:</h4><br>
             <code>b, big, i, small, tt,</code>
