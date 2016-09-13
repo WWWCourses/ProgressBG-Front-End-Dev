@@ -119,6 +119,29 @@
 </section>
 
 <section><h2>Селектори за class и id</h2>
+    <section><h3>Атрибутите: class и id</h3>
+        <dl class="fa">
+            <dt><span class="code note">class</span> - можем да зададем един и същи клас на <span class="note">множество</span> елементи в HTML. Така лесно можем да селектираме всички тях.</dt>
+            <dt><span class="code note  ">id</span> - само <span class="note">един</span> елемент в документа може да има дадено id. T.e. чрез <span class="code">id</span> селектираме само един елемент.</dt>
+        </dl>
+        <pre><code rel="HTML">
+            <p class="odd">Параграф 1</p>
+            <p class="even" id="vip">Параграф 2</p>
+            <p class="odd">Параграф 3</p>
+            <p class="even">Параграф 4</p>
+            <p class="odd">Параграф 5</p>
+        </code></pre>
+    </section>
+    <section><h3>Атрибутите: class и id</h3>
+        <dl class="fa">
+            <dt>Стойностите на атрибута class, задължително започват с буква, след която може да има произволна съвкупност от букви, цифри, '_' и '-'.</dt>
+            <dt>Можем да зададем няколко класа за един елемент, като ги разделяме със спейс.</dt>
+            <pre><code rel="HTML">
+                <p class="odd red">Параграф 3</p>
+            </code></pre>
+            <dt>В примера параграфа едновременно ще принадлежи към класовете 'odd' и 'red'.</dt>
+        </dl>
+    </section>
     <section><h3>Селектор за class</h3>
         <p>Записва се с точка ("<b>.</b>") последвана от стойност на class.</p>
          <pre><code rel="CSS">

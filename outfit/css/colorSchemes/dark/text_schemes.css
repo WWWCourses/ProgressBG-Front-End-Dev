@@ -93,3 +93,8 @@
     font-size: 1.6em;
     line-height: 1.2;
 }
+
+.reveal .advanced i{
+  color: #EEA8A8;
+  font-size: .8em;
+}
