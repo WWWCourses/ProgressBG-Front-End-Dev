@@ -62,31 +62,38 @@
     </section>
     <section>
         <p>Изобразяването и подреждането на елементите, най-общо зависи от:</p>
-        <ul class="fa">
-            <li>Размера на кутийката, която представлява елемента.</li>
-            <li>Типа на елемента (inline, block)</li>
-            <li>Схемата за позициониране ( normal flow/ float /absolute )</li>
-            <li>Останалите елементи в HTML  дървото.</li>
-            <li>Размерът и позицията на viewport-a.</li>
-        </ul>
+        <dl class="fa">
+            <dt>Размера на кутийката, която представлява елемента.</dt>
+            <dt>Типа на елемента (inline, block)</dt>
+            <dt>Схемата за позициониране ( normal flow/ float /absolute )</dt>
+            <dt>Позицията на елементите в дървовидната структура на документа (document tree)</dt>
+            <dt>Размерът и позицията на viewport-a.</dt>
+        </dl>
     </section>
 </section>
 
-<section><h2>Свойство display</h2>
-    <section><p>Задава типа на кутийката, в която ще се изобрази HTML елементът.</p>
+<section><h2>Задаване на тип на елемента</h2>
+    <section><h3>Свойство display</h3>
+    <p>Задава типа на кутийката, в която ще се изобрази HTML елементът.</p>
     <pre><code rel=CSS class="tab3">
     div.left_column {
         display: inline-block;
     }
     </code></pre>
     </section>
-    <section><h2>Основни стойности</h2>
+    <section><h3>Основни стойности на свойството <code>display</code></h3>
         <ul class="fa">
-            <li><strong>display: none</strong> - елементът не се показва и не заема място в документа.</li>
-            <li><strong>display: inline:</strong> - елементът се интерпретира като поредов елемент</li>
-            <li><strong>display: block:</strong> - елементът се интерпретира като блоков елемент</li>
-            <li><strong>display: inline-block:</strong> - елементът се интерпретира като поредов елемент, на които могат да се задават размери (width, height)</li>
+            <li><strong><span class="note">display: none</span></strong> - елементът не се показва и <u>не заема</u> място в документа. Останалите елементи се позиционират сякаш той не съществува.</li>
+            <li><strong><span class="note">display: inline</span>:</strong> - елементът се интерпретира като поредов елемент. Свойствата <code>width</code> и <code>height</code> не оказват влияние.</li>
+            <li><strong><span class="note">display: block</span>:</strong> - елементът се интерпретира като блоков елемент</li>
+            <li><strong><span class="note">display: inline-block:</span></strong> - елементът се интерпретира като поредов елемент, на който могат да се зададат размери (width, height)</li>
         </ul>
+    </section>
+    <section><h3>Основни стойности на свойството <code>display</code></h3>
+        <p>Пример:</p>
+        <iframe height='400' scrolling='no' src='http://codepen.io/webdesigncourse/embed/QKNxkd/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; '>See the Pen <a href='http://codepen.io/webdesigncourse/pen/QKNxkd/'>Block, inline & inline-block elements</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+    </section>
+    <section>
         <p>Всички стойности: <a href="http://www.w3schools.com/cssref/pr_class_display.asp">w3schools - CSS display Property</a></p>
     </section>
 </section>
@@ -103,11 +110,25 @@
     </section>
     <section><h3>Основни схеми за позициониране</h3>
         <ul class="fa">
-            <li><strong>static</strong>: Елементите се подреждат по реда на срещането им в HTML стуктурата. Това е нормалната (default) схема за позициониране.</li>
-            <li><strong>relative</strong>: Елементите се подреждат относително спрямо нормалната схема за позициониране. Отчитат се стойностите за top, right, bottom и left.</li>
-            <li><strong>fixed</strong>: Елементът се „изваждат“ от нормалната схема и се позиционира <i>относително спрямо прозореца на браузера (viewport)</i>.</li>
-            <li><strong>absolute</strong>: Елементът се „изваждат“ от нормалната схема и се позиционира относително <i>спрямо най-прекият си предшественик, който е позициониран</i> – т.е. има зададено свойство postion различно от static.</li>
+            <li><strong class="note">static</strong>: Елементите се подреждат по реда на срещането им в HTML стуктурата. Това е нормалната (default) схема за позициониране.</li>
+            <li><strong class="note">relative</strong>: Елементите се подреждат относително спрямо нормалната схема за позициониране. Отчитат се стойностите за top, right, bottom и left.</li>
         </ul>
+    </section>
+    <section><h3>Основни схеми за позициониране</h3>
+        <ul class="fa">
+            <li><strong class="note">fixed</strong>: Елементът се „изваждат“ от нормалната схема и се позиционира <i>относително спрямо прозореца на браузера (viewport)</i>.</li>
+            <li><strong class="note">absolute</strong>: Елементът се „изваждат“ от нормалната схема и се позиционира относително <i>спрямо най-прекият си предшественик, който е позициониран</i> – т.е. има зададено свойство postion различно от static.</li>
+        </ul>
+    </section>
+    <section><h3>Основни схеми за позициониране</h3>
+        <p>Static vs. Relative Position:</p>
+        <iframe height='300' scrolling='no' src='http://codepen.io/webdesigncourse/embed/ORNakg/?height=300&theme-id=20230&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/ORNakg/'>Static vs. Relative Position</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>Основни схеми за позициониране</h3>
+        <p>Absolute div in Relative:</p>
+        <iframe height='300' scrolling='no' src='http://codepen.io/webdesigncourse/embed/jbJORR/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/jbJORR/'>Absolute in relative</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
     </section>
 </section>
 

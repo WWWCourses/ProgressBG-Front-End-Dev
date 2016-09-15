@@ -70,11 +70,12 @@
     </section>
     <section>
         <dl class="fa">
-            <dt>Подреждането на кутийките зависи от:</dt>
+            <dt>Изобразяването и подреждането на елементите, най-общо зависи от:</dt>
+            <dd>Размера на кутийката, която представлява елемента.</dd>
+            <dd>Типа на елемента (inline, block)</dd>
+            <dd>Схемата за позициониране ( normal flow/ float /absolute )</dd>
             <dd>Позицията на елементите в дървовидната структура на документа (document tree)</dd>
-            <dd>размера на кутийката</dd>
-            <dd>типа на елемента (блоков, поредов)</dd>
-            <dd>схема за позициониране ( normal, float, absolute)</dd>
+            <dd>Размерът и позицията на viewport-a.</dd>
         </dl>
     </section>
 </section>
@@ -153,9 +154,12 @@
 </section>
 <section><h2>Блокови, поредови и замествани елементи</h2>
     <section><h3>Блокови елементи</h3>
-        <p>Блоковите елементи (<span class="lightgreen">block elements</span>) генерират кутия, която се позиционира като блок - винаги започва на нов ред и заема целият ред, независимо дали съдържанието й ще запълни реда.</p>
-        <p><span class="nb darkred">NB!</span> Блоковите елементи могат да съдържат както поредови, така и блокови елементи.</p>
-        <p><span class="nb darkred">NB!</span> Размера на блоковите елементи може да се контролира чрез CSS свойствата <code>width</code> и <code>height</code>.</p>
+        <dl class="fa">
+            <dt>Блоковите елементи (<span class="lightgreen">block elements</span>) генерират кутия, която се позиционира като блок - винаги започва на нов ред и заема целият ред, независимо дали съдържанието й ще запълни реда.</dt>
+            <dt>Височината на един блоков елемент се определя от съдържанието му. Т.е. елемента ще бъде толкова висок, колкото е необходимо за да обхване съдържанието.</dt>
+            <dt><span class="nb darkred">NB!</span> Блоковите елементи могат да съдържат както поредови, така и блокови елементи.</dt>
+            <dt><span class="nb darkred">NB!</span> Размера на блоковите елементи може да се контролира чрез CSS свойствата <code>width</code> и <code>height</code>.</dt>
+        </dl>
     </section>
     <section><h4>Блокови елементи са:</h4>
         <code>address, article, aside, blockquote, canvas, </code>
@@ -165,9 +169,11 @@
         <code>p, pre, section, table, tfoot, ul, video</code>
     </section>
     <section><h3>Поредови елементи</h3>
-        <p>Поредовите елементи (<span class="lightgreen">inline elements</span>) генерират кутия, която се изобразява в рамките на текущия ред. Tе се позиционират непосредствено след предхождащият ги елемент, като браузерът поставя спейс между тях за разделител. Заемат толкова място, колкото е необходимо за да се представи съдържанието им.</p>
-        <p><span class="nb darkred">NB!</span> Поредовите елементи не могат да съдържат блокови елементи.</p>
-        <p><span class="nb darkred">NB!</span> CSS свойствата <code>width</code> и <code>height</code> <b>нямат</b> влияние над тях.</p>
+        <dl class="fa">
+            <dt>Поредовите елементи (<span class="lightgreen">inline elements</span>) генерират кутия, която се изобразява в рамките на текущия ред. Позиционират се непосредствено след предхождащият ги елемент. Заемат толкова място, колкото е необходимо за да се представи съдържанието им.</dt>
+            <dt><span class="nb darkred">NB!</span> Поредовите елементи не могат да съдържат блокови елементи.</dt>
+            <dt><span class="nb darkred">NB!</span> CSS свойствата <code>width</code> и <code>height</code> <b>нямат</b> влияние над тях.</dt>
+        </dl>
     </section>
     <section><h4>Поредови елементи са:</h4><br>
             <code>b, big, i, small, tt,</code>
@@ -177,10 +183,12 @@
             <code>button, input, label, select, textarea</code>
     </section>
     <section><h3>Замествани елементи</h3>
-        <p>Заместваните елементи (<span class="lightgreen">replaced elements</span>) представят външни обекти (изображение, видео и пр.) чието изобразяване е независимо от CSS. </p>
-        <p>Такива са елементите: </p>
-        <code>img, objec, video, textarea, input, button, select и др.</code>
-        <p><span class="nb">NB!</span> Чрез CSS можем да контролираме някои аспекти на заместваните елементи като размери (width и height) и външни отстъпи.</p>
+        <dl class="fa">
+            <dt>Заместваните елементи (<span class="lightgreen">replaced elements</span>) представят външни обекти (изображение, видео и пр.) чието изобразяване е независимо от CSS. </dt>
+            <dt>Такива са елементите: </dt>
+            <code>img, objec, video, textarea, input, button, select и др.</code>
+            <dt><span class="nb">NB!</span> Чрез CSS можем да контролираме <span class="note">само някои</span> аспекти на заместваните елементи като размери (width и height) и външни отстъпи.</dt>
+        </dl>
     </section>
 </section>
 <section><h2>Групиране на HTML елементи</h2>
