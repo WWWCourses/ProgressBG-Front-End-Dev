@@ -10,5 +10,5 @@
 !/pages/themes/beginners/**/*examples/**
 !/pages/themes/beginners/**/images/
 !/pages/themes/beginners/**/images/**
-!/pages/themes/beginners/**/homework/
-!/pages/themes/beginners/**/homework/**
+!/pages/themes/beginners/**/homework*/
+!/pages/themes/beginners/**/homework*/**
