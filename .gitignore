@@ -8,6 +8,8 @@
 !/pages/themes/beginners/*/*.html
 !/pages/themes/beginners/**/*examples/
 !/pages/themes/beginners/**/*examples/**
+!/pages/themes/beginners/**/*slides_examples/
+!/pages/themes/beginners/**/*slides_examples/**
 !/pages/themes/beginners/**/images/
 !/pages/themes/beginners/**/images/**
 !/pages/themes/beginners/**/homework*/
