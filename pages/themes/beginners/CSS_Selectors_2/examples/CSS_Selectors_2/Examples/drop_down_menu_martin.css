@@ -1,0 +1,54 @@
+.main_menu{
+	font-size: 1.5em;
+}
+.main_menu li{
+	list-style-type: none;
+}
+.main_menu li>a{
+	display: inline-block;
+	width: 20vw;
+	padding: 0 1em;
+	text-decoration:none;
+	border: 3px solid #999;
+	background-color: #333;
+	color: #ccc;
+}
+.main_menu li>a::first-letter{
+	color: red;
+	font-size: 2em;	
+}
+/* главно меню */
+body>ul>li{
+	display: inline-block;
+	height: 2em;
+	/* width: 12em; */
+	vertical-align: top;
+	margin: 0 0 0 -.25em;
+}
+/* под менютата */
+.main_menu>li>ul{
+	display: none;
+	padding-left: 1em;
+	font-size: 34px;
+	margin-top:2px;
+	background: orange;
+	/* visibility: hidden; */
+}
+.main_menu>li:hover>ul{
+	display:block;
+	/* display:none; */
+}
+.test:first-line{
+	color: red;
+}
+.test::selection{
+	background: purple;
+	color: lime;
+}
+.test::after
+
+{
+	content: "Ива: ";
+	background: blue;
+}
+

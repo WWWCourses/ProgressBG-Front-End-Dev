@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>simple_drop_down</title>
+	<style type="text/css">
+		.main>li{
+			border: 1px solid red;
+		}
+		.main>li>a{
+			border: 1px solid black;
+		}
+		.sub{
+			display:none;
+		}
+		.main > li:hover > ul{
+			display: block;
+		}
+
+	</style>
+</head>
+<body>
+	<ul class="main">
+		<li>
+			<a href="#">Item1</a>
+			<ul class="sub">
+				<li>Sub1</li>
+				<li>Sub2</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>
