@@ -108,26 +108,26 @@
         }
         </code></pre>
     </section>
-    <section><h3>Основни схеми за позициониране</h3>
+    <section><h3>Схеми за позициониране</h3>
         <ul class="fa">
             <li><strong class="note">static</strong>: Елементите се подреждат по реда на срещането им в HTML стуктурата. Това е нормалната (default) схема за позициониране.</li>
             <li><strong class="note">relative</strong>: Елементите се подреждат относително спрямо нормалната схема за позициониране. Отчитат се стойностите за top, right, bottom и left.</li>
         </ul>
     </section>
-    <section><h3>Основни схеми за позициониране</h3>
+    <section><h3>Схеми за позициониране</h3>
         <ul class="fa">
             <li><strong class="note">fixed</strong>: Елементът се „изваждат“ от нормалната схема и се позиционира <i>относително спрямо прозореца на браузера (viewport)</i>.</li>
             <li><strong class="note">absolute</strong>: Елементът се „изваждат“ от нормалната схема и се позиционира относително <i>спрямо най-прекият си предшественик, който е позициониран</i> – т.е. има зададено свойство postion различно от static.</li>
         </ul>
     </section>
-    <section><h3>Основни схеми за позициониране</h3>
+    <section><h3>Схеми за позициониране</h3>
         <p>Static vs. Relative Position:</p>
-        <iframe height='300' scrolling='no' src='http://codepen.io/webdesigncourse/embed/ORNakg/?height=300&theme-id=20230&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/ORNakg/'>Static vs. Relative Position</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.
+        <iframe height='300' scrolling='no' src='http://codepen.io/webdesigncourse/embed/ORNakg/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/ORNakg/'>Static vs. Relative Position</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.
         </iframe>
     </section>
-    <section><h3>Основни схеми за позициониране</h3>
+    <section><h3>Схеми за позициониране</h3>
         <p>Absolute div in Relative:</p>
-        <iframe height='300' scrolling='no' src='http://codepen.io/webdesigncourse/embed/jbJORR/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/jbJORR/'>Absolute in relative</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.
+        <iframe height='300' scrolling='no' src='http://codepen.io/webdesigncourse/embed/jbJORR/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/jbJORR/'>Absolute in relative</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
     </section>
 </section>
@@ -144,12 +144,16 @@
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
     </section>
-    <section>Чрез <b>float</b> съдържанието на следващия/предходния елемент ще се „обтича“ в дясно/ляво от въпросния елемент. Елементите със свойство float се изваждат от нормалната схема за позициониране!
+    <section>
+        <dl class="fa">
+            <dt>Чрез <b>float</b> съдържанието на следващия/предходния елемент ще се „обтича“ в дясно/ляво от въпросния елемент</dt>
+            <dt class="note">Елементите със свойство float се изваждат от нормалната схема за позициониране!</dt>
+        </dl>
     </section>
     <section><h3>Стойности за float</h3>
         <ul class="fa">
-            <li><b>float: left</b> - елементът се подрежда най-вляво на текущия ред, а следващият го елемент се подрежда плътно вдясно до него.</li>
-            <li><b>float: right</b> - елементът се подрежда най-вдясно на текущия ред, а следващият го елемент се подрежда плътно вляво до него.</li>
+            <li><b class="note">float: left</b> - елементът се подрежда най-вляво на текущия ред, а следващите го елементи се подреждат плътно <span class="note">вдясно</span> до него.</li>
+            <li><b class="note">float: right</b> - елементът се подрежда най-вдясно на текущия ред, а следващите го елементи се подреждат плътно <span class="note">вляво</span> до него.</li>
         </ul>
     </section>
     <section><h3>"Изчистване" на float ефекта</h3>
