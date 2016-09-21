@@ -138,7 +138,7 @@
 </section>
 
 <section><h2>Свойство float</h2>
-    <section><p>Употреба:</p><br>
+    <section><p>Класическа употреба:</p><br>
         <div>
             <img src="images/seagull-623520_640.jpg" height="300" style="float: right;">
             <p style="text-align: left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -150,16 +150,23 @@
         </div>
     </section>
     <section>
+        <pre><code rel="Syntax">
+            float: [left|right|none|inline-start|inline-end];
+        </code></pre>
         <dl class="fa">
-            <dt>Чрез <b>float</b> съдържанието на следващия/предходния елемент ще се „обтича“ в дясно/ляво от въпросния елемент</dt>
-            <dt class="note">Елементите със свойство float се изваждат от нормалната схема за позициониране!</dt>
+            <dt>Елемент, за който е зададен <code>float</code> се <span class="note">се изваждат от нормалната схема за позициониране</span> и се позиционира възможно най в ляво/дясно в рамката на обхващащият го блок или до ръба на float елемент (ако има такъв).</dt>
+            <dt>Следващите го поредови елементи ще се „обтичат“ в дясно/ляво от въпросния елемент</dt>
+            <dt>Справочник: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">https://developer.mozilla.org/en-US/docs/Web/CSS/float</a></dt>
         </dl>
     </section>
     <section><h3>Стойности за float</h3>
         <ul class="fa">
-            <li><b class="note">float: left</b> - елементът се подрежда най-вляво на текущия ред, а следващите го елементи се подреждат плътно <span class="note">вдясно</span> до него.</li>
+            <li><b class="note">float: left</b> - елементът се подрежда най-вляво на текущия ред, а следващите го поредови елементи (или текстът в блокови такива) се подреждат плътно <span class="note">вдясно</span> до него, докато заемат цялата дължина на рамката.</li>
             <li><b class="note">float: right</b> - елементът се подрежда най-вдясно на текущия ред, а следващите го елементи се подреждат плътно <span class="note">вляво</span> до него.</li>
         </ul>
+    </section>
+    <section><h3>Пример</h3>
+        <iframe height='300' scrolling='no' src='//codepen.io/webdesigncourse/embed/BLQmZL/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/BLQmZL/'>Simple float example</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
     </section>
     <section><h3>"Изчистване" на float ефекта</h3>
         <ul class="fa">
