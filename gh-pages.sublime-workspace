@@ -1,1 +1,808 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"perl",
+				"perl_new_simple_class	perl_new_class_simple"
+			],
+			[
+				"vid",
+				"vid_info"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"bore",
+				"border"
+			],
+			[
+				"font",
+				"font-variant"
+			],
+			[
+				"fon",
+				"font-variant"
+			],
+			[
+				"out",
+				"outset"
+			],
+			[
+				"tex",
+				"text-indent"
+			],
+			[
+				"bac",
+				"background-attachment"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"ba",
+				"background-position"
+			],
+			[
+				"backgr",
+				"background-repeat"
+			],
+			[
+				"fo",
+				"font-style"
+			],
+			[
+				"h",
+				"hello"
+			],
+			[
+				"my",
+				"myFirstName"
+			],
+			[
+				"box-s",
+				"box-sizing"
+			],
+			[
+				"box",
+				"box-sizing"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"bord",
+				"border-width"
+			],
+			[
+				"font-",
+				"font-style"
+			],
+			[
+				"a",
+				"a	<a>"
+			],
+			[
+				"blo",
+				"block"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"fi",
+				"fixed"
+			],
+			[
+				"p",
+				"position"
+			],
+			[
+				"ab",
+				"absolute"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"s",
+				"style	<style>"
+			],
+			[
+				"u",
+				"ul	<ul>"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"b",
+				"border"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"r",
+				"relative"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"o",
+				"opacity"
+			],
+			[
+				"direction",
+				"directionRight"
+			],
+			[
+				"di",
+				"directionRight"
+			],
+			[
+				"d",
+				"directionUp"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"directio",
+				"directionRight"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"get",
+				"getColorPart"
+			],
+			[
+				"on",
+				"onclick	Attr"
+			],
+			[
+				"c",
+				"color"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"v",
+				"visibility"
+			],
+			[
+				"bo",
+				"border-bottom"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"margi",
+				"margin"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"se",
+				"section	<section>"
+			],
+			[
+				"border-b",
+				"border-bottom-style"
+			],
+			[
+				"i",
+				"inline-block"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
+				"f",
+				"font-size"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"border",
+				"border-top"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"lisst",
+				"list-style"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"cl",
+				"clear"
+			],
+			[
+				"th",
+				"thead	<thead>"
+			],
+			[
+				"to",
+				"top"
+			],
+			[
+				"l",
+				"left"
+			],
+			[
+				"backgroundc",
+				"background-color"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"hr",
+				"href	Attr"
+			],
+			[
+				"ar",
+				"article	<article>"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"margin-",
+				"margin-left"
+			],
+			[
+				"ht",
+				"html	html"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "branc",
+		"selected_items":
+		[
+			[
+				"branc",
+				"Sublimerge: Compare to Other Branch..."
+			],
+			[
+				"git lo",
+				"Git: Log All"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git stat	",
+				"Git: Status"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"branch",
+				"Sublimerge: Compare to Other Branch..."
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"git diff",
+				"Git: Diff All Files"
+			],
+			[
+				"git sta",
+				"Git: Status"
+			],
+			[
+				"git sh",
+				"Git: Show Current File"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"show",
+				"Sublimerge: Show Changes Between Current and Remote..."
+			],
+			[
+				"compare",
+				"Sublimerge: Compare to Other Branch..."
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"num",
+				"Insert Nums"
+			],
+			[
+				"set te",
+				"Set Syntax: Textile"
+			],
+			[
+				"color",
+				"Color Picker"
+			],
+			[
+				"nu",
+				"Insert Nums"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 538.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"clear",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/home/nemsys/bin/init_project.pl",
+		"/home/nemsys/projects/VideoDownloader/code/lib/File/Names/Standartizer.pm",
+		"/home/nemsys/projects/VideoDownloader/code/download_test.pl",
+		"/home/nemsys/Downloads/fstan/fstan.pl",
+		"/home/nemsys/projects/VideoDownloader/code/lib/filenameStandartizer.pm",
+		"/home/nemsys/projects/VideoDownloader/code/lib/File/standartizeName.pm",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/apache_vhost_local.conf",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/agenda/beginners.html",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/outfit/css/reveal.js.css",
+		"/home/nemsys/.gitconfig",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Selectors_1/Examples/TheCrow-RowHTML.html",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Selectors_1/homeworks/AphorismsList.html",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/.gitconfig",
+		"/home/nemsys/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Selectors_1/homeworks/TheCrow-RowHTML.html",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Selectors_1/homeworks/TheCrow-Task.html",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/4_WD.sublime-project",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/.gitignore",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/gh-pages.sublime-project",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_Iframes/tmp/test.html",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_Iframes/Iframes.html",
+		"/home/nemsys/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_Tables/HTML_Tables.html",
+		"/home/nemsys/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Shadows_and_Gradients/code_examples/button_clickable.html",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/4_WD.sublime-project",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Functions/labs_19_07_2016/first_function.html",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Functions/labs_19_07_2016/first_function.js",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Functions/examples/DOM_objects.html",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Functions/examples/DOM_objects.js",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/students/3_WD/KrasimiraRangelova/project/new/test/open_page_btn.html",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Basic_Syntax/labs/first_js.html",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Basic_Syntax/labs/js_intro.js",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/students/3_WD/KrasimiraRangelova/project/new/Krasi website/index.html",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/students/3_WD/KrasimiraRangelova/project/new/test/open_page_btn.css",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/students/3_WD/KrasimiraRangelova/project/new/test/open_page_btn.js",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/students/3_WD/KrasimiraRangelova/project/iep.edit/index.html",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/students/3_WD/KrasimiraRangelova/project/iep.edit/CSS/main_menu.css",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/students/3_WD/KrasimiraRangelova/templated-visualize/index.html",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/students/3_WD/KrasimiraRangelova/test_iva_btn.css",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/students/3_WD/KrasimiraRangelova/Krasi_website/index.html",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/students/3_WD/KrasimiraRangelova/test_iva_btn.html",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Shadows_and_Gradients/3_WD/hello.js",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/3_WD.sublime-project",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Shadows_and_Gradients/3_WD/shadows.html",
+		"/home/nemsys/projects/www/wwwcourses/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Shadows_and_Gradients/3_WD/shadows.css",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/3_WD.sublime-project",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/sublime_projects/3_WD.sublime-project",
+		"/C/Users/progress/Desktop/Kursisti/iva/lab_20160626/units.html",
+		"/C/Users/progress/Desktop/Kursisti/iva/lab_20160626/units.css",
+		"/C/Users/progress/Desktop/Kursisti/iva/mysite.com/CSS/text_formating.css",
+		"/C/Users/progress/Desktop/Kursisti/iva/petar/menu.html",
+		"/C/Users/progress/Desktop/Kursisti/iva/mysite.com/text_formating.html",
+		"/C/Users/progress/Desktop/Kursisti/iva/ProgressBG-Front-End-Dev-3_WE/ProgressBG-Front-End-Dev-3_WE/pages/themes/beginners/CSS_BasicProperties/CSS_Basic_Properties.html",
+		"/C/Users/progress/Desktop/Kursisti/Violeta Yanakieva/box.html",
+		"/C/Users/progress/Desktop/Kursisti/Violeta Yanakieva/dropdownmenu.html",
+		"/C/Users/progress/Desktop/Kursisti/Violeta Yanakieva/newpage.html",
+		"/C/Users/progress/Desktop/Kursisti/Maya Blazheva/selector.html",
+		"/C/Users/progress/Desktop/DynamicNetworkProject/index.html",
+		"/C/Users/progress/AppData/Roaming/Sublime Text 3/Packages/User/HTML5.sublime-snippet",
+		"/C/Users/progress/Desktop/Kursisti/Maya Blazheva/boxmodel.css",
+		"/C/Users/progress/Desktop/Kursisti/Maya Blazheva/boxmodel.html",
+		"/C/Users/progress/AppData/Roaming/Sublime Text 3/Packages/HTML5.sublime-snippet",
+		"/C/Users/progress/Desktop/Kursisti/Maya Blazheva/lorem ipsum.html",
+		"/C/Users/progress/Desktop/Kursisti/Maya Blazheva/DIV_and_SPAN.html",
+		"/C/Users/progress/Desktop/Kursisti/Maya Blazheva/defaault.css",
+		"/C/Users/progress/Desktop/Kursisti/Maya Blazheva/css_intro2.html",
+		"/C/Users/progress/Desktop/Kursisti/Maya Blazheva/css_intro1.html",
+		"/C/Users/progress/Desktop/Kursisti/Maya Blazheva/css_intro 2.html",
+		"/C/Users/progress/Desktop/Kursisti/Maya Blazheva/css_intro.html",
+		"/C/Users/progress/Desktop/Kursisti/Maya Blazheva/css_intro 1.html",
+		"/C/Users/progress/Desktop/Kursisti/viki1/html zadachi/Z1/Z3.html",
+		"/C/Users/progress/Desktop/Kursisti/viki1/html zadachi/Z1/Nested_lists_Muzika.html",
+		"/C/Users/progress/Desktop/Kursisti/viki1/html zadachi/Z1/Nested_lists.html",
+		"/C/Users/progress/Desktop/Kursisti/viki1/html/A.html",
+		"/C/Users/progress/Desktop/Kursisti/Nelka/1задача/1задача.html",
+		"/C/Users/progress/Desktop/Kursisti/Nelka/1задача/2задача.html",
+		"/C/Users/progress/Desktop/Kursisti/Nelka/1задача/част",
+		"/C/Users/progress/Desktop/Kursisti/viki1/texts/ex1.html",
+		"/C/Users/progress/Desktop/Kursisti/viki1/ex1.html",
+		"/C/Users/progress/Desktop/Kursisti/marulka/4/index-lists.html",
+		"/C/Users/progress/Desktop/Kursisti/marulka/4/tables/index-tables.html",
+		"/C/Users/progress/Desktop/marulka/index.html",
+		"/C/Users/progress/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/progress/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/progress/Desktop/Kursisti/Nelka/1/simplewebpage.html",
+		"/C/Users/progress/Desktop/Kursisti/mywebsite/styles.css",
+		"/C/Users/progress/Desktop/Kursisti/Nelka/1/paragraphs.html",
+		"/C/Users/progress/Desktop/Kursisti/Nelka/1/nn.html",
+		"/C/Users/progress/Desktop/Kursisti/Test/test.html",
+		"/C/Users/progress/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/progress/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/progress/Desktop/Kursisti/homework/Gallery/index.html",
+		"/C/Users/progress/Desktop/mywebsite/styles.css",
+		"/C/xampp/htdocs/demo/menu.php",
+		"/C/xampp/htdocs/demo/about.php",
+		"/C/xampp/htdocs/demo/contact.php",
+		"/C/xampp/htdocs/demo/header.php",
+		"/C/xampp/htdocs/demo/footer.php",
+		"/C/xampp/htdocs/demo/index.php",
+		"/C/Users/progress/Desktop/Kursisti/homework/image/dex.html",
+		"/C/Users/progress/Desktop/Kursisti/homework/image/333.html",
+		"/C/Users/progress/Desktop/Kursisti/homework/image/ind.css",
+		"/C/Users/progress/Desktop/Kursisti/homework/image/ind.html",
+		"/C/Users/progress/Desktop/Kursisti/homework/New folder (3)/new.html",
+		"/C/Users/progress/Desktop/Kursisti/homework/New folder (3)/script.js",
+		"/C/Users/progress/Desktop/Kursisti/homework/image/555.html",
+		"/C/Users/progress/Desktop/Kursisti/homework/image/444.html",
+		"/C/Users/progress/Desktop/Kursisti/homework/image/last.html",
+		"/C/Users/progress/Desktop/Kursisti/homework/image/scripts.js",
+		"/C/Users/progress/Desktop/Kursisti/homework/image/indexx.html",
+		"/C/Users/progress/Desktop/Kursisti/homework/image/styles.css",
+		"/C/Users/progress/Desktop/Kursisti/homework/New folder (3)/index.html",
+		"/C/Users/progress/Desktop/Kursisti/homework/New folder (3)/table.html",
+		"/C/Users/progress/Desktop/Kursisti/homework/New folder (3)/styles.css",
+		"/C/Users/progress/Desktop/Kursisti/homework/New folder/index.html",
+		"/C/Users/progress/Desktop/Kursisti/homework/New folder/index.css",
+		"/C/Users/progress/Desktop/Kursisti/homework/websiteDemo.html",
+		"/C/Users/progress/Desktop/Kursisti/homework/nov.css",
+		"/C/Users/progress/Desktop/Kursisti/homework/example2.html",
+		"/C/Users/progress/Desktop/Kursisti/homework/nov.html",
+		"/C/Users/progress/Desktop/Kursisti/homework/websiteDemo.css",
+		"/C/Users/progress/Desktop/Kursisti/homework/Website.html",
+		"/C/Users/progress/Desktop/Kursisti/homework/Website",
+		"/C/Users/progress/Desktop/Kursisti/homework/three.css",
+		"/C/Users/progress/Desktop/Kursisti/homework/three.html",
+		"/C/Users/progress/Desktop/Kursisti/homework/task2.html",
+		"/C/Users/progress/Desktop/Kursisti/homework/task2.css"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\"",
+			"filename",
+			"read_JSON_file",
+			"Вграждане на стил в страни",
+			"<[^>]+>",
+			"</[^>]+>",
+			"</b>",
+			"<b>",
+			"</b>",
+			"<b>",
+			"никой друг!",
+			"(\"[^\"]*\")",
+			"\"([^\"]*)\"",
+			"“",
+			"„",
+			"(?s)(^[^\\s].*?)\\n\\s",
+			"(?s)(^.*)\\n\\n",
+			"(?s)(^.*)\\n\\s*\\n",
+			"(?s)(^.*)\\n\\n",
+			"\\n\\n",
+			"(?s)„(.*?)“",
+			"\"about_poem\"",
+			"(?s)\"(.*?)\"",
+			"\"(.*?)\"",
+			"repla",
+			"\"(.*?)\"",
+			"tab",
+			"tabs",
+			"note",
+			"3",
+			"2",
+			"box",
+			"30",
+			"hsdgjghjdfhgdfjghdfc",
+			"userNameInFunction",
+			"userName",
+			"Percent function",
+			"\\n+",
+			"div",
+			"test",
+			"button",
+			"totalPrice",
+			"border",
+			"x",
+			"X",
+			"x",
+			"00000000000000",
+			",1",
+			"1",
+			"\\#\\w\\d{2}",
+			"\\#(\\d{3})",
+			"#300",
+			"300",
+			"p1",
+			"5",
+			"500",
+			"5",
+			"500",
+			"p1",
+			"span",
+			"bottom",
+			"middle",
+			"p",
+			"=\"\">",
+			"	<b>Настоящето и бъдещето на Витоша – наболели въпроси, които вълнуват жителите и гостите на София. Всички желаем „белият дроб“ на столицата да остане непокътнат за бъдещите поколения и да бъде достъпен за всички граждани, а тези въпроси се уреждат от План за управление на природния парк, който в момента се преработва.</b>\n\n	<i>Работна среща – дискусия на проекта за ПУ на ПП „Витоша“ на НПО експерти и граждани.</i>\n\n	<em>Дебат на кандидати за кметове на Столична община на тема „Бъдещето на Витоша“ и представяне на управленските им визии за столичната територия от Витоша. Участват кандидати за кметове на Столична община, излъчени от парламентарно представените политически сили, граждани и НПО, които ще заявят своите позиции за съдбата на природния парк, част от територията на столицата.</em>\n\n	<small>Водещи експерти от страна на „Зелени закони“ са Александър Дунчев и Тома Белев, а модератор е журналистът Пролет Велкова.</small>",
+			"encoding",
+			"adobe",
+			"zer",
+			"a h",
+			">\n",
+			"Sofia"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"",
+			"</u>",
+			"<u>",
+			"</span>",
+			"<span>",
+			"<span class=\"quote\">\\1</span>",
+			"<span>\\1</span>",
+			"\"",
+			"<p>\\1</p>",
+			"\\n",
+			"<span>\\1</span>",
+			"\\n",
+			"rgba(127,0,0,1)",
+			"<!"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "gh-pages.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/gh-pages.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 187.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
