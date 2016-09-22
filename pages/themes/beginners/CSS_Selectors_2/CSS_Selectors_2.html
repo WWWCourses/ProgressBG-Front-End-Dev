@@ -103,7 +103,7 @@
             </code></pre>
         </dl>
     </section>
-    <section><h3>:link</h3>
+    <section><a href="http://www.w3schools.com/cssref/sel_link.asp">:link</a>
         <dl class="fa">
             <dt>Селектира <span class="note">линк</span>, който не е посетен от дадения браузер.</dt>
             <dt>Пример:</dt>
@@ -114,7 +114,7 @@
             </code></pre>
         </dl>
     </section>
-    <section><h3>:visited</h3>
+    <section><a href="http://www.w3schools.com/cssref/sel_visited.asp">:visited</a>
         <dl class="fa">
             <dt>Селектира <span class="note">линк</span>, който вече е посетен от дадения браузер.</dt>
             <dt>Пример:</dt>
@@ -125,21 +125,21 @@
             </code></pre>
         </dl>
     </section>
-    <section><h3>:visited</h3>
+    <section><a href="http://www.w3schools.com/cssref/sel_visited.asp">:visited</a>
         <dl class="fa">
             <dt>От съображения за сигурността на потребителя, върху посетените линкове могат да се прилагат само някои от CSS свойствата</dt>
             <dt>Това са: color, background-color, border-color, border-bottom-color, border-left-color, border-right-color, border-top-color, outline-color, column-rule-color, fill and stroke.</dt>
             <dt class="advanced"><i class="fa fa-graduation-cap"></i><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector">Privacy and the :visited selector</a></dt>
         </dl>
     </section>
-    <section><h3>:visited</h3>
+    <section><a href="http://www.w3schools.com/cssref/sel_visited.asp">:visited</a>
         <dl class="fa">
             <dt>Редът на прилагане на стилове за линкове <span class="note">има</span> значение.</dt>
             <dt>За да се приложат правилно свойствата, трябва да подреждате правилата за линкове по следния ред:</dt>
             <dd>:link , :visited , :hover ,  :active</dd>
         </dl>
     </section>
-    <section><h3>:hover</h3>
+    <section><h3><a href="http://www.w3schools.com/cssref/sel_hover.asp">:hover</a></h3>
         <dl class="fa">
             <dt>Селектира <span class="note">елемент</span>, когато мишката се намира върху него.</dt>
             <dt>Пример:</dt>
@@ -155,7 +155,7 @@
         <iframe height='300' scrolling='no' src='http://codepen.io/webdesigncourse/embed/ZbPxWm/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/ZbPxWm/'>CSS drop-down menu - example 1</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
     </section>
-    <section><h3>:active</h3>
+    <section><h3><a href="http://www.w3schools.com/cssref/sel_active.asp">:active</a></h3>
         <dl class="fa">
             <dt>Селектира <span class="note">елемент</span>, когато щракнем с мишката върху елемента.</dt>
             <dt>Пример:</dt>
@@ -166,9 +166,10 @@
             </code></pre>
         </dl>
     </section>
-    <section><h3>:focus</h3>
+    <section><h3><a href="http://www.w3schools.com/cssref/sel_focus.asp">:focus</a></h3>
         <dl class="fa">
             <dt>Селектира <span class="note">елемент</span>, когато елемента получи фокус.</dt>
+            <dt class="note">Прилага се само за елементи, чрез които потребителя може да взаимодейства - такива са <span class="code">input</span> елементите на една форма, линковете, както и всички елементи с атрибут <a href="http://www.w3schools.com/tags/att_tabindex.asp">tabindex</a></dt>
             <dt>Пример:</dt>
             <pre><code class="CSS">
                 a:focus{
@@ -177,11 +178,11 @@
             </code></pre>
         </dl>
     </section>
-    <section><h3>:nth-child(x)</h3>
+    <section><h3><a href="http://www.w3schools.com/cssref/sel_nth-child.asp">:nth-child(x)</a></h3>
         <dl class="fa">
-            <dt>Селектира <span class="note">елемент</span>, който има <span class="code note">x</span> братя пред себе си в HTML дървото.</dt>
+            <dt>x може да бъде число, запазена дума или формула: <span class="code">an+b</span></dt>
+            <dt>Когато x е число, се селектира <span class="note">елемент</span>, който e x-то дете, без значение на неговия тип.</dt>
             <dt>Индексът на децата започва от 1</dt>
-            <dt>x може да бъде число, запазена дума, формула: <span class="code">an+b</span></dt>
             <dt>Пример:</dt>
             <pre><code class="CSS">
                 /* селектира първия параграф в даден елемент */
@@ -191,6 +192,32 @@
                 /* селектира всички нечетни параграфи */
                 p:nth-child(2n+1){
                     color: green;
+                }
+            </code></pre>
+        </dl>
+    </section>
+    <section><h3><a href="http://www.w3schools.com/cssref/sel_nth-child.asp">:nth-child(an+b)</a></h3>
+        <dl class="fa">
+            <dt>Когато имаме <code>nth-child(an+b)</code>, <span class="note code">n</span> е брояч, който започва от нула и се увеличава с 1, автоматично</dt>
+            <dt><span class="note code">a</span> и <span class="note code">b</span> са числа, които се задават от нас.</dt>
+            <dt>Ако <code>an+b < 0</code>, няма да се селектира нито един елемент (няма елемент с индекс -1, например)</dt>
+            <dt>Но е възможно да имаме минус пред <span class="note code">n</span>.Например:</dt>
+            <pre><code rel="CSS">
+                /* селектира първите 3 параграфа */
+                p:nth-child(-n+3){
+                    color: magenta;
+                }
+            </code></pre>
+        </dl>
+    </section>
+    <section><h3><a href="http://www.w3schools.com/cssref/sel_nth-child.asp">:nth-child(x)</a></h3>
+        <dl class="fa">
+            <dt>За да селектираме елементите в обратен ред (от последния към първия), се използва селектора  <a href="http://www.w3schools.com/cssref/sel_nth-last-child.asp">nth-last-child()</a></dt>
+            <dt>Например:</dt>
+            <pre><code rel="CSS">
+                /* селектира параграф, ако е последно дете */
+                p:nth-last-child(1){
+                    color: magenta;
                 }
             </code></pre>
         </dl>
