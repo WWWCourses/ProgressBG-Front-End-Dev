@@ -2,7 +2,7 @@
 **/*.tmp
 **/*.old
 
-#*.sublime-workspace
+*.sublime-workspace
 
 /pages/themes/beginners/*/*
 !/pages/themes/beginners/*/*.html
