@@ -3,7 +3,7 @@
 **/*.old
 
 *.sublime-workspace
-!gh-pages.sublime-wotkspace
+#!gh-pages.sublime-workspace
 
 /pages/themes/beginners/*/*
 !/pages/themes/beginners/*/*.html
