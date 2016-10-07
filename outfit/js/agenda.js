@@ -34,8 +34,16 @@ function calcTotalDays(){
     for (var i = 0; i < hours_nodes.length; i++) {
         var theme_hours = parseInt(hours_nodes[i].innerHTML || 0); // cause of NaN
         current_hours += theme_hours;
+
         // calculate current days and show it as tooltip
-        var current_days = Math.round( current_hours / 4 );
+        var current_days;
+        var hours_per_day = 4;
+        if ( current_hours % hours_per_day > 0){
+            current_days = Math.floor( current_hours / hours_per_day) + 1;
+        }else{
+            current_days = Math.floor( current_hours / hours_per_day);
+        }
+
         hours_nodes[i].title = "day:" + current_days;
     };
 }
