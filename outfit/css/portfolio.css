@@ -31,15 +31,15 @@ ul,ol,li{
     list-style-type: none;
     list-style-position: outside;
 }
-.resources_list_container>ul, .resources_list_container>ul>li{
+.portfolio_list_container>ul, .portfolio_list_container>ul>li{
     margin-left: 0;
 }
-.resources_list_container{
+.portfolio_list_container{
     margin: 0 auto;
     padding: 0em 2em 2em 0em;
 }
-.resources_list_container h1{
-    margin: 1em 0 .5em 0;
+.portfolio_list_container h1{
+    margin: 1em 0 1.5em 0;
     padding: 0 0 .5em 0;
     text-align: center;
     border-bottom: 2px dotted #DDD;
@@ -48,7 +48,7 @@ ul,ol,li{
     line-height: 1.3;
     color: #999;
 }
-.resources_list_container h2{
+.portfolio_list_container h2{
     margin: 1em 0 .5em 0;
     line-height: 1.3em;
     border-bottom: 2px solid #DDD;
@@ -56,17 +56,17 @@ ul,ol,li{
     font-size: 2em;
     color: #999;
 }
-.resources_list_container h3{
+.portfolio_list_container h3{
     padding: .5em 0 .4em 0;
     font-family: "Play", sans-serif;
     font-size: 1.3em;
     font-style: italic;
     color: #777;
 }
-.resources_list_container h3:after{
+.portfolio_list_container h3:after{
     content: ":";
 }
-.resources_list_container li{
+.portfolio_list_container li{
     margin-top: .3em;
     margin-bottom: .5em;
 }
