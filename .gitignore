@@ -6,6 +6,8 @@
 
 /pages/themes/beginners/*/*
 !/pages/themes/beginners/*/*.html
+!/pages/themes/beginners/*/*resources/
+!/pages/themes/beginners/*/*resources/**
 !/pages/themes/beginners/**/*examples/
 !/pages/themes/beginners/**/*examples/**
 !/pages/themes/beginners/**/*slides_examples/
