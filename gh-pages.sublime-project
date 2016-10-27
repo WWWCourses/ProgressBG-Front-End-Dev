@@ -9,12 +9,6 @@
 				"*~lock*"
 			],
 			"path": "."
-		},
-		{
-			"path": "/home/nemsys/projects/www/wwwcourses.github.io",
-		},
-		{
-			"path": "/home/nemsys/projects/freelance/Courses/",
 		}
 	],
 	"settings":

@@ -1,6 +1,7 @@
 # all tmp/old files:
 **/*.tmp
 **/*.old
+**/.tags*
 
 *.sublime-workspace
 
