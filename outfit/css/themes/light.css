@@ -17,4 +17,5 @@
 /* ********************************************************************** */
 /* Text formating  */
 /* ********************************************************************** */
-@import "/ProgressBG-Front-End-Dev/outfit/css/common/themes/MatDes/text_schemes.css";
+@import "/ProgressBG-Front-End-Dev/outfit/css/colorSchemes/light/structuring_elements.css";
+@import "/ProgressBG-Front-End-Dev/outfit/css/colorSchemes/light/text_schemes.css";
