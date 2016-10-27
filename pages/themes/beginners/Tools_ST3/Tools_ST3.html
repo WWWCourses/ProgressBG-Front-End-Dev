@@ -67,18 +67,22 @@
         <dt>Python-базиран, с добре разработен API позволяващ да добавяте нова функционалност.</dt>
     </dl>
 </section>
+
 <section><h3>Инсталиране</h3>
     <p>От официалния сайт, където е последната версия: <a href="http://www.sublimetext.com/3">Sublime Text 3 - Download</a></p>
     <p>Повече информация: <a href="http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/getting_started/install.html">ST3 installation notes</a></p>
 </section>
-<section><h2>Настройки</h2>
+
+<section><h3>Настройки</h3>
     <section>
         <h3>Глобални настройки</h3>
         <dl class="fa">
-            <dt>Използват се 2 файла:</dt>
-            <dd>Sublime Text 3 => Preferences => Settings – Deafult</dd>
-            <dd>Sublime Text 3 => Preferences => Settings – User</dd>
-            <dt>Файлът, в който записваме промените е <span class="note">Settings – User</span>.Това гарантира, че настройките ни ще се запазят дори и след ъпдейт на Sublime.</dt>
+            <dt>Всички настройки в ST3, се записват в <a href="https://bg.wikipedia.org/wiki/JSON">JSON формат</a>. Използват се 2 файла, които са достъпни от:</dt>
+            <dd>Sublime Text 3 => Preferences => Settings</dd>
+            
+            <dt>Файлът, в който записваме промените е:</dt>
+            <dd><span class="note">Preferences.sublime-settings – User</span></dd>
+            <dd>Това гарантира, че настройките ни ще се запазят дори и след ъпдейт на Sublime</dd>
         </dl>
     </section>
     <section><h4>Настройки за проект</h4>
@@ -101,28 +105,26 @@
         </code></pre>
     </section>
 </section>
-<section><h3>Клавишни комбинации (Keyboard Shortcuts)</h3>
-    <dl class="fa">
-        <dt>Default:</dt>
-        <dd>Sublime Text 3 => Preferences => Key Bindings ­ Default</dd>
-        <dt>Потребителски:</dt>
-        <dd>Sublime Text 3 => Preferences => Key Bindings – User</dd>
-        <dt>Детайлна информация: <a href="http://sublime-text-unofficial-documentation.readthedocs.org/
-en/latest/reference/keyboard_shortcuts_win.html">http://sublime-text-unofficial-documentation.readthedocs.org/
-en/latest/reference/keyboard_shortcuts_win.html</a></dt>
-    </dl>
+
+<section><h3>Задаване на клавишни комбинации (Keyboard Shortcuts)</h3>
+    <section>
+        <dl class="fa">
+            <dt>Отново се използват 2 файла (Default и User), достъпни чрез:</dt>
+            <dd>Sublime Text 3 => Preferences => Key Bindings</dd>        
+            <dt>Детайлна информация: <a href="http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference/key_bindings.html">http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference/key_bindings.html</a></dt>
+        </dl>
+    </section>
+    <section><h3>Пример:</h3>
+        <p>В Sublime Text 3 => Preferences => Key Bindings - User:</p>
+        <pre><code rel="JSON">        
+            [
+                { "keys": ["alt+shift+up"], "command": "select_lines", "args": {"forward": false} },
+                { "keys": ["alt+shift+down"], "command": "select_lines", "args": {"forward": true} },
+            ]
+        </code></pre>
+    </section>
 </section>
-<section><h3>Пример:</h3>
-    <p>В Sublime Text 3 => Preferences => Key Bindings - User:</p>
-    <pre><code rel="JSON">
-        [
-            { "keys": ["alt+shift+up"], "command": "select_lines", "args": 
-            {"forward": false} },
-            { "keys": ["alt+shift+down"], "command": "select_lines", "args": 
-            {"forward": true} },
-        ]
-    </code></pre>
-</section>
+
 <section><h3>Въвеждане на команди</h3><br>
     <h3>The Command Palette</h3><br>
     <dl class="fa">
@@ -133,16 +135,17 @@ en/latest/reference/keyboard_shortcuts_win.html</a></dt>
 </section>
 <section><h3>Инсталиране на Package Control</h3>
     <dl class="fa">
-        <dt>Отворете: <a href="https://packagecontrol.io/installation">https://packagecontrol.io/installation</a></dt>
-        <dt>Копирайте точно съдържанието на блока в сиво, под надписа SUBLIME TEXT 3</dt>
-        <dt>Отворете Sublime Text 3</dt>
-        <dt>Активирайте конзолата на Sublime, чрез чрез натискане на <span class="code">ctrl+`</span> (Control + BackTick)</dt>
-        <dt>Поставете копираното съдържание в конзолата.</dt>
-        <dt>Добре е да рестартирате ST (задължително под Windows).</dt>
+        <dt>Активирайте командната палитра (<span class="code">Ctrl+Shift+P</span>)</dt>
+        <dt>В полето за търсене въведете:</dt>
+        <dd>Install Package Control</dd>
     </dl>
+</section>
+<section><h3>Полезни пакети за Sublime Text 3</h3>
+    <a href="/HProgressBG-Front-End-Dev/pages/readings/beginners/UsefulResources.html#ST3_packages">Полезни пакети за Sublime Text 3</a>    
 </section>
 <section><h3>Справочници:</h3>
     <dl class="fa">
+        <dt><a href="https://www.sublimetext.com/docs/3/">SUBLIME TEXT 3 (official) Documentation</a></dt>
         <dt><a href="http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/">Неофициална, но изчерпателна, документация</a></dt>
         <dt>Video Tutorials:</dt>
             <dd><a href="https://www.youtube.com/watch?v=SVkR1ZkNusI&list=PLpcSpRrAaOaqQMDlCzE_Y6IUUzaSfYocK&index=1">Sublime Text Tutorial</a> - 12 videos by <a href="https://www.youtube.com/channel/UCHRp19HU7Y2LwfI0Ai6WAGQ">LearnWebCode</a></dd>
