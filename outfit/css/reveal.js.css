@@ -142,7 +142,7 @@ div.top_links{
 }
 a.home_link{
     /*display: inline-block;*/
-    /*z-index: 100;*/
+    z-index: 100;
     /*margin: .5em;*/
     /*background: green;*/
 }
@@ -152,20 +152,25 @@ a.help_link{
   /*opacity: 1;*/
   /*z-index: 102;*/
 }
-dl.help_text{
+.reveal .help_text{
   display: none;
   position: absolute;
   top: 0; right: 1em;  
+  min-width: 10em;
   padding: 1em;
-  font-size: .8em;
+  font-size: .7em;
   background: #CCC;
   color: #333;
   border-radius: 30%;
 }
-dl.help_text span:nth-child(1){  
-  
+.help_text span:nth-child(1){    
+    font-weight: bold;
 }
-dl.help_text span:nth-child(2){
+.help_text span:nth-child(2):before{
+  content: '- ';
+  font-weight: normal;
+}
+.help_text span:nth-child(2){  
   margin-left: .5em;
   font-style: italic;
 }
