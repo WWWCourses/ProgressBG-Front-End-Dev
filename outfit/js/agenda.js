@@ -38,12 +38,14 @@ function calcTotalDays(){
         // calculate current days and show it as tooltip
         var current_days;
         var hours_per_day = 4;
-        if ( current_hours % hours_per_day > 0){
-            current_days = Math.floor( current_hours / hours_per_day) + 1;
-        }else{
-            current_days = Math.floor( current_hours / hours_per_day);
-        }
+        // if ( current_hours % hours_per_day > 0){
+        //     current_days = Math.floor( current_hours / hours_per_day) + 1;
+        // }else{
+        //     current_days = Math.floor( current_hours / hours_per_day);
+        // }
 
+        // do not round:
+        current_days = current_hours / hours_per_day;
         hours_nodes[i].title = "day:" + current_days;
     };
 }
