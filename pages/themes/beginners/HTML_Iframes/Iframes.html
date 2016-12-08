@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Iframes</title>
-   <title>cliche</title>
+    <title>HTML Iframes</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -26,15 +25,28 @@
 </head>
 <body>
     <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
-        <a class="home_link" href="/ProgressBG-Front-End-Dev/pages/agenda/beginners.html#HTML_Iframes"><i class="fa fa-home"></i></a>
+        <div class="top_links">
+            <a class="home_link" href="/ProgressBG-Front-End-Dev/pages/agenda/beginners.html#Course_Intro" target="_top"><i class="fa fa-home"></i></a>
+            <a class="help_link" href="/ProgressBG-Front-End-Dev/pages/agenda/beginners.html#Course_Intro" target="_top"><i class="fa fa-question"></i></a>
+            <div class="help_text">
+                <div><span>N/Спейс</span><span>следващ слайд</span></div>
+                <div><span>P</span><span>предишен слайд</span></div>
+                <div><span>O</span><span>всички слайдове</span></div>
+                <div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+            </div>
+        </div>
         <div class="footer theme_switch">
             <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css'); return false;">Dark</a>
             <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/light.css'); return false;">Light</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/projector.css'); return false;">Projector</a>
         </div>
         <div class="slides">
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~ SLIDES START ~~~~~~~~~~~~~~~~~~~~~ -->
-<section><h1>HTML iframes</h1></section>
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>HTML Iframes</h1></section>
 <section data-transition="zoom">
     <div class="copyright">
         <div class="note">
@@ -42,7 +54,7 @@
         </div>
         <div class="company">
             <a href="http://progressbg.net/kurs-po-web-design/">
-            <img style="height:80%" src="../../../../outfit/images/logos/ProgressBG_logo_529_127.png">
+            <img style="height:80%" src="/ProgressBG-Front-End-Dev/outfit/images/logos/ProgressBG_logo_529_127.png">
             </a>
         </div>
         <div class="author">
@@ -51,12 +63,59 @@
         </div>
     </div>
 </section>
-<section><h2></h2>
+<section><h2>Какво е iframe?</h2>
+    <section>
+        <dl class="fa">
+            <dt>Дава възможност за вмъкване на друга HTML страница в нашия документ.</dt>
+            <dt>Не бива да се бърка с <a href="http://www.w3schools.com/tags/tag_frameset.asp">frameset</a> елемента, който не се поддържа вече в HTML 5!</dt>
+        </dl>
+    </section>
+    <section><h3>Общ синтаксис</h3>
+        <pre><code rel="HTML">
+            <iframe src="URL">
+                Съобщение, което ще се изпише ако браузера  на поддържа iframes
+            </iframe>
+        </code></pre>
+    </section>
+</section>
+<section><h2>Примери за употреба</h2>
+    <section><h4>Вмъкване на карта от <a href="http://maps.google.com">maps.google.com</a></h4>
+        <dl class="fa">
+            <dt>Намираме желания адрес</dt>
+            <dt>От менюто в ляво избираме: "Share or Embed map"</dt>
+            <dt>В показания модален прозорец избираме таба "Embed map"</dt>
+            <dt>В прозореца се показва отново картата, като желания адрес е центриран в прозореца.</dt>
+            <dt>Копираме HTML кода даден в текстовото поле.</dt>
+        </dl>
+        <pre><code rel="HTML">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.523298557758!2d23.321390480093637!3d42.69263917926799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85729d853a49%3A0xc5257e42efdfe9b5!2spl.+%22Petko+R.+Slaveykov%22+11%2C+1000+Sofia!5e0!3m2!1sen!2sbg!4v1481210129500" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </code></pre>
+    </section>
+    <section><h4>Резултат</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.523298557758!2d23.321390480093637!3d42.69263917926799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85729d853a49%3A0xc5257e42efdfe9b5!2spl.+%22Petko+R.+Slaveykov%22+11%2C+1000+Sofia!5e0!3m2!1sen!2sbg!4v1481210129500" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+    <section><h4>Вмъкване на карта от bgmaps</h4>
+        <pre><code rel="HTML">
+            <iframe width="500" height="500" frameborder="0" scrolling="no"
+            src="http://www.bgmaps.com/link/map/EA572A05A84E3D898D0DEFEB59D5DDE7">
+            </iframe>
+        </code></pre>
+    </section>
+    <section><h4>Вмъкване на Pen от codepen.io</h4>
 
+    </section>
 </section>
 
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~ SLIDES End ~~~~~~~~~~~~~~~~~~~~~ -->
+
+<section data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
+    <!-- <img class="the_end" src="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg"> -->
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
         </div>
     </div>
     <!-- Custom processing -->
@@ -64,10 +123,8 @@
     <!-- external scripts -->
     <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
     <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
-    <!-- custom -->
-    <script src="/ProgressBG-Front-End-Dev/outfit/js/slides.js"></script>
-    <!-- init reveal -->
-     <script>
+     <!-- init reveal -->
+    <script>
         // Full list of configuration options available at:
         // https://github.com/hakimel/reveal.js#configuration
         Reveal.initialize({
