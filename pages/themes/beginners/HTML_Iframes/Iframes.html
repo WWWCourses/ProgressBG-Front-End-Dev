@@ -101,19 +101,6 @@
 </section>
 
 <section><h2>Примери за употреба</h2></section>
-<script type="text/javascript">
-    function onYouTubeIframeAPIReady(node) {
-        var nodeID = node.getAttribute("id") || return;
-        var player = new YT.Player(, {
-            events: {
-              'onReady': function(e){
-                e.target.mute();
-              },
-            }
-        });
-      }
-</script>
-<script src="https://www.youtube.com/iframe_api"></script>
 <section><h4>Iframe, в който се отваря съдържанието на различни линкове</h4>
     <section>
         <iframe class="resultFrame" scrolling='no' title='Multiple links targeted to one Iframe'
@@ -169,12 +156,28 @@
     <section><h4>Резултат</h4>
         <iframe id="youtubeFrame"
                 class="resultFrame"
-                src="https://www.youtube.com/embed/7S0X0OWMu_k?enablejsapi=1&autoplay=0&controls=1&showinfo=0"
+                src="https://www.youtube.com/embed/7S0X0OWMu_k?enablejsapi=1&autoplay=1&controls=1&showinfo=0"
                 allowfullscreen
                 onload="onYouTubeIframeAPIReady(this)"></iframe>
     </section>
 </section>
-
+<script src="https://www.youtube.com/iframe_api"></script>
+<script type="text/javascript">
+    function onYouTubeIframeAPIReady(node) {
+        if ( !node ){
+            return
+        }
+        var nodeID = node.getAttribute("id");
+        // var nodeID = 'youtubeFrame';
+        var player = new YT.Player(nodeID, {
+            events: {
+              'onReady': function(e){
+                e.target.mute();
+              },
+            }
+        });
+      }
+</script>
 <section data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
     <!-- <img class="the_end" src="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg"> -->
 </section>
