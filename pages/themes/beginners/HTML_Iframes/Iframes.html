@@ -63,6 +63,7 @@
         </div>
     </div>
 </section>
+
 <section><h2>Какво е iframe?</h2>
     <section>
         <dl class="fa">
@@ -72,41 +73,107 @@
     </section>
     <section><h3>Общ синтаксис</h3>
         <pre><code rel="HTML">
-            <iframe src="URL">
-                Съобщение, което ще се изпише ако браузера  на поддържа iframes
-            </iframe>
+            &lt;iframe src=&quot;URL&quot;&gt;
+                Съобщение, което ще се изпише ако браузъра не поддържа iframes.
+            &lt;/iframe&gt;
         </code></pre>
+        <p><a href="http://www.w3schools.com/tags/tag_iframe.asp">HTML &lt;iframe&gt; Tag (w3schools)</a></p>
+    </section>
+    <section><h3>Основни атрибути</h3>
+        <dl class="fa">
+            <dt><code>src</code></dt>
+            <dd>задава URL на документа, който ще се зареди във фрейма.</dd>
+            <dt><code>height</code></dt>
+            <dd>Задава височината на фрейма. В пиксели.</dd>
+            <dt><code>width</code></dt>
+            <dd>Задава широчината на фрейма. В пиксели.</dd>
+            <dt><code>name</code></dt>
+            <dd>Задава име на фрейма. Използва се за да отворим линк в дадения фрейм. <a href="slides_examples/multiple_links_in_a_frame.html"></a></dd>
+            <dt><code>sandbox</code></dt>
+            <dd>Задава ограничения върху поведението на документа, който се зарежда във фрейма.</dd>
+        </dl>
+    </section>
+    <section><h3>Повече за iframe</h3>
+        <dl class="fa">
+            <dt><a href="https://developers.whatwg.org/the-iframe-element.html#the-iframe-element">във HTML: The Living Standard</a></dt>
+        </dl>
     </section>
 </section>
-<section><h2>Примери за употреба</h2>
-    <section><h4>Вмъкване на карта от <a href="http://maps.google.com">maps.google.com</a></h4>
+
+<section><h2>Примери за употреба</h2></section>
+<script type="text/javascript">
+    function onYouTubeIframeAPIReady(node) {
+        var nodeID = node.getAttribute("id") || return;
+        var player = new YT.Player(, {
+            events: {
+              'onReady': function(e){
+                e.target.mute();
+              },
+            }
+        });
+      }
+</script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<section><h4>Iframe, в който се отваря съдържанието на различни линкове</h4>
+    <section>
+        <iframe class="resultFrame" scrolling='no' title='Multiple links targeted to one Iframe'
+        src='//codepen.io/webdesigncourse/embed/rWZqxR/?height=500&theme-id=20230&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/rWZqxR/'>Multiple links targeted to one Iframe</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+    </section>
+</section>
+<section><h4>Вмъкване на карта от Google Maps</h4>
+    <section>
+        <p>За да намерим URL-а на отрязъка от картата, която желаем:</p>
         <dl class="fa">
-            <dt>Намираме желания адрес</dt>
+            <dt>Намираме желания адрес в <a href="http://maps.google.com">maps.google.com</a></dt>
             <dt>От менюто в ляво избираме: "Share or Embed map"</dt>
             <dt>В показания модален прозорец избираме таба "Embed map"</dt>
             <dt>В прозореца се показва отново картата, като желания адрес е центриран в прозореца.</dt>
             <dt>Копираме HTML кода даден в текстовото поле.</dt>
+            <dt>В нашия HTML файл, поставяме копираният код и редактираме атрибутите на iframe-a</dt>
         </dl>
         <pre><code rel="HTML">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.523298557758!2d23.321390480093637!3d42.69263917926799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85729d853a49%3A0xc5257e42efdfe9b5!2spl.+%22Petko+R.+Slaveykov%22+11%2C+1000+Sofia!5e0!3m2!1sen!2sbg!4v1481210129500" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.523298557758!2d23.321390480093637!3d42.69263917926799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85729d853a49%3A0xc5257e42efdfe9b5!2spl.+%22Petko+R.+Slaveykov%22+11%2C+1000+Sofia!5e0!3m2!1sen!2sbg!4v1481210129500"></iframe>
         </code></pre>
     </section>
     <section><h4>Резултат</h4>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.523298557758!2d23.321390480093637!3d42.69263917926799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85729d853a49%3A0xc5257e42efdfe9b5!2spl.+%22Petko+R.+Slaveykov%22+11%2C+1000+Sofia!5e0!3m2!1sen!2sbg!4v1481210129500" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </section>
-    <section><h4>Вмъкване на карта от bgmaps</h4>
-        <pre><code rel="HTML">
-            <iframe width="500" height="500" frameborder="0" scrolling="no"
-            src="http://www.bgmaps.com/link/map/EA572A05A84E3D898D0DEFEB59D5DDE7">
-            </iframe>
-        </code></pre>
-    </section>
-    <section><h4>Вмъкване на Pen от codepen.io</h4>
-    <a href="https://blog.codepen.io/documentation/features/embedded-pens/">Embedded Pens - CodePen Blog</a>
+        <iframe class="resultFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.523298557758!2d23.321390480093637!3d42.69263917926799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85729d853a49%3A0xc5257e42efdfe9b5!2spl.+%22Petko+R.+Slaveykov%22+11%2C+1000+Sofia!5e0!3m2!1sen!2sbg!4v1481210129500" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </section>
 </section>
-
-
+<section><h4>Вмъкване на карта от bgmaps</h4>
+    <section>
+        <p>За да намерим URL-а на отрязъка от картата, която желаем:</p>
+        <dl class="fa">
+            <dt>Намираме желания адрес в <a href="http://www.bgmaps.com/">bgmaps.com</a></dt>
+            <dt>Кликваме върху оранжевото кръгче, ограждащо мястото</dt>
+            <dt>В долния десен ъгъл на повилият се прозорец избираме "карта за уеб"</dt>
+            <dt>Копираме кода и го поставяме в нашия код, като редактираме атрибутите на iframe-a</dt>
+        </dl>
+    </section>
+    <section><h4>Резултат</h4>
+        <iframe class="resultFrame" src="http://www.bgmaps.com/link/map/A2EF943CB12F1A1C9D804518C2BBBDC7"></iframe>
+    </section>
+</section>
+<section><h4>Вмъкване на Pen от codepen.io</h4>
+    <a href="https://blog.codepen.io/documentation/features/embedded-pens/">Embedded Pens - CodePen Blog</a>
+</section>
+<section><h4>Вмъкване на YouTube Видео</h4>
+    <section>
+        <dl class="fa">
+            <dt>Кликваме с десния бутон на мишката, върху youtube видеото, което желаем да използваме.</dt>
+            <dt>От появилото се меню избираме: "Copy embed code"</dt>
+            <dt>В нашия HTML файл, поставяме копираният код и редактираме атрибутите на ifram-a</dt>
+            <dt class="note">За да има възможност видеото да се гледа на цял екран, трябва да присъства атрибута allowfullscreen</dt>
+        </dl>
+    </section>
+    <section><h4>Резултат</h4>
+        <iframe id="youtubeFrame"
+                class="resultFrame"
+                src="https://www.youtube.com/embed/7S0X0OWMu_k?enablejsapi=1&autoplay=0&controls=1&showinfo=0"
+                allowfullscreen
+                onload="onYouTubeIframeAPIReady(this)"></iframe>
+    </section>
+</section>
 
 <section data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
     <!-- <img class="the_end" src="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg"> -->

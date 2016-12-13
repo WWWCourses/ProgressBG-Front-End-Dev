@@ -155,7 +155,7 @@ a.help_link{
 .reveal .help_text{
   display: none;
   position: absolute;
-  top: 0; right: 1em;  
+  top: 0; right: 1em;
   min-width: 10em;
   padding: 1em;
   font-size: .7em;
@@ -163,14 +163,14 @@ a.help_link{
   color: #333;
   border-radius: 30%;
 }
-.help_text span:nth-child(1){    
+.help_text span:nth-child(1){
     font-weight: bold;
 }
 .help_text span:nth-child(2):before{
   content: '- ';
   font-weight: normal;
 }
-.help_text span:nth-child(2){  
+.help_text span:nth-child(2){
   margin-left: .5em;
   font-style: italic;
 }
@@ -243,7 +243,14 @@ a.help_link:hover~.help_text{
   display: block;
   margin: 1em 0 1em 0;
   width: 80%;
-  height: 40vh !important;
+  height: 40vh;
+  /*height: auto;*/
+}
+.reveal section iframe.resultFrame{
+  display: inline-block;
+  margin: .5em 0;
+  width: 80%;
+  height: 60vh;
   /*height: auto;*/
 }
 .reveal pre{
