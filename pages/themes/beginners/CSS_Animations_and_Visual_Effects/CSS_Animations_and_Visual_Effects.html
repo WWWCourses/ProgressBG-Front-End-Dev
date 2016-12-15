@@ -58,9 +58,58 @@
 </section>
 
 <section><h2>Анимиране на елементи чрез CSS3</h2>
-    <section><h3>Какво е анимиране на елемент?</h3>
+    <section><h3>Какво представлява анимацията?</h3>
         <dl class="fa">
-            <dt>Пример</dt>
+            <dt>Промяната на определени свойства, при прехода на елемент от състояние А в състояние Б, се извършва <span>плавно</span> - постепенно във времето</dt>
+            <p data-height="400" data-theme-id="20230" data-slug-hash="Pbxajb" data-default-tab="css,result" data-user="webdesigncourse" data-embed-version="2" data-pen-title="TransitionExample-GrowingBoll" class="codepen">See the Pen <a href="http://codepen.io/webdesigncourse/pen/Pbxajb/">TransitionExample-GrowingBoll</a> by Iva Popova (<a href="http://codepen.io/webdesigncourse">@webdesigncourse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+        </dl>
+    </section>
+    <section><h3>Анимация чрез CSS3</h3>
+        <dl class="fa">
+            <dt><a href="#Transition" title="CSS3 Transition Properties">CSS3 Transition Properties</a></dt>
+            <dt><a href="#Animation" title="CSS3 Animation Properties">CSS3 Animation Properties</a></dt>
+        </dl>
+    </section>
+</section>
+
+<section id="Transition"><h2>CSS3 Transition Properties</h2>
+    <section>
+        <h4>Полезни четива</h4>
+        <dl class="fa">
+            <dt><a href="http://www.w3schools.com/css/css3_transitions.asp">CSS3 Transitions (w3schools)</a></dt>
+            <dt><a href="https://www.kirupa.com/html5/all_about_css_transitions.htm">All About CSS Transitions</a> by <a href="https://www.kirupa.com/">kirupa</a></dt>
+        </dl>
+    </section>
+
+</section>
+</section>
+
+<section id="Animation"><h2>CSS3 Animation Properties</h2>
+    <h4>Примери</h4>
+    <dl class="fa">
+        <dt><a href="slides-examples/animated_bowncing_boll.html">Пример</a></dt>
+        <dt><a href="http://codepen.io/cassidoo/pen/NbOzKg">CSS Fat Cat</a></dt>
+    </dl>
+</section>
+
+<section><h2>Разлики между Transition и Animation</h2>
+    <section><h3>Механизъм на задействане (triggering)</h3>
+        <dl class="fa">
+            <dt>Транзишън ефекта се задейства едва когато се промени съответното свойство.</dt>
+            <dt>Анимацията се задейства в момента в който е дефинирана. </dt>
+        </dl>
+    </section>
+    <section><h3>Междинни точки при прехода</h3>
+        <dl class="fa">
+            <dt>При transition браузърът сам определя как да разпредели промяната в зададения интервал.</dt>
+            <dt>При анимацията ние можем да определим как да протича промяната - т.е. да зададем междини точки и да укажем какво и как да се променя (<a href="http://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp">@keyframes</a>)</dt>
+        </dl>
+    </section>
+    <section><h3>Повторяемост на анимацията (Loop)</h3>
+        <dl class="fa">
+            <dt>Transition свойството не е създадено за да поддържа повтаряемост на промяната.</dt>
+            <dt>С CSS3 Animation можем лесно да зададем такава цикличност (<a href="http://www.w3schools.com/cssref/css3_pr_animation-iteration-count.asp">animation-iteration-count </a>)</dt>
         </dl>
     </section>
 </section>
