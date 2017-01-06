@@ -2,6 +2,7 @@
 **/*.tmp
 **/*.old
 **/.tags*
+**/*fuse*
 
 *.sublime-workspace
 
