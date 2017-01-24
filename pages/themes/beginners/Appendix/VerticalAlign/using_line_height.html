@@ -2,9 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>using_line_height</title>
+    <title>VerticalAlign</title>
     <style type="text/css">
-        /* Problem - if the parent height is in percentage! */        
+        /* Problem - if the parent height is in percentage! */
+        html, body{
+            height: 100%;
+            padding: 50px;
+        }
         .wrapper {
             display: block;
             width: 150px;
@@ -12,19 +16,14 @@
             background: #787B7C;
         }
         .wrapper:before{
-            content: "x";
-            display: inline-block;             
-            height: 50%;
-            /*ако елемента е висок колкото контейнера, то base-line ще се премести в долната част на контейнера и това ще рефлектира подреждането на следващите поредови елементи. След като искаме вертикално центриране, то трябва изрично да зададем base-line да бъде в центъра. Можем да спестим */
-            /*vertical-align: middle;*/
-            width: 0;   
-            width: 5px;
-            background: red;         
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
             margin-left: -.25em;
         }
         .v_centered{
             display: inline-block;
-            width: 50%;
             vertical-align: middle;
             background: #37F7F8;
         }
@@ -32,7 +31,6 @@
 </head>
 <body>
     <div class="wrapper">
-        н
         <div class="v_centered">Вертикално центриран блок.</div>
     </div>
 </body>
