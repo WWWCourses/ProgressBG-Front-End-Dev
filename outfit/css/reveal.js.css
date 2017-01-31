@@ -146,7 +146,7 @@ a.home_link{
     /*margin: .5em;*/
     /*background: green;*/
 }
-a.help_link{
+.help_link{
   position: absolute;
   right: 0; top: 0;
   /*opacity: 1;*/
@@ -174,7 +174,10 @@ a.help_link{
   margin-left: .5em;
   font-style: italic;
 }
-a.help_link:hover~.help_text{
+.help_link:hover{
+  cursor: progress;
+}
+.help_link:hover+.help_text{
   display: inline-block;
 }
 .theme_switch a{
@@ -205,19 +208,12 @@ a.help_link:hover~.help_text{
 }
 .copyright>.note{
   text-align: center;
-  margin: 6em 0 3em 0em;
+  margin: 0em 0 3em 0em;
 }
 .copyright>.company{
    text-align: center;
     /*margin: 0 0 2em 0;*/
     font-size: 1em;
-    /*border: 1px solid red;*/
-}
-.copyright>.author{
-    text-align: center;
-    margin: 16em 0em 0 0;
-    font-size: .7em;
-    /*font-size: 14px;*/
     /*border: 1px solid red;*/
 }
 .copyright>.company img{
@@ -229,8 +225,26 @@ a.help_link:hover~.help_text{
     box-shadow: none;
     /*margin-bottom: -1px;*/
 }
-.copyright>.author img{
-    height: 1em;
+section.copyright>.author{
+    text-align: center;
+    margin: 1em 0em 0.5em 0;
+    font-size: 3em;
+    /*font-size: 14px;*/
+    /*border: 1px solid red;*/
+}
+div.copyright>.author{
+  text-align: center;
+  margin: 8em 0em 0.5em 0;
+  font-size: 1em;
+}
+section.copyright>.contacts{
+  font-size: 3em;
+}
+section.copyright>.license{
+  margin: 9em 0 0 0;
+}
+.copyright>.license img, div.copyright>.author img{
+    height: 1em;    
     vertical-align: middle;
     border: none;
     box-shadow: none;
@@ -380,7 +394,7 @@ a.help_link:hover~.help_text{
   }
   .copyright>.author{
       text-align: center;
-      margin: 8em 0em 0 0;
+      margin: 1em 0em 0 0;
       font-size: .7em;
       /*font-size: 14px;*/
       /*border: 1px solid red;*/
