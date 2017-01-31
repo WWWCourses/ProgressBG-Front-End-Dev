@@ -293,7 +293,9 @@ codepen-which-one-to-use-and-why/">jsbin, jsfiddle or codepen?</a></p>
                 { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                 { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                 { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
-                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true },
+                { src: 'http://localhost:3001/socket.io/socket.io.js', async: true }, 
+                { src: 'plugin/remote-control/remote.js', async: true }
             ]
         });
     </script>
