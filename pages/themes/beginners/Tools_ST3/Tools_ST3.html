@@ -107,9 +107,16 @@
     </section>
 </section>
 
-<section><h3>Задаване на клавишни комбинации (Keyboard Shortcuts)</h3>
+<section><h3>Клавишни комбинации (Keyboard Shortcuts)</h3>
     <section>
         <dl class="fa">
+            <dt>В Sublime Text 3 се използват множество клавишни комбинации, които ускоряват значително процеса на разработка.</dt>
+            <dt>Списък със стандартните клавишни комбинации: <a href="http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_win.html">Keyboard Shortcuts - Windows/Linux</a></dt>           
+        </dl>
+    </section>
+    <section>
+        <dl class="fa">
+            <dt>Разбира се, ние можем да променим и да добавим нови комбинации.</dt>
             <dt>Отново се използват 2 файла (Default и User), достъпни чрез:</dt>
             <dd>Sublime Text 3 => Preferences => Key Bindings</dd>
             <dt>Детайлна информация: <a href="http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference/key_bindings.html">http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference/key_bindings.html</a></dt>
@@ -117,10 +124,11 @@
     </section>
     <section><h3>Пример:</h3>
         <p>В Sublime Text 3 => Preferences => Key Bindings - User:</p>
-        <pre><code rel="JSON">
+        <!-- TODO: ident do not work here -->
+        <pre><code rel="JSON">            
             [
-                { "keys": ["alt+shift+up"], "command": "select_lines", "args": {"forward": false} },
-                { "keys": ["alt+shift+down"], "command": "select_lines", "args": {"forward": true} },
+                &nbsp;&nbsp;&nbsp;&nbsp;{ "keys": ["alt+shift+up"], "command": "select_lines", "args": {"forward": false} },
+                &nbsp;&nbsp;&nbsp;&nbsp;{ "keys": ["alt+shift+down"], "command": "select_lines", "args": {"forward": true} },
             ]
         </code></pre>
     </section>
