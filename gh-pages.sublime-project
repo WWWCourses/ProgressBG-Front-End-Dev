@@ -39,6 +39,7 @@
 			"layout"
 		],
 		"spell_check": true,
+		"dictionary": "Packages/Language - Bulgarian/OldBulgarian.dic",
 		"sublime-view-in-browser":
 		{
 			"basePath": "/DATA/projects/www/wwwcourses.github.io",
