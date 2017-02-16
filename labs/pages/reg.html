@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>forms</title>
+    <style type="text/css">
+    	#text{
+    		width: 20px;
+    		height: 40px;
+    	}
+    </style>
+</head>
+<body>	
+	 <form action="cgi-bin/reg.php" method="get">	  
+	 	<strong>пол</strong>
+	 	<label>мъж: <input type="radio" name="gender"></label>
+	 	<label>жена: <input type="radio" name="gender"></label><br>
+		<hr>
+		име: <input type="text" value="Iva" name="username"><br>
+		<select name="car">
+			<optgroup label="Swedish Cars">
+				<option value="car1">Волво</option>
+				<option value="car2">Сааб</option>
+			</optgroup>
+			<optgroup label="German Cars">
+				<option value="ca3">Mercedes</option>
+				<option value="car4">Audi</option>
+			</optgroup>
+		</select>
+		<hr>
+		<input type="submit" value="Изпрати">
+ 		<button type="submit"><img height="20" src="../images/apple-1532055_640.jpg"></button>
+	 </form>
+	 <form action="cgi-bin/marketing.php">
+	 	email: <input type="ema" name="email">	 		 	
+	 </form>
+	 <button form="" type="submit">Запиши ме</button>
+
+</body>
+</html>
