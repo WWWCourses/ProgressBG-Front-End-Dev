@@ -204,7 +204,7 @@
     </section>
 </section>
 
-<section><h2>CSS Комбинатори (CSS Combinators)</h2>
+<section><h2>CSS Комбинатори (<a href="https://www.w3schools.com/css/css_combinators.asp">CSS Combinators</a>)</h2>
     <section>
         <p>Чрез комбинаторите съставяме селектори, които отчитат позицията (контекста) на елементите в HTML дървото.</p>
     </section>
@@ -239,45 +239,34 @@
         <p>Комбинаторите, са символи, чрез които се задава връзка между селектори и така чрез тях се образува съставен селектор.</p>
     </section>
     <section>
-        <p>CSS3 комбинатори:</p>
-        <table style="color: white; ">
+        <pre><code rel="Syntax">
+            selector1&lt;combinator&gt;selector2
+        </code></pre>
+        <table>
             <tr>
                 <th>Комбинатор</th>
                 <th>Селектор</th>
             </tr>
             <tr>
                 <td>'&nbsp;&nbsp;' (<span class="note">спейс</span>)</td>
-                <td style="white-space: nowrap;">parentSelector &nbsp; descendantsSelector</td>
+                <td>parentSelector &nbsp; descendantsSelector</td>
             </tr>
             <tr>
-                <td>'>'</td>
-                <td>parentSelector > childrenSelector</td>
+                <td>'<span class="note">></span>'</td>
+                <td>parentSelector <span class="note">></span> childrenSelector</td>
             </tr>
             <tr>
-                <td>'~'</td>
-                <td>previousSelector~siblingSelector</td>
+                <td>'<span class="note">~</span>'</td>
+                <td>previousSelector<span class="note">~</span>generalSiblingSelector</td>
             </tr>
-            <tr></tr>
+            <tr>
+                <td>'<span class="note">+</span>'</td>
+                <td>previousSelector<span class="note">+</span>adjacentSiblingSelector</td>
+            </tr>
         </table>
-
-    </section>
-    <section>
-        <ul>
-            <li>за <span class="note">наследници</span> (descendant nodes): '&nbsp;&nbsp;' (<span class="note">спейс</span>)</li>
-            <li>за деца (child nodes): '<span class="note">></span>'</li>
-            <li>за брат - без значение дали следва непосредствено брат си (general sibling nodes): '<span class="note">~</span>'</li>
-            <li>за брат, който е разположен непосредствено след брат си (adjacent sibling nodes):  '<span class="note">+</span>'</li>
-        </ul>
-    </section>
-    <section>
-        <pre><code rel="Syntax">
-            selector1?selector2
-        </code></pre>
-        ? - замества комбинатор
     </section>
     <section>
         <p>Поради съображения за сигурност, засега, не можем да селектираме елементи <span class="note">нагоре</span> и в <span class="note">ляво</span> по  дървото. Поради това няма селектор за предшественик.</p>
-
     </section>
 </section>
 
