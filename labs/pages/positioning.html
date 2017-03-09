@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Positioning</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+		}
+		header{
+			/*position: relative;*/
+			width: 200px;
+			/*height: 200px;*/
+			background: orange;
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+
+		}
+		.yellow{
+			background: yellow;
+		}
+		.red{
+			background: red;
+		}
+		.ontop{
+			position: relative;
+			z-index: 1000;
+		}
+		/*POSITONING:*/
+		.margined{
+			margin: 200px 0 0 50px;
+		}
+		.relative{
+			position: relative;
+		}
+		.fixed{
+			position: fixed;
+			bottom: 0; right:0;
+		}
+		.absolute{
+			position: absolute;
+			bottom: 0; right:0;
+		}
+	</style>
+</head>
+<body class="relative">
+	<div class="container">
+		<div class="box yellow absolute">Logo</div>
+		<div class="box red">Logo</div>
+
+	</div class="container">
+	<main></main>
+	<footer></footer>
+</body>
+</html>
