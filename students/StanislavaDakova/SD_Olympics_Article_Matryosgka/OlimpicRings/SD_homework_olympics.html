@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Olympics</title>
+	<style type="text/css">
+		body{
+			background-image: url("ocean-through-window-frame.jpg");
+			/*background-size: 100%;
+			height: 100vh;
+			background-color: #EDEEF3*/
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.container{
+			display: block;
+			/*border: 5px solid orange;*/
+			position: relative;
+			top: 10vh; left: 20vw;
+			/*margin: 200px 500px;*/
+		}
+		.ring {
+		  /* make square box */
+		  width: 10rem;
+		  height: 10rem;
+		  display: inline-block;
+
+		  /* vertically align the text inside */
+		  line-height: 10rem;
+		  vertical-align: middle;
+		  /* horizontally align the text inside */
+		  text-align: center;
+
+		  /* make circle */
+		  border: 1rem solid;
+		  border-radius: 100%;
+
+		  /* set opacity */
+		  opacity: .4;
+
+		  font-size: 2em;
+		  font-weight: bold;
+		  margin: -2px;
+		}
+		#europa{
+			border-color: #2D0AAE;
+			top:0; left:0;
+
+		}
+		#africa{
+			border-color: yellow;
+
+		}
+		#america{
+			border-color: black;
+		}
+		#asia{
+			border-color: green;
+			position: absolute;
+			/*margin-right:-200px;*/
+			top: 7rem; left: 6.18rem;
+		}
+		#australia{
+			border-color: red;
+			margin-left:-20px;
+			position: absolute;
+			top: 105px; left: 315px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="ring" id="europe">Europe</div>
+		<div class="ring" id="africa">Africa</div>
+		<div class="ring" id="america">America</div>
+		<div class="ring" id="asia">Asia</div>
+		<div class="ring" id="australia">Australia</div>
+	</div>
+</body>
+</html>
