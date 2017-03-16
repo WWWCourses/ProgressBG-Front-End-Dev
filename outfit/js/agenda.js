@@ -10,10 +10,22 @@ function init(){
 }
 function attachEvents(){
     // get elements to attach events to
-    elementList = document.querySelectorAll('.iep_syllabus_themes>li>h3');
-    for (var i = 0; i < elementList.length; i++) {
-        var element = elementList[i];
-        element.addEventListener( "click", function(){
+    var themesItems = document.querySelectorAll('.iep_syllabus_themes>li');
+
+    for (var i = 0, len = themesItems.length; i < len; i++) {
+        var themeItem = themesItems[i];
+
+        // animate slides icon to grab attention:
+        themeItem.addEventListener( "mouseover", function(){
+            console.log("mouseon:", this);
+            grabAttnetion(this.querySelector("a.ready"));
+        } );
+        themeItem.addEventListener( "mouseout", function(){
+            freeAttnetion(this.querySelector("a.ready"));
+        } );
+
+        // show hide subthemes on click
+        themeItem.children[0].addEventListener( "click", function(){
             showHideNode(this.nextElementSibling)
         });
     };
@@ -116,4 +128,13 @@ function changeArrow ( node, direction ) {
         node.classList.remove("arrow_up");
         node.classList.add("arrow_down");
     }
+}
+
+function grabAttnetion( node ){
+    console.log("node = ", node);
+    node.classList.add("grabAttnetion");
+}
+function freeAttnetion( node ){
+    console.log("node = ", node);
+    node.classList.remove("grabAttnetion");
 }

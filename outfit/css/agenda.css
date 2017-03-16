@@ -91,25 +91,13 @@
         a:hover{
             text-decoration: none;
             border-bottom: none;
-            background-color: #239DD5;
-            color: #FFF;
+            /*background-color: #239DD5;*/
+            /*color: #FFF;*/
         }
-        a.active{
+        /*a.ready{
             color: inherit;
-        }
-        a.active:hover{
-            background: none;
-            font-weight: bold;
-            text-shadow:
-                1px 1px 1px #23C9D5,
-                -1px -1px 1px #239DD5,
-                2px 2px 2px #239DD5,
-                -2px -2px 2px #239DD5,
-                3px 3px 3px #26ADEB,
-                -3px -3px 3px #26ADEB;
-            color: #FFF;
-        }
-        a.nonactive{
+        }*/
+        a.nonready{
             color: #BBB;
         }
 
@@ -134,12 +122,34 @@
         .iep_syllabus_themes>li>h3:hover{
             cursor: pointer;
         }
-        .iep_syllabus_themes h3>a{
+        .iep_syllabus_themes>li>h3>a{
+            display: inline-block;
+            width: 2em;
+            vertical-align: top;
+            /*margin-right:.8em;*/
             text-decoration: none;
             border: 0;
         }
-        .iep_syllabus_themes h3>a>i{
-            margin-right:.8em;
+        .iep_syllabus_themes>li>h3:hover>a.ready, .grabAttnetion{
+            background: none;
+            font-weight: bold;
+            /*important - because of strange chrome bug: depending on href value not always work !!!;*/
+            color: #EEE !important;
+            text-shadow:
+                1px 1px 1px #23C9D5,
+                -1px -1px 1px #239DD5,
+                2px 2px 2px #239DD5,
+                -2px -2px 2px #239DD5,
+                3px 3px 3px #26ADEB,
+                -3px -3px 3px #26ADEB;
+            animation: shake .5s ease-in-out 1;
+        }
+        @keyframes shake{
+            from{
+                font-size: 1.5em;
+                opacity: .2;
+            }
+            to{font-size: 1em;}
         }
         .iep_syllabus_themes .label{
             display: inline-block;

@@ -90,7 +90,7 @@
 </section>
 
 <section><h2>Дефиниция на функция (<a href="https://www.w3schools.com/js/js_function_definition.asp">Function Definition</a>)</h2>
-    <section><h3>Function Declarations</h3>
+    <section><h3>Вариант 1: Function Declarations</h3>
         <pre><code rel="Syntax">
             function <име>( <списък параметри> ) {
                 <тяло на функцията>
@@ -98,7 +98,7 @@
         </code></pre>
         <dl class="fa fs-small">
             <dt><code><име></code></dt>
-            <dd>Име на функцията, съобразено с правилата за идентификатори в JS. (<a href="https://mothereff.in/js-variables#%E0%B2%A0%5f%E0%B2%A0">JavaScript variable name validator</a>)</dd>
+            <dd>Име на функцията, съобразено с <a href="https://developer.mozilla.org/en-US/docs/Glossary/Identifier">правилата за идентификатори в JS</a>. (<a href="https://mothereff.in/js-variables#%E0%B2%A0%5f%E0%B2%A0">tool:   variable name validator</a>)</dd>
             <dt><code><списък параметри></code></dt>
             <dd>Нула или повече параметъра разделени със запетая. Кръглите скоби са задължителни дори и ако функцията няма параметри. </dd>
             <dt><code><тяло на функцията></code></dt>
@@ -107,20 +107,21 @@
         </dl>
     </section>
     <section><h3>Function Declarations - Примери</h3>
-        <p><code class="note">greetings</code></p>
         <pre><code rel="JavaScript">
-        function signOutMsg(){
-            confirm("Прекратяване на сесията?");
-        }
+            //функцията няма параметри
+            function signOutMsg(){
+                confirm("Прекратяване на сесията?");
+            }
         </code></pre>
-        <p>Декларация на функцията sum(), която сумира 2 числа и изписва резултата в конзолата:</p>
+        <br>
         <pre><code rel="JavaScript">
+            // функцията декларира 2 параметъра
             function sum(x, y){
                 console.log( x + y );
             }
         </code></pre>
     </section>
-    <section><h3>Function Expression</h3>
+    <section><h3>Вариант 2: Function Expression</h3>
         <pre><code rel="Syntax">
             var functionVar = function(<списък параметри>){
                 <тяло на функцията>
@@ -129,8 +130,8 @@
         <dl class="fa">
         <dt>Тук се създава анонимна функция, която е достъпна чрез променливата <code>functionVar</code> в която сме я съхранили.</dt>
         <dt>Реално, се извършват две действия:</dt>
-        <dd>1. var functionVar = undefined (<span class="note">compile time</span>)</dd>
-        <dd>2. functionVar = function(...){...}; (<span class="note">run time</span>)
+        <dd>1. var functionVar = undefined <span class="note">// compile time</span></dd>
+        <dd>2. functionVar = function(...){...}; <span class="note">// run time</span>
         </dd>
         <dt>Тъй като тук дефинираме функцията чрез израз (оператора за присвояване), то задължително трябва да сложим ';' в края.</dt>
         </dl>
