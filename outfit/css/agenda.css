@@ -83,7 +83,7 @@
         a{
             text-decoration: none;
             color: inherit;
-            border-bottom: .1em solid #145878;
+            border-bottom: .1em solid #71BA8E;
         }
         a:visited{
            color: inherit;
@@ -134,14 +134,16 @@
             background: none;
             font-weight: bold;
             /*important - because of strange chrome bug: depending on href value not always work !!!;*/
-            color: #EEE !important;
+            color: #FFF !important;
             text-shadow:
-                1px 1px 1px #23C9D5,
-                -1px -1px 1px #239DD5,
-                2px 2px 2px #239DD5,
-                -2px -2px 2px #239DD5,
-                3px 3px 3px #26ADEB,
-                -3px -3px 3px #26ADEB;
+                1px 1px 1px #FFB77B,
+                -1px -1px 1px #FFB77B,
+                2px 2px 2px #FFB97C,
+                -2px -2px 2px #FFB97C,
+                3px 3px 3px #FFBA7E,
+                -3px -3px 3px #FFBA7E,
+                4px 4px 4px #FFBA7E,
+                -4px -4px 4px #FFBA7E;
             animation: shake .5s ease-in-out 1;
         }
         @keyframes shake{

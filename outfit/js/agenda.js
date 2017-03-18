@@ -17,7 +17,7 @@ function attachEvents(){
 
         // animate slides icon to grab attention:
         themeItem.addEventListener( "mouseover", function(){
-            console.log("mouseon:", this);
+            // console.log("mouseon:", this);
             grabAttnetion(this.querySelector("a.ready"));
         } );
         themeItem.addEventListener( "mouseout", function(){
@@ -129,12 +129,11 @@ function changeArrow ( node, direction ) {
         node.classList.add("arrow_down");
     }
 }
-
 function grabAttnetion( node ){
-    console.log("node = ", node);
+    // console.log("node = ", node);
     node.classList.add("grabAttnetion");
 }
 function freeAttnetion( node ){
-    console.log("node = ", node);
+    // console.log("node = ", node);
     node.classList.remove("grabAttnetion");
 }
