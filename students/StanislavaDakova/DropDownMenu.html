@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Meet you there</title>
+	<style>
+		body, html{
+			position: relative;
+			width: 100vw;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+		}
+		#container{
+			position: absolute;
+			right: 0;
+			width: 60%;
+			margin: 0;
+			padding: 0;
+			border: 2px solid orange;
+		}
+		.main>li{
+			width: 18%;
+			height: 2em;
+			list-style-type: none;
+			display: inline-block;
+			float:left;
+			margin: 0;
+			padding: 0;
+			border: 2px solid green;
+		}
+		.menu{
+			background: black;
+			color: white;
+
+		}
+		.sub>li{
+			display: block;
+			/*position: absolute;
+			left: 0;
+			list-style-type: none;
+			width: 100%;
+			margin: 0;
+			padding: 0px;
+			background: grey;
+			color: orange;*/
+		}
+		.main>li:hover .sub>li{
+			display: block;
+			/*width: 100%;*/
+			font-size: 16px;
+			border:2px solid red;
+			list-style-type: none;
+			background: grey;
+			color: orange;
+		}
+		 .main>li:hover{
+		 	font-size: 150%;
+		 	color: yellow;
+		 	background: darkgrey;
+		 }
+	</style>
+</head>
+<body>
+<div id="container">
+	<ul class="main">
+		<li class="menu">Trips
+			<ul class="sub">
+				<li>Cities</li>
+				<li>Countryside</li>
+				<li>Mountains</li>
+				<li>The Coast</li>
+				<li>Wine roads</li>
+			</ul>
+		</li>
+		<li class="menu">Whree to:
+			<ul class="sub">
+				<li>Stay</li>
+				<li>Shop</li>
+				<li>Eat</li>
+				<li>Have a good coffee</li>
+				<li>Have a drink</li>
+				<li>Listen to live music</li>
+				<li>The best wines</li>
+			</ul>
+		</li>
+		<li class="menu">While you are here
+			<ul class="sub">
+				<li>Food/Recipes</li>
+				<li>Traditions</li>
+				<li>Music (BG artists, playlists)</li>
+				<li>Diving</li>
+			</ul>
+		</li>
+		<li class="menu">Meet the locals
+			<ul class="sub">
+				<li>Gids</li>
+				<li>Artists</li>
+				<li>Designers</li>
+				<li>Fotographers</li>
+			</ul>
+		</li>
+		<li class="menu">Personal stories</li>
+	</ul>
+</div>
+</body>
+</html>
