@@ -7,3 +7,5 @@ explain: "margin-right:-200px;" on asia....
 
 explain: /home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/labs/pages/float_example_1.html
 
+---- 11.04.2017
+do not move following elements after font-size change (line-height problem...)
