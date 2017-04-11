@@ -9,3 +9,4 @@ explain: /home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev
 
 ---- 11.04.2017
 do not move following elements after font-size change (line-height problem...)
+    the problem was due to EM units used!!!, not with the height/line-height
