@@ -27,7 +27,17 @@
   opacity: .7;
   /*background: red;*/
 }
-
+/*sub-section title*/
+.reveal>.slides>section>section>h3{
+  font-size: 1.3em;
+}
+.reveal>.slides>section>section>h3:after{
+  display: block;
+  content: "";
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: .1em double rgba(120,120,120,.5);
+}
 /*lists*/
 .reveal section ul>strong{
   margin-left: -2em;
@@ -146,7 +156,7 @@ i.top{
       4px 4px #333,
       5px 5px #222;
   opacity: .7;
-  animation: 6s linear opacity; 
+  animation: 6s linear opacity;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
@@ -274,7 +284,7 @@ section.copyright>.license{
   margin: 9em 0 0 0;
 }
 .copyright>.license img, div.copyright>.author img{
-    height: 1em;    
+    height: 1em;
     vertical-align: middle;
     border: none;
     box-shadow: none;
