@@ -27,7 +27,7 @@
     <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
         <div class="top_links">
             <a class="home_link" href="/ProgressBG-Front-End-Dev/pages/agenda/beginners.html#Course_Intro" target="_top"><i class="fa fa-home"></i></a>
-            <a class="help_link" href="/ProgressBG-Front-End-Dev/pages/agenda/beginners.html#Course_Intro" target="_top"><i class="fa fa-question"></i></a>
+            <span class="help_link" href="#"><i class="fa fa-question"></i></span>
             <div class="help_text">
                 <div><span>N/Спейс</span><span>следващ слайд</span></div>
                 <div><span>P</span><span>предишен слайд</span></div>
@@ -96,7 +96,7 @@
                     </tr>
                 </table>
             </dt>
-        </dl>
+            </dl>
     </section>
     <section><h3>Изрази</h3>
         <p>Израз е всяка една инструкция към Браузера, за да изпълни дадено действие.</p>
@@ -119,14 +119,9 @@
 <section><h2>Променливи</h2>
     <section><h3>Какво е променлива в JavaScript?</h3>
         <dl class="fa">
-            <dt>Променливата е контейнер, в който съхраняваме данни.</dt>
-            <dt>Обозначава област от РАМ паметта, в която ще се "запомнят" съответните данни.</dt>
-            <p>Например, в следните изрази, <span class="code">x</span> и <span class="code">y</span> са променливи:</p>
-            <pre><code>
-                x = 4;
-                x + y = 12;
-                2y = 4x;
-            </code></pre>
+            <dt>Променливата е "име" на част от паметта (RAM), в който съхраняваме данни.</dt>
+            <dt>Програмиста задава това име, като следва определени правила.</dt>
+            <dt>След като променливата е създадена можем да записваме в нея стойности и да ги четем.</dt>
         </dl>
     </section>
     <section><h3>Деклариране/Дефиниране</h3>
@@ -140,6 +135,14 @@
                         // декларация и инициализация със стойността 10
         </code></pre>
         <p class="advanced"><i class="fa fa-graduation-cap"></i>В ECMAScript 6, се въвежда и нова дума за деклариране на променливи: <code class="note">let</code> чрез която се задава област на видимост на променливата в рамките на блок.</p>
+    </section>
+    <section>
+        <pre><code rel="JS">
+            var x = 1;
+            var y = 2;
+            var z;
+        </code></pre>
+        <img src="images/variables_in_RAM.png">
     </section>
     <section><h3>Правила за имена на променливи</h3>
         <dl class="fa">
@@ -174,17 +177,71 @@
     </section>
     <section><h3>Примери:</h3>
         <pre><code rel="JS">
-            var x;
-            var x=4;
-            var x, y;
-            var userName;
-            var username; //  различна   от  'userName'
-            var userNameCleaned;
+            var x;  // ок
+            var $x; // позволено, но не се препоръчва
+            var userName; // ок
+            var user name; // SyntaxError!
+            var username; //  ok, но е различна   от  'userName'
+            var user-first-name; //SyntaxError
+            var user_first_name; //ok, но не е според конвенцията
+            var userFirstName; //ok
         </code></pre>
     </section>
 </section>
 
-<section><h2>Прости типове данни</h2></section>
+<section><h2>Прости типове данни</h2>
+    <section><h3>Число (number)</h3>
+        <pre><code rel="JS">
+            // цяло число, положително
+            var x = 10;
+
+            // цяло число, отрицателно
+            var y = ­5;
+
+            // реално число
+            var pi = 3.14;
+
+            // реално число, експонентен запис
+            var million = 10e6;
+        </code></pre>
+    </section>
+    <section><h3>Низ (string):</h3>
+        <p>Последователност от символи, заградена в единични или двойни кавички</p>
+        <p>Няма значение, дали ще използваме единични или двойни кавички, но трябва да внимаваме ако такива символи ще присъстват в самия низ</p>
+        <pre><code rel="JS">
+            var userName = 'Ada Byron'; // ок
+            var nickName = "LadyLovelace"; //ок
+            var quot = 'И той отсече - "Ще вали!"'; //ок
+            var quot = "И той отсече - "Ще вали!""; //SyntaxError
+            var foo = "What's the time?" //ок
+
+        </code></pre>
+    </section>
+    <section><h3>Булев тип (boolean)</h3>
+        <p>Данните от този тип могат да приемат само 2 стойности: true или false</p>
+        <p>Използва се предимно в условните оператори, които са разгледани по-нататък.</p>
+        <pre><code rel="JS">
+            var start = true;
+            var stop  = false;
+        </code></pre>
+    </section>
+    <section><h3>null</h3>
+        <p>Използва се при работа с обекти, които са разгледани по-нататък.</p>
+    </section>
+    <section><h3>undefined</h3>
+        <p>Обозначава, че променливата съществува (декларирана е), но в нея няма зададена стойност.</p>
+        <p>Това е стойността, която се записва по подразбиране, когато не зададем стойност при декларацията на променлива.</p>
+    </section>
+</section>
+
+<section><h2>Оператори</h2>
+    <section>
+        <p>или какво можем да правим с променливите?</p>
+    </section>
+    <section>
+        <a href="http://www.w3schools.com/jsref/jsref_operators.asp">http://www.w3schools.com/jsref/jsref_operators.asp</a>
+    </section>
+</section>
 
 <section id="cycle_operators"><h2>Цикли (Loops/Iteration Statements)</h2>
     <section><h3><code>for</code> Statement: синтаксис</h3>
@@ -271,17 +328,7 @@ while( items > 0 ){
     </section>
 </section>
 
-<section><h2>Функции</h2>
-    <section><h3>for loop</h3>
 
-    </section>
-</section>
-
-<section><h2>Обекти</h2>
-    <section><h3></h3>
-
-    </section>
-</section>
 
 <section class="disclaimer" data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
      <p>These slides are based on</p>
