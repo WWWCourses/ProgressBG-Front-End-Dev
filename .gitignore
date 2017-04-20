@@ -3,5 +3,6 @@
 **/*.old
 **/.tags*
 **/*fuse*
+nohup.out
 *.sublime-workspace
 
