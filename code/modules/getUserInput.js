@@ -14,7 +14,8 @@ var getUserInput = function(){
 	// actions
 	var id = function(nodeID){
 		var node  = document.getElementById(nodeID);
-		return node.value;
+		console.log(node);
+		return node ? node.value : null;
 	}
 
 	return {id: id};

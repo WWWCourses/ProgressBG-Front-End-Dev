@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>first_js</title>
+    <title>userWelcomeUpponAge</title>
     <style type="text/css">
         form.test{
             width: 21em;
@@ -46,6 +46,8 @@
             border-bottom: .2em double #666;
         }
     </style>
+    <!-- <script type="text/javascript" src="https://rawgit.com/WWWCourses/ProgressBG-Front-End-Dev/gh-pages/code/modules/getUserInput.js"></script> -->
+
 </head>
 <body>
     <form class="test">
@@ -57,11 +59,12 @@
             <label for="uage">Your age:</label>
             <input type="number" name="uage" id="uage">
         </div>
-        <button type="button" onclick=checkUserAge();>Go</button>
+        <button id="submit" type="button" onclick="checkUserAge()">Go</button>
     </form>
     <div id="output"></div>
 
-    <script type="text/javascript" src="https://rawgit.com/WWWCourses/ProgressBG-Front-End-Dev/gh-pages/code/modules/getUserInput.js"></script>
+
+    <script type="text/javascript" src="getUserInput.js"></script>
 </body>
 
 </html>
