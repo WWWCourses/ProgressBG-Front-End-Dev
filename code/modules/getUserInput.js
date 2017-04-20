@@ -12,10 +12,10 @@ var getUserInput = function(){
 	// })
 
 	// actions
-	var name = function(nodeID){
+	var id = function(nodeID){
 		var node  = document.getElementById(nodeID);
 		return node.value;
 	}
 
-	return {name: name};
+	return {id: id};
 }();
