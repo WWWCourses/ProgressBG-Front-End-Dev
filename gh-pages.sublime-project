@@ -43,7 +43,7 @@
 		"sublime-view-in-browser":
 		{
 			"basePath": "/DATA/projects/www/wwwcourses.github.io",
-			"baseUrl": "http://127.0.0.1"
+			"baseUrl": "http://127.0.0.1:8080"
 		},
 		"tab_size": 4
 	}
