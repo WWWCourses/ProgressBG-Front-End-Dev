@@ -3,4 +3,5 @@
 **/*.old
 **/.tags*
 **/*fuse*
+*.sublime-workspace
 
