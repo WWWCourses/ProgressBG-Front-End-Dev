@@ -7,11 +7,6 @@
 
 *.sublime-workspace
 
-
-*.sublime-workspace
-
-
-
 /pages/themes/beginners/*/*
 !/pages/themes/beginners/Appendix/**
 !/pages/themes/beginners/*/*.html
