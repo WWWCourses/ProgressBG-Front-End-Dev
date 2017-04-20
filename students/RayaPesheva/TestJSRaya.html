@@ -8,12 +8,18 @@
 		<label>Your name <input id="user_name" type="name" name=""></label>
 		<label>Your age <input id="userAge" type="number" name=""></label>
 		<button id="submit" onclick="
+			age = document.getElementById('userAge').value;
+			var status;
+
 			if ( age > 18 ) {
-				status = "adult";
+				status = 'adult';
 			}else {
-				status = "child";
-			}">GO
-		</button>
+				status = 'child';
+			}
+
+			console.log('status='+status);
+
+		">GO</button>
 	</div>
 </body>
 </html>
