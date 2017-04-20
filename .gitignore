@@ -5,6 +5,8 @@
 **/.fuse*
 **/*nohup*
 
+*.sublime-workspace
+
 
 *.sublime-workspace
 
