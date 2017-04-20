@@ -5,6 +5,7 @@
 **/.fuse*
 **/*nohup*
 
+*.sublime-workspace
 
 /pages/themes/beginners/*/*
 !/pages/themes/beginners/Appendix/**
