@@ -66,7 +66,7 @@
     </div>
 </section>
 
-<section><h2>Структура на JS програма</h2>
+<section><h2>Структура на програмата</h2>
     <section>
         <dl class="fa">
             <dt>Една JavaScript програма е последователност от инструкции (изрази, statements).</dt>
@@ -116,7 +116,7 @@
     </section>
 </section>
 
-<section><h2>Променливи</h2>
+<section><h2>Променливи (Variables)</h2>
     <section><h3>Какво е променлива в JavaScript?</h3>
         <dl class="fa">
             <dt>Променливата е "име" на част от паметта (RAM), в който съхраняваме данни.</dt>
@@ -189,7 +189,7 @@
     </section>
 </section>
 
-<section><h2>Прости типове данни</h2>
+<section><h2>Прости типове данни (Primitive types)</h2>
     <section><h3>Число (number)</h3>
         <pre><code rel="JS">
             // цяло число, положително
@@ -234,98 +234,262 @@
     </section>
 </section>
 
+<section><h2>Коментари</h2>
+    <a href="https://www.w3schools.com/js/js_comments.asp">JavaScript Comments</a>
+</section>
+
 <section><h2>Оператори</h2>
     <section>
         <p>или какво можем да правим с променливите?</p>
-    </section>
-    <section>
         <a href="http://www.w3schools.com/jsref/jsref_operators.asp">http://www.w3schools.com/jsref/jsref_operators.asp</a>
+    </section>
+    <section><h3>Аритметични оператори (Aritmetic operators)</h3>
+        <ul class="fa">
+            <li>Събиране: '<code class="note">+</code>'
+                <pre><code>
+                    var addition = 2 + 4; // 6
+                </code></pre>
+            </li>
+            <li>Изваждане: '<code class="note">-</code>'
+                <pre><code>
+                    var subtraction = 20 – 4; // 16
+                </code></pre>
+            </li>
+            <li>Умножаване: '<code class="note">*</code>'
+                <pre><code>
+                    var multiplication = 2 * 4; // 8
+                </code></pre>
+            </li>
+            <li>Делене: '<code class="note">/</code>'
+                <pre><code>
+                    var division = 100 / 5; // 25
+                </code></pre>
+            </li>
+        </ul>
+    </section>
+    <section><h3>Аритметични оператори (Aritmetic operators)</h3>
+        <ul class="fa">
+            <li>Модул: '<code class="note">%</code>'
+                <pre><code>
+                    var reminder = 7 % 4; // 3
+                    var reminder = 8 % 4; // 0
+                </code></pre>
+            </li>
+            <li>Степенуване: '<code class="note">**</code>'
+                <p class="note">Въвежда се от 2016г. в <b>ES7</b> и работи само с най-новите версии на браузерите </p>
+                <pre><code>
+                    var exponent = 2**10; // 1024
+                </code></pre>
+            </li>
+        </ul>
+    </section>
+    <section><h3>Аритметични оператори (Aritmetic operators)</h3>
+        <ul class="fa">
+
+            <li>Инкрементиране: '<code class="note">++</code>'
+                <pre><code>
+                    var i = 2;
+
+                    //postfix increment:
+                    var j = i++; // j = 2, i = 3
+
+                    //prefix increment:
+                    var j = ++i; // j = 3, i = 3
+                </code></pre>
+            </li>
+            <li>Декрементиране: '<code class="note">--</code>'
+                <pre><code>
+                    var i = 2;
+
+                    //postfix increment:
+                    var j = i--; // j = 2, i = 1
+
+                    //prefix increment:
+                    var j = --i; // j = 1, i = 1
+                </code></pre>
+            </li>
+        </ul>
+    </section>
+    <section><h3>Оператор за присвояване (Assignment operator)</h3>
+        <ul class="fa">
+            <li>Assignment '<code class="note">=</code>'
+                <pre><code>
+                    var x = 4;
+                    var x = 1, y = 3;
+                </code></pre>
+            </li>
+            <li>Съкратен запис на присвояване + аритметична операция
+                <pre><code>
+                    var x = 4;
+                    x += 3; // x = x + 3;
+                    x ­-= 3; // x = x – 3;
+                    x *= 3; // x = x * 3;
+                    x /= 3; // x = x / 3;
+                    x %= 3; // x = x % 3;
+                </code></pre>
+
+            </li>
+        </ul>
+    </section>
+    <section><h3>Слепване на низове (String concatenation)</h3>
+        <ul class="fa">
+            <li>Конкатенация (слепване) на низове: '<code class="note">+</code>'
+                <pre><code>
+                    var firstName = "Ada";
+                    var surName = "Byron";
+                    console.log (firstName + " " + surName); // Ada Byron
+                </code></pre>
+            </li>
+        </ul>
+    </section>
+    <section><h3>Оператори за сравнение и логически оператори (Comparison and Logical Operators)</h3>
+    <a href="https://www.w3schools.com/js/js_comparisons.asp">JavaScript Comparison and Logical Operators</a>
+    </section>
+</section>
+
+<section><h2>Условни изрази (Conditional statements)</h2>
+    <section><h3><code>if</code> statement</h3>
+        <pre><code rel="Syntax">
+            if ( условие ) {
+                изрази, които ще се изпълнят, ако условието е истина
+            }
+        </code></pre>
+        <pre><code rel="JS">
+            if ( age > 18 ) {
+                status = "adult";
+            }
+        </code></pre>
+    </section>
+    <section><h3><code>if-else</code> statement</h3>
+        <pre><code rel="Syntax">
+            if ( условие ) {
+                изрази, които ще се изпълнят, ако условието е истина
+            }else {
+                изрази, които ще се изпълнят, ако условието е лъжа
+            }
+        </code></pre>
+        <pre><code rel="JS">
+            if ( age > 18 ) {
+                status = "adult";
+            }else {
+                status = "child";
+            }
+        </code></pre>
+    </section>
+    <section><h3><code>if-else-if</code> statement</h3>
+        <pre><code rel="Syntax">
+            if ( условие1) {
+                изрази, които ще се изпълнят, ако условието е истина
+            }else if (условие2) {
+                изрази, които ще се изпълнят, ако условие1 e лъжа,
+                а условие2 е истина
+            }else {
+                изрази, които ще се изпълнят, ако нито едно от горните
+                условия не е истина
+            }
+        </code></pre>
+        <pre><code rel="JS">
+            if ( age > 18 ) {
+                status = "adult";
+            }else if( age < 18 && age > 12){
+                status = "teen";
+            }else{
+                status = "child"
+            }
+        </code></pre>
     </section>
 </section>
 
 <section id="cycle_operators"><h2>Цикли (Loops/Iteration Statements)</h2>
     <section><h3><code>for</code> Statement: синтаксис</h3>
-        <pre><code class="javascript">
-for (init; condition; increment) {
-    блок, който се изпълнява, докато condition е истина
-}
+        <pre><code rel="Syntax">
+            for (init; condition; increment) {
+                блок, който се изпълнява, докато condition е истина
+            }
         </code></pre>
         <p>Стъпките, в един цикъл са:</p>
         <dl class="fa">
-            <dt>init: изпълнява се първа и само веднъж</dt>
-            <dt>condition:</dt>
+            <dt>1. init: изпълнява се първа и само веднъж</dt>
+            <dt>2. condition:</dt>
                 <dd>ако е истина => изпълнява се блока</dd>
                 <dd>ако е лъжа => излиза се от цикъла</dd>
-            <dt>increment: изпълнява се след блока. Обикновено тук се променят променливите, които контролират цикъла.</dt>
+            <dt>3. increment: изпълнява се след блока. Обикновено тук се променят променливите, които контролират цикъла.</dt>
         </dl>
     </section>
     <section><h3><code>for</code> Statement: алгоритъм</h3>
-        <pre><code class="javascript">
-for (init; condition; increment) {
-    block
-}
+        <pre><code rel="Syntax">
+            for (init; condition; increment) {
+                block
+            }
         </code></pre>
         <img src="images/for_algorithm.png">
     </section>
     <section><h3><code>for</code> Statement: пример 1</h3>
-         <pre><code>
-for (var i = 0; i < 5; i++) {
-    console.log("i=" + i);
-}
+        <pre><code rel="JS">
+            for (var i = 0; i < 5; i++) {
+                console.log("i=" + i);
+            }
         </code></pre>
-        <pre>
-// резултата, видим в конзолата, е:
-            <code>
-i=0
-i=1
-i=2
-i=3
-i=4
-            </code></pre>
+        <p>// резултата, видим в конзолата, е:</p>
+        <pre><code rel="Console">
+            i=0
+            i=1
+            i=2
+            i=3
+            i=4
+        </code></pre>
     </section>
     <section><h3><code>for</code> Statement: пример 2</h3>
-        <pre><code class="javascript">
-var ul = document.createElement("ul");
-var items = 10;
-for (var i = 0; i < items; i++){
-    li = document.createElement('li');
-    li.className = "elements";
-    li.innerHTML = "Item " + (i+1);
-    ul.appendChild(li);
-}
-document.body.appendChild(ul);
+        <pre><code rel="JS">
+            // create the list element
+            var listNode = document.createElement(listType);
+
+            //create list items
+            for (var i = 1; i <= listItemsCount; i++){
+                var listItem = document.createElement('li');
+                listItem.innerHTML = 'Item '+ i;
+                listNode.appendChild(listItem);
+            }
+
+            // attach to output node:
+            outputNode.appendChild( listNode );
         </code></pre>
-        <p><a href="slides_examples/for_create_list.html">Test it!</a></p>
+        <p><a href="examples/slides/auto_list_generator.html">test it</a> or <a href="http://codepen.io/webdesigncourse/pen/RoXNPb?editors=0010">play with it on codepen</a></p>
     </section>
+
     <section><h3><code>while</code> statement: синтаксис</h3>
-        <pre><code>
-while ( condition) {
-    блок, който се изпълнява, докато condition е истина
-}
+        <pre><code rel="Syntax">
+            while ( condition) {
+                блок, който се изпълнява, докато condition е истина
+            }
         </code></pre>
-        <p>Стъпките, в един while цикъл са:</p>
+        <p>Стъпките, в един <code>while</code> цикъл са:</p>
         <dl class="fa">
             <dt>condition:</dt>
                 <dd>ако е истина => изпълнява се блока,</dd>
                 <dd>ако е лъжа => излиза се от цикъла</dd>
         </dl>
-        <p class="note left">За да се избегне безкраен цикъл, променливата в <code>condition</code> трябва да променя стойността си в тялото на цикъла!</p>
+        <p class="note">За да се избегне безкраен цикъл, променливата в <code>condition</code> трябва да променя стойността си в тялото на цикъла!</p>
     </section>
     <section><h3><code>while</code> statement: алгоритъм</h3>
         <img src="images/while_algorithm.png">
     </section>
     <section><h3><code>while</code> statement: пример</h3>
-        <pre><code>
-var items = 10;
-while( items > 0 ){
-    li=document.createElement('li');
-    li.className = "elements";
-    li.innerHTML = "Item " + (i+1);
-    ul.appendChild(li);
-    items--­­;  // ако този ред липсва, цикълът става безкраен!
-}
+        <pre><code rel="JS">
+            var items = 10;
+            while( items > 0 ){
+                li=document.createElement('li');
+                li.className = "elements";
+                li.innerHTML = "Item " + (i+1);
+                ul.appendChild(li);
+                items--­­;  // ако този ред липсва, цикълът става безкраен!
+            }
         </code></pre>
     </section>
+</section>
+
+<section><h2>Примери и Задачи</h2>
+    <a href="http://codepen.io/collection/XOEQay/">codepen колекция с примери и задачи</a>
 </section>
 
 
