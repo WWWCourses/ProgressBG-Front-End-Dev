@@ -5,6 +5,9 @@ body{
     background-color: #F7F6E6;
     color: #443020;
 }
+h1{
+    margin: 0 0 1em 0;
+}
 p{
     margin: .5em 0em 0em 0em;
     padding: 0;
@@ -21,6 +24,7 @@ a{
     /*border-bottom: .1em dotted #999;*/
 }
 .results{
+    position: relative;
     box-sizing: border-box;
     width: 97%;
     background-color: #FFF;
@@ -29,6 +33,11 @@ a{
     margin: 1em 0em .2em 0em;
     padding: 1em 0em 1em .5em;
     border: .1em inset #D1D1D1;
+}
+.results>img{
+    display: block;
+    width: 100%;
+    margin: -1em 0em 0em -.5em;
 }
 .notes{
     margin: 0em 0em 0em 2em;
@@ -105,4 +114,12 @@ p.table_caption{
 }
 @media print {
     .page_break {page-break-after: always;}
+}
+
+/*common classes*/
+.center_text{
+    text-align: center;
+}
+.gray{
+    color: #666;
 }
