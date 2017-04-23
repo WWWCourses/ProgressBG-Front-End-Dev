@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"path": "/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev"
+		},
+	],
+	"settings":
+	{
+		"spell_check": true
+	},
+	"sublime-view-in-browser":
+	{
+		"basePath": "freelance/courses/ProgressBG/JS2",
+		"baseUrl": "http://127.0.0.1:8080"
+	}
+}
