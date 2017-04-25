@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+		<label>Your name <input id="user_name" type="name" name=""></label>
+		<label>Your age <input id="user_age" type="number" name=""></label>
+		<button id="submit" onclick="
+            var writeToOutput = function( iva ){
+        		alert( iva );
+        	};
+
+            if (user_age>=18) {
+				writeToOutput('Добре дошли,'+user_name);
+			} else if (user_age<=18 && user_age>14) {
+				writeToOutput(userName+','+' '+'ще имате достъп само до определена функционалност от този сайт');
+			} else {
+				writeToOutput('Съжалявам'+'  '+user_name+','+' '+' отбий се тук след'+' '+(18-user_age)+' ' +'години!')
+			}
+ 		"> OK
+ 		</button>
+		</div>
+		<script></script>
+</body>
+
+</html>
