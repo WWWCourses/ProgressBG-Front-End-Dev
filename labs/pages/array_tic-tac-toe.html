@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>object</title>
+    <style type="text/css">
+    	.board{
+    		width: 10rem;
+    		height: 10rem;
+    		border-collapse: collapse;
+    		border: 5px outset #49383D;
+    	}
+    	.board td{
+    		width: 33.3%;
+    		text-align: center;
+    		border: 1px solid #666;
+    	}
+
+    	.buttons{
+    		width: 10em;
+    	}
+    	#move, #reset{
+    		margin: 1em 0 0 0;
+    		width: 4rem;
+    		height: 2rem;
+    		color: #CCC;
+    		background: #49383D;
+    	}
+    	#move{
+    		float: left;
+
+    	}
+    	#reset{
+    		float: right;
+    	}
+
+    	/*tr:nth-child(2)>td:nth-child(1){background: orange;}*/
+    </style>
 </head>
 <body>
-
+	<table class="board">
+		<tr>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td onclick="console.dir(this)">0</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+	</table>
+	<div class="buttons">
+		<button id="move">Move</button>
+		<button id="reset">Refresh</button>
+	</div>
 </body>
 <script type="text/javascript" src="../js/array_tic-tac-toe.js"></script>
 </html>
