@@ -63,13 +63,14 @@
        <dl class="fa">
             <dt><abbr>DOM</abbr><dfn><span>Document</span><span>Object</span><span>Model</span></dfn></dt>
             <dt><span class="note">платформено-независима</span> и <span class="note">езиково-независима</span> конвенция за представяне и взаимодействие с обектите в <span class="code">HTML</span>, <span class="code">XHTML</span> и <span class="code">XML</span> документи.</dt>
-            <dt>Браузърите представят HTML и CSS кода в близка до DOM структура (<a href="https://en.wikipedia.org/wiki/Browser_Object_Model">BOM</a>)</dt>
+            <dt>Браузърите представят HTML и CSS кода в близка до DOM структура, наречена <abbr><a href="https://en.wikipedia.org/wiki/Browser_Object_Model">BOM</a></abbr><dfn><span>Browser</span><span>Object</span><span>Model</span></dfn>.</dt>
         </dl>
     </section>
     <section>
         <dl class="fa">
             <dt>DOM е йерархична структура</dt>
-            <dt>В DOM всичко е възел (<span class="note code">node</span>)</dt>
+            <dt>В DOM са дефинирани следните видове обекти/възли (<span class="note code">node</span>)</dt>
+            <dd><code class="note">Window node</code></dd>
             <dd>Самият html документ е възел: <span class="note code">document node</span>.</dd>
             <dd>Всички HTML елементи са възли: <span class="note code">elements nodes</span></dd>
             <dd>Всички HTML атрибути са възли: <span class="note code">attribute nodes</span></dd>
@@ -97,6 +98,9 @@
                 <script type="text/javascript">
                     console.log("The Document node object:");
                     console.dir(document);
+
+                    console.log('The element with id="p1" object');
+                    console.dir( document.getElementById('p1') );
                 </script>
             &lt;/body&gt;
         </code></pre>
@@ -206,6 +210,40 @@
             <dt><a href="https://www.w3schools.com/xml/dom_nodetype.asp">XML DOM Node Types</a></dt>
         </dl>
     </section>
+</section>
+
+<section><h2>Methods for accessing Element Nodes</h2>
+    <section><h3><a href="https://www.w3schools.com/jsref/met_document_getelementbyid.asp"></a>getElementById()</h3>
+        <dl class="fa">
+            <dt>Връща обект, представящ елемент с id = elementID</dt>
+            <dt>elementID трябва да бъде string</dt>
+        </dl>
+        <pre><code rel="Syntax">
+            document.getElementById(elementID);
+        </code></pre>
+        <pre><code rel="JS">
+            var node = document.getElementById('test');
+        </code></pre>
+    </section>
+    <section><h3><a href="https://www.w3schools.com/jsref/met_document_getelementsbyclassname.asp"></a>getElementsByClassName()</h3>
+        <dl class="fa">
+            <dt>Връща обект от тип NodeList, съдържащ подобно на <span class="note">масив</span> всички елементи с class = classname</dt>
+            <dt>classname трябва да бъде string</dt>
+            <dt>За да работим с конкретен елемент, от дадения клас, трябва да използваме <span class="note">[]</span> нотацията.</dt>
+        </dl>
+        <pre><code rel="Syntax">
+            document.getElementsByClassName(classname)
+        </code></pre>
+        <pre><code rel="JS">
+            var allRedNodes = document.getElementsByClassName('red');
+            var firstRedNode = allRedNodes[0];
+        </code></pre>
+    </section>
+    <section><h3><a href="https://www.w3schools.com/jsref/met_doc_getelementsbyname.asp"></a>getElementsByName()</h3>
+    </section>
+    <section><h3><a href="https://www.w3schools.com/jsref/met_document_getelementsbytagname.asp">getElementsByTagName()</a></h3></section>
+    <section><h3><a href="https://www.w3schools.com/jsref/met_document_queryselector.asp"></a>querySelector()</h3></section>
+    <section><h3><a href="https://www.w3schools.com/jsref/met_document_queryselectorall.asp"></a>querySelectorAll()</h3></section>
 </section>
 <section><h2>References</h2>
     <dl class="fa">
