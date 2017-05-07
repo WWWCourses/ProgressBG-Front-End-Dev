@@ -239,11 +239,45 @@
             var firstRedNode = allRedNodes[0];
         </code></pre>
     </section>
-    <section><h3><a href="https://www.w3schools.com/jsref/met_doc_getelementsbyname.asp"></a>getElementsByName()</h3>
+    <section><h3><a href="https://www.w3schools.com/jsref/met_document_getelementsbytagname.asp">getElementsByTagName()</a></h3>
+        <dl class="fa">
+            <dt>Връща обект от тип NodeList, съдържащ подобно на <span class="note">масив</span> всички HTML елементи от тип tagName</dt>
+            <dt>tagName трябва да бъде string</dt>
+            <dt>За да работим с конкретен елемент, то трябва да използваме <span class="note">[]</span> нотацията.</dt>
+        </dl>
+        <pre><code rel="Syntax">
+            document.getElementsByTagName(tagName)
+        </code></pre>
+        <pre><code rel="JS">
+            var allParagraphNodes = document.getElementsByTagName('p');
+            var firstParagraph = allParagraphNodes[0];
+        </code></pre>
     </section>
-    <section><h3><a href="https://www.w3schools.com/jsref/met_document_getelementsbytagname.asp">getElementsByTagName()</a></h3></section>
-    <section><h3><a href="https://www.w3schools.com/jsref/met_document_queryselector.asp"></a>querySelector()</h3></section>
-    <section><h3><a href="https://www.w3schools.com/jsref/met_document_queryselectorall.asp"></a>querySelectorAll()</h3></section>
+    <section><h3><a href="https://www.w3schools.com/jsref/met_document_queryselector.asp">querySelector()</a></h3>
+        <dl class="fa">
+            <dt>Връща <strong>първия елемент</strong>, който отговаря на зададения селектор (sel).</dt>
+            <dt>sel трябва да бъде string и да е валиден CSS селектор</dt>
+        </dl>
+        <pre><code rel="Syntax">
+            document.querySelector(sel)
+        </code></pre>
+        <pre><code rel="JS">
+            var firstLI = document.querySelector("ul>li:nth-of-type(1)");
+        </code></pre>
+    </section>
+    <section><h3><a href="https://www.w3schools.com/jsref/met_document_queryselectorall.asp">querySelectorAll()</a></h3>
+        <dl class="fa">
+            <dt>Връща обект от тип NodeList, съдържащ подобно на <span class="note">масив</span> всички HTML елементи които отговарят на зададения селектор</dt>
+            <dt>sel трябва да бъде string и да е валиден CSS селектор</dt>
+            <dt>За да работим с конкретен елемент, то трябва да използваме <span class="note">[]</span> нотацията.</dt>
+        </dl>
+        <pre><code rel="Syntax">
+            document.querySelectorAll(sel)
+        </code></pre>
+        <pre><code rel="JS">
+            var allFooterLI = document.querySelectorAll('footer ul>li');
+        </code></pre>
+    </section>
 </section>
 <section><h2>References</h2>
     <dl class="fa">
