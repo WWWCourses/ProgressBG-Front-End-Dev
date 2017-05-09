@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+#calc {
+ width: 20em;
+ padding: 0 0 1em 0;
+ border-bottom: .3em solid #666;
+}
+
+.inputFields>label {
+ display: block;
+ margin: 1em 0;
+}
+
+.reset {
+ margin: 1em 0 0 0;
+}
+
+#output {
+ font-size: 2em;
+ color: #FF8282
+}

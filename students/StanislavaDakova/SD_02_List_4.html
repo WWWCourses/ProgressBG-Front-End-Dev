@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>4</title>
+	<style>
+		main>ul>li:nth-child(3) {
+		 color: initial;
+		}
+		.but{
+			display: inline-block;
+			width: 225px;
+			height: 2em;
+		}
+		.red{
+			color: red;
+		}
+		.green{
+			color: green;
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+ <ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+  <li>Item 5</li>
+ </ul>
+</header>
+<main>
+ <ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Am I green or am I red?</li>
+  <li>Item 4</li>
+  <li>Item 5</li>
+ </ul>
+</main>
+<button class="but red" onclick="becomeRed()">Почервеней</button>
+<button class="but green " onclick="becomeGreen()">Позеленей</button>
+<button class="but reset" onclick="clearColor()">Изчисти</button>
+
+<script>
+	var li3Node = document.querySelector("main>ul>li:nth-child(3)");
+	//var buttonRed=document.querySelector(".red");
+//console.dir(li3Node);
+//li3Node.style.color = "red";
+
+// ************************************
+// Задача: поставете един бутон в HTML-a и променете програмата, така че li елемента да променя шрифта си към червен само при натискане на бутона
+// ************************************
+	function becomeRed(){
+		// iep: тук няма нужда да връщаме стойност. Още повече, когато извикваш функцията никъде не изпозлваш връщаната от нея стойност.
+		return li3Node.style.color = "red";
+
+	}
+	function becomeGreen(){
+		return li3Node.style.color = "green";
+	}
+
+	function clearColor() {
+	    return li3Node.style.color = "black";
+	}
+
+</script>
+</body>
+</html>
