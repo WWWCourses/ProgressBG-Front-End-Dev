@@ -1,9 +1,9 @@
 var imgSources = [
-	'http://lorempixel.com/400/200/sports/1',
-	'http://lorempixel.com/400/200/sports/2',
-	'http://lorempixel.com/400/200/sports/3',
-	'http://lorempixel.com/400/200/sports/4',
-	'http://lorempixel.com/400/200/sports/5',
+	'http://lorempixel.com/400/200/animals/1',
+	'http://lorempixel.com/400/200/animals/2',
+	// 'http://lorempixel.com/400/200/animals/3',
+	// 'http://lorempixel.com/400/200/animals/4',
+	// 'http://lorempixel.com/400/200/animals/5',
 ];
 var imgNode = document.getElementById('theImage');
 var prevBTN = document.getElementById('prev');
@@ -16,11 +16,32 @@ http://lorempixel.com/400/200/sports/1
 
 
 
-nextBTN.addEventListener('click', nextImgSources );
+nextBTN.addEventListener('click', nextImgSourcesHard );
 
-function nextImgSources(){
-	// TODO: upload in codepen : 2 variants
-	i = ++i % imgSources.length + 1;
-	imgNode.setAttribute('src', imgSources[i]);
+// по-лесно за разбиране решение
+function nextImgSourcesEasy(){
+	i++;
+
+	// след последната img => започваме отначало:
+	if ( i == imgSources.length){
+		i = 0;
+	}
 	console.log("i=", i);
+
+	imgNode.setAttribute('src', imgSources[i]);
 }
+
+// малко по-трудно за разбиране решение
+function nextImgSourcesHard(){
+	console.log("i=", i);
+
+	imgNode.setAttribute('src', imgSources[++i % imgSources.length]);
+}
+
+// nextImgSourcesHard() tip:
+// 0 % 2 = 0
+// 1 % 2 = 1
+// 2 % 2 = 0
+// 3 % 2 = 1
+// 4 % 2 = 0
+// ...

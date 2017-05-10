@@ -10,26 +10,20 @@
 
 <body>
 
-<div id="calc">
+	<div id="calc">
 		<div class="inputFields"><label>Въведете 1 число: <input type="number" name=""></label>
 			<label>Въведете 2 число: <input type="number" name=""></label>
 		</div>
-		<!--
-		************** задача **************
-		добавете бутони за изваждане, делене и умножаване и реализирайте функционалността чрез JavaScript
-		************************************
-		-->
-		<button class="op">+</button>
-		<button class="om" onclick="calculate(minus)">-</button>
-		<button class="om" ondblclick="calculate(delene)">/</button>
-		<button class="om" onclick="calculate(ymnojenie)">*</button>
+
+		<button class="op" onclick="calculate('+')">+</button>
+		<button class="om" onclick="calculate('-')">-</button>
+		<button class="om" ondblclick="calculate('/')">/</button>
+		<button class="om" onclick="calculate('*')">*</button>
 
 		<button class="reset" onclick="clearInput()">Reset</button>
 	</div>
 
 	<div id="output"></div>
-
-
 <script src="my.js"></script>
 
 </body>

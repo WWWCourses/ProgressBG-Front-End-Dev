@@ -8,29 +8,22 @@ var btnMinus = document.getElementById('minus');
 var btnDelene = document.getElementById('delene');
 var btnYmnojenie = document.getElementById('ymnojenie');
 
-btnSum.addEventListener('click', createFunction );
+btnSum.addEventListener('click', createListener(sum) );
+btnSum.addEventListener('click', createCalcFunction );
 // btnMinus.addEventListener('click',  );
 // btnDelene.addEventListener('click', calculate(delene) );
 // btnYmnojenie.addEventListener('click', calculate(ymnojenie) );
 
 
-function createFunction(){
-	return function calculate(f) {
+function createListener(f){
+	return function calculate(){
 		console.log("Calculate is fired!");
 		var x = getInputValue(input1Node);
 		var y = getInputValue(input2Node);
-		var result = f(+x,+y);
+		var result = f(+x,+y); // +x = x, but as Number
 	}
 
 }
-// calculate(delene)
-function calculate(f) {
-	console.log("Calculate is fired!");
-	var x = getInputValue(input1Node);
-	var y = getInputValue(input2Node);
-	var result = f(+x,+y);
-}
-
 
 function sum(x, y) {
 	return x + y;
