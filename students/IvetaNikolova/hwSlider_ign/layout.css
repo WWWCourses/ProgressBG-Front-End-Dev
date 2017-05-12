@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+.clear:after {
+ display: block;
+ content: "";
+ clear: both;
+}
+
+.carousel {
+ position: relative;
+ width: 50vw;
+ height: 50vh;
+ border: .3em outset #999;
+}
+
+.carousel img {
+ display: block;
+ width: 100%;
+ height: 100%;
+ ;
+}
+
+
+/*navigation panels*/
+
+.carousel .prev,
+.carousel .next {
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ width: 50%;
+ color: #FFF;
+ font-weight: bold;
+}
+
+.carousel .next {
+ right: 0;
+}
+
+.carousel .prev {
+ left: 0;
+}
+
+.carousel .next:hover,
+.carousel .prev:hover {
+ cursor: pointer;
+}
+
+
+/*arrows*/
+
+.carousel .next:before,
+.carousel .prev:before {
+ display: inline-block;
+ position: relative;
+ top: 50%;
+ transform: translateY(-50%);
+ margin: 0 3em;
+ font-size: 5em;
+ opacity: 0;
+ transition: all .5s;
+}
+
+.carousel .prev:before {
+ content: "\00AB";
+ float: left;
+}
+
+.carousel .next:before {
+ content: "\00BB";
+ float: right;
+}
+
+.carousel .next:hover:before,
+.carousel .prev:hover:before {
+ opacity: .7;
+ margin: 0 .3em;
+}
