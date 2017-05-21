@@ -1,0 +1,10 @@
+li{
+	list-style-type: none;
+}
+.odd{
+	background: black;
+	color: white;
+}
+.even{
+	background: gray;
+}
