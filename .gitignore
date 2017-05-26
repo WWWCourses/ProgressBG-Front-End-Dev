@@ -6,7 +6,12 @@
 **/*nohup*
 
 *.sublime-workspace
+*.sublime-project
+!gh-pages.sublime-project
+!gh-pages.sublime-workspace
 
+
+/students/**
 /pages/themes/beginners/*/*
 !/pages/themes/beginners/Appendix/**
 !/pages/themes/beginners/*/*.html
