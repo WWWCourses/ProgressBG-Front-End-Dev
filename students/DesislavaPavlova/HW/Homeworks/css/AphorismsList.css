@@ -1,0 +1,22 @@
+body{
+	width: 800px;
+	font-family: 'Alegreya', serif;
+}
+li{
+	list-style-type: none;
+	padding: 20px;
+}
+.odd{
+	background-color: #41484E;
+	color: #DDD;
+}
+.even{
+	background-color: #5E6F7D;
+	color: #EEE;
+
+}
+#title{
+	text-align: center;
+	color: grey;
+	padding: 20px;
+}
