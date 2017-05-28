@@ -1,0 +1,49 @@
+html{
+	border: 20px white;
+	
+}
+body{
+	font-family: sans-serif;
+	font-weight: bold;
+	background-image: url("../images/raven-1002849_1280.jpg");
+	border: 20px;
+	font: black;
+	border-style: outset;
+}
+h1 {
+	font-size: 34px;
+	font-weight: bold;
+	color: orange;
+	width: 50%;
+	text-align: center;
+	}
+em{
+	font-style: italic;
+	letter-spacing: 2px;
+}
+.o1{
+	font-size: 20px;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	color: black;
+	width: 50%;
+	}
+.no5{
+	text-decoration: orange; 
+}
+p{
+	text-indent: 5%;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	width: 50%;
+	}
+.l1{
+	color: orange;
+	font-size: 16px;
+	width: 100%;
+	}
+.l2{
+	color: black;
+	}
