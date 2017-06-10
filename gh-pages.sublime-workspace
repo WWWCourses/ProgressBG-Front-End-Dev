@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"пози",
+				"позициониран"
+			],
+			[
+				"code",
+				"code\tTag"
+			],
+			[
+				"em",
+				"em\tTag"
+			],
+			[
 				"nth",
 				"nth-of-type(〔pseudo-class〕"
 			],
@@ -26,10 +38,6 @@
 			[
 				"class",
 				"classname"
-			],
-			[
-				"code",
-				"codejs\thtml_code_rel_js"
 			],
 			[
 				"he",
@@ -506,34 +514,37 @@
 			[
 				"border-co",
 				"border-color"
-			],
-			[
-				"rota",
-				"rotateZ()"
-			],
-			[
-				"li",
-				"list-style-type"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/outfit/js/slides.js",
+			"file": "/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Visual_Formating_Model/CSS_Visual_Formating_Model.html",
 			"settings":
 			{
-				"buffer_size": 1606,
+				"buffer_size": 19134,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_BasicProperties/CSS_Basic_Properties.html",
+			"file": "/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Visual_Formating_Model/slides_examples/slide_example_test.html",
 			"settings":
 			{
-				"buffer_size": 18785,
+				"buffer_size": 281,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html>\n<head>\n\t\t<meta charset=\"UTF-8\">\n\t\t<title>fixedBottomFooter</title>\n\t\t<style type=\"text/css\">\n\t\t\tfooter{\n\t\t\t\tposition: fixed;\n\t\t\t\tbottom: 0;left:0;right:0;\n\t\t\t\theight: 10vh;\n\t\t\t\tbackground: #FFC400;\n\t\t\t}\n\t\t</style>\n</head>\n<body>\n\t<footer>I'm fixed to the bottom!</footer>\n</body>\n<script type=\"text/javascript\" src=\"fixedBottomFooter.js\"></script>\n</html>",
+			"file": "/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Visual_Formating_Model/slides_examples/fixedBottomFooter.html",
+			"file_size": 375,
+			"file_write_time": 131410553150307582,
+			"settings":
+			{
+				"buffer_size": 378,
 				"line_ending": "Unix"
 			}
 		}
@@ -545,10 +556,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 191.0,
-		"last_filter": "set java",
+		"height": 400.0,
+		"last_filter": "live",
 		"selected_items":
 		[
+			[
+				"live",
+				"LiveReload: Enable/disable plug-ins"
+			],
 			[
 				"set java",
 				"Set Syntax: JavaScript"
@@ -556,10 +571,6 @@
 			[
 				"Pasca",
 				"Convert Case: PascalCase"
-			],
-			[
-				"live",
-				"LiveReload: Enable/disable plug-ins"
 			],
 			[
 				"set html",
@@ -978,7 +989,7 @@
 				"Package Control: List Packages"
 			]
 		],
-		"width": 583.0
+		"width": 601.0
 	},
 	"console":
 	{
@@ -1019,11 +1030,14 @@
 		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/outfit/js",
 		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages",
 		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_BasicProperties"
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners"
 	],
 	"file_history":
 	[
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Visual_Formating_Model/slides_examples/rightFloatProblem.html",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Visual_Formating_Model/slides_examples/floatRightInDiv.html",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Box_Model/CSS_Box_Model.html",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Layouts_and_HTML5_SemanticElements/labs/PageLayouts/float_in_main.html",
 		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/gh-pages.sublime-project",
 		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Selectors_1/homeworks/AphorismsList/AphorismsList.html",
 		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_BasicProperties/CSS_Basic_Properties.html",
@@ -1147,15 +1161,11 @@
 		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/pages/_cliches/themes/slides.html",
 		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/pages/themes/_cliches/slides.html",
 		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/pages/themes/Course_Intro/Course_Intro.html",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/outfit/js/js_new/agenda.js",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/.git/config",
-		"/home/nemsys/.config/sublime-text-3/Packages/User/View In Browser.sublime-settings",
-		"/home/nemsys/.config/sublime-text-3/Packages/JSHint Gutter/.jshintrc",
-		"/home/nemsys/.config/sublime-text-3/Packages/JSHint Gutter/JSHint.sublime-settings"
+		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/outfit/js/js_new/agenda.js"
 	],
 	"find":
 	{
-		"height": 47.0
+		"height": 73.0
 	},
 	"find_in_files":
 	{
@@ -1212,8 +1222,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"^\\s*console",
-			"лог",
+			";\n",
+			"em",
+			"box-sizing",
 			"s",
 			"*);\n",
 			"CC",
@@ -1338,8 +1349,7 @@
 			"project",
 			"\\d+\\.\\s+",
 			"^(\\s*)\\d+\\.\\s+",
-			"^(\\s+)[a-h]\\.\\s+",
-			"(\\s+)[a-h]\\.\\s+"
+			"^(\\s+)[a-h]\\.\\s+"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1490,19 +1500,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/outfit/js/slides.js",
+					"file": "/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Visual_Formating_Model/CSS_Visual_Formating_Model.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1606,
+						"buffer_size": 19134,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1606,
-								1606
+								19134,
+								19134
 							]
 						],
 						"settings":
@@ -1526,36 +1536,41 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -1571,23 +1586,18 @@
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
 							],
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 900.0,
+						"translation.y": 9049.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1595,19 +1605,136 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_BasicProperties/CSS_Basic_Properties.html",
-					"semi_transient": false,
+					"file": "/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Visual_Formating_Model/slides_examples/slide_example_test.html",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 18785,
+						"buffer_size": 281,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12132,
-								12132
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										14,
+										15
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/angle_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										0,
+										1
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Visual_Formating_Model/slides_examples/fixedBottomFooter.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 378,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								219,
+								219
 							]
 						],
 						"settings":
@@ -1618,12 +1745,27 @@
 							{
 								"close":
 								{
+									"1":
+									[
+										224,
+										225
+									]
 								},
 								"icon":
 								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
 								},
 								"open":
 								{
+									"1":
+									[
+										125,
+										126
+									]
 								},
 								"unmatched":
 								{
@@ -1631,70 +1773,71 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
-								"bh_default_content"
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
 							],
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 10232.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1853,7 +1996,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 66.0,
+	"side_bar_width": 359.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

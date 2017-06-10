@@ -1,0 +1,41 @@
+html, body{
+	height: 100%;
+}
+html, body, header, main, article, aside, p, section{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header{
+	height: 15vh;
+	font-size: 3em;
+	text-align: center;
+	background: #666;
+	color: #CCC;
+}
+main{
+	/*height: 100%;*/
+	border: 2px solid #00F;
+}
+footer{
+	height: 15vw;
+	background: #CCC;
+	color: #666;
+	border: 1px solid #f00;
+}
+.column{
+	float: left;
+	min-height: 100%;
+}
+.left{
+	width: 40%;
+	background: #DFCCA6
+}
+.right{
+	width:60%;
+	background: #D1FEFF
+}
+.clear{
+	clear: both;
+}
