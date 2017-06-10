@@ -1,0 +1,49 @@
+body{
+	width: 100vw;
+	background-image: url(../images/ocean-through-window-frame.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #4D6CF3;
+}
+.container{
+	position: fixed;
+	left: 28vw;
+	top: 20vw;
+	width: 37.5rem;
+}
+.container>div{
+	position: absolute;
+	width: 10rem;
+  	height: 10rem;
+  	border-radius: 100%;
+  	line-height: 5em;
+  	text-align: center;
+  	font-size: 2em;
+  	font-weight: bold;
+  	color: rgba(0, 0, 0, .5);
+}
+#blue{
+	left: 0;
+	top: 0;
+	border: .6em solid rgba(0, 0, 255, .3);
+}
+#yellow{
+	left: 12.5rem;
+	top: 0;
+	border: .6em solid rgba(250, 250, 0, .3);
+}
+#black{
+	right: 0;
+	top: 0;
+	border: .6em solid rgba(0, 0, 0, .3);
+}
+#green{
+	left: 6rem;
+	top: 8rem;
+	border: .6em solid rgba(0, 255, 0, .3);
+}
+#red{
+	right: 6rem;
+	top: 8rem;
+	border: .6em solid rgba(255, 0, 0, .3);
+}

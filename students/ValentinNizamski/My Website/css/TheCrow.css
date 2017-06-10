@@ -2,13 +2,16 @@ html{
 	border: 20px white;
 	
 }
-body{
+body{ 
 	font-family: sans-serif;
 	font-weight: bold;
-	background-image: url("../images/raven-1002849_1280.jpg");
-	border: 20px;
+	background-image: url("../images/raven-1002849_1280.jpg"); /*вмъква картинка за фон*/
+	background-size: 100% 100%;
+	background-repeat: no-repeat; 
+	background-color: orange;
+	border: 20px orange;я
 	font: black;
-	border-style: outset;
+	border-style: outset; /*3D рамка*/
 }
 h1 {
 	font-size: 34px;
@@ -30,13 +33,15 @@ em{
 	width: 50%;
 	}
 .no5{
-	text-decoration: orange; 
+	border-bottom: double;
+	outline-width: 2px;
+	color: orange;
 }
 p{
-	text-indent: 5%;
-	font-size: 20px;
-	font-weight: bold;
-	color: white;
+	text-indent: 5%;/* отмества първия ред навътре*/
+	font-size: 20px; /*размер на шрифта*/
+	font-weight: bold; 
+	color: white; /*цвят на шршфта*/
 	width: 50%;
 	}
 .l1{
