@@ -3,29 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS_pseudo_selectors</title>
+    <link rel="stylesheet" type="text/css" href="../css/faFont.css">
     <style type="text/css">
-    	.wrapper{
-    		width: 10vw;
-    		height: 10vw;
-    		background: red;
-    	}
-    	.inner{
-    		width: 5vw;
-    		height: 5vw;
-    		background: blue;
-    	}
-    	/*.inner да се променя, когато мина с мишката върху .wrapper*/
-    	.inner:hover{
-    		background: green;
-    	}
+    body{
+    	counter-reset: themeCounter;
+    }
+    article:before{
+    	counter-increment: themeCounter;
+    	content: 'Theme: ' counter(themeCounter);
+    }
+
     </style>
 </head>
 <body>
-
-<div class="wrapper">
-	<div class="inner"></div>
-</div>
-
+	<article> Глава</article>
+	<article> Глава</article>
+	<article> Глава</article>
+	<article> Глава</article>
 </body>
-<script type="text/javascript" src="CSS_pseudo_selectors.js"></script>
 </html>
