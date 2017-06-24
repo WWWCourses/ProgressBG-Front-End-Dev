@@ -317,9 +317,12 @@ section.copyright>.license{
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 .reveal pre code{
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0 0 .5em 0;
   line-height: 1.2em;
+}
+.reveal pre code>span:nth-of_type(1){
+	padding: 1em 0 0 0;
+	background: red;
 }
 .reveal pre code.tabs3 .xml{
   display: block;

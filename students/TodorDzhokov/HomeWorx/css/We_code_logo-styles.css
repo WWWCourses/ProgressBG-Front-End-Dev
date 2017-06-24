@@ -1,0 +1,44 @@
+body,html{
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
+}
+div{
+	margin: 2em;
+}
+div>span{
+	font-style: italic;
+	font-size: 4em;
+	color: rgba(255, 255, 255, .8);
+	text-shadow: 
+	-.01em .01em  0 rgba(34, 47, 61, .5),
+	-.02em .02em  0 rgba(34, 47, 61, .5),
+	-.03em .03em  0 rgba(34, 47, 61, .5),
+	-.04em .04em  0 rgba(34, 47, 61, .5),
+	-.05em .05em  0 rgba(34, 47, 61, .5),
+	-.07em .06em  0 rgba(34, 47, 61, .5),
+	-.08em .08em  0 rgba(34, 47, 61, .5),
+	-.09em .09em  0 rgba(34, 47, 61, .5),
+	-.1em .1em  0 rgba(34, 47, 61, .5),
+	-.12em .12em  0 rgba(34, 47, 61, .5),
+	-.13em .13em  0 rgba(34, 47, 61, .5),
+	-.14em .14em  0 rgba(34, 47, 61, .5),
+	-.15em .15em  0 rgba(34, 47, 61, .5),
+	-.16em .16em  0 rgba(34, 47, 61, .5),
+	-.17em .17em  0 rgba(34, 47, 61, .5),
+	-.18em .18em  0 rgba(34, 47, 61, .5),
+	-.19em .19em  0 rgba(34, 47, 61, .5),
+	-.2em .2em  0 rgba(34, 47, 61, .5);
+}
+div>span.we::before{
+	content: "@";
+	color: rgba(103, 137, 171, .6);
+}
+div>span.code::before{
+	content: "{";
+	color: rgba(103, 137, 171, .6);
+}
+span.code::after{
+	content: "}";
+	color: rgba(103, 137, 171, .6);
+}
