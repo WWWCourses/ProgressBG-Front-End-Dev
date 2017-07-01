@@ -11,12 +11,10 @@ function  PrettyPreCode(){
 
         // get indent
         var indent =  content.match(/^\n*(\s*)/)[1];
-        console.log(`indent: --->${indent}<---`);
 
         // remove indent from all lines
         var indentRE = new RegExp("^" + indent, "gm");
         content = content.replace(indentRE, "");
-         console.log(`content: --->${content}<---`);
 
         // clean empty lines on start/end
         content = content.replace(/^\s*/,"");

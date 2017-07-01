@@ -1,551 +1,589 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>JS_BasicSyntax_1</title>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-    <!-- css & themes include -->
-    <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/lib/reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css" id="theme">
-    <!-- Printing and PDF exports -->
-    <script>
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match( /print-pdf/gi ) ? '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/paper.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
-    <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
-    <![endif]-->
-    <!-- CUSTOM -->
-    <base target="_blank">
+	<meta charset="utf-8">
+	<title>JS_BasicSyntax_1</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="/ProgressBG-Front-End-Dev/lib/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
 </head>
 <body>
-    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
-        <div class="top_links">
-            <a class="home_link" href="/ProgressBG-Front-End-Dev/pages/agenda/beginners.html#Course_Intro" target="_top"><i class="fa fa-home"></i></a>
-            <span class="help_link" href="#"><i class="fa fa-question"></i></span>
-            <div class="help_text">
-                <div><span>N/Спейс</span><span>следващ слайд</span></div>
-                <div><span>P</span><span>предишен слайд</span></div>
-                <div><span>O</span><span>всички слайдове</span></div>
-                <div><span>ctrl+left click</span><span>увеличава елемента</span></div>
-            </div>
-        </div>
-        <div class="footer theme_switch">
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css'); return false;">Dark</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/light.css'); return false;">Light</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/projector.css'); return false;">Projector</a>
-        </div>
-        <div class="slides">
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="/ProgressBG-Front-End-Dev/pages/agenda/beginners.html#Course_Intro" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link" href="#"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Спейс</span><span>следващ слайд</span></div>
+				<div><span>P</span><span>предишен слайд</span></div>
+				<div><span>O</span><span>всички слайдове</span></div>
+				<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
 <!--
 ########################################################
 ##################### SLIDES START #####################
 ########################################################
 -->
 <section><h1>JavaScript - основни синтактични елементи</h1>
-    <h3>част 1</h3>
+	<h3>част 1</h3>
 </section>
 <section data-transition="zoom">
-    <div class="copyright">
-        <div class="note">
-            <p>Създаден за</p>
-        </div>
-        <div class="company">
-            <a href="http://progressbg.net/kurs-po-web-design/">
-            <img style="height:80%" src="/ProgressBG-Front-End-Dev/outfit/images/logos/ProgressBG_logo_529_127.png">
-            </a>
-        </div>
-        <div class="author">
-            <span>Iva E. Popova, 2016-2017,</span>
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
-        </div>
-    </div>
+	<div class="copyright">
+		<div class="note">
+			<p>Създаден за</p>
+		</div>
+		<div class="company">
+			<a href="http://progressbg.net/kurs-po-web-design/">
+			<img style="height:80%" src="/ProgressBG-Front-End-Dev/outfit/images/logos/ProgressBG_logo_529_127.png">
+			</a>
+		</div>
+		<div class="author">
+			<span>Iva E. Popova, 2016-2017,</span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</div>
 </section>
 
 <section><h2>Структура на програмата</h2>
-    <section>
-        <dl class="fa">
-            <dt>Една JavaScript програма е последователност от инструкции (изрази, statements).</dt>
-            <dt>Изразите се разделят един от друг с '<span class="code">;</span>'</dt>
-            <dt>Последователност от изрази, заградена в '<span class="code">{</span>' и '<span class="code">}</span>' се нарича блок.</dt>
-            <dt>Ако направим аналогия с естествените езици:
-                <table style="margin-left: 1em">
-                    <tr>
-                        <th>Български език</th>
-                        <th></th>
-                        <th>JavaScript</th>
-                    </tr>
-                    <tr>
-                        <td>разказ, роман и пр</td>
-                        <td><=></td>
-                        <td>програма</td>
-                    </tr>
-                    <tr>
-                        <td>изречение</td>
-                        <td><=></td>
-                        <td>израз</td>
-                    </tr>
-                    <tr>
-                        <td>параграф, абзац</td>
-                        <td><=></td>
-                        <td>блок</td>
-                    </tr>
-                </table>
-            </dt>
-            </dl>
-    </section>
-    <section><h3>Изрази</h3>
-        <p>Израз е всяка една инструкция към Браузера, за да изпълни дадено действие.</p>
-        <pre><code rel="JS">
-            // показва „изкачащо“ съобщение с текст „Welcome“
-            alert(„Welcome“);
+	<section>
+		<dl class="fa">
+			<dt>Една JavaScript програма е последователност от инструкции (изрази, statements).</dt>
+			<dt>Изразите се разделят един от друг с '<span class="code">;</span>'</dt>
+			<dt>Последователност от изрази, заградена в '<span class="code">{</span>' и '<span class="code">}</span>' се нарича блок.</dt>
+			<dt>Ако направим аналогия с естествените езици:
+				<table style="margin-left: 1em">
+					<tr>
+						<th>Български език</th>
+						<th></th>
+						<th>JavaScript</th>
+					</tr>
+					<tr>
+						<td>разказ, роман и пр</td>
+						<td><=></td>
+						<td>програма</td>
+					</tr>
+					<tr>
+						<td>изречение</td>
+						<td><=></td>
+						<td>израз</td>
+					</tr>
+					<tr>
+						<td>параграф, абзац</td>
+						<td><=></td>
+						<td>блок</td>
+					</tr>
+				</table>
+			</dt>
+			</dl>
+	</section>
+	<section><h3>Изрази</h3>
+		<p>Израз е всяка една инструкция към Браузера, за да изпълни дадено действие.</p>
+		<pre><code rel="JS">
+			// показва „изкачащо“ съобщение с текст „Welcome“
+			alert(„Welcome“);
 
-            // дефинира променливата answer
-            var answer;
+			// дефинира променливата answer
+			var answer;
 
-            // записва числото 42 в променливата answer
-            answer = 42;
+			// записва числото 42 в променливата answer
+			answer = 42;
 
-            // задава червен фон на документа
-            document.body.style.backgroundColor = "red";
-        </code></pre>
-    </section>
+			// задава червен фон на документа
+			document.body.style.backgroundColor = "red";
+		</code></pre>
+	</section>
 </section>
 
 <section><h2>Променливи (Variables)</h2>
-    <section><h3>Какво е променлива в JavaScript?</h3>
-        <dl class="fa">
-            <dt>Променливата е "име" на част от паметта (RAM), в която съхраняваме данни.</dt>
-            <dt>Програмиста задава това име, като следва определени правила.</dt>
-            <dt>След като променливата е създадена можем да записваме в нея стойности и да ги четем, т.е.да ги използваме в програмата.</dt>
-        </dl>
-    </section>
-    <section><h3>Деклариране/Дефиниране</h3>
-        <p>Създаването на променлива се нарича <span class="note">деклариране</span> на променлива.</p>
-        <p>В JavaScript това става чрез запазената за езика дума <code class="note">var</code></p>
-        <pre><code rel="JS">
-            var x;      // деклариране на променливата x
-            var y;      // деклариране на променливата y
-            var a,b;    // деклариране на променливите a и b
-            var x = 10; // дефиниране на променливата x - едновременна
-                        // декларация и инициализация със стойността 10
-        </code></pre>
-        <p class="advanced"><i class="fa fa-graduation-cap"></i>В ECMAScript 6, се въвежда и нова дума за деклариране на променливи: <code class="note">let</code> чрез която се задава област на видимост на променливата в рамките на блок.</p>
-    </section>
-    <section>
-        <pre><code rel="JS">
-            var x = 1;
-            var y = 2;
-            var z;
-        </code></pre>
-        <img src="images/variables_in_RAM.png">
-    </section>
-    <section><h3>Правила за имена на променливи</h3>
-        <dl class="fa">
-            <dt>Името на променливата трябва да започва с латинска буква или '<span class="code">$</span>' или '<span class="code">_</span>'</dt>
-            <dt>След това в името могат да се включат и цифри, освен горепосочените символи.</dt>
-            <dt>Нищо друго, дори спейс или тире, не е допустимо да участва в името на променливата.</dt>
-            <dt>Не е препоръчително да започват с '$' или '_' (използват се за специфични случаи, например в JQuery и пр.)</dt>
-            <dt>Прави се разлика между малки/големи букви тъй като JavaScript е case–sensitive език.</dt>
-        </dl>
-    </section>
-    <section><h3>Правила за имена на променливи</h3>
-        <dl class="fa">
-            <dt>Не може да използвате за имена на променливи някоя от запазените думи в JavaScript, като:</dt>
-            <pre><code class="html">
-                break     delete   for         let        super   void
-                case      do       function    new        switch  while
-                catch     else     if          package    this    with
-                class     enum     implements  private    throw   yield
-                const     export   import      protected  true
-                continue  extends  in          public     try
-                debugger  false    instanceof  return     typeof
-                default   finally  interface   static     var
-            </code></pre>
-            <dt>Пълен списък: <a href="http://www.w3schools.com/js/js_reserved.asp">http://www.w3schools.com/js/js_reserved.asp</a></dt>
-        </dl>
-    </section>
-    <section><h3>Правила за имена на променливи</h3>
-        <dl class="fa">
-            <dt>Препоръчва се имената на променливите да описват данните, които възнамеряваме да съхраняваме в тях.</dt>
-            <dt>Ако е необходимо името да се състои от две или повече думи, то в JavaScript се препоръчва да се използва lowerCamelCase - първата дума започва с малка буква, а следващите думи се залепват непосредствено като започват с голяма буква.</dt>
-        </dl>
-    </section>
-    <section><h3>Примери:</h3>
-        <pre><code rel="JS">
-            var x;  // ок
-            var $x; // позволено, но не се препоръчва
-            var userName; // ок
-            var user name; // SyntaxError!
-            var username; //  ok, но е различна   от  'userName'
-            var user-first-name; //SyntaxError
-            var user_first_name; //ok, но не е според конвенцията
-            var userFirstName; //ok
-        </code></pre>
-    </section>
+	<section><h3>Какво е променлива в JavaScript?</h3>
+		<dl class="fa">
+			<dt>Променливата е "име" на част от паметта (RAM), в която съхраняваме данни.</dt>
+			<dt>Програмиста задава това име, като следва определени правила.</dt>
+			<dt>След като променливата е създадена можем да записваме в нея стойности и да ги четем, т.е.да ги използваме в програмата.</dt>
+		</dl>
+	</section>
+	<section style="font-size: .9em"><h3>Деклариране/Дефиниране</h3>
+		<dl class="fa">
+			<dt>Създаването на променлива се нарича <span class="note">деклариране</span> на променлива.
+			В JavaScript това става чрез запазената за езика дума <code class="note">var</code>
+			</dt>
+			<dt>Ако желаем, може при създаването на променливата, да укажем стойност - т.е. да <span class="note">дефинираме</span> променливата.</dt>
+		</dl>
+
+		<pre><code rel="JS">
+			var x;      // деклариране на променливата x
+			x = 10;     // дефиниране на x
+			var y;      // деклариране на променливата y
+			var a,b;    // деклариране на променливите a и b
+			var x = 10; // дефиниране на променливата x - едновременно
+				    // декларираме и инициализираме x със стойността 10
+		</code></pre>
+		<p class="advanced"><i class="fa fa-graduation-cap"></i>В ECMAScript 6, се въвежда и нова дума за деклариране на променливи: <code class="note">let</code> чрез която се задава област на видимост на променливата в рамките на блок.</p>
+	</section>
+	<section><h3>Деклариране/Дефиниране</h3>
+		<p>В JavaScript, променлива може да се създаде и без указване на <code>var</code>. Например:</p>
+		<pre><code rel="JS" class="js">
+			x = 10;
+			console.log(x); // 10 (Error in strict mode)
+		</code></pre>
+		<p class="note">Това се счита за изключително лоша практика (в темата за scope, ще разгледаме защо), и в новите версии на езика (от ЕС5.1) при използването на strict mode, това би довело до грешка!</p>
+	</section>
+	<section>
+		<pre><code rel="JS">
+			var x = 1;
+			var y = 2;
+			var z;
+		</code></pre>
+		<img src="images/variables_in_RAM.png">
+	</section>
+	<section><h3>Правила за имена на променливи</h3>
+		<dl class="fa">
+			<dt>Името на променливата трябва да <span class="note">започва</span> с <span class="note">латинска буква</span> или '<span class="code note">$</span>' или '<span class="code note">_</span>'</dt>
+			<dt>След това в името могат да се включат и цифри, освен горепосочените символи.</dt>
+			<dt>Нищо друго, дори спейс или тире, не е допустимо да участва в името на променливата.</dt>
+			<dt>Не е препоръчително да започват с '$' или '_' (използват се за специфични случаи, например в JQuery и пр.)</dt>
+			<dt>Прави се разлика между малки/големи букви тъй като JavaScript е <span class="note">case–sensitive</span> език.</dt>
+		</dl>
+	</section>
+	<section><h3>Правила за имена на променливи</h3>
+		<dl class="fa">
+			<dt>Не може да използвате за имена на променливи някоя от запазените думи в JavaScript, като:</dt>
+			<pre><code class="html">
+				break     delete   for         let        super   void
+				case      do       function    new        switch  while
+				catch     else     if          package    this    with
+				class     enum     implements  private    throw   yield
+				const     export   import      protected  true
+				continue  extends  in          public     try
+				debugger  false    instanceof  return     typeof
+				default   finally  interface   static     var
+			</code></pre>
+			<dt>Пълен списък: <a href="http://www.w3schools.com/js/js_reserved.asp">http://www.w3schools.com/js/js_reserved.asp</a></dt>
+		</dl>
+	</section>
+	<section><h3>Правила за имена на променливи</h3>
+		<dl class="fa">
+			<dt>Препоръчва се имената на променливите да описват данните, които възнамеряваме да съхраняваме в тях.</dt>
+			<dt>Ако е необходимо името да се състои от две или повече думи, то в JavaScript се препоръчва да се използва lowerCamelCase - първата дума започва с малка буква, а следващите думи се залепват непосредствено като започват с голяма буква.</dt>
+		</dl>
+	</section>
+	<section><h3>Примери:</h3>
+		<pre><code rel="JS">
+			var x;  // ок
+			var $x; // позволено, но не се препоръчва
+			var userName; // ок
+			var user name; // SyntaxError!
+			var username; //  ok, но е различна   от  'userName'
+			var user-first-name; //SyntaxError
+			var user_first_name; //ok, но не е според конвенцията
+			var userFirstName; //ok
+			var x234AB$$53; // синтактично е ок, но не и семантично
+		</code></pre>
+	</section>
 </section>
 
 <section><h2>Прости типове данни (Primitive types)</h2>
-    <section><h3>Число (number)</h3>
-        <pre><code rel="JS">
-            // цяло число, положително
-            var x = 10;
+	<section><h3>Число (number)</h3>
+		<pre><code rel="JS">
+			// цяло число, положително
+			var x = 10;
 
-            // цяло число, отрицателно
-            var y = ­5;
+			// цяло число, отрицателно
+			var y = ­5;
 
-            // реално число
-            var pi = 3.14;
+			// реално число
+			var pi = 3.14;
 
-            // реално число, експонентен запис
-            var million = 10e6;
-        </code></pre>
-    </section>
-    <section><h3>Низ (string):</h3>
-        <p>Последователност от символи, заградена в единични или двойни кавички</p>
-        <p>Няма значение, дали ще използваме единични или двойни кавички, но трябва да внимаваме ако такива символи ще присъстват в самия низ</p>
-        <pre><code rel="JS">
-            var userName = 'Ada Byron'; // ок
-            var nickName = "LadyLovelace"; //ок
-            var quot = 'И той отсече - "Ще вали!"'; //ок
-            var quot = "И той отсече - "Ще вали!""; //SyntaxError
-            var foo = "What's the time?" //ок
+			// реално число, експонентен запис
+			var million = 10e6;
+		</code></pre>
+	</section>
+	<section><h3>Низ (string):</h3>
+		<p>Последователност от символи, заградена в единични или двойни кавички</p>
+		<p>Няма значение, дали ще използваме единични или двойни кавички, но трябва да внимаваме ако такива символи ще присъстват в самия низ</p>
+		<pre><code rel="JS">
+			var userName = 'Ada Byron'; // ок
+			var nickName = "LadyLovelace"; //ок
+			var quot = 'И той отсече - "Ще вали!"'; //ок
+			var quot = "И той отсече - "Ще вали!""; //SyntaxError
+			var foo = "What's the time?" //ок
 
-        </code></pre>
-    </section>
-    <section><h3>Булев тип (boolean)</h3>
-        <p>Данните от този тип могат да приемат само 2 стойности: true или false</p>
-        <p>Използва се предимно в условните оператори, които са разгледани по-нататък.</p>
-        <pre><code rel="JS" class="javascript">
-            var start = true;
-            var stop  = false;
-        </code></pre>
-    </section>
-    <section><h3>null</h3>
-        <p>Използва се при работа с обекти, които са разгледани по-нататък.</p>
-    </section>
-    <section><h3>undefined</h3>
-        <p>Обозначава, че променливата съществува (декларирана е), но в нея няма зададена стойност.</p>
-        <p>Това е стойността, която се записва по подразбиране, когато не зададем стойност при декларацията на променлива.</p>
-    </section>
+		</code></pre>
+	</section>
+	<section><h3>Булев тип (boolean)</h3>
+		<p>Данните от този тип могат да приемат само 2 стойности: true или false</p>
+		<p>Използва се предимно в условните оператори, които са разгледани по-нататък.</p>
+		<pre><code rel="JS" class="javascript">
+			var start = true;
+			var stop  = false;
+		</code></pre>
+	</section>
+	<section><h3>null</h3>
+		<p>Използва се при работа с обекти, които са разгледани по-нататък.</p>
+	</section>
+	<section><h3>undefined</h3>
+		<p>Обозначава, че променливата съществува (декларирана е), но в нея няма зададена стойност.</p>
+		<p>Това е стойността, която се записва по подразбиране, когато не зададем стойност при декларацията на променлива.</p>
+	</section>
 </section>
 
 <section><h2>Коментари</h2>
-    <a href="https://www.w3schools.com/js/js_comments.asp">JavaScript Comments</a>
+	<a href="https://www.w3schools.com/js/js_comments.asp">JavaScript Comments</a>
 </section>
 
 <section><h2>Оператори</h2>
-    <section>
-        <p>или какво можем да правим с променливите?</p>
-        <a href="http://www.w3schools.com/jsref/jsref_operators.asp">http://www.w3schools.com/jsref/jsref_operators.asp</a>
-    </section>
-    <section><h3>Аритметични оператори (Aritmetic operators)</h3>
-        <ul class="fa">
-            <li>Събиране: '<code class="note">+</code>'
-                <pre><code>
-                    var addition = 2 + 4; // 6
-                </code></pre>
-            </li>
-            <li>Изваждане: '<code class="note">-</code>'
-                <pre><code>
-                    var subtraction = 20 – 4; // 16
-                </code></pre>
-            </li>
-            <li>Умножаване: '<code class="note">*</code>'
-                <pre><code>
-                    var multiplication = 2 * 4; // 8
-                </code></pre>
-            </li>
-            <li>Делене: '<code class="note">/</code>'
-                <pre><code>
-                    var division = 100 / 5; // 25
-                </code></pre>
-            </li>
-        </ul>
-    </section>
-    <section><h3>Аритметични оператори (Aritmetic operators)</h3>
-        <ul class="fa">
-            <li>Модул: '<code class="note">%</code>'
-                <pre><code>
-                    var reminder = 7 % 4; // 3
-                    var reminder = 8 % 4; // 0
-                </code></pre>
-            </li>
-            <li>Степенуване: '<code class="note">**</code>'
-                <p class="note">Въвежда се от 2016г. в <b>ES7</b> и работи само с най-новите версии на браузерите </p>
-                <pre><code>
-                    var exponent = 2**10; // 1024
-                </code></pre>
-            </li>
-        </ul>
-    </section>
-    <section><h3>Аритметични оператори (Aritmetic operators)</h3>
-        <ul class="fa">
+	<section>
+		<p>или какво можем да правим с променливите?</p>
+		<a href="http://www.w3schools.com/jsref/jsref_operators.asp">http://www.w3schools.com/jsref/jsref_operators.asp</a>
+	</section>
+	<section><h3>Аритметични оператори (Aritmetic operators)</h3>
+		<ul class="fa">
+			<li>Събиране: '<code class="note">+</code>'
+				<pre><code>
+					var addition = 2 + 4; // 6
+				</code></pre>
+			</li>
+			<li>Изваждане: '<code class="note">-</code>'
+				<pre><code>
+					var subtraction = 20 – 4; // 16
+				</code></pre>
+			</li>
+			<li>Умножаване: '<code class="note">*</code>'
+				<pre><code>
+					var multiplication = 2 * 4; // 8
+				</code></pre>
+			</li>
+			<li>Делене: '<code class="note">/</code>'
+				<pre><code>
+					var division = 100 / 5; // 25
+				</code></pre>
+			</li>
+		</ul>
+	</section>
+	<section><h3>Аритметични оператори (Aritmetic operators)</h3>
+		<ul class="fa">
+			<li>Модул: '<code class="note">%</code>'
+				<pre><code>
+					var reminder = 7 % 4; // 3
+					var reminder = 8 % 4; // 0
+				</code></pre>
+			</li>
+			<li>Степенуване: '<code class="note">**</code>'
+				<p class="note">Въвежда се от 2016г. в <b>ES7</b> и работи само с най-новите версии на браузерите </p>
+				<pre><code>
+					var exponent = 2**10; // 1024
+				</code></pre>
+			</li>
+		</ul>
+	</section>
+	<section><h3>Аритметични оператори (Aritmetic operators)</h3>
+		<ul class="fa">
 
-            <li>Инкрементиране: '<code class="note">++</code>'
-                <pre><code>
-                    var i = 2;
+			<li>Инкрементиране: '<code class="note">++</code>'
+				<pre><code>
+					var i = 2;
 
-                    //postfix increment:
-                    var j = i++; // j = 2, i = 3
+					//postfix increment:
+					var j = i++; // j = 2, i = 3
 
-                    //prefix increment:
-                    var j = ++i; // j = 3, i = 3
-                </code></pre>
-            </li>
-            <li>Декрементиране: '<code class="note">--</code>'
-                <pre><code>
-                    var i = 2;
+					//prefix increment:
+					var j = ++i; // j = 3, i = 3
+				</code></pre>
+			</li>
+			<li>Декрементиране: '<code class="note">--</code>'
+				<pre><code>
+					var i = 2;
 
-                    //postfix increment:
-                    var j = i--; // j = 2, i = 1
+					//postfix increment:
+					var j = i--; // j = 2, i = 1
 
-                    //prefix increment:
-                    var j = --i; // j = 1, i = 1
-                </code></pre>
-            </li>
-        </ul>
-    </section>
-    <section><h3>Оператор за присвояване (Assignment operator)</h3>
-        <ul class="fa">
-            <li>Assignment '<code class="note">=</code>'
-                <pre><code>
-                    var x = 4;
-                    var x = 1, y = 3;
-                </code></pre>
-            </li>
-            <li>Съкратен запис на присвояване + аритметична операция
-                <pre><code>
-                    var x = 4;
-                    x += 3; // x = x + 3;
-                    x ­-= 3; // x = x – 3;
-                    x *= 3; // x = x * 3;
-                    x /= 3; // x = x / 3;
-                    x %= 3; // x = x % 3;
-                </code></pre>
-
-            </li>
-        </ul>
-    </section>
-    <section><h3>Слепване на низове (String concatenation)</h3>
-        <ul class="fa">
-            <li>Конкатенация (слепване) на низове: '<code class="note">+</code>'
-                <pre><code>
-                    var firstName = "Ada";
-                    var surName = "Byron";
-                    console.log (firstName + " " + surName); // Ada Byron
-                </code></pre>
-            </li>
-        </ul>
-    </section>
-    <section><h3>Оператори за сравнение и логически оператори (Comparison and Logical Operators)</h3>
-    <a href="https://www.w3schools.com/js/js_comparisons.asp">JavaScript Comparison and Logical Operators</a>
-    </section>
+					//prefix increment:
+					var j = --i; // j = 1, i = 1
+				</code></pre>
+			</li>
+		</ul>
+	</section>
+	<section>
+		<p>За по-сложни математически операции, може да използвате методите на вградения в езика <a href="https://www.w3schools.com/js/js_math.asp">Math object</a> </p>
+		<pre><code rel="JS" class="js">
+			Math.round(3.65); //4
+			Math.pow(2,10);   // 1024
+			Math.min(1,2,3,4,5); // 1
+			Math.max(1,2,3,4,5); // 5
+		</code></pre>
+	</section>
+	<section><h3>Оператор за присвояване (Assignment operator)</h3>
+		<ul class="fa">
+			<li>Assignment '<code class="note">=</code>'
+				<pre><code rel="Syntax" class="js">
+					LHS = RHS;
+					// LHS: Left Hand Side: трябва да бъде декларирана променлива
+					// RHS: Right Hand Side: израз, който се изчислява и се записва в LHS променливата
+				</code></pre>
+				<pre><code rel="JS" class="js">
+					var x = 4;
+					var x = 1, y = 3;
+				</code></pre>
+			</li>
+		</ul>
+	</section>
+	<section><h3>Оператор за присвояване (Assignment operator)</h3>
+		<ul class="fa">
+			<li>Съкратен запис на присвояване + аритметична операция
+				<pre><code>
+					var x = 4;
+					x += 3; // x = x + 3;
+					x ­-= 3; // x = x – 3;
+					x *= 3; // x = x * 3;
+					x /= 3; // x = x / 3;
+					x %= 3; // x = x % 3;
+				</code></pre>
+			</li>
+		</ul>
+	</section>
+	<section><h3>Слепване на низове (String concatenation)</h3>
+		<ul class="fa">
+			<li>Конкатенация (слепване) на низове: '<code class="note">+</code>'
+				<pre><code>
+					var firstName = "Ada";
+					var surName = "Byron";
+					console.log (firstName + " " + surName); // Ada Byron
+				</code></pre>
+			</li>
+			<li>Ако от двете страни на '+' имаме различни типове, например number и string, то JavaScript преобразува числото до string и извършва concatenation, а не събиране!
+				<pre><code rel="JS" class="js">
+					console.log(2+"1"); // 21
+				</code></pre>
+			</li>
+			<li>Преобразуването на типове се нарича <span class="note">type coercion</span>.</li>
+		</ul>
+	</section>
+	<section><h3>Оператори за сравнение и логически оператори (Comparison and Logical Operators)</h3>
+		<a href="https://www.w3schools.com/js/js_comparisons.asp">JavaScript Comparison and Logical Operators</a>
+	</section>
 </section>
 
 <section><h2>Условни изрази (Conditional statements)</h2>
-    <section><h3><code>if</code> statement</h3>
-        <pre><code rel="Syntax">
-            if ( условие ) {
-                изрази, които ще се изпълнят, ако условието е истина
-            }
-        </code></pre>
-        <pre><code rel="JS">
-            if ( age > 18 ) {
-                status = "adult";
-            }
-        </code></pre>
-    </section>
-    <section><h3><code>if-else</code> statement</h3>
-        <pre><code rel="Syntax">
-            if ( условие ) {
-                изрази, които ще се изпълнят, ако условието е истина
-            }else {
-                изрази, които ще се изпълнят, ако условието е лъжа
-            }
-        </code></pre>
-        <pre><code rel="JS">
-            if ( age > 18 ) {
-                status = "adult";
-            }else {
-                status = "child";
-            }
-        </code></pre>
-    </section>
-    <section><h3><code>if-else-if</code> statement</h3>
-        <pre><code rel="Syntax" class="javascript">
-            if ( условие1) {
-                изрази, които ще се изпълнят, ако условието е истина
-            }else if (условие2) {
-                изрази, които ще се изпълнят, ако условие1 e лъжа,
-                а условие2 е истина
-            }else {
-                изрази, които ще се изпълнят, ако нито едно от горните
-                условия не е истина
-            }
-        </code></pre>
-        <pre><code rel="JS" class="javascript">
-            if ( age > 18 ) {
-                status = "adult";
-            }else if( age < 18 && age > 12){
-                status = "teen";
-            }else{
-                status = "child"
-            }
-        </code></pre>
-    </section>
+	<section><h3><code>if</code> statement</h3>
+		<pre><code rel="Syntax">
+			if ( условие ) {
+				изрази, които ще се изпълнят, ако условието е истина
+			}
+		</code></pre>
+		<pre><code rel="JS">
+			if ( age > 18 ) {
+				status = "adult";
+			}
+		</code></pre>
+	</section>
+	<section><h3><code>if-else</code> statement</h3>
+		<pre><code rel="Syntax">
+			if ( условие ) {
+				изрази, които ще се изпълнят, ако условието е истина
+			}else {
+				изрази, които ще се изпълнят, ако условието е лъжа
+			}
+		</code></pre>
+		<pre><code rel="JS">
+			if ( age > 18 ) {
+				status = "adult";
+			}else {
+				status = "child";
+			}
+		</code></pre>
+	</section>
+	<section><h3><code>if-else-if</code> statement</h3>
+		<pre><code rel="Syntax" class="javascript">
+			if ( условие1) {
+				изрази, които ще се изпълнят, ако условието е истина
+			}else if (условие2) {
+				изрази, които ще се изпълнят, ако условие1 e лъжа,
+				а условие2 е истина
+			}else {
+				изрази, които ще се изпълнят, ако нито едно от горните
+				условия не е истина
+			}
+		</code></pre>
+		<pre><code rel="JS" class="javascript">
+			if ( age > 18 ) {
+				status = "adult";
+			}else if( age < 18 && age > 12){
+				status = "teen";
+			}else{
+				status = "child"
+			}
+		</code></pre>
+	</section>
 </section>
 
 <section id="cycle_operators"><h2>Цикли (Loops/Iteration Statements)</h2>
-    <section><h3><code>for</code> Statement: синтаксис</h3>
-        <pre><code rel="Syntax">
-            for (init; condition; increment) {
-                блок, който се изпълнява, докато condition е истина
-            }
-        </code></pre>
-        <p>Стъпките, в един цикъл са:</p>
-        <dl class="fa">
-            <dt>1. init: изпълнява се първа и само веднъж</dt>
-            <dt>2. condition:</dt>
-                <dd>ако е истина => изпълнява се блока</dd>
-                <dd>ако е лъжа => излиза се от цикъла</dd>
-            <dt>3. increment: изпълнява се след блока. Обикновено тук се променят променливите, които контролират цикъла.</dt>
-        </dl>
-    </section>
-    <section><h3><code>for</code> Statement: алгоритъм</h3>
-        <pre><code rel="Syntax">
-            for (init; condition; increment) {
-                block
-            }
-        </code></pre>
-        <img src="images/for_algorithm.png">
-    </section>
-    <section><h3><code>for</code> Statement: пример 1</h3>
-        <pre><code rel="JS">
-            for (var i = 0; i < 5; i++) {
-                console.log("i=" + i);
-            }
-        </code></pre>
-        <p>// резултата, видим в конзолата, е:</p>
-        <pre><code rel="Console">
-            i=0
-            i=1
-            i=2
-            i=3
-            i=4
-        </code></pre>
-    </section>
-    <section><h3><code>for</code> Statement: пример 2</h3>
-        <pre><code rel="JS">
-            // create the list element
-            var listNode = document.createElement(listType);
+	<section><h3><code>for</code> Statement: синтаксис</h3>
+		<pre><code rel="Syntax">
+			for (init; condition; increment) {
+				блок, който се изпълнява, докато condition е истина
+			}
+		</code></pre>
+		<p>Стъпките, в един цикъл са:</p>
+		<dl class="fa">
+			<dt>1. init: изпълнява се първа и само веднъж</dt>
+			<dt>2. condition:</dt>
+				<dd>ако е истина => изпълнява се блока</dd>
+				<dd>ако е лъжа => излиза се от цикъла</dd>
+			<dt>3. increment: изпълнява се след блока. Обикновено тук се променят променливите, които контролират цикъла.</dt>
+		</dl>
+	</section>
+	<section><h3><code>for</code> Statement: алгоритъм</h3>
+		<pre><code rel="Syntax">
+			for (init; condition; increment) {
+				block
+			}
+		</code></pre>
+		<img src="images/for_algorithm.png">
+	</section>
+	<section><h3><code>for</code> Statement: пример 1</h3>
+		<pre><code rel="JS">
+			for (var i = 0; i < 5; i++) {
+				console.log("i=" + i);
+			}
+		</code></pre>
+		<p>// резултата, видим в конзолата, е:</p>
+		<pre><code rel="Console">
+			i=0
+			i=1
+			i=2
+			i=3
+			i=4
+		</code></pre>
+	</section>
+	<section><h3><code>for</code> Statement: пример 2</h3>
+		<pre><code rel="JS">
+			// create the list element
+			var listNode = document.createElement(listType);
 
-            //create list items
-            for (var i = 1; i <= listItemsCount; i++){
-                var listItem = document.createElement('li');
-                listItem.innerHTML = 'Item '+ i;
-                listNode.appendChild(listItem);
-            }
+			//create list items
+			for (var i = 1; i <= listItemsCount; i++){
+				var listItem = document.createElement('li');
+				listItem.innerHTML = 'Item '+ i;
+				listNode.appendChild(listItem);
+			}
 
-            // attach to output node:
-            outputNode.appendChild( listNode );
-        </code></pre>
-        <p><a href="examples/slides/auto_list_generator.html">test it</a> or <a href="http://codepen.io/webdesigncourse/pen/RoXNPb?editors=0010">play with it on codepen</a></p>
-    </section>
+			// attach to output node:
+			outputNode.appendChild( listNode );
+		</code></pre>
+		<p><a href="examples/slides/auto_list_generator.html">test it</a> or <a href="http://codepen.io/webdesigncourse/pen/RoXNPb?editors=0010">play with it on codepen</a></p>
+	</section>
 
-    <section><h3><code>while</code> statement: синтаксис</h3>
-        <pre><code rel="Syntax">
-            while ( condition) {
-                блок, който се изпълнява, докато condition е истина
-            }
-        </code></pre>
-        <p>Стъпките, в един <code>while</code> цикъл са:</p>
-        <dl class="fa">
-            <dt>condition:</dt>
-                <dd>ако е истина => изпълнява се блока,</dd>
-                <dd>ако е лъжа => излиза се от цикъла</dd>
-        </dl>
-        <p class="note">За да се избегне безкраен цикъл, променливата в <code>condition</code> трябва да променя стойността си в тялото на цикъла!</p>
-    </section>
-    <section><h3><code>while</code> statement: алгоритъм</h3>
-        <img src="images/while_algorithm.png">
-    </section>
-    <section><h3><code>while</code> statement: пример</h3>
-        <pre><code rel="JS">
-            var items = 10;
-            while( items > 0 ){
-                li=document.createElement('li');
-                li.className = "elements";
-                li.innerHTML = "Item " + (i+1);
-                ul.appendChild(li);
-                items--­­;  // ако този ред липсва, цикълът става безкраен!
-            }
-        </code></pre>
-    </section>
+	<section><h3><code>while</code> statement: синтаксис</h3>
+		<pre><code rel="Syntax">
+			while ( condition) {
+				блок, който се изпълнява, докато condition е истина
+			}
+		</code></pre>
+		<p>Стъпките, в един <code>while</code> цикъл са:</p>
+		<dl class="fa">
+			<dt>condition:</dt>
+				<dd>ако е истина => изпълнява се блока,</dd>
+				<dd>ако е лъжа => излиза се от цикъла</dd>
+		</dl>
+		<p class="note">За да се избегне безкраен цикъл, променливата в <code>condition</code> трябва да променя стойността си в тялото на цикъла!</p>
+	</section>
+	<section><h3><code>while</code> statement: алгоритъм</h3>
+		<img src="images/while_algorithm.png">
+	</section>
+	<section><h3><code>while</code> statement: пример</h3>
+		<pre><code rel="JS">
+			var items = 10;
+			while( items > 0 ){
+				li=document.createElement('li');
+				li.className = "elements";
+				li.innerHTML = "Item " + (i+1);
+				ul.appendChild(li);
+				items--­­;  // ако този ред липсва, цикълът става безкраен!
+			}
+		</code></pre>
+	</section>
 </section>
 
 <section><h2>Примери и Задачи</h2>
-    <a href="http://codepen.io/collection/XOEQay/">codepen колекция с примери и задачи</a>
+	<a href="http://codepen.io/collection/XOEQay/">codepen колекция с примери и задачи</a>
 </section>
 
 
 
 <section class="disclaimer" data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
-     <p>These slides are based on</p>
-     <p>customised version of </p>
-     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
-     <p>framework</p>
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
 </section>
 <!--
 ########################################################
 ##################### SLIDES END   #####################
 ########################################################
 -->
-        </div>
-    </div>
-    <!-- Custom processing -->
-    <script src="/ProgressBG-Front-End-Dev/outfit/js/slides.js"></script>
-    <!-- external scripts -->
-    <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
-    <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
-     <!-- init reveal -->
-    <script>
-        // Full list of configuration options available at:
-        // https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            slideNumber: 'c/t',
-            keyboard: true,
-            history: true,
-            center: true,
-            width: 1024,
-            height: 850,
-            // Bounds for smallest/largest possible scale to apply to content
-            // minScale: .5,
-            maxScale: 1,
-            // slide transition
-            transition: 'concave', // none/fade/slide/convex/concave/zoom
-            // Factor of the display size that should remain empty around the content
-            margin: 0.1,
-            // shift+maous click to zoom in/out element
-            zoomKey: 'ctrl',
-            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            // transition: Reveal.getQueryHash().transition || 'default'
-            // Optional reveal.js plugins
-            dependencies: [
-                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
-                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
-            ]
-        });
-    </script>
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="/ProgressBG-Front-End-Dev/outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
+	<script src="/ProgressBG-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
+	 <!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			width: 1024,
+			height: 850,
+			// Bounds for smallest/largest possible scale to apply to content
+			// minScale: .5,
+			maxScale: 1,
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+			]
+		});
+	</script>
 </body>
 </html>

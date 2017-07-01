@@ -5,5 +5,5 @@
 **/.fuse*
 **/*nohup*
 
-*.sublime-workspace
-
+*.sublime-project
+!6_WD_WE.sublime-project
