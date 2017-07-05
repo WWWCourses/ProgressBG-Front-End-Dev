@@ -1,0 +1,13 @@
+body{
+	height: 100%
+	background-size: 100% 100%;
+	background-color: #f00;
+}
+div>div{
+	border: 1px solid #F1FF56;
+	margin: 5vh 5vw;
+}
+#yellow{
+	background-color: #F1FF56;
+	height: 7vh;
+}

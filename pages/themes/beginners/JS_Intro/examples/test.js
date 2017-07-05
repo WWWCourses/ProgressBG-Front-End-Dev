@@ -1,0 +1,1 @@
+var divNode = document.getElementById('colorTest') + document.write;

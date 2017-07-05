@@ -1,0 +1,23 @@
+body{
+	width: 800px;
+}
+h1{
+	font-size: 24px;
+	color: #6D6B6B;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.nonbulleted{
+	list-style-type: none;
+}
+.dark{
+	color: #DFE1E4;
+	background-color: #7C7E80;
+	padding: 20px;	
+}
+.light{
+	color: #606061;
+	background-color: #CDCFD3;
+	padding: 20px;
+}

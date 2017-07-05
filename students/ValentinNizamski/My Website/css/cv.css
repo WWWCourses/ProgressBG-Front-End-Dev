@@ -1,0 +1,36 @@
+head{
+}
+body {
+	background: #F5F5DC;
+	box-sizing: border-box;
+	width: 70em;
+	margin: 0 auto;
+	}
+h2{
+	color: #483D8B;
+}
+ul {
+	color: #483D8B;
+}
+.fon1 {
+	font-family: serif: Arial;
+	font-size: 2em;
+	text-align: left;
+	color: white;
+	background: #483D8B;
+	padding: 1em;
+	margin: 0px;
+}
+.fa1{
+	text-align: right;
+	border-bottom: solid 0.15em #483D8B ;
+	padding: 1em;
+
+}
+.fa2{
+	text-align: center;
+	padding: 1px;
+}
+.cont{
+	list-style-type: none;
+}

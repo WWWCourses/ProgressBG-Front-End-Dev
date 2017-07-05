@@ -1,0 +1,33 @@
+body{
+	font-family: 'Quicksand', sans-serif;
+	color: #2D3C25;
+	background-color: #E8F6EA
+}
+h1.heading{
+	font-size: 32px;
+}
+h2.heading{
+		font-size: 24px;
+}
+.heading{
+		font-size: 20px;
+		color: #8CA089;
+}
+.pd1{
+	font-style: italic;
+}
+.pd2{
+	font-weight: bold;
+}
+.summary{
+	font-style: italic;
+}
+.strong{
+	font-weight: bold;
+}
+#classes{
+	font-style: italic;
+}
+.italic{
+	font-style: italic;
+}

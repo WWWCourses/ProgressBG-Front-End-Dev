@@ -1,0 +1,29 @@
+body{
+	font-family: 'Roboto Mono', monospace;
+}
+h3{
+	text-transform: uppercase;
+	color: blue;
+	clear: both;
+}
+li{
+	list-style-type: none;
+}
+img{
+	float: left;
+	margin-left: 10vw;
+	margin-right: 2vw;
+}
+h2{
+	color: #84E0FB;
+}
+li>div{
+	display: inline-block;
+}
+.dates{
+	text-align: left;
+}
+#name{
+	display: inline-block;
+	clear: both;
+}

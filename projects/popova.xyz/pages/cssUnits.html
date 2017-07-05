@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>cssUnits</title>
+    <style type="text/css">
+    	/*TODO: make it work*/
+	    	@media print{
+	    		.header{
+		    		width: 10cm;
+		    		height: 10cm;
+		    		border: 1px solid red;
+		    		background: hsl(60,100%, 0%);
+	    	}
+    	}
+    	body,html{
+    		font-size: 20px;
+    		margin: 0;
+    		padding: 0;
+    	}
+    	.header{
+    		height: 400px;
+    		width: 400px;
+    		border:1em solid red;
+    		background: hsl(60,100%, 50%);
+
+    	}
+    	.header>div{
+    		width: 200px;
+    		height: 200px;
+    		background: #009900;
+    	}
+    	.header>a{
+    		display: inline-block;
+    		width: 120px;
+    		background: orange;
+    	}
+    	#second{
+    		margin-left: -0.25em;
+    	}
+
+    </style>
+</head>
+<body>
+
+	<div class="header">
+		<div>LOGO</div>
+		<a href="#">Link1</a>
+		<a href="#" id="second">Link2</a>
+	</div>
+
+</body>
+<script type="text/javascript" src="cssUnits.js"></script>
+</html>

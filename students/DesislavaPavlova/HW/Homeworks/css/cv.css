@@ -1,0 +1,10 @@
+h3{
+	text-transform: uppercase;
+	color: blue;
+}
+li{
+	list-style-type: none;
+}
+.dates{
+	text-align: left;
+}

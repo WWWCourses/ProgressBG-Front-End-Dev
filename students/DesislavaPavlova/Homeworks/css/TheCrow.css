@@ -1,0 +1,48 @@
+html{
+	border: 1em outset #B0893B;
+}
+body{
+	
+	background-image: url(../images/raven.jpg);
+	background-color: #B17D14;
+	height: 100%;
+	background-size: 100% 100%;
+	font-size: 25px;
+	font-family: 'Roboto', sans-serif;
+}
+#poem{
+	width: 800px;
+}
+
+h1{
+	color: #F4C76C;
+	}
+h3{
+	font-style: italic;
+	font-variant: small-caps;
+	color: #322A1A;
+}
+.heading{
+	text-align: center;
+}	
+
+.verse{
+	color: white;
+	width: 31em;
+	text-indent: 3em;
+
+}
+.italic{
+	letter-spacing: 2px;
+}
+.border{
+	border-bottom: 2px groove orange;
+}
+#bio{
+	border-top: 10px double #B0893B;
+	color: #F4C76C;
+	font-size: 20px;
+}
+#note span{
+	font-weight: 900;
+}

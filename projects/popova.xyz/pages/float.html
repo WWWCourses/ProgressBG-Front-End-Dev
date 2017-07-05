@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>cssUnits</title>
+    <style type="text/css">
+    	html, body,p, img{
+    		margin: 0;
+    		padding:0;
+    	}
+    	p{
+    		border: 1px solid blue;
+    	}
+    	.container > .left{
+    		float: left;
+    		width: 30vw;
+    		height: 30vw;
+    		background: orange;
+    	}
+    	.container > .right{
+    		float: right;
+    		width: 30vw;
+    		height: 30vw;
+    		background: red;
+    	}
+    	.clear{
+    		clear: left;
+    	}
+    	footer{
+    		/*position: fixed;*/
+    		/*bottom: 0;left: 0;*/
+    		background: #CCC;
+    	}
+    </style>
+</head>
+<body>
+	<div class="container">
+		<div class="right"></div>
+		<!-- <div class="right"></div> -->
+		<p>Paragraph1</p>
+
+	</div>
+	<main  class="clear"><p>Paragraph in Main.</p></main>
+	<footer>
+		<p>Paragraph in footer</p>
+	</footer>
+
+</body>
+<script type="text/javascript" src="cssUnits.js"></script>
+</html>

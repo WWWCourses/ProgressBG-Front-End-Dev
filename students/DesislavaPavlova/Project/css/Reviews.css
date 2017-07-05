@@ -1,0 +1,34 @@
+html, body, div{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+body{
+	position: relative;
+	height: 100%;
+	font-family: 'Tillana', cursive;
+	background-image: url(../images/unicorns.jpg);
+	background-size: 100% 100%;
+	background-color: #BAF3F8;
+}
+
+.book{
+	height: 90vh;
+	margin-top: 5vh;
+	float: left;
+	
+}
+.cover{
+	width: 40vw;
+	margin-left: 25vw;
+	border:3px solid #1C0303;
+	background-color: #2D110B;
+}
+.pages{
+	float: left;
+	width: 8vw;
+	border-top:3px solid #1C0303;
+	border-right: 3px solid #1C0303;
+	border-left: 3px solid #1C0303;
+	background: linear-gradient(to right,#8C3E17,#93512D,#8C3E17,#93512D,#8C3E17,#93512D,#8C3E17,#93512D,#8C3E17,#93512D,#8C3E17,#93512D,#8C3E17,#93512D,#8C3E17,#93512D,#8C3E17,#93512D,#8C3E17);
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS_pseudo_selectors</title>
+    <link rel="stylesheet" type="text/css" href="../css/faFont.css">
+    <style type="text/css">
+    body{
+    	counter-reset: themeCounter;
+    }
+    article:before{
+    	counter-increment: themeCounter;
+    	content: 'Theme: ' counter(themeCounter);
+    }
+
+    </style>
+</head>
+<body>
+	<article> Глава</article>
+	<article> Глава</article>
+	<article> Глава</article>
+	<article> Глава</article>
+</body>
+</html>

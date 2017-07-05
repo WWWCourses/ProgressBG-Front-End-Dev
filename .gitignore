@@ -5,22 +5,5 @@
 **/.fuse*
 **/*nohup*
 
-*.sublime-workspace
 *.sublime-project
-!gh-pages.sublime-project
-
-
-/students/**
-/pages/themes/beginners/*/*
-!/pages/themes/beginners/Appendix/**
-!/pages/themes/beginners/*/*.html
-!/pages/themes/beginners/*/*resources/
-!/pages/themes/beginners/*/*resources/**
-!/pages/themes/beginners/**/*examples/
-!/pages/themes/beginners/**/*examples/**
-!/pages/themes/beginners/**/*slides_examples/
-!/pages/themes/beginners/**/*slides_examples/**
-!/pages/themes/beginners/**/images/
-!/pages/themes/beginners/**/images/**
-!/pages/themes/beginners/**/homework*/
-!/pages/themes/beginners/**/homework*/**
+!6_WD_WE.sublime-project
