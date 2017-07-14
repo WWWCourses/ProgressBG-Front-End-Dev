@@ -4,521 +4,546 @@
 		"selected_items":
 		[
 			[
-				"пози",
-				"позициониран"
-			],
-			[
 				"code",
-				"code\tTag"
+				"codejs\thtml_code_rel_js"
 			],
 			[
-				"em",
-				"em\tTag"
+				"Gi",
+				"GitBash"
 			],
 			[
-				"nth",
-				"nth-of-type(〔pseudo-class〕"
-			],
-			[
-				"font-s",
-				"font-size"
-			],
-			[
-				"font",
-				"font-family"
-			],
-			[
-				"j",
-				"jScroller"
-			],
-			[
-				"se",
-				"section1"
-			],
-			[
-				"class",
-				"classname"
-			],
-			[
-				"he",
-				"hello"
-			],
-			[
-				"toL",
-				"toLowerCase〔function〕"
-			],
-			[
-				"co",
-				"colors"
-			],
-			[
-				"tas",
-				"task1.png\tw:946 h:203"
-			],
-			[
-				"съ",
-				"състави"
-			],
-			[
-				"num",
-				"numArray〔variable〕"
-			],
-			[
-				"фун",
-				"функцията"
-			],
-			[
-				"htlm",
-				"html5\tHTML5"
-			],
-			[
-				"cel",
-				"cellSize〔variable〕"
-			],
-			[
-				"bo",
-				"boardWidth"
-			],
-			[
-				"boa",
-				"board2d〔variable〕"
-			],
-			[
-				"proto",
-				"prototype"
-			],
-			[
-				"me",
-				"methodInvocation"
-			],
-			[
-				"object",
-				"objectConstructorTest〔function〕"
-			],
-			[
-				"a",
-				"apple"
-			],
-			[
-				"apple",
-				"apple1"
-			],
-			[
-				"pr",
-				"prices"
-			],
-			[
-				"COns",
-				"Constructor"
-			],
-			[
-				"html",
-				"html5\tHTML5"
-			],
-			[
-				"fun",
-				"function〔keyword〕"
-			],
-			[
-				"ca",
-				"calcMinPrice"
-			],
-			[
-				"Co",
-				"Cons"
-			],
-			[
-				"Pro",
-				"Prototype"
-			],
-			[
-				"IN",
-				"Inheritance"
-			],
-			[
-				"Proto",
-				"Prototype-based"
-			],
-			[
-				"dl",
-				"dlfa\thtml_dl"
-			],
-			[
-				"d",
-				"disc"
-			],
-			[
-				"to",
-				"toString"
-			],
-			[
-				"Prim",
-				"Primitives"
-			],
-			[
-				"comm",
-				"common.css"
-			],
-			[
-				"res",
-				"refs"
-			],
-			[
-				"Java",
-				"JavaScript"
-			],
-			[
-				"e",
-				"neon - JavaScript - Eclipse _001.png\tw:861 h:526"
-			],
-			[
-				"ma",
-				"master.css"
-			],
-			[
-				"text",
-				"text-align"
-			],
-			[
-				"min",
-				"min-height"
-			],
-			[
-				"eff",
-				"effected_nodes"
-			],
-			[
-				"efe",
-				"effected_nodes"
-			],
-			[
-				"font-",
-				"font-variant"
-			],
-			[
-				"th",
-				"themes/"
-			],
-			[
-				"effe",
-				"effected_nodes"
-			],
-			[
-				"ef",
-				"effected_nodes"
-			],
-			[
-				"Cus",
-				"CustomDOM.js"
-			],
-			[
-				"get",
-				"getElementsByClassName"
-			],
-			[
-				"hou",
-				"hours_per_day〔variable〕"
-			],
-			[
-				"out",
-				"outNode〔variable〕"
-			],
-			[
-				"sect",
-				"sections〔variable〕"
-			],
-			[
-				"ou",
-				"outNode"
-			],
-			[
-				"top",
-				"topicHours〔variable〕"
-			],
-			[
-				"N",
-				"NodeListUtils.js"
+				"GIt",
+				"GitBash"
 			],
 			[
 				"type",
-				"typeof〔keyword〕"
+				"typescript"
 			],
 			[
-				"borde",
-				"border-bottom"
+				"en",
+				"environment"
 			],
 			[
-				"pa",
-				"parseInt"
+				"cod",
+				"codejs\thtml_code_rel_js"
 			],
 			[
-				"section",
-				"sectionHours"
+				"pars",
+				"parseData〔function〕"
 			],
 			[
-				"len",
-				"length"
+				"get",
+				"getElementsByTagName〔function〕"
 			],
 			[
-				"sec",
-				"sections〔variable〕"
+				"enco",
+				"encodeURL"
 			],
 			[
-				"chi",
-				"childList〔variable〕"
+				"produ",
+				"productsURL〔variable〕"
 			],
 			[
-				"fon",
-				"font-size"
+				"pro",
+				"products"
 			],
 			[
-				"ho",
-				"hours"
+				"sh",
+				"shopping.obf.js"
+			],
+			[
+				"Fe",
+				"Fetch_API"
+			],
+			[
+				"XM",
+				"XMLHttpRequest"
+			],
+			[
+				"l",
+				"loremIpsumjQuery.js"
+			],
+			[
+				"t",
+				"text"
+			],
+			[
+				"resp",
+				"response"
+			],
+			[
+				"com",
+				"compatibility"
+			],
+			[
+				"data",
+				"dataURL〔variable〕"
+			],
+			[
+				"tr",
+				"triggerNode"
+			],
+			[
+				"Obj",
+				"ObjDriver"
+			],
+			[
+				"test",
+				"testApp"
+			],
+			[
+				"se",
+				"setContent"
+			],
+			[
+				"eve",
+				"eventName"
+			],
+			[
+				"tes",
+				"testApp"
+			],
+			[
+				"a",
+				"atachEvents()\tfn "
+			],
+			[
+				"DOM",
+				"DOMish〔variable〕"
+			],
+			[
+				"ge",
+				"getDataBtn"
 			],
 			[
 				"bor",
 				"border-box"
 			],
 			[
-				"ht",
-				"html\thtml"
+				"ly",
+				"lyricsURLs\t[] "
 			],
 			[
-				"2",
-				"20170211.html"
+				"g",
+				"getByXHR(url, callback)\tfn "
 			],
 			[
-				"ba",
-				"background"
-			],
-			[
-				"fo",
-				"font-weight"
-			],
-			[
-				"bac",
-				"background"
-			],
-			[
-				"met",
-				"meta\tTag"
-			],
-			[
-				"do",
-				"down.png\tw:102 h:102"
-			],
-			[
-				"colo",
-				"colorsObj〔variable〕"
-			],
-			[
-				"lis",
-				"listType〔variable〕"
-			],
-			[
-				"outp",
-				"outputNode〔variable〕"
-			],
-			[
-				"for",
-				"for\tfor (…) {…}"
-			],
-			[
-				"text-a",
+				"tex",
 				"text-align"
 			],
 			[
-				"margin",
-				"margin-top"
+				"len",
+				"length\tnum "
 			],
 			[
-				"htm",
+				"le",
+				"letter\tstr "
+			],
+			[
+				"meth",
+				"methodsArray〔argument〕"
+			],
+			[
+				"func",
+				"function〔keyword〕"
+			],
+			[
+				"doc",
+				"document〔variable〕"
+			],
+			[
+				"obj",
+				"objectMaker〔function〕"
+			],
+			[
+				"color",
+				"colorInputNode〔variable〕"
+			],
+			[
+				"html",
 				"html5\tHTML5"
 			],
 			[
-				"h",
-				"h6\tTag"
+				"new",
+				"newArr〔variable〕"
 			],
 			[
-				"fol",
-				"folders_patterns"
+				"te",
+				"testPlayer"
+			],
+			[
+				"m",
+				"myModule.js"
+			],
+			[
+				"A",
+				"Animal"
+			],
+			[
+				"IN",
+				"Inheritance"
+			],
+			[
+				"Pro",
+				"Prototypal"
+			],
+			[
+				"pr",
+				"prototypalInheritanceOfObjectLiteralsUsingConstructors.png\tw:432 h:459"
+			],
+			[
+				"prot",
+				"prototypalInheritance.png\tw:241 h:461"
+			],
+			[
+				"cl",
+				"class-basedInheritance.png\tw:458 h:534"
+			],
+			[
+				"ob",
+				"objectLiteralsInheritanceBy__proto__.png\tw:162 h:397"
+			],
+			[
+				"obje",
+				"objectLiteralsInheritanceBy__proto__.png\tw:162 h:397"
+			],
+			[
+				"th",
+				"theFordOfPesho"
+			],
+			[
+				"Ford",
+				"FordConstructor〔class〕"
+			],
+			[
+				"Fer",
+				"FerrariConstructor"
+			],
+			[
+				"ford",
+				"fordProto〔variable〕"
+			],
+			[
+				"for",
+				"ford"
+			],
+			[
+				"foc",
+				"focusElectric"
+			],
+			[
+				"fun",
+				"function〔keyword〕"
+			],
+			[
+				"__p",
+				"__proto__"
+			],
+			[
+				"__",
+				"__proto__"
+			],
+			[
+				"tra",
+				"traceProtoChain"
+			],
+			[
+				"cre",
+				"createdObj"
+			],
+			[
+				"constru",
+				"constructedObj"
+			],
+			[
+				"li",
+				"literalObj"
+			],
+			[
+				"typ",
+				"typeof〔keyword〕"
+			],
+			[
+				"const",
+				"constructedObj〔variable〕"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"Cla",
+				"Class-based Inheritance.png\tw:437 h:451"
+			],
+			[
+				"c",
+				"Class-based Inheritance.png\tw:437 h:451"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"E",
+				"Event"
+			],
+			[
+				"acce",
+				"accessible"
+			],
+			[
+				"meme",
+				"members"
+			],
+			[
+				"tim",
+				"timestamp〔variable〕"
+			],
+			[
+				"set",
+				"setTimeout〔function〕"
+			],
+			[
+				"say",
+				"sayModel"
+			],
+			[
+				"ca",
+				"carObj"
+			],
+			[
+				"Ca",
+				"Car"
+			],
+			[
+				"dl",
+				"dlfa\thtml_dl"
+			],
+			[
+				"img",
+				"img\tTag"
+			],
+			[
+				"construc",
+				"constructor"
+			],
+			[
+				"person",
+				"personProto〔function〕"
+			],
+			[
+				"P",
+				"PersonClass"
+			],
+			[
+				"cu",
+				"currentSpeed"
+			],
+			[
+				"sho",
+				"showCount"
+			],
+			[
+				"ma",
+				"maxSpeed"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"brac",
+				"brackets"
+			],
+			[
+				"sa",
+				"sayID(){console.log"
+			],
+			[
+				"ke",
+				"keyName"
+			],
+			[
+				"prop",
+				"property_name"
+			],
+			[
+				"Car",
+				"CarFactory〔function〕"
+			],
+			[
+				"var",
+				"varaiable"
+			],
+			[
+				"impel",
+				"implementation"
+			],
+			[
+				"lo",
+				"logger"
+			],
+			[
+				"s",
+				"script\thtml_scriptSrc"
+			],
+			[
+				"Fact",
+				"Factory"
+			],
+			[
+				"pla",
+				"player1"
+			],
+			[
+				"Media",
+				"MediaPlayer"
+			],
+			[
+				"searc",
+				"searchRe"
 			],
 			[
 				"sea",
-				"search_pattern"
+				"searchTerm〔variable〕"
 			],
 			[
-				"roo",
-				"root_path"
+				"input",
+				"inputStream"
 			],
 			[
-				"perl",
-				"perl_start\tperl_start"
+				"sear",
+				"searchInText〔argument〕"
 			],
 			[
-				"trans",
-				"transition"
+				"group",
+				"grouping"
 			],
 			[
-				"ro",
-				"rotate()"
+				"gr",
+				"group"
 			],
 			[
-				"border-rad",
-				"border-radius: 〔property〕"
+				"cap",
+				"capture"
 			],
 			[
-				"inli",
-				"inline"
+				"res",
+				"resultGlobal"
 			],
 			[
-				"emb",
-				"embed"
+				"in",
+				"inputStream"
 			],
 			[
-				"sli",
-				"slides_examples/"
+				"h",
+				"height"
+			],
+			[
+				"match",
+				"matched"
 			],
 			[
 				"mar",
 				"margin"
 			],
 			[
-				"tex",
-				"text-decoration"
+				"font-",
+				"font-size"
 			],
 			[
-				"html5",
-				"html5\tHTML5"
+				"strin",
+				"strings〔variable〕"
 			],
 			[
-				"20161120",
-				"20161120.js"
+				"tab",
+				"table\tTag"
 			],
 			[
-				"ul",
-				"ulIdAttrNode"
+				"ba",
+				"black"
 			],
 			[
-				"test",
-				"testNode〔variable〕"
+				"font",
+				"font-size"
 			],
 			[
-				"fin",
-				"find_odd_or_even_numbers.js"
+				"Re",
+				"RegExp"
 			],
 			[
-				"numbr",
-				"numbers〔variable〕"
+				"fo",
+				"forEach"
 			],
 			[
-				"tra",
-				"translateY()"
+				"console",
+				"console.log"
 			],
 			[
-				"main",
-				"main\t<main>"
+				"sub",
+				"sub_themes"
 			],
 			[
-				"Sublime",
-				"Sublime Text 3 "
+				"lin",
+				"line-height"
 			],
 			[
-				"r",
-				"right"
+				"hi",
+				"highlight.js"
 			],
 			[
-				"bord",
-				"border-box"
+				"do",
+				"double"
 			],
 			[
-				"box",
-				"box-sizing"
+				"co",
+				"collapse〔value〕"
 			],
 			[
-				"sho",
-				"showTime"
+				"border-c",
+				"border-collapse"
 			],
 			[
-				"col",
-				"col_left"
+				"clea",
+				"cleanStartEndEmptyLines〔function〕"
 			],
 			[
-				"col_",
-				"col_right"
+				"out",
+				"outputStr"
 			],
 			[
-				"btn",
-				"btn_content"
-			],
-			[
-				"bt",
-				"btn_content"
-			],
-			[
-				"lo",
-				"local_var"
-			],
-			[
-				"win",
-				"win_params"
-			],
-			[
-				"ur",
-				"urls"
-			],
-			[
-				"wid",
-				"width"
-			],
-			[
-				"test_",
-				"test_var"
-			],
-			[
-				"Ch",
-				"ChangeBackground"
-			],
-			[
-				"pro",
-				"properties"
-			],
-			[
-				"che",
-				"checked_value"
-			],
-			[
-				"qu",
-				"question_id"
-			],
-			[
-				"c",
-				"colors"
-			],
-			[
-				"user",
-				"user_town"
-			],
-			[
-				"use",
-				"user_age"
-			],
-			[
-				"border-bo",
-				"border-box"
-			],
-			[
-				"marg",
-				"margin"
-			],
-			[
-				"border-co",
-				"border-color"
+				"inp",
+				"inputStr〔variable〕"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "gh-pages.sublime-project",
+			"settings":
+			{
+				"buffer_size": 575,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "6_WD_WE.sublime-project",
+			"settings":
+			{
+				"buffer_size": 345,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "// IF statement 1\nif( x ){\n\talert('Action1!');\n\tif( y ){\n\t\talert('Action2!'); // x = 1, y  =1\n\t}\n};\n\n// IF statement 2\nif( x ){\n\talert('Action1!');\n} else if( y ){\n\t\n};\n\n// IF statement 1 == IF statement 2 ???",
+			"settings":
+			{
+				"buffer_size": 209,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -527,45 +552,145 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 400.0,
-		"last_filter": "live",
+		"height": 396.0,
+		"last_filter": "num",
 		"selected_items":
 		[
-			[
-				"live",
-				"LiveReload: Enable/disable plug-ins"
-			],
-			[
-				"set java",
-				"Set Syntax: JavaScript"
-			],
-			[
-				"Pasca",
-				"Convert Case: PascalCase"
-			],
-			[
-				"set html",
-				"Set Syntax: HTML"
-			],
 			[
 				"num",
 				"Insert Nums"
 			],
 			[
-				"li",
+				"set ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"tern",
+				"tern_for_sublime: Disable Project"
+			],
+			[
+				"entit",
+				"String Utilities: Convert HTML Entities to Chars"
+			],
+			[
+				"HTML",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"live",
 				"LiveReload: Enable/disable plug-ins"
 			],
 			[
-				"com",
-				"Sublimerge: Compare Revision to Revision..."
+				"convert",
+				"Convert Case: snake_case"
 			],
 			[
-				"compa",
-				"Sublimerge: Compare to Other Branch..."
+				"PAscal",
+				"Convert Case: PascalCase"
 			],
 			[
-				"LIVE",
-				"LiveReload: Enable/disable plug-ins"
+				"Pasc",
+				"Convert Case: PascalCase"
+			],
+			[
+				"camel",
+				"Convert Case: camelCase"
+			],
+			[
+				"conve",
+				"Convert Case: camelCase"
+			],
+			[
+				"came",
+				"Convert Case: camelCase"
+			],
+			[
+				"con",
+				"Convert Case: camelCase"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"cam",
+				"Convert Case: camelCase"
+			],
+			[
+				"conver",
+				"Convert Case: PascalCase"
+			],
+			[
+				"Convert",
+				"Convert Case: Upper Case"
+			],
+			[
+				"tasks",
+				"Tasks: New document"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"file na",
+				"File Navigator: Open"
+			],
+			[
+				"sett",
+				"Preferences: Settings"
+			],
+			[
+				"TO",
+				"TodoReview: Open Files"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"setting",
+				"Preferences: Settings"
+			],
+			[
+				"settin",
+				"Preferences: Settings"
+			],
+			[
+				"rvp",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"codein",
+				"SublimeCodeIntel: Disable Live Autocompletion"
+			],
+			[
+				"lint",
+				"SublimeCodeIntel: Reset"
+			],
+			[
+				"view",
+				"View In Browser"
 			],
 			[
 				"install",
@@ -576,36 +701,12 @@
 				"Set Syntax: Perl"
 			],
 			[
-				"settin",
-				"Preferences: Settings"
-			],
-			[
-				"sett",
-				"Preferences: Settings"
-			],
-			[
-				"remo",
-				"Package Control: Remove Package"
-			],
-			[
-				"lint",
-				"JSHint: Set Linting Preferences"
-			],
-			[
 				"jsli",
 				"JSHint: Clear Annotations"
 			],
 			[
 				"et HTML",
 				"Set Syntax: HTML"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
-				"view",
-				"View In Browser"
 			],
 			[
 				"build",
@@ -628,15 +729,7 @@
 				"Set Syntax: CSS"
 			],
 			[
-				"instal",
-				"Package Control: Install Package"
-			],
-			[
 				"lis",
-				"Package Control: List Packages"
-			],
-			[
-				"list",
 				"Package Control: List Packages"
 			],
 			[
@@ -652,10 +745,6 @@
 				"LiveReload: Enable/disable plug-ins"
 			],
 			[
-				"set ja",
-				"Set Syntax: JavaScript"
-			],
-			[
 				"settings",
 				"Preferences: Settings"
 			],
@@ -664,16 +753,12 @@
 				"Snippet: perl_start"
 			],
 			[
-				"liv",
+				"li",
 				"LiveReload: Enable/disable plug-ins"
 			],
 			[
-				"remove",
-				"Package Control: Remove Package"
-			],
-			[
-				"setting",
-				"Preferences: Settings"
+				"liv",
+				"LiveReload: Enable/disable plug-ins"
 			],
 			[
 				"nu",
@@ -712,6 +797,10 @@
 				"Material Theme: Activate theme"
 			],
 			[
+				"set html",
+				"Set Syntax: HTML"
+			],
+			[
 				"upda",
 				"Package Control: Upgrade Package"
 			],
@@ -722,10 +811,6 @@
 			[
 				"LiveReload: Enable/disable plugins",
 				"LiveReload: Enable/disable plug-ins"
-			],
-			[
-				"rem",
-				"Package Control: Remove Package"
 			],
 			[
 				"col",
@@ -800,20 +885,12 @@
 				"Set Syntax: Plain Text"
 			],
 			[
-				"codein",
-				"SublimeCodeIntel: Enable Live Autocompletion for Current Language"
-			],
-			[
 				"Codein",
 				"SublimeCodeIntel: Enable Live Autocompletion for Current Language"
 			],
 			[
 				"autocom",
 				"SublimeCodeIntel: Enable Live Autocompletion for Current Language"
-			],
-			[
-				"tern",
-				"TernJS: Jump to definition"
 			],
 			[
 				"ter",
@@ -967,6 +1044,13 @@
 		"height": 257.0,
 		"history":
 		[
+			"window.help",
+			"window.clear",
+			"window",
+			"window.clear",
+			"clear()",
+			"clear();",
+			"clear",
 			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
 			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
 			"view.settings().get('theme')",
@@ -997,156 +1081,175 @@
 	"expanded_folders":
 	[
 		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/outfit",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/outfit/js",
 		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages",
 		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes",
 		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/Appendix",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Layouts_and_HTML5_SemanticElements",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Layouts_and_HTML5_SemanticElements/labs",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Layouts_and_HTML5_SemanticElements/labs/PageLayouts"
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_BasicSyntax_1/examples",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_BasicSyntax_1/examples/labs",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/students",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/students/DesislavaPavlova",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/students/DesislavaPavlova/Project"
 	],
 	"file_history":
 	[
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/6_WD_WE.sublime-project",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/gh-pages.sublime-project",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Visual_Formating_Model/slides_examples/fixedBottomFooter.html",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Visual_Formating_Model/slides_examples/floatRightInDiv.html",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Visual_Formating_Model/CSS_Visual_Formating_Model.html",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Box_Model/CSS_Box_Model.html",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Layouts_and_HTML5_SemanticElements/labs/PageLayouts/float_in_main.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Selectors_1/homeworks/AphorismsList/AphorismsList.html",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_BasicProperties/CSS_Basic_Properties.html",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/outfit/js/slides.js",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/outfit/js/agenda.js",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/.gitignore",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/Appendix/Animations/SmoothScrolling/SmoothScrolling.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_BasicProperties/CSS_Basic_Properties.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/students/TodorDzhokov/HW/tmp/HomeWorx/007_AphorismsList.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/students/TodorDzhokov/HW/tmp/HomeWorx/css/AphorismsList_main.css",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/students/DesislavaPavlova/HW/Homeworks/index.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/students/DesislavaPavlova/HW/Homeworks/Homework1 - CV/index.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/students/TodorDzhokov/HW/HomeWorx/001_CV.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/agenda/beginners.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_InputForms/HTML5_input_forms.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/Appendix/Forms/selectPlaceholder.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/Course_Intro/Course_Intro.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_HTML_DOM/examples/tmp.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_HTML_DOM/JS_HTML_DOM.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_HTML_DOM/slides/DOM.html",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/labs/HW_Functions/task1.html",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/labs/HW_Functions/task3.html",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Functions/JS_Functions.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/students/JuriPavlov/jobTask/Bootstrap/responsive.css",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/outfit/css/homework_for_pdf.css",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Functions/HW/iep_Task1.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Functions/HW/iep_find_even_numbers.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Functions/HW/TASK_find_odd_or_even_numbers.pdf",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Arrays/HW/TASK_Arrays.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Arrays_and_Loops/HW/TASK_Arrays.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Functions/examples/slides/declaration_vs_definition.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Functions/examples/slides/IIFE.js",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Arrays/examples/codepen/change_color_on_click.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Arrays/examples/codepen/examplesArraysOperations.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Arrays/examples/tmp/myLib.js",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Arrays/examples/tmp/awasomeLib.js",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/labs/myLib.js",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/labs/functions.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Functions/JS_Functions.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Arrays/JS_Arrays.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Arrays/examples/tmp/globalVarsClash.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/Appendix/tic-tac-toe/array_tic-tac-toe.js",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/Appendix/tic-tac-toe/array_tic-tac-toe.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Arrays_and_Loops/examples/test/js/test.js",
+		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/students/DesislavaPavlova/Project/index.html",
+		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/.bin/load_chrome.sh",
+		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_BasicSyntax_1/examples/labs/index.js",
+		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Arrays/labs/array.html",
+		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Arrays/labs/array.task",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/students/DesislavaPavlova/Homeworks/js/cycle.js",
+		"/home/nemsys/.config/sublime-text-3/Packages/User/Snippets/html_code_rel_terminal.sublime-snippet",
+		"/home/nemsys/.bashrc",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/outfit/css/colorSchemes/light/structuring_elements.css",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/_cliches/theme/HWandTests/homework.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/AJAX.html",
+		"/home/nemsys/.config/sublime-text-3/Packages/User/Tern.sublime-settings",
+		"/home/nemsys/.config/sublime-text-3/Packages/tern_for_sublime/Tern.sublime-settings",
+		"/DATA/PROGRAMMING_BOOKS/4. Web Engeneering/Front-end Development/Angular/Angular2/Lynda.com.Angular.2.Essential.Training-ELOHiM/e-la2et.sfv",
+		"/DATA/PROGRAMMING_BOOKS/4. Web Engeneering/Front-end Development/Angular/Angular2/Lynda.com.Angular.2.Essential.Training-ELOHiM/elohim.nfo",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/ShoppingCart/index.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/slides/loremIpsumAjax/loremIpsumFetch.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/songLyricsAjaxLoad/songLyricsAjaxLoad.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/slides/loremIpsumAjax/loremIpsum.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/slides/loremIpsumAjax/loremIpsumjQuery.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/chartlyrics.com/chartlyrics.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/chartlyrics.com/chartlyrics.html",
 		"/home/nemsys/Documents/{}",
-		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Classical_OOP/Classical_OOP.html",
-		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Classical_OOP/examples/slides/objectInit.html",
-		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Classical_OOP/examples/tmp/__proto__-constructor-prototype.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/GitHubAPI/test.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/OpenTrivia/index.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/FreeMusicArchive/fma.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/FreeMusicArchive/fma.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/GitHubAPI/test.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/chartlyrics.com/chartlyrics.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/chartlyrics.com/chartlyrics.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/googleCustomSearch/gcs.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/OpenTrivia/TriviaAPI.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/ShoppingCart/shopping.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/ShoppingCart/style.css",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/downloads/products.json",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/slides/songLyricsAjaxLoad/songLyricsAjaxLoad.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/index.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/_cliches/theme/theme.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/inheritancePatterns/inheritancePatterns.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/JSON/JSON.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/slides/songLyricsAjaxLoad/songLyricsAjaxLoad.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/slides/songLyricsAjaxLoad/data/hey_you.txt",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Appendix/iepPatterns/ObjDrivenApp.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/slides/loremIpsumAjax/ObjDrivenApp.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/slides/loremIpsumAjax/loremIpsum.txt",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/agenda/agenda.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/____Inheritance/Inheritance.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/OOPinJS/OOPinJS.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/slides/songLyricsAjaxLoad/data/pictures_of_you.txt",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/slides/songLyricsAjaxLoad/data/charlotte_sometimes",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Patterns/Patterns.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/StructuralPatterns/StructuralPatterns.html",
+		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/SSJS.sublime-",
+		"/tmp/.fr-G569HJ/task.txt",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Appendix/ObserverPattern/paintOnStartingLetter/paintOnStartingLetter.js",
+		"/tmp/.fr-0hCFeS/task.txt",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/StructuralPatterns/examples/labs/LetterSelectbyObserver/main.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/StructuralPatterns/examples/labs/TODOlist/finalWithNewCSS/mod.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/StructuralPatterns/examples/labs/TODOlist/finalWithNewCSS/TODOlist_5.js",
+		"/tmp/.fr-jw5Qii/task.txt",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/StructuralPatterns/examples/labs/TODOlist/finalWithNewCSS/labsTest.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/StructuralPatterns/examples/labs/LetterSelectbyObserver/main.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/StructuralPatterns/examples/labs/LetterSelectbyObserver/mainAsPubSub.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Appendix/ObserverPattern/paintOnStartingLetter/observerPattern.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Appendix/ObserverPattern/paintOnStartingLetter/paintOnStartingLetter.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/CreationalPatterns/examples/labs/structuringExamples.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/StructuralPatterns/examples/labs/mixinsAugment.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/StructuralPatterns/examples/labs/test.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/CreationalPatterns/examples/labs/structuringExamples.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/CreationalPatterns/CreationalPatterns.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/objectCreationPatterns/objectCreationPatterns.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/students/IoanaBogeva/SingeltonPattern.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/objectCreationPatterns/lab/SingeltonPattern.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/HTTP_Bases/HTTP_Bases.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/HTTPAndAJAX/HTTPAndAJAX.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/objectCreationPatterns/lab/refactoring.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/newES6syntax/newES6syntax.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/objectCreationPatterns/lab/refactoring.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Appendix/DomManipulate/DomManipulate.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/labs/pages/closure/player.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/newES6syntax/examples/labs/arrowFunctions.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/newES6syntax/examples/labs/test.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/newES6syntax/examples/labs/testArrows.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Functions/lab7/colorDivOnTImeout.html",
+		"/home/nemsys/Downloads/CountDomElements.task",
+		"/home/nemsys/Downloads/changeColorTimeoutSolution.js.unzip",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Patterns/examples/labs/myModule.js",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/OOPinJS/examples/slides/factoryInheritance.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Patterns/examples/labs/moduleLiteral.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/modulePatterns/examples/slides/modulePattern.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/modulePatterns/modulePatterns.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/membersPatterns/membersPatterns.html",
 		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Inheritance/Inheritance.html",
-		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Classical_OOP/examples/codepen/this_in_functions.html",
-		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Classical_OOP/examples/tmp/passArrayToFunction.html",
-		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Classical_OOP/labs/cheepestApple.html",
-		"/tmp/.fr-z1ifxt/blockstack-portal-0.6.2/app/js/index.js",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Intro/examples/codepen/IncludeJavaScript.html",
-		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Classical_OOP/examples/tmp/this_in_functions.html",
-		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/labs/index.html",
-		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/.gitignore",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Course_Intro/Course_Intro.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/FunctionAsObject/FunctionAsObject.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Functions/Functions.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/JS_Overview/JS_Overview.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/objectCreationPatterns/examples/slides/objectsCreationPatterns.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/inheritancePatterns/examples/slides/NEW/inheritance.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/inheritancePatterns/images/PrototypeChain.png",
+		"/home/nemsys/Dropbox/Apps/drawio/PrototypeChain",
+		"/home/nemsys/Dropbox/Apps/drawio/Prototype Inheritance",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/membersPatterns/examples/slides/public-privatePatterns.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/membersPatterns/examples/labs/examples.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Exceptions/Exceptions.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Patterns/.fuse_hidden00005af800000002",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/RegEx/RegEx.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/thisContext/thisContext.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/_cliches/slides_examples.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/lib/reveal.js/plugin/highlight/highlight.js",
 		"/DATA/projects/freelance/courses/ProgressBG/JS2/JS2.sublime-project",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Inheritance/Course_Intro.html",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/public/pages/agenda/agenda.html",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/JS_Overview/JS_Overview.html",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Classical_OOP/examples/slides/objectInit.html",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/gh-pages.sublime-project",
-		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Classical_OOP/examples/tmp/prototypes.html",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Classical_OOP/Classical_OOP.html",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/gh-pages.caret-project",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Course_Intro/Course_Intro.html",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Classical_OOP/images/drinksOntology.png",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/public/labs/Lab2/objectConstructor.html",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/public/labs/Lab2/objectLiteral.html",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/public/labs/Lab2/objectPrototype.html",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/public/outfit/css/reveal.js.css",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/public/outfit/css/common.css",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/public/.gitignore",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/public/outfit/js/agenda.js",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/.docs/ProgressBg-Programa-Rearanged",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/public/outfit/css/agenda.css",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/public/outfit/js/slides.js",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/public/index.html",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/.docs/ProgressBg-Programa",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/.git/config",
-		"/DATA/projects/freelance/courses/ProgressBG/JS2/public/.git/config",
-		"/home/nemsys/.ssh/config",
-		"/home/nemsys/projects/freelance/courses/ProgressBG/WebDesign/res/keywords.list",
-		"/home/nemsys/projects/freelance/courses/ProgressBG/WebDesign/TODO/beginners/2_WebDesign_Workdays.txt",
-		"/home/nemsys/projects/freelance/courses/ProgressBG/WebDesign/TODO/beginners/2_WebDesign_Weekends.txt",
-		"/CHAOS/backups/JavelinGroup/git/.git/config",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/.bin/upload.sh",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/pages/themes/JS_Overview/examples/primitive_values_as_objects.html",
-		"/home/nemsys/Downloads/1_JS2_WE_gppm4nd49pqar7ja9hnhgs25bc@group.calendar.google.com.ics",
-		"/home/nemsys/Downloads/5_WebDesign_WE_rcp9qr40t0v6foq759n1i0fhes@group.calendar.google.com.ics",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/pages/themes/JS_Overview/.fuse_hidden000053cb00000001",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/.bin/exclude.list",
-		"/tmp/.fr-OdFYuE/6_WebDesign_WD_a0j0ua8bcb3va6c1211hs711o8@group.calendar.google.com.ics",
-		"/tmp/.fr-znW66P/6_WebDesign_WD_a0j0ua8bcb3va6c1211hs711o8@group.calendar.google.com.ics",
-		"/home/nemsys/Downloads/6_WebDesign_WD_a0j0ua8bcb3va6c1211hs711o8@group.calendar.google.com.ics",
-		"/home/nemsys/.config/sublime-text-3/Packages/User/Snippets/html_span_note.sublime-snippet",
-		"/DATA/PROGRAMMING_BOOKS/4. Web Engeneering/Front-end Development/JS/Professional Javascript for Web Developers()-Zakas/91.193.236.10/pub/docs/linux-support/programming/JavaScript/[Wiley. Wrox] - Professional JavaScript for Web Developers, 2nd ed. - [Zakas]/Examples for 1st ed/Windows XP Service Pack 2 README.txt",
-		"/home/nemsys/.config/sublime-text-3/Packages/User/Snippets/html_dl.sublime-snippet",
-		"/home/nemsys/.config/sublime-text-3/Packages/User/Snippets/html_code_rel_js.sublime-snippet",
-		"/home/nemsys/.config/sublime-text-3/Packages/User/Snippets/iep_comment.sublime-snippet",
-		"/home/nemsys/.config/sublime-text-3/Packages/User/Snippets/js_sl.sublime-snippet",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/outfit/js/components/link_auto_targets.js",
-		"/CHAOS/backups/JavelinGroup/git/pages/themes/JS_Overview/JS_Overview.html",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/pages/themes/JS_Overview/examples/primitive_types.html",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/outfit/js/slides.js",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/pages/themes/JS_Overview/examples/keyed_collections.html",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/outfit/css/common.css",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/outfit/css/colorSchemes/light/text_schemes.css",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/outfit/css/colorSchemes/dark/text_schemes.css",
-		"/CHAOS/backups/JavelinGroup/rsynced/pages/themes/JS_Overview/JS_Overview.html",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/JavelinGroup.sublime-project",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/logs/apache/error_log",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/pages/agenda/agenda.html",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/.gitignore",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/README",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/pages/themes/JS_Overview/JS_Overview.html",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/apache_vhost_local.conf",
-		"/media/nemsys/26BB-F2FE/DVR/README.TXT",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/pages/agenda/agenda-javalin.html",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/pages/_cliches/themes/slides.html",
-		"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/pages/themes/_cliches/slides.html"
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/outfit/css/themes/projector.css",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/outfit/css/custom_hljs.css",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/objectCreationPatterns/examples/labs/pub_priv_fields.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/membersPatterns/examples/slides/inheritance.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Patterns/examples/labs/pub_priv_fields.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/membersPatterns/examples/labs/pub_priv_fields.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Patterns/examples/slides/objectsCreationPatterns.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Patterns/examples/slides/inheritance.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Patterns/examples/slides/PrototypePatterns.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Patterns/examples/slides/theFactoryPattern.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Patterns/HW/smartLogger/index.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Patterns/HW/smartLogger/task",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Patterns/examples/slides/PrototypeInheritanceDeepLook.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/outfit/css/colorSchemes/light/text_schemes.css",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/outfit/css/reveal.js.css",
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Intro/CSS_Intro.html",
+		"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/OOPinJS/examples/tmp/__proto__-constructor-prototype.html"
 	],
 	"find":
 	{
-		"height": 73.0
+		"height": 32.0
 	},
 	"find_in_files":
 	{
 		"height": 161.0,
 		"where_history":
 		[
+			"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/outfit/css",
+			"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/outfit/css/colorSchemes",
+			"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/AJAX/examples/ShoppingCart",
+			"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes",
+			"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/lib",
+			"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/outfit/css",
+			"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/membersPatterns/examples/slides",
+			"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public",
+			"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages",
+			"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages",
+			"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages",
+			"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/pages/themes",
+			"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners",
+			"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/outfit/css",
+			"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners",
+			"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public",
+			"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/outfit/css",
+			"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/lib/reveal.js/plugin",
+			"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/lib/reveal.js",
+			"/home/nemsys/projects/freelance/courses/ProgressBG/JS2/public/outfit/css",
 			"/DATA/projects/freelance/courses/ProgressBG/JS2/public/pages/themes/Classical_OOP",
 			"/DATA/projects/freelance/courses/ProgressBG/JS2/public",
 			"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup,-ga.js",
@@ -1197,134 +1300,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			";\n",
-			"em",
-			"box-sizing",
-			"s",
-			"*);\n",
-			"CC",
-			"FF",
+			"alert",
+			"rel=",
+			"JS",
+			"rel",
+			"<code rel=\"Terminal\" class=\".+?\">",
+			"<code rel=\"Terminal\" class=\"shell\">",
+			"Git\\s*Bash\\s+terminal",
+			"GitBash terminal",
+			"//",
+			"HelloWorld",
+			"Set up the environment: ",
 			"dt",
-			"Включване",
-			"loadJQ",
-			"maybeLoadJq",
-			"section1",
-			"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-			"Article 1",
-			"legend",
-			"optgroup",
-			"firstLi",
-			"'",
-			"getElementsByClassName",
-			"header",
-			"h1",
-			"student1",
-			"firstName",
-			"2",
-			"arr",
-			"right",
-			"ригхт",
-			"right",
-			"css",
-			"right",
-			"ригхт",
-			"break-word",
-			"wrap-all",
-			"word",
-			"word-",
-			"word-wra",
-			"linkone",
-			"primary link",
-			"primary",
-			"Conveniently and securely share your p",
-			"br",
-			"Primary link</a>",
-			"0",
-			"span",
-			"Things",
-			"useThat",
-			"b",
-			"x",
-			"span",
-			"return",
-			"действия",
-			"foo",
-			"defini",
-			"highli",
-			"изписване",
-			"i",
-			"let",
-			"span",
-			"sqrt",
-			"\"",
-			"colors",
-			"JS_Arrays_and_Loops",
-			"JS_BasicSyntax_1",
-			"timerGlobal",
-			"timer",
-			"identifier",
-			"Things",
-			"boardWidth",
-			"Width",
-			"board",
-			"i",
-			"<<<<<",
-			"<<<<<<<",
-			"<<<",
-			"github",
-			"var",
-			"em",
-			"\\s+",
-			"\\n",
-			"/",
+			"code",
+			"AJAX",
+			"yourName",
+			" *",
+			"Angula",
+			"shopp",
 			"githu",
-			"apple",
-			"th",
-			"prices",
-			"arr",
-			"dt",
-			"proto",
-			"prototype",
-			"WineBottle",
-			"calcMaxPrice",
-			"EniraReserve",
-			"\",);",
+			"encodeURL",
+			"searc",
+			"api.github",
+			"slides/songLyricsAjaxLoad",
+			"lyric",
+			"json",
+			"Chopping",
+			"cartProduct",
+			"responce",
+			"console",
+			"dataSources",
+			"console",
+			"nadler",
+			"cb",
+			"prop",
+			"node",
+			"prop",
+			"partialWrapper",
+			"inher",
+			"thisContext",
+			"png",
+			"inher",
+			"console",
+			";",
 			"1",
-			"Colour",
-			"JS_Overview",
-			"codepe",
-			"p",
-			"h3",
-			"2",
-			"\"/",
-			"../../",
-			"Unders",
-			"back",
-			"##",
-			"\"hours\">8",
-			"^(\\s+)## (\\w.+)$",
-			" ",
-			"^(\\s+)## (\\w.+)$",
-			" ",
-			"\\s+",
-			"^(\\s+)## (\\w.+)$",
-			"^(\\s+)[a-z]\\.",
-			"^(\\s+)## (\\w.+)$",
-			"sub_themes",
-			"p",
-			"\\s+",
-			"^(\\s+)## (\\w.+)$",
-			"(?s)^(\\s+)## (\\w.+)$",
-			"^(\\s+)## (\\w.+)$",
-			"div",
-			".themes>article>div",
-			"div",
+			"30vw",
 			"section",
-			"extLinksToBlank",
-			"project",
-			"\\d+\\.\\s+",
-			"^(\\s*)\\d+\\.\\s+",
-			"^(\\s+)[a-h]\\.\\s+"
+			"dt",
+			"b>",
+			"JSON",
+			"XML",
+			"WebServicesIntro",
+			"HTTPAndAJAX",
+			"API",
+			"2",
+			"high",
+			"Subject",
+			"notify",
+			"letters[i]",
+			"letter",
+			"var",
+			"List",
+			"list",
+			"wordsList",
+			"list",
+			"objectCreationPatterns",
+			"1",
+			"StructuralPatterns",
+			"modulePatterns",
+			"HTTP",
+			"ObjectMaker",
+			"objectMaker",
+			"\t\t\n",
+			"1",
+			"getUserColor",
+			"colorElements",
+			"getUserColor",
+			"colorInputNode",
+			"getUserColor",
+			"dir",
+			"getUserColor",
+			"Factory",
+			"ulNodeChilds",
+			"ulNode",
+			"color",
+			"this",
+			"newES",
+			"kaya",
+			"Animal",
+			"animal",
+			"Animal",
+			"animal",
+			"prototype",
+			">\t\t\t",
+			"p",
+			"member",
+			"2",
+			"p>",
+			"prototypalInheritanceOfObjectLiteralsUsingDunderProto",
+			"manufacturer",
+			"ford",
+			"theFordOfPesho",
+			"wheels",
+			".create",
+			"INheritance",
+			"bject.create() ",
+			"traceObjectChain",
+			"ConstructorObj",
+			"constructedObj",
+			"literalObj",
+			"x",
+			"1",
+			"p>",
+			"\\/\\/.+?timestamp",
+			"timestamp",
+			"^(\\s+)highlightjsTabSize = '  ';",
+			"{ hljs.initHighlightingOnLoad",
+			"{ hljs.initHighlightingOnLoad()",
+			"{ hljs.initHighlightingOnLoad.+?}",
+			"{ hljs.initHighlightingOnLoad",
+			"{ hljs.initHighlightingOnLoad(); }",
+			"^(\\s*)(.+initHighlightingOnLoad.+)",
+			"(?s)^(\\s*)(.+initHighlightingOnLoad.+)",
+			"(?m)^(\\s*)(.+initHighlightingOnLoad.+)",
+			"(?m)^(\\s*)(callback: .+hljs.initHighlightingOnLoad.+)",
+			"(?m)^(\\s*)(callback: .+hljs.initHighlightingOnLoad.+)$",
+			"^(\\s*)Reveal\\.initialize\\(\\{",
+			"        Reveal.initialize({",
+			"^(\\s*)Reveal\\.initialize\\(\\{"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1332,8 +1435,35 @@
 		"regex": true,
 		"replace_history":
 		[
-			"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-			"break-word",
+			"<code rel=\"Terminal\" class=\"shell\">",
+			"Terminal",
+			"HowdyWorld",
+			"",
+			"songLyricsAjaxLoad",
+			"cartProducts",
+			"\\1var highlightjsTabSize = '  ';",
+			"{ hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad()",
+			"\\1highlightjsTabSize = '  ';\n\\1Reveal.initialize({",
+			"highlightjsTabSize = '  ';\nReveal.initialize({",
+			"\\t",
+			"\\1<section><h2>\\2</h2>",
+			"OOPinJS",
+			"OPPinJS",
+			"// console.log",
+			"<code rel=\"JS\" class=\"js\">",
+			"\"this\"",
+			"nodesStat",
+			"▴",
+			"▾",
+			"▼",
+			"v",
+			"^",
+			"#",
+			"-",
+			"../../outfit",
+			"/",
+			"/public/",
+			"/",
 			"",
 			",",
 			"\\",
@@ -1432,34 +1562,7 @@
 			"IT-Academy",
 			"/Angular/",
 			"/ProgressBGCourses",
-			"ProgressBGCourses/Angular/",
-			"projects/courses/ProgressBGCourses",
-			"Angular",
-			"/home/nemsys/projects/courses/ProgressBGCourses",
-			"slide",
-			"slider",
-			"prev",
-			"",
-			"Require all granted",
-			"<div class=\"footer theme_switch\"></div>",
-			"<link rel=\"stylesheet\" href=\"/IT-Academy-Front-End-Dev/outfit/css/themes/light.css\" id=\"theme\">",
-			"</div>\n    <!-- Custom processing -->\n    <script src=\"/IT-Academy-Front-End-Dev/outfit/js/slides.js\"></script>\n    <!-- external scripts -->",
-			" <!-- Custom processing -->\n    <script src=\"/IT-Academy/outfit/js/slides.js\"></script>\n    <!-- external scripts -->\n",
-			";",
-			" ",
-			"portfolio",
-			"/ProgressBG-Front-End-Dev/outfit/",
-			"col_right",
-			"col_left",
-			"Require all granted",
-			"IT-Academy",
-			" ",
-			"",
-			"IT-Academy",
-			"JS_HTML_DOM_Objects",
-			"    ",
-			"\\n",
-			""
+			"ProgressBGCourses/Angular/"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1470,14 +1573,367 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "gh-pages.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 575,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17,
+								17
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										26,
+										27
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										4,
+										5
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "6_WD_WE.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 345,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										343,
+										344
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										0,
+										1
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 209,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								165,
+								165
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										166,
+										167
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										162,
+										163
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 143.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 37.0
+		"height": 32.0
 	},
 	"input":
 	{
@@ -1506,10 +1962,6 @@
 		]
 	},
 	"menu_visible": true,
-	"output.exec":
-	{
-		"height": 158.0
-	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -1518,7 +1970,7 @@
 	"project": "gh-pages.sublime-project",
 	"replace":
 	{
-		"height": 638.0
+		"height": 60.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -1527,6 +1979,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"proj",
+				"ProgressBG-Front-End-Dev/outfit/css/themes/projector.css"
+			],
+			[
+				"words",
+				"JS2/public/pages/themes/RegEx/HW/wordsCounter.js"
+			],
 			[
 				"ins",
 				"ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Intro/examples/codepen/IncludeJavaScript.html"
@@ -1569,9 +2029,13 @@
 	"select_project":
 	{
 		"height": 543.0,
-		"last_filter": "",
+		"last_filter": "JAvel",
 		"selected_items":
 		[
+			[
+				"JAvel",
+				"/DATA/projects/freelance/courses/ProgressBG/ServerSideJS/JavelinGroup/JavelinGroup.sublime-project"
+			],
 			[
 				"",
 				"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/gh_pages.sublime-workspace"
@@ -1628,7 +2092,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 329.0,
+	"side_bar_width": 320.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
