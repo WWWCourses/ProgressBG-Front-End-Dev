@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VFM</title>
+	<style type="text/css">
+		html, body, .wrapper{
+			min-height: 100%;
+		}
+		body{
+			margin: 0;
+		}
+		li{
+			list-style-type: none;
+		}
+		.wrapper>.col{
+			display: inline-block;
+			min-height: 100%;
+			margin-left: -.25em;
+			vertical-align: top;
+			box-sizing: border-box;
+		}
+		#col1{
+			width: 20%;
+			padding-top: 1em;
+			border-right: .25em double #999;
+			padding-left: 1em;
+		}
+		#col2{
+			width: 50%;
+			/*background:yellow;*/
+			padding-left: 1em;
+			border-right: .25em double #999;
+		}
+		#col3{
+			width: 30%;
+			/*background:green;*/
+		}
+		#col3>img{
+			display: block;
+			width: 100%;
+			border: 5px solid orange;
+			border-top: 2.5px solid orange;
+			border-bottom: 2.5px solid orange;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="col" id="col1">
+			<u1>
+				<li><a href="#">link2</a></li>
+				<li><a href="#">link3</a></li>
+				<li><a href="#">link4</a></li>
+				<li><a href="#">link5</a></li>
+				<li><a href="#">link6</a></li>
+				<li><a href="#">link7</a></li>
+				<li><a href="#">link8</a></li>
+				<li><a href="#">link9</a></li>
+				<li><a href="#">link10</a></li>
+			</ul>
+		</div>
+		<div class="col" id="col2">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<div class="col" id="col3">
+			<img src="../images/products/apple-1532055_640.jpg">
+			<img src="../images/products/apple-1532055_640.jpg">
+			<img src="../images/products/apple-1532055_640.jpg">
+			<img src="../images/products/apple-1532055_640.jpg">
+			<img src="../images/products/apple-1532055_640.jpg">
+			<img src="../images/products/apple-1532055_640.jpg">
+		</div>
+	</div>
+</body>
+</html>

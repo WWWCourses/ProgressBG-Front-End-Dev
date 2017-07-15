@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>transitions</title>
+    <style type="text/css">
+    	body{
+    		margin: 0;
+    	}
+    	.box{
+    		position: fixed;
+    		left: 0; top: 0;
+    		width: 10vw;
+    		height: 10vw;
+    		background: #343FEE;
+    		transition-duration: 2s;
+    		transition-property: left, margin-left, width, height;
+
+    	}
+    	.box:hover{
+    		left: 90vw;
+    		width: 20vw;
+    		height: 20vw;
+    		background: blue;
+    	}
+    </style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+<script type="text/javascript">
+	var bgImages = [
+		'http://lorempixel.com/400/200/animals/1',
+		'http://lorempixel.com/400/200/animals/2',
+		'http://lorempixel.com/400/200/animals/3',
+	];
+	var i = 1;
+
+	// елементът, на който ще слагаме фон:
+	var bgNode = document.body;
+
+	setInterval(function() {
+		setBgImage(bgNode, bgImages[i++ % bgImages.length]);
+	}, 3000);
+
+	function setBgImage(bgNode, imgSrc) {
+		// css: background-image = url(imgSrc);
+		bgNode.style.backgroundImage = "url(" + imgSrc + ")";
+		console.log("imgSrc: ", imgSrc);
+	}
+</script>
+</html>

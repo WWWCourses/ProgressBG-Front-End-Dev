@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+	// get the body as element object
+	var bodyNode = document.getElementsByTagName("body")[0];
+
+	// create header element
+	var headerNode = document.createElement("header");
+	// attach the header to the body
+	bodyNode.appendChild(headerNode);
+
+	// create div element with text content
+	var divNode = document.createElement("div");
+	divNode.textContent = "I'm created by JS!!!";
+	// insert the div into header:
+	headerNode.appendChild(divNode);
+</script>
+</body>
+</html>

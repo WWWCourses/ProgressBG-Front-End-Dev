@@ -1,3 +1,21 @@
+<<<<<<< HEAD
 select placeholder....
 floating right text
 
+=======
+update CSS combinators with syntax:
+upload vert_align_1_to_CODEPEN.html
+
+--- 14.03.2017:
+explain: "margin-right:-200px;" on asia....
+/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/students/StanislavaDakova/SD_Olympics_Article_Matryosgka/OlimpicRings/SD_homework_olympics.html
+
+explain: /home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/labs/pages/float_example_1.html
+
+---- 11.04.2017
+do not move following elements after font-size change (line-height problem...)
+    the problem was due to EM units used!!!, not with the height/line-height
+
+---09.05.2017
+to codepen: /home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/students/IvetaNikolova/HW_ign_calculator/my.js
+>>>>>>> 6_WD
