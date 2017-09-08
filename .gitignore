@@ -2,15 +2,8 @@
 **/*.tmp
 **/*.old
 **/.tags*
-<<<<<<< HEAD
 **/.fuse*
 **/*nohup*
 
 *.sublime-*
-!6_WD_WE.sublime-project
-=======
-**/*fuse*
-nohup.out
-*.sublime-workspace
-
->>>>>>> 6_WD
+!*.sublime-project

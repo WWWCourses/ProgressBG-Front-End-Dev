@@ -1,0 +1,7 @@
+.Задачата е описана във файла styleTheParagraphs.html
+
+.Работете в отделна папка с име: StyleTheParagraphs/
+
+.Работете в същия HTML файл: styleTheParagraphs.html, като добавитнеобходимия CSS на необходимите мест
+
+.Изпратете решението си - архив на папката, като в името добавите вашитинициали. Например: iepStyleTheParagraphs.zip
