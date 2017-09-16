@@ -2,7 +2,7 @@ function themeSwitcher(themeName){
     alert("themeSwitcher ON");
     document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/lib/reveal.js/css/theme/'+themeName+'.css');
 }
-function  PrettyPreCode(){
+function  PrettyPreCodeTmp(){
     var codeNodes = document.querySelectorAll('pre>code');
 
     for (var i = 0; i < codeNodes.length; i++)
@@ -26,6 +26,7 @@ function  PrettyPreCode(){
 }
 function  PrettyPreCode(){
     var codeNodes = document.querySelectorAll('pre>code');
+    // console.dir(codeNodes);
 
     for (var i = 0; i < codeNodes.length; i++)
     {
