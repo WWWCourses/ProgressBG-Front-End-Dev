@@ -1,66 +1,66 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>CSS Селектори 2</title>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-    <!-- css & themes include -->
-    <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/lib/reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css" id="theme">
-    <!-- Printing and PDF exports -->
-    <script>
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match( /print-pdf/gi ) ? '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/paper.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
-    <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
-    <![endif]-->
-    <!-- custom -->
-    <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/outfit/css/reveal.js.css">
-    <base target="_blank">
-    <style type="text/css">
-        .html_block{
-            padding: 0;
-            margin: 0;
-            width: 100%;
-            height: 100%;
-        }
-        .html_block div{
-            width: 80%;
-            padding: 1em;
-            border: 5px solid lime;
-            overflow: none;
-        }
-        .html_block p{
-            color: #000;
-            text-align: left;
-        }
-        .html_block .parent{
-            background: #cc3030; /*red*/
-            border: 5px solid #333;
-        }
-        .html_block .child{
-            background: #3030aa; /*green*/
-        }
-        #purple{
-            color: purple;
-        }
-    </style>
+	<meta charset="utf-8">
+	<title>CSS Селектори 2</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="/ProgressBG-Front-End-Dev/lib/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- custom -->
+	<link rel="stylesheet" href="/ProgressBG-Front-End-Dev/outfit/css/reveal.js.css">
+	<base target="_blank">
+	<style type="text/css">
+		.html_block{
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.html_block div{
+			width: 80%;
+			padding: 1em;
+			border: 5px solid lime;
+			overflow: none;
+		}
+		.html_block p{
+			color: #000;
+			text-align: left;
+		}
+		.html_block .parent{
+			background: #cc3030; /*red*/
+			border: 5px solid #333;
+		}
+		.html_block .child{
+			background: #3030aa; /*green*/
+		}
+		#purple{
+			color: purple;
+		}
+	</style>
 </head>
 <body>
-    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
-        <a class="home_link" href="/ProgressBG-Front-End-Dev/pages/agenda/beginners.html#CSS_Selectors_part1" target="_top"><i class="fa fa-home"></i></a>
-        <div class="footer theme_switch">
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css'); return false;">Dark</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/light.css'); return false;">Light</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/projector.css'); return false;">Projector</a>
-        </div>
-        <div class="slides">
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<a class="home_link" href="/ProgressBG-Front-End-Dev/pages/agenda/beginners.html#CSS_Selectors_part1" target="_top"><i class="fa fa-home"></i></a>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
 <!--
 ########################################################
 ##################### SLIDES START #####################
@@ -68,221 +68,238 @@
 -->
 <section><h1>CSS Селектори</h1><h1>Част 2</h1></section>
 <section data-transition="zoom">
-    <div class="copyright">
-        <div class="note">
-            <p>Създаден за</p>
-        </div>
-        <div class="company">
-            <a href="http://progressbg.net/kurs-po-web-design/">
-            <img style="height:80%" src="/ProgressBG-Front-End-Dev/outfit/images/logos/ProgressBG_logo_529_127.png">
-            </a>
-        </div>
-        <div class="author">
-            <span>Iva E. Popova, 2016-2017,</span>
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
-        </div>
-    </div>
+	<div class="copyright">
+		<div class="note">
+			<p>Създаден за</p>
+		</div>
+		<div class="company">
+			<a href="http://progressbg.net/kurs-po-web-design/">
+			<img style="height:80%" src="/ProgressBG-Front-End-Dev/outfit/images/logos/ProgressBG_logo_529_127.png">
+			</a>
+		</div>
+		<div class="author">
+			<span>Iva E. Popova, 2016-2017,</span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</div>
 </section>
 
 <section><h2>Селектори за псевдо-класове</h2>
-    <section><h3>Какво са псевдо-класовете</h3>
-        <dl class="fa">
-            <dt>Определят <span class="note">състояние</span> на елемент.</dt>
-            <dd>Например <span class="code">:hover</span>, определя елемент, когато е посочен от мишката.</dd>
-            <dd><span class="code">:first-child</span> определя елемент, само когато е първият елемент в родителя си.</dd>
-        </dl>
-    </section>
-    <section>
-        <dl class="fa">
-            <dt>Чрез селекторите за псевдо-елементи можем да селектираме елемент според неговото състояние.</dt>
-            <dt>Общ синтаксис:</dt>
-            <pre><code rel="Syntax" class="scss" data-noescape>
-                selector<b>:</b>pseudo­class {
-                    property:value;
-                    ...
-                }
-            </code></pre>
-        </dl>
-    </section>
-    <section><a href="http://www.w3schools.com/cssref/sel_link.asp">:link</a>
-        <dl class="fa">
-            <dt>Селектира <span class="note">линк</span>, който не е посетен от дадения браузер.</dt>
-            <dt>Пример:</dt>
-            <pre><code rel="CSS">
-                a:link{
-                    color: green;
-                }
-            </code></pre>
-        </dl>
-    </section>
-    <section><a href="http://www.w3schools.com/cssref/sel_visited.asp">:visited</a>
-        <dl class="fa">
-            <dt>Селектира <span class="note">линк</span>, който вече е посетен от дадения браузер.</dt>
-            <dt>Пример:</dt>
-            <pre><code rel="CSS">
-                a:visited{
-                    color: gray;
-                }
-            </code></pre>
-        </dl>
-    </section>
-    <section><a href="http://www.w3schools.com/cssref/sel_visited.asp">:visited</a>
-        <dl class="fa">
-            <dt>От съображения за сигурността на потребителя, върху посетените линкове могат да се прилагат само някои от CSS свойствата</dt>
-            <dt>Това са: color, background-color, border-color, border-bottom-color, border-left-color, border-right-color, border-top-color, outline-color, column-rule-color, fill and stroke.</dt>
-            <dt class="advanced"><i class="fa fa-graduation-cap"></i><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector">Privacy and the :visited selector</a></dt>
-        </dl>
-    </section>
-    <section><h3><a href="http://www.w3schools.com/cssref/sel_hover.asp">:hover</a></h3>
-        <dl class="fa">
-            <dt>Селектира <span class="note">елемент</span>, когато мишката се намира върху него.</dt>
-            <dt>Пример:</dt>
-            <pre><code rel="CSS">
-                a:hover{
-                    border-bottom: 1px dotted #000;
-                }
-            </code></pre>
-        </dl>
-    </section>
-    <section><h3><a href="http://www.w3schools.com/cssref/sel_hover.asp">:hover</a><em> - кога няма да работи?</em></h3>
-        <dl class="fa">
-            <dt>Редът на прилагане на стилове за линкове <span class="note">има</span> значение.</dt>
-            <dt>За да се приложат правилно свойствата, трябва да подреждате правилата за линкове по следния ред:</dt>
-            <dd>:link , :visited , :hover ,  :active</dd>
-        </dl>
-    </section>
-    <section><h3>:hover - приложение</h3>
-        <p>Pure CSS drop-down menu</p>
-        <iframe height='300' scrolling='no' src='http://codepen.io/webdesigncourse/embed/ZbPxWm/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/ZbPxWm/'>CSS drop-down menu - example 1</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.
-        </iframe>
-    </section>
-    <section><h3><a href="http://www.w3schools.com/cssref/sel_active.asp">:active</a></h3>
-        <dl class="fa">
-            <dt>Селектира <span class="note">елемент</span>, когато щракнем с мишката върху елемента.</dt>
-            <dt>Пример:</dt>
-            <pre><code rel="CSS">
-                a:active{
-                    font-­size: 120%;
-                }
-            </code></pre>
-        </dl>
-    </section>
-    <section><h3><a href="http://www.w3schools.com/cssref/sel_focus.asp">:focus</a></h3>
-        <dl class="fa">
-            <dt>Селектира <span class="note">елемент</span>, когато елемента получи фокус.</dt>
-            <dt class="note">Прилага се само за елементи, чрез които потребителя може да взаимодейства - такива са <span class="code">input</span> елементите на една форма, линковете, както и всички елементи с атрибут <a href="http://www.w3schools.com/tags/att_tabindex.asp">tabindex</a></dt>
-            <dt>Пример:</dt>
-            <pre><code rel="CSS">
-                a:focus{
-                    font-weight: bold;
-                }
-            </code></pre>
-        </dl>
-    </section>
-    <section><h3>Links Pseudo Classes</h3>
-        <p>Example</p>
-        <p data-height="300" data-theme-id="20230" data-slug-hash="NrbNba" data-default-tab="html,result" data-user="webdesigncourse" data-embed-version="2" data-pen-title="link_pseudo_clases" class="codepen">See the Pen <a href="http://codepen.io/webdesigncourse/pen/NrbNba/">link_pseudo_clases</a> by Iva Popova (<a href="http://codepen.io/webdesigncourse">@webdesigncourse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-    </section>
-    <section><h3><a href="http://www.w3schools.com/cssref/sel_nth-child.asp">:nth-child(x)</a></h3>
-        <dl class="fa">
-            <dt>x може да бъде число, запазена дума или формула: <span class="code">an+b</span></dt>
-            <dt>Когато x е число, се селектира <span class="note">елемент</span>, който e x-то дете, <span class="note">без значение на неговия тип</span>.</dt>
-            <dt>Индексът на децата започва от 1</dt>
-            <dt>Пример:</dt>
-            <pre><code rel="CSS">
-                /* селектира първия параграф в даден елемент */
-                p:nth-child(1){
-                    color: red;
-                }
-                /* селектира всички нечетни параграфи */
-                p:nth-child(2n+1){
-                    color: green;
-                }
-            </code></pre>
-        </dl>
-    </section>
-    <section><h3><a href="http://www.w3schools.com/cssref/sel_nth-child.asp">:nth-child(an+b)</a></h3>
-        <dl class="fa">
-            <dt>Когато имаме <code>nth-child(an+b)</code>, <span class="note code">n</span> е брояч, който започва от нула и се увеличава с 1, автоматично</dt>
-            <dt><span class="note code">a</span> и <span class="note code">b</span> са числа, които се задават от нас.</dt>
-            <dt>Ако <code>an+b < 0</code>, няма да се селектира нито един елемент (няма елемент с индекс -1, например)</dt>
-            <dt>Но е възможно да имаме минус пред <span class="note code">n</span>.Например:</dt>
-            <pre><code rel="CSS">
-                /* селектира първите 3 параграфа */
-                p:nth-child(-n+3){
-                    color: magenta;
-                }
-            </code></pre>
-        </dl>
-    </section>
-    <section><h3><a href="http://www.w3schools.com/cssref/sel_nth-child.asp">:nth-last-child(x)</a></h3>
-        <dl class="fa">
-            <dt>За да селектираме елементите в обратен ред (от последния към първия), се използва селектора  <a href="http://www.w3schools.com/cssref/sel_nth-last-child.asp">nth-last-child()</a></dt>
-            <dt>Например:</dt>
-            <pre><code rel="CSS">
-                /* селектира параграф, ако е последно дете */
-                p:nth-last-child(1){
-                    color: magenta;
-                }
-            </code></pre>
-        </dl>
-    </section>
-    <section><h3>Slef-Learning Section</h3>
-        <p><a href="https://developer.mozilla.org/en/docs/Web/CSS/:nth-of-type">nth-of-type(an+b)</a> at MDN</p>
-    </section>
-    <section><h3>Примери</h3>
-        <p data-height="300" data-theme-id="20230" data-slug-hash="PpJggv" data-default-tab="html,result" data-user="webdesigncourse" data-embed-version="2" data-pen-title="nth-child() vs. nth-of-type()" class="codepen">See the Pen <a href="http://codepen.io/webdesigncourse/pen/PpJggv/">nth-child() vs. nth-of-type()</a> by Iva Popova (<a href="http://codepen.io/webdesigncourse">@webdesigncourse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-    </section>
-    <section><h3>:checked</h3>
-        <dl class="fa">
-            <dt>Селектира <span class="note">radio, checkbox или option елемент</span>, когато елемента е избран от потребителя.</dt>
-            <dt>Пример:</dt>
-            <pre><code rel="CSS">
-                /* селектира всички <input type="radio"> елементи, когато те са маркирани от потребителя */
-                input[type="radio"]:checked{
-                    width: 50px;
-                    height: 50px;
-                }
-            </code></pre>
-        </dl>
-    </section>
-    <section><h3>:checked</h3>
-        <p>Намира приложение за направата на "hamburger menu" без JavaScript</p>
-        <p data-height="300" data-theme-id="20230" data-slug-hash="GrBEEN" data-default-tab="css,result" data-user="webdesigncourse" data-embed-version="2" data-pen-title="GrBEEN" class="codepen">See the Pen <a href="http://codepen.io/webdesigncourse/pen/GrBEEN/">GrBEEN</a> by Iva Popova (<a href="http://codepen.io/webdesigncourse">@webdesigncourse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-    </section>
-    <section><h3>Полезни ресурси:</h3>
-        <dl class="fa">
-            <dt><a href="http://www.w3schools.com/Css/css_pseudo_classes.asp">w3schools - CSS Pseudo-classes</a></dt>
-            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Dev Mozilla.org - Pseudo-classes</a></dt>
-        </dl>
-    </section>
+	<section><h3>Какво са псевдо-класовете</h3>
+		<dl class="fa">
+			<dt>Определят <span class="note">състояние</span> на елемент.</dt>
+			<dd>Например <span class="code">:hover</span>, определя елемент, когато е посочен от мишката.</dd>
+			<dd><span class="code">:first-child</span> определя елемент, само когато е първият елемент в родителя си.</dd>
+		</dl>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>Чрез селекторите за псевдо-класове можем да селектираме елемент според неговото състояние.</dt>
+			<dt>Общ синтаксис:</dt>
+			<pre><code rel="Syntax" class="scss" data-noescape>
+				selector<b>:</b>pseudo­class {
+					property:value;
+					...
+				}
+			</code></pre>
+		</dl>
+	</section>
+	<section><a href="http://www.w3schools.com/cssref/sel_link.asp">:link</a>
+		<dl class="fa">
+			<dt>Селектира <span class="note">линк</span>, който не е посетен от дадения браузер.</dt>
+			<dt>Пример:</dt>
+			<pre><code rel="CSS">
+				a:link{
+					color: green;
+				}
+			</code></pre>
+		</dl>
+	</section>
+	<section><a href="http://www.w3schools.com/cssref/sel_visited.asp">:visited</a>
+		<dl class="fa">
+			<dt>Селектира <span class="note">линк</span>, който вече е посетен от дадения браузер.</dt>
+			<dt>Пример:</dt>
+			<pre><code rel="CSS">
+				a:visited{
+					color: gray;
+				}
+			</code></pre>
+		</dl>
+	</section>
+	<section><a href="http://www.w3schools.com/cssref/sel_visited.asp">:visited</a>
+		<dl class="fa">
+			<dt>От съображения за сигурността на потребителя, върху посетените линкове могат да се прилагат само някои от CSS свойствата</dt>
+			<dt>Това са: color, background-color, border-color, border-bottom-color, border-left-color, border-right-color, border-top-color, outline-color, column-rule-color, fill and stroke.</dt>
+			<dt class="advanced"><i class="fa fa-graduation-cap"></i><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector">Privacy and the :visited selector</a></dt>
+		</dl>
+	</section>
+	<section><h3><a href="http://www.w3schools.com/cssref/sel_hover.asp">:hover</a></h3>
+		<dl class="fa">
+			<dt>Селектира <span class="note">елемент</span>, когато мишката се намира върху него.</dt>
+			<dt>Пример:</dt>
+			<pre><code rel="CSS">
+				a:hover{
+					border-bottom: 1px dotted #000;
+				}
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3><a href="http://www.w3schools.com/cssref/sel_hover.asp">:hover</a><em> - кога няма да работи?</em></h3>
+		<dl class="fa">
+			<dt>Редът на прилагане на стилове за линкове <span class="note">има</span> значение.</dt>
+			<dt>За да се приложат правилно свойствата, трябва да подреждате правилата за линкове по следния ред:</dt>
+			<dd>:link , :visited , :hover ,  :active</dd>
+		</dl>
+	</section>
+	<section><h3>:hover - приложение</h3>
+		<p>Pure CSS drop-down menu</p>
+		<iframe height='300' scrolling='no' src='http://codepen.io/webdesigncourse/embed/ZbPxWm/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/ZbPxWm/'>CSS drop-down menu - example 1</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3><a href="http://www.w3schools.com/cssref/sel_active.asp">:active</a></h3>
+		<dl class="fa">
+			<dt>Селектира <span class="note">елемент</span>, когато щракнем с мишката върху елемента.</dt>
+			<dt>Пример:</dt>
+			<pre><code rel="CSS">
+				a:active{
+					font-­size: 120%;
+				}
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3><a href="http://www.w3schools.com/cssref/sel_focus.asp">:focus</a></h3>
+		<dl class="fa">
+			<dt>Селектира <span class="note">елемент</span>, когато елемента получи фокус.</dt>
+			<dt class="note">Прилага се само за елементи, чрез които потребителя може да взаимодейства - такива са <span class="code">input</span> елементите на една форма, линковете, както и всички елементи с атрибут <a href="http://www.w3schools.com/tags/att_tabindex.asp">tabindex</a></dt>
+			<dt>Пример:</dt>
+			<pre><code rel="CSS">
+				a:focus{
+					font-weight: bold;
+				}
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3>Links Pseudo Classes</h3>
+		<p>Example</p>
+		<p data-height="300" data-theme-id="20230" data-slug-hash="NrbNba" data-default-tab="html,result" data-user="webdesigncourse" data-embed-version="2" data-pen-title="link_pseudo_clases" class="codepen">See the Pen <a href="http://codepen.io/webdesigncourse/pen/NrbNba/">link_pseudo_clases</a> by Iva Popova (<a href="http://codepen.io/webdesigncourse">@webdesigncourse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+	</section>
+	<section><h3><a href="http://www.w3schools.com/cssref/sel_nth-child.asp">:nth-child(x)</a></h3>
+		<dl class="fa">
+			<dt>x може да бъде число, запазена дума или формула: <span class="code">an+b</span></dt>
+			<dt>Когато x е число, се селектира <span class="note">елемент</span>, който e x-то дете, <span class="note">без значение на неговия тип</span>.</dt>
+			<dt>Индексът на децата започва от 1</dt>
+			<dt>Пример:</dt>
+			<pre><code rel="CSS">
+				/* селектира първия параграф в даден елемент */
+				p:nth-child(1){
+					color: red;
+				}
+				/* селектира всички нечетни параграфи */
+				p:nth-child(2n+1){
+					color: green;
+				}
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3><a href="http://www.w3schools.com/cssref/sel_nth-child.asp">:nth-child(an+b)</a></h3>
+		<dl class="fa">
+			<dt>Когато имаме <code>nth-child(an+b)</code>, <span class="note code">n</span> е брояч, който започва от нула и се увеличава с 1, автоматично</dt>
+			<dt><span class="note code">a</span> и <span class="note code">b</span> са числа, които се задават от нас.</dt>
+			<dt>Ако <code>an+b < 0</code>, няма да се селектира нито един елемент (няма елемент с индекс -1, например)</dt>
+			<dt>Но е възможно да имаме минус пред <span class="note code">n</span>.Например:</dt>
+			<pre><code rel="CSS">
+				/* селектира първите 3 параграфа */
+				p:nth-child(-n+3){
+					color: magenta;
+				}
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3><a href="http://www.w3schools.com/cssref/sel_nth-child.asp">:nth-last-child(x)</a></h3>
+		<dl class="fa">
+			<dt>За да селектираме елементите в обратен ред (от последния към първия), се използва селектора  <a href="http://www.w3schools.com/cssref/sel_nth-last-child.asp">nth-last-child()</a></dt>
+			<dt>Например:</dt>
+			<pre><code rel="CSS">
+				/* селектира параграф, ако е последно дете */
+				p:nth-last-child(1){
+					color: magenta;
+				}
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3>Self-Learning Section</h3>
+		<p><a href="https://developer.mozilla.org/en/docs/Web/CSS/:nth-of-type">nth-of-type(an+b)</a> at MDN</p>
+	</section>
+	<section><h3>Пример 1: nth-child() vs. nth-of-type()</h3>
+		<p data-height="300" data-theme-id="20230" data-slug-hash="PpJggv" data-default-tab="html,result" data-user="webdesigncourse" data-embed-version="2" data-pen-title="nth-child() vs. nth-of-type()" class="codepen">See the Pen <a href="http://codepen.io/webdesigncourse/pen/PpJggv/">nth-child() vs. nth-of-type()</a> by Iva Popova (<a href="http://codepen.io/webdesigncourse">@webdesigncourse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+	</section>
+	<section><h3>Пример 2: nth-child() vs. nth-of-type()</h3>
+		<p data-height="300" data-theme-id="20230" data-slug-hash="eGWMXX" data-default-tab="html,result" data-user="webdesigncourse" data-embed-version="2" data-pen-title="nth-child() vs. nth-of-type() 2" class="codepen">See the Pen <a href="https://codepen.io/webdesigncourse/pen/eGWMXX/">nth-child() vs. nth-of-type() 2</a> by Iva Popova (<a href="https://codepen.io/webdesigncourse">@webdesigncourse</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section><h3>Често срещани проблеми: <strong>nth-child</strong></h3>
+		<iframe  src="https://www.youtube.com/embed/Lm5-EwZVtxg?start=621&end=636&rel=0&autoplay=0" frameborder="0" allowfullscreen style="width: 100%; height: 70vh"></iframe>
+	</section>
+	<section><h3>:checked</h3>
+		<dl class="fa">
+			<dt>Селектира <span class="note">radio, checkbox или option елемент</span>, когато елемента е избран от потребителя.</dt>
+			<dt>Пример:</dt>
+			<pre><code rel="CSS">
+				/* селектира всички <input type="radio"> елементи, когато те са маркирани от потребителя */
+				input[type="radio"]:checked{
+					width: 50px;
+					height: 50px;
+				}
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3>:checked</h3>
+		<p>Намира приложение за направата на "hamburger menu" без JavaScript</p>
+		<p data-height="300" data-theme-id="20230" data-slug-hash="GrBEEN" data-default-tab="css,result" data-user="webdesigncourse" data-embed-version="2" data-pen-title="GrBEEN" class="codepen">See the Pen <a href="http://codepen.io/webdesigncourse/pen/GrBEEN/">GrBEEN</a> by Iva Popova (<a href="http://codepen.io/webdesigncourse">@webdesigncourse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+	</section>
+	<section><h3>Полезни ресурси:</h3>
+		<dl class="fa">
+			<dt><a href="http://www.w3schools.com/Css/css_pseudo_classes.asp">w3schools - CSS Pseudo-classes</a></dt>
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Dev Mozilla.org - Pseudo-classes</a></dt>
+		</dl>
+	</section>
 </section>
 
 <section><h2>Селектори за псевдо-елементи</h2>
-    <section><h3></h3>
-        <dl class="fa">
-            <dt><a href="http://www.w3schools.com/CSSref/sel_firstletter.asp">::first­-letter</a></dt>
-            <dt><a href="http://www.w3schools.com/CSSref/sel_firstline.asp">::first­-line</a></dt>
-            <dt><a href="http://www.w3schools.com/CSSref/sel_before.asp">::before</a></dt>
-            <dt><a href="http://www.w3schools.com/CSSref/sel_after.asp">::after</a></dt>
-        </dl>
-    </section>
-    <section><h3>Приложение на before/after + counter</h3>
-        <p>Пример за float clearfix: <a href="https://css-tricks.com/all-about-floats/#article-header-id-4">CSS-Tricks: Techniques for Clearing Floats</a></p>
-    </section>
-    <section><h3>Приложение на before/after + counter</h3>
-        <p>Пример за автоматично номериране на елементите на вложен списък</p>
-        <p class="note">Примера се счита като тема за напреднали!!!</p>
-        <iframe height='300' scrolling='no' src='http://codepen.io/webdesigncourse/embed/QjXgyK/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/QjXgyK/'>Auto-number sublists items</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
-    </section>
+	<section><h3></h3>
+		<dl class="fa">
+			<dt><a href="http://www.w3schools.com/CSSref/sel_firstletter.asp">::first­-letter</a></dt>
+			<dt><a href="http://www.w3schools.com/CSSref/sel_firstline.asp">::first­-line</a></dt>
+			<dt><a href="http://www.w3schools.com/CSSref/sel_before.asp">::before</a></dt>
+			<dt><a href="http://www.w3schools.com/CSSref/sel_after.asp">::after</a></dt>
+		</dl>
+	</section>
+	<section><h3>Приложение на before/after + counter</h3>
+		<p>Пример за float clearfix: <a href="https://css-tricks.com/all-about-floats/#article-header-id-4">CSS-Tricks: Techniques for Clearing Floats</a></p>
+	</section>
+	<section><h3>Приложение на before/after + counter</h3>
+		<p>Пример за автоматично номериране на елементите на вложен списък</p>
+		<p class="note">Примера се счита като тема за напреднали!!!</p>
+		<iframe height='300' scrolling='no' src='http://codepen.io/webdesigncourse/embed/QjXgyK/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/QjXgyK/'>Auto-number sublists items</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+	</section>
+</section>
+
+<section><h2>Избрани видеа върху темата</h2>
+	<section>
+		<dl class="fa">
+		<dt><a href="https://www.youtube.com/watch?v=oh2JLo2yxCM">CSS Basics (Part5) — Advanced Selectors</a><span> by <a href="https://www.youtube.com/user/DevTipsForDesigners/featured">DevTips</a></span>
+			<iframe  src="https://www.youtube.com/embed/oh2JLo2yxCM" frameborder="0" allowfullscreen style="width: 100%;"></iframe>
+		</dt>
+	</dl>
+	</section>
 </section>
 
 
 <section class="disclaimer" data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
-     <p>These slides are based on</p>
-     <p>customised version of </p>
-     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
-     <p>framework</p>
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
 </section>
 
 <!--
@@ -290,46 +307,46 @@
 ##################### SLIDES END   #####################
 ########################################################
 -->
-        </div>
-    </div>
-    <!-- Custom processing -->
-    <script src="/ProgressBG-Front-End-Dev/outfit/js/slides.js"></script>
-    <!-- external scripts -->
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-    <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
-    <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
-    <!-- init reveal -->
-    <script>
-        // Full list of configuration options available at:
-        // https://github.com/hakimel/reveal.js#configuration
-        var highlightjsTabSize = '  ';
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            slideNumber: 'c/t',
-            keyboard: true,
-            history: true,
-            center: true,
-            // width: '100%',
-            // height: '100%',
-            // slide transition
-            transition: 'concave', // none/fade/slide/convex/concave/zoom
-            // Factor of the display size that should remain empty around the content
-            margin: 0.1,
-            // shift+maous click to zoom in/out element
-            zoomKey: 'ctrl',
-            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            // transition: Reveal.getQueryHash().transition || 'default'
-            // Optional reveal.js plugins
-            dependencies: [
-                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
-                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
-                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
-            ]
-        });
-    </script>
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="/ProgressBG-Front-End-Dev/outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+	<script src="/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
+	<script src="/ProgressBG-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			// width: '100%',
+			// height: '100%',
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+			]
+		});
+	</script>
 </body>
 </html>
