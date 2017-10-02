@@ -7,4 +7,5 @@
 
 
 *.sublime-workspace
-!*.sublime-project
+*.sublime-project
+!gh-pages.sublime-project
