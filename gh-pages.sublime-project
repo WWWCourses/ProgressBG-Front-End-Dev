@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "."
+		},
+		{
+			"path": "pages/labs"
 		}
 	],
 	"settings":

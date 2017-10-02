@@ -1,0 +1,180 @@
+-<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Клиент-Сървър комуникация. Основи на HTTP. Работа с Уеб хостинг.</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="/ProgressBG-Front-End-Dev/lib/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- custom -->
+	<link rel="stylesheet" href="/ProgressBG-Front-End-Dev/outfit/css/reveal.js.css">
+	<base target="_blank">
+	<style type="text/css">
+		.html_block{
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.html_block div{
+			width: 80%;
+			padding: 1em;
+			border: 5px solid lime;
+			overflow: none;
+		}
+		.html_block p{
+			color: #000;
+			text-align: left;
+		}
+		.html_block .parent{
+			background: #cc3030; /*red*/
+			border: 5px solid #333;
+		}
+		.html_block .child{
+			background: #3030aa; /*green*/
+		}
+		#purple{
+			color: purple;
+		}
+	</style>
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<a class="home_link" href="/ProgressBG-Front-End-Dev/pages/agenda/beginners.html#CSS_Selectors_1" target="_top"><i class="fa fa-home"></i></a>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Клиент-Сървър комуникация. Основи на HTTP. </h1><h1>Работа с Уеб хостинг.</h1></section>
+<section data-transition="zoom">
+	<div class="copyright">
+		<div class="note">
+			<p>Създаден за</p>
+		</div>
+		<div class="company">
+			<a href="http://progressbg.net/kurs-po-web-design/">
+			<img style="height:80%" src="/ProgressBG-Front-End-Dev/outfit/images/logos/ProgressBG_logo_529_127.png">
+			</a>
+		</div>
+		<div class="author">
+			<span>Iva E. Popova, 2016-2017,</span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</div>
+</section>
+
+<section><section><h2>Преглед на развитието на WWW и технологиите зад нея</h2></section>
+	<section>
+		<dl class="fa">
+			<dt><abbr>WWW</abbr><dfn id="WWW"><span>World</span><span>Wide</span><span>Web</span>(Световна глобална мрежа)</dfn></dt>
+			<dt>WWW <span class="bold">&#8800;</span> Internet</dt>
+			<dt>Създаване</dt>
+			<dd>1989, CERN - <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Тим Бърнърс-Лий</a> (TimBL)</dd>
+		</dl>
+	</section>
+</section>
+
+<section><section><h2>Основни понятия в WWW</h2></section>
+	<section><h3>Уеб ресурс</h3>
+		<dl class="fa">
+			<dt>в класическия контекст, това е файл ( разположен на Уеб сървър ) съдържащ текст, мултимедия или софтуерен компонент.</dt>
+		</dl>
+	</section>
+	<section><h3>URL</h3>
+		<dl class="fa">
+			<dt><abbr>URL</abbr><dfn id="URL"><span>Uniform</span><span>Resource</span><span>Locator</span></dfn></dt>
+			<dd>по-често наричан Уеб адрес</dd>
+			<dd>еднозначно локализира даден ресурс в Уеб пространството, както  метода за неговото получаване</dd>
+		</dl>
+	</section>
+	<section><h3>URL</h3>
+		<div><img src="images/URL_Explained.png"></div>
+		<dl class="fa fs-small">
+			<dt>протокол:</dt>
+			<dd>Указва протокола (HTTP, FTP и пр.) за достъп до ресурса</dd>
+			<dt>домейн:</dt>
+			<dd>Идентификатор на машината (host), на която е поместен ресурса. Може да бъде и IP адрес.</dd>
+			<dt>Идентификатор на ресурса:</dt>
+			<dd>релативен път до файла (ресурса) на сървъра. Съвременните сървъри могат да променят точният път до ресурса със зададеният в URL.</dd>
+		</dl>
+	</section>
+</section>
+
+
+<section class="disclaimer" data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="/ProgressBG-Front-End-Dev/outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
+	<script src="/ProgressBG-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			// width: '100%',
+			// height: '100%',
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>
