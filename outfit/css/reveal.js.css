@@ -67,6 +67,12 @@
   box-shadow: 0 0 5em 5em rgb(0, 43, 64);
   /*width: 100vmax;*/
 }
+.reveal section div.semioticWrapper img{
+	height: 2em;
+	margin: 1em 0 0 .5em;
+	border-radius: 10%;
+	/*box-shadow: none;*/
+}
 .reveal section dl.fa>dt{
   font-weight: normal;
   margin: .5em 0 0 0;
