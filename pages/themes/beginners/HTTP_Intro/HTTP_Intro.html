@@ -67,7 +67,7 @@
 			<dt>Връзка между Клиента и Сървъра</dt>
 			<dd>Клиента се свързва със Сървъра, който може да е разположен на същата машина или на отдалечена такава, свързана с Клиента в мрежа (ethernet, internet).</dd>
 		</dl>
-	</section>
+	</section>    
 </section>
 <section><section><h2>Клиент-Сървър Комуникация в WWW</h2></section>
 	<section><h3>Обобщен модел</h3>
@@ -76,6 +76,47 @@
 			<dt>Клиента подава заявка към сървъра за даден ресурс.</dt>
 		</dl> -->
 	</section>
+    <section><h3>HTTP Request - live demo</h3>
+        <dl class="fa">
+            <dt>Request Message Format</dt>
+            <dt>Request Methods</dt>
+            <dd>GET</dd>
+            <dd>POST</dd>
+        </dl>        
+    </section>
+    <section><h3>HTTP Response - live demo</h3>
+        <dl class="fa">
+            <dt>Response Message Format</dt>
+            <dt>Response status codes</dt>
+            <dd>2xx - Success</dd>
+            <dd>4xx - Client errors</dd>
+            <dd>5xx - Server errors</dd>
+        </dl>
+    </section>    
+    <section><h3>Уеб ресурс</h3>
+        <dl class="fa">
+            <dt>в класическия контекст, това е файл ( разположен на Уеб сървър ) съдържащ текст, мултимедия или софтуерен компонент.</dt>
+        </dl>
+    </section>
+    <section><h3>URL</h3>
+        <dl class="fa">
+            <dt><abbr>URL</abbr><dfn id="URL"><span>Uniform</span><span>Resource</span><span>Locator</span></dfn></dt>
+            <dd>по-често наричан Уеб адрес</dd>
+            <dd>еднозначно локализира даден ресурс в Уеб пространството, както и метода за неговото получаване.</dd>
+        </dl>
+    </section>
+    <section><h3>URL</h3>
+        <div><img src="images/URL_Explained.png"></div>
+        <dl class="fa fs-small">
+            <dt>протокол:</dt>
+            <dd>Указва протокола (HTTP, FTP и пр.) за достъп до ресурса</dd>
+            <dt>домейн:</dt>
+            <dd>Идентификатор на машината (host), на която е поместен ресурса. Еднозначно се съпоставя на даден IP адрес посредством DNS.</dd>
+            <dt>Идентификатор на ресурса:</dt>
+            <dd>релативен път до файла (ресурса) на сървъра. Съвременните сървъри могат да променят точният път до ресурса със зададеният в URL.</dd>
+        </dl>
+    </section>
+    <section><h3>DNS</h3></section>
 </section>
 <!-- <section><section><h2></h2></section></section>
 <section><section><h2></h2></section></section> -->
@@ -87,32 +128,6 @@
 			<dt>WWW <span class="bold">&#8800;</span> Internet</dt>
 			<dt>Създаване</dt>
 			<dd>1989, CERN - <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Тим Бърнърс-Лий</a> (TimBL)</dd>
-		</dl>
-	</section>
-</section>
-
-<section><section><h2>Основни понятия в WWW</h2></section>
-	<section><h3>Уеб ресурс</h3>
-		<dl class="fa">
-			<dt>в класическия контекст, това е файл ( разположен на Уеб сървър ) съдържащ текст, мултимедия или софтуерен компонент.</dt>
-		</dl>
-	</section>
-	<section><h3>URL</h3>
-		<dl class="fa">
-			<dt><abbr>URL</abbr><dfn id="URL"><span>Uniform</span><span>Resource</span><span>Locator</span></dfn></dt>
-			<dd>по-често наричан Уеб адрес</dd>
-			<dd>еднозначно локализира даден ресурс в Уеб пространството, както  метода за неговото получаване</dd>
-		</dl>
-	</section>
-	<section><h3>URL</h3>
-		<div><img src="images/URL_Explained.png"></div>
-		<dl class="fa fs-small">
-			<dt>протокол:</dt>
-			<dd>Указва протокола (HTTP, FTP и пр.) за достъп до ресурса</dd>
-			<dt>домейн:</dt>
-			<dd>Идентификатор на машината (host), на която е поместен ресурса. Може да бъде и IP адрес.</dd>
-			<dt>Идентификатор на ресурса:</dt>
-			<dd>релативен път до файла (ресурса) на сървъра. Съвременните сървъри могат да променят точният път до ресурса със зададеният в URL.</dd>
 		</dl>
 	</section>
 </section>
