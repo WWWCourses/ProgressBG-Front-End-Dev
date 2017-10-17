@@ -138,11 +138,23 @@
         </dl>
     </section>
     <section><h4>Резултат</h4>
-        <iframe class="resultFrame" src="http://www.bgmaps.com/link/map/A2EF943CB12F1A1C9D804518C2BBBDC7"></iframe>
+        <iframe class="resultFrame" src="http://www.bgmaps.com/link/map/51902F222AFCB87E2EECFAD06BD01AB4"></iframe>        
     </section>
 </section>
 <section><h4>Вмъкване на Pen от codepen.io</h4>
-    <a href="https://blog.codepen.io/documentation/features/embedded-pens/">Embedded Pens - CodePen Blog</a>
+    <section>
+        <ol>
+                <li>Влезте във страницата на избрания Pen.</li>
+                <li>В долния ляв край на страницата има бутон 'Embed', който натискате.</li>
+                <li>За да ползвате генериран от codepen.io <code><b>iframe</b></code> елемент, изберете таба <pre class="inline"><code class="html">iframe</code></pre></li>
+                <li>Копирате кодът във полето и го поставяте на желаното от вас място в страницата.</li>
+                <li>Уверете се, че за всички URL в този код, имате зададен явно протокол: '<code>https://</code>'.</li>
+            </ol>
+    </section>
+    <section>
+        <p>Повече информация за вграждане на Pens   : </p>
+        <a href="https://blog.codepen.io/documentation/features/embedded-pens/">Embedded Pens - CodePen Blog</a>
+    </section>
 </section>
 <section><h4>Вмъкване на YouTube Видео</h4>
     <section>
@@ -153,14 +165,39 @@
             <dt class="note">За да има възможност видеото да се гледа на цял екран, трябва да присъства атрибута allowfullscreen</dt>
         </dl>
     </section>
-    <section><h4>Резултат</h4>
-        <iframe id="youtubeFrame"
+    <section><h4>Пример</h4>
+        <pre><code rel="HTML" class="html">
+            <iframe id="youtubeFrame"
                 class="resultFrame"
                 src="https://www.youtube.com/embed/7S0X0OWMu_k?enablejsapi=1&autoplay=1&controls=1&showinfo=0"
                 allowfullscreen
                 onload="onYouTubeIframeAPIReady(this)"></iframe>
+        </code></pre>
+        <iframe id="youtubeFrame"
+                class="resultFrame"
+                src="https://www.youtube.com/embed/7S0X0OWMu_k?enablejsapi=1&autoplay=1&controls=1&showinfo=0"
+                allowfullscreen
+                onload="onYouTubeIframeAPIReady(this)"></iframe>        
+    </section>
+    <section>
+        <p>Повече настройки за това как да се изобрази YouTube видео: <a href="https://developers.google.com/youtube/player_parameters">YouTube Embedded Players and Player Parameters</a></p>
+        <p></p>
     </section>
 </section>
+<section id="HW"><h2>Упражнения</h2>
+        <dl class="fa">
+                <dt><a href="homeworks/SelectedCodepens.pdf">SelectedCodepens</a></dt>              
+        </dl>
+</section>
+
+
+<section class="disclaimer" data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
+     <p>These slides are based on</p>
+     <p>customised version of </p>
+     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+     <p>framework</p>
+</section>
+
 <script src="https://www.youtube.com/iframe_api"></script>
 <script type="text/javascript">
     function onYouTubeIframeAPIReady(node) {
@@ -178,12 +215,7 @@
         });
       }
 </script>
-<section class="disclaimer" data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
-     <p>These slides are based on</p>
-     <p>customised version of </p>
-     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
-     <p>framework</p>
-</section>
+
 <!--
 ########################################################
 ##################### SLIDES END   #####################
