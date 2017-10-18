@@ -327,8 +327,8 @@ section.copyright>.license{
 .right{
   display: inline-block;
   float: right;
-  padding: 1em 0 !important;
-  line-height:2.5em !important;
+  /*padding: 0em 0 !important;*/
+  /*line-height:0em !important;*/
   text-align: left;
 }
 .half{
