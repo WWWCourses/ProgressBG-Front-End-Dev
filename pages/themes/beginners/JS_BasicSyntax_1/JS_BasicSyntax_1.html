@@ -66,7 +66,7 @@
 	</div>
 </section>
 
-<section><h2>Структура на програмата</h2>
+<section id="ProgramStrucutre"><h2>Структура на програмата</h2>
 	<section>
 		<dl class="fa">
 			<dt>Една JavaScript програма е последователност от инструкции (изрази, statements).</dt>
@@ -116,7 +116,7 @@
 	</section>
 </section>
 
-<section><h2>Променливи (Variables)</h2>
+<section id="Variables"><h2>Променливи (Variables)</h2>
 	<section><h3>Какво е променлива в JavaScript?</h3>
 		<dl class="fa">
 			<dt>Променливата е "име" на част от паметта (RAM), в която съхраняваме данни.</dt>
@@ -137,10 +137,9 @@
 			x = 10;     // дефиниране на x
 			var y;      // деклариране на променливата y
 			var a,b;    // деклариране на променливите a и b
-			var x = 10; // дефиниране на променливата x - едновременно
-				    // декларираме и инициализираме x със стойността 10
+			var x = 10; // дефиниране на променливата x - едновременно декларираме и инициализираме x със стойността 10
 		</code></pre>
-		<p class="advanced"><i class="fa fa-graduation-cap"></i>В ECMAScript 6, се въвежда и нова дума за деклариране на променливи: <code class="note">let</code> чрез която се задава област на видимост на променливата в рамките на блок.</p>
+		<p class="advanced"></i>В ECMAScript 6, се въвеждат и нови думи за деклариране на променливи: <code class="note">let</code> и <code class="note">const</code>, които ще разгледаме след като изясним понятията "scope" и "hoisting".</p>
 	</section>
 	<section><h3>Деклариране/Дефиниране</h3>
 		<p>В JavaScript, променлива може да се създаде и без указване на <code>var</code>. Например:</p>
@@ -148,15 +147,15 @@
 			x = 10;
 			console.log(x); // 10 (Error in strict mode)
 		</code></pre>
-		<p class="note">Това се счита за изключително лоша практика (в темата за scope, ще разгледаме защо), и в новите версии на езика (от ЕС5.1) при използването на strict mode, това би довело до грешка!</p>
+		<p class="note">Това се счита за изключително лоша практика, тъй като се създава "<strong>глобална променлива</strong>" (в темата за <a href="/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Functions/JS_Functions.html#Scope">scope</a>, ще разгледаме защо), и в новите версии на езика (от ЕС5.1) при използването на strict mode, това би <strong>довело до грешка</strong>!</p>
 	</section>
-	<section>
+	<section><h3>Къде и как се създават променливите</h3>
 		<pre><code rel="JS">
 			var x = 1;
 			var y = 2;
 			var z;
 		</code></pre>
-		<img src="images/variables_in_RAM.png">
+		<a href="images/variables_in_RAM.png"><img src="images/variables_in_RAM.png"></a>
 	</section>
 	<section><h3>Правила за имена на променливи</h3>
 		<dl class="fa">
@@ -204,7 +203,7 @@
 	</section>
 </section>
 
-<section><h2>Прости типове данни (Primitive types)</h2>
+<section id="PrimitiveTypes"><h2>Прости типове данни (Primitive types)</h2>
 	<section><h3>Число (number)</h3>
 		<pre><code rel="JS">
 			// цяло число, положително
@@ -249,11 +248,11 @@
 	</section>
 </section>
 
-<section><h2>Коментари</h2>
+<section id="Comments"><h2>Коментари</h2>
 	<a href="https://www.w3schools.com/js/js_comments.asp">JavaScript Comments</a>
 </section>
 
-<section><h2>Оператори</h2>
+<section id="Operators"><h2>Оператори</h2>
 	<section>
 		<p>или какво можем да правим с променливите?</p>
 		<a href="http://www.w3schools.com/jsref/jsref_operators.asp">http://www.w3schools.com/jsref/jsref_operators.asp</a>
@@ -385,7 +384,7 @@
 	</section>
 </section>
 
-<section><h2>Условни изрази (Conditional statements)</h2>
+<section id="ConditionalStatements"><h2>Условни изрази (Conditional statements)</h2>
 	<section><h3><code>if</code> statement</h3>
 		<pre><code rel="Syntax">
 			if ( условие ) {
@@ -436,9 +435,23 @@
 			}
 		</code></pre>
 	</section>
+	<section><h3 class="advanced">Условен оператор (Conditional (ternary) Operator)</h3>
+		<pre><code rel="Syntax" class="javascript">
+			Условие ? Израз1 : Израз2 
+		</code></pre>
+		<dl class="fa">
+			<dt>ако Условие е <span class="note">истина</span> (израз, който се изчислява до true) оператора връща стойността на <span class="note">Израз1</span></dt>
+			<dt>ако Условие е <span class="note">лъжа</span> (израз, който се изчислява до false) оператора връща стойността на <span class="note">Израз2</span></dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			var x = 42;
+			var numType = x%2==0 ? "even" : "odd";
+			console.log(numType); // "even"
+		</code></pre>
+	</section>
 </section>
 
-<section id="cycle_operators"><h2>Цикли (Loops/Iteration Statements)</h2>
+<section id="CycleOperators"><h2>Цикли (Loops/Iteration Statements)</h2>
 	<section><h3><code>for</code> Statement: синтаксис</h3>
 		<pre><code rel="Syntax">
 			for (init; condition; increment) {
@@ -526,7 +539,31 @@
 	</section>
 </section>
 
-<section><h2>Примери и Задачи</h2>
+<section id="StatementsVsExpressions"><h2>Statements vs. Expressions</h2>
+	<section>
+		<p>В JavaScript се прави разлика между <span class="note">Statement</span> и <span class="note">Expression</span></p>
+		<dl class="fa">
+			<dt><span class="note">Expression</span> е израз, който <span class="note">може да бъде изчислен до конкретна стойност</span> от някой от примитивните типове. Expression може да се сложи на всяко едно място, където бихме могли да зададем стойност.
+				<pre><code id="test" rel="JS" class="js">
+					2+3; 		// 2+3 е Expresion
+					x = 5; 		// x = 5 e Expresion
+					console.log(x**6-x) // x**6-x e Expresion
+					x = y = 5;	// тук имаме 2 Expresions: (y = 5) и (x = 5)					
+				</code></pre>
+			</dt>			
+			<dt><span class="note">Statement</span> е израз, който извършва действие, но <span class="note">не се изчислява до стойност</span>! Циклите и <code>if()</code> са пример за Statements.
+				<pre><code rel="JS" class="js">
+					if(1){return 0};  // if Statement
+					while(x = 2){console.log(x)}; // while Statement 
+					var x; // variable declaration Statement
+				</code></pre>
+			</dt>
+		</dl>
+	</section>
+	<section></section>
+</section>
+
+<section id="Examples"><h2>Примери и Задачи</h2>
 	<a href="http://codepen.io/collection/XOEQay/">codepen колекция с примери и задачи</a>
 </section>
 
