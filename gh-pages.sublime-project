@@ -8,7 +8,8 @@
 	"settings":
 	{
 		"dictionary": "Packages/Language - Bulgarian/OldBulgarian.dic",
-		"spell_check": true
+		"spell_check": true,
+		"show_definitions": false,
 	},
 	"sublime-view-in-browser":
 	{
