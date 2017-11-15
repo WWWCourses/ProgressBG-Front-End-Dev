@@ -73,6 +73,15 @@
 	border-radius: 10%;
 	/*box-shadow: none;*/
 }
+.reveal section .resourceCredit{
+   /* position: absolute;
+    bottom: 2em;
+    left: -3em;
+    transform: rotateY(-20deg);*/
+    font-size: .6em;
+    opacity: .5;
+    color: #999;
+} 
 .reveal section dl.fa>dt{
   font-weight: normal;
   margin: .5em 0 0 0;
