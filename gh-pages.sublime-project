@@ -10,9 +10,9 @@
 		"dictionary": "Packages/Language - Bulgarian/OldBulgarian.dic",
 		"spell_check": true,
 		"show_definitions": false,
-		"color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
-		"font_size": 13,		
-		"theme": "iep.predawn.sublime-theme"
+		// "color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
+		// "font_size": 13,		
+		// "theme": "iep.predawn.sublime-theme"
 	},
 	"sublime-view-in-browser":
 	{
