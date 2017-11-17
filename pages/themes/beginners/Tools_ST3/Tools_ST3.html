@@ -80,7 +80,7 @@
 	<dl class="fa">
 		<dt>Мултиплатформен: <span class="note">Linux</span>,<span class="note"> Windows</span>,<span class="note"> Mac OS X</span>.</dt>
 		<dt>Гъвкав, мощен и <span class="note">изключително бърз</span>!</dt>
-		<dt>Може да се използва за обучение безплатно, без ограничения във функционалността и времето.</dt>
+		<dt>Може да се използва за обучение безплатно, <strong>без ограничения във функционалността и времето</strong>.</dt>
 		<dt>Изчерпателна документация: <a href="http://docs.sublimetext.info/en/latest/">Sublime Text Unofficial Documentation</a>.</dt>
 		<dt>Многобройна общност, създаваща непрекъснато множество полезни добавки за най-новите технологии: <a href="https://packagecontrol.io/">Package Control - The Sublime Text package manager</a>.</dt>
 		<dt>Python-базиран, с добре разработен и документиран API позволяващ да добавяте нова функционалност.</dt>
@@ -92,32 +92,79 @@
 	<p>Повече информация: <a href="http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/getting_started/install.html">ST3 installation notes</a></p>
 </section>
 
+
+<section><h2>Работа с редактора</h2>
+	<section><h3>Основни панели</h3>
+		<a href="images/ST3MainPannels.png"><img src="images/ST3MainPannels.png"></a>
+	</section>
+	<section><h3>Menu</h3>
+		<dl class="fa">
+			<dt>Основно меню на Sublime Text 3</dt>
+			<dd>Повечето от опциите в менюто са достъпни и чрез Командната Палитра, което гарантира по-бърз достъп.</dd>
+		</dl>
+	</section>
+	<section><h3>The sidebar</h3>
+		<dl class="fa">
+			<dt>Позволява елементарни операции с директории/файлове. Внимавайте с <span class="note"><code>Delete Folder</code>, което изтрива безвъзвратно директорията от хард диска.</span></dt>
+			<dt>Показване/скриване</dt>
+			<dd>Menu->View->Side Bar->Show/Hide Side Bar</dd>
+			<dt>Open Files - списък с отворените файлове</dt>
+			<dd>Menu->View->Side Bar->Show/Hide Open Files</dd>
+			<dt>За повече възможности на Side Bar: <a href="https://packagecontrol.io/packages/SideBarEnhancements">Side​Bar​Enhancements Package</a></dt>
+		</dl>				
+	</section>
+	<section><h3>The Editor Area</h3>
+		<dl class="fa">
+			<dt>Мястото, където пишем код : )</dt>
+			<dt>Оцветяването се определя от <code>Color Scheme</code></dt>
+			<dt>Color Scheme се променя чрез:</dt>
+			<dd>Preferences->Color Scheme...</dd>
+			<dd><kbd>CTRL+SHIFT+P</kbd>->UI: Select Color Scheme</dd>
+			<dt>Могат да се инсталират допълнително Color Scheme, по същия начин както Пакетите</dt>
+		</dl>
+	</section>	
+	<section><h3>Minimap</h3>
+		<dl class="fa">
+			<dt>Показва карта на кода, в която се запазва текущото оцветяване на кода.</dt>
+			<dt>Изключително полезна за бързо навигиране в по-големи файлове.</dt>
+			<dt>Скриване/Показване</dt>
+			<dd>Menu->View->Show/Hide Minimap</dd>
+			<dd>CTRL+SHIFT+P => Toggle Minimap</dd>
+		</dl>
+	</section>
+	<section><h3>Status Bar</h3>
+		<dl class="fa">
+			<dt>Лента със статуса :)</dt>
+			<dt>Показва резултата от операциите, които се извършват. Като инсталиране на пакети и пр.</dt>
+		</dl>
+	</section>	
+</section>
+
+<!-- <section><h2>Работа с директории и папки</h2>
+	<section><h3></h3></section>
+</section> -->
+
 <section><h2>Настройки</h2>
-	<section><h3>Глобални настройки</h3>
+	<section><h3>Глобални настройки</h3>		
 		<dl class="fa">
 			<dt>Всички настройки в ST3, се записват в <a href="https://bg.wikipedia.org/wiki/JSON">JSON формат</a>. Използват се 2 файла, които са достъпни от:</dt>
 			<dd>Sublime Text 3 => Preferences => Settings</dd>
-
 			<dt>Файлът, в който записваме промените е:</dt>
 			<dd><span class="note">Preferences.sublime-settings – User</span></dd>
 			<dd>Това гарантира, че настройките ни ще се запазят дори и след ъпдейт на Sublime</dd>
-		</dl>
-	</section>
-	<section><h3>Настройки за проект (<span class="note">advanced</span> )</h3>
-		<p>Sublime Text 3 => Project => Edit Project.</p>
-		<p>Структурата на файла е описана тук: <a href="https://www.sublimetext.com/docs/3/projects.html">Sublime Text 3 Documentation: Projects</a></p>
-	</section>
+			<dt>Голяма част (но не всички) от настройките на редактора са достъпни и от <code>Menu->Preferences</code>.</dt>
+			<dt>Настройките за Пакети са достъпни от: <br> <code>Preferences->Package Settings->"package"</code></dt>	
+		</dl>		
+	</section>	
 	<section><h3>Примерни потребителски настройки</h3>
 		<pre><code rel="JSON">
 			{
-				"color_scheme": "Packages/User/Solarized (Light) (SL).tmTheme",
 				"font_face": "Courier New",
 				"font_size": 11,
 				"draw_white_space": "all",
 				"rulers": [80],
 				"tab_size": 4,
-				"translate_tabs_to_spaces": true,
-				"theme": "Soda Light 3.sublime­theme",
+				"translate_tabs_to_spaces": true,				
 				"show_encoding": true,
 			}
 		</code></pre>
@@ -150,6 +197,21 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;{ "keys": ["ctrl+shift+down"], "command": "select_lines", "args": {"forward": true} },
 			]
 		</code></pre>
+	</section>
+</section>
+
+<section><h2 class="advanced">Работа с проекти (<span class="note">advanced</span> )</h2>
+	<section>
+		<dl class="fa">
+			<dt>Проекта капсулира и запазва файловете и директориите с които работите.</dt>
+			<dt>Голяма част, но не всички, от настройките на Sublime могат да се приложат отделно за всеки отделен проект. Например, в проект А можем да работим с цветова схема, различна от тази на останалите проекти.</dt>
+			<dt>Работата с проекти драстично ускорява работата върху множество проекти</dt>
+			<dt>Подробна информация за работа с проекти: <a href="http://docs.sublimetext.info/en/latest/file_management/projects.html">Projects - </a></dt>
+		</dl>
+	</section>
+	<section><h3>Настройки за проект</h3>
+		<p>Sublime Text 3 => Project => Edit Project.</p>
+		<p>Структурата на файла е описана тук: <a href="https://www.sublimetext.com/docs/3/projects.html">Sublime Text 3 Documentation: Projects</a></p>
 	</section>
 </section>
 
