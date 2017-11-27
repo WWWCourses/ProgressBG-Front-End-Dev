@@ -1,0 +1,32 @@
+header{
+	height: 10vh;
+	padding: 1em 0;
+	background: #000;
+	color: #FFF;
+	box-sizing: border-box;	
+}
+main{
+
+}
+section{	
+	box-sizing: border-box;
+}
+section.paralax{
+	height: 70vh;
+	background-image: url('../images/phoenix-1995285_1920.jpg');
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	box-sizing: border-box;
+}
+section.content{
+	height: 50vh;
+	background: orange;
+	box-sizing: border-box;
+}
+footer{
+	height: 20vh;
+	position: fixed;	
+	bottom: 0; left: 0; right: 0;
+	background: #FFF;
+	box-sizing: border-box;
+}

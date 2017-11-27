@@ -1,0 +1,27 @@
+footer ul{
+	text-align: center;
+	background: #000;
+}
+footer li{
+	display: inline-block;
+	width: 8em;
+	margin-left: -0.25em;
+	padding: 1em 0;	
+	color: #FFF;	 
+}
+
+.bottom{
+	padding: 1em 0;
+	text-align: center;
+	color: #AAA;
+	border: 1px solid #333;
+}
+
+.left, .right{
+	width: 50%;
+	height: 30%;
+	border: 5px solid red;
+}
+.right{
+	border-color: green;
+}
