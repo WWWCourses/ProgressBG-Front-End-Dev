@@ -92,7 +92,7 @@
 			<dd><span class="code">:first-child</span> определя елемент, само когато е първият елемент в родителя си.</dd>
 		</dl>
 	</section>
-	<section>
+	<section><h3>Употреба</h3>
 		<dl class="fa">
 			<dt>Чрез селекторите за псевдо-класове можем да селектираме елемент според неговото състояние.</dt>
 			<dt>Общ синтаксис:</dt>
@@ -179,17 +179,18 @@
 			</code></pre>
 		</dl>
 	</section>
-	<section><h3>Links Pseudo Classes</h3>
-		<p>Example</p>
+	<section><h3>Hyperlinks Pseudo Classes - Example</h3>		
 		<p data-height="300" data-theme-id="20230" data-slug-hash="NrbNba" data-default-tab="html,result" data-user="webdesigncourse" data-embed-version="2" data-pen-title="link_pseudo_clases" class="codepen">See the Pen <a href="http://codepen.io/webdesigncourse/pen/NrbNba/">link_pseudo_clases</a> by Iva Popova (<a href="http://codepen.io/webdesigncourse">@webdesigncourse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 	</section>
 	<section><h3><a href="http://www.w3schools.com/cssref/sel_nth-child.asp">:nth-child(x)</a></h3>
 		<dl class="fa">
 			<dt>x може да бъде число, запазена дума или формула: <span class="code">an+b</span></dt>
 			<dt>Когато x е число, се селектира <span class="note">елемент</span>, който e x-то дете, <span class="note">без значение на неговия тип</span>.</dt>
-			<dt>Индексът на децата започва от 1</dt>
-			<dt>Пример:</dt>
-			<pre><code rel="CSS">
+			<dt>Индексът на децата започва от 1</dt>					
+		</dl>
+	</section>
+	<section><h3>:nth-child(x) - example</h3>
+		<pre><code rel="CSS">
 				/* селектира първия параграф в даден елемент */
 				p:nth-child(1){
 					color: red;
@@ -199,7 +200,6 @@
 					color: green;
 				}
 			</code></pre>
-		</dl>
 	</section>
 	<section><h3><a href="http://www.w3schools.com/cssref/sel_nth-child.asp">:nth-child(an+b)</a></h3>
 		<dl class="fa">
@@ -266,18 +266,94 @@
 </section>
 
 <section><h2>Селектори за псевдо-елементи</h2>
-	<section><h3></h3>
+	<section><h3>Употреба</h3>
 		<dl class="fa">
-			<dt><a href="http://www.w3schools.com/CSSref/sel_firstletter.asp">::first­-letter</a></dt>
-			<dt><a href="http://www.w3schools.com/CSSref/sel_firstline.asp">::first­-line</a></dt>
-			<dt><a href="http://www.w3schools.com/CSSref/sel_before.asp">::before</a></dt>
-			<dt><a href="http://www.w3schools.com/CSSref/sel_after.asp">::after</a></dt>
+			<dt>Селектират <span class="note">част</span> от елемент.</dt>
+			<dd>Например <span class="code">първи ред</span> от параграф.</dd>
+			<dt>Чрез псевдо-елементи можем и да "вмъкваме" съдържание в началото или в края на даден елемент</dt>
 		</dl>
 	</section>
-	<section><h3>Приложение на before/after + counter</h3>
-		<p>Пример за float clearfix: <a href="https://css-tricks.com/all-about-floats/#article-header-id-4">CSS-Tricks: Techniques for Clearing Floats</a></p>
+	<section><h3>Общ синтаксис</h3>
+			<pre><code rel="Syntax" class="scss" data-noescape>
+				selector<b>::</b>pseudo­element {
+					property:value;
+					...
+				}
+			</code></pre>
+			<p class="note">В CSS3 разделителят за псевдо-елемент е <code>::</code> за да се отличава от псевдо-клас. В предишните версии на CSS се използва само <code>:</code> за разделител.</p>
 	</section>
-	<section><h3>Приложение на before/after + counter</h3>
+	<section><h3><a href="http://www.w3schools.com/CSSref/sel_firstletter.asp">::first­-letter</a></h3>
+		<dl class="fa">
+			<dt>Селектира само първата буква от съдържанието на дадения елемент</dt>
+			<pre><code rel="CSS" class="css">
+				p::first­-letter{
+					font-­size: 2em;
+					color: red;
+				}
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3><a href="http://www.w3schools.com/CSSref/sel_firstline.asp">::first­-line</a></h3>
+		<dl class="fa">
+			<dt>Селектира само първият ред от съдържанието на дадения елемент.</dt>
+			<pre><code rel="CSS" class="css">
+				p::first­-line{
+					font-­size: 2em;
+					color: red;
+				}
+			</code></pre>
+		</dl>
+		<p class="note">Размера на първия  ред се определя динамично от браузера, в зависимост от големината на текста и вюпорта.</p>
+	</section>
+	<section><h3><a href="http://www.w3schools.com/CSSref/sel_before.asp">::before</a></h3>
+		<dl class="fa">
+			<dt>Вмъква анонимен <a href="/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Box_Model/CSS_Box_Model.html#/replacedElements">заместван елемент </a> като <span class="note">първо дете</span> на селектирания елемент. </dt>
+			<dd>Съдържанието на вмъкнатият елемент се задава чрез свойството <code>content</code></dd>
+			<pre><code rel="CSS" class="css">
+				.myQuote::before{
+					content: '❝';
+					color: gray;
+				}
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3><a href="http://www.w3schools.com/CSSref/sel_after.asp">::after</a></h3>
+		<dl class="fa">
+			<dt>Вмъква анонимен <a href="/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Box_Model/CSS_Box_Model.html#/replacedElements">заместван елемент</a> като <span class="note">последно дете</span> на селектирания елемент. </dt>
+			<dd>Съдържанието на вмъкнатият елемент се задава чрез свойството <code>content</code></dd>
+			<pre><code rel="CSS" class="css">
+				.myQuote::after{
+					content: '❞';
+					color: gray;
+				}
+			</code></pre>
+		</dl>
+	</section>	
+	<section><h3>Повече за content свойството</h3>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content">content property on MDN</a>
+	</section>	
+	<section><h3>Примери  за content свойството</h3>
+		<pre><code rel="CSS" class="css">
+			.umbrella:before{
+				content: '\2602';   /*това е Unicode кода на символа: ☂ */
+				color: purple;
+			}
+		</code></pre>
+	</section>
+	<section><h3>Приложение на before/after за "изчистване" на float ефекта</h3>
+		<pre><code rel="CSS" class="css">
+			.floatWrapper::after{
+				display: block;
+				content: "";
+				clear: both;
+			}
+			</code></pre>
+		<p>Повече  за float clearfix: <a href="https://css-tricks.com/all-about-floats/#article-header-id-4">CSS-Tricks: Techniques for Clearing Floats</a></p>
+	</section>	
+	<section><h3>Още прмери за ::before/::after</h3>
+		<p><a href="http://krasimirtsonev.com/blog/article/CSS-before-and-after-pseudo-elements-in-practice">CSS: :before and :after pseudo elements in practice - Krasimir Tsonev</a></p>
+	</section>
+	<section><h3 class="advanced">Приложение на before/after + counter</h3>
 		<p>Пример за автоматично номериране на елементите на вложен списък</p>
 		<p class="note">Примера се счита като тема за напреднали!!!</p>
 		<iframe height='300' scrolling='no' src='http://codepen.io/webdesigncourse/embed/QjXgyK/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/QjXgyK/'>Auto-number sublists items</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
