@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>pseudoElements</title>
+    <style type="text/css">
+            .uniCloudWithThunder{
+                display: block;
+                margin: 0 auto;
+                width: 10em;
+            }
+    	.uniCloudWithThunder::after{
+    	       content: '\26C8'; /*Unicode Character 'THUNDER CLOUD AND RAIN' (U+26C8)*/                
+                     font-size: 10em;
+    	      color: #444; 
+                    text-shadow: 
+                            1px 1px 5px hsl(191,  57%, 36%),
+                            2px 2px 5px hsl(191,  57%, 46%),
+                            3px 3px 5px hsl(191,  57%, 56%),
+                            4px 4px 5px hsl(191,  57%, 66%),
+                            5px 5px 5px hsl(191,  57%, 76%);
+    	}
+    </style>
+</head>
+<body>
+	<i class="uniCloudWithThunder"></i>
+</body>
+</html>

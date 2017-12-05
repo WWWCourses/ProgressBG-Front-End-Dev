@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>z-index</title>
+    <style type="text/css">
+    	.wrapper{
+    		position: relative;
+    		width: 20em;
+    		height: 20em;
+    		background: gray;
+    		z-index: 1000;
+    	}
+    	.wrapper>div{
+    		position: relative;
+    		width: 50%;
+    		height: 50%;    		
+    	}
+    	.box1{
+    		background: green;
+    		z-index: 100;
+    	}
+    	.box2{
+    		background: blue;
+    		margin-top: -2em;
+    	}
+    </style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="box1"></div>
+		<div class="box2"></div>
+	</div>
+</body>
+</html>

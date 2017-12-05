@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS_Transition</title>
+    <style type="text/css">
+    	.boxAnime{
+    		width: 4em;
+    		height: 4em;  
+    		margin-left: 0em;  		
+    		background: red;
+    		border-radius: 100%;
+
+    		opacity: 1;
+
+    		/*transition-property: all;
+    		transition-duration: 4s;
+    		transition-timing-function: ease-in;*/
+
+    		/*transition: property duration timing-function delay*/    
+    		transition: all  4s ease-in;		
+
+    	}
+    	.boxAnime:active{    		
+    		margin-left: 20em;
+    		opacity: 0;
+    		width: 12em;
+    		height: 12em;    		
+    	}
+    </style>
+</head>
+<body>
+	<div class="boxAnime"></div>
+</body>
+</html>
