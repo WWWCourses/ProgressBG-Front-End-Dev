@@ -117,7 +117,7 @@
 		<dl class="fa">
 			<dt>За всеки цвят задаваме шестнадесетично число в диапазона: 00 - FF</dt>
 			<dt>Общо 6 шестнадесетични цифри</dt>
-			<dt>С две допълнителни цифри в края може да се зададе алфа нивото. </dt>
+			<dt>С две допълнителни цифри в края може да се зададе алфа нивото (<a href="#alphaChanelByHextriplets">виж alphaChanelByHextriplets</a>)</dt>
 		</dl>
 		<pre><code rel="CSS" class="css">
 			#test{
@@ -133,8 +133,8 @@
 		<dl class="fa">
 			<dt>За всеки цвят задаваме шестнадесетично число в диапазона: 0 - F</dt>
 			<dt>Общо 3 шестнадесетични цифри</dt>
-			<dt>С допълнителна, 4-та цифра, може да се зададе алфа нивото. </dt>
-		</dl>
+			<dt>С допълнителна, 4-та цифра, може да се зададе алфа нивото  (<a href="#alphaChanelByHextriplets">виж alphaChanelByHextriplets</a>).</dt>
+		</dl> 
 		<pre><code rel="CSS" class="css">
 			#test{
 				background-color: #F00; /*червено*/
@@ -169,10 +169,7 @@
 				color: hsl(240, 100%, 50% ); /*синьо*/
 			}
 		</code></pre>
-	</section>
-	<section><h3>Чрез HSL: Hue, Saturation, Lightness</h3>
-		<p class="advanced"><a href="https://chromatichq.com/blog/understanding-and-using-hsl-your-css">Understanding and Using HSL in Your CSS</a></p>
-	</section>
+	</section>	
 	<section><h3>Задаване на прозрачност (alpha channel) чрез RGBA</h3>
 		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
 				rgba(<span style="color: red">RedValue</span>, <span style="color: green">GreenValue</span>, <span style="color:blue">BlueValue</span>, <span>alphaValue</span>);
@@ -219,11 +216,11 @@
 		</dl>
 		<pre><code rel="CSS" class="css">
 			#test{
-				/* полупрозрачно червено*/
-				background-color: hsla(0, 100%, 50%, 0.5 ); 
+				/* полупрозрачно червено - чрез  8 цифрен hex запис*/
+				background-color: #FF000080; 
 				
-				 /* напълно прозрачно "червено"*/
-				background-color: hsla(0, 100%, 50%, 0 );
+				 /* напълно прозрачно "червено" - чрез  4 цифрен hex запис*/
+				background-color: #FF00;  
 			}
 		</code></pre>
 	</section>
@@ -282,6 +279,7 @@
 <section><h2>Полезни статии</h2>
 	<dl class="fa">
 		<dt><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS values and units @MDN Guides</a></dt>
+		<dt><a href="https://chromatichq.com/blog/understanding-and-using-hsl-your-css">Understanding and Using HSL in Your CSS</a></dt>
 	</dl>
 </section>
 
