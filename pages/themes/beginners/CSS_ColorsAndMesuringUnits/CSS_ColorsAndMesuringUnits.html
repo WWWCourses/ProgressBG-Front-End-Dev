@@ -188,7 +188,7 @@
 	</section>
 	<section><h3>Задаване на прозрачност (alpha channel) чрез HSLA</h3>
 		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
-			hsl(hue, saturation%, lightness%, alphaValue);
+			hsla(hue, saturation%, lightness%, alphaValue);
 		</div>
 		<dl class="fa">						
 			<dd>alphaValue може да бъде в интервала [0 - 1] или в [0% - 100%]</dd>
@@ -210,9 +210,9 @@
 				#<span style="color: red">RedValue</span><span style="color: green">GreenValue</span><span style="color:blue">BlueValue</span><span>alphaValue</span>;
 		</div>
 		<dl class="fa">						
-			<dd>alphaValue може да бъде в интервала [0 - 1] или в [0% - 100%]</dd>
-			<dd>alphaValue = 0 (или 0%): пълна прозрачност</dd>
-			<dd>alphaValue = 1 (или 100%): пълна непрозрачност</dd>
+			<dd>alphaValue може да бъде в интервала [00 - FF] или в [0 - F]</dd>
+			<dd>alphaValue = 00 (или 0): пълна прозрачност</dd>
+			<dd>alphaValue = FF (или F): пълна непрозрачност</dd>
 		</dl>
 		<pre><code rel="CSS" class="css">
 			#test{
@@ -248,7 +248,9 @@
 	<section><h3>Абсолютни:</h3>
 		<dl class="fa">
 			<dt><span class="keyword">px</span> : пиксела (1px = 1/96 от инча)</dt>
+			<dd>Използват се при екранна медия (screen media)</dd>
 			<dt><span class="keyword">pt</span> : точки (1pt = 1/72 от инча)</dt>
+			<dd>Използват се, когато медията е принтер.</dd>
 			<dt><span class="keyword">cm</span> : сантиметъра</dt>
 			<dt><span class="keyword">mm</span> : милиметра</dt>
 			<dt><span class="keyword">in</span> : инча</dt>
@@ -256,7 +258,7 @@
 	</section>
 	<section><h3>Релативни:</h3>
 		<dl class="fa">
-			<dt><span class="keyword">em</span> : височината на буква ('m' – исторически) спрямо шрифта на текущия елемент (font-size е наследимо свойство!).</dt>
+			<dt><span class="keyword">em</span> : изчислява се спрямо шрифта на текущия елемент (font-size е наследимо свойство!).</dt>
 			<dt><span class="keyword">rem</span> : като <span class="keyword">em</span>, но се отнася спрямо размера на шрифта на root елемента (елемента <b>html</b> за HTML езика).</dt>
 			<dt><span class="keyword">%</span> : <span class="note">Зависи от конкретното свойство!</span> За повечето свойства се изчислява като % от стойността на даденото свойство дефинирана в родителския елемент. </dt>
 			<dd>Пример за изключение: <a href="https://www.w3schools.com/cssref/pr_padding-top.asp"><code>padding-top</code></a></dd>			
@@ -280,6 +282,8 @@
 	<dl class="fa">
 		<dt><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS values and units @MDN Guides</a></dt>
 		<dt><a href="https://chromatichq.com/blog/understanding-and-using-hsl-your-css">Understanding and Using HSL in Your CSS</a></dt>
+		<dt><a href="https://24ways.org/2006/compose-to-a-vertical-rhythm">Compose to a Vertical Rhythm</a> by Richard Rutter</dt>
+		<dt><a href="https://www.w3.org/WAI/GL/css2em.htm">The amazing em unit and other best practices</a></dt>
 	</dl>
 </section>
 

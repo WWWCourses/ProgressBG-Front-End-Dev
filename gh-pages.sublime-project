@@ -11,8 +11,10 @@
 		"spell_check": true,
 		"show_definitions": false,
 		"tab_size": 2,
-		"translate_tabs_to_spaces": false,
-		"detect_indentation": true,
+		"translate_tabs_to_spaces": false,		
+		// Set to true to removing trailing white space on save
+    		"trim_trailing_white_space_on_save": false,
+		// "detect_indentation": true,
 		// "color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
 		// "font_size": 13,		
 		// "theme": "iep.predawn.sublime-theme"
