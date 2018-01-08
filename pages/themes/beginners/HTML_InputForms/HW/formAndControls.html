@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>formAndControls</title>
+    <style type="text/css">
+    	form div{
+    		margin: 0.5em 0 0.7em 0;
+    	}
+    	label[for]{
+    		display: inline-block;
+    		width: 6em;
+    		text-align: right;
+    	}
+    	fieldset{
+    		border: 3px double #999;
+    	}
+    	legend{
+    		color: #666;
+    		text-align: right;
+    		padding: 0em;
+    	}
+
+    </style>
+</head>
+<body>
+	<h2>Registration form</h2>	
+	<form action="/back-end/registration.py" method="get">
+		<fieldset>
+			<legend>Лични данни</legend>
+			<div>
+				<label for="userName">Вашето Име:</label>
+				<input type="name" name="userName" id="userName" placeholder="име, фамилия на кирилица">
+			</div>
+			<div>
+				<label>Пол:</label>
+				<label>мъж: <input type="radio" name=""></label>
+				<label>жена: <input type="radio" name=""></label>
+			</div>
+
+			
+		</fieldset>
+	</form>
+</body>
+</html>
