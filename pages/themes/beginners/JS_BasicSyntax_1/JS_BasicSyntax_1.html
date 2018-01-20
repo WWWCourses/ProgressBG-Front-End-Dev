@@ -69,9 +69,9 @@
 <section id="ProgramStrucutre"><h2>Структура на програмата</h2>
 	<section>
 		<dl class="fa">
-			<dt>Една JavaScript програма е последователност от инструкции (изрази, statements).</dt>
-			<dt>Изразите се разделят един от друг с '<span class="code">;</span>'</dt>
-			<dt>Последователност от изрази, заградена в '<span class="code">{</span>' и '<span class="code">}</span>' се нарича блок.</dt>
+			<dt>Една JavaScript програма е последователност от инструкции. Или по-точно от <span>declarations, statements и expressions.</span></dt>
+			<dt>Инструкциите се разделят една от друга с '<span class="code note">;</span>'</dt>
+			<dt>Последователност от инструкции, заградена в '<span class="code note">{</span>' и '<span class="code note">}</span>' се нарича блок.</dt>
 			<dt>Ако направим аналогия с естествените езици:
 				<table style="margin-left: 1em">
 					<tr>
@@ -80,31 +80,33 @@
 						<th>JavaScript</th>
 					</tr>
 					<tr>
-						<td>разказ, роман и пр</td>
+						<td>роман, разказ и пр</td>
 						<td><=></td>
 						<td>program/script</td>
-					</tr>
-					<tr>
-						<td>изречение</td>
-						<td><=></td>
-						<td>statement</td>
 					</tr>
 					<tr>
 						<td>параграф, абзац</td>
 						<td><=></td>
 						<td>block</td>
 					</tr>
+					<tr>
+						<td>изречение</td>
+						<td><=></td>
+						<td>инструкция</td>
+					</tr>					
 				</table>
 			</dt>
 			</dl>
 	</section>
-	<section><h3>Изрази</h3>
-		<p>Израз е всяка една инструкция към машината, за да изпълни дадено действие.</p>
+	<section><h3>Последователност на изпълнението</h3>
+		<p>Една JS програма се интерпретира последователно, ред по ред, освен в случаите, когато имаме условни оператори и функции, които ще бъдат детайлно разгледани в следващите теми.</p>
+	</section>
+	<section><h3>Примери</h3>
 		<pre><code rel="JS">
 			// това е коментар, който не се изпълнява от системата
 
 			// показва „изкачащо“ съобщение с текст „Welcome“
-			alert(„Welcome“);
+			alert("Welcome");
 
 			// декларира променливата answer
 			var answer;
@@ -112,10 +114,13 @@
 			// записва числото 42 в променливата answer
 			answer = 42;
 
+			// изписва стойността на answer в конзолата
+			console.log( answer );
+
 			// задава червен фон на документа
 			document.body.style.backgroundColor = "red";
 		</code></pre>
-		<p class="note">Изразите се разделят един от друг с '<b>;</b>'</p>
+		<p class="note">Тук всички "инструкции" се разделят една от друга с '<b>;</b>'</p>
 	</section>
 </section>
 
@@ -124,22 +129,30 @@
 		<dl class="fa">
 			<dt>Променливата е "име" на част от паметта (RAM), в която съхраняваме данни, необходими за програмата.</dt>
 			<dt>Програмиста задава това име, като следва определени правила.</dt>
-			<dt>След като променливата е създадена можем да записваме и четем стойности, т.е.да ги използваме в програмата.</dt>
+			<dt>След като променливата е създадена можем да записваме и четем стойности от нея, т.е.да ги използваме в програмата.</dt>
 		</dl>
+	</section>
+	<section><h3>Къде и как се създават променливите</h3>
+		<pre><code rel="JS">
+			var x = 1;
+			var y = 2;
+			var z;
+		</code></pre>
+		<a href="images/variables_in_RAM.png" title="click for bigger image"><img src="images/variables_in_RAM.png" style="height: 80vh"></a>
 	</section>
 	<section style="font-size: .9em"><h3>Деклариране/Дефиниране</h3>
 		<dl class="fa">
 			<dt>Създаването на променлива се нарича <span class="note">деклариране</span> на променлива.
 			В JavaScript това става чрез запазената за езика дума <code class="note">var</code>
 			</dt>
-			<dt>Ако желаем, може при създаването на променливата, да укажем стойност - т.е. да <span class="note">дефинираме</span> променливата.</dt>
+			<dt>Ако желаем, може при създаването на променливата, да укажем стойност - т.е. да <span class="">инициализираме</span> променливата.</dt>
 		</dl>
 		<pre><code rel="JS">
 			var x;      // деклариране на променливата x
-			x = 10;     // дефиниране на x
+			x = 10;     // записваме в x стойност 10
 			var y;      // деклариране на променливата y
 			var a,b;    // деклариране на променливите a и b
-			var x = 10; // дефиниране на променливата x - едновременно декларираме и инициализираме x със стойността 10
+			var x = 10; // деклариране и инициализиране на x със стойността 10
 		</code></pre>
 		<p class="advanced"></i>В ECMAScript 6, се въвеждат и нови думи за деклариране на променливи: <code class="note">let</code> и <code class="note">const</code>, които ще разгледаме след като изясним понятията "scope" и "hoisting".</p>
 	</section>
@@ -150,23 +163,17 @@
 			console.log(x); // 10 (Error in strict mode)
 		</code></pre>
 		<p class="note">Това се счита за изключително лоша практика, тъй като се създава "<strong>глобална променлива</strong>" (в темата за <a href="/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Functions/JS_Functions.html#Scope">scope</a>, ще разгледаме защо), и в новите версии на езика (от ЕС5.1) при използването на strict mode, това би <strong>довело до грешка</strong>!</p>
-	</section>
-	<section><h3>Къде и как се създават променливите</h3>
-		<pre><code rel="JS">
-			var x = 1;
-			var y = 2;
-			var z;
-		</code></pre>
-		<a href="images/variables_in_RAM.png"><img src="images/variables_in_RAM.png"></a>
-	</section>
+	</section>	
 	<section><h3>Правила за имена на променливи</h3>
 		<dl class="fa">
-			<dt>Името на променливата трябва да <span class="note">започва</span> с <span class="note">латинска буква</span> или '<span class="code note">$</span>' или '<span class="code note">_</span>'</dt>
+			<dt>Името (идентификатор) на променливата трябва да <span class="note">започва</span> с <span class="note">буква <a href="#note1"><sup><small>1</small></sup>></a></span> или '<span class="code note">$</span>' или '<span class="code note">_</span>'</dt>
 			<dt>След това в името могат да се включат и <span class="note">цифри</span>, освен горепосочените символи.</dt>
 			<dt>Нищо друго, дори спейс или тире, не е допустимо да участва в името на променливата.</dt>
 			<dt>Не е препоръчително да започват с '$' или '_' (използват се за специфични случаи, например в JQuery и пр.)</dt>
 			<dt>Прави се разлика между малки/големи букви тъй като JavaScript е <span class="note">case–sensitive</span> език.</dt>
 		</dl>
+		<hr>
+		<small id="note1">1. Позволяват се и определени unicode символи: <span class="advanced"></span><a href="https://mathiasbynens.be/notes/javascript-identifiers-es6">Valid JavaScript variable names in ECMAScript 6</a></small>
 	</section>
 	<section><h3>Правила за имена на променливи</h3>
 		<dl class="fa">
@@ -190,7 +197,7 @@
 			<dt>Ако е необходимо името да се състои от две или повече думи, то в JavaScript се препоръчва да се използва <span class="note">lowerCamelCase</span> - първата дума започва с малка буква, а следващите думи се залепват непосредствено като започват с голяма буква.</dt>
 		</dl>
 		<pre><code rel="JS" class="js">
-			var camelCasedName = 'something';
+			var camelCasedName = 'something';			
 		</code></pre>
 	</section>
 	<section><h3>Примери:</h3>
@@ -203,7 +210,7 @@
 			var user-first-name; //SyntaxError
 			var user_first_name; //ok, но не е според конвенцията (lowerCamelCase)
 			var userFirstName; //ok
-			var x234AB$$53; // синтактично е ок, но не и семантично
+			var x234AB$$53; // синтактично е ок, но какво ли означава?
 		</code></pre>
 	</section>
 </section>
@@ -266,8 +273,8 @@
 		</code></pre>
 	</section>
 	<section><h3>Булев тип (boolean)</h3>
-		<p>Данните от този тип могат да приемат само 2 стойности: true или false</p>
-		<p>Използва се предимно в условните оператори, които са разгледани по-нататък.</p>
+		<p>Данните от този тип могат да приемат само 2 стойности: <span class="note">true</span> или <span class="note">false</span></p>
+		<p>Използват се предимно в условните оператори, които са разгледани по-нататък.</p>
 		<pre><code rel="JS" class="javascript">
 			var start = true;
 			var stop  = false;
@@ -275,7 +282,7 @@
 	</section>
 	<section><h3>null</h3>		
 		<p>Използва се при работа с обекти, които са разгледани по-нататък.</p>
-		<p class="advanced">null е примитивен тип, а не обект! Факта, че оператора <code>typeof null;</code> връща "object" се дължи на всеизвестен <span class="note">бъг в JavaScript</span>. Задълбочен анализ на този бъг: <a href="http://2ality.com/2013/10/typeof-null.html">The history of “typeof null” by Dr. Axel Rauschmayer</a></p>
+		<p class="advanced">null е примитивен тип, а не обект! Факта, че оператора <code>typeof null;</code> връща "object" се дължи на всеизвестен <span class="note">бъг в JavaScript</span> ( <i class="advanced"></i><a href="http://2ality.com/2013/10/typeof-null.html">The history of “typeof null” by Dr. Axel Rauschmayer</a>)</p>
 	</section>
 	<section><h3>undefined</h3>
 		<dl class="fa">

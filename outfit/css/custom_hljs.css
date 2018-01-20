@@ -1,7 +1,8 @@
 /* ********************************************************************** */
 /* Fonts  */
 /* ********************************************************************** */
-@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+/*@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');*/
 
 /* for highlight.js and my beautify_code_blocks {*/
 .reveal pre{
@@ -14,9 +15,10 @@
 	word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 .reveal pre>code{
-	font-family: 'Inconsolata', monospace;
+	font-family: 'Roboto Mono', monospace;
+	/*font-family: 'Anonymous Pro', monospace;*/
 	/*font-weight: bold;*/
-	/*font-size: 0.8em;*/
+	font-size: 1.3em;
 	padding-left: .3em;
 	padding-bottom: .3em;
 	padding-right: 0;
