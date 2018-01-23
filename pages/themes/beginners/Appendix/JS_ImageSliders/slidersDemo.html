@@ -4,6 +4,12 @@
 	<meta charset="UTF-8">
 	<title>slidersDemo</title>
 	<style type="text/css">
+		h1{
+			height: 5vh;
+			margin-bottom: 1em;
+			text-align: center;
+			color: #666;
+		}
 		.clear:after {
 			display: block;
 			content: "";
@@ -11,8 +17,9 @@
 		}
 		.carousel {
 			position: relative;
-			width: 50vw;
-			height: 50vh;
+			width: 80vw;
+			height: calc(100vh - 15vh - 1em);
+			margin: auto;
 			border: .3em outset #999;
 		}
 		.carousel img {
@@ -71,8 +78,7 @@
 	</style>
 </head>
 <body>
-	<h1>Basic JavaScript slider</h1>
-	<h2>Example:</h2>
+	<h1>Very Simple JavaScript Slider</h1>	
 	<div class="carousel">
  		<img id="imgWrapper" src="">
 		<div class="prev"></div>
