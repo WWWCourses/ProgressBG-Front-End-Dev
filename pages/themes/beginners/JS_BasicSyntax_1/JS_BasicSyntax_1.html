@@ -23,6 +23,11 @@
 	<!-- CUSTOM -->
 	<base target="_blank">
 	<style type="text/css">
+		#truethTable{
+			display: block;
+			width: 120%;
+			/*margin: 1em auto;*/
+		}
 		#truethTable, #truethTable tr, #truethTable tr>td{
 			text-align: center; 
 		}
@@ -137,7 +142,8 @@
 <section id="Variables"><h2>Променливи (Variables)</h2>	
 	<section><h3>Какво е променлива в JavaScript?</h3>
 		<dl class="fa">
-			<dt>Променливата е "име" на част от паметта (RAM), в която съхраняваме данни, необходими за програмата.</dt>
+			<dt>Може да си представим променливата като етикет на кутия, в която съхраняваме разни неща.</dt>
+			<dt>По-точно, променливата е "име" на част от паметта (RAM), в която съхраняваме данни, необходими за програмата.</dt>
 			<dt>Програмиста задава това име, като следва определени правила.</dt>
 			<dt>След като променливата е създадена можем да записваме и четем стойности от нея, т.е.да ги използваме в програмата.</dt>
 		</dl>
@@ -202,8 +208,16 @@
 		</dl>
 	</section>
 	<section><h3>Конвенции за именуване на променливи</h3>
+		<p>Препоръчва се имената на променливите да описват данните, които възнамеряваме да съхраняваме в тях.</p>
+		<p>Не бихте искали програмата ви да изглежда така:</p>
+		<p><img src="images/Messy_storage_room_with_boxes.jpg"style="height: 60vh"><br><a class="resourseAttribution" href="https://upload.wikimedia.org/wikipedia/commons/3/39/Messy_storage_room_with_boxes.jpg">From Wikimedia Commons</a></p>
+	</section>
+	<section><h3>Конвенции за именуване на променливи</h3>
+		<p>А по-скоро така: </p>
+		<img src="images/archive-1850170_640.jpg" style="height: 70vh;">
+	</section>
+	<section><h3>Конвенции за именуване на променливи</h3>
 		<dl class="fa">
-			<dt>Препоръчва се имената на променливите да описват данните, които възнамеряваме да съхраняваме в тях.</dt>
 			<dt>Ако е необходимо името да се състои от две или повече думи, то в JavaScript се препоръчва да се използва <span class="note">lowerCamelCase</span> - първата дума започва с малка буква, а следващите думи се залепват непосредствено като започват с голяма буква.</dt>
 		</dl>
 		<pre><code rel="JS" class="js">
@@ -452,8 +466,7 @@
 		<iframe height='300' scrolling='no' title='Simple variables and operations' src='//codepen.io/webdesigncourse/embed/VeZrQE/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/VeZrQE/'>Simple variables and operations</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>
 	</section>
 	<section><h3>Оператори за сравнение (Comparison Operators)</h3>
-		<dl class="fa">
-			<dt>Self-learning section:</dt>
+		<dl class="fa">			
 			<dd><a href="https://www.w3schools.com/js/js_comparisons.asp">JavaScript Comparison and Logical Operators (by w3schools)</a></dd>
 			<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">Comparison operators (by MDN)</a></dd>
 		</dl>		
@@ -477,7 +490,6 @@
 	</section>
 	<section><h3>логически оператори (Logical Operators)</h3>
 		<dl class="fa">
-			<dt>Self-learning section:</dt>
 			<dd><a href="https://www.w3schools.com/js/js_comparisons.asp">JavaScript Comparison and Logical Operators (by w3schools)</a></dd>
 			<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators">Logical Operators (by MDN)</a></dd>
 		</dl>				
