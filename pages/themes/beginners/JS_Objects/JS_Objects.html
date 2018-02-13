@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>{{clicheTitle}}</title>
+    <title>JS_Objects</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -46,7 +46,7 @@
 ##################### SLIDES START #####################
 ########################################################
 -->
-<section><h1>{{PresentationTitile}}</h1></section>
+<section><h1>JavaScript Обекти</h1></section>
 <section data-transition="zoom">
     <div class="copyright">
         <div class="note">
@@ -64,8 +64,60 @@
     </div>
 </section>
 
-<section><h2>{{SectionTitle}}</h2>
+<section><h2>Въведение</h2>
     <section>
+        <p class="note newterm bigestFont">Object = {properties + methods}</p><br>
+        <dl class="fa">
+            <dt><span class="note">Обект:</span>  структура от данни, която обединява в едно цяло данните и действията (функциите), които могат да се извършват върху тях.</dt>
+            <dt>Данните в един обект се наричат <span class="note">свойства</span> (<span class="note">properties</span>), а функциите – <span class="note">методи</span> (<span class="note">methods</span>).</dt>
+        </dl>
+    </section>
+    <section>
+        <dl class="fa">
+            <dt>Всяко едно свойство на обект съдържа данни - може да бъде всеки един тип данни, но за разлика от масива, данните тук се асоциират с имена (property names, keys) а не с цифрови индекси.</dt>
+            <dt>Когато в дадено свойство имаме функция, тогава това свойство се нарича <span class="note">метод</span> на обекта</dt>            
+        </dl>
+    </section>
+    <section>
+        <pre><code rel="JS" class="js">
+            var scientist1 = {
+              "firstName": "Ada",
+              "surName": "Byron",
+              "gender" : "female",
+              "lived": [1815, 1852],
+              "profession": "mathematician",
+              "contribution": "implementation of the first ever algorithm, i.e. computer program",
+              "present": function(){
+                  var subjPronoun = (this.gender == "female") ? "She" : "He"; 
+                  var objPronoun = (this.gender == "female") ? "Her" : "His"; 
+                  var str = `${this.firstName} ${this.surName} was a great ${this.profession}. ${subjPronoun} was born in ${this.lived[0]}, and died in ${this.lived[1]}. ${objPronoun} main contribution was the ${this.contribution}.
+                  `;
+                  console.log( str );
+              }
+            }
+            
+
+
+        </code></pre>
+        <dl class="fa">
+            <dt>Редът на </dt>
+        </dl>
+    </section>
+</section>
+<section><h2>Създаване на еденичен обект</h2>
+    <section><h3>Чрез литерал - предпочитания вариант</h3>
+        <pre><code rel="JS" class="js">
+            var obj = {}; // създава празен обект
+
+            var car1 = {
+                brand: "ford",
+                year: 2016,
+                color: "red",
+                doors: 3   
+            }
+        </code></pre>
+    </section>
+    <section><h3>Чрез глобалния обект Object</h3>
 
     </section>
 </section>
