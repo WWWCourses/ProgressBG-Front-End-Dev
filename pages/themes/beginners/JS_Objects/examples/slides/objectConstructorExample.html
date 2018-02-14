@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object Constructor Example</title>
+</head>
+<body>
+  <!-- 16 5361.75 %  52 6965.58 %  (anonymous)objectConstruct…Example.html:7  -->
+	<script type="text/javascript">
+    var DeveloperConstrucor = function(firstName, surName, skills){
+      this.firstName = firstName;
+      this.surName = surName;
+      this.skills = skills;
+      // макар и написана само веднъж, тази функция ще се копира в паметта
+      // толкова пъти, колкото обекти създадем, което не е ефективно при
+      // по-големи приложения
+      this.applyForJob = function(){
+        var skillsStr = "";
+        var skillEndStr = ", ";
+
+        for (var i = 0; i < this.skills.length; i++) {
+          if(i == (this.skills.length - 1)){
+            skillEndStr = "";
+          }
+          skillsStr += this.skills[i] + skillEndStr;
+        }
+
+        console.log(`Hi, I'm ${this.firstName} ${this.surName}. My strongest skills are ${skillsStr}.`);      
+      }
+    }
+		var developer1 = new DeveloperConstrucor(
+      "Ivan", "Ivanov", 
+      ["HTML", "CSS", "JavaScript"]
+    );
+
+    var developer2 = new DeveloperConstrucor(
+      "Maria", "Mineva",
+      ["HTML", "CSS", "JavaScript", "Python", "RestAPIs"] 
+    );
+
+    developer1.applyForJob();
+    developer2.applyForJob();
+
+	</script>
+</body>
+</html>

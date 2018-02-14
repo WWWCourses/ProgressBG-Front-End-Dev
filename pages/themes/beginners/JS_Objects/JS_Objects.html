@@ -78,54 +78,107 @@
             <dt>Когато в дадено свойство имаме функция, тогава това свойство се нарича <span class="note">метод</span> на обекта</dt>            
         </dl>
     </section>
-    <section>
-        <pre><code rel="JS" class="js">
-            var scientist1 = {
-              "firstName": "Ada",
-              "surName": "Byron",
-              "gender" : "female",
-              "lived": [1815, 1852],
-              "profession": "mathematician",
-              "contribution": "implementation of the first ever algorithm, i.e. computer program",
-              "present": function(){
-                  var subjPronoun = (this.gender == "female") ? "She" : "He"; 
-                  var objPronoun = (this.gender == "female") ? "Her" : "His"; 
-                  var str = `${this.firstName} ${this.surName} was a great ${this.profession}. ${subjPronoun} was born in ${this.lived[0]}, and died in ${this.lived[1]}. ${objPronoun} main contribution was the ${this.contribution}.
-                  `;
-                  console.log( str );
-              }
+    <section id="developerObjectByLiteral">
+        <p>Пример за обект:</p>
+        <pre><code rel="JS" class="js bigFont">
+            var developer1 = {
+                // properties:
+                "firstName"     : "Ivan", 
+                "surName"       : "Ivanov",      
+                "skills"        : ["HTML", "CSS", "JavaScript"],
+                // methods:
+                "applyForJob"   : function(){
+                    console.log( this.firstName + " is applying for job!")
+                }
             }
-            
-
-
         </code></pre>
         <dl class="fa">
-            <dt>Редът на </dt>
+            <dt>Редът на създаване на свойствата няма никакво значение, тъй като данните в обектите не са подредени!</dt>
         </dl>
     </section>
+    <section>
+        <p>Ето как, съвсем обобщено, изглежда един обект в паметта:</p>
+        <a href="images/JS_ObjectInRAM_1.png" title="click for bigger image"><img src="images/JS_ObjectInRAM_1.png"></a>
+    </section>
 </section>
-<section><h2>Създаване на еденичен обект</h2>
+
+<section><h2>Създаване на единичен обект</h2>
     <section><h3>Чрез литерал - предпочитания вариант</h3>
         <pre><code rel="JS" class="js">
-            var obj = {}; // създава празен обект
+            // създаване празен обект:
+            var obj = {};
 
+            // създаване на обект с 4 свойства:
             var car1 = {
-                brand: "ford",
-                year: 2016,
-                color: "red",
-                doors: 3   
+                "brand" : "ford",
+                "year"  : 2016,
+                "color" : "red",
+                "doors" : 3   
             }
         </code></pre>
+        <p class="note">Забележете, че след последния елемент на обекта не се слага запетайка!</p>
     </section>
     <section><h3>Чрез глобалния обект Object</h3>
+        <pre><code rel="JS" class="js">
+            var obj = new Object();
+        </code></pre>
+        <p class="note">Този начин за създаване на обект, вече не се използва!</p>
+        <p>Внимавайте да не объркате този вариант с използването на конструктор на обекти, който ще бъде разгледан по-нататък:</p>
+        <pre><code rel="JS" class="js">
+            var obj = new Car();
+        </code></pre>
+    </section>
+</section>
+
+<section><h2>Достъп до свойствата на обект</h2>
+    <section><h3>Чрез точка (Dot Notation)</h3>
+        <pre><code rel="Syntax" class="js">
+            object_name.property_name
+        </code></pre>
+        <p>Ако използваме обекта <code>developer1</code>, създаден <a href="#developerObjectByLiteral">по-горе</a>, то за да достъпим неговите свойства: </p>
+        <pre><code rel="JS" class="js">
+            console.log( developer1.firstName ); //Ivan
+            console.log( developer1.surName );   //Ivanov
+
+            console.log( developer1.skills );    
+            // ["HTML", "CSS", "JavaScript"]
+
+            console.log( developer1.skills[0] ); //"HTML"
+
+            console.log( developer1.applyForJob() ); 
+            // Ivan is applying for job!
+
+            developer1.firstName = "Stoyan";
+            // промяна на свойството "firstName"
+        </code></pre>
+    </section>
+    <section><h3>Чрез квадратни скоби (Square-bracket Notation)</h3>
+        <pre><code rel="Syntax" class="js">
+            object_name[variable_holding_property_name]
+        </code></pre>
+        <p>Отново ще използваме обекта <a href="#developerObjectByLiteral"><code>developer1</code></a></p>
+        <pre><code rel="JS" class="js">
+            // променлива, в която съхраняваме име на свойство:
+            var propName = "firstName";
+            console.log( developer1[propName] ); // Ivan
+
+            developer1[propName] = "Marin"; // променяме свойството "propName"
+        </code></pre>
+    </section>
+</section>
+
+<section><h2>Задачи за упражнение</h2>
+    <section><h3>Task1: developer2 object</h3>
 
     </section>
 </section>
 
 <section class="disclaimer" data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
      <p>These slides are based on</p>
-     <p>customised version of </p>
-     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+     <p>customised version of</p>
+     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a>
+
+     </p>
      <p>framework</p>
 </section>
 <!--
