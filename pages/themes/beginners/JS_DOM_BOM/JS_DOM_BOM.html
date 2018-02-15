@@ -71,9 +71,23 @@
     </dl>
     <p class="note">A host environment provides platform-specific objects and functions additionally to the language core</p>
 </section>
-<section><h2>JS & DOM & BOM</h2>
-    <a href="images/windowObjects.png"><img src="images/windowObjects.png" height="400"></a>   
+
+<section><h2>the Global Object</h2>
+    <section>
+        <p>Във всяка една JS Host Environment е дефиниран един глобален обект, към който са дефинирани като свойства останалите обекти на средата.</p>
+        <p>За браузърите, този глобален обект е <code>window</code></p>
+        <a href="images/windowObjects.png"><img src="images/windowObjects.png" height="400"></a>
+    </section>  
+    <section>
+        <p>Ето как изглежда глобалния обект <code>window</code> в конзолата:</p>
+        <a href="images/theWindowObjectInConsole.png"><img src="images/theWindowObjectInConsole.png"></a>
+    </section> 
+    <section>
+        <p>Свойствата на глобалния обект <code>window</code> са достъпни и самостоятелно, тъй като глобалния обект се асоциира с глоаблния <code>scope</code></p>
+        <a href="images/directAccessToGlobalObjectProperties.png"><img src="images/directAccessToGlobalObjectProperties.png"></a>
+    </section>
 </section>
+
 <section><h2>Какво е HTML DOM?</h2>
     <section>
        <dl class="fa">
