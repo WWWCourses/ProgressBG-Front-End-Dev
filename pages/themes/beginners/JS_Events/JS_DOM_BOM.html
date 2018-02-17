@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JS_Events</title>
+    <title>JS_HTML_DOM</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,7 +28,7 @@
 </head>
 <body>
     <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
-        <a class="home_link" href="/ProgressBG-Front-End-Dev/pages/agenda/beginners.html#JS_Events_id" target="_top"><i class="fa fa-home"></i></a>
+        <a class="home_link" href="/ProgressBG-Front-End-Dev/pages/agenda/beginners.html#JS_HTML_DOM_id" target="_top"><i class="fa fa-home"></i></a>
         <div class="footer theme_switch">
             <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css'); return false;">Dark</a>
             <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/light.css'); return false;">Light</a>
@@ -71,9 +71,23 @@
     </dl>
     <p class="note">A host environment provides platform-specific objects and functions additionally to the language core</p>
 </section>
-<section><h2>JS & DOM & BOM</h2>
-    <a href="images/windowObjects.png"><img src="images/windowObjects.png" height="400"></a>   
+
+<section><h2>the Global Object</h2>
+    <section>
+        <p>Във всяка една JS Host Environment е дефиниран един глобален обект, към който са дефинирани като свойства останалите обекти на средата.</p>
+        <p>За браузърите, този глобален обект е <code>window</code></p>
+        <a href="images/windowObjects.png"><img src="images/windowObjects.png" height="400"></a>
+    </section>  
+    <section>
+        <p>Ето как изглежда глобалния обект <code>window</code> в конзолата:</p>
+        <a href="images/theWindowObjectInConsole.png"><img src="images/theWindowObjectInConsole.png"></a>
+    </section> 
+    <section>
+        <p>Свойствата на глобалния обект <code>window</code> са достъпни и самостоятелно, тъй като глобалния обект се асоциира с глоаблния <code>scope</code></p>
+        <a href="images/directAccessToGlobalObjectProperties.png"><img src="images/directAccessToGlobalObjectProperties.png"></a>
+    </section>
 </section>
+
 <section><h2>Какво е HTML DOM?</h2>
     <section>
        <dl class="fa">
@@ -85,8 +99,7 @@
     <section>
         <dl class="fa">
             <dt>DOM е йерархична структура</dt>
-            <dt>В DOM са дефинирани следните видове обекти/възли (<span class="note code">node</span>)</dt>
-            <dd><code class="note">Window node</code></dd>
+            <dt>В DOM са дефинирани следните видове обекти/възли (<span class="note code">node</span>)</dt>            
             <dd>Самият html документ е възел: <span class="note code">document node</span>.</dd>
             <dd>Всички HTML елементи са възли: <span class="note code">elements nodes</span></dd>
             <dd>Всички HTML атрибути са възли: <span class="note code">attribute nodes</span></dd>
@@ -94,22 +107,30 @@
             <dd>Коментарите са възли: <span class="note code">comment node</span></dd>
         </dl>
     </section>
+    <section>
+        <a href="images/DOM-model.svg.png"><img src="images/DOM-model.svg.png"></a>
+    </section>
 </section>
 
 <section><h2>The Document Object</h2>
     <section>
         <dl class="fa">
-            <dt>Когато браузера зареди една Уеб страница, той създава кореспондиращият й обектен модел.</dt>
-            <dt>На главния HTML елемент съпоставя обекта <span class="note code">document object</span>.</dt>
-            <dt><span class="note code">document object</span> предоставя всички методи и свойства за достъпване на всички възли в документа чрез JavaScript.</dt>
+            <dt>Когато браузъра зареди една Уеб страница, той създава кореспондиращият й обектен модел.</dt>
+            <dt>Целият HTML документ се представя чрез обекта: <span class="note code">document object</span>.</dt>
+            <dt>В <span class="note code">document object</span> се съдържа всичката информация, касаеща дадения HTML документ. В него са дефинирани и множество методи за достъпване на всички възли в документа чрез JavaScript.</dt>
             <dd><a href="http://www.w3schools.com/jsref/dom_obj_document.asp">w3schools: The HTML DOM Document Object</a></dd>
         </dl>
     </section>
     <section><h3>Пример:</h3>
         <pre><code rel="HTML">
+            console.log( document.lastModified );
+            // "02/17/2018 01:10:43"
+        </code></pre>
+    </section>
+    <section><h3>Пример:</h3>
+        <pre><code rel="HTML">
             &lt;body&gt;
                 <p id="p1">Paragraph <b>1</b>!</p>
-                <!-- коментар -->
 
                 <script type="text/javascript">
                     console.log("The Document node object:");
@@ -126,7 +147,7 @@
 <section><h2>The Element Object</h2>
     <section>
         <dl class="fa">
-            <dt>В HTML DOM, на всеки един HTML елемент се съпоставя един обект - <span class="code note">element object</span>, който е възел в DOM.</dt>
+            <dt>В HTML DOM, на всеки един HTML елемент се съпоставя един обект от тип <span class="code note">element object</span>, който е възел в DOM.</dt>
             <dt>Всеки един <span class="code note">element node</span> може да бъде родител на: element nodes, text nodes или comment nodes</dt>
             <dt>element nodes притежават следните методи и свойства: <a href="http://www.w3schools.com/jsref/dom_obj_all.asp">The HTML DOM Element Object</a></dt>
         </dl>
@@ -135,12 +156,13 @@
         <pre><code rel="HTML">
             &lt;body&gt;
                 <p id="p1">Paragraph <b>1</b>!</p>
-                <!-- коментар -->
-
+                
                 <script type="text/javascript">
                     console.log("The p Element node object:");
                     var elementNode = document.getElementById("p1");
                     console.dir(elementNode);
+
+                    console.log( elementNode.innerHTML ); 
                 </script>
             &lt;/body&gt;
         </code></pre>
@@ -305,7 +327,7 @@
     <p>Колекция с примери по темата:</p>
     <dl class="fa">
         <dt><a href="https://codepen.io/collection/XqagmP/">DOM_Intro</a></dt>
-        <dt><a href="https://codepen.io/collection/DbrLQV/">JS_Events</a></dt>
+        <dt><a href="https://codepen.io/collection/DbrLQV/">JS_HTML_DOM</a></dt>
     </dl>
 </section>
 

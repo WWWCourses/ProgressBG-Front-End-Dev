@@ -30,6 +30,7 @@
 		<p>Познайте числото, което съм си намислил [ от 0 до 100]:</p>
 		<input type="number" id="userNumber"><button>OK</button>
 		<div id="output"></div>
+		<div id="log"></div>
 	</div>
 
 	<script type="text/javascript">
@@ -41,6 +42,7 @@
 
 		// "cache" DOM:
 		var outputNode = document.getElementById('output');
+		var logNode = document.getElementById('log');
 		var btnNode = document.getElementsByTagName('button')[0];
 		
 
@@ -58,12 +60,15 @@
 				outputNode.style.backgroundColor = "#F99";
 			}else if( userNumber === myNumber){
 				outputNode.innerHTML = "Браво, познахте от " + count + "-я път!";
-				outputNode.style.backgroundColor = "#99FF99";
+				outputNode.style.backgroundColor = "#9F9";
 			}else{
 				outputNode.innerHTML = 'Не познахте: Нагоре!';
-				outputNode.style.backgroundColor = "#F99";
+				outputNode.style.backgroundColor = "#FFDE99";
 			};
 		}
+
+
+
 	</script>
 </body>
 </html>
