@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JS_Events</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/lib/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css" id="theme">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- CUSTOM -->
+    <link rel="stylesheet" href="/ProgressBG-Front-End-Dev/outfit/css/reveal.js.css">
+    <link rel="stylesheet" type="text/css" href="/ProgressBG-Front-End-Dev/outfit/css/custom_hljs.css">
+    <link rel="stylesheet" type="text/css" href="/ProgressBG-Front-End-Dev/outfit/css/common/themes/MatDes/text_schemes.css">
+    <base target="_blank">
+</head>
+<body>
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <a class="home_link" href="/ProgressBG-Front-End-Dev/pages/agenda/beginners.html#JS_HTML_DOM_id" target="_top"><i class="fa fa-home"></i></a>
+        <div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css'); return false;">Dark</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/light.css'); return false;">Light</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/projector.css'); return false;">Projector</a>
+        </div>
+        <div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>DOM Events. Обработка с JavaScript.</h1></section>
+<section data-transition="zoom">
+    <div class="copyright">
+        <div class="note">
+            <p>Създаден за</p>
+        </div>
+        <div class="company">
+            <a href="http://progressbg.net/kurs-po-web-design/">
+            <img style="height:80%" src="/ProgressBG-Front-End-Dev/outfit/images/logos/ProgressBG_logo_529_127.png">
+            </a>
+        </div>
+        <div class="author">
+            <span>Iva E. Popova, 2015-2017,</span>
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+        </div>
+    </div>
+</section>
+
+
+<section><h2>За какво и как се използват <code class="kw">event handlers.</code></h2>
+    <section class="normalFont"><h3>Intro</h3>
+        <dl class="fa">
+            <dt>Потребителят може да взаимодейства с HTML елементите в страницата - клик с мишката, въвеждане на текст, скрол и пр.</dt>
+            <dt>По-същество при всяко взаимодействие на потребителя с елементите се генерира така нареченото "събитие"(<code>DOM Event</code>).</dt>
+            <dd>Например: <code>onclick</code>, <code>oncopy</code>, <code>onscroll</code></dd>
+            <dt>Ние можем да дефинираме функция (<span class="note">event handler callback</span>), която да се извиква след като даденото събитие настъпи и така да направим нашата страница интерактивна.</dt>
+            <dt><code>DOM Events</code> се специфицират от W3C като непрекъснато се добавят нови възможности (Touch Events, VR Events и пр.).</dt>
+        </dl>
+    </section>
+    <section><h3>Пример - onclick</h3>
+        <pre><code rel="HTML" class="html">
+            <p class="test" onclick="clickHandler();">test your mouse on me</p>
+            <div class="output"></div>
+        </code></pre>
+        <pre><code rel="JS" class="js">
+            var btnNode = document.querySelector('.test');
+            var outputNode = document.querySelector('.output');
+
+            function clickHandler(){
+                outputNode.innerHTML += "You have clicked with left mouse button<br>"
+            }
+        </code></pre>
+    </section>
+    <section><h3>Test it on codepen</h3>
+        <iframe title='Example - onclickHandler' src='//codepen.io/webdesigncourse/embed/xYpzXG/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/xYpzXG/'>Example - onclickHandler</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section>
+        <dl class="fa">
+            <dt>Разбира се, освен генерирани от потребителя събития, в DOM са специфицирани и други събития, като <em>Network Events</em>, <em>Progress Events</em>, <em>Storage events</em> и пр.</dt>
+        </dl>
+    </section>
+    <section><h3>Example - Network Events in codepen</h3>
+        <iframe title='Example - Network Events' src='//codepen.io/webdesigncourse/embed/rJpKRV/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/rJpKRV/'>Example - Network Events</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+</section>
+
+<section><h2>HTML Event Attributes</h2>
+    <section>
+        <dl class="fa">
+            <dt>Можем да асоциираме събитие с JavaScript код, като използваме HTML Event атрибути </dt>
+        </dl>
+        <pre><code rel="Syntax" class="javascript">
+            &lt;tagname eventAttribute = &quot;JavaScript code&quot;&gt;
+        </code></pre>
+        <dl class="fa">
+            <dt>където <strong>eventAttribute</strong> е някой от HTML Event атрибутите, посочени тук: <a href="https://www.w3schools.com/tags/ref_eventattributes.asp">HTML Event Attributes</a></dt>
+            <dt>A <strong>JavaScript code</strong> е кодът, който ще се изпълни автоматично при настъпване на даденото събитие</dt>
+        </dl>
+    </section>
+    <section><h3>Пример</h3>
+        <pre><code rel="HTML" class="html">
+            <p class="test" onclick="this.innerHTML='Bravo, you have clicked!'">click me</p>
+            <p class="test" ondblclick="this.innerHTML='Bravo, you have double clicked!'">double click me</p>
+        </code></pre>
+    </section>
+    <section>
+        <p>Естествено, много по-удобно и ефективно е вместо да пишем JavaScript код в HTML атрибут, да го обособим като функция</p>
+        <pre><code rel="HTML" class="html">
+            <p class="test" ondblclick="handleDblClick(this);">double click me</p>
+        </code></pre>
+        <pre><code rel="JS" class="js">
+            function handleDblClick( node ){
+                node.innerHTML = "Bravo, you have double clicked!"
+            }
+        </code></pre>
+    </section>
+</section>
+
+<section><h2>element.addEventListener() method</h2>
+    <section>
+        <pre style="width: 130%;"><code rel="Syntax" class="javascript">
+            element.addEventListener(eventName, functionDefinition [, options])
+        </code></pre>
+        <dl class="fa">
+            <dt>където <strong>eventName</strong> e име на събитие (<span class="note">без "on" префикс</span>)</dt>
+            <dd><a href="https://developer.mozilla.org/en-US/docs/Web/Events">Event reference @MDN</a></dd>
+            <dt><strong>functionDefinition</strong> <span class="note">е дефиниция</span> на функцията, която ще се изпълни при настъпване на събитието. Много често се използва анонимна функция.</dt>
+            <dt><strong>options</strong> не е задължителен параметър. Чрез него задаваме допълнителни характеристики за самото събитие</dt>
+        </dl>
+    </section>
+    <section><h3>Example - addEventListener() method on codepen</h3>
+        <iframe title='Example - addEventListener() method' src='//codepen.io/webdesigncourse/embed/papZxb/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/papZxb/'>Example - addEventListener() method</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+</section>
+
+<section><h2 class="advanced">the Event Object</h2>
+    <section>
+        <dl class="fa">
+            <dt>Информацията за настъпилото събитие се съхранява в обект от тип <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event">Event Object</a></dt>
+            <dt>Някои от най-често използваните му свойства са <a href="https://www.w3schools.com/jsref/event_target.asp">target</a> и <a href="https://www.w3schools.com/jsref/event_currenttarget.asp">currentTarget</a></dt>
+        </dl>
+    </section>
+    <section>
+        <iframe title='target vs. currentTarget' src='//codepen.io/webdesigncourse/embed/jZYvWy/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/jZYvWy/'>target vs. currentTarget</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+</section>
+
+<section><h2>References</h2>
+    <dl class="fa">
+        <dt><a href="https://www.w3schools.com/js/js_htmldom_events.asp">JavaScript HTML DOM Events @w3schools</a></dt>
+        <dt class="advanced"><a href="https://eloquentjavascript.net/3rd_edition/15_event.html">Handling Events</a> - <span>Chapter 15 from the book "Eloquent JavaScript" by Marijn Haverbeke.</span></dt>
+    </dl>
+</section>
+
+<section><h2>Codepen Examples</h2>
+    <a href="https://codepen.io/collection/XBMYGy/">codepen колекция с примери и задачи по темата</a>
+</section>
+
+<section class="disclaimer" data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
+     <p>These slides are based on</p>
+     <p>customised version of </p>
+     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+     <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+        </div>
+    </div>
+    <!-- Custom processing -->
+    <script src="/ProgressBG-Front-End-Dev/outfit/js/slides.js"></script>
+    <!-- external scripts -->
+    <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
+    <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
+     <!-- init reveal -->
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        var highlightjsTabSize = '  ';
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            width: 1024,
+            height: 850,
+            // Bounds for smallest/largest possible scale to apply to content
+            // minScale: .5,
+            maxScale: 1,
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+</body>
+</html>

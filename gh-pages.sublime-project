@@ -11,7 +11,7 @@
 		"spell_check": true,
 		"show_definitions": false,
 		"tab_size": 2,
-		"font_face": "FreeMono",
+		// "font_face": "FreeMono",
 		// "font_face": "Courier 10 Pitch",
 		// "font_face": "GWMonospace",
 		// "font_face": "KacstPen",
@@ -20,7 +20,7 @@
 		"font_face": "Noto Mono",
 		"translate_tabs_to_spaces": false,		
 		// Set to true to removing trailing white space on save
-    		"trim_trailing_white_space_on_save": false,
+    "trim_trailing_white_space_on_save": true,
 		// "detect_indentation": true,
 		// "color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
 		// "font_size": 13,		
