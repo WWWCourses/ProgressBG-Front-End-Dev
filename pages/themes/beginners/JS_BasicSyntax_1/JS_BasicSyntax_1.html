@@ -29,7 +29,7 @@
 			/*margin: 1em auto;*/
 		}
 		#truethTable, #truethTable tr, #truethTable tr>td{
-			text-align: center; 
+			text-align: center;
 		}
 		#truethTable tr>th{
 			line-height: 1;
@@ -107,7 +107,7 @@
 						<td>изречение</td>
 						<td><=></td>
 						<td>инструкция</td>
-					</tr>					
+					</tr>
 				</table>
 			</dt>
 			</dl>
@@ -139,7 +139,7 @@
 </section>
 
 
-<section id="Variables"><h2>Променливи (Variables)</h2>	
+<section id="Variables"><h2>Променливи (Variables)</h2>
 	<section><h3>Какво е променлива в JavaScript?</h3>
 		<dl class="fa">
 			<dt>Може да си представим променливата като етикет на кутия, в която съхраняваме разни неща.</dt>
@@ -179,7 +179,7 @@
 			console.log(x); // 10 (Error in strict mode)
 		</code></pre>
 		<p class="note">Това се счита за изключително лоша практика, тъй като се създава "<strong>глобална променлива</strong>" (в темата за <a href="/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Functions/JS_Functions.html#Scope">scope</a>, ще разгледаме защо), и в новите версии на езика (от ЕС5.1) при използването на strict mode, това би <strong>довело до грешка</strong>!</p>
-	</section>	
+	</section>
 	<section><h3>Правила за имена на променливи</h3>
 		<dl class="fa">
 			<dt>Името (идентификатор) на променливата трябва да <span class="note">започва</span> с <span class="note">буква <sup><small>1</small></sup></span> или '<span class="code note">$</span>' или '<span class="code note">_</span>'</dt>
@@ -221,7 +221,7 @@
 			<dt>Ако е необходимо името да се състои от две или повече думи, то в JavaScript се препоръчва да се използва <span class="note">lowerCamelCase</span> - първата дума започва с малка буква, а следващите думи се залепват непосредствено като започват с голяма буква.</dt>
 		</dl>
 		<pre><code rel="JS" class="js">
-			var camelCasedName = 'something';			
+			var camelCasedName = 'something';
 		</code></pre>
 	</section>
 	<section><h3>Примери:</h3>
@@ -270,7 +270,7 @@
 		</code></pre>
 	</section>
 	<section><h3><code>\</code> escape character in string:</h3>
-		<p>Ако в низ използваме символа '<code>\</code>' (backslash), то той не се тълкува буквално, а заедно със непосредствено следващия го символ образуват т.нар. ескейп последователност, която има специално значение.</p>		
+		<p>Ако в низ използваме символа '<code>\</code>' (backslash), то той не се тълкува буквално, а заедно със непосредствено следващия го символ образуват т.нар. ескейп последователност, която има специално значение.</p>
 	</section>
 	<section><h3>Някои основни ескейп последователности:</h3>
 		<table style="font-size: .8em">
@@ -281,7 +281,7 @@
 			<tr><td><span class="note">\\</span>:</td><td>backslash</td><td>не се тълкува като специален символ</td></tr>
 		</table>
 	</section>
-	<section><h3>Някои основни ескейп последователности - пример:</h3>		
+	<section><h3>Някои основни ескейп последователности - пример:</h3>
 		<pre><code rel="JS" class="js">
 			console.log('1. Ето какво прави "\\n": --->\n<---');
 			console.log('2. Ето какво прави "\\t": --->\t<---');
@@ -304,7 +304,7 @@
 			var stop  = false;
 		</code></pre>
 	</section>
-	<section><h3>null</h3>		
+	<section><h3>null</h3>
 		<p>Използва се при работа с обекти, които са разгледани по-нататък.</p>
 		<p class="advanced">null е примитивен тип, а не обект! Факта, че оператора <code>typeof null;</code> връща "object" се дължи на всеизвестен <span class="note">бъг в JavaScript</span> ( <i class="advanced"></i><a href="http://2ality.com/2013/10/typeof-null.html">The history of “typeof null” by Dr. Axel Rauschmayer</a>)</p>
 	</section>
@@ -313,7 +313,7 @@
 			<dt>Обозначава, че променливата съществува (декларирана е), но в нея няма зададена стойност (не е дефинирана).</dt>
 			<dt>Това е стойността, която се записва по подразбиране, когато не зададем стойност при декларацията на променлива.</dt>
 			<dt>Разликата между <code>null</code> и <code>undefined</code> ще разгледаме след като се запознаем с обектите в JS.</dt>
-		</dl>		
+		</dl>
 	</section>
 </section>
 
@@ -407,10 +407,10 @@
 		<dl class="fa">
 			<dt>Assignment '<code class="note">=</code>'
 				<pre><code rel="Syntax" class="js">
-					LHS = RHS;					
-				</code></pre>			
+					LHS = RHS;
+				</code></pre>
 				<dd class="note" style="font-size: .8em">LHS: Left Hand Side: трябва да бъде декларирана променлива. В противен случай ще се създаде глобална променлива, което е изключително лоша практика.</dd>
-			<dd class="note" style="font-size: .8em">RHS: Right Hand Side: <strong>израз, който се изчислява</strong> и стойността му се записва в LHS променливата</dd>	
+			<dd class="note" style="font-size: .8em">RHS: Right Hand Side: <strong>израз, който се изчислява</strong> и стойността му се записва в LHS променливата</dd>
 				<pre><code rel="JS" class="js" style="font-size: 1em">
 					// декларираме променливите x и y:
 					var x, y;
@@ -418,16 +418,16 @@
 					// записваме в паметта, сочена от x, числото 3:
 					x = 3;
 
-					// в y записваме стойността на x: 
+					// в y записваме стойността на x:
 					y = x;
 
 					// в x записваме стойността на x, повдигната на степен 2:
 					x = x ** 2; // след този израз в x имаме стойността 9
 				</code></pre>
-			</dt>			
-		</dl>		
+			</dt>
+		</dl>
 	</section>
-	<section><h3>Оператор за присвояване (Assignment operator)</h3>		
+	<section><h3>Оператор за присвояване (Assignment operator)</h3>
 		<p style="font-size: 1.2em;">Понятията "LHS" и "RHS" се използват не само в контекста на assignment оператора. Най-общо, когато променлива се използва като "LHS", то  тогава <span class="note">записваме</span> стойност в нея. Когато се използва като "RHS", то тогава <span class="note">четем</span> стойност от нея. </p>
 	</section>
 	<section><h3>Оператор за присвояване (Assignment operator)</h3>
@@ -466,15 +466,15 @@
 		<iframe height='300' scrolling='no' title='Simple variables and operations' src='//codepen.io/webdesigncourse/embed/VeZrQE/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/VeZrQE/'>Simple variables and operations</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>
 	</section>
 	<section><h3>Оператори за сравнение (Comparison Operators)</h3>
-		<dl class="fa">			
+		<dl class="fa">
 			<dd><a href="https://www.w3schools.com/js/js_comparisons.asp">JavaScript Comparison and Logical Operators (by w3schools)</a></dd>
 			<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">Comparison operators (by MDN)</a></dd>
-		</dl>		
-	</section>	
+		</dl>
+	</section>
 	<section><h3>Оператори за сравнение - примери</h3>
 		<pre><code rel="JS" class="js">
 			console.log(2 == 2);    // true
-			console.log(2 == "2");  // true (the string is converted to a number value.) 
+			console.log(2 == "2");  // true (the string is converted to a number value.)
 			console.log(2 === "2"); // false (no type coercion)
 
 			// the Boolean operand "true" is converted to 1; "false" is converted to 0
@@ -492,7 +492,7 @@
 		<dl class="fa">
 			<dd><a href="https://www.w3schools.com/js/js_comparisons.asp">JavaScript Comparison and Logical Operators (by w3schools)</a></dd>
 			<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators">Logical Operators (by MDN)</a></dd>
-		</dl>				
+		</dl>
 	</section>
 	<section><h3>логически оператори (Logical Operators)</h3>
 		<table id="truethTable">
@@ -578,7 +578,7 @@
 				<td>null</td>
 				<td>null</td>
 				<td>-</td>
-			</tr>		
+			</tr>
 		</table>
 	</section>
 	<section><h3>Изчисляване на истинностна стойност - примери</h3>
@@ -639,7 +639,7 @@
 			}else{
 				status = "child"
 			}
-		</code></pre>		
+		</code></pre>
 	</section>
 	<section><h3><code>if-else-if</code> statement</h3>
 		<pre><code rel="Syntax" class="javascript">
@@ -650,7 +650,7 @@
 			}else {
 				изрази, които ще се изпълнят, ако нито едно от горните условия не е истина
 			}
-		</code></pre>		
+		</code></pre>
 		<dl class="fa note" style="font-size: .8em">
 			<dt>Задължително започваме с <code>if{}</code> блок</dt>
 			<dt>След него може да има 0 или повече <code>else if{}</code> блока</dt>
@@ -659,7 +659,7 @@
 	</section>
 	<section><h3 class="advanced">Условен оператор (Conditional (ternary) Operator)</h3>
 		<pre><code rel="Syntax" class="javascript">
-			Условие ? Израз1 : Израз2 
+			Условие ? Израз1 : Израз2
 		</code></pre>
 		<dl class="fa">
 			<dt>ако Условие е <span class="note">истина</span> (израз, който се изчислява до true) оператора връща стойността на <span class="note">Израз1</span></dt>
@@ -683,7 +683,7 @@
 		<img src="images/for_algorithm.png">
 	</section>
 	<section><h3><code>for</code> Statement: пример</h3>
-		<a href="images/JS_Loops.png"><img src="images/JS_Loops.png"></a>		
+		<a href="images/JS_Loops.png"><img src="images/JS_Loops.png"></a>
 	</section>
 	<section><h3><code>for</code> Statement: синтаксис</h3>
 		<pre><code rel="Syntax" class="text">
@@ -699,7 +699,7 @@
 				<dd>ако е лъжа => излиза се от цикъла</dd>
 			<dt>3. increment: изпълнява се след блока. Обикновено тук се променят променливите, които контролират цикъла.</dt>
 		</dl>
-	</section>	
+	</section>
 	<section><h3><code>for</code> Statement: пример 1</h3>
 		<pre><code rel="JS">
 			for (var i = 0; i < 5; i++) {
@@ -718,7 +718,7 @@
 	<section><h3><code>for</code> Statement: пример 2</h3>
 		<pre><code rel="JS">
 			// i е четно число, в интервала [0-10]
-			for (var i = 2; i <= 10; i = i+2){			
+			for (var i = 2; i <= 10; i = i+2){
 				console.log("i=", i);
 			}
 		</code></pre>
@@ -797,7 +797,7 @@
 			***********
 					***
 					***
-		</pre>		
+		</pre>
 	</section>
 
 	<section><h3><code>while</code> statement: синтаксис</h3>
@@ -840,13 +840,13 @@
 					2+3; 		// 2+3 е Expresion
 					x = 5; 		// x = 5 e Expresion
 					console.log(x**6-x) // x**6-x e Expresion
-					x = y = 5;	// тук имаме 2 Expresions: (y = 5) и (x = 5)					
+					x = y = 5;	// тук имаме 2 Expresions: (y = 5) и (x = 5)
 				</code></pre>
-			</dt>			
+			</dt>
 			<dt><span class="note">Statement</span> е израз, който извършва действие, но <span class="note">не се изчислява до стойност</span>! Циклите и <code>if()</code> са пример за Statements.
 				<pre><code rel="JS" class="js">
 					if(1){return 0};  // if Statement
-					while(x = 2){console.log(x)}; // while Statement 
+					while(x = 2){console.log(x)}; // while Statement
 					var x; // variable declaration Statement
 				</code></pre>
 			</dt>
@@ -859,7 +859,7 @@
 		<dl class="fa">
 			<dt>Описанието на задачите е дадено като коментар в съответните HTML и JS полета.</dt>
 			<dt>Работете върху дадения код като добавите код, където е необходимо и изпратете линк на вашия Пен.</p>
-		</dl>		
+		</dl>
 		<iframe height='300' scrolling='no' title='HW2: Comparison Operators & Conditional Statement' src='//codepen.io/webdesigncourse/embed/BLYJGJ/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/BLYJGJ/'>HW2: Comparison Operators & Conditional Statement</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>
 	</section>
 	<section><h3>HW2: Comparison Operators & Conditional Statement</h3>
@@ -870,12 +870,20 @@
 			<iframe height='300' scrolling='no' title='HW1: Comparison Operators & Conditional Statement' src='//codepen.io/webdesigncourse/embed/ryLWzY/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/ryLWzY/'>HW1: Comparison Operators & Conditional Statement</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
 	</iframe>
 	</section>
-	
+
 	<!-- <a href="http://codepen.io/collection/XOEQay/">codepen колекция с примери и задачи</a> -->
 </section>
 
 <section><h2>codepen examples</h2>
 	<p>Повече примери и задачи: <a href="https://codepen.io/collection/XOEQay/2/">JS_Basic_Syntax</a></p>
+</section>
+
+<section><h2>допълнителни ресурси по темата</h2>
+	<dl class="fa">
+		<dt><a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md">You Don't Know JS: Up & Going by Kyle Simpson</a></dt>
+		<dt><a href="http://eloquentjavascript.net/01_values.html">"Values, Types, and Operators" from "Eloquent JavaScript" by Marijn Haverbeke</a></dt>
+		<dt><a href="http://eloquentjavascript.net/02_program_structure.html">"Program Structure" from "Eloquent JavaScript" by Marijn Haverbeke</a></dt>
+	</dl>
 </section>
 
 
