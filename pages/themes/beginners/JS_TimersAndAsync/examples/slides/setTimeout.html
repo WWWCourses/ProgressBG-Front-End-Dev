@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>setTimeout</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	var color = "#DAA371";
+
+	function changeBodyBG(x){
+		// console.log(`changeBodyBG() will change the body background!`);
+		console.log(`x = ${x}`);
+		document.body.style.backgroundColor = color;
+	}
+
+	setTimeout(changeBodyBG, 2000, 5);
+	console.log(`After setTimeout()`);
+</script>
+</html>
