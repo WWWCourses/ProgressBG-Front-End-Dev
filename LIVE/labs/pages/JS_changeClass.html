@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.style1{
+			width: 10em;
+			height: 10em;
+			line-height: 10em;
+			vertical-align: middle;
+			background: purple;
+		}
+		.style2{
+			width: 10em;
+			height: 10em;
+			line-height: 10em;
+			vertical-align: middle;
+			text-align: center;
+			color: #FFF;
+			border-radius: 100%;
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	<button onclick="applyStyle('style1');">apply style1</button>
+	<button onclick="applyStyle('style2');">apply style2</button>
+	<button onclick="removeStyle();">remove style</button>
+	<p class="style2">Paragraph 1</p>
+
+
+	<script type="text/javascript">
+		var pNode = document.querySelector("p:nth-of-type(1)");
+
+		function applyStyle(className) {
+			pNode.className = "alanaala";
+		}
+
+		function removeStyle() {
+			pNode.className = "";
+		}
+
+	</script>
+</body>
+</html>

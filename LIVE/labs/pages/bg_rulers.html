@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BG Rulers</title>
+</head>
+<body>
+<script type="text/javascript">
+var rulers = [
+	["асПАРуХ",681, 700 ],
+	["тЕРвеЛ", 700,718 ],
+	["СеВаР", 738,753],
+	["телЕРИГ", 766,777],
+	["каРДАм", 777, 803],
+	["крум", 803,814 ],
+	["ОмурТАг",814,831]
+];
+
+// ЗАДАЧА: Изпишете в конзолата имената на онези български владетели, които са управлявали повече от 15 години.
+// >>>>>>>>>>НАЧАЛО НА ВАШИЯ КОД >>>>>>>>>>
+for(var i=0; i < rulers.length; i++){	
+	var arr = rulers[i];
+	var rulingPeriod = arr[2] - arr[1];
+
+	if( rulingPeriod > 15){
+		console.log( toCamelCaseCyr( arr[0] ) + " е управлявал " + rulingPeriod + " години.");
+	}
+}
+
+// console.log( toCamelCaseCyr('асП АРуХ') ); // Аспарух
+// <<<<<<<<<< КРАЙ НА ВАШИЯ КОД <<<<<<<<<<<<<
+
+// Очакван резултат,в конзолата:
+// Аспарух е управлявал 19 години.
+// Тервел е управлявал 18 години.
+// Кардам е управлявал 26 години.
+// Омуртаг е управлявал 17 години.
+
+
+
+
+
+
+
+
+// do not modify!
+function toCamelCaseCyr(str) {
+	return str.toLowerCase()
+			    	.replace(/(?:\b|^|[^а-яА-Я])([а-яА-Я])/g, (all, chr) => chr.toUpperCase());
+}
+</script>
+</body>
+</html>

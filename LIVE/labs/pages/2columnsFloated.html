@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2columnsFloated</title>
+	<style type="text/css">
+		.container{
+			height: 80vh;
+			background: #AAA;			
+		}
+		.container:after{
+			clear: both;
+		}
+
+		.left{
+			float: left;
+			width: 45%;
+			height: 100%;
+			background:#E1BFBF;			
+		}
+		.right{
+			float: right;
+			width: 45%;
+			height: 100%;
+			background:#BFE1DE;
+		}
+		.img{
+			width: 80%;
+			margin: 0 auto;
+			height: 33%;
+			border: 1px solid #666;
+			box-sizing: border-box;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="left">
+			<div class="img"></div>
+			<div class="img"></div>
+			<div class="img"></div>
+		</div>
+		<div class="right">
+			<div class="img"></div>
+			<div class="img"></div>
+			<div class="img"></div>
+		</div>
+	</div>
+</body>
+</html>

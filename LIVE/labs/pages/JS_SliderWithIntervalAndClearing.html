@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Slider With Interval And Clearing</title>
+    <style type="text/css">
+    	.slider img{
+    		width: 80%;
+    	}
+    </style>
+</head>
+<body>
+	<div class="slider">
+		<h2>Галерия</h2>
+    <a href="http://lorempixel.com" target="_blank"></a>
+    <div class="buttons">
+			<button class="prev" onclick="prevImage();">Назад</button>
+			<button class="next">Напред</button>
+		</div>
+	<img src="">
+	</div class="slider">
+</body>
+<script type="text/javascript">
+	//##################################################
+	//# примера е базиран върху кода на Йордан Любенов #
+	//##################################################
+	var imageURLs = [
+		"http://imageshack.com/a/img922/3858/5Pd5dc.jpg",
+		"http://imageshack.com/a/img923/3776/lKVbAp.jpg",
+		"http://imageshack.com/a/img923/6770/WXkPF9.jpg",
+		"http://imageshack.com/a/img923/2200/SzDjvi.jpg",
+		"http://imageshack.com/a/img924/8715/tz0p3T.jpg"
+	];
+	var i = 0;
+
+	var nextImageBtn = document.querySelector('.next');
+	var prevImageBtn = document.querySelector('.prev');
+	var imgNode = document.querySelector(".slider img");
+
+	imgNode.src = imageURLs[i];
+
+	function nextImage(e){
+		// ако искаме да разграничим,дали функцията се извиква от addEventListener или от	setInterval:
+	 	if(e){
+	 		console.log(`i = ${i}`);
+	 		console.log("Event Object:")
+	 		console.dir(e);
+
+	 		i = (i+1) % imageURLs.length;
+		  imgNode.src = imageURLs[i];
+		  
+		  clearInterval(id_of_setinterval);
+	 	}else{
+	 		i = (i+1) % imageURLs.length;
+		  imgNode.src = imageURLs[i];
+
+		  console.log(`i = ${i}`)
+	 	}		  
+	}
+
+	function prevImage(){
+		console.log(`i = ${i}`);
+
+		i = (i+4) % imageURLs.length;
+	  imgNode.src = imageURLs[i];
+
+	  clearInterval(id_of_setinterval);
+	}	
+
+	nextImageBtn.addEventListener("click", nextImage);
+	prevImageBtn.addEventListener("click", prevImage);
+
+	// през 1000ms да се извиква nextImage()
+	var id_of_setinterval = setInterval(nextImage, 1000);		
+
+	console.log(`THE END`);
+</script>
+</html>

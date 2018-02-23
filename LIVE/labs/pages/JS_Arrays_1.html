@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays 1</title>
+</head>
+<body>
+	<label>име на студент: <input type="text" name=""></label><br>
+	<label>оценка: <input type="number" name=""></label>
+	<button onclick="enterStudent();">Въведи</button>
+	<hr>
+	<button onclick="showStudent()">Покажи студента с най-висока оценка</button>
+<script type="text/javascript">		
+	var studentsNames = [];
+	var grades = [];
+
+
+	function enterStudent(){
+			var grade = document.querySelector("input[type='number']").value;
+			var studentName = document.querySelector("input[type='text']").value;
+
+
+			studentsNames.push( studentName );
+			grades.push( grade );
+	}
+
+	function showStudent(){
+		// console.log("studentsNames="+studentsNames);
+		// console.log("grades="+grades);
+
+		var currentMax = 0;
+		for( var i = 0; i < grades.length ; i++ ){
+			if( grades[i] > currentMax ){
+				currentMax = grades[1];
+			}
+		}
+
+		console.log("currentMax=" + currentMax);
+
+		// console.log(studentsNames[i] + "-" + grades[i]);
+
+
+	}
+</script>
+</body>
+</html>

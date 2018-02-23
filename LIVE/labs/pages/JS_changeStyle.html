@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.test{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>Note that we set the paragraph font-color to be <b>balck</b>!</h1>
+	<p class="test" style="color: black; font-size: 2em;">Paragraph 1</p>
+
+	<script type="text/javascript">
+	var pNode = document.querySelector(".test");
+
+	// get the inline style of the paragraph:
+	var inlineStyleObj = pNode.style;
+	console.log("look at the style object:");	
+	console.dir(inlineStyleObj);
+
+	console.log("look at the COMPUTED STYLE object:");
+	console.dir( window.getComputedStyle(pNode) );	
+	
+
+	// change the paragraph style, if it has backgroundColor equal to "red":
+	if( window.getComputedStyle(pNode).backgroundColor == "rgb(255, 0, 0)"){		
+		pNode.style.color = "white";
+	}
+	
+
+	</script>
+</body>
+</html>

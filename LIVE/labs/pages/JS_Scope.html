@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scope</title>
+</head>
+<body>
+
+	<label>User Name: <input type="text" name=""></label>
+	<button>OK</button>
+
+
+	<!-- <script type="text/javascript">	
+		function studentMaker(name, age){
+			var obj = {};
+			obj.name=name;
+			obj.age=age;
+			obj.greeting = function(){
+				console.log("Hi :>, I'm " + name);
+			}
+
+			return obj;
+		}
+
+
+		var studentPesho = studentMaker("Pesho", 12);
+		var studentMaria = studentMaker("Maria", 14);
+		
+		console.log(studentPesho.age );
+		console.log(studentMaria.age );
+
+		studentPesho.greeting();
+		studentMaria.greeting();
+
+
+		var teacherPetrov = {
+			name: "Petrov",
+			salary: 1000,
+			greeting: function(){
+				console.log("Good morning, students!");
+			},
+			adress: {
+				country: "UK",
+				town: "London"
+			}
+		}
+	</script> -->
+	<script type="text/javascript">
+		var labelNode = document.body.childNodes[1];
+
+		labelNode.style.backgroundColor = "red";
+
+	</script>
+
+</body>
+</html>

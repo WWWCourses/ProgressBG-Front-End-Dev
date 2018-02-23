@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		p{
+			padding: .5em;
+			border: 1px solid #999;
+		}
+	</style>
+</head>
+<body>
+	<p>Click on me and watch the Console!</p>
+	<script type="text/javascript">
+		var pNode = document.querySelector('p');
+
+		function clickHandler(){			
+			console.log(`2`);
+		}
+
+		console.log(`1`);
+
+		pNode.addEventListener('click', clickHandler);
+
+		console.log(`3`);
+	</script>
+</body>
+</html>

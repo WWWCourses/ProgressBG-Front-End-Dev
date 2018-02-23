@@ -99,20 +99,72 @@
             setTimeout(function/code, milliseconds[, arg1, arg2, ...])
         </code></pre>
         <dl class="fa">
-            <dt>Метода setTimeout() изпълнява зададената функция/код след определен интервал от време.</dt>
-            <dt><span class="note">function</span> трябва да бъде дефиниция на функция: анонимна или променива, в която е дефиницията.</dt>
+            <dt>Метода setTimeout() изпълнява <b>еднократно</b> зададената функция/код след определен интервал от време.</dt>
+            <dt><span class="note">function</span> трябва да бъде дефиниция на функция: анонимна или променлива, в която е дефиницията.</dt>
             <dt>Ако функция е дефинирана с параметри, то можем да подадем съответните аргументи (<span class="note">arg1, arg2, ...</span>) </dt>
         </dl>
     </section>
     <section><h3>Example: createDivsWithTimeout</h3>
         <iframe scrolling='no' title='createDivsWithTimeout' src='//codepen.io/webdesigncourse/embed/WXBpNb/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/WXBpNb/'>createDivsWithTimeout</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+        </iframe>
     </section>
     <section><h3>Reference</h3>
         <dl class="fa">
             <dt><a href="https://www.w3schools.com/jsref/met_win_settimeout.asp">setTimeout() @w3schools</a></dt>
         </dl>
     </section>
+</section>
+
+<section><h2>setInterval()</h2>
+    <section><h3>Syntax</h3>
+        <pre><code rel="Syntax" class="js">
+            setInterval(function/code, milliseconds[, arg1, arg2, ...])
+        </code></pre>
+        <dl class="fa">
+            <dt>Метода setInterval() изпълнява <b>през зададения интервал от време</b> специфицираната функция/код.</dt>
+            <dt>Функцията ще се извиква непрекъснато, докато действието на setInterval() не се прекрати чрез <strong><code>clearInterval()</code></strong> или до затваряне на прозореца на браузера.</dt>
+            <dt><span class="note">function</span> трябва да бъде дефиниция на функция: анонимна или променлива, в която е дефиницията.</dt>
+            <dt>Ако функция е дефинирана с параметри, то можем да подадем съответните аргументи (<span class="note">arg1, arg2, ...</span>) </dt>
+        </dl>
+    </section>
+    <section><h3>Example: changeColorWithSetInterval</h3>
+        <iframe scrolling='no' title='changeColorWithSetInterval' src='//codepen.io/webdesigncourse/embed/VQByBr/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/VQByBr/'>changeColorWithSetInterval</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>Reference</h3>
+        <dl class="fa">
+            <dt><a href="https://www.w3schools.com/jsref/met_win_setinterval.asp">setInterval() @w3schools</a></dt>
+        </dl>
+    </section>
+</section>
+
+<section><h2>clearInterval()</h2>
+    <section><h3>Syntax</h3>
+        <pre><code rel="Syntax" class="js">
+            clearInterval(id_of_setinterval)
+        </code></pre>
+        <dl class="fa">
+            <dt>Прекратява изпълнението на даден clearInterval</dt>
+            <dt><span class="note">id_of_setinterval</span> е стойността върната при извикването на setInterval()</dt>
+        </dl>
+        <pre><code rel="Example" class="js">
+            // взимаме ID на setInterval():
+            var intervalID = setInterval(foo, 1000);
+
+            // прекратяваме изпълнението на съответния интервал:
+            clearInterval(intervalID);
+        </code></pre>
+    </section>
+    <section><h3>Example: clearInterval()</h3>
+        <iframe scrolling='no' title='Example: clearInterval()' src='//codepen.io/webdesigncourse/embed/yvqvRb/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/yvqvRb/'>Example: clearInterval()</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>Reference</h3>
+        <dl class="fa">
+            <dt><a href="https://www.w3schools.com/jsref/met_win_clearinterval.asp">clearInterval() @w3schools</a></dt>
+        </dl>
+    </section>
+
 </section>
 
 
