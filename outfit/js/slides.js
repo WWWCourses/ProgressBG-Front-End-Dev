@@ -47,6 +47,14 @@ function  PrettyPreCode(){
         codeNodes[i].style.overflow="auto";
     }
 }
+function autoTitleLinksWrapImages(){
+    var imgs = document.querySelectorAll('.reveal section a>img');
+    for (var i = 0; i < imgs.length; i++) {
+        imgs[i].parentElement.setAttribute("title", "click for bigger image")
+    }
+}
+
 
 PrettyPreCode();
+autoTitleLinksWrapImages();
 

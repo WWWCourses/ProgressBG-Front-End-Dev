@@ -144,14 +144,16 @@
                 -3px -3px 3px #FFBA7E,
                 4px 4px 4px #FFBA7E,
                 -4px -4px 4px #FFBA7E;
-            animation: shake .5s ease-in-out 1;
+            animation: shake .05s ease-in-out 3;
         }
         @keyframes shake{
             from{
-                font-size: 1.5em;
+                transform: rotate(15deg);
                 opacity: .2;
             }
-            to{font-size: 1em;}
+            to{
+                transform: rotate(-15deg);
+            }
         }
         .iep_syllabus_themes .label{
             display: inline-block;

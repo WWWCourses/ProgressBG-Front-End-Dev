@@ -9,3 +9,5 @@
 *.sublime-workspace
 *.sublime-project
 !gh-pages.sublime-project
+
+.docs

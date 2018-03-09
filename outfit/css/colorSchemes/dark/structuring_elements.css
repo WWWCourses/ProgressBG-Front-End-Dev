@@ -15,6 +15,10 @@
     color: #EDE59E;
 }
 
+.reveal section .important:before{
+    color: #A70215;
+}
+
 
 /* results blocks */
 .reveal>.slides div.results_h{

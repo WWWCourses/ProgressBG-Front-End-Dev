@@ -429,6 +429,25 @@ section.copyright>.license{
   font-size: 1em;
 }
 
+/*marked as important*/
+.reveal section .important{
+  font-size: .9em;
+}
+.reveal section .important:before{
+  /*triangle*/
+  content: "\f071";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*my style*/
+  margin-right: .3em;
+  /*color: rgba(250, 23,23, 0.3);*/
+  opacity: .8;
+  font-size: .8em;
+}
+
 /*custom tooltip:*/
 [data-tooltip]{
   position: relative;
