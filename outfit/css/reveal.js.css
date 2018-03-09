@@ -81,7 +81,7 @@
     font-size: .6em;
     opacity: .5;
     color: #999;
-} 
+}
 .reveal section dl.fa>dt{
   font-weight: normal;
   margin: .5em 0 0 0;
@@ -314,9 +314,9 @@ section.copyright>.license{
 }
 .reveal section iframe{
   display: block;
-  margin: 1em 0 1em 0;
+  margin: 1em auto;
   width: 80%;
-  height: 40vh;
+  height: 70vh;
   /*height: auto;*/
 }
 .reveal section iframe.resultFrame{
@@ -398,6 +398,25 @@ section.copyright>.license{
 .reveal section .advanced:before{
   /*fa style*/
   content: "\f19d";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*my style*/
+  margin-right: .3em;
+  /*color: rgba(250, 23,23, 0.3);*/
+  opacity: .8;
+  font-size: 1em;
+}
+
+/*marked for laugh*/
+.reveal section .smile{
+  font-size: .7em;
+}
+.reveal section .smile:before{
+  /*fa style*/
+  content: "\f118";
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   text-rendering: auto;

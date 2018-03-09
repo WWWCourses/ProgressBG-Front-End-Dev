@@ -11,6 +11,10 @@
     color: #ef9a9a;
 }
 
+.reveal section .smile:before{
+    color: #EDE59E;
+}
+
 
 /* results blocks */
 .reveal>.slides div.results_h{

@@ -1,0 +1,1193 @@
+== Info:   Trying 195.191.149.35...
+== Info: Connected to progressbg.net (195.191.149.35) port 80 (#0)
+=> Send header, 78 bytes (0x4e)
+0000: GET / HTTP/1.1
+0010: Host: progressbg.net
+0026: User-Agent: curl/7.47.0
+003f: Accept: */*
+004c: 
+<= Recv header, 17 bytes (0x11)
+0000: HTTP/1.1 200 OK
+<= Recv header, 37 bytes (0x25)
+0000: Date: Fri, 09 Mar 2018 16:37:25 GMT
+<= Recv header, 16 bytes (0x10)
+0000: Server: Apache
+<= Recv header, 40 bytes (0x28)
+0000: Expires: Thu, 19 Nov 1981 08:52:00 GMT
+<= Recv header, 79 bytes (0x4f)
+0000: Cache-Control: no-store, no-cache, must-revalidate, post-check=0
+0040: , pre-check=0
+<= Recv header, 18 bytes (0x12)
+0000: Pragma: no-cache
+<= Recv header, 46 bytes (0x2e)
+0000: X-Pingback: http://progressbg.net/xmlrpc.php
+<= Recv header, 64 bytes (0x40)
+0000: Set-Cookie: PHPSESSID=0d05dd2344cfe499d61f51a01ab8a11f; path=/
+<= Recv header, 86 bytes (0x56)
+0000: Set-Cookie: qtrans_cookie_test=qTranslate+Cookie+Test; path=/; d
+0040: omain=progressbg.net
+<= Recv header, 104 bytes (0x68)
+0000: Set-Cookie: 6666cd76f96956469e7be39d750cc7d9=1520613446; expires
+0040: =Fri, 09-Mar-2018 17:37:26 GMT; path=/
+<= Recv header, 28 bytes (0x1c)
+0000: Transfer-Encoding: chunked
+<= Recv header, 40 bytes (0x28)
+0000: Content-Type: text/html; charset=UTF-8
+<= Recv header, 2 bytes (0x2)
+0000: 
+<= Recv data, 771 bytes (0x303)
+0000: 1069d
+0007: ...<!doctype html>..<html dir="ltr" lang="bg-BG">...<head>..<met
+0047: a charset="UTF-8" />....<title>Progress | .................... .
+0087: ......................... ............</title>......<!--[if lte 
+00c7: IE 8]>..  <link rel="stylesheet" href="http://progressbg.net/wp-
+0107: content/themes/nebraska/css/ie8.css" media="screen" />..<![endif
+0147: ]-->....<!--[if IE]>...<script src="http://html5shiv.googlecode.
+0187: com/svn/trunk/html5.js"></script>..    <script src="http://css3-
+01c7: mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"><
+0207: /script>..<![endif]-->....<!--[if gte IE 9]>..  <style type="tex
+0247: t/css">..    .gradient {..       filter: none;..    }..  </style
+0287: >..<![endif]-->......<!-- Mobile Specific Metas..===============
+02c7: =================================== -->....<meta name="viewp
+<= Recv data, 12132 bytes (0x2f64)
+0000: ort" content="width=device-width, initial-scale=1, maximum-scale
+0040: =1" /> ....<!-- Favicons..======================================
+0080: ============ -->....<link rel="shortcut icon" href="">....<link 
+00c0: rel="apple-touch-icon" href="">..<link rel="apple-touch-icon" si
+0100: zes="72x72" href="" />..<link rel="apple-touch-icon" sizes="114x
+0140: 114" href="" />....<link rel="pingback" href="http://progressbg.
+0180: net/xmlrpc.php" />.....<!-- All in One SEO Pack 2.2.7.1 by Micha
+01c0: el Torbert of Semper Fi Web Design[88,263] -->.<meta name="descr
+0200: iption"  content=".............. .... ........................ .
+0240: . Java, PHP, C++. ............ .. ........ .......... MS Access,
+0280:  MySQL. ................ .... MS Office - MS Word, MS Excel, MS 
+02c0: PowerPoint, .............. .... WEB-Design," />..<meta name="key
+0300: words"  content="........................ ................, html
+0340: , css, photoshop, .............., ................, microsoft wo
+0380: rd, excel, ms excel, illustrator, corel draw, 3ds max, 3d studio
+03c0:  max, php" />..<link rel="canonical" href="http://progressbg.net
+0400: /" />...<script type="text/javascript">...  var _gaq = _gaq || [
+0440: ];...  _gaq.push(['_setAccount', 'UA-39232660-1']);...  _gaq.pus
+0480: h(['_trackPageview']);...  (function() {...    var ga = document
+04c0: .createElement('script'); ga.type = 'text/javascript'; ga.async 
+0500: = true;....ga.src = ('https:' == document.location.protocol ? 'h
+0540: ttps://ssl' : 'http://www') + '.google-analytics.com/ga.js';... 
+0580:    var s = document.getElementsByTagName('script')[0]; s.parentN
+05c0: ode.insertBefore(ga, s);...  })();...</script>.<!-- /all in one 
+0600: seo pack -->.<link rel="alternate" type="application/rss+xml" ti
+0640: tle=".............. | .................... .............. &raquo
+0680: ; ................" href="http://progressbg.net/feed/" />.<link 
+06c0: rel="alternate" type="application/rss+xml" title="..............
+0700:  | .................... .............. &raquo; ................ 
+0740: .... .................." href="http://progressbg.net/comments/fe
+0780: ed/" />.<link rel='stylesheet' id='gallery-bank.css-css'  href='
+07c0: http://progressbg.net/wp-content/plugins/gallery-bank/assets/css
+0800: /gallery-bank.css?ver=3.4' type='text/css' media='all' />.<link 
+0840: rel='stylesheet' id='prettyPhoto.css-css'  href='http://progress
+0880: bg.net/wp-content/plugins/gallery-bank/assets/css/prettyPhoto.cs
+08c0: s?ver=3.4' type='text/css' media='all' />.<link rel='stylesheet'
+0900:  id='dcwp_plugin_admin_dcsmt_css-css'  href='http://progressbg.n
+0940: et/wp-content/plugins/social-media-tabs/css/admin.css?ver=3.4' t
+0980: ype='text/css' media='all' />.<link rel='stylesheet' id='theme-c
+09c0: ss'  href='http://progressbg.net/wp-content/themes/nebraska/styl
+0a00: e.css?ver=1.1' type='text/css' media='screen, projection' />.<li
+0a40: nk rel='stylesheet' id='layout-css'  href='http://progressbg.net
+0a80: /wp-content/themes/nebraska/layout.css?ver=1.1' type='text/css' 
+0ac0: media='screen, projection' />.<link rel='stylesheet' id='respons
+0b00: ive-css'  href='http://progressbg.net/wp-content/themes/nebraska
+0b40: /responsive.css?ver=1.1' type='text/css' media='screen, projecti
+0b80: on' />.<link rel='stylesheet' id='superfish-css'  href='http://p
+0bc0: rogressbg.net/wp-content/themes/nebraska/superfish.css?ver=1.1' 
+0c00: type='text/css' media='screen, projection' />.<link rel='stylesh
+0c40: eet' id='prettyphoto-css'  href='http://progressbg.net/wp-conten
+0c80: t/themes/nebraska/css/prettyPhoto.css?ver=1.1' type='text/css' m
+0cc0: edia='screen, projection' />.<link rel='stylesheet' id='nonverbl
+0d00: aster-css'  href='http://progressbg.net/wp-content/themes/nebras
+0d40: ka/css/nonverblaster.css?ver=1.1' type='text/css' media='screen,
+0d80:  projection' />.<link rel='stylesheet' id='flexslider-css'  href
+0dc0: ='http://progressbg.net/wp-content/themes/nebraska/css/flexslide
+0e00: r.css?ver=1.0' type='text/css' media='all' />.<link rel='stylesh
+0e40: eet' id='contact-form-7-css'  href='http://progressbg.net/wp-con
+0e80: tent/plugins/contact-form-7/includes/css/styles.css?ver=3.6' typ
+0ec0: e='text/css' media='all' />.<link rel='stylesheet' id='tiptipcss
+0f00: -css'  href='http://progressbg.net/wp-content/plugins/pricing-ta
+0f40: ble/css/site/tipTip.css?ver=3.4' type='text/css' media='all' />.
+0f80: <link rel='stylesheet' id='rs-settings-css'  href='http://progre
+0fc0: ssbg.net/wp-content/plugins/revslider/rs-plugin/css/settings.css
+1000: ?ver=3.4' type='text/css' media='all' />.<link rel='stylesheet' 
+1040: id='rs-captions-css'  href='http://progressbg.net/wp-content/plu
+1080: gins/revslider/rs-plugin/css/captions.css?ver=3.4' type='text/cs
+10c0: s' media='all' />.<link rel='stylesheet' id='testimonial-rotator
+1100: -style-css'  href='http://progressbg.net/wp-content/plugins/test
+1140: imonial-rotator/testimonial-rotator-style.css?ver=3.4' type='tex
+1180: t/css' media='all' />.<link rel='stylesheet' id='font-awesome-cs
+11c0: s'  href='https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css
+1200: /font-awesome.css?ver=3.4' type='text/css' media='all' />.<scrip
+1240: t type='text/javascript' src='http://progressbg.net/wp-includes/
+1280: js/jquery/jquery.js?ver=1.7.2'></script>.<script type='text/java
+12c0: script' src='http://progressbg.net/wp-content/plugins/gallery-ba
+1300: nk/assets/js/jquery.masonry.min.js?ver=3.4'></script>.<script ty
+1340: pe='text/javascript' src='http://progressbg.net/wp-content/plugi
+1380: ns/gallery-bank/assets/js/isotope.pkgd.js?ver=3.4'></script>.<sc
+13c0: ript type='text/javascript' src='http://progressbg.net/wp-conten
+1400: t/plugins/gallery-bank/assets/js/imgLiquid.js?ver=3.4'></script>
+1440: .<script type='text/javascript' src='http://progressbg.net/wp-co
+1480: ntent/plugins/gallery-bank/assets/js/jquery.prettyPhoto.js?ver=3
+14c0: .4'></script>.<script type='text/javascript' src='http://progres
+1500: sbg.net/wp-includes/js/comment-reply.js?ver=3.4'></script>.<scri
+1540: pt type='text/javascript' src='http://progressbg.net/wp-content/
+1580: plugins/pricing-table/js/site/icon.js?ver=3.4'></script>.<script
+15c0:  type='text/javascript' src='http://progressbg.net/wp-content/pl
+1600: ugins/pricing-table/js/site/jquery.tipTip.minified.js?ver=3.4'><
+1640: /script>.<script type='text/javascript' src='http://progressbg.n
+1680: et/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.p
+16c0: lugins.min.js?ver=3.4'></script>.<script type='text/javascript' 
+1700: src='http://progressbg.net/wp-content/plugins/revslider/rs-plugi
+1740: n/js/jquery.themepunch.revolution.min.js?ver=3.4'></script>.<scr
+1780: ipt type='text/javascript' src='http://progressbg.net/wp-content
+17c0: /plugins/social-media-tabs/js/jquery.dcsmt.1.0.js?ver=3.4'></scr
+1800: ipt>.<script type='text/javascript' src='http://progressbg.net/w
+1840: p-content/plugins/testimonial-rotator/js/jquery.cycletwo.js?ver=
+1880: 3.4'></script>.<script type='text/javascript' src='http://progre
+18c0: ssbg.net/wp-content/plugins/testimonial-rotator/js/jquery.cyclet
+1900: wo.addons.js?ver=3.4'></script>.<script type='text/javascript' s
+1940: rc='http://progressbg.net/wp-includes/js/swfobject.js?ver=2.2-20
+1980: 120417'></script>.<link rel="EditURI" type="application/rsd+xml"
+19c0:  title="RSD" href="http://progressbg.net/xmlrpc.php?rsd" />.<lin
+1a00: k rel="wlwmanifest" type="application/wlwmanifest+xml" href="htt
+1a40: p://progressbg.net/wp-includes/wlwmanifest.xml" /> .<link rel='p
+1a80: rev' title='................' href='http://progressbg.net/%d0%ba
+1ac0: %d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d0%b8/' />.<link rel='next'
+1b00:  title='..................' href='http://progressbg.net/%d0%bf%d
+1b40: 0%b0%d1%80%d1%82%d0%bd%d1%8c%d0%be%d1%80%d0%b8/' />.        <scr
+1b80: ipt language="JavaScript">
+1b9c:             var wppt_url = "http://progressbg.net/wp-content/plu
+1bdc: gins/pricing-table/";
+1bf3:         </script>
+1c06:     .<meta http-equiv="Content-Language" content="bg-BG" />.<sty
+1c46: le type="text/css" media="screen">..qtrans_flag span { display:n
+1c86: one }..qtrans_flag { height:12px; width:18px; display:block }..q
+1cc6: trans_flag_and_text { padding-left:20px }..qtrans_flag_bg { back
+1d06: ground:url(http://progressbg.net/wp-content/plugins/qtranslate/f
+1d46: lags/bg.png) no-repeat }..qtrans_flag_en { background:url(http:/
+1d86: /progressbg.net/wp-content/plugins/qtranslate/flags/gb.png) no-r
+1dc6: epeat }.</style>.<link hreflang="en" href="http://progressbg.net
+1e06: /?lang=en" rel="alternate" />.<style type="text/css">#wrap #cont
+1e46: ent {float: right;}#wrap #sidebar {float: both;}#wrap #sidebar .
+1e86: widget-container {margin-right: 20px;margin-both: 0px;}#wrap #si
+1ec6: debar_second {float:right;}#wrap #sidebar_second .widget-contain
+1f06: er {margin-left: 20px;margin-right: 0px;}#vtabs > div, .home-tit
+1f46: le span, .home-title-link, .carousel-navi, #service-loader, body
+1f86:  > #wrap { background: #FFFFFF !important; }#lambda-featured-hea
+1fc6: der-wrap { background:#ffffff url(http://progressbg.net/wp-conte
+2006: nt/uploads/2013/03/christmas_gift.jpg) no-repeat; }body {color:#
+2046: 4d4b4d;font-size:13px;font-family:"Trebuchet MS", Helvetica, san
+2086: s-serif;font-weight:normal;font-style:normal;}.portfolio-info sp
+20c6: an {color:#4d4b4d;}h1 { font-family: Arial, Helvetica, sans-seri
+2106: f; font-size: 24px;}h2 { font-family: Arial, Helvetica, sans-ser
+2146: if;font-size: 20px;}h3 { font-family: Arial, Helvetica, sans-ser
+2186: if;font-size: 18px;}h4 { font-family: Arial, Helvetica, sans-ser
+21c6: if;font-size: 16px;}h5 { font-family: Arial, Helvetica, sans-ser
+2206: if;font-size: 14px;}h6 { font-family: Arial, Helvetica, sans-ser
+2246: if;font-size: 12px;}h1, h2, h3, h4, h5, h6 {color: #444444;} h1,
+2286:  h2, h3, h4, h5, h6 {font-weight: normal;font-style: normal; }sp
+22c6: an.client-title strong {font-family: Arial, Helvetica, sans-seri
+2306: f; }h3.trigger, p.trigger, ul.tabs li {font-size:18px;font-famil
+2346: y:Arial, Helvetica, sans-serif;font-weight:normal;font-style:nor
+2386: mal;text-transform:capitalize;}h3.trigger a, p.trigger a, ul.tab
+23c6: s li a {color:#444444;}.member-name {color:#ffffff;font-size:18p
+2406: x;font-family:Arial, Helvetica, sans-serif;font-weight:normal;fo
+2446: nt-style:normal;text-transform:capitalize;}.archiv-title {color:
+2486: #333333;font-size:14px;font-family:Arial, Helvetica, sans-serif;
+24c6: font-weight:normal;font-style:normal;text-transform:uppercase;}a
+2506: rticle.service h3 {font-size:18px;font-family:Arial, Helvetica, 
+2546: sans-serif;font-weight:normal;font-style:normal;text-transform:c
+2586: apitalize;}article.service-box h3 {font-size:24px;font-family:Ar
+25c6: ial, Helvetica, sans-serif;font-weight:normal;font-style:normal;
+2606: text-transform:capitalize;}#vmenu ul li h3 {color:#444444;font-s
+2646: ize:18px;font-family:Arial, Helvetica, sans-serif;font-weight:no
+2686: rmal;font-style:normal;text-transform:capitalize;}#page-title, .
+26c6: featured-header-title {color:#444444;font-size:28px;font-family:
+2706: Arial, Helvetica, sans-serif;font-weight:normal;font-style:norma
+2746: l;text-transform:uppercase;}.home-title, .portfolio-info .home-t
+2786: itle span {color:#333333;font-size:14px;font-family:Arial, Helve
+27c6: tica, sans-serif;font-weight:normal;font-style:normal;text-trans
+2806: form:uppercase;}p.teaser-text {color:#555555;font-size:18px;font
+2846: -family:Arial, Helvetica, sans-serif;font-weight:normal;font-sty
+2886: le:normal;text-transform:;}#logo h1, #logo h1 a {color:#666666;f
+28c6: ont-size:34px;font-family:Arial, Helvetica, sans-serif;font-weig
+2906: ht:normal;font-style:normal;text-transform:uppercase;}#sidebar .
+2946: widget-title, #reply-title, .comments-title, h3.author-name, #si
+2986: debar_second .widget-title, .widget-sidebar .widget-title, .lamb
+29c6: da-header-widget .widget-title {color:#333333;font-size:14px;fon
+2a06: t-family:Arial, Helvetica, sans-serif;font-weight:normal;font-st
+2a46: yle:normal;text-transform:uppercase;}.widget-title a { color:#33
+2a86: 3333;}#footer .widget-title {color:#333333;font-size:14px;font-f
+2ac6: amily:Arial, Helvetica, sans-serif;font-weight:normal;font-style
+2b06: :normal;text-transform:uppercase;}.entry-title { color:#444444;f
+2b46: ont-size:24px;font-family:Arial, Helvetica, sans-serif;font-weig
+2b86: ht:normal;font-style:normal;text-transform:capitalize;}.entry-ti
+2bc6: tle a { color:#444444;}.recent-post .entry-title { color:#444444
+2c06: ;font-size:18px;font-family:Arial, Helvetica, sans-serif;font-we
+2c46: ight:normal;font-style:normal;text-transform:capitalize;}.link-p
+2c86: ost-title { font-size:24px;font-family:Arial, Helvetica, sans-se
+2cc6: rif;font-weight:normal;font-style:normal;text-transform:capitali
+2d06: ze;}.link-post-title a { color:#444444;}.entry-meta, .entry-meta
+2d46: -single-post { color:#999999;font-size:12px;font-family:Arial, H
+2d86: elvetica, sans-serif;font-weight:normal;font-style:normal;text-t
+2dc6: ransform:capitalize;}.entry-meta-single-post a, .entry-meta a { 
+2e06: color:#999999;}.caption.themecolor_background {background-color:
+2e46:  #4CB4E0 ;}.caption.themecolor_normal {color: #4CB4E0;}.themecol
+2e86: or-background {background: #4CB4E0;-moz-border-radius: 2px;borde
+2ec6: r-radius: 2px;padding: 5px 10px;}.themebutton.button {background
+2f06: : #4CB4E0;color:#FFFFFF;}.themebutton2:hover {background: #4CB4E
+2f46: 0;}#navigation ul li a {color:
+<= Recv data, 12132 bytes (0x2f64)
+0000: #555555;font-size:14px;font-family:"HelveticaNeue","Helvetica Ne
+0040: ue",Helvetica,Arial,sans-serif;font-weight:normal;font-style:nor
+0080: mal;text-transform:capitalize;}#navigation ul.sub-menu li a {col
+00c0: or:#FFFFFF !important;font-size:12px;font-family:"HelveticaNeue"
+0100: ,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:normal;
+0140: font-style:normal;text-transform:capitalize;}#navigation ul a:ho
+0180: ver {background: #ffffff;color: #4CB4E0 !important;}#navigation 
+01c0: ul li:hover{background: #ffffff;}#navigation ul.sub-menu li:hove
+0200: r, #navigation ul.sub-menu a:hover{background:none !important;}#
+0240: navigation ul li:hover a {color: #4CB4E0;border-top:1px solid #4
+0280: CB4E0;}#navigation ul li ul li:hover a{color: #555555 !important
+02c0: ;}#navigation ul.sub-menu .current-menu-ancestor a {color: #5555
+0300: 55 !important;}#navigation ul.sub-menu .current-menu-ancestor ul
+0340:  a {color: #FFFFFF !important;}#navigation ul.sub-menu .current-
+0380: menu-ancestor ul a:hover {color: #555555 !important;}#navigation
+03c0:  ul.sub-menu .current-menu-ancestor ul li.active > a {color: #55
+0400: 5555 !important;}#navigation ul li ul li:hover ul li a {color: #
+0440: FFFFFF !important;}#navigation ul.sub-menu a:hover {color: #5555
+0480: 55 !important;}#navigation ul > li.active > a {background: #4CB4
+04c0: E0 !important;color: #ffffff !important;}#navigation ul > li ul 
+0500: li ul li.active > a,#navigation ul > li ul li.active > a {color:
+0540:  #555555 !important;background: none !important;}#navigation ul.
+0580: sub-menu {background-color: rgb(76,180,224);background-color: rg
+05c0: ba(76,180,224,0.9);}#navigation ul li ul li:hover a.sf-with-ul:a
+0600: fter, .sub-menu .sf-with-ul:after { left: 100%; margin-left:-10p
+0640: x; border: solid transparent; content: " "; height: 0; width: 0;
+0680:  position: absolute; pointer-events: none; }#navigation ul li ul
+06c0:  li:hover a.sf-with-ul:after, .sub-menu .sf-with-ul:after { bord
+0700: er-left-color: #FFFFFF; border-width: 5px; top: 50%; margin-top:
+0740:  -5px; }a,.widget-sidebar a:hover,#sidebar_second a:hover,#sideb
+0780: ar a:hover,ul.archive li a:hover,p.search-title span, p.tag-titl
+07c0: e span,#logo h1 a:hover,.entry-content a,.portfolio-info a,ul.ar
+0800: chive,.entry-title a:hover,#teaser-content a,.themecolor,.tag-li
+0840: nks a:hover,ul.page-numbers li span.current,ul.filter_portfolio 
+0880: a:hover,ul.filter_portfolio a.selected,#vmenu li.selected:hover 
+08c0: h3,#vmenu li.selected h3,#mobile-menu li a,ul.tabs li a:hover,.t
+0900: estimonial-name span,#footer a:hover,.entry-meta a:hover,.mm-tri
+0940: gger.active,.mm-trigger:hover,.entry-meta-single-post a:hover{co
+0980: lor: #4CB4E0;}h3.trigger.active a,p.trigger.active a,h3.trigger:
+09c0: hover a ,p.trigger:hover a {color: #4CB4E0 !important;}.portfoli
+0a00: o-title-below-wrap a,.tag_links a,.cta-button,.nevada-caption.da
+0a40: rk .excerpt:hover,.nevada-caption.white .excerpt:hover,.quote,.l
+0a80: ink-post-title a,.entry-attachment .entry-caption,.gallery-capti
+0ac0: on,.lambda-pricingtable.featured .lambda-pricingtable-top,.testi
+0b00: monial-company,.tagcloud a,.lambda_widget_portfolio li:before,.w
+0b40: idget_links li:before,.widget_nav_menu li:before,.widget_pages l
+0b80: i:before,.widget_meta li:before,.widget_categories li:before,.wi
+0bc0: dget_archive li:before,.widget_recent_entries li:before,.widget_
+0c00: recent_comments li:before,ul.archive li:before,.lambda-pricingta
+0c40: ble.featured .lambda-table-button,ul.tabs li a.active {backgroun
+0c80: d: #4CB4E0;}.lambda-table-button:hover {background: #4CB4E0 !imp
+0cc0: ortant;}.searchlens:hover {background: #4CB4E0 url(http://progre
+0d00: ssbg.net/wp-content/themes/nebraska/images/icons/search-icon.png
+0d40: ); background-repeat: no-repeat;background-position: center cent
+0d80: er;}.member-info,.camera_wrap .camera_pag .camera_pag_ul li:hove
+0dc0: r > span,.camera_wrap .camera_pag .camera_pag_ul li.cameracurren
+0e00: t > span,.camera_bar_cont span,.lambda-dropcap2,.lambda-highligh
+0e40: t1,.flex-control-nav li a:hover,.flex-control-nav li a.active,.e
+0e80: dit-link a:hover,.permalink-hover:hover,#slider-nav a#slider-nex
+0ec0: t:hover,#slider-nav a#slider-prev:hover,.post-slider-nav a.slide
+0f00: r-prev:hover,.post-slider-nav a.slider-next:hover,#slider-bullet
+0f40: s a.activeSlide,#slider-bullets a:hover,#wp-calendar td#today,.p
+0f80: format,.lambda_widget_video .lambda-video,input[type="submit"], 
+0fc0: input[type="reset"], input[type="button"] {background-color: #4C
+1000: B4E0;} .camera_commands,.camera_prev,.camera_next,.flex-directio
+1040: n-nav a,.lambda-featured-header-caption {background-color: rgb(7
+1080: 6,180,224);background-color:rgba(76,180,224,0.9);}.tp-caption.ne
+10c0: braska-style,.tp-rightarrow.large,.tp-leftarrow.large{background
+1100: -color: rgb(76,180,224) !important;background-color:rgba(76,180,
+1140: 224,0.9) !important;}.tp-leftarrow:hover,.tp-rightarrow:hover {b
+1180: ackground-color: rgb(85,85,85) !important;background-color: rgba
+11c0: (85,85,85,0.9) !important;-webkit-transition:.2s all linear;-moz
+1200: -transition:.2sall linear;-o-transition:.2sall linear;-ms-transi
+1240: tion:.2sall linear;transition:.2sall linear;}::-moz-selection{co
+1280: lor: #FFFFFF !important;background: #4CB4E0;}::selection {color:
+12c0:  #FFFFFF !important;background:#4CB4E0;}ul.lambda-sociallinks li
+1300:  a.twitter { background: #4CB4E0 url(http://progressbg.net/wp-co
+1340: ntent/themes/nebraska/images/icons/social/twitter.png); }ul.lamb
+1380: da-sociallinks li a.facebook { background: #4CB4E0 url(http://pr
+13c0: ogressbg.net/wp-content/themes/nebraska/images/icons/social/face
+1400: book.png); }ul.lambda-sociallinks li a.googleplus { background: 
+1440: #4CB4E0 url(http://progressbg.net/wp-content/themes/nebraska/ima
+1480: ges/icons/social/google_plus.png); }ul.lambda-sociallinks li a.d
+14c0: elicious { background: #4CB4E0 url(http://progressbg.net/wp-cont
+1500: ent/themes/nebraska/images/icons/social/delicious.png); }ul.lamb
+1540: da-sociallinks li a.grooveshark { background: #4CB4E0 url(http:/
+1580: /progressbg.net/wp-content/themes/nebraska/images/icons/social/g
+15c0: rooveshark.png); }ul.lambda-sociallinks li a.flickr { background
+1600: : #4CB4E0 url(http://progressbg.net/wp-content/themes/nebraska/i
+1640: mages/icons/social/flickr.png); }ul.lambda-sociallinks li a.inst
+1680: agram { background: #4CB4E0 url(http://progressbg.net/wp-content
+16c0: /themes/nebraska/images/icons/social/instagram.png); }ul.lambda-
+1700: sociallinks li a.picasa { background: #4CB4E0 url(http://progres
+1740: sbg.net/wp-content/themes/nebraska/images/icons/social/picasa.pn
+1780: g); }ul.lambda-sociallinks li a.fivehundredpx { background: #4CB
+17c0: 4E0 url(http://progressbg.net/wp-content/themes/nebraska/images/
+1800: icons/social/500px.png); }ul.lambda-sociallinks li a.youtube { b
+1840: ackground: #4CB4E0 url(http://progressbg.net/wp-content/themes/n
+1880: ebraska/images/icons/social/youtube.png); }ul.lambda-sociallinks
+18c0:  li a.vimeo { background: #4CB4E0 url(http://progressbg.net/wp-c
+1900: ontent/themes/nebraska/images/icons/social/vimeo.png); }ul.lambd
+1940: a-sociallinks li a.dribbble { background: #4CB4E0 url(http://pro
+1980: gressbg.net/wp-content/themes/nebraska/images/icons/social/dribb
+19c0: ble.png); }ul.lambda-sociallinks li a.digg { background: #4CB4E0
+1a00:  url(http://progressbg.net/wp-content/themes/nebraska/images/ico
+1a40: ns/social/digg.png); }ul.lambda-sociallinks li a.pinterest { bac
+1a80: kground: #4CB4E0 url(http://progressbg.net/wp-content/themes/neb
+1ac0: raska/images/icons/social/pinterest.png); }ul.lambda-sociallinks
+1b00:  li a.behance { background: #4CB4E0 url(http://progressbg.net/wp
+1b40: -content/themes/nebraska/images/icons/social/behance.png); }ul.l
+1b80: ambda-sociallinks li a.deviantart { background: #4CB4E0 url(http
+1bc0: ://progressbg.net/wp-content/themes/nebraska/images/icons/social
+1c00: /deviantart.png); }ul.lambda-sociallinks li a.dropbox { backgrou
+1c40: nd: #4CB4E0 url(http://progressbg.net/wp-content/themes/nebraska
+1c80: /images/icons/social/dropbox.png); }ul.lambda-sociallinks li a.f
+1cc0: orrst { background: #4CB4E0 url(http://progressbg.net/wp-content
+1d00: /themes/nebraska/images/icons/social/forrst.png); }ul.lambda-soc
+1d40: iallinks li a.lastfm { background: #4CB4E0 url(http://progressbg
+1d80: .net/wp-content/themes/nebraska/images/icons/social/lastfm.png);
+1dc0:  }ul.lambda-sociallinks li a.aim { background: #4CB4E0 url(http:
+1e00: //progressbg.net/wp-content/themes/nebraska/images/icons/social/
+1e40: aim.png); }ul.lambda-sociallinks li a.soundcloud { background: #
+1e80: 4CB4E0 url(http://progressbg.net/wp-content/themes/nebraska/imag
+1ec0: es/icons/social/soundcloud.png); }ul.lambda-sociallinks li a.fou
+1f00: rsquare { background: #4CB4E0 url(http://progressbg.net/wp-conte
+1f40: nt/themes/nebraska/images/icons/social/foursquare.png); }ul.lamb
+1f80: da-sociallinks li a.github { background: #4CB4E0 url(http://prog
+1fc0: ressbg.net/wp-content/themes/nebraska/images/icons/social/github
+2000: _alt.png); }ul.lambda-sociallinks li a.linkedin { background: #4
+2040: CB4E0 url(http://progressbg.net/wp-content/themes/nebraska/image
+2080: s/icons/social/linkedin.png); }ul.lambda-sociallinks li a.xing {
+20c0:  background: #4CB4E0 url(http://progressbg.net/wp-content/themes
+2100: /nebraska/images/icons/social/xing.png); }ul.lambda-sociallinks 
+2140: li a.wordpress { background: #4CB4E0 url(http://progressbg.net/w
+2180: p-content/themes/nebraska/images/icons/social/wordpress.png); }u
+21c0: l.lambda-sociallinks li a.tumblr { background: #4CB4E0 url(http:
+2200: //progressbg.net/wp-content/themes/nebraska/images/icons/social/
+2240: tumblr.png); }ul.lambda-sociallinks li a.rss { background: #4CB4
+2280: E0 url(http://progressbg.net/wp-content/themes/nebraska/images/i
+22c0: cons/social/feed.png); }ul.lambda-sociallinks li a.yahoo { backg
+2300: round: #4CB4E0 url(http://progressbg.net/wp-content/themes/nebra
+2340: ska/images/icons/social/yahoo.png); }ul.lambda-sociallinks li a.
+2380: steam { background: #4CB4E0 url(http://progressbg.net/wp-content
+23c0: /themes/nebraska/images/icons/social/steam.png); }ul.lambda-soci
+2400: allinks li a.email { background: #4CB4E0 url(http://progressbg.n
+2440: et/wp-content/themes/nebraska/images/icons/social/email.png); }u
+2480: l.lambda-sociallinks li a.link { background: #4CB4E0 url(http://
+24c0: progressbg.net/wp-content/themes/nebraska/images/icons/social/li
+2500: nk.png); }.hover-overlay {background-color: rgb(33,33,33);backgr
+2540: ound-color:rgba(33,33,33,0.9);}@media only screen and (min-width
+2580: : 768px) and (max-width: 959px) { .nav-wrap {background: #4CB4E0
+25c0:  ;}}@media only screen and (max-width: 767px) { .nav-wrap {backg
+2600: round: #4CB4E0 ;}}@media only screen and (min-width: 480px) and 
+2640: (max-width: 767px) { .nav-wrap {background: #4CB4E0 ;}}</style>.
+2680: .<link rel="stylesheet" href="http://progressbg.net/wp-content/p
+26c0: lugins/social-media-tabs/css/dcsmt.css" type="text/css" media="s
+2700: creen"  /> ..    ..</head>....<body class="home page page-id-288
+2740: 1 page-template page-template-template-home-php">....<!-- to top
+2780:  button -->..<div id="toTop">Go to Top</div>..<!-- /to top butto
+27c0: n -->.....    .    ...<div id="wrap" class="clearfix fullwidth" 
+2800: data-role="page">........<header id="header" class="fluidheader-
+2840: border" data-role="header"><!-- header -->...<div class="contain
+2880: er">..    ...                ..        ..        <div class="six
+28c0: teen columns clearfix">   ..    . ..           ..             ..
+2900: ..<div id="logo">.............<div class="top-header"><span clas
+2940: s="top-tagline"> </span></div> ..........<a href="http://progres
+2980: sbg.net/" title=".............. | .................... .........
+29c0: ....."><img id="sitelogo" src="http://progressbg.net/wp-content/
+2a00: uploads/2013/03/logo-4.png"></a>.........</div>.       ...      
+2a40:   .....<div class="lambda-header-widget clearfix">.    ...... ..
+2a80:                  <div class="top-header">..                 <spa
+2ac0: n class="header-phone">+359 988 78  43 21</span><span class="hea
+2b00: der-email">office@progressbg.net</span>                ..       
+2b40:           </div>..                 ..<ul class="qtrans_language_
+2b80: chooser" id="qtranslate-chooser"><li class="lang-bg active"><a h
+2bc0: ref="http://progressbg.net/" hreflang="bg" title="..............
+2c00: ...." class="qtrans_flag qtrans_flag_bg"><span style="display:no
+2c40: ne">..................</span></a></li><li class="lang-en"><a hre
+2c80: f="http://progressbg.net/?lang=en" hreflang="en" title="English"
+2cc0:  class="qtrans_flag qtrans_flag_en"><span style="display:none">E
+2d00: nglish</span></a></li></ul><div class="qtrans_widget_end"></div>
+2d40:                  <ul class="lambda-sociallinks clearfix"><li><a 
+2d80: href="https://twitter.com/EducationSofia" class="twitter" title=
+2dc0: "Twitter" target="_blank">Twitter</a></li><li><a href="https://w
+2e00: ww.facebook.com/progressbg" class="facebook" title="Facebook" ta
+2e40: rget="_blank">Facebook</a></li><li><a href="https://plus.google.
+2e80: com/u/0/110614018583074827437/posts" class="googleplus" title="G
+2ec0: oogleplus" target="_blank">Googleplus</a></li></ul> ..          
+2f00:       .....</div>....        ..         ..        </div>  ..    
+2f40: </div>  ...</header><!-- /header -->
+<= Recv data, 16384 bytes (0x4000)
+0000: ..    ..    <div class="clear"></div>..    ..        <div class=
+0040: "nav-wrap clearfix"><!-- nav wrap -->..        .<div class="cont
+0080: ainer">..    ...<div class="sixteen columns clearfix"> ..       
+00c0:  ......<nav id="navigation" class="clearfix"><ul id="menu-primar
+0100: y-navigation" class="menu clearfix"><li id="menu-item-2912" clas
+0140: s="menu-item menu-item-type-post_type menu-item-object-page curr
+0180: ent-menu-item page_item page-item-2881 current_page_item"><a hre
+01c0: f="http://progressbg.net/">............<span>.......... ........
+0200: ....</span></a></li>.<li id="menu-item-2554" class="menu-item me
+0240: nu-item-type-post_type menu-item-object-page"><a href="http://pr
+0280: ogressbg.net/%d0%b7%d0%b0-%d0%bd%d0%b0%d1%81/">.... ......<span>
+02c0: ...... ...... ......</span></a>.<ul class="sub-menu">..<li id="m
+0300: enu-item-5459" class="menu-item menu-item-type-post_type menu-it
+0340: em-object-page"><a href="http://progressbg.net/%d0%bf%d1%80%d0%b
+0380: 5%d0%bf%d0%be%d0%b4%d0%b0%d0%b2%d0%b0%d1%82%d0%b5%d0%bb%d1%81%d0
+03c0: %ba%d0%b8-%d0%ba%d0%be%d0%bb%d0%b5%d0%ba%d1%82%d0%b8%d0%b2/">...
+0400: ........................... ................</a></li>..<li id="m
+0440: enu-item-3796" class="menu-item menu-item-type-post_type menu-it
+0480: em-object-page"><a href="http://progressbg.net/%d0%b3%d0%b0%d0%b
+04c0: b%d0%b5%d1%80%d0%b8%d1%8f/">..............</a></li>..<li id="men
+0500: u-item-6333" class="menu-item menu-item-type-post_type menu-item
+0540: -object-page"><a href="http://progressbg.net/%d0%ba%d0%b0%d1%80%
+0580: d0%b8%d0%b5%d1%80%d0%b8/">..............</a></li>.</ul>.</li>.<l
+05c0: i id="menu-item-5671" class="menu-item menu-item-type-custom men
+0600: u-item-object-custom"><a href="#">................<span>........
+0640: .. ....................</span></a>.<ul class="sub-menu">..<li id
+0680: ="menu-item-4582" class="menu-item menu-item-type-custom menu-it
+06c0: em-object-custom"><a href="#">.......... .... ..................
+0700: ......</a>..<ul class="sub-menu">...<li id="menu-item-15128" cla
+0740: ss="menu-item menu-item-type-post_type menu-item-object-page"><a
+0780:  href="http://progressbg.net/%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b
+07c0: 0%d0%bc%d0%b8%d1%80%d0%b0%d0%bd%d0%b5-%d1%81-python-2/">........
+0800: ................ .. Python</a></li>...<li id="menu-item-8123" cl
+0840: ass="menu-item menu-item-type-custom menu-item-object-custom"><a
+0880:  href="http://progressbg.net/%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B
+08c0: 0%D0%BC%D0%B8%D1%80%D0%B0%D0%BD%D0%B5-%D1%81-java/">............
+0900: ............ .. Java &#8211; Beginners</a></li>...<li id="menu-i
+0940: tem-8288" class="menu-item menu-item-type-post_type menu-item-ob
+0980: ject-page"><a href="http://progressbg.net/%d0%bf%d1%80%d0%be%d0%
+09c0: b3%d1%80%d0%b0%d0%bc%d0%b8%d1%80%d0%b0%d0%bd%d0%b5-%d1%81-java-%
+0a00: d1%87%d0%b0%d1%81%d1%82-ii/">........................ .. Java &#
+0a40: 8211; Advanced</a></li>...<li id="menu-item-9254" class="menu-it
+0a80: em menu-item-type-post_type menu-item-object-page"><a href="http
+0ac0: ://progressbg.net/%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%
+0b00: b8%d1%80%d0%b0%d0%bd%d0%b5-%d1%81-java-begginers-advanced/">....
+0b40: .................... .. Java (Beginners &#038; Advanced)</a></li
+0b80: >...<li id="menu-item-9467" class="menu-item menu-item-type-post
+0bc0: _type menu-item-object-page"><a href="http://progressbg.net/kurs
+0c00: -po-c-basic/">C# Basic</a></li>...<li id="menu-item-9466" class=
+0c40: "menu-item menu-item-type-post_type menu-item-object-page"><a hr
+0c80: ef="http://progressbg.net/c-advanced/">C# Advanced</a></li>...<l
+0cc0: i id="menu-item-3963" class="menu-item menu-item-type-post_type 
+0d00: menu-item-object-page"><a href="http://progressbg.net/c-kurs/">C
+0d40: ++</a></li>...<li id="menu-item-11545" class="menu-item menu-ite
+0d80: m-type-post_type menu-item-object-page"><a href="http://progress
+0dc0: bg.net/c-advanced-2/">C++ Advanced</a></li>...<li id="menu-item-
+0e00: 2829" class="menu-item menu-item-type-post_type menu-item-object
+0e40: -page"><a href="http://progressbg.net/php/">PHP</a></li>...<li i
+0e80: d="menu-item-15036" class="menu-item menu-item-type-post_type me
+0ec0: nu-item-object-page"><a href="http://progressbg.net/perl-2/">Per
+0f00: l</a></li>...<li id="menu-item-10782" class="menu-item menu-item
+0f40: -type-post_type menu-item-object-page"><a href="http://progressb
+0f80: g.net/%d1%81%d0%be%d1%84%d1%82%d1%83%d0%b5%d1%80%d0%bd%d0%be-%d1
+0fc0: %82%d0%b5%d1%81%d1%82%d0%b2%d0%b0%d0%bd%d0%b5/">................
+1000: .. ................</a></li>...<li id="menu-item-12477" class="m
+1040: enu-item menu-item-type-post_type menu-item-object-page"><a href
+1080: ="http://progressbg.net/%d0%b0%d0%b2%d1%82%d0%be%d0%bc%d0%b0%d1%
+10c0: 82%d0%b8%d0%b7%d0%b8%d1%80%d0%b0%d0%bd%d0%be-%d1%82%d0%b5%d1%81%
+1100: d1%82%d0%b2%d0%b0%d0%bd%d0%b5/">............................ ...
+1140: .............</a></li>..</ul>.</li>..<li id="menu-item-2818" cla
+1180: ss="menu-item menu-item-type-custom menu-item-object-custom"><a 
+11c0: href="#">Microsoft</a>..<ul class="sub-menu">...<li id="menu-ite
+1200: m-2539" class="menu-item menu-item-type-post_type menu-item-obje
+1240: ct-page"><a href="http://progressbg.net/microsoft-word/">Microso
+1280: ft Word</a></li>...<li id="menu-item-2568" class="menu-item menu
+12c0: -item-type-post_type menu-item-object-page"><a href="http://prog
+1300: ressbg.net/microsoft-excel/">Microsoft Excel &#8211; ...........
+1340: .......</a></li>...<li id="menu-item-13401" class="menu-item men
+1380: u-item-type-post_type menu-item-object-page"><a href="http://pro
+13c0: gressbg.net/microsoft-excel-%d0%bd%d0%b0%d0%bf%d1%80%d0%b5%d0%b4
+1400: %d0%bd%d0%b0%d0%bb%d0%b8/">Microsoft Excel &#8211; .............
+1440: .......</a></li>...<li id="menu-item-13418" class="menu-item men
+1480: u-item-type-post_type menu-item-object-page"><a href="http://pro
+14c0: gressbg.net/visual-basic-for-microsoft-excel/">Visual Basic for 
+1500: Microsoft Excel</a></li>...<li id="menu-item-2610" class="menu-i
+1540: tem menu-item-type-post_type menu-item-object-page"><a href="htt
+1580: p://progressbg.net/microsoft-outlook/">Microsoft  Outlook</a></l
+15c0: i>...<li id="menu-item-2625" class="menu-item menu-item-type-pos
+1600: t_type menu-item-object-page"><a href="http://progressbg.net/mic
+1640: rosoft-powerpoint/">Microsoft  PowerPoint</a></li>...<li id="men
+1680: u-item-2662" class="menu-item menu-item-type-post_type menu-item
+16c0: -object-page"><a href="http://progressbg.net/microsoft-access/">
+1700: Microsoft Access</a></li>...<li id="menu-item-5962" class="menu-
+1740: item menu-item-type-post_type menu-item-object-page"><a href="ht
+1780: tp://progressbg.net/windows-8/">Microsoft Windows 8</a></li>..</
+17c0: ul>.</li>..<li id="menu-item-2819" class="menu-item menu-item-ty
+1800: pe-custom menu-item-object-custom"><a href="#">Adobe</a>..<ul cl
+1840: ass="sub-menu">...<li id="menu-item-2688" class="menu-item menu-
+1880: item-type-post_type menu-item-object-page"><a href="http://progr
+18c0: essbg.net/adobe-photoshop/">Adobe Photoshop</a></li>...<li id="m
+1900: enu-item-2696" class="menu-item menu-item-type-post_type menu-it
+1940: em-object-page"><a href="http://progressbg.net/adobe-illustrator
+1980: /">Adobe Illustrator</a></li>...<li id="menu-item-2668" class="m
+19c0: enu-item menu-item-type-post_type menu-item-object-page"><a href
+1a00: ="http://progressbg.net/adobe-indesign/">Adobe InDesign</a></li>
+1a40: ...<li id="menu-item-5110" class="menu-item menu-item-type-post_
+1a80: type menu-item-object-page"><a href="http://progressbg.net/adobe
+1ac0: -after-effects/">Adobe After Effects</a></li>...<li id="menu-ite
+1b00: m-8147" class="menu-item menu-item-type-post_type menu-item-obje
+1b40: ct-page"><a href="http://progressbg.net/%d0%b3%d1%80%d0%b0%d1%84
+1b80: %d0%b8%d1%87%d0%b5%d0%bd-%d0%b4%d0%b8%d0%b7%d0%b0%d0%b9%d0%bd/">
+1bc0: ................ ............</a></li>...<li id="menu-item-11858
+1c00: " class="menu-item menu-item-type-post_type menu-item-object-pag
+1c40: e"><a href="http://progressbg.net/%d0%b3%d1%80%d0%b0%d1%84%d0%b8
+1c80: %d1%87%d0%b5%d0%bd-%d0%b4%d0%b8%d0%b7%d0%b0%d0%b9%d0%bd-advanced
+1cc0: /">................ ............ &#8211; Advanced</a></li>...<li
+1d00:  id="menu-item-8530" class="menu-item menu-item-type-post_type m
+1d40: enu-item-object-page"><a href="http://progressbg.net/%d0%bf%d1%8
+1d80: 0%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b0-%d0%bf%d0%be-%d0%b3%d1%80%
+1dc0: d0%b0%d1%84%d0%b8%d1%87%d0%b5%d0%bd-%d0%b4%d0%b8%d0%b7%d0%b0%d0%
+1e00: b9%d0%bd/">................ .... ................ ............</
+1e40: a></li>...<li id="menu-item-12780" class="menu-item menu-item-ty
+1e80: pe-post_type menu-item-object-page"><a href="http://progressbg.n
+1ec0: et/post-production-after-effects-premiere-pro/">Post-production 
+1f00: ( After Effects, Premiere Pro )</a></li>..</ul>.</li>..<li id="m
+1f40: enu-item-2820" class="menu-item menu-item-type-custom menu-item-
+1f80: object-custom"><a href="#">Web development</a>..<ul class="sub-m
+1fc0: enu">...<li id="menu-item-14297" class="menu-item menu-item-type
+2000: -post_type menu-item-object-page"><a href="http://progressbg.net
+2040: /angularjs/">AngularJS</a></li>...<li id="menu-item-6142" class=
+2080: "menu-item menu-item-type-post_type menu-item-object-page"><a hr
+20c0: ef="http://progressbg.net/%d0%ba%d1%83%d1%80%d1%81-%d0%bf%d0%be-
+2100: php-%d0%b8-mysql/">........................ .... ...... ........
+2140:  .. PHP .. MySQL</a></li>...<li id="menu-item-4365" class="menu-
+2180: item menu-item-type-post_type menu-item-object-page"><a href="ht
+21c0: tp://progressbg.net/kurs-po-web-design/">Web-Design ( HTML,CSS, 
+2200: JavaScript)</a></li>...<li id="menu-item-11420" class="menu-item
+2240:  menu-item-type-post_type menu-item-object-page"><a href="http:/
+2280: /progressbg.net/web-design-advanced/">Web-Design &#8211; Advance
+22c0: d</a></li>...<li id="menu-item-13587" class="menu-item menu-item
+2300: -type-post_type menu-item-object-page"><a href="http://progressb
+2340: g.net/wordpress/">WordPress</a></li>...<li id="menu-item-9465" c
+2380: lass="menu-item menu-item-type-post_type menu-item-object-page">
+23c0: <a href="http://progressbg.net/javascript-basic/">JavaScript &#8
+2400: 211; Basic</a></li>...<li id="menu-item-9464" class="menu-item m
+2440: enu-item-type-post_type menu-item-object-page"><a href="http://p
+2480: rogressbg.net/javascript-advanced/">JavaScript &#8211; Advanced<
+24c0: /a></li>..</ul>.</li>..<li id="menu-item-4583" class="menu-item 
+2500: menu-item-type-custom menu-item-object-custom"><a href="#">Datab
+2540: ases</a>..<ul class="sub-menu">...<li id="menu-item-2826" class=
+2580: "menu-item menu-item-type-post_type menu-item-object-page"><a hr
+25c0: ef="http://progressbg.net/mysql/">MySQL</a></li>..</ul>.</li>..<
+2600: li id="menu-item-5980" class="menu-item menu-item-type-custom me
+2640: nu-item-object-custom"><a href="#">.............. ..............
+2680: ...... ....................</a>..<ul class="sub-menu">...<li id=
+26c0: "menu-item-5981" class="menu-item menu-item-type-post_type menu-
+2700: item-object-page"><a href="http://progressbg.net/%d0%ba%d1%83%d1
+2740: %80%d1%81-%d0%bf%d0%be-%d0%bd%d0%b0%d1%87%d0%b0%d0%bb%d0%bd%d0%b
+2780: 0-%d0%ba%d0%be%d0%bc%d0%bf%d1%8e%d1%82%d1%8a%d1%80%d0%bd%d0%b0-%
+27c0: d0%b3%d1%80%d0%b0%d0%bc%d0%be%d1%82%d0%bd%d0%be%d1%81/">........
+2800: ...... .................... ....................</a></li>...<li 
+2840: id="menu-item-7638" class="menu-item menu-item-type-post_type me
+2880: nu-item-object-page"><a href="http://progressbg.net/%d0%b8%d0%bd
+28c0: %d1%82%d0%b5%d1%80%d0%bd%d0%b5%d1%82-%d0%be%d0%b1%d1%89%d1%83%d0
+2900: %b2%d0%b0%d0%bd%d0%b5/">................ ................</a></l
+2940: i>..</ul>.</li>..<li id="menu-item-13119" class="menu-item menu-
+2980: item-type-custom menu-item-object-custom"><a href="#">Soft Skill
+29c0: s</a>..<ul class="sub-menu">...<li id="menu-item-13120" class="m
+2a00: enu-item menu-item-type-post_type menu-item-object-page"><a href
+2a40: ="http://progressbg.net/%d1%83%d0%bf%d1%80%d0%b0%d0%b2%d0%bb%d0%
+2a80: b5%d0%bd%d0%b8%d0%b5-%d0%bd%d0%b0-%d0%b2%d1%80%d0%b5%d0%bc%d0%b5
+2ac0: %d1%82%d0%be-%d0%b8-%d0%bf%d1%80%d0%b8%d0%be%d1%80%d0%b8%d1%82%d
+2b00: 0%b5%d1%82%d0%b8%d1%82%d0%b5/">.................... .... .......
+2b40: ....... .. ........................ .. ................</a></li>
+2b80: ...<li id="menu-item-13156" class="menu-item menu-item-type-post
+2bc0: _type menu-item-object-page"><a href="http://progressbg.net/%d1%
+2c00: 80%d0%b0%d0%b1%d0%be%d1%82%d0%b0-%d0%b2-%d0%b5%d0%ba%d0%b8%d0%bf
+2c40: -%d0%b8-%d0%b8%d0%bd%d1%84%d0%be%d1%80%d0%bc%d0%b8%d1%80%d0%b0%d
+2c80: 0%bd%d0%be%d1%81%d1%82-%d0%bd%d0%b0-%d0%b5%d0%ba%d0%b8%d0%bf%d0%
+2cc0: b8/">............ .. ........ .. .......................... ....
+2d00:  ..............</a></li>...<li id="menu-item-13165" class="menu-
+2d40: item menu-item-type-post_type menu-item-object-page"><a href="ht
+2d80: tp://progressbg.net/%d1%82%d0%b5%d1%85%d0%bd%d0%b8%d0%ba%d0%b8-%
+2dc0: d0%b7%d0%b0-%d1%80%d0%b5%d1%88%d0%b0%d0%b2%d0%b0%d0%bd%d0%b5-%d0
+2e00: %bd%d0%b0-%d0%bf%d1%80%d0%be%d0%b1%d0%bb%d0%b5%d0%bc%d0%b8-%d0%b
+2e40: 8-%d0%b2%d0%b7%d0%b5%d0%bc/">.............. .... ...............
+2e80: . .... ................ .. .............. .... ..............</a
+2ec0: ></li>..</ul>.</li>..<li id="menu-item-4362" class="menu-item me
+2f00: nu-item-type-custom menu-item-object-custom"><a href="#">.......
+2f40: ...</a>..<ul class="sub-menu">...<li id="menu-item-4588" class="
+2f80: menu-item menu-item-type-post_type menu-item-object-page"><a hre
+2fc0: f="http://progressbg.net/linux/">Linux ................ ........
+3000: ..................</a></li>...<li id="menu-item-2821" class="men
+3040: u-item menu-item-type-post_type menu-item-object-page"><a href="
+3080: http://progressbg.net/3d-studio-max-%d0%bd%d0%b0%d1%87%d0%b8%d0%
+30c0: bd%d0%b0%d0%b5%d1%89%d0%b8/">3D Studio Max</a></li>...<li id="me
+3100: nu-item-2823" class="menu-item menu-item-type-post_type menu-ite
+3140: m-object-page"><a href="http://progressbg.net/autocad-2d-%d0%b8-
+3180: 3d/">AutoCAD 2D .. 3D</a></li>...<li id="menu-item-13657" class=
+31c0: "menu-item menu-item-type-post_type menu-item-object-page"><a hr
+3200: ef="http://progressbg.net/rhino/">Rhino</a></li>...<li id="menu-
+3240: item-14644" class="menu-item menu-item-type-post_type menu-item-
+3280: object-page"><a href="http://progressbg.net/revit/">Revit</a></l
+32c0: i>...<li id="menu-item-13033" class="menu-item menu-item-type-po
+3300: st_type menu-item-object-page"><a href="http://progressbg.net/li
+3340: breoffice-calc/">LibreOffice Calc</a></li>...<li id="menu-item-4
+3380: 589" class="menu-item menu-item-type-post_type menu-item-object-
+33c0: page"><a href="http://progressbg.net/seo-optimizacia/">SEO .....
+3400: .................</a></li>...<li id="menu-item-2674" class="menu
+3440: -item menu-item-type-post_type menu-item-object-page"><a href="h
+3480: ttp://progressbg.net/corel-draw/">Corel Draw</a></li>...<li id="
+34c0: menu-item-2824" class="menu-item menu-item-type-post_type menu-i
+3500: tem-object-page"><a href="http://progressbg.net/kurs-po-solidwor
+3540: ks/">SolidWorks</a></li>...<li id="menu-item-10319" class="menu-
+3580: item menu-item-type-post_type menu-item-object-page"><a href="ht
+35c0: tp://progressbg.net/%d0%b4%d0%b8%d0%b0%d0%b3%d0%bd%d0%be%d1%81%d
+3600: 1%82%d0%b8%d0%ba%d0%b0-%d0%b8-%d1%80%d0%b5%d0%bc%d0%be%d0%bd%d1%
+3640: 82-%d0%bd%d0%b0-pc/">...................... .. ............ ....
+3680:  PC</a></li>...<li id="menu-item-4590" class="menu-item menu-ite
+36c0: m-type-post_type menu-item-object-page"><a href="http://progress
+3700: bg.net/mac-os/">MAC OS</a></li>..</ul>.</li>..<li id="menu-item-
+3740: 8679" class="menu-item menu-item-type-post_type menu-item-object
+3780: -page"><a href="http://progressbg.net/%d1%81%d0%b5%d0%bc%d0%b8%d
+37c0: 0%bd%d0%b0%d1%80%d0%b8/">.................... ................</
+3800: a></li>.</ul>.</li>.<li id="menu-item-7724" class="menu-item men
+3840: u-item-type-post_type menu-item-object-page"><a href="http://pro
+3880: gressbg.net/%d1%84%d0%b8%d1%80%d0%bc%d0%b5%d0%bd%d0%be-%d0%be%d0
+38c0: %b1%d1%83%d1%87%d0%b5%d0%bd%d0%b8%d0%b5/">..............<span>..
+3900: ..............</span></a></li>.<li id="menu-item-2527" class="me
+3940: nu-item menu-item-type-post_type menu-item-object-page"><a href=
+3980: "http://progressbg.net/%d1%86%d0%b5%d0%bd%d0%b8/">........<span>
+39c0: .... ..................</span></a></li>.<li id="menu-item-5471" 
+3a00: class="menu-item menu-item-type-post_type menu-item-object-page"
+3a40: ><a href="http://progressbg.net/%d0%ba%d0%be%d0%bc%d0%bf%d1%8e%d
+3a80: 1%82%d1%8a%d1%80%d0%bd%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b
+3ac0: 2%d0%b5/">............<span>.... ..................</span></a></
+3b00: li>.<li id="menu-item-8581" class="menu-item menu-item-type-post
+3b40: _type menu-item-object-page"><a href="http://progressbg.net/%d0%
+3b80: b1%d0%bb%d0%be%d0%b3/">..................<span>IT ..............
+3bc0: ..</span></a></li>.<li id="menu-item-2868" class="menu-item menu
+3c00: -item-type-post_type menu-item-object-page"><a href="http://prog
+3c40: ressbg.net/%d0%ba%d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d0%b8/">..
+3c80: ..............<span>............ .. ......</span></a></li>.</ul>
+3cc0: </nav>...                ..                <div class="mm-trigge
+3d00: r">.............. | .................... ..............<button c
+3d40: lass="mm-button"></button></div><nav id="mobile-menu" class="men
+3d80: u-primary-navigation-container"><ul id="menu-primary-navigation-
+3dc0: 1" class="mm-menu clearfix"><li id="menu-item-2912" class="menu-
+3e00: item menu-item-type-post_type menu-item-object-page current-menu
+3e40: -item page_item page-item-2881 current_page_item menu-item-2912"
+3e80: ><a href="http://progressbg.net/">............</a></li>.<li id="
+3ec0: menu-item-2554" class="menu-item menu-item-type-post_type menu-i
+3f00: tem-object-page menu-item-2554"><a href="http://progressbg.net/%
+3f40: d0%b7%d0%b0-%d0%bd%d0%b0%d1%81/">.... ......</a></li>.<li id="me
+3f80: nu-item-5671" class="menu-item menu-item-type-custom menu-item-o
+3fc0: bject-custom menu-item-5671"><a href="#">................</a></l
+<= Recv data, 16384 bytes (0x4000)
+0000: i>.<li id="menu-item-7724" class="menu-item menu-item-type-post_
+0040: type menu-item-object-page menu-item-7724"><a href="http://progr
+0080: essbg.net/%d1%84%d0%b8%d1%80%d0%bc%d0%b5%d0%bd%d0%be-%d0%be%d0%b
+00c0: 1%d1%83%d1%87%d0%b5%d0%bd%d0%b8%d0%b5/">..............</a></li>.
+0100: <li id="menu-item-2527" class="menu-item menu-item-type-post_typ
+0140: e menu-item-object-page menu-item-2527"><a href="http://progress
+0180: bg.net/%d1%86%d0%b5%d0%bd%d0%b8/">........</a></li>.<li id="menu
+01c0: -item-5471" class="menu-item menu-item-type-post_type menu-item-
+0200: object-page menu-item-5471"><a href="http://progressbg.net/%d0%b
+0240: a%d0%be%d0%bc%d0%bf%d1%8e%d1%82%d1%8a%d1%80%d0%bd%d0%b8-%d0%ba%d
+0280: 1%83%d1%80%d1%81%d0%be%d0%b2%d0%b5/">............</a></li>.<li i
+02c0: d="menu-item-8581" class="menu-item menu-item-type-post_type men
+0300: u-item-object-page menu-item-8581"><a href="http://progressbg.ne
+0340: t/%d0%b1%d0%bb%d0%be%d0%b3/">..................</a></li>.<li id=
+0380: "menu-item-2868" class="menu-item menu-item-type-post_type menu-
+03c0: item-object-page menu-item-2868"><a href="http://progressbg.net/
+0400: %d0%ba%d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d0%b8/">.............
+0440: ...</a></li>.</ul></nav>.                ..                ...  
+0480:   ..    <div class="searchlens"></div>.....    <form role="searc
+04c0: h" method="get" id="header-searchform" action="http://progressbg
+0500: .net/">....<input type="text" value="................." onblur="
+0540: if(this.value=='')this.value='.................';" onfocus="if(t
+0580: his.value=='.................')this.value='';" name="s" id="s" /
+05c0: >...</form>.......                ....  ..</div>    ..        .<
+0600: /div>..        </div><!-- /nav-wrap -->   <script type='text/jav
+0640: ascript' src='http://progressbg.net/wp-content/themes/nebraska/j
+0680: avascripts/camera.min.js?ver=3.4'></script>.<script type='text/j
+06c0: avascript' src='http://progressbg.net/wp-content/themes/nebraska
+0700: /javascripts/jquery.mobile.customized.min.js?ver=3.4'></script>.
+0740: <div class="clearfix ut-slider-wrap"><div class="camera_white_sk
+0780: in cameraslider_2 camera_wrap"><div data-thumb="http://progressb
+07c0: g.net/wp-content/uploads/2013/03/11-50x50.jpg" data-src="http://
+0800: progressbg.net/wp-content/uploads/2013/03/11.jpg"><div class="ca
+0840: mera_caption fadeIn"><div class="captionwrap"><div class="nevada
+0880: -caption white left"><h2>.............. <b>Microsoft Word</b></h
+08c0: 2><p>........ .... ................ .... Word ... 30 ..... .....
+0900: ... ( 2 .............. )</p><a href="http://progressbg.net/?page
+0940: _id=2522" class="excerpt">Microsoft Word</a></div></div></div></
+0980: div><div data-thumb="http://progressbg.net/wp-content/uploads/20
+09c0: 13/03/2-50x50.jpg" data-src="http://progressbg.net/wp-content/up
+0a00: loads/2013/03/2.jpg"><div class="camera_caption fadeIn"><div cla
+0a40: ss="captionwrap"><div class="nevada-caption white left"><h2>....
+0a80: .......... Adobe Photoshop .. Adobe Illustrator</h2><p>.........
+0ac0: ......... .... ................ .. ................ ............
+0b00: ..</p><a href="http://progressbg.net/?page_id=2683" class="excer
+0b40: pt">Adobe photoshop</a></div></div></div></div><div data-thumb="
+0b80: http://progressbg.net/wp-content/uploads/2013/03/3-50x50.jpg" da
+0bc0: ta-src="http://progressbg.net/wp-content/uploads/2013/03/3.jpg">
+0c00: <div class="camera_caption fadeIn"><div class="captionwrap"><div
+0c40:  class="nevada-caption white left"><h2>3D Studio Max</h2><p>3D .
+0c80: ................... .............., ...................... .. ..
+0cc0: ................ .... ...... .............. ................</p>
+0d00: <a href="http://progressbg.net/?page_id=2806" class="excerpt">3D
+0d40:  Studio Max</a></div></div></div></div></div></div>......<div cl
+0d80: ass="clear"></div>....<section id="teaser" class="fluid clearfix
+0dc0: " >...    ...<div class="container">....        .        ..     
+0e00:    <div id="teaser-content" class="sixteen columns">..          
+0e40:        ...              <h1 id="page-title">..              .<sp
+0e80: an>............</span>..              </h1>..                   
+0ec0:  ..              <p class="teaser-text">.................... ...
+0f00: ....................... ............ ....................
+0f3b: .              .            ..        </div><!-- /#teaser-conten
+0f7b: t -->        ..        ..        .        ..        ..    </div>
+0fbb: ..    ...</section><!-- /#teaser -->....<div class="clear"></div
+0ffb: ><div id="content-wrap" class="fluid clearfix" data-content="con
+103b: tent"><!-- /#start content-wrap -->
+1060: ....<div class="container"><div id="content" class="sixteen colu
+10a0: mns">......<div id="home-template">.............................
+10e0: .........<section class="service-columns clearfix padding-top">.
+1120: ......            ..                            ..            ..
+1160: ....................................................<div class="
+11a0: clear"></div>.............</section>......................<secti
+11e0: on class="service-columns remove-bottom clearfix">........      
+1220:           ......                <div class="title-wrap clearfix"
+1260: >..                ..                    <h3 class="home-title">
+12a0: <span>.............. .... ...................... !</span></h3>..
+12e0:                     ..                </div>..                  
+1320:                   ..                .                ..........
+1361: ........
+136b: ....<section class="one_third service clearfix">       ..
+13a6: .....
+13ad: .....
+13b4: .......
+13bd: ..............<figure class="service-icon">
+13ea: ........<img src="http://progressbg.net/wp-content/uploads/2013/
+142a: 03/about.png" alt=".................... .............., IT .....
+146a: ........., .................... ................, ............ .
+14aa: . ................, ........ .... MS Word, ........ .... MS Exce
+14ea: l, ........ .... " />
+1501: .......</figure>
+1513: .........
+151e: ......
+1526: .....
+152d: .....<article class="service">
+154d: .....
+1554: ......<h3>
+1560: ........... ............</h3>
+157f: ........
+1589: .........
+1594: ............
+15a2: .......<p>............ ................ .................. .....
+15e2: ..............., .......................... .............. .....
+1622: ....... .... ...................... .................. .........
+1662: ........ </p>
+1671: ........
+167b: ............
+1689: ..
+168d: ............
+169b: .......<a href="http://progressbg.net/?page_id=2552" class="exce
+16db: rpt" target="_self">.... ......</a>
+1700: ......
+1708: ............
+1716: .....</article>....
+172b: ....
+1731: ........</section>.
+1746: .........
+1751: ................
+1763: ........
+176d: ....<section class="one_third service clearfix">       ..
+17a8: .....
+17af: .....
+17b6: .......
+17bf: ..............<figure class="service-icon">
+17ec: ........<img src="http://progressbg.net/wp-content/uploads/2013/
+182c: 03/mission.png" alt="kurs po Java, ........ .... ...............
+186c: ......... .. Java, .................... .. Java, ............ ..
+18ac:  Java, ........ .... Java, ................ .... Java, .........
+18ec: . .... Java, Java ........................" />
+191c: .......</figure>
+192e: .........
+1939: ......
+1941: .....
+1948: .....<article class="service">
+1968: .....
+196f: ......<h3>
+197b: ......."........ .... Java"......</h3>
+19a3: ........
+19ad: .........
+19b8: ............
+19c6: .......<p>...... .................... .................... .....
+1a06: ... .... 3,5 ............ .... Java. ........ ........o.... ....
+1a46:  ................ ...............................</p>
+1a7d: ........
+1a87: ............
+1a95: ..
+1a99: ............
+1aa7: .......<a href="http://progressbg.net/%D0%BA%D1%83%D1%80%D1%81-%
+1ae7: D0%BF%D0%BE-java/" class="excerpt" target="_self">"........ ....
+1b27:  Java"</a>
+1b33: ......
+1b3b: ............
+1b49: .....</article>....
+1b5e: ....
+1b64: ........</section>.
+1b79: .........
+1b84: ................
+1b96: ........
+1ba0: ....<section class="one_third last service clearfix">       ..
+1be0: .....
+1be7: .....
+1bee: .......
+1bf7: .........
+1c02: ......
+1c0a: .....
+1c11: .....<article class="service">
+1c31: .....
+1c38: ......<h3>
+1c44: ............... / MAC OS TRAINING / ......</h3>
+1c75: ........
+1c7f: .........
+1c8a: ............
+1c98: .......<p>
+1ca4: .................... .. .. .............................. 6 ....
+1ce4: ........ ......... .................... .................. .....
+1d24: ............... ...... .................... .... ...........
+1d62: </p>
+1d68: ........
+1d72: ............
+1d80: ..
+1d84: ............
+1d92: .......<a href="http://progressbg.net/?page_id=2837" class="exce
+1dd2: rpt" target="_self">.................... .... ........</a>
+1e0e: ......
+1e16: ............
+1e24: .....</article>....
+1e39: ....
+1e3f: ........</section>.
+1e54: .........
+1e5f: ...........................<div class="clear"></div>............
+1e9f: .</section>..............            ......<div class="title-wra
+1edf: p clearfix">.......<h3 class="home-title"><span>................
+1f1f: .. ............ ................ ........</span></h3>......</div
+1f5f: >..                ......<section class="cta clearfix margin-40"
+1f9f: ><div class="cta-inner drop-shadow lifted"><article class="cta-c
+1fdf: ontent clearfix"><h3></h3><p>  </p></article></div></section>...
+201f: </div>...</div><!-- /#content-wrap -->.</div>...<div class="clea
+205f: r"></div>..</div><!-- /.columns (#content) -->....    <div id="m
+209f: y_banner">.    <div id="text-7" class="widget-container widget_t
+20df: ext">...<div class="textwidget"><a href="http://myitjob.bg/" tar
+211f: get="_blank"><img src="/wp-content/uploads/2018/03/BANER-copy2.j
+215f: pg"></a></div>...</div>    </div>..<div id="footer-wrap" class="
+219f: fluid clearfix">...<div class="container">.....<footer id="foote
+21df: r" class="normal sixteen columns"> ..............<div class="one
+221f: _fourth">...<div class="nav_menu-2 widget_nav_menu"><h3 class="w
+225f: idget-title"><span>Microsoft </span></h3><div class="menu-micros
+229f: oft-office-2013-container"><ul id="menu-microsoft-office-2013" c
+22df: lass="menu"><li id="menu-item-2736" class="menu-item menu-item-t
+231f: ype-post_type menu-item-object-page menu-item-2736"><a href="htt
+235f: p://progressbg.net/microsoft-word/">Microsoft Word</a></li>.<li 
+239f: id="menu-item-2735" class="menu-item menu-item-type-post_type me
+23df: nu-item-object-page menu-item-2735"><a href="http://progressbg.n
+241f: et/microsoft-excel/">Microsoft Excel &#8211; ..................<
+245f: /a></li>.<li id="menu-item-13402" class="menu-item menu-item-typ
+249f: e-post_type menu-item-object-page menu-item-13402"><a href="http
+24df: ://progressbg.net/microsoft-excel-%d0%bd%d0%b0%d0%bf%d1%80%d0%b5
+251f: %d0%b4%d0%bd%d0%b0%d0%bb%d0%b8/">Microsoft Excel &#8211; .......
+255f: .............</a></li>.<li id="menu-item-13417" class="menu-item
+259f:  menu-item-type-post_type menu-item-object-page menu-item-13417"
+25df: ><a href="http://progressbg.net/visual-basic-for-microsoft-excel
+261f: /">Visual Basic for Microsoft Excel</a></li>.<li id="menu-item-2
+265f: 734" class="menu-item menu-item-type-post_type menu-item-object-
+269f: page menu-item-2734"><a href="http://progressbg.net/microsoft-ou
+26df: tlook/">Microsoft  Outlook</a></li>.<li id="menu-item-2732" clas
+271f: s="menu-item menu-item-type-post_type menu-item-object-page menu
+275f: -item-2732"><a href="http://progressbg.net/microsoft-access/">Mi
+279f: crosoft Access</a></li>.<li id="menu-item-2733" class="menu-item
+27df:  menu-item-type-post_type menu-item-object-page menu-item-2733">
+281f: <a href="http://progressbg.net/microsoft-powerpoint/">Microsoft 
+285f:  PowerPoint</a></li>.<li id="menu-item-5964" class="menu-item me
+289f: nu-item-type-post_type menu-item-object-page menu-item-5964"><a 
+28df: href="http://progressbg.net/windows-8/">Microsoft Windows 8</a><
+291f: /li>.<li id="menu-item-4260" class="menu-item menu-item-type-pos
+295f: t_type menu-item-object-page menu-item-4260"><a href="http://pro
+299f: gressbg.net/%d0%ba%d1%83%d1%80%d1%81-%d0%bf%d0%be-%d0%bd%d0%b0%d
+29df: 1%87%d0%b0%d0%bb%d0%bd%d0%b0-%d0%ba%d0%be%d0%bc%d0%bf%d1%8e%d1%8
+2a1f: 2%d1%8a%d1%80%d0%bd%d0%b0-%d0%b3%d1%80%d0%b0%d0%bc%d0%be%d1%82%d
+2a5f: 0%bd%d0%be%d1%81/">.............. .................... .........
+2a9f: ...........</a></li>.<li id="menu-item-7621" class="menu-item me
+2adf: nu-item-type-post_type menu-item-object-page menu-item-7621"><a 
+2b1f: href="http://progressbg.net/%d0%b8%d0%bd%d1%82%d0%b5%d1%80%d0%bd
+2b5f: %d0%b5%d1%82-%d0%be%d0%b1%d1%89%d1%83%d0%b2%d0%b0%d0%bd%d0%b5/">
+2b9f: ................ ................</a></li>.</ul></div></div>.</d
+2bdf: iv>........<div class="one_fourth">...  <div class="nav_menu-3 w
+2c1f: idget_nav_menu"><h3 class="widget-title"><span>Adobe </span></h3
+2c5f: ><div class="menu-adobe-container"><ul id="menu-adobe" class="me
+2c9f: nu"><li id="menu-item-2741" class="menu-item menu-item-type-post
+2cdf: _type menu-item-object-page menu-item-2741"><a href="http://prog
+2d1f: ressbg.net/adobe-photoshop/">Adobe Photoshop</a></li>.<li id="me
+2d5f: nu-item-2740" class="menu-item menu-item-type-post_type menu-ite
+2d9f: m-object-page menu-item-2740"><a href="http://progressbg.net/ado
+2ddf: be-illustrator/">Adobe Illustrator</a></li>.<li id="menu-item-27
+2e1f: 42" class="menu-item menu-item-type-post_type menu-item-object-p
+2e5f: age menu-item-2742"><a href="http://progressbg.net/adobe-indesig
+2e9f: n/">Adobe InDesign</a></li>.<li id="menu-item-5109" class="menu-
+2edf: item menu-item-type-post_type menu-item-object-page menu-item-51
+2f1f: 09"><a href="http://progressbg.net/adobe-after-effects/">Adobe A
+2f5f: fter Effects</a></li>.<li id="menu-item-8146" class="menu-item m
+2f9f: enu-item-type-post_type menu-item-object-page menu-item-8146"><a
+2fdf:  href="http://progressbg.net/%d0%b3%d1%80%d0%b0%d1%84%d0%b8%d1%8
+301f: 7%d0%b5%d0%bd-%d0%b4%d0%b8%d0%b7%d0%b0%d0%b9%d0%bd/">...........
+305f: ..... ............</a></li>.<li id="menu-item-11859" class="menu
+309f: -item menu-item-type-post_type menu-item-object-page menu-item-1
+30df: 1859"><a href="http://progressbg.net/%d0%b3%d1%80%d0%b0%d1%84%d0
+311f: %b8%d1%87%d0%b5%d0%bd-%d0%b4%d0%b8%d0%b7%d0%b0%d0%b9%d0%bd-advan
+315f: ced/">................ ............ &#8211; Advanced</a></li>.<l
+319f: i id="menu-item-8542" class="menu-item menu-item-type-post_type 
+31df: menu-item-object-page menu-item-8542"><a href="http://progressbg
+321f: .net/%d0%bf%d1%80%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b0-%d0%bf%d0%
+325f: be-%d0%b3%d1%80%d0%b0%d1%84%d0%b8%d1%87%d0%b5%d0%bd-%d0%b4%d0%b8
+329f: %d0%b7%d0%b0%d0%b9%d0%bd/">................ .... ...............
+32df: . ............</a></li>.<li id="menu-item-12779" class="menu-ite
+331f: m menu-item-type-post_type menu-item-object-page menu-item-12779
+335f: "><a href="http://progressbg.net/post-production-after-effects-p
+339f: remiere-pro/">Post-production ( After Effects, Premiere Pro )</a
+33df: ></li>.</ul></div></div><div class="nav_menu-9 widget_nav_menu">
+341f: <h3 class="widget-title"><span>CMS</span></h3><div class="menu-c
+345f: ms-container"><ul id="menu-cms" class="menu"><li id="menu-item-1
+349f: 3710" class="menu-item menu-item-type-post_type menu-item-object
+34df: -page menu-item-13710"><a href="http://progressbg.net/wordpress/
+351f: ">WordPress</a></li>.</ul></div></div>.</div>........<div class=
+355f: "one_fourth">...  <div class="nav_menu-6 widget_nav_menu"><h3 cl
+359f: ass="widget-title"><span>.................. ..........</span></h
+35df: 3><div class="menu-%d0%b5%d0%b7%d0%b8%d1%86%d0%b8-%d0%b7%d0%b0-%
+361f: d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8%d1%80%d0%b0%d0%b
+365f: d%d0%b5-container"><ul id="menu-%d0%b5%d0%b7%d0%b8%d1%86%d0%b8-%
+369f: d0%b7%d0%b0-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8%d1%
+36df: 80%d0%b0%d0%bd%d0%b5" class="menu"><li id="menu-item-15129" clas
+371f: s="menu-item menu-item-type-post_type menu-item-object-page menu
+375f: -item-15129"><a href="http://progressbg.net/%d0%bf%d1%80%d0%be%d
+379f: 0%b3%d1%80%d0%b0%d0%bc%d0%b8%d1%80%d0%b0%d0%bd%d0%b5-%d1%81-pyth
+37df: on-2/">........................ .. Python</a></li>.<li id="menu-
+381f: item-4578" class="menu-item menu-item-type-post_type menu-item-o
+385f: bject-page menu-item-4578"><a href="http://progressbg.net/%d0%bf
+389f: %d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8%d1%80%d0%b0%d0%bd%d0%
+38df: b5-%d1%81-java/">........................ .. Java &#8211; Beginn
+391f: ers</a></li>.<li id="menu-item-8287" class="menu-item menu-item-
+395f: type-post_type menu-item-object-page menu-item-8287"><a href="ht
+399f: tp://progressbg.net/%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d
+39df: 0%b8%d1%80%d0%b0%d0%bd%d0%b5-%d1%81-java-%d1%87%d0%b0%d1%81%d1%8
+3a1f: 2-ii/">........................ .. Java &#8211; Advanced</a></li
+3a5f: >.<li id="menu-item-9253" class="menu-item menu-item-type-post_t
+3a9f: ype menu-item-object-page menu-item-9253"><a href="http://progre
+3adf: ssbg.net/%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b8%d1%80%
+3b1f: d0%b0%d0%bd%d0%b5-%d1%81-java-begginers-advanced/">.............
+3b5f: ........... .. Java (Beginners &#038; Advanced)</a></li>.<li id=
+3b9f: "menu-item-9469" class="menu-item menu-item-type-post_type menu-
+3bdf: item-object-page menu-item-9469"><a href="http://progressbg.net/
+3c1f: kurs-po-c-basic/">C# Basic</a></li>.<li id="menu-item-9468" clas
+3c5f: s="menu-item menu-item-type-post_type menu-item-object-page menu
+3c9f: -item-9468"><a href="http://progressbg.net/c-advanced/">C# Advan
+3cdf: ced</a></li>.<li id="menu-item-4579" class="menu-item menu-item-
+3d1f: type-post_type menu-item-object-page menu-item-4579"><a href="ht
+3d5f: tp://progressbg.net/c-kurs/">C++</a></li>.<li id="menu-item-1154
+3d9f: 6" class="menu-item menu-item-type-post_type menu-item-object-pa
+3ddf: ge menu-item-11546"><a href="http://progressbg.net/c-advanced-2/
+3e1f: ">C++ Advanced</a></li>.<li id="menu-item-4577" class="menu-item
+3e5f:  menu-item-type-post_type menu-item-object-page menu-item-4577">
+3e9f: <a href="http://progressbg.net/php/">PHP</a></li>.<li id="menu-i
+3edf: tem-15035" class="menu-item menu-item-type-post_type menu-item-o
+3f1f: bject-page menu-item-15035"><a href="http://progressbg.net/perl-
+3f5f: 2/">Perl</a></li>.<li id="menu-item-10781" class="menu-item menu
+3f9f: -item-type-post_type menu-item-object-page menu-item-10781"><a h
+3fdf: ref="http://progressbg.net/%d1%81
+<= Recv data, 9440 bytes (0x24e0)
+0000: %d0%be%d1%84%d1%82%d1%83%d0%b5%d1%80%d0%bd%d0%be-%d1%82%d0%b5%d1
+0040: %81%d1%82%d0%b2%d0%b0%d0%bd%d0%b5/">.................. .........
+0080: .......</a></li>.<li id="menu-item-12478" class="menu-item menu-
+00c0: item-type-post_type menu-item-object-page menu-item-12478"><a hr
+0100: ef="http://progressbg.net/%d0%b0%d0%b2%d1%82%d0%be%d0%bc%d0%b0%d
+0140: 1%82%d0%b8%d0%b7%d0%b8%d1%80%d0%b0%d0%bd%d0%be-%d1%82%d0%b5%d1%8
+0180: 1%d1%82%d0%b2%d0%b0%d0%bd%d0%b5/">............................ .
+01c0: ...............</a></li>.</ul></div></div><div class="nav_menu-4
+0200:  widget_nav_menu"><h3 class="widget-title"><span>Web Development
+0240: </span></h3><div class="menu-%d0%ba%d1%83%d1%80%d1%81%d0%be%d0%b
+0280: 2%d0%b5-web-development-container"><ul id="menu-%d0%ba%d1%83%d1%
+02c0: 80%d1%81%d0%be%d0%b2%d0%b5-web-development" class="menu"><li id=
+0300: "menu-item-14296" class="menu-item menu-item-type-post_type menu
+0340: -item-object-page menu-item-14296"><a href="http://progressbg.ne
+0380: t/angularjs/">AngularJS</a></li>.<li id="menu-item-6150" class="
+03c0: menu-item menu-item-type-post_type menu-item-object-page menu-it
+0400: em-6150"><a href="http://progressbg.net/%d0%ba%d1%83%d1%80%d1%81
+0440: -%d0%bf%d0%be-php-%d0%b8-mysql/">........................ .... .
+0480: ..... ........ .. PHP .. MySQL</a></li>.<li id="menu-item-4241" 
+04c0: class="menu-item menu-item-type-post_type menu-item-object-page 
+0500: menu-item-4241"><a href="http://progressbg.net/kurs-po-web-desig
+0540: n/">Web-Design</a></li>.<li id="menu-item-11421" class="menu-ite
+0580: m menu-item-type-post_type menu-item-object-page menu-item-11421
+05c0: "><a href="http://progressbg.net/web-design-advanced/">Web-Desig
+0600: n &#8211; Advanced</a></li>.<li id="menu-item-9471" class="menu-
+0640: item menu-item-type-post_type menu-item-object-page menu-item-94
+0680: 71"><a href="http://progressbg.net/javascript-basic/">JavaScript
+06c0:  &#8211; Basic</a></li>.<li id="menu-item-9470" class="menu-item
+0700:  menu-item-type-post_type menu-item-object-page menu-item-9470">
+0740: <a href="http://progressbg.net/javascript-advanced/">JavaScript 
+0780: &#8211; Advanced</a></li>.</ul></div></div>.</div>........<div c
+07c0: lass="one_fourth last">....  <div class="nav_menu-8 widget_nav_m
+0800: enu"><h3 class="widget-title"><span>Database</span></h3><div cla
+0840: ss="menu-%d0%b1%d0%b0%d0%b7%d0%b8-%d0%b4%d0%b0%d0%bd%d0%bd%d0%b8
+0880: -container"><ul id="menu-%d0%b1%d0%b0%d0%b7%d0%b8-%d0%b4%d0%b0%d
+08c0: 0%bd%d0%bd%d0%b8" class="menu"><li id="menu-item-4584" class="me
+0900: nu-item menu-item-type-post_type menu-item-object-page menu-item
+0940: -4584"><a href="http://progressbg.net/mysql/">MySQL</a></li>.</u
+0980: l></div></div><div class="nav_menu-5 widget_nav_menu"><h3 class=
+09c0: "widget-title"><span>..........</span></h3><div class="menu-%d0%
+0a00: b4%d1%80%d1%83%d0%b3%d0%b8-container"><ul id="menu-%d0%b4%d1%80%
+0a40: d1%83%d0%b3%d0%b8" class="menu"><li id="menu-item-3448" class="m
+0a80: enu-item menu-item-type-post_type menu-item-object-page menu-ite
+0ac0: m-3448"><a href="http://progressbg.net/linux/">Linux ...........
+0b00: ..... ..........................</a></li>.<li id="menu-item-2816
+0b40: " class="menu-item menu-item-type-post_type menu-item-object-pag
+0b80: e menu-item-2816"><a href="http://progressbg.net/3d-studio-max-%
+0bc0: d0%bd%d0%b0%d1%87%d0%b8%d0%bd%d0%b0%d0%b5%d1%89%d0%b8/">3D Studi
+0c00: o Max</a></li>.<li id="menu-item-2798" class="menu-item menu-ite
+0c40: m-type-post_type menu-item-object-page menu-item-2798"><a href="
+0c80: http://progressbg.net/autocad-2d-%d0%b8-3d/">AutoCAD 2D .. 3D</a
+0cc0: ></li>.<li id="menu-item-13658" class="menu-item menu-item-type-
+0d00: post_type menu-item-object-page menu-item-13658"><a href="http:/
+0d40: /progressbg.net/rhino/">Rhino</a></li>.<li id="menu-item-14645" 
+0d80: class="menu-item menu-item-type-post_type menu-item-object-page 
+0dc0: menu-item-14645"><a href="http://progressbg.net/revit/">Revit</a
+0e00: ></li>.<li id="menu-item-13049" class="menu-item menu-item-type-
+0e40: post_type menu-item-object-page menu-item-13049"><a href="http:/
+0e80: /progressbg.net/libreoffice-calc/">LibreOffice Calc</a></li>.<li
+0ec0:  id="menu-item-3384" class="menu-item menu-item-type-post_type m
+0f00: enu-item-object-page menu-item-3384"><a href="http://progressbg.
+0f40: net/seo-optimizacia/">SEO ......................</a></li>.<li id
+0f80: ="menu-item-2792" class="menu-item menu-item-type-post_type menu
+0fc0: -item-object-page menu-item-2792"><a href="http://progressbg.net
+1000: /corel-draw/">Corel Draw</a></li>.<li id="menu-item-2791" class=
+1040: "menu-item menu-item-type-post_type menu-item-object-page menu-i
+1080: tem-2791"><a href="http://progressbg.net/kurs-po-solidworks/">So
+10c0: lidWorks</a></li>.<li id="menu-item-10320" class="menu-item menu
+1100: -item-type-post_type menu-item-object-page menu-item-10320"><a h
+1140: ref="http://progressbg.net/%d0%b4%d0%b8%d0%b0%d0%b3%d0%bd%d0%be%
+1180: d1%81%d1%82%d0%b8%d0%ba%d0%b0-%d0%b8-%d1%80%d0%b5%d0%bc%d0%be%d0
+11c0: %bd%d1%82-%d0%bd%d0%b0-pc/">...................... .. ..........
+1200: .. .... PC</a></li>.<li id="menu-item-6604" class="menu-item men
+1240: u-item-type-post_type menu-item-object-page menu-item-6604"><a h
+1280: ref="http://progressbg.net/%d0%ba%d1%83%d1%80%d1%81-%d0%bf%d0%be
+12c0: -mac-os/">MAC OS</a></li>.<li id="menu-item-8681" class="menu-it
+1300: em menu-item-type-post_type menu-item-object-page menu-item-8681
+1340: "><a href="http://progressbg.net/%d1%81%d0%b5%d0%bc%d0%b8%d0%bd%
+1380: d0%b0%d1%80%d0%b8/">.................... ................</a></l
+13c0: i>.</ul></div></div>.</div>.....<div class="clear"></div>.....  
+1400:           .....</footer><!--/#footer-->..           ...    </div
+1440: ><!--/.container-->..</div><!--/#footer-wrap-->..            ...
+1480: ..<div id="sub-footer-wrap" class="clearfix">......<div class="c
+14c0: ontainer">..                .<div class="sixteen columns">..    
+1500:                 <div class="scissors"></div>...                .
+1540: .<div class="copyright eight columns alpha">..                  
+1580:   .........                        ..                           
+15c0:  .. 2013 Progressbg.net | office@progressbg.net | +359 988 78 43
+1600:  21| +359 897 91 93 96  | <a href="http://progressbg.net/?p=3090
+1640: ">..................</a>....                        ..          
+1680:               .                        ..                    .</
+16c0: div>..                    ..                    ..              
+1700:       ..                    .<div class="unitedthemes eight colu
+1740: mns omega">..                       ..                        . 
+1780:                        ..                        Powered by <a h
+17c0: ref="http://progressbg.net">progressbg.net</a>..                
+1800:         ..                        ........                ..</di
+1840: v>..                            ..                .</div>..     
+1880:            </div>      ....</div><!--/#sub-footer-wrap-->...    
+18c0: ....</div><!--/#wrap -->...<script type="text/javascript">
+18fc: 
+18fe:   var _gaq = _gaq || [];
+1918:   _gaq.push(['_setAccount', 'UA-39232660-1']);
+1948:   _gaq.push(['_setDomainName', 'progressbg.net']);
+197c:   _gaq.push(['_trackPageview']);
+199e: 
+19a0:   (function() {
+19b1:     var ga = document.createElement('script'); ga.type = 'text/j
+19f1: avascript'; ga.async = true;
+1a0f:     ga.src = ('https:' == document.location.protocol ? 'https://
+1a4f: ssl' : 'http://www') + '.google-analytics.com/ga.js';
+1a86:     var s = document.getElementsByTagName('script')[0]; s.parent
+1ac6: Node.insertBefore(ga, s);
+1ae1:   })();
+1aea: 
+1aec: </script>..        <script language="JavaScript">
+1b1f:             jQuery(function(){
+1b3f:                 jQuery(".wppttip").tipTip({defaultPosition:'bott
+1b7f: om'});
+1b87:             });
+1b98: 
+1b9a:         </script>
+1bad:     <link rel='stylesheet' id='cameraslider-css'  href='http://p
+1bed: rogressbg.net/wp-content/themes/nebraska/css/cameraslider.css?ve
+1c2d: r=1.0' type='text/css' media='all' />.<script type='text/javascr
+1c6d: ipt' src='http://progressbg.net/wp-content/plugins/contact-form-
+1cad: 7/includes/js/jquery.form.min.js?ver=3.46.0-2013.11.21'></script
+1ced: >.<script type='text/javascript'>./* <![CDATA[ */.var _wpcf7 = {
+1d2d: "loaderUrl":"http:\/\/progressbg.net\/wp-content\/plugins\/conta
+1d6d: ct-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};./*
+1dad:  ]]> */.</script>.<script type='text/javascript' src='http://pro
+1ded: gressbg.net/wp-content/plugins/contact-form-7/includes/js/script
+1e2d: s.js?ver=3.6'></script>.<script type='text/javascript' src='http
+1e6d: ://progressbg.net/wp-content/themes/nebraska/javascripts/superfi
+1ead: sh.js?ver=1.2.3'></script>.<script type='text/javascript' src='h
+1eed: ttp://progressbg.net/wp-content/themes/nebraska/javascripts/jque
+1f2d: ry.jcarousellite.js?ver=1.3'></script>.<script type='text/javasc
+1f6d: ript' src='http://progressbg.net/wp-content/themes/nebraska/java
+1fad: scripts/jquery.fitvids.js?ver=1.3'></script>.<script type='text/
+1fed: javascript' src='http://progressbg.net/wp-content/themes/nebrask
+202d: a/javascripts/jquery.isotope.min.js?ver=1.5.09'></script>.<scrip
+206d: t type='text/javascript' src='http://progressbg.net/wp-content/t
+20ad: hemes/nebraska/javascripts/jquery.formalize.min.js?ver=1.2.3'></
+20ed: script>.<script type='text/javascript' src='http://progressbg.ne
+212d: t/wp-content/themes/nebraska/javascripts/nonverblaster.js?ver=1.
+216d: 0'></script>.<script type='text/javascript' src='http://progress
+21ad: bg.net/wp-content/themes/nebraska/javascripts/app.js?ver=1.2.3'>
+21ed: </script>.<script type='text/javascript' src='http://progressbg.
+222d: net/wp-content/themes/nebraska/javascripts/jquery.flexslider.min
+226d: .js?ver=1.8'></script>.<script type='text/javascript' src='http:
+22ad: //progressbg.net/wp-content/themes/nebraska/javascripts/jquery.p
+22ed: rettyPhoto.js?ver=1.3'></script>.<script type='text/javascript' 
+232d: src='http://progressbg.net/wp-content/themes/nebraska/javascript
+236d: s/slider.init.php?id=2&#038;ver=3.4'></script>.    
+23a2: .<script type="text/javascript">
+23c4: .
+23c7: .(function($){
+23d7: ..
+23db: ....
+23e1: ........
+23eb: ../* Prettyphoto
+23fd: ..================================================== */
+2436: ..$("a[data-rel^='prettyPhoto']").prettyPhoto({
+2467: ...show_title: false
+247d: ..});....
+2488: ...
+248d:         ..
+2499: .
+249c: .})(jQuery);
+24aa: .
+24ad:     </script>
+24bc:     
+24c2:     ...</body>..</html>
+24db: 0
+24de: 
+== Info: Connection #0 to host progressbg.net left intact

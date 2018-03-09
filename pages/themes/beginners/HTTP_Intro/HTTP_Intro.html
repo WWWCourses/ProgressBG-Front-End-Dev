@@ -37,7 +37,7 @@
 ##################### SLIDES START #####################
 ########################################################
 -->
-<section><h1>Клиент-Сървър комуникация.<br>Основи на HTTP.<br>WWW <span class="bold">&#8800;</span> Internet  </h1></section>
+<section><h1>Клиент-Сървър комуникация.<br>Основи на HTTP.<br>Internet <span class="bold">&gt;</span> WWW</h1></section>
 <section data-transition="zoom">
 	<div class="copyright">
 		<div class="note">
@@ -56,7 +56,22 @@
 </section>
 
 
-<section><section><h2>Клиент-Сървър Архитектура</h2></section>
+<section><section><h2>Що е то Интернет?</h2></section>
+	<section><h3 class="smile">Едно добро обяснение от "<a href="https://en.wikipedia.org/wiki/The_IT_Crowd">the IT Crowd</a>"</h3>
+		<dl class="fa" style="font-size: 0.5em">
+			<dt><span class="note">Jen</span> - директор на IT отдела в голяма корпорация, която трябва да изнесе реч пред акционерите, тъй като е избрана за <i>Служител на месеца</i>. <span class="note">Moss, Roy</span> - момчетата от IT отдела, който решават да "помогнат" на шефката си, и предлагат да използва Интернет в речта си пред акционерите.</dt>
+		</dl>
+		<iframe src="https://www.youtube.com/embed/iDbyYGrswtg?start=3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</section>
+	<section><h3>Речта пред акционерите</h3>
+		<dl class="fa" style="font-size: 0.5em">
+			<dt>Компютърния експерт, шеф на IT отдела, избрана за <i>Служител на месеца</i> изнася реч, подготвена с помощта на подчинените си <span class="note">Moss, Roy</span> пред акционерите на компанията. В речта си, тя представя на <i>обикновените хора</i> какво е това Интернет.</dt>
+		</dl>
+		<iframe src="https://www.youtube.com/embed/Vywf48Dhyns?start=3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</section>
+</section>
+
+<section><section><h2>Internet: Клиент-Сървър Архитектура</h2></section>
 	<section><h3>Обобщен модел</h3>
 		<a href="https://en.wikipedia.org/wiki/Client%E2%80%93server_model"><img src="images/Client-server-model.svg.wiki.png"></a>
 		<dl class="fa" style="font-size: .6em">
@@ -67,79 +82,153 @@
 			<dt>Връзка между Клиента и Сървъра</dt>
 			<dd>Клиента се свързва със Сървъра, който може да е разположен на същата машина или на отдалечена такава, свързана с Клиента в мрежа (ethernet, internet).</dd>
 		</dl>
-	</section>    
+	</section>
 </section>
+
+<section><section><h2>WWW <span class="bold">&lt;</span> Internet</h2></section>
+	<section>
+		<dl class="fa">
+			<dt><abbr>WWW</abbr><dfn id="WWW"><span>World</span><span>Wide</span><span>Web</span>(Световна глобална мрежа)</dfn></dt>
+			<dt>WWW <span class="bold">&lt;</span> Internet</dt>
+			<dt>WWW е мрежа от свързани HTML документи, достъпни чрез HTTP.<br>
+			HTML документите, наричани още Уеб страници, са свързани помежду си чрез хипер-линкове.</dt>
+			<dt>Създаване</dt>
+			<dd>Internet: 1969, ARPANET project</dd>
+			<dd>WWW - 1989, <b>CERN</b>,<a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Тим Бърнърс-Лий</a> (TimBL) </dd>
+		</dl>
+	</section>
+	<section><h3><a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Тим Бърнърс-Лий</a> (TimBL)</h3>
+		<dl class="fa">
+			<dt>Създател на HTML</dt>
+			<dt>Създател на първия Уеб Браузър</dt>
+			<dt>Създател на първия Уеб Сървър</dt>
+			<dt>Идеолог на <a href="https://bg.wikipedia.org/wiki/Семантична_мрежа">Семантичната Мрежа</a></dt>
+			<dt>Директор на <a href="https://en.wikipedia.org/wiki/World_Wide_Web_Consortium"> World Wide Web Consortium (W3C)</a></dt>
+		</dl>
+	</section>
+</section>
+
 <section><section><h2>Клиент-Сървър Комуникация в WWW</h2></section>
 	<section><h3>Обобщен модел</h3>
 		<a href="images/Client-Server_Communication.png"><img src="images/Client-Server_Communication.png" style="height: 40vh;"></a>
 		<dl class="fa" style="font-size: .8em">
-			<dt><span class="note">WebClient</span>: може да бъде всеки един браузер (Chrome, FF, IE, Edge, Opera, Safari, ...), както и различни CLI инструменти като Curl, Wget и пр.</dt>
-			<dt><span class="note">WebServer</span>: програма, която обслужва заявките на клиентите. Такива са: Apache Web Server, Microsoft's IIS, nginx.</dt>
 			<dt>Начинът по който Уеб Клиента и Уеб Сървъра обменят информация помежду си е стандартизиран в <span class="note">протокола HTTP</span>.</dt>
 		</dl>
 	</section>
-	<section><h3>HTTP Request - live demo</h3>
+</section>
+
+<section><h2>WebClient</h2>
+	<section><h3>Уеб клиент (Web Client) - хардуер</h3>
+		<p>Всяко устройство, свързано към Internet</p>
+		<a href="images/webclientsDevices.jpg"><img src="images/webclientsDevices.jpg"></a>
+	</section>
+	<section><h3>Уеб клиент (Web Client) - Софтуер</h3>
+		<p class="note">Web CLient == User Agent</p>
 		<dl class="fa">
-			<dt>Request Message Format</dt>
-			<dt>Request Methods</dt>
+			<dt>Графични (GUI - Graphical User Interface)</dt>
+			<dd>Chrome, FF, IE, Edge, Opera, Safari, Brave, ...</dd>
+			<dt><span class="advanced">Текстови</span></dt>
+			<dt><span class="advanced">CLI инструменти</span></dt>
+			<!-- <dd>Curl, Wget</dd> -->
+		</dl>
+	</section>
+	<section><h3>Графични (GUI - Graphical User Interface)</h3>
+		<p class="note">"the button for the Internet"</p>
+		<iframe src="https://www.youtube.com/embed/YDNmyyrEZho" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</section>
+	<section><h3 class="advanced">Текстови</h3>
+		<p>Ето как изглежда <a href="http://bnr.bg/hristobotev/post/100925611">„Саломе“ на Оскар Уайлд – емблема на декадентството @БНР</a> под <a href="https://en.wikipedia.org/wiki/ELinks">ELinks</a></p>
+		<a href="images/ElinksBrowser-BNR_page-Salome.png"><img src="images/ElinksBrowser-BNR_page-Salome.png"></a>
+	</section>
+	<section><h3 class="advanced">CLI tools</h3>
+		<p>Ето как изглежда <a href="http://bnr.bg/hristobotev/post/100925611">„Саломе“ на Оскар Уайлд – емблема на декадентството @БНР</a> под <a href="https://en.wikipedia.org/wiki/CURL">cURL</a></p>
+		<a href="images/curlOutput-BNR_page-Salome.png"><img src="images/curlOutput-BNR_page-Salome.png"></a>
+	</section>
+</section>
+
+<section><h2>WebServer</h2>
+	<section><h3>Уеб Сървър (WebServer) - хардуер</h3>
+		<p>Най-общо - компютър със специфични изисквания за CPU/GPU/HDD/SDD и пр</p>
+		<a href="images/Inside_and_Rear_of_Webserver.jpg"><img src="images/Inside_and_Rear_of_Webserver.jpg"></a>
+	</section>
+	<section><h3>Уеб Сървър (WebServer) - софтуер</h3>
+		<dl class="fa">
+			<dt>Програма, която изпълнява заявките на Уеб клиентите.</dt>
+			<dd>Apache Web Server</dd>
+			<dd>nginx</dd>
+			<dd>Microsoft's IIS</dd>
+		</dl>
+	</section>
+</section>
+
+<section><h2 class="advanced">HTTP communication</h2>
+	<section><h3>HTTP Request</h3>
+		<dl class="fa">
+			<dt>HTTP Request - съобщението, което се изпраща от клиента към сървъра</dt>
+			<dt>Request Methods - определят начина, по които ще се изпрати съобщението</dt>
 			<dd>GET</dd>
 			<dd>POST</dd>
 			<dd>HEAD</dd>
-		</dl>      
-		<p class="note">Повече за GET/POST методите ще разгледаме в темата за <a href="/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_InputForms/HTML5_input_forms.html#/">HTML Форми</a></p>  
+		</dl>
+		<p class="note">Повече за GET/POST методите ще разгледаме в темата за <a href="/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_InputForms/HTML5_input_forms.html#/">HTML Форми</a></p>
 	</section>
-	<section><h3>HTTP Response - live demo</h3>
+	<section><h3>HTTP Response</h3>
 		<dl class="fa">
-			<dt>Response Message Format</dt>
+			<dt>HTTP Response - съобщението с което отговаря сървъра на клиента</dt>
 			<dt>Response status codes</dt>
 			<dd>2xx - Success</dd>
 			<dd>4xx - Client errors</dd>
 			<dd>5xx - Server errors</dd>
 		</dl>
-	</section>    
+	</section>
+	<section><h3>live demo</h3>
+		<pre><code rel="Terminal" class="shell">
+			curl --trace-ascii curldump.log http://progressbg.net/
+		</code></pre>
+	</section>
+</section>
+
+<section><h2>URL</h2>
 	<section><h3>Уеб ресурс</h3>
 		<dl class="fa">
-			<dt>С общото наименование <span class="note">(Уеб) ресурс</span> ще наричаме файл ( разположен на Уеб сървър ) съдържащ текст, мултимедия или софтуерен компонент и който може да бъде достъпен от Клиента</dt>
-			<dd>Могат да бъдат .html, .css, .js, .png, .mp3, .pdf и т.н файлове</dd>
+			<dt>С общото наименование <span class="note">(Уеб) ресурс</span> ще наричаме файл ( разположен на Уеб сървър ) съдържащ текст, мултимедия или софтуерен компонент, който може да бъде достъпен от Клиента.</dt>
+			<dd>Могат да бъдат .html, .css, .js, .png, .mp3, .pdf и пр. файлове.</dd>
 		</dl>
 	</section>
-	<section><h3>URL</h3>
+	<section>
 		<dl class="fa">
 			<dt><abbr>URL</abbr><dfn id="URL"><span>Uniform</span><span>Resource</span><span>Locator</span></dfn></dt>
-			<dd>често наричан и Уеб адрес</dd>
+			<dd>често наричан и Уеб <i>адрес</i></dd>
 			<dd>еднозначно локализира даден ресурс в Уеб пространството, както и метода за неговото получаване.</dd>
-			<dd>В едно URL се съдържа всичката необходима информация за да бъде достъпен желания ресурс</dd>
+			<dd>В едно URL се съдържа всичката необходима информация за локализирането на сървъра, както и къде точно е разположен този ресурс на сървъра. В URL може да се добави и допълнителна информация, която да се изпрати към сървъра.</dd>
 		</dl>
-	</section>	
-	<section><h3>URL</h3>
+	</section>
+	<section>
 		<div><a href="images/URLwithQueryGoogleImageSearchExample.png"><img src="images/URLwithQueryGoogleImageSearchExample.png"></a></div>
 		<dl class="fa" style="font-size: .7em">
 			<dt><span style="color: #BD615E">Протокол (Protocol)</span>:</dt>
 			<dd>Указва протокола (HTTP, FTP и пр.) за достъп до ресурса.</dd>
 			<dt><span style="color: #D6B758">Домейн (Domain)</span>:</dt>
 			<dd>Идентификатор на машината (host), на която е поместен ресурса. Еднозначно се съпоставя на даден IP адрес посредством DNS.</dd>
-			<dt><span style="color: #C2C2C2">Порт (Port)</span>:</dt>
-			<dd>Порта, на който е настроен да "приема" заявки сървъра. По-често не се задава явно, като се подразбира :80 за http и :443 za https.</dd>			
+			<dt style="font-size: 0.7em"><span style="color: #C2C2C2">Порт (Port)</span>:</dt>
+			<dd style="font-size: 0.7em">Порта, на който е настроен да "приема" заявки сървъра. По-често не се задава явно, като се подразбира :80 за http и :443 za https.</dd>
 			<dt><span style="color: #6C8EBF">Път до файла (Path)</span>:</dt>
-			<dd>Или по-точно: идентификатор на ресурса. Задава релативен, спрямо главната директория на сайта, път до изисквания ресурс. Съвременните сървъри могат да променят точният път до ресурса със зададеният в URL.</dd>
+			<dd>Или по-точно: идентификатор на ресурса. Задава пътя (в контекста на файлова система) до търсения ресурс. Съвременните сървъри могат да променят точният път до ресурса със зададеният в URL.</dd>
 			<dt><span style="color: #85B56B">Параметри на заявката (Query Sring)</span>:</dt>
 			<dd>Опционална.Съдържа параметри необходими за изпълнение на заявката</dd>
 		</dl>
-	</section>		
+	</section>
+	<section><h3>примери</h3>
+		<ol class="fa" style="font-size: 0.8; font-family: sans-serif; width: 130%;">
+			<li><a href="http://progressbg.net/">http://progressbg.net/</a></li>
+			<li><a href="http://progressbg.net/index.php">http://progressbg.net/index.php</a></li>
+			<li><a href="http://files.binar.bg/media/2018/01/Damata-s-rentgenovite-ochi.mp3">http://files.binar.bg/media/2018/01/Damata-s-rentgenovite-ochi.mp3</a></li>
+			<li><a href="exmaples/simplePageWithResources/sentiment-998357_960_720.jpg">exmaples/simplePageWithResources/sentiment-998357_960_720.jpg</a></li>
+		</ol>
+	</section>
 </section>
 <!-- <section><section><h2></h2></section></section>
 <section><section><h2></h2></section></section> -->
-
-<section><section><h2>WWW <span class="bold">&#8800;</span> Internet</h2></section>
-	<section>
-		<dl class="fa">
-			<dt><abbr>WWW</abbr><dfn id="WWW"><span>World</span><span>Wide</span><span>Web</span>(Световна глобална мрежа)</dfn></dt>
-			<dt>WWW <span class="bold">&#8800;</span> Internet</dt>
-			<dt>Създаване</dt>
-			<dd>1989, CERN - <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Тим Бърнърс-Лий</a> (TimBL)</dd>
-		</dl>
-	</section>
-</section>
 
 
 
