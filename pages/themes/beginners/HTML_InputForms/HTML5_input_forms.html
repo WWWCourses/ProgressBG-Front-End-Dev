@@ -157,22 +157,25 @@
 </section>
 
 <section><h2>Ролята на <code>name</code> атрибута в елементите на една форма</h2>
-	<dl class="fa">
-		<dt>От гледна точка на изпращането на данни, чрез <code>name</code> атрибута задаваме име на данните, които ще се асоциират с това поле.</dt>
-		<dt class="note">Ако дадено input поле няма дефиниран <code>name</code> атрибут, то няма да се изпратят въведените в него данни към сървъра!</dt>
-	</dl>
-	<pre><code rel="HTML" class="html">
-		<form action="/login" method="get">
-			<div>Име: <input type="text"></div>
-			<div>Парола: <input type="password" name="pass"></div>
-			<button type="submit">Submit</button>
-		</form>
-	</code></pre>
-	<p>Тествайте и погледнете в query string-а на URL какви данни ще се изпратя към сървъра.</p>
+	<section>
+		<dl class="fa">
+			<dt>От гледна точка на изпращането на данни, чрез <code>name</code> атрибута задаваме име на данните, които ще се асоциират с това поле.</dt>
+			<dt class="note">Ако дадено input поле няма дефиниран <code>name</code> атрибут, то няма да се изпратят въведените в него данни към сървъра!</dt>
+		</dl>
+		<pre><code rel="HTML" class="html">
+			<form action="/login" method="get">
+				<div>Име: <input type="text"></div>
+				<div>Парола: <input type="password" name="pass"></div>
+				<button type="submit">Submit</button>
+			</form>
+		</code></pre>
+		<p>Тествайте и погледнете в query string-а на URL какви данни ще се изпратя към сървъра.</p>
+	</section>
 </section>
 
-<section><h4>Радио-бутони (input[type=radio])</h4>
-		<dl class="fa">
+<section><h2>Радио-бутони (input[type=radio])</h2>
+	<section>
+		<dl class="fa" style="font-size: .8em">
 			<dt>За да функционират радио контролите като избор на една от множество алтернативни стойности, то тези input полета трябва да имат <span class="note">една и съша стойност за атрибута <code>name</code></span></dt>
 			<dt>Стойността, която ще се подаде на сървъра след избора на потребителя, се определя от атрибута <code>value</code></dt>
 		</dl>
@@ -188,76 +191,87 @@
 				<input type="submit" name="">
 			</form>
 		</code></pre>
+	</section>
 </section>
 
 <section><h2>Елемент <code>input</code> като бутон</h2>
-	<dl class="fa">
-		<dt>input елемента притежава стойности за атрибута <code>type</code>: <code>submit</code>, <code>reset</code> и <code>button</code>, които имат същото значение и ефект, както при <code>button</code> елемента</dt>
-	</dl>
-	<pre><code rel="HTML" class="html">
-		<input type="submit" name="" value="Изпрати">
-		<input type="reset" name="" value="Изчисти">
-		<input type="бутон" name="" value="Click me">
-	</code></pre>
-	<p class="note">Вероятно бихте предпочели да използвате елемента <code>button</code>, когато искате да сложите бутон.</p>
+	<section>
+		<dl class="fa">
+			<dt>input елемента притежава стойности за атрибута <code>type</code>: <code>submit</code>, <code>reset</code> и <code>button</code>, които имат същото значение и ефект, както при <code>button</code> елемента</dt>
+		</dl>
+		<pre><code rel="HTML" class="html">
+			<input type="submit" name="" value="Изпрати">
+			<input type="reset" name="" value="Изчисти">
+			<input type="бутон" name="" value="Click me">
+		</code></pre>
+		<p class="note">Вероятно бихте предпочели да използвате елемента <code>button</code>, когато искате да сложите бутон.</p>
+	</section>
 </section>
 
 <section><h2>Елемент <code>button</code></h2>
-	<p><a href="http://www.w3schools.com/tags/tag_button.asp">http://www.w3schools.com/tags/tag_button.asp</a></p>
-	<pre><code rel="HTML" class="html">
-		<!-- бутон, за изпращане на формата: -->
-		<button type="submit">Изпрати</button>
+	<section>
+		<p><a href="http://www.w3schools.com/tags/tag_button.asp">http://www.w3schools.com/tags/tag_button.asp</a></p>
+		<pre><code rel="HTML" class="html">
+			<!-- бутон, за изпращане на формата: -->
+			<button type="submit">Изпрати</button>
 
-		<!-- бутон, за изчистване на полетата: -->
-		<button type="reset">Изчисти</button>
+			<!-- бутон, за изчистване на полетата: -->
+			<button type="reset">Изчисти</button>
 
-		<!-- бутон, без дефинирана функционалност - използва се с JavaScript: -->
-		<button type="button">Click me</button>
-	</code></pre>
+			<!-- бутон, без дефинирана функционалност - използва се с JavaScript: -->
+			<button type="button">Click me</button>
+		</code></pre>
+	</section>
 </section>
 
 
 <section><h2>Елемент <code class="html">label</code></h2>
-	<p><a href="http://www.w3schools.com/tags/tag_label.asp">http://www.w3schools.com/tags/tag_label.asp</a></p>
-	<p>Use case:</p>
-	<div class="results_h">
-		<fieldset>
-			<legend>Gender:</legend>
-			<label>male <input type="radio" name="gender" value="male" style="transform: scale(1.5); vertical-align: middle;"></label>
-			<label>female <input type="radio" name="gender" value="female" style="transform: scale(1.5); vertical-align: middle;"></label>
-			<label>other <input type="radio" name="gender" value="other" style="transform: scale(1.5); vertical-align: middle;"></label>
-		</fieldset>
-	</div>
+	<section>
+		<p><a href="http://www.w3schools.com/tags/tag_label.asp">http://www.w3schools.com/tags/tag_label.asp</a></p>
+		<p>Use case:</p>
+		<div class="results_h">
+			<fieldset>
+				<legend>Gender:</legend>
+				<label>male <input type="radio" name="gender" value="male" style="transform: scale(1.5); vertical-align: middle;"></label>
+				<label>female <input type="radio" name="gender" value="female" style="transform: scale(1.5); vertical-align: middle;"></label>
+				<label>other <input type="radio" name="gender" value="other" style="transform: scale(1.5); vertical-align: middle;"></label>
+			</fieldset>
+		</div>
+	</section>
 </section>
 
 <section><h2>Елементи <code>fieldset & legend</code></h2>
-	<a href="http://www.w3schools.com/tags/tag_fieldset.asp">http://www.w3schools.com/tags/tag_fieldset.asp</a>
-	<a href="http://www.w3schools.com/tags/tag_legend.asp">http://www.w3schools.com/tags/tag_legend.asp</a>
+	<section>
+		<a href="http://www.w3schools.com/tags/tag_fieldset.asp">http://www.w3schools.com/tags/tag_fieldset.asp</a>
+		<a href="http://www.w3schools.com/tags/tag_legend.asp">http://www.w3schools.com/tags/tag_legend.asp</a>
+	</section>
 </section>
 
 <section><h2>Елементи <code>select, option и optgroup</code></h2>
-	<dl class="fa">
-		<dt><a href="http://www.w3schools.com/tags/tag_select.asp">http://www.w3schools.com/tags/tag_select.asp</a></dt>
-		<dt><a href="http://www.w3schools.com/tags/tag_option.asp">http://www.w3schools.com/tags/tag_option.asp</a></dt>
-		<dt><a href="http://www.w3schools.com/tags/tag_optgroup.asp">http://www.w3schools.com/tags/tag_optgroup.asp</a></dt>
-	</dl>
-	<p>
-		<select name="town" style="font-size: 1em">
-			<option value="">Населено място</option>
-			<option value="София">София</option>
-			<optgroup label="А">
-				<option value="Айдемир">Айдемир</option>
-				<option value="Айрово">Айрово</option>
-				<option value="...">...</option>
-			</optgroup>
-			<optgroup label="Б">
-				<option value="Багренци">Багренци</option>
-				<option value="Балабанско">Балабанско</option>
-				<option value="...">...</option>
-			</optgroup>
-			<option value="towncustom_option">Друго</option>
-		</select>
-	</p>
+	<section>
+		<dl class="fa">
+			<dt><a href="http://www.w3schools.com/tags/tag_select.asp">http://www.w3schools.com/tags/tag_select.asp</a></dt>
+			<dt><a href="http://www.w3schools.com/tags/tag_option.asp">http://www.w3schools.com/tags/tag_option.asp</a></dt>
+			<dt><a href="http://www.w3schools.com/tags/tag_optgroup.asp">http://www.w3schools.com/tags/tag_optgroup.asp</a></dt>
+		</dl>
+		<p>
+			<select name="town" style="font-size: 1em">
+				<option value="">Населено място</option>
+				<option value="София">София</option>
+				<optgroup label="А">
+					<option value="Айдемир">Айдемир</option>
+					<option value="Айрово">Айрово</option>
+					<option value="...">...</option>
+				</optgroup>
+				<optgroup label="Б">
+					<option value="Багренци">Багренци</option>
+					<option value="Балабанско">Балабанско</option>
+					<option value="...">...</option>
+				</optgroup>
+				<option value="towncustom_option">Друго</option>
+			</select>
+		</p>
+	</section>
 </section>
 
 <section><h2>Атрибута <code>multiple</code> върху <code>select</code></h2>
@@ -286,10 +300,12 @@
 </section>
 
 <section><h2>Елемент <code>textarea</code></h2>
-	<p><a href="http://www.w3schools.com/tags/tag_textarea.asp">http://www.w3schools.com/tags/tag_textarea.asp</a></p>
-	<div>
-		<textarea style="font-size: 1em;" rows="4" cols="50" placeholder="write your comment here..."></textarea>
-	</div>
+	<section>
+		<p><a href="http://www.w3schools.com/tags/tag_textarea.asp">http://www.w3schools.com/tags/tag_textarea.asp</a></p>
+		<div>
+			<textarea style="font-size: 1em;" rows="4" cols="50" placeholder="write your comment here..."></textarea>
+		</div>
+	</section>
 </section>
 
 <section id="HW"><h2>Упражнения</h2>
