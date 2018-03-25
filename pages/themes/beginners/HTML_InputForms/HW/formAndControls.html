@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>formAndControls</title>
-    <style type="text/css">
+    <!-- <style type="text/css">
     	form div{
     		margin: 0.5em 0 0.7em 0;
     	}
@@ -20,26 +20,32 @@
     		text-align: right;
     		padding: 0em;
     	}
-
-    </style>
+    </style> -->
 </head>
 <body>
-	<h2>Registration form</h2>	
+	<h2>Регистрация</h2>
 	<form action="/back-end/registration.py" method="get">
 		<fieldset>
 			<legend>Лични данни</legend>
 			<div>
-				<label for="userName">Вашето Име:</label>
-				<input type="name" name="userName" id="userName" placeholder="име, фамилия на кирилица">
+				<label for="userName">Име:</label>
+				<input type="name" name="userName" id="userName" placeholder="малко име, на латиница">
 			</div>
+            <div>
+                <label for="userSurName">Име:</label>
+                <input type="name" name="userSurName" id="userSurName" placeholder="фамилия, на латиница">
+            </div>
 			<div>
 				<label>Пол:</label>
-				<label>мъж: <input type="radio" name=""></label>
-				<label>жена: <input type="radio" name=""></label>
+				<label>мъж: <input type="radio" name="gender"></label>
+				<label>жена: <input type="radio" name="gender"></label>
 			</div>
-
-			
 		</fieldset>
+        <div>
+            <label>Коментар:</label><br>
+            <textarea name="comment" placeholder="напишете ни нещо"></textarea>
+        </div>
+        <button>Изпрати</button>
 	</form>
 </body>
 </html>
