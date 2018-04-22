@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>2column_layout</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+	<style type="text/css">
+		/*elements style*/
+		body{
+			font-size: 2em;
+		}
+		h2{
+			font-size: 1.3em;
+			font-weight: bold;
+			margin: 0 0 .6em 0;
+		}
+		/*layout style*/
+		header,footer{
+			text-align: center;
+			vertical-align: middle;
+			background: black;
+			color: white;
+		}
+		header{
+			height: 20vh;
+			line-height: 20vh;
+		}
+		footer{
+			height: 10vh;
+			line-height: 10vh;
+		}
+		aside, main{
+			float: left;
+			min-height: 70vh;
+			padding: 2em 0 0 1em;
+			letter-spacing: 0px;
+			box-sizing: border-box;
+		}
+		aside{
+			width: 30%;
+			/*background:#F2ADAD;*/
+			/*border: 5px solid blue;*/
+		}
+		main{
+			width: 70%;
+			border-left: 2px solid gray;
+			/*background:#C5E8E5;*/
+			/*border: 5px solid red;*/
+		}
+		.clear{
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Header</h1>
+	</header>
+	<section>
+		<!-- we put aside and main in a container, in order to clear floats -->
+		<aside>
+			<nav>
+				<ul>
+					<li>Page 1</li>
+					<li>Page 2</li>
+					<li>Page 3</li>
+				</ul>
+			</nav>
+		</aside>
+		<main>
+			<h2>Page 1</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.lorem. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</main>
+		<!-- clear the floats: -->
+		<div class="clear"></div>
+	</section>
+	<footer>
+		<p>Footer</p>
+	</footer>
+</body>
+</html>
