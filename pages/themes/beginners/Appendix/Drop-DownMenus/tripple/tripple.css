@@ -5,6 +5,10 @@
 	float: left;
 	width: 5em;
 }
+/*clear floats - should be done in header:*/
+header:after{
+	clear: both;
+}
 .level1,
 .level2,
 .level3{
@@ -14,8 +18,8 @@
 .level1>li,
 .level2>li,
 .level3>li{
-	/*uncomment, if you want the sub-menus to align to the element beegin hovered*/
-	/*position: relative;*/
+	/*comment, if you want the sub-menus to align to the bottom of main menu*/
+	position: relative;
 }
 .main>li:hover>.level1,
 .level1>li:hover>.level2,
@@ -32,15 +36,16 @@
 	elements styling
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 header{
-	height: 2em;
-	background: #333;
+	height: 8em;
+	background: #555;
 }
 /*main menu items*/
 nav{
+	float: right;
 	height: 2em;
 	line-height: 2em;
 	vertical-align: middle;
-	float: right;
+	background: #666;
 	color: #CCC;
 }
 .level1>li>a,
@@ -58,7 +63,7 @@ nav{
 	width: 10em;
 }
 .main>li:hover{
-	background: blue;
+	background: #7171A1;
 }
 .main>li>a{
 	padding-left: .5em;
@@ -67,29 +72,29 @@ nav{
 /*level1 menu*/
 .level1{
 	width: 10em;
-	background:blue;
+	background:#6161A1;
 	z-index: 10;
 }
 .level1>li:hover{
-	background: green;
+	background: #71A171;
 	cursor: pointer;
 }
 
 /*level2 menu*/
 .level2{
 	width: 10em;
-	background:green;
+	background:#61A161;
 	z-index: 11;
 }
 .level2>li:hover{
-	background: orange;
+	background: #A17171;
 	cursor: pointer;
 }
 
 /*level3 menu*/
 .level3{
 	width: 10em;
-	background: orange;
+	background: #A16161;
 	z-index: 13;
 }
 
