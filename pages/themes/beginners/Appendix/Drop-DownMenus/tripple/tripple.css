@@ -1,0 +1,106 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	menu alignment and positioning
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.main>li{
+	float: left;
+	width: 5em;
+}
+.level1,
+.level2,
+.level3{
+	display: none;
+	position: relative;
+}
+.level1>li,
+.level2>li,
+.level3>li{
+	/*uncomment, if you want the sub-menus to align to the element beegin hovered*/
+	/*position: relative;*/
+}
+.main>li:hover>.level1,
+.level1>li:hover>.level2,
+.level2>li:hover>.level3{
+	display: block;
+}
+.level2, .level3{
+	position: absolute;
+	top:0;
+	left:10em;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	elements styling
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+header{
+	height: 2em;
+	background: #333;
+}
+/*main menu items*/
+nav{
+	height: 2em;
+	line-height: 2em;
+	vertical-align: middle;
+	float: right;
+	color: #CCC;
+}
+.level1>li>a,
+.level2>li>a,
+.level3>li>a{
+	display: inline-block;
+	width: 100%;
+	height: 2em;
+	line-height: 2em;
+	vertical-align: middle;
+	padding: .5em;
+}
+
+.main>li{
+	width: 10em;
+}
+.main>li:hover{
+	background: blue;
+}
+.main>li>a{
+	padding-left: .5em;
+}
+
+/*level1 menu*/
+.level1{
+	width: 10em;
+	background:blue;
+	z-index: 10;
+}
+.level1>li:hover{
+	background: green;
+	cursor: pointer;
+}
+
+/*level2 menu*/
+.level2{
+	width: 10em;
+	background:green;
+	z-index: 11;
+}
+.level2>li:hover{
+	background: orange;
+	cursor: pointer;
+}
+
+/*level3 menu*/
+.level3{
+	width: 10em;
+	background: orange;
+	z-index: 13;
+}
+
+/*links*/
+a:link{
+	color: white;
+	text-decoration: none;
+}
+a:visited{
+	color: gray;
+}
+a:hover{
+	text-decoration: underline;
+}
