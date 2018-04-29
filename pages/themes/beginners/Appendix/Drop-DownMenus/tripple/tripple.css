@@ -1,32 +1,39 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	menu alignment and positioning
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.main>li{
+.level_0>li{
 	float: left;
 	width: 5em;
 }
-/*clear floats - should be done in header:*/
-header:after{
+/*clear floats*/
+.level_0:after{
+	content: "";
+	display: block;
 	clear: both;
 }
-.level1,
-.level2,
-.level3{
+
+/*equivelent to "ul>li>ul", but readability matters"*/
+.level_1,
+.level_2,
+.level_3{
 	display: none;
 	position: relative;
 }
-.level1>li,
-.level2>li,
-.level3>li{
-	/*comment, if you want the sub-menus to align to the bottom of main menu*/
-	position: relative;
-}
-.main>li:hover>.level1,
-.level1>li:hover>.level2,
-.level2>li:hover>.level3{
+/*equivelent to "ul>li:hover>ul", but readability matters"*/
+.level_0>li:hover>.level_1,
+.level_1>li:hover>.level_2,
+.level_2>li:hover>.level_3{
 	display: block;
 }
-.level2, .level3{
+
+.level_1>li,
+.level_2>li,
+.level_3>li{
+	/*comment, if you want the sub-menus to align to the bottom of level_0 menu*/
+	position: relative;
+}
+
+.level_2, .level_3{
 	position: absolute;
 	top:0;
 	left:10em;
@@ -39,7 +46,7 @@ header{
 	height: 8em;
 	background: #555;
 }
-/*main menu items*/
+/*level_0 menu items*/
 nav{
 	float: right;
 	height: 2em;
@@ -48,9 +55,9 @@ nav{
 	background: #666;
 	color: #CCC;
 }
-.level1>li>a,
-.level2>li>a,
-.level3>li>a{
+.level_1>li>a,
+.level_2>li>a,
+.level_3>li>a{
 	display: inline-block;
 	width: 100%;
 	height: 2em;
@@ -59,45 +66,51 @@ nav{
 	padding: .5em;
 }
 
-.main>li{
+.level_0>li{
 	width: 10em;
 }
-.main>li:hover{
+.level_0>li:hover{
 	background: #7171A1;
 }
-.main>li>a{
+.level_0>li>a{
 	padding-left: .5em;
 }
 
-/*level1 menu*/
-.level1{
+/*level_1 menu*/
+.level_1{
 	width: 10em;
 	background:#6161A1;
 	z-index: 10;
 }
-.level1>li:hover{
+.level_1>li:hover{
 	background: #71A171;
 	cursor: pointer;
 }
 
-/*level2 menu*/
-.level2{
+/*level_2 menu*/
+.level_2{
 	width: 10em;
 	background:#61A161;
 	z-index: 11;
 }
-.level2>li:hover{
+.level_2>li:hover{
 	background: #A17171;
 	cursor: pointer;
 }
 
-/*level3 menu*/
-.level3{
+/*level_3 menu*/
+.level_3{
 	width: 10em;
 	background: #A16161;
 	z-index: 13;
 }
 
+/*other*/
+h2{
+	margin: 1em 0 0 0;
+	font-size: 1.4em;
+	text-align: center;
+}
 /*links*/
 a:link{
 	color: white;
