@@ -5,7 +5,7 @@ function init(){
     var sub_themes_nodes = document.getElementsByClassName('iep_syllabus_sub_themes');
     attachEvents();
     calcTotalHours();
-    calcTotalDays();
+    calcTotalDaysMod();
     hideAllNodes( sub_themes_nodes );
 }
 function attachEvents(){
@@ -18,10 +18,17 @@ function attachEvents(){
         // animate slides icon to grab attention:
         themeItem.addEventListener( "mouseover", function(){
             // console.log("mouseon:", this);
-            grabAttnetion(this.querySelector("a.ready"));
+
+            var n = this.querySelector("a.ready");
+            if(n){
+                grabAttnetion(n);
+            }
         } );
         themeItem.addEventListener( "mouseout", function(){
-            freeAttnetion(this.querySelector("a.ready"));
+            var n = this.querySelector("a.ready");
+            if(n){
+                freeAttnetion(n);
+            }
         } );
 
         // show hide subthemes on click
@@ -61,6 +68,38 @@ function calcTotalDays(){
         hours_nodes[i].title = "day:" + current_days;
     };
 }
+function calcTotalDaysMod(){
+    var hours_nodes = document.getElementsByClassName("hours");
+    var current_hours = 0;
+    for (var i = 0; i < hours_nodes.length; i++) {
+        var theme_hours = parseInt(hours_nodes[i].innerHTML || 0); // cause of NaN
+        current_hours += theme_hours;
+
+        // calculate current days and show it as tooltip
+        var current_days;
+        var hours_per_day;
+
+        if(current_hours <=60){
+            hours_per_day = 4
+        }else{
+            hours_per_day = 5
+        }
+
+
+        // if ( current_hours % hours_per_day > 0){
+        //     current_days = Math.floor( current_hours / hours_per_day) + 1;
+        // }else{
+        //     current_days = Math.floor( current_hours / hours_per_day);
+        // }
+
+        // do not round:
+        // current_days = current_hours / hours_per_day;
+        // hours_nodes[i].title = "day:" + current_days;
+        hours_nodes[i].title = "hours:" + current_hours;
+        console.log(`hours_per_day:${hours_per_day}; current_hours: ${current_hours}; current_days: ${current_days}`);
+    };
+}
+
 function showHideAll(  ){
     var clicked_node = document.getElementsByClassName("iep_syllabus_title");
     var effected_nodes = document.getElementsByClassName('iep_syllabus_sub_themes');
