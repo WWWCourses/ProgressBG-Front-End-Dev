@@ -259,8 +259,10 @@
 		</code></pre>
 	</section>
 	<section><h3>Низ (string):</h3>
-		<p>Последователност от символи, заградена в единични или двойни кавички</p>
-		<p class="note">В JavaScript, за разлика от други езици, няма значение, дали ще използваме единични или двойни кавички, но трябва да внимаваме ако такива символи ще присъстват в самия низ</p>
+		<dl class="fa">
+			<dt>Последователност от символи, заградена в единични или двойни кавички</dt>
+			<dt>В JavaScript, за разлика от други езици, <span class="note">няма значение, дали ще използваме единични или двойни кавички</span>, но трябва да внимаваме ако такива символи ще присъстват в самия низ</dt>
+		</dl>
 		<pre><code rel="JS">
 			var userName = 'Ada Byron'; // ок
 			var nickName = "LadyLovelace"; //ок
@@ -295,6 +297,50 @@
 			3. Ето какво прави "\"": --->"<---
 			4. Ето какво прави "\'": --->'<---
 		</code></pre>
+	</section>
+	<section><h3>Низ (string):</h3>
+		<dl class="fa" style="font-size: .8em;">
+			<dt>Забележете, че в низовете не може да използваме буквално символ за нов ред (клавиша enter):</dt>
+			<pre style="font-size: .6em; width: 110%;"><code rel="JS" class="js">
+			var lyrics = "В късна нощ — преди години — сам над книгите старинни,
+						безотраден, вниквах, жаден, в знания незнайни тук; —
+						скръбен, търсех без сполука мир във тайната наука —
+						но оборен в сънна скука, чух внезапно бавен звук."
+			// Uncaught SyntaxError: Invalid or unexpected toke
+			</code></pre>
+			<dt>но можем да го заместим с "\n":</dt>
+			<pre style="font-size: .6em; width: 110%;"><code rel="JS" class="js">
+				var lyrics = "В късна нощ — преди години — сам над книгите старинни,\nбезотраден, вниквах, жаден, в знания незнайни тук; —\nскръбен, търсех без сполука мир във тайната наука —\nно оборен в сънна скука, чух внезапно бавен звук."
+			</code></pre>
+			<dt>или:</dt>
+			<pre style="font-size: .6em; width: 110%;"><code rel="JS" class="js">
+				var lyrics = "В късна нощ — преди години — сам над книгите старинни," +
+							 "безотраден, вниквах, жаден, в знания незнайни тук; —" +
+							 "скръбен, търсех без сполука мир във тайната наука —" +
+							 "но оборен в сънна скука, чух внезапно бавен звук.";
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3 class="advanced">Низ (string):</h3>
+		<dl class="fa" style="font-size: .8em;">
+			<dt>В ES6 се въвежда и така наречения "<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">template string</a>", където низа се огражда в <b class="note">`</b> и <span class="note">`</span> (backticks).</dt>
+			<dt>Те добавят възможност в низ, да въвеждаме нов (enter) ред</dt>
+			<pre style="font-size: .6em; width: 110%;"><code rel="JS" class="js">
+				var lyrics = `В късна нощ — преди години — сам над книгите старинни,
+							  безотраден, вниквах, жаден, в знания незнайни тук; —
+							  скръбен, търсех без сполука мир във тайната наука —
+							  но оборен в сънна скука, чух внезапно бавен звук.`
+			</code></pre>
+			<dt>както и да се изчисляват изрази и интерполират променливи:</dt>
+			<pre><code rel="JS" class="js">
+				console.log( `2 + 4 = ${2+4}` )
+				// 2 + 4 = 6
+
+				var firstName = "Ada";
+				console.log(`Hello, ${firstName}, how are you today?`)
+				// Hello, Ada, how are you today?
+			</code></pre>
+		</dl>
 	</section>
 	<section><h3>Булев тип (boolean)</h3>
 		<p>Данните от този тип могат да приемат само 2 стойности: <span class="note">true</span> или <span class="note">false</span></p>
@@ -345,7 +391,8 @@
 			</li>
 			<li>Делене: '<code class="note">/</code>'
 				<pre><code>
-					var division = 100 / 5; // 25
+					var div1 = 100 / 5; // 25
+					var div2 =   7 / 4; // 1.75
 				</code></pre>
 			</li>
 		</ul>
@@ -474,7 +521,7 @@
 	<section><h3>Оператори за сравнение - примери</h3>
 		<pre><code rel="JS" class="js">
 			console.log(2 == 2);    // true
-			console.log(2 == "2");  // true (the string is converted to a number value.)
+			console.log(2 == "2");  // true (the string is coerced to a number value.)
 			console.log(2 === "2"); // false (no type coercion)
 
 			// the Boolean operand "true" is converted to 1; "false" is converted to 0
@@ -484,8 +531,8 @@
 			console.log(-24 == true ); 	// false
 
 			// lexicographic sorting, when both operands are strings
-			console.log( "2" > "19999" ) 	// true ("2" > "1")
-			console.log( "b" > "azzzz" ) 	// true ("a" > "b")
+			console.log( "2" > "19999" ) 	// true, as ("2" > "1") is true
+			console.log( "b" > "azzzz" ) 	// true, as ("b" > "a") is true
 		</code></pre>
 	</section>
 	<section><h3>логически оператори (Logical Operators)</h3>
