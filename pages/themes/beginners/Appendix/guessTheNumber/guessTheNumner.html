@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>guessTheNumner</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="guessTheNumner.css">
+</head>
+<body>
+	<header><h1>Guess the number</h1></header>
+	<main>
+		<div class="dropdown level">
+		  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    Select level
+		  </button>
+		  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+		    <li><a class="dropdown-item" data-value="1" href="#">easy: 1-50</a></li>
+		    <li><a class="dropdown-item" data-value="2" href="#">middle: 1-100</a></li>
+		    <li><a class="dropdown-item" data-value="3" href="#">hard: 1-500</a></li>
+		  </ul>
+		</div>
+		<div class="gamepad"></div>
+	</main>
+<script type="text/javascript" src="guessTheNumner.js"></script>
+</body>
+</html>
