@@ -1,14 +1,6 @@
-var user1 = {
-	firstName = "iva",
-	age: 34,
-	comments: ["comment1", "comment2"]
-};
+(function(){
+	// none of the variables will be visible outside this function:
 
-var user2 = [
-	"pesho",
-	34,
-	["comment1", "comment2"]
-];
-
-user1.age;
-
+	var x = 42;
+	console.log(`x in IIFE.js: ${x}`);
+})()

@@ -246,57 +246,23 @@
     </section>
 </section>
 
-<section><h2>Анонимни функции</h2>
-    <section>
-        <dl class="fa">
-            <dt>Функция, която няма име се нарича анонимна функция</dt>
-            <dt>Обикновено, анонимните функции се използват като стойности: на променливи, на параметри, в return изрази.</dt>
-            <dt>В такъв случай се извикват както именуваните функции</dt>
-        </dl>
-    </section>
-    <section>
-        <pre><code rel="JS">
-            var a = function(){
-                console.log("I am in a!");
-            }
-
-            a();
-            // "I am in a!"
-        </code></pre>
-        <p>Внимавайте за следната възможна грешка:</p>
-        <pre><code rel="JS">
-            var a = function b(){
-                console.log("I am in b!");
-            }
-
-            b(); //  ReferenceError: b is not defined
-        </code></pre>
-
-    </section>
-    <section><h3>IIFE</h3>
-        <dl class="fa">
-            <dt>Единственият начин да се изпълни анонимна функция, която не е присвоена на променлива, е чрез конструкта, наречен <span class="note">IIFE</span> (Immediately Invoked Function Expression)</dt>
-        </dl>
-        <pre><code rel="JS">
-            (function(){
-                console.log("I am in nowhere, but I exists and work!");
-            })();
-
-            // "I am in nowhere, but I exists and work"
-        </code></pre>
-        <dl class="fa">
-            <dt>Обърнете внимание на кръглите скоби с който заграждаме декларацията на функцията (за да я превърнем в изпълним израз), както и на скобите след това, за да изпълним този израз.</dt>
-        </dl>
-    </section>
-</section>
-
 <section id="Scope"><h2>Обхват на променливите (Variables Scope)</h2>
-    <section><h3>Local Scope</h3>
+    <section><h3>Въведение</h3>
         <dl class="fa">
-            <dt>Всяка променлива (декларирана с var) е видима само в тялото на функцията в която е дефинирана:</dt>
+            <dt>Обхват (scope) на една променлива наричаме областта от кода, в която може да достъпим дадената променлива.</dt>
+            <dt>В JavaScript различаваме 2 вида scope:</dt>
+            <dd><span class="note">global</span></dd>
+            <dd><span class="note">local</span> </dd>
+        </dl>
+    </section>
+    <section><h3>Local Scope</h3>
+        <dl class="fa" style="font-size: .9em">
+            <dt>Тялото на всяка една функция формира <span class="note">local scope.</span></dt>
+            <dt>Всяка променлива, декларирана с var или let, в тялото на една функция се нарича <span class="note">локална</span> и е видима само в тялото на функцията (не може да бъде достъпена извън тялото на функцията)</dt>
         </dl>
         <pre><code rel="JS">
             function f(){
+                // firstName e локална за f():
                 var firstName = "ada";
 
                 console.log( firstName );
@@ -304,6 +270,28 @@
 
             f(); // "ada"
             console.log( firstName ); // ReferenceError: firstName is not defined
+        </code></pre>
+    </section>
+    <section><h3>Global Scope</h3>
+        <dl class="fa">
+             <dt>Когато скрипта се изпълнява от браузър, глобалният обхват (<span class="note">global scope</span>) е всичкия код принадлежащ към дадената страница. Ако имаме няколко включени в дадена страница, то всички те формират global scope.</dt>
+            <dt>Променлива, която не е декларирана в тялото на която и да е функция, се нарича <span class="note">глобална</span> и може да бъде достъпена от всяко едно място в global scope.</dt>
+        </dl>
+    </section>
+    <section><h3>Global Scope</h3>
+        <pre style="width: 110%"><code rel="lib.js" class="js">
+            // x е глобална променлива
+            var x = 5;
+        </code></pre>
+        <pre style="width: 110%"><code rel="index.html" class="js">
+            &lt;body&gt;
+                &lt;!-- ... --&gt;
+                &lt;script type=&quot;text/javascript&quot; src=&quot;lib.js&quot;&gt;&lt;/script&gt;
+                &lt;script type=&quot;text/javascript&quot;&gt;
+                    console.log(`x = ${x}`)
+                    // x = 5
+                &lt;/script&gt;
+            &lt;/body&gt;
         </code></pre>
     </section>
     <section><h3>Shadowing</h3>
@@ -342,7 +330,70 @@
                 console.log("global firstName: ", firstName);
             </code></pre>
             <p>firstName в тялото на функцията НЕ Е декларирана чрез var и така тя се счита за глобална променлива!</p>
+    </section>
+</section>
 
+<section><h2>Анонимни функции</h2>
+    <section>
+        <dl class="fa">
+            <dt>Функция, която няма име се нарича анонимна функция!</dt>
+            <dt>Обикновено, анонимните функции се използват като стойности: на променливи, на параметри, в return изрази.</dt>
+        </dl>
+    </section>
+    <section><h3>Анонимна функция като стойност на променлива (function expression)</h3>
+        <pre><code rel="JS">
+            var a = function(){
+                console.log("I am in a!");
+            }
+
+            a();
+            // "I am in a!"
+        </code></pre>
+        <p>Внимавайте за следната възможна грешка:</p>
+        <pre><code rel="JS">
+            var a = function b(){
+                console.log("I am in b!");
+            }
+
+            b(); //  ReferenceError: b is not defined
+        </code></pre>
+    </section>
+    <section style="font-size: .9em"><h3 class="advanced">IIFE</h3>
+        <dl class="fa">
+            <dt>Единственият начин да се изпълни анонимна функция, която не е присвоена на променлива, е чрез конструкта, наречен <span class="note">IIFE</span> (Immediately Invoked Function Expression)</dt>
+        </dl>
+        <pre><code rel="Syntax" class="javascript" data-noescape>
+            <b>(</b>f(){}<b>)()</b>
+        </code></pre>
+        <pre><code rel="JS">
+            (function(){
+                console.log("I am in nowhere, but I exist and work!");
+            })();
+
+            // "I am in nowhere, but I exist and work"
+        </code></pre>
+        <dl class="fa">
+            <dt>Обърнете внимание на кръглите скоби с който заграждаме декларацията на функцията (за да я превърнем в изпълним израз), както и на скобите след това, за да изпълним този израз.</dt>
+        </dl>
+    </section>
+    <section><h3 class="advanced">IIFE</h3>
+        <dl class="fa">
+            <dt>IIFE намира приложение за създаване на local scope в даден скрипт.</dt>
+            <pre style="width:110%"><code rel="IIFE.js" class="js">
+                (function(){
+                    // none of the variables will be visible outside this function:
+
+                    var x = 42;
+                    console.log(`x in IIFE.js: ${x}`);
+                })()
+            </code></pre>
+            <pre style="width:110%"><code rel="index.html" class="html">
+                <script type="text/javascript" src="IIFE.js"></script>
+                <script type="text/javascript">
+                    console.log(`x in main: ${x}`);
+                </script>
+            </code></pre>
+        </dl>
     </section>
 </section>
 
@@ -393,6 +444,57 @@
                 return "I am foo() and I work!";
             }
         </code></pre>
+    </section>
+</section>
+
+<section><h3>First-class functions</h3>
+    <section>
+        <dl class="fa">
+            <dt>Свойството на функциите в JavaScript (анонимни или не) - да бъдат използвани като "обикновени" променливи, т.е. да бъдат подавани като параметър на функции или да бъдат връщани като резултат от функция, ги определя като <span class="note">first-class functions</span></dt>
+        </dl>
+    </section>
+    <section><h3 class="advanced">Функция като стойност на параметър (callback functions)</h3>
+        <dl class="fa">
+            <dt>Често в JavaScript се налага дадена функция да бъде подадена като аргумент на друга функция, за да бъде изпълнена от тази функция:</dt>
+            <pre><code rel="JS" class="js">
+                function caller(callback){
+                    console.log("caller will call the callback:")
+                    callback();
+                }
+
+                function callback1(){
+                    console.log("I'm the callback1 function!")
+                }
+
+                function callback2(){
+                    console.log("I'm the callback1 function!")
+                }
+
+
+                caller(callback1);
+                caller(callback2);
+            </code></pre>
+        </dl>
+    </section>
+    <section><h3 class="advanced">Функция като return value</h3>
+        <pre><code rel="JS" class="js">
+            function foo(){
+                return function(){
+                    console.log(`I'm the returned function`);
+                }
+            }
+
+            // var bar = foo();
+            // bar();
+
+            foo()();
+        </code></pre>
+    </section>
+</section>
+
+<section id="References"><h2>References</h2>
+    <section>
+        <iframe src="https://www.youtube.com/embed/hRJrp17WnOE?list=PL-BwA4EWrxLAL9XzwMwLY2uLQFm68fJ4Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </section>
 </section>
 
