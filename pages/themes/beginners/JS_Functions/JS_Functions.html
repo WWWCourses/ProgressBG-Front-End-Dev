@@ -64,6 +64,7 @@
     </div>
 </section>
 
+<section><h1>Въведение</h1></section>
 <section><h2>Въведение</h2>
     <section>
         <blockquote>"Really understanding functions in JavaScript is the single most important weapon you can wield"</blockquote>
@@ -89,6 +90,7 @@
     </section>
 </section>
 
+<section><h1>Дефиниция на функция (<a href="https://www.w3schools.com/js/js_function_definition.asp">Function Definition</a>)</h1></section>
 <section><h2>Дефиниция на функция (<a href="https://www.w3schools.com/js/js_function_definition.asp">Function Definition</a>)</h2>
     <section><h3>Вариант 1: Function Declarations</h3>
         <pre><code rel="Syntax">
@@ -96,7 +98,7 @@
                 &lt;тяло на функцията&gt;
             }
         </code></pre>
-        <dl class="fa fs-small">
+        <dl class="fa" style="font-size: .9em;">
             <dt><code>&lt;име&gt;</code></dt>
             <dd>Име на функцията, съобразено с <a href="https://developer.mozilla.org/en-US/docs/Glossary/Identifier">правилата за идентификатори в JS</a>. (<a href="https://mothereff.in/js-variables#%E0%B2%A0%5f%E0%B2%A0">tool:   variable name validator</a>)</dd>
             <dt><code>&lt;списък параметри&gt;</code></dt>
@@ -136,15 +138,22 @@
         <dt>Тъй като тук дефинираме функцията чрез израз (оператора за присвояване), то задължително трябва да сложим '<span class="note">;</span>' в края.</dt>
         </dl>
     </section>
+    <section><h3>Параметри на функция</h3>
+        <dl class="fa">
+            <dt>Параметрите на една функция са <span class="note">локални променливи</span> които <b>не декларираме</b> експлицитно с <code>var</code> или <code>let</code>.</dt>
+            <dt>Параметрите получават стойност при извикването (изпълнението) на функцията.</dt>
+        </dl>
+    </section>
 </section>
 
+<section><h1>извикване на функция (Function Invocation)</h1></section>
 <section><h2>Function Invocation</h2>
     <section>
         <dl class="fa">
             <dt>За да се изпълнят действията зададени в една функция, то тя трябва да се "извика".</dt>
             <dt>Синоними:</dt>
             <dd>Извикване, стартиране, изпълнение на функция</dd>
-            <dd>Function call, invocation, execution.</dd>
+            <dd>Function <span class="note">call</span>, <span class="note">invocation</span>, <span class="note">execution</span>.</dd>
         </dl>
     </section>
     <section>
@@ -187,7 +196,7 @@
         <dl class="fa">
             <dt>Ако борят на параметрите не съответства на броя на аргументите, JavaScript не връща грешка!</dt>
         </dl>
-        <pre><code rel="JS">
+        <pre style="width: 100%; font-size: .5em;"><code rel="JS">
             function sum(x, y){
                 // var x = 2, y = undefined;
                 console.log( x + y);
@@ -195,7 +204,7 @@
 
             sum(2); // undefined
         </code></pre>
-        <pre><code rel="JS">
+        <pre style="width: 100%; font-size: .5em;"><code rel="JS">
             function sum(x){
                 // var x = 2;
                 console.log( x ); // 2
@@ -208,10 +217,11 @@
     </section>
 </section>
 
+<section><h1>Return Statement</h1></section>
 <section><h2>Return Statement</h2>
     <section>
         <dl class="fa">
-            <dt>Всяка функция в JavaScript връща стойност.</dt>
+            <dt class="note">Всяка функция в JavaScript връща стойност.</dt>
             <dt>На мястото на извикването на функцията ще се подаде връщаната от функцията стойност.</dt>
             <dt>За да определим каква да бъде връщаната стойност използваме оператора <code class="note">return</code></dt>
             <dt>Ако във функцията не сме използвали оператора <code class="note">return</code>, то функцията връща <code class="note">undefined</code>!</dt>
@@ -231,7 +241,7 @@
             <dt>Нито един израз във функцията, след <code>return</code> няма да се изпълни!</dt>
         </dl>
     </section>
-    <section>
+    <section><h3>Example</h3>
         <pre><code rel="JS">
             function f(){
                 console.log("start");
@@ -244,8 +254,23 @@
             // "start"
         </code></pre>
     </section>
+    <section><h3>Example</h3>
+        <pre><code rel="JS" class="js">
+            function f(){
+                console.log("start");
+                return 42;
+            }
+
+            // f() ще се замести с 42:
+            console.log( f() );
+
+            // start
+            // 42
+        </code></pre>
+    </section>
 </section>
 
+<section><h1>Обхват на променливите (Variables Scope)</h1></section>
 <section id="Scope"><h2>Обхват на променливите (Variables Scope)</h2>
     <section><h3>Въведение</h3>
         <dl class="fa">
@@ -333,6 +358,7 @@
     </section>
 </section>
 
+<section><h1>Анонимни функции (Anonymous functions)</h1></section>
 <section><h2>Анонимни функции</h2>
     <section>
         <dl class="fa">
@@ -381,7 +407,7 @@
             <dt>IIFE намира приложение за създаване на local scope в даден скрипт.</dt>
             <pre style="width:110%"><code rel="IIFE.js" class="js">
                 (function(){
-                    // none of the variables will be visible outside this function:
+                    // нито една от променливите създадени чрез var или let, няма да бъде видима извън тази функция:
 
                     var x = 42;
                     console.log(`x in IIFE.js: ${x}`);
@@ -397,6 +423,7 @@
     </section>
 </section>
 
+<section><h1>Variables Hoisting</h1></section>
 <section id="Hoisting"><h2>Variables Hoisting</h2>
     <section>
         <dl class="fa">
@@ -447,13 +474,14 @@
     </section>
 </section>
 
-<section><h3>First-class functions</h3>
+<section><h1>First-class functions</h1></section>
+<section><h2 class="advanced">First-class functions</h2>
     <section>
         <dl class="fa">
             <dt>Свойството на функциите в JavaScript (анонимни или не) - да бъдат използвани като "обикновени" променливи, т.е. да бъдат подавани като параметър на функции или да бъдат връщани като резултат от функция, ги определя като <span class="note">first-class functions</span></dt>
         </dl>
     </section>
-    <section><h3 class="advanced">Функция като стойност на параметър (callback functions)</h3>
+    <section><h3>Функция като стойност на параметър (callback functions)</h3>
         <dl class="fa">
             <dt>Често в JavaScript се налага дадена функция да бъде подадена като аргумент на друга функция, за да бъде изпълнена от тази функция:</dt>
             <pre><code rel="JS" class="js">
@@ -476,7 +504,28 @@
             </code></pre>
         </dl>
     </section>
-    <section><h3 class="advanced">Функция като return value</h3>
+    <section><h3>example</h3>
+        <dl class="fa">
+            <dt>Забележете разликата при подаването на функция като параметър и подаването на резултата от функцията като параметър.</dt>
+        </dl>
+        <pre style="width: 110%; font-size: .5em;"><code rel="JS" class="js">
+            function caller(f){
+                console.log("1")
+                f();
+            }
+
+            function callback(){
+                console.log("2")
+            }
+
+            console.log("Feeding the caller() with function declaration")
+            caller( callback );
+
+            console.log("Feeding the caller() with function execution")
+            caller( callback() );
+        </code></pre>
+    </section>
+    <section><h3>Функция като return value</h3>
         <pre><code rel="JS" class="js">
             function foo(){
                 return function(){
