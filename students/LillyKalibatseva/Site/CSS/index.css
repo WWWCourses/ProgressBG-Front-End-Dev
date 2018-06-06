@@ -1,0 +1,115 @@
+/*-------------------------------------HEADER---------------------------------------------*/
+
+/*https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0*/
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0');
+  /*src: url('/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');*/
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*Header logo*/
+.main-header{
+  position: relative;
+
+  height: 10em;
+  border: 5px solid red;
+}
+.logo{
+	height: 100%;
+	float: left;
+}
+
+/*Navigation Menu*/
+.menu-nav{
+	position: absolute;
+  bottom: 0; right: 0;
+	width: 70%;
+  height: 25%;
+  line-height: 2em;
+  border: 5px solid blue;
+}
+.main{
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 25%;
+  padding: .6em 0 ;
+  background: #9dc852;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s background-color;
+  border: 5px solid red;
+}
+
+.main:hover {
+  background: #8db842;
+}
+
+.dropdown-content{
+  display: none;
+  min-width: 100%;
+  padding: .8em 0;
+  background: #575555;
+  transition: 0.5s padding, 0.5s background;
+}
+
+.list > * {
+  float: left;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+.dropdown-content:hover{
+  background-color: #8F8E8E;
+}
+
+/*-------------------------------------FOOTER---------------------------------------------*/
+
+.main-footer{
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  height: 15%;
+  background-color: #8F8E8E;
+}
+.f-container{
+  width: 50%;
+  margin: 0 auto;
+}
+div>ul>li{
+  padding: 1% 4%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  color: white;
+  font-size: 0.8em;
+}
+.f-1::after {
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f082";
+  font-family: FontAwesome;
+  font-size: 110%;
+  color: #FFFFFF;
+}
+.f-2::after {
+  content: "\f17e";
+  font-family: FontAwesome;
+  font-size: 110%;
+  color: #FFFFFF;
+}
+.f-3::after {
+  content: "\f232";
+  font-family: FontAwesome;
+  font-size: 110%;
+  color: #FFFFFF;
+}

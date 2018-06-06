@@ -75,7 +75,7 @@
     <section>
         <dl class="fa">
             <dt>Всяко едно свойство на обект съдържа данни - може да бъде всеки един тип данни, но за разлика от масива, данните тук се асоциират с имена (property names, keys) а не с цифрови индекси.</dt>
-            <dt>Когато в дадено свойство имаме функция, тогава това свойство се нарича <span class="note">метод</span> на обекта</dt>            
+            <dt>Когато в дадено свойство имаме функция, тогава това свойство се нарича <span class="note">метод</span> на обекта</dt>
         </dl>
     </section>
     <section id="developerObjectByLiteral">
@@ -83,8 +83,8 @@
         <pre><code rel="JS" class="js bigFont">
             var developer1 = {
                 // properties:
-                "firstName"     : "Ivan", 
-                "surName"       : "Ivanov",      
+                "firstName"     : "Ivan",
+                "surName"       : "Ivanov",
                 "skills"        : ["HTML", "CSS", "JavaScript"],
                 // methods:
                 "applyForJob"   : function(){
@@ -99,7 +99,7 @@
     <section>
         <p>Ето как, съвсем обобщено, изглежда един обект в паметта:</p>
         <a href="images/JS_ObjectInRAM_1.png" title="click for bigger image"><img src="images/JS_ObjectInRAM_1.png"></a>
-    </section>    
+    </section>
 </section>
 
 <section><h2>Създаване на единичен обект</h2>
@@ -113,7 +113,7 @@
                 "brand" : "ford",
                 "year"  : 2016,
                 "color" : "red",
-                "doors" : 3   
+                "doors" : 3
             }
         </code></pre>
         <p class="note">Забележете, че след последния елемент на обекта не се слага запетайка!</p>
@@ -140,12 +140,12 @@
             console.log( developer1.firstName ); //Ivan
             console.log( developer1.surName );   //Ivanov
 
-            console.log( developer1.skills );    
+            console.log( developer1.skills );
             // ["HTML", "CSS", "JavaScript"]
 
             console.log( developer1.skills[0] ); //"HTML"
 
-            console.log( developer1.applyForJob() ); 
+            console.log( developer1.applyForJob() );
             // Ivan is applying for job!
 
             developer1.firstName = "Stoyan";
@@ -166,17 +166,24 @@
         </code></pre>
     </section>
 </section>
-
+<!--
 <section><h2>ООП с JavaScript</h2>
     prototype-based inheritance
     разлики между JS Java/C++/C#
+</section> -->
+
+<section><h2>Примери</h2>
+    <dl class="fa">
+        <dt>Повече примимери и задачи по темата:</dt>
+        <dd><a href="https://codepen.io/collection/XPMQxY/">JS_Objects</a> @codepen</dd>
+    </dl>
 </section>
 
-<section><h2>Задачи за упражнение</h2>
+<!-- <section><h2>Задачи за упражнение</h2>
     <section><h3>Task1: developer2 object</h3>
 
     </section>
-</section>
+</section> -->
 
 <section class="disclaimer" data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
      <p>These slides are based on</p>

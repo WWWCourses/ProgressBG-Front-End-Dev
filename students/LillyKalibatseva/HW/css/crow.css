@@ -1,0 +1,74 @@
+		html{
+			background-color: #914411;
+			background-image: url(../images/originals/raven-1002849_1920.jpg);
+			background-repeat: no-repeat;
+			border-width: 10px;
+			border-style: solid;
+			border-left-color: #C89346;
+			border-top-color: #C89346;
+			border-right-color: #6D4404;
+			border-bottom-color: #6D4404;
+			min-height: 100vh;
+		}
+
+		/*formatting for the headings*/
+
+		h2,h4,.verse{
+			font-family: Arial, Helvetica, sans-serif; 
+			line-height: 1.6;
+		}
+		h2{
+			color: #FBD46C;
+			font-size: 2em;
+			text-indent: 200px;
+		}
+		h4{
+			color: black;
+			font-size: 1.1em;
+			font-style: oblique;
+			text-indent: 250px;
+			font-variant: small-caps;
+		}
+
+		/*formatting for the poem*/
+		
+		.verse{
+			color: white;
+			font-size: 16px;
+			font-weight: bold;
+			text-indent: 40px;
+		}
+		span{
+			border-bottom-width: 1px;
+			border-bottom-style: outset;
+			border-color: orange;
+		}
+		.talk{
+			letter-spacing: 2px;
+			font-style: oblique;
+		}		
+
+		/*double border at the end of the poem*/
+		.last{
+			border-bottom-style: double;
+			border-bottom-color: #C89346;
+		}	
+
+		/*formatting for the "Additonal information"*/
+		.bio,.info{
+			font-family: "Times New Roman", Times, serif;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.bio{
+			color: #D19F57;
+		}
+		.info{
+			color: black;
+			font-size: 18px;
+		}
+		a{
+			color: blue;
+			font-weight: normal;
+
+		}

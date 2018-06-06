@@ -1,0 +1,53 @@
+Html{
+	margin: 0;
+	padding: 0;
+}
+body{
+			background: url('../Images/7615277078_088c037717_j.jpg') no-repeat;width: 1000px;height: 500px;
+			background-position: center;
+			background-size: 85em;
+			position: relative;left: 200px;
+	}
+#Container ul{
+	list-style: none;
+}
+#Container ul li{
+background-color: black;
+width: 150px;
+height: 40px;
+margin: 2px;
+line-height: 40px;
+text-align: center;
+float: left;
+color: White;
+font-size: 16px;
+font-style: italic;
+opacity: .9;list-style: none;
+}
+#Container ul li:hover{
+	background-color: #1BC613;
+}
+#Container ul ul{
+	display: none;margin-left:-35px;
+}
+#Container ul li:hover > ul{
+	display: grid;text-decoration: none;
+}
+#Container ul ul ul{
+	margin-left:110px;top:40px;position: absolute;
+}
+.test ul ul{
+	display: block;
+}
+.z1{
+	position: absolute;left: 360px;bottom: 90px;color:#23DBD9;font-style: italic;font-size: 36px;
+}
+.sa{
+	text-decoration: none;outline: none;color: white;
+}
+.Sofia{
+	text-decoration: none;outline: none;color: white;
+}
+.CV{
+	text-decoration: none;outline: none;color: white;display: inline;
+}

@@ -1,0 +1,27 @@
+.pic{
+	width: 15%;
+	float: right;
+}
+main{
+	width: 80%;
+	margin: 15% auto;
+}
+span{
+	display: block;
+	font-style: italic;
+}
+.qualification{
+	font-weight: bold;
+	margin-top: 1.8em;
+	margin-bottom: 1.5em;
+}
+.text{
+	line-height: 1.4em;
+	padding-top: .5em;
+}
+main::after{
+	content: ".";
+	visibility: hidden;
+	display: block;
+	clear: both;
+}

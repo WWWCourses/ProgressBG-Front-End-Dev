@@ -1,0 +1,54 @@
+body{
+	width: 100%;
+	min-height:100%;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	padding: 0.5em;
+}
+.name{
+	font-size: 2em;
+	color: #5588FC;
+	text-align: center;
+
+}
+.job-title{
+	font-size: 1.2em;
+	text-align: center;
+}
+.photo{
+	float: right;
+}
+.photo::after{
+	clear: both;
+}
+.profile{
+	font-size: 1.1em;
+	font-style: italic;
+}
+.dropdown{
+	display: none;
+	margin: 1em;
+}
+.work,.edu,.skills{
+	color:#79FFE3;
+	margin: .5em;
+	border-bottom: 1px solid #8AFF86;
+
+}
+.job1,.job2,.job3,.edu1,.edu2,.skill1,.skill2,.skill3,.skill4{
+	margin: 1em;
+	color:#46C8AD;
+}
+div>.work-experience:hover+.dropdown, 
+div>.education:hover+.dropdown, 
+div>.skill-qual:hover+.dropdown{
+	cursor: pointer;
+	display: block;
+	width: 60%;
+	min-height: 20%;
+}
+.position{
+	font-size: 1.05em;
+	font-style: italic;
+	font-weight: bold;
+}

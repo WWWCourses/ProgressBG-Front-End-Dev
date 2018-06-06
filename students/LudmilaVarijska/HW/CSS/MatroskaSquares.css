@@ -1,0 +1,36 @@
+body{
+	background-color: #AD3939;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+.all{
+	position: fixed;
+	top:30px;
+	left:30px;
+}
+
+
+.out{
+	position: absolute;
+	top:5em;
+	left:5em;
+	width: 40cm;
+	height: 20cm;
+	border: 1px solid yellow;
+
+}
+
+.inner{
+	position: absolute;
+	border: 1px solid yellow;
+	top:2em;
+	left:4em;
+	bottom:2em;
+	right:4em;
+}
+
+.full{
+	background-color: yellow;
+}

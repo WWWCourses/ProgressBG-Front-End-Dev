@@ -1,0 +1,24 @@
+.paragraph{
+	padding: 1em;
+	margin: 10px 0;
+	background-color: #E5DEDE;
+}
+
+.border{
+	border: 2px groove #D88A1A;
+}
+
+img{
+	width: 9em;
+	height: 8em;
+	back
+}
+
+.floatOdd{
+	float:left;
+}
+
+.floatEven{
+	float: right;
+}
+

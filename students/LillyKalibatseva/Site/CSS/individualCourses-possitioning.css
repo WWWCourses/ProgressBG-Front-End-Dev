@@ -1,0 +1,19 @@
+main{
+	width: 80%;
+	margin: 15% auto;
+}
+.title1{
+	font-weight: bold;
+	font-style: italic;
+}
+.text{
+	line-height: 1.4em;
+	padding-top: .5em;
+}
+.levels{
+	margin-top: 1.5em;
+}
+.table{
+	margin: 1em auto;
+
+}

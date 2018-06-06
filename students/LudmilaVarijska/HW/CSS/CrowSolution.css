@@ -1,0 +1,53 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+}
+
+body{
+	background: #F8E724 url('../images/original/raven-1002849_1920.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+	border: 15px outset #B1A347;
+	font: bold 18px tahoma, sans-serif;
+	color: #FFFFFF;
+}
+
+#text{
+	border-bottom: 8px double #B1A347;
+}
+
+#poem{
+	text-align: left;
+	width: 500px;
+	color: #FFFFFF;
+}
+
+.firstLine{
+	padding-left: 40px;
+}
+
+h1{
+	color: #F8D26A;
+	margin-left: 5em;
+}
+
+h2{
+	color: #090909;
+	margin-left: 8em;
+}
+
+.underline{
+	border-bottom: 2px solid #CF9324;
+}
+
+.italic{
+	font-style: italic;
+	letter-spacing: 2px;
+}
+
+#info{
+	color: #D9A425;
+	margin-top: 0;
+}
