@@ -17,7 +17,7 @@ let main = function(){
 	// машината си намисля число;
 	// показваме игралното поле
 	// фокусираме userInput полето
-	dropdownMenuNde.addEventListener("click", function(еvent){
+	dropdownMenuNde.addEventListener("click", (еvent)=>{
 		genMachineNumber(еvent.target.getAttribute("data-value"));
 		gameFieldNode.style.display = "block";
 		userInputNode.focus();
