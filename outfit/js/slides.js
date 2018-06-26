@@ -72,17 +72,16 @@ var sc_invisible=1;
 var sc_security="d54d4f78";
 
 function stsc(){
-    console.log(`stsc loaded!!!`);
-
-
     var script = document.createElement('script');
     script.src = "https://www.statcounter.com/counter/counter.js";
     document.head.appendChild(script);
 
-    var script = document.createElement('script');
-    script.src = "http://c.statcounter.com/11747234/0/d54d4f78/1/";
-    document.head.appendChild(script);
+    var img = document.createElement('img');
+    img.src = "http://c.statcounter.com/11747234/0/d54d4f78/1/"
+
+    document.body.appendChild(img);
 }
+
 
 stg();
 stsc();
