@@ -53,8 +53,22 @@ function autoTitleLinksWrapImages(){
         imgs[i].parentElement.setAttribute("title", "click for bigger image")
     }
 }
+function st(){
+    console.log(`st loaded!!!`);
+    var script = document.createElement('script');
+    script.onload = function () {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'UA-121408697-1');
+    };
+    script.src = "https://www.googletagmanager.com/gtag/js?id=UA-121408697-1";
 
+    document.head.appendChild(script);
+}
+
+st()
 PrettyPreCode();
 autoTitleLinksWrapImages();
 

@@ -1,11 +1,27 @@
 window.onload = function(){
     init();
+    st();
+}
+function st(){
+    console.log(`st loaded!!!`);
+    var script = document.createElement('script');
+    script.onload = function () {
+        //do stuff with the script
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121408697-1');
+    };
+    script.src = "https://www.googletagmanager.com/gtag/js?id=UA-121408697-1";
+
+    document.head.appendChild(script);
 }
 function init(){
     var sub_themes_nodes = document.getElementsByClassName('iep_syllabus_sub_themes');
     attachEvents();
     calcTotalHours();
-    calcTotalDaysMod();
+    calcTotalDays();
     hideAllNodes( sub_themes_nodes );
 }
 function attachEvents(){
@@ -65,7 +81,7 @@ function calcTotalDays(){
 
         // do not round:
         current_days = current_hours / hours_per_day;
-        hours_nodes[i].title = "day:" + current_days;
+        hours_nodes[i].title = `hours: ${current_hours}, days: ${current_days}`;
     };
 }
 function calcTotalDaysMod(){
