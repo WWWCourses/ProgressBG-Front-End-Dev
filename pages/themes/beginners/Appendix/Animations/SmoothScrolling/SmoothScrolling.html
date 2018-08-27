@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>SmoothScrolling</title>
     <style type="text/css">
+    	body{
+    		margin: 0;
+    	}
     	main{
     		position: relative;
     	}
@@ -21,20 +24,46 @@
     		display: block;
     	}
     	main>section.articles{
-    		/*position: absolute;*/
-    		margin: 0 0 0 6em;
+    		position: relative;
+    		min-height: 100vh;
+    		margin: 0 0 0 5em;
+    		padding: 1em;
     		/*border: .5em solid blue;*/
+    		background:#333;
+    		box-sizing: border-box;
+    		overflow: hidden;
     	}
+
+    	main>section.articles>article{
+    		position: absolute;
+    		bottom: -100vh; left:0em;
+    		/*display: none;*/
+    		min-height: 100%;
+    		width: 100%;
+    		box-sizing: border-box;
+    		opacity: 0;
+    	}
+    	main>section.articles>article.focus{
+    		display: block;
+    		bottom: 0;
+    		opacity: 1;
+    		transition: bottom 800ms, opacity 3s;
+    	}
+    	main>section.articles>article:nth-child(1){background: hsl(0, 100%, 50%)}
+    	main>section.articles>article:nth-child(2){background: hsl(45, 100%, 50%)}
+    	main>section.articles>article:nth-child(3){background: hsl(90, 100%, 50%)}
+    	main>section.articles>article:nth-child(4){background: hsl(175, 100%, 50%)}
+    	main>section.articles>article:nth-child(5){background: hsl(245, 100%, 50%)}
     </style>
 </head>
 <body>
 <main>
 	<nav id="content">
-		<a href="#section1">section1</a>
-		<a href="#section2">section2</a>
-		<a href="#section3">section3</a>
-		<a href="#section4">section4</a>
-		<a href="#section5">section5</a>
+		<a href="#">section1</a>
+		<a href="#">section2</a>
+		<a href="#">section3</a>
+		<a href="#">section4</a>
+		<a href="#">section5</a>
 	</nav>
 	<section class="articles">
 		<article id="section1">
@@ -44,7 +73,7 @@
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -54,7 +83,28 @@
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		ENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDEND</p>
 		</article>
 		<article id="section2">
 			<h1>Article 2</h1>
@@ -134,8 +184,9 @@
 		</article>
 	</section>
 </main>
+<script type="text/javascript" src="scroller.js"></script>
 </body>
-<script type="text/javascript">
+<!-- <script type="text/javascript" src="dummy.js">
 	var jQueryLoader = function(){
 		// Conditionally Load jQuery (javascript)
 		// Source: https://gist.github.com/gists/902090/
@@ -210,7 +261,5 @@
 	// jQueryLoader.now;
 	// console.dir(jQueryLoader.load);
 
-	// scroller.vanilaScroller();
-
-</script>
+	// scroller.vanilaScroller();</script> -->
 </html>
