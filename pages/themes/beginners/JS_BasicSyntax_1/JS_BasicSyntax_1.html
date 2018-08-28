@@ -158,10 +158,12 @@
 	</section>
 	<section style="font-size: .9em"><h3>Деклариране/Дефиниране</h3>
 		<dl class="fa">
-			<dt>Създаването на променлива се нарича <span class="note">деклариране</span> на променлива.
-			В JavaScript това става чрез запазената за езика дума <code class="note">var</code>
+			<dt>Създаването на една променлива се нарича <span class="note">деклариране</span> на променлива.
+			В JavaScript това става чрез запазената за езика дума <code class="note">var</code>.
 			</dt>
-			<dt>Ако желаем, може при създаването на променливата, да укажем стойност - т.е. да <span class="">инициализираме</span> променливата.</dt>
+			<dd class="advanced"></i>В ECMAScript 6, се въвеждат и нови думи за деклариране на променливи: <code class="note">let</code> и <code class="note">const</code>, които ще разгледаме след като изясним понятията "scope" и "hoisting".</dd>
+			<dt>Ако желаем, може при създаването на променливата, да запишем в нея конкретна стойност - т.е. да <span class="note">дефинираме</span>(<span>инициализираме</span>) променливата.</dt>
+			<dt style="font-size: .8em;">В JavaScript, една променлива винаги е дефинирана, тъй като ако не зададем екслплицитно стойност при декларацията, то в променливата се записва стойността <span class="note">undefined</span></dt>
 		</dl>
 		<pre><code rel="JS">
 			var x;      // деклариране на променливата x
@@ -170,10 +172,9 @@
 			var a,b;    // деклариране на променливите a и b
 			var x = 10; // деклариране и инициализиране на x със стойността 10
 		</code></pre>
-		<p class="advanced"></i>В ECMAScript 6, се въвеждат и нови думи за деклариране на променливи: <code class="note">let</code> и <code class="note">const</code>, които ще разгледаме след като изясним понятията "scope" и "hoisting".</p>
 	</section>
 	<section><h3>Глобални променливи</h3>
-		<p>В JavaScript, променлива може да се създаде и без указване на <code>var</code>. Например:</p>
+		<p>В JavaScript, променлива може да се създаде и без указване на <code class="note">var</code>/<span class="note">let</span> или <span class="note">const</span>. Например:</p>
 		<pre><code rel="JS" class="js">
 			x = 10;
 			console.log(x); // 10 (Error in strict mode)
@@ -440,6 +441,13 @@
 				</code></pre>
 			</li>
 		</ul>
+	</section>
+	<section><h3>Increment - examples</h3>
+		<pre><code rel="JS" class="js">
+			var i = 1;
+			console.log(i++)
+			// 1
+		</code></pre>
 	</section>
 	<section>
 		<p>За по-сложни математически операции, може да използвате методите на вградения в езика <a href="https://www.w3schools.com/js/js_math.asp">Math object</a> </p>
