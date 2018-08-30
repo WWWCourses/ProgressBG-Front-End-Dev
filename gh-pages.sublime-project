@@ -7,7 +7,7 @@
 	],
 	"settings":
 	{
-		"dictionary": "Packages/Language - Bulgarian/OldBulgarian.dic",
+		// "dictionary": "Packages/Language - Bulgarian/OldBulgarian.dic",
 		"spell_check": true,
 		"show_definitions": false,
 		"tab_size": 2,
@@ -18,12 +18,12 @@
 		// "font_face": "Liberation Mono",
 		// "font_face": "MathJax_Size1",
 		"font_face": "Noto Mono",
-		"translate_tabs_to_spaces": false,		
+		"translate_tabs_to_spaces": false,
 		// Set to true to removing trailing white space on save
     "trim_trailing_white_space_on_save": true,
 		// "detect_indentation": true,
 		// "color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
-		// "font_size": 13,		
+		// "font_size": 13,
 		// "theme": "iep.predawn.sublime-theme",
 		"highlight_line": true,
 		"auto_find_in_selection": true,
