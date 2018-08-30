@@ -862,7 +862,7 @@
   </section>
 
   <section><h3><code>while</code> statement: синтаксис</h3>
-    <pre><code rel="Syntax">
+    <pre style="width: 75vw;"><code rel="Syntax">
       while ( condition) {
         блок, който се изпълнява, докато condition е истина
       }
@@ -878,17 +878,71 @@
   <section><h3><code>while</code> statement: алгоритъм</h3>
     <img src="images/while_algorithm.png">
   </section>
-  <section><h3><code>while</code> statement: пример</h3>
-    <pre><code rel="JS">
-      var items = 10;
-      while( items > 0 ){
-        li=document.createElement('li');
-        li.className = "elements";
-        li.innerHTML = "Item " + (i+1);
-        ul.appendChild(li);
-        items--­­;  // ако този ред липсва, цикълът става безкраен!
+  <section><h3><code>while</code> statement: пример 1</h3>
+    <pre><code rel="JS" class="js">
+      var userTries = 5;
+
+      while( userTries>0){
+        console.log(`Try: ${userTries}`);
+        userTries--; // ако този ред липсва, цикълът става безкраен!
       }
     </code></pre>
+    <p class="note">Забележете, че този пример, би било по-добре да бъде имплементиран чрез <code>for</code> statement</p>
+    <pre><code rel="JS" class="js">
+      for(var userTries = 5; userTries>0; userTries--){
+        console.log(`Try: ${userTries}`);
+      }
+    </code></pre>
+  </section>
+  <section><h3><code>while</code> statement: пример 2</h3>
+    <p>Но когато не знаем предварително колко пъти ще се повтори цикъла използваме <code>while</code></p>
+    <pre style="width: 70vw;"><code rel="JS" class="js">
+      // Машината си "намисля" число:
+      var machineNumber = Math.round(Math.random() * 10);
+      console.log(`machineNumber: ${machineNumber}`);
+
+      // Потребителя "въвежда" число:
+      var userNumber = Math.round(Math.random() * 10);
+      console.log(`userNumber: ${userNumber}`);
+
+      while(userNumber != machineNumber){
+        // Потребителя "въвежда" ново число:
+        userNumber = Math.round(Math.random() * 10);
+        console.log(`new userNumber: ${userNumber}`);
+      }
+    </code></pre>
+    <p>Бихте ли могли да реализирате същата логика чрез <code>for</code> цикъл?</p>
+  </section>
+
+  <section><h3><code>do-while</code> statement: синтаксис</h3>
+    <pre style="width: 80vw"><code rel="Syntax">
+      do{
+        блок, който се изпълнява, докато condition е истина
+      } while ( condition)
+    </code></pre>
+    <dl class="fa">
+      <dt><code>do-while</code> работи по същия начин както <code>while</code>, с единствената разлика, че блокът в тялото на цикъла ще се <span class="note">изпълни поне веднъж, независимо от истинностната стойност на условието.</span> </dt>
+    </dl>
+  </section>
+  <section><h3><code>do-while</code> statement: пример</h3>
+    <pre style="width: 75vw;"><code rel="JS" class="js">
+      // Машината си "намисля" число:
+      var machineNumber = Math.round(Math.random() * 10);
+      console.log(`machineNumber: ${machineNumber}`);
+
+      do{
+        // Потребителя "въвежда" число:
+        userNumber = Math.round(Math.random() * 10);
+        console.log(`userNumber: ${userNumber}`);
+      } while(userNumber != machineNumber)
+    </code></pre>
+  </section>
+
+  <section><h3><code>break</code> и <code>continue</code></h3>
+    <dl class="fa">
+      <dt>Self-learning section:</dt>
+      <dd><a href="https://www.w3schools.com/js/js_break.asp">JavaScript Break and Continue @w3schools</a></dd>
+    </dl>
   </section>
 </section>
 

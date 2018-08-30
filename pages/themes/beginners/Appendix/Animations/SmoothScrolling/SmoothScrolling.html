@@ -37,17 +37,18 @@
     	main>section.articles>article{
     		position: absolute;
     		bottom: -100vh; left:0em;
-    		/*display: none;*/
     		min-height: 100%;
     		width: 100%;
+    		padding: 1em;
     		box-sizing: border-box;
-    		opacity: 0;
+    		color: #FFF;
+    		/*opacity: 0;*/
+    		transition: bottom 800ms;
     	}
     	main>section.articles>article.focus{
     		display: block;
     		bottom: 0;
     		opacity: 1;
-    		transition: bottom 800ms, opacity 3s;
     	}
     	main>section.articles>article:nth-child(1){background: hsl(0, 100%, 50%)}
     	main>section.articles>article:nth-child(2){background: hsl(45, 100%, 50%)}
