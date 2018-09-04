@@ -7,7 +7,6 @@
 	],
 	"settings":
 	{
-		// "dictionary": "Packages/Language - Bulgarian/OldBulgarian.dic",
 		"spell_check": true,
 		"show_definitions": false,
 		"tab_size": 2,
