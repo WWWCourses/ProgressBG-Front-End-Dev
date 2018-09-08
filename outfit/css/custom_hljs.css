@@ -14,8 +14,13 @@
 	white-space: -o-pre-wrap;    /* Opera 7 */
 	word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
+.reveal dl pre{
+	margin-left:0;
+	/*width: 75vmax;*/
+}
 .reveal pre>code{
 	font-family: 'Roboto Mono', monospace;
+	/*width: 75vw;*/
 	/*font-family: 'Anonymous Pro', monospace;*/
 	/*font-weight: bold;*/
 	font-size: 1.3em;

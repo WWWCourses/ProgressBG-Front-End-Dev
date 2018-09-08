@@ -8,34 +8,24 @@
     var DeveloperConstrucor = function(firstName, surName, skills){
       this.firstName = firstName;
       this.surName = surName;
-      this.skills = skills;            
+      this.skills = skills;
     }
 
-    // функцията се копира в паметта един единствен път, без значение колко
-    // обекта ще генерираме. Всеки обект има достъп до нея чрез механизмът на
-    // наследяване в JavaScript, който се разглежда детайлно в Advanced JavaScript курса.
+    // функцията се копира в паметта един единствен път, без значение колко обекта ще генерираме. Всеки обект има достъп до нея чрез механизмът на наследяване в JavaScript, който се разглежда детайлно в Advanced JavaScript курса.
     DeveloperConstrucor.prototype.applyForJob = function(){
-        var skillsStr = "";
-        var skillEndStr = ", ";
+        var skillsStr = this.skills.toString();
 
-        for (var i = 0; i < this.skills.length; i++) {
-          if(i == (this.skills.length - 1)){
-            skillEndStr = "";
-          }
-          skillsStr += this.skills[i] + skillEndStr;
-        }
-
-        console.log(`Hi, I'm ${this.firstName} ${this.surName}. My strongest skills are ${skillsStr}.`);      
+        console.log(`Hi, I'm ${this.firstName} ${this.surName}. My strongest skills are ${skillsStr}.`);
     }
 
 		var developer1 = new DeveloperConstrucor(
-      "Ivan", "Ivanov", 
+      "Ivan", "Ivanov",
       ["HTML", "CSS", "JavaScript"]
     );
 
     var developer2 = new DeveloperConstrucor(
       "Maria", "Mineva",
-      ["HTML", "CSS", "JavaScript", "Python", "RestAPIs"] 
+      ["HTML", "CSS", "JavaScript", "Python", "RestAPIs"]
     );
 
     developer1.applyForJob();

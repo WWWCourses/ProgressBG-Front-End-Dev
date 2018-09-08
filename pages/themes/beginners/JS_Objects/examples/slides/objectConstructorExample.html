@@ -4,37 +4,27 @@
 	<title>Object Constructor Example</title>
 </head>
 <body>
-  <!-- 16 5361.75 %  52 6965.58 %  (anonymous)objectConstruct…Example.html:7  -->
 	<script type="text/javascript">
-    var DeveloperConstrucor = function(firstName, surName, skills){
+    // Конструктор за обекти от тип Developer. Важно е да бъде извикан с "new"!
+    function Developer(firstName, surName, skills){
       this.firstName = firstName;
       this.surName = surName;
       this.skills = skills;
-      // макар и написана само веднъж, тази функция ще се копира в паметта
-      // толкова пъти, колкото обекти създадем, което не е ефективно при
-      // по-големи приложения
+      // макар и написана само веднъж, тази функция ще се копира в паметта толкова пъти, колкото обекти създадем, което не е ефективно при по-големи приложения. Чрез механизмът на наследяване и прототипите в JavaScript, който се разглежда детайлно в Advanced курса, ще рагледаме как можем да решим този проблем ефикасно.
       this.applyForJob = function(){
-        var skillsStr = "";
-        var skillEndStr = ", ";
+        var skillsStr = this.skills.toString();
 
-        for (var i = 0; i < this.skills.length; i++) {
-          if(i == (this.skills.length - 1)){
-            skillEndStr = "";
-          }
-          skillsStr += this.skills[i] + skillEndStr;
-        }
-
-        console.log(`Hi, I'm ${this.firstName} ${this.surName}. My strongest skills are ${skillsStr}.`);      
+        console.log(`Hi, I'm ${this.firstName} ${this.surName}. My strongest skills are ${skillsStr}.`);
       }
     }
-		var developer1 = new DeveloperConstrucor(
-      "Ivan", "Ivanov", 
+		var developer1 = new Developer(
+      "Ivan", "Ivanov",
       ["HTML", "CSS", "JavaScript"]
     );
 
-    var developer2 = new DeveloperConstrucor(
+    var developer2 = new Developer(
       "Maria", "Mineva",
-      ["HTML", "CSS", "JavaScript", "Python", "RestAPIs"] 
+      ["Python", "Machine Learning", "Data Science"],
     );
 
     developer1.applyForJob();
