@@ -74,7 +74,7 @@
             console.log( Math.max(2,12,5)); // 12
 
             // using built in Date() constructor
-            var currentDate = new Date(); 
+            var currentDate = new Date();
             console.log( currentDate.getFullYear() ); // 2018
 
             // using built in arguments object - available within functions only!
@@ -83,26 +83,25 @@
                 for (var i = 0; i < arguments.length; i++){
                     sum += arguments[i];
                 }
-                console.log("sum = " + sum); 
+                console.log("sum = " + sum);
             }
             sum(1,2,3); // 6
-            sum(1,2,3,4); // 6
+            sum(1,2,3,4); // 10
         </code></pre>
     </section>
     <section><h3>въведение</h3>
         <p>Някои от най-често използваните вградени обекти/функции са: </p>
         <dl class="fa">
-            <dt>Math</dt>
-            <dt>Date</dt>
-            <dt>String</dt>
-            <dt>Number</dt>
-            <dt>Array</dt>
-            <dt>Number</dt>
+            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">Math</a></dt>
+            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></dt>
+            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></dt>
+            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></dt>
+            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></dt>
         </dl>
         <p>Ако сте любопитни относно другите: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects#Fundamental_objects">Standard built-in objects @MDN</a></p>
     </section>
     <section><h3>built-in objects == primitive types?</h3>
-        <p>Много често примитивните типове string, number, boolean се бъркат със съответните им "двойници - обекти: String, Number, Boolean</p>       
+        <p>Много често примитивните типове string, number, boolean се бъркат със съответните им "двойници - обекти: String, Number, Boolean</p>
         <pre><code rel="JS">
             var str1 = new String("ada");
             var str2 = "ada";
@@ -118,11 +117,11 @@
             // примитивните типове не са обекти и нямат пропъртита, но:
             "ada".toUpperCase(); // "ADA"
         </code></pre>
-        <p>това, което прави JavaScript e да "обвие" примитивният тип в обект от съответния тип (в примера: String обекта) и да използва съответното свойство (toUpperCase). </p>
+        <p>това, което прави JavaScript e да "обвие" примитивният тип в обект от съответния тип (в примера: String обекта) и да използва съответното свойство/метод (в пример: toUpperCase). </p>
     </section>
     <section><h3>best practises</h3>
-        <p>Въпреки че можем да създадем и работим с низ, който е създаден като обект (същото е в сила и за останалите типове), на практика се предпочита използването на примитивния тип.</p>
-        <p class="advanced">Например:</p>
+        <p>Въпреки че можем да създадем и работим с число, което е създадено като обект (същото е в сила и за останалите типове), на практика се предпочита използването на примитивния тип.</p>
+        <p>Например:</p>
         <pre><code rel="JS">
             // create number - the good way (as primitive)
             var x = 42;
