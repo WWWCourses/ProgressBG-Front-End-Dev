@@ -229,7 +229,7 @@
             counter-increment: item;
 
             display: inline-block;
-            width: 1.3em;
+            width: 1.8em;
             vertical-align: top;
             /*margin-right:.8em;*/
             text-decoration: none;
@@ -243,7 +243,6 @@
             counter-increment: item;
 
             display: inline-block;
-            width: 2em;
-            margin-left: -1.4em;
-            /*margin-right: .4em;*/
+            margin-left: -0.8em;
+            margin-right: .4em;
         }

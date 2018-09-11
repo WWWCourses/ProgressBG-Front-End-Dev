@@ -14,8 +14,8 @@
             font-style: normal;
             /*font-size: .9em;*/
         }
-        header{
-
+        header h2{
+            display: none;
         }
         .diag{
             width: 200px;
@@ -42,21 +42,10 @@
             margin: 1.5em .2em .3em 0;
         }
 
-        .iep_syllabus_title>.show_hide_buttons{
+        .iep_syllabus_title{
             display: none;
         }
-        .iep_syllabus_title>.show_hide_buttons>.btn_show{
-            margin: 0 1em 0 0;
-            color: #71BA8E;
-        }
-        .iep_syllabus_title>.show_hide_buttons>.btn_hide{
-            margin: 0 0em 0 0;
-            color: #FFBA7E;
-        }
-        .iep_syllabus_title>.show_hide_buttons>span:hover{
-            /*font-size:.9em;*/
-            cursor: pointer;
-        }
+
         .iep_syllabus .total_hours{
             float: right;
             color: #BA7274 ;
@@ -155,6 +144,7 @@
 
         .iep_syllabus_themes .hours{
             float: right;
+            display: inline-block;
             padding: 0 0 0 1em;
             font-weight: normal;
             color: #999;
@@ -203,6 +193,14 @@
             counter-increment: item;
 
             display: inline-block;
-            margin-left: -0.8em;
+            margin-left: -4em;
             margin-right: .4em;
+        }
+
+        footer{
+            border-top: 2px solid #999;
+            padding-top:.7em;
+        }
+        .license img{
+            display: none;
         }
