@@ -141,6 +141,7 @@
     <section><h3>Параметри на функция</h3>
         <dl class="fa">
             <dt>Параметрите на една функция са <span class="note">локални променливи</span> които <b>не декларираме</b> експлицитно с <code>var</code> или <code>let</code>.</dt>
+            <dt>Имената на параметри трябва да отговарят на правилата за именуване на променливи в JavaScript.</dt>
             <dt>Параметрите получават стойност при извикването (изпълнението) на функцията.</dt>
         </dl>
     </section>
@@ -166,6 +167,17 @@
             <dt>&lt;списък аргументи&gt;</dt>
             <dd>стойности, които автоматично ще се подадат на параметрите.</dd>
         </dl>
+    </section>
+    <section><h3>Пример</h3>
+        <pre><code rel="JS" class="js">
+            function greet(userName){
+                console.log(`Hello ${userName}. Nice to see you.`);
+            }
+
+            // едва тук ще се изпълнят действията, дефинирани във фунцкцията:
+            greet("Ada");
+            greet("John");
+        </code></pre>
     </section>
     <section><h3>Предаване на аргументи</h3>
         <dl class="fa">
@@ -237,8 +249,7 @@
         <dl class="fa">
             <dt><израз>  трябва да бъде изчислим.</dt>
             <dt>Именно изчислената стойност ще се замести на мястото на извикване на функцията</dt>
-            <dt>След оператора <code>return</code> се излиза от тялото на функцията.</dt>
-            <dt>Нито един израз във функцията, след <code>return</code> няма да се изпълни!</dt>
+            <dt><span class="note">След оператора <code>return</code> се излиза от тялото на функцията</span>. Тоест, нито един израз във функцията, след <code>return</code> няма да се изпълни! </dt>
         </dl>
     </section>
     <section><h3>Example</h3>
@@ -254,17 +265,17 @@
             // "start"
         </code></pre>
     </section>
-    <section><h3>Example</h3>
+    <section><h3>Пример</h3>
         <pre><code rel="JS" class="js">
-            function f(){
-                console.log("start");
+            function giveMeAnswer(){
+                console.log("and the answer is...");
                 return 42;
             }
 
-            // f() ще се замести с 42:
-            console.log( f() );
+            // giveMeAnswer() ще се замести с 42:
+            console.log( giveMeAnswer() );
 
-            // start
+            // and the answer is...
             // 42
         </code></pre>
     </section>
