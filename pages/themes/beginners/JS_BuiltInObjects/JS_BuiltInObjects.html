@@ -65,7 +65,7 @@
 </section>
 
 <section><h2>Вградени обекти (built-in objects)</h2>
-    <section><h3>въведение</h3>
+    <section><h3>Въведение</h3>
         <dl class="fa">
             <dt>В JavaScript съществуват няколко (със всяка версия се увеличават) вградени обекти/конструктори на обекти, чрез които се разширява функционалността и гъвкавостта на езика. Например:</dt>
         </dl>
@@ -76,7 +76,43 @@
             // using built in Date() constructor
             var currentDate = new Date();
             console.log( currentDate.getFullYear() ); // 2018
-
+        </code></pre>
+    </section>
+    <section>
+        <p>Някои от най-често използваните вградени обекти/функции са: </p>
+        <dl class="fa">
+            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">Math</a></dt>
+            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></dt>
+            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></dt>
+            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></dt>
+            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></dt>
+        </dl>
+        <p>Ако сте любопитни относно другите: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects#Fundamental_objects">Standard built-in objects @MDN</a></p>
+    </section>
+    <section><h3>Работа с дати (Date objects)</h3>
+        <dl class="fa">
+            <dt>Текущата дата и време в компютърните системи се представят като брой <span class="note">милисекунди</span> изминали от началото на <em>епохата</em> (1 January 1970 UTC)</dt>
+            <dt>За да работим с измерения, като година, месец, час и пр. трябва да използваме вградените методи на обект от тип Date, който създаваме като използваме конструктора <code>Date()</code></dt>
+            <pre><code rel="JS" class="js">
+                var currentDateTimeObj = new Date();
+            </code></pre>
+            <dt>Справочник: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date @MDN</a></dt>
+        </dl>
+    </section>
+    <section><h3>getCurentTimeFormated - пример</h3>
+        <iframe title='getCurentTimeFormated' src='//codepen.io/webdesigncourse/embed/XPoNBv/?editors=0011&theme-id=20230&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/XPoNBv/'>getCurentTimeFormated</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>dateObjectForTimingCode - пример</h3>
+        <iframe title='Date object for timing code' src='//codepen.io/webdesigncourse/embed/QVJqYY/?height=300&theme-id=20230&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/QVJqYY/'>Date object for timing code</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3><a href="arguments">arguments</a> object</h3>
+        <dl class="fa" style="font-size: .8em">
+            <dt>За да имплементираме функция с променлив брой параметри в JavaScript можем да използваме вградения обект <a href="arguments">arguments</a></dt>
+            <dt>Той се използва единствено в тяло на функция и съдържа подобна на масив структура с аргументите подадени към функцията.</dt>
+        </dl>
+        <pre><code rel="JS" class="js">
             // using built in arguments object - available within functions only!
             function sum(){
                 sum = 0;
@@ -88,17 +124,6 @@
             sum(1,2,3); // 6
             sum(1,2,3,4); // 10
         </code></pre>
-    </section>
-    <section><h3>въведение</h3>
-        <p>Някои от най-често използваните вградени обекти/функции са: </p>
-        <dl class="fa">
-            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">Math</a></dt>
-            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></dt>
-            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></dt>
-            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></dt>
-            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></dt>
-        </dl>
-        <p>Ако сте любопитни относно другите: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects#Fundamental_objects">Standard built-in objects @MDN</a></p>
     </section>
     <section><h3>built-in objects == primitive types?</h3>
         <p>Много често примитивните типове string, number, boolean се бъркат със съответните им "двойници - обекти: String, Number, Boolean</p>
@@ -117,7 +142,7 @@
             // примитивните типове не са обекти и нямат пропъртита, но:
             "ada".toUpperCase(); // "ADA"
         </code></pre>
-        <p>това, което прави JavaScript e да "обвие" примитивният тип в обект от съответния тип (в примера: String обекта) и да използва съответното свойство/метод (в пример: toUpperCase). </p>
+        <p>това, което прави JavaScript e да "обвие" примитивният тип в обект от съответния тип (в примера: String обекта) и да използва съответното свойство/метод (в примера: toUpperCase). </p>
     </section>
     <section><h3>best practises</h3>
         <p>Въпреки че можем да създадем и работим с число, което е създадено като обект (същото е в сила и за останалите типове), на практика се предпочита използването на примитивния тип.</p>

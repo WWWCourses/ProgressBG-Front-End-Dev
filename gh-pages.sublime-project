@@ -8,7 +8,7 @@
 	"settings":
 	{
 		"spell_check": true,
-		"dictionary": "Packages/User/Dictionaries/Bulgarian.dic",
+		// "dictionary": "Packages/User/Dictionaries/Bulgarian.dic",
 		"show_definitions": false,
 		"tab_size": 2,
 		// "font_face": "FreeMono",
