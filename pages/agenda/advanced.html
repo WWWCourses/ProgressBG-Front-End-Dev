@@ -22,7 +22,7 @@
         <span class="btn_hide"  onclick="hideAllNodes( document.getElementsByClassName('iep_syllabus_sub_themes'))">Hide Subtopics</span> )</div>
     </h4>
     <ol class="iep_syllabus_themes list_numbers">
-        <li><h3><span class="label arrow_down">Introduction</span><span class="hours">2</span></h3>
+        <li id="courseIntro"><h3><span class="label arrow_down">Introduction</span><span class="hours">2</span></h3>
             <ol class="iep_syllabus_sub_themes start">
                 <li>About the course and the online resources being used.</li>
                 <li>What happens with the Web, and the technologies behind it during the past years?</li>
@@ -41,7 +41,7 @@
                 <li>Using GitHub/GitLab pages as free hosting for your project.</li>
             </ol>
         </li>
-        <li><h3><span class="label arrow_down">Bring Semantic to the Web</span><span class="hours">4</span></h3>
+        <li id="semanticHTML"><h3><span class="label arrow_down">Bring Semantic to the Web</span><span class="hours">4</span></h3>
             <ol class="iep_syllabus_sub_themes">
                 <li>HTML5 Semantic elements - the right usage and SEO considerations.</li>
                 <li>Data Attributes in HTML5.</li>
@@ -49,53 +49,53 @@
                 <li>How to boost the SEO of the site by adding more semantics.</li>
             </ol>
         </li>
-        <li><h3><span class="label arrow_down">Master the Browser's WebDevelopers Tools and be productive</span><span class="hours">4</span></h3>
+        <li id="browsersDevTools"><h3><span class="label arrow_down">Master the Browser's WebDevelopers Tools and be productive</span><span class="hours">4</span></h3>
             <ol class="iep_syllabus_sub_themes start">
                 <li>Page and loading time optimizations.</li>
                 <li>Profile and Analyse.</li>
                 <li>Debugging JavaScript.</li>
             </ol>
         </li>
-        <li><h3><span class="label arrow_down">CSS3 Animations</span><span class="hours">2</span></h3>
+        <!-- <li id="CSS_Animations"><h3><span class="label arrow_down">CSS3 Animations</span><span class="hours">2</span></h3>
             <ol class="iep_syllabus_sub_themes">
                 <li>When to use animations, and when - transitions?</li>
                 <li>The @keyframes rules.</li>
                 <li>Create astonishing animations only with HTML5/CSS3.</li>
                 <li>To animate or not to animate - some precautions before using animations.</li>
             </ol>
-        </li>
-        <li><h3><span class="label arrow_down">Drawing Graphics - SVG, Canvas, WebGL and more</span><span class="hours">6</span></h3>
+        </li> -->
+        <li id="graphicsAndVisualization"><h3><span class="label arrow_down">Drawing Graphics - SVG, Canvas, WebGL and more</span><span class="hours">4</span></h3>
             <ol class="iep_syllabus_sub_themes">
                 <li>A gentile introduction to HTML5 Canvas, SVG.</li>
                 <li>Create snow effect using HTML5 Canvas and JavaScript.</li>
                 <li>When to use Canvas and when - SVG?</li>
                 <li>Overview of WebGL rendering.</li>
-                <li>Bring data to life using d3.js data visualisation library.</li>
-                <li>Visualize your musical taste with D3.js and last.fm.</li>
+                <li class="optional_theme">(optional theme) Bring data to life using d3.js data visualisation library.</li>
+                <li>(optional theme) Visualize your musical taste with D3.js and last.fm.</li>
             </ol>
         </li>
-        <li><h3><span class="label arrow_down">CSS pre-processors</span><span class="hours">4</span></h3>
+        <li id="CSS_PreProcessors"><h3><span class="label arrow_down">CSS pre-processors</span><span class="hours">4</span></h3>
             <ol class="iep_syllabus_sub_themes">
                 <li>Why to pre-process CSS?</li>
                 <li>Yes, LESS is more.</li>
                 <li>How about Sass/SCSS? Or Stylus?</li>
             </ol>
         </li>
-        <li><h3><span class="label arrow_down">Responsive Web design essential concepts</span><span class="hours">4</span></h3>
+        <li id="responsiveWebDesignConcepts"><h3><span class="label arrow_down">Responsive Web design essential concepts</span><span class="hours">4</span></h3>
             <ol class="iep_syllabus_sub_themes">
                 <li>Modern design strategies - why 'Progressive Enhancement' is better than 'Graceful Degradation'?</li>
                 <li>Manage the viewport.</li>
                 <li>CSS media queries - apply different styles for different viewports.</li>
             </ol>
         </li>
-        <li><h3><span class="label arrow_down">Responsive Layouts with CSS Grid and Flexboxes</span><span class="hours">4</span></h3>
+        <li id="CSS_GridAndFlexbox"><h3><span class="label arrow_down">Responsive Layouts with CSS Grid and Flexboxes</span><span class="hours">4</span></h3>
             <ol class="iep_syllabus_sub_themes">
                 <li>The Grid Layout model.</li>
                 <li>The Flexbox Layout model.</li>
                 <li>Create Responsive Layouts.</li>
             </ol>
         </li>
-        <li><h3><span class="label arrow_down">A day for Bootstrap</span><span class="hours">4</span></h3>
+        <li id="Bootstrap"><h3><span class="label arrow_down">A day for Bootstrap</span><span class="hours">4</span></h3>
             <ol class="iep_syllabus_sub_themes">
                 <li>Responsive Design Frameworks: Bootstrap, Semantic UI, Material Design Lite, Foundation... How to choose (a practical example).</li>
                 <li>The Bootstrap Grid System.</li>
@@ -103,17 +103,7 @@
                 <li>Bootstrap Plugins.</li>
             </ol>
         </li>
-        <li><h3><span class="label arrow_down">jQuery in a day</span><span class="hours">4</span></h3>
-            <ol class="iep_syllabus_sub_themes">
-                <li>jQuery essentials.</li>
-                <li>Traversing and Manipulating the DOM.</li>
-                <li>DOM Events and Event Delegation.</li>
-                <li>Simplifying AJAX calls with jQuery.</li>
-                <li>Useful JQuery plugins.</li>
-                <li>JQuery vs ES6 and beyond (or why a day for jQuery is enough)</li>
-            </ol>
-        </li>
-        <li><h3><span class="label arrow_down">Advanced JavaScript</span><span class="hours">12</span></h3>
+        <li id="advancedJS"><h3><span class="label arrow_down">Advanced JavaScript</span><span class="hours">12</span></h3>
             <ol class="iep_syllabus_sub_themes">
                 <li>Higher-Order Functions.</li>
                 <li>Closures.</li>
@@ -124,47 +114,70 @@
                 <li>Asynchronous programming: JS Promises and Async.</li>
             </ol>
         </li>
-        <li><h3><span class="label arrow_down">Introduction to Node.js - the JavaScript back-end breakthrough.</span><span class="hours">4</span></h3>
+        <li id="jQuery"><h3><span class="label arrow_down">jQuery in a day</span><span class="hours">4</span></h3>
+            <ol class="iep_syllabus_sub_themes">
+                <li>jQuery essentials.</li>
+                <li>Traversing and Manipulating the DOM.</li>
+                <li>DOM Events and Event Delegation.</li>
+                <li>Useful JQuery plugins.</li>
+                <li>JQuery vs ES6 and beyond (or why a day for jQuery is enough)</li>
+            </ol>
+        </li>
+        <li id="nodejsIntro"><h3><span class="label arrow_down">Introduction to Node.js - the JavaScript back-end breakthrough.</span><span class="hours">4</span></h3>
             <ol class="iep_syllabus_sub_themes">
                 <li>Simple explanation of node.js principles.</li>
                 <li>Node.js' package ecosystem.</li>
                 <li>NPM - the node Package Manager.</li>
             </ol>
         </li>
-        <li><h3><span class="label arrow_down">Build a modern Front-End App with modern Tools</span><span class="hours">4</span></h3>
+        <li id="AJAX"><h3><span class="label arrow_down">AJAX Requests</span><span class="hours">2</span></h3>
+            <ol class="iep_syllabus_sub_themes">
+                <li>What is AJAX?</li>
+                <li>Understand the basics: implement AJAX requests with XMLHttpRequest (XHR) object</li>
+            </ol>
+        </li>
+        <li id="RESTFullAPIs"><h3><span class="label arrow_down">RESTFull APIs</span><span class="hours">2</span></h3>
+            <ol class="iep_syllabus_sub_themes">
+                <li>What is a RESTful web API and why we use it?</li>
+                <li>Create a simple RESTful API endpoint with nodejs.</li>
+                <li>Consume RESTful API data with JS and JQuery.</li>
+            </ol>
+        </li>
+
+        <li id="buildTools"><h3><span class="label arrow_down">Build a modern Front-End App with modern Tools</span><span class="hours">4</span></h3>
             <ol class="iep_syllabus_sub_themes">
                 <li>Task Runners Overview. Using Gulp - live demo.</li>
                 <li>Bundle your app with Webpack.</li>
             </ol>
         </li>
-        <li><h3><span class="label arrow_down">Static Site Generators</span><span class="hours">4</span></h3>
+        <li id="staticSiteGenerators"><h3><span class="label arrow_down">Static Site Generators</span><span class="hours">4</span></h3>
             <ol class="iep_syllabus_sub_themes">
                 <li>Introduction to front-end Templating Engines.</li>
                 <li>Getting started with Handlebars.</li>
                 <li>Build fast, effective and manageable full-featured blog on GitHub Pages (a Jekyll use-case).</li>
             </ol>
         </li>
-        <li><h3><span class="label arrow_down">Building modern SPA</span><span class="hours">2</span></h3>
+        <li id="SPA_Intro"><h3><span class="label arrow_down">Building modern SPA</span><span class="hours">2</span></h3>
             <ol class="iep_syllabus_sub_themes">
                 <li>What is Single Page Applications (SPA).</li>
                 <li>Basic SPA concepts (router, state) depicted with vanilla ES6+</li>
             </ol>
         </li>
-        <li><h3><span class="label arrow_down">Angular - the Google's platform for building apps</span><span class="hours">4</span></h3>
+        <li id="Angular"><h3><span class="label arrow_down">Angular - the Google's platform for building apps</span><span class="hours">4</span></h3>
             <ol class="iep_syllabus_sub_themes">
                 <li>Angular overview and basic concepts.</li>
                 <li>Working with Angular CLI.</li>
                 <li>Build a Weather App with Angular7 from scratch.</li>
             </ol>
         </li>
-        <li><h3><span class="label arrow_down">React - the Facebook's library for building user interfaces</span><span class="hours">4</span></h3>
+        <li id="React"><h3><span class="label arrow_down">React - the Facebook's library for building user interfaces</span><span class="hours">4</span></h3>
             <ol class="iep_syllabus_sub_themes">
                 <li>React overview and basic concepts.</li>
                 <li>Working with React CLI.</li>
                 <li>Build a Weather App with React from scratch.</li>
             </ol>
         </li>
-        <li><h3><span class="label arrow_down">Vue - the Progressive JavaScript Framework</span><span class="hours">4</span></h3>
+        <li id="Vue"><h3><span class="label arrow_down">Vue - the Progressive JavaScript Framework</span><span class="hours">4</span></h3>
             <ol class="iep_syllabus_sub_themes">
                 <li>Vue overview and basic concepts.</li>
                 <li>Working with Vue CLI.</li>

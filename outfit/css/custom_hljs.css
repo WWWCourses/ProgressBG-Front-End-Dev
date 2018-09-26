@@ -14,6 +14,9 @@
 	white-space: -o-pre-wrap;    /* Opera 7 */
 	word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
+.reveal pre{
+	width: 100%;
+}
 .reveal dl pre{
 	margin-left:0;
 	/*width: 75vmax;*/
@@ -23,11 +26,11 @@
 	/*width: 75vw;*/
 	/*font-family: 'Anonymous Pro', monospace;*/
 	/*font-weight: bold;*/
-	font-size: 1.3em;
+	font-size: 1.0em;
 	padding-left: .3em;
 	padding-bottom: .3em;
 	padding-right: 0;
-	line-height: 1.1em;
+	line-height: 1.2em;
 }
 code[rel]::before{
 	content: attr(rel);
