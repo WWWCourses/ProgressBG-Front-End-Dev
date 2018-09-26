@@ -101,7 +101,7 @@
 <section><h2>HTML Event Attributes</h2>
     <section>
         <dl class="fa">
-            <dt>Можем да асоциираме събитие с JavaScript код, като използваме HTML Event атрибути </dt>
+            <dt>Можем да асоциираме събитие с JavaScript код, като използваме HTML Event атрибути</dt>
         </dl>
         <pre><code rel="Syntax" class="javascript">
             &lt;tagname eventAttribute = &quot;JavaScript code&quot;&gt;
@@ -109,11 +109,15 @@
         <dl class="fa">
             <dt>където <strong>eventAttribute</strong> е някой от HTML Event атрибутите, посочени тук: <a href="https://www.w3schools.com/tags/ref_eventattributes.asp">HTML Event Attributes</a></dt>
             <dt>A <strong>JavaScript code</strong> е кодът, който ще се изпълни автоматично при настъпване на даденото събитие</dt>
+            <dt class="note">Този начин за асоцииране на събитие към елемнт е лесен за използване (и подходящ за навлизане в темата), но както ще видим в следващите слайдове,има и доста ограничения, поради това не се препоръчва да се използва в реални приложения. </dt>
         </dl>
     </section>
     <section><h3>Пример</h3>
         <pre><code rel="HTML" class="html">
+            // асоциираме 'onclick' event с P елемента:
             <p class="test" onclick="this.innerHTML='Bravo, you have clicked!'">click me</p>
+
+            // асоциираме 'ondblclick' event с P елемента:
             <p class="test" ondblclick="this.innerHTML='Bravo, you have double clicked!'">double click me</p>
         </code></pre>
     </section>
@@ -127,10 +131,20 @@
                 node.innerHTML = "Bravo, you have double clicked!"
             }
         </code></pre>
+        <p>Тук трябва да извикаме функцията експлицитно, тъй като единственото, което ще направи браузера е да <span class="note">изпълни</span> JavaScript кода подаден в атрибута 'ondblclick', когато даденото събитие настъпи.</p>
     </section>
 </section>
 
 <section><h2>element.addEventListener() method</h2>
+    <section>
+        <dl class="fa">
+            <dt>Обработването на събития в самия HTML, макар и лесно за разбиране и използване има няколко недостатъка:</dt>
+            <dd>нарушава принципа на "разделяне на отговорностите" (<a href="https://en.wikipedia.org/wiki/Separation_of_concerns">separation of concerns</a>)</dd>
+            <dd>Не позволява да асоццираме динамично събитие</dd>
+            <dd>Не позволява да премахнем динамично дадено събитие, коеото в дадени ситуации е необходимо за да увеличим бързодействието на сайта.</dd>
+            <dt class="note">Предпочитания метод за асоцииране на събитие е чрез DOM метода <code>addEventListener()</code>, разгледан в следващите слайдове.</dt>
+        </dl>
+    </section>
     <section>
         <pre style="width: 130%;"><code rel="Syntax" class="javascript">
             element.addEventListener(eventName, functionDefinition [, options])
@@ -138,13 +152,18 @@
         <dl class="fa">
             <dt>където <strong>eventName</strong> e име на събитие (<span class="note">без "on" префикс</span>)</dt>
             <dd><a href="https://developer.mozilla.org/en-US/docs/Web/Events">Event reference @MDN</a></dd>
-            <dt><strong>functionDefinition</strong> <span class="note">е дефиниция</span> на функцията, която ще се изпълни при настъпване на събитието. Много често се използва анонимна функция.</dt>
+            <dt><strong>functionDefinition</strong> <span class="note">е дефиниция</span> на функцията (нарича се оше  "callback функция"), която ще се изпълни при настъпване на събитието. Много често се използва анонимна функция.</dt>
             <dt><strong>options</strong> не е задължителен параметър. Чрез него задаваме допълнителни характеристики за самото събитие</dt>
         </dl>
     </section>
     <section><h3>Example - addEventListener() method on codepen</h3>
         <iframe title='Example - addEventListener() method' src='//codepen.io/webdesigncourse/embed/papZxb/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/papZxb/'>Example - addEventListener() method</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
         </iframe>
+    </section>
+    <section>
+        <dl class="fa">
+            <dt>Важно е да се разбере, че функцията (анонимна или не), <span class="note">чиято дефиниция подадаваме като аргумент</span> на метода addEventListener ще се извика от този метод едва при настъпването на събитието!</dt>
+        </dl>
     </section>
 </section>
 
@@ -155,10 +174,18 @@
             <dt>Някои от най-често използваните му свойства са <a href="https://www.w3schools.com/jsref/event_target.asp">target</a> и <a href="https://www.w3schools.com/jsref/event_currenttarget.asp">currentTarget</a></dt>
         </dl>
     </section>
-    <section>
+    <section><h3>Пример: target vs. currentTarget</h3>
         <iframe title='target vs. currentTarget' src='//codepen.io/webdesigncourse/embed/jZYvWy/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/jZYvWy/'>target vs. currentTarget</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
         </iframe>
     </section>
+    <section><h3>Пример за ефективен код, чрез използване на event.target</h3>
+        <iframe title='Using event.target on parent  for child actions' src='//codepen.io/webdesigncourse/embed/BOXJyp/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/BOXJyp/'>Using event.target on parent  for child actions</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+</section>
+
+<section><h2>Codepen Examples</h2>
+    <a href="https://codepen.io/collection/XBMYGy/">codepen колекция с примери и задачи по темата</a>
 </section>
 
 <section><h2>References</h2>
@@ -168,9 +195,6 @@
     </dl>
 </section>
 
-<section><h2>Codepen Examples</h2>
-    <a href="https://codepen.io/collection/XBMYGy/">codepen колекция с примери и задачи по темата</a>
-</section>
 
 <section class="disclaimer" data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
      <p>These slides are based on</p>
