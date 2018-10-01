@@ -20,23 +20,33 @@
     		top:0;bottom: 0; left: 0; right: 0;
     		background: white;
     		opacity: 0;
-    		/*border: 5px solid blue;*/
+            transition: 1s;
     	}
     	.overlay_wrapper:hover>.overlay{
     		opacity: .8;
     	}
 
+        /*if we want to stretch the link on the qhole image:*/
+        .overlay>a{
+            position: absolute;
+            display: block;
+            top: 0; bottom: 0;left: 0; right: 0;
+            border: 2px solid red;
+        }
+
+        /*do not change the icon color, as it is the link content*/
     	.overlay>a, .overlay>a:link,.overlay>a:visited{
     		color: #000;
     	}
+
     	.overlay i{
     		/*the circle inside overlay - centered*/
+            display: block;
     		position: absolute;
-		  	top:0;bottom: 0; left: 0; right: 0;
-		  	margin: auto;
+		  	top:50%; left: 50%;
+            transform: translate(-50%, -50%);
+
 		  	font-size: 4em;
-		  	width: 1em;
-		  	height: 1em;
     	}
 
     	/*box shadow*/
