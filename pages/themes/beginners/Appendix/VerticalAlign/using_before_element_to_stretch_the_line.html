@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Vertical Align - using_before_element_to_stretch_the_line</title>
     <style type="text/css">
+        /* Problem center the element if the parent height and the content height are not known in advance! */
         html, body{
             height: 100%;
         }
@@ -16,13 +17,17 @@
             content: "";
             display: inline-block;
             height: 100%;
+            width: 0;
             vertical-align: middle;
-            margin-left: -.25em;
+            /*move next element*/
+            margin-left: 5em;
         }
 
         .v_centered{
             display: inline-block;
             vertical-align: middle;
+
+            width: 10em;
         }
         span{
             background: #F6F4E4;

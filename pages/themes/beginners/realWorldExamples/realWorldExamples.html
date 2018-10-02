@@ -46,7 +46,7 @@
 ##################### SLIDES START #####################
 ########################################################
 -->
-<section><h1>Класически компоненти/примери за реални проекти</h1></section>
+<section><h1>Класически компоненти (HTML/CSS/JS snippets) за реални проекти</h1></section>
 <section data-transition="zoom">
     <div class="copyright">
         <div class="note">
@@ -65,9 +65,24 @@
 </section>
 
 <section><h2>Позициониране</h2>
-    <section><h3>Вертикално подравняване</h3>
-        <p>Когато височината на родителя е в % - вариант с псевдо-елемент:</p>
+    <section><h3>Вертикално и хоризонтално подравняване</h3>
+        <dl class="fa">
+            <dt>Проблем: не знаем предварително височината на контейнера и на вътрешния елемент, който ще центрираме</dt>
+            <dd>Вариант 1: добавяме псевдо-елемент, който да увеличи височината на реда</dd>
+        </dl>
+
         <iframe title='apwNgQ' src='//codepen.io/webdesigncourse/embed/apwNgQ/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/apwNgQ/'>apwNgQ</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+</section>
+
+<section><h3>Вертикално и хоризонтално подравняване</h3>
+        <dl class="fa">
+            <dt>Проблем: не знаем предварително височината на контейнера и на вътрешния елемент, който ще центрираме</dt>
+            <dd>Вариант 2: позиционираме вътрешния контейнер абсолютно, спрямо родителя</dd>
+        </dl>
+
+        <iframe height='300' scrolling='no' title='Center an element: with position and translate' src='//codepen.io/webdesigncourse/embed/pxJKXx/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/pxJKXx/'>Center an element: with position and translate</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
         </iframe>
     </section>
 </section>
