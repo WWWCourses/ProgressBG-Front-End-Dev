@@ -12,6 +12,9 @@
 .slides h5, .slides h6{
   text-transform: none;
 }
+.reveal .slides > section.present, .reveal .slides > section > section.present{
+  /*top:0 !important;*/
+}
 /*the presentation title ( all slides )*/
 .reveal>.slides h1{
   margin: 0;
@@ -30,6 +33,7 @@
 /*sub-section title*/
 .reveal>.slides>section>section>h3{
   font-size: 1.3em;
+  top: 0;
 }
 .reveal>.slides>section>section>h3:after{
   display: block;
@@ -82,10 +86,14 @@
     opacity: .5;
     color: #999;
 }
+
+.reveal section dl.fa{
+  font-size: .9em;
+}
 .reveal section dl.fa>dt{
   font-weight: normal;
   margin: .5em 0 0 0;
-  font-size: 0.8em;
+  font-size: 1em;
   line-height: 1.2em;
 }
 .reveal section dl.fa>dt:first-child{
@@ -105,14 +113,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* .reveal section dl>dt>i{
-  margin: 0 .5em 0 -1.5em;
-  opacity: .5;
-  vertical-align: middle;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
-} */
+
+.reveal section dl.fa>dd{
+  font-size: 0.9em;
+}
 .reveal section dl.fa>dd:before{
   position: relative;
   bottom: .2em;

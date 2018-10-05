@@ -48,20 +48,29 @@
 -->
 <section><h1>HTML Iframes</h1></section>
 <section data-transition="zoom">
-    <div class="copyright">
-        <div class="note">
-            <p>Създаден за</p>
-        </div>
-        <div class="company">
-            <a href="http://progressbg.net/kurs-po-web-design/">
-            <img style="height:80%" src="/ProgressBG-Front-End-Dev/outfit/images/logos/ProgressBG_logo_529_127.png">
-            </a>
-        </div>
-        <div class="author">
-            <span>Iva E. Popova, 2015-2018,</span>
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
-        </div>
-    </div>
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Създаден за</p>
+			</div>
+			<div class="company">
+				<a href="http://progressbg.net/kurs-po-web-design/">
+				<img src="/ProgressBG-Front-End-Dev/outfit/images/logos/ProgressBG_logo_529_127.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Създаден от</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Ива Е. Попова</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
 </section>
 
 <section><h2>Какво е iframe?</h2>
@@ -138,7 +147,7 @@
         </dl>
     </section>
     <section><h4>Резултат</h4>
-        <iframe class="resultFrame" src="http://www.bgmaps.com/link/map/51902F222AFCB87E2EECFAD06BD01AB4"></iframe>        
+        <iframe class="resultFrame" src="http://www.bgmaps.com/link/map/51902F222AFCB87E2EECFAD06BD01AB4"></iframe>
     </section>
 </section>
 <section><h4>Вмъкване на Pen от codepen.io</h4>
@@ -177,7 +186,7 @@
                 class="resultFrame"
                 src="https://www.youtube.com/embed/7S0X0OWMu_k?enablejsapi=1&autoplay=1&controls=1&showinfo=0"
                 allowfullscreen
-                onload="onYouTubeIframeAPIReady(this)"></iframe>        
+                onload="onYouTubeIframeAPIReady(this)"></iframe>
     </section>
     <section><h4>И отново - iframe, в който се отваря съдържанието на различни линкове</h4>
         <iframe  title='youtubeTargetedInFrame' src='https://codepen.io/webdesigncourse/embed/OOeOow/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='min-height: 70vh;width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/OOeOow/'>youtubeTargetedInFrame</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
@@ -190,7 +199,7 @@
 </section>
 <section id="HW"><h2>Упражнения</h2>
         <dl class="fa">
-                <dt><a href="homeworks/SelectedCodepens.pdf">SelectedCodepens</a></dt>              
+                <dt><a href="homeworks/SelectedCodepens.pdf">SelectedCodepens</a></dt>
         </dl>
 </section>
 
@@ -232,7 +241,7 @@
     <!-- external scripts -->
     <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
     <script src="/ProgressBG-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
-     <!-- init reveal -->
+	<!-- init reveal -->
     <script>
         // Full list of configuration options available at:
         // https://github.com/hakimel/reveal.js#configuration
@@ -268,5 +277,6 @@
             ]
         });
     </script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </body>
 </html>

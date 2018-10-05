@@ -25,7 +25,16 @@
 </head>
 <body>
 	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
-		<a class="home_link" href="/ProgressBG-Front-End-Dev/pages/agenda/beginners.html#cliche_id" target="_top"><i class="fa fa-home"></i></a>
+		<div class="top_links">
+			<a class="home_link" href="/ProgressBG-Front-End-Dev/pages/agenda/beginners.html#cliche_id" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Спейс</span><span>следващ слайд</span></div>
+				<div><span>P</span><span>предишен слайд</span></div>
+				<div><span>O</span><span>всички слайдове</span></div>
+				<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+			</div>
+		</div>
 		<div class="footer theme_switch">
 			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css'); return false;">Dark</a>
 			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/light.css'); return false;">Light</a>
@@ -65,8 +74,8 @@
 				for (let i = 0; i < cssColorModuleLevel4.length; i++) {
 					let color = cssColorModuleLevel4[i];
 
-					let newDiv = document.createElement("div"); 
-					newDiv.appendChild( document.createTextNode(color) );	
+					let newDiv = document.createElement("div");
+					newDiv.appendChild( document.createTextNode(color) );
 					outputNode.appendChild(newDiv);
 
 					newDiv.style.backgroundColor = color;
@@ -82,14 +91,14 @@
 		<dl class="fa">
 			<dt>Имената могат да се записват чрез малки или големи букви (case-insensitive).</dt>
 			<dt><a href="https://www.w3schools.com/colors/colors_hex.asp">Color Values @w3schools</a></dt>
-			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Color_keywords">Color_keywords @MDN</a></dt>			
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Color_keywords">Color_keywords @MDN</a></dt>
 		</dl>
 		<pre><code rel="CSS" class="css">
 			#test{
 				background-color: purple;
 			}
 		</code></pre>
-	</section>	
+	</section>
 	<section><h3>Чрез предефинирани имена</h3>
 		<p>Този начин за задаване на цветове се използва рядко, предимно за примери/тестване.</p>
 	</section>
@@ -100,14 +109,14 @@
 		<dl class="fa">
 			<dt>Стойностите могат да бъдат зададени като:</dt>
 			<dd>Десетично число в интервала [0 - 255]</dd>
-			<dd>Процент: от 0% до 100%</dd>			
+			<dd>Процент: от 0% до 100%</dd>
 		</dl>
 		<pre><code rel="CSS" class="css">
 				color: rgb(255, 0, 0);	   /*червено*/
 				color: rgb(100%, 0%, 0%);  /*червено*/
-				color: rgb(0, 0, 255);     /*синьо*/			
-				color: rgb(0%, 0%, 100%);  /*синьо*/		
-				color: rgb(255, 255, 0);   /*жълто*/	
+				color: rgb(0, 0, 255);     /*синьо*/
+				color: rgb(0%, 0%, 100%);  /*синьо*/
+				color: rgb(255, 255, 0);   /*жълто*/
 				color: rgb(100%, 100%, 0%);/*жълто*/
 				color: rgb(0, 0, 0);       /*черно*/
 				color: rgb(255,255,255);   /*бяло*/
@@ -142,7 +151,7 @@
 			<dt>За всеки цвят задаваме шестнадесетично число в диапазона: 0 - F</dt>
 			<dt>Общо 3 шестнадесетични цифри</dt>
 			<dt><i class="advanced"></i>С допълнителна, 4-та цифра, може да се зададе алфа нивото  (<a href="#alphaChanelByHextriplets">виж alphaChanelByHextriplets</a>).</dt>
-		</dl> 
+		</dl>
 		<pre><code rel="CSS" class="css">
 			#test{
 				background-color: #F00; /*червено*/
@@ -153,7 +162,7 @@
 	<section><h3>Hex triplet - пример</h3>
 		<iframe   title='Формиране на цветове в HTML' src='//codepen.io/webdesigncourse/embed/qOLdod/?height=300&theme-id=20230&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/qOLdod/'>Формиране на цветове в HTML</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
 		</iframe>
-	</section>	
+	</section>
 	<section><h3 class="advanced">Чрез HSL: Hue, Saturation, Lightness</h3>
 		<p>The color wheel</p>
 		<a href="images/hsl-color-wheel.png"><img src="images/hsl-color-wheel.png"></a>
@@ -177,12 +186,12 @@
 				color: hsl(240, 100%, 50% ); /*синьо*/
 			}
 		</code></pre>
-	</section>	
+	</section>
 	<section><h3>Задаване на прозрачност за цвят (alpha channel) чрез RGBA</h3>
 		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
 				rgba(<span style="color: red">RedValue</span>, <span style="color: green">GreenValue</span>, <span style="color:blue">BlueValue</span>, <span>alphaValue</span>);
 		</div>
-		<dl class="fa">						
+		<dl class="fa">
 			<dd>alphaValue може да бъде в интервала [0 - 1] или в [0% - 100%]</dd>
 			<dd>alphaValue = 0 (или 0%): пълна прозрачност</dd>
 			<dd>alphaValue = 1 (или 100%): пълна непрозрачност</dd>
@@ -198,7 +207,7 @@
 		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
 			hsla(hue, saturation%, lightness%, alphaValue);
 		</div>
-		<dl class="fa">						
+		<dl class="fa">
 			<dd>alphaValue може да бъде в интервала [0 - 1] или в [0% - 100%]</dd>
 			<dd>alphaValue = 0 (или 0%): пълна прозрачност</dd>
 			<dd>alphaValue = 1 (или 100%): пълна непрозрачност</dd>
@@ -206,7 +215,7 @@
 		<pre><code rel="CSS" class="css">
 			#test{
 				/* полупрозрачно червено*/
-				background-color: hsla(0, 100%, 50%, 0.5 ); 
+				background-color: hsla(0, 100%, 50%, 0.5 );
 
 				 /* напълно прозрачно "червено"*/
 				background-color: hsla(0, 100%, 50%, 0 );
@@ -217,7 +226,7 @@
 		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
 				#<span style="color: red">RedValue</span><span style="color: green">GreenValue</span><span style="color:blue">BlueValue</span><span>alphaValue</span>;
 		</div>
-		<dl class="fa">						
+		<dl class="fa">
 			<dd>alphaValue може да бъде в интервала [00 - FF] или в [0 - F]</dd>
 			<dd>alphaValue = 00 (или 0): пълна прозрачност</dd>
 			<dd>alphaValue = FF (или F): пълна непрозрачност</dd>
@@ -225,10 +234,10 @@
 		<pre><code rel="CSS" class="css">
 			#test{
 				/* полупрозрачно червено - чрез  8 цифрен hex запис*/
-				background-color: #FF000080; 
-				
+				background-color: #FF000080;
+
 				 /* напълно прозрачно "червено" - чрез  4 цифрен hex запис*/
-				background-color: #FF00;  
+				background-color: #FF00;
 			}
 		</code></pre>
 	</section>
@@ -278,7 +287,7 @@
 			<dt><span class="keyword">em</span> : изчислява се спрямо шрифта на текущия елемент (font-size е наследимо свойство!).</dt>
 			<dt><span class="keyword">rem</span> : като <span class="keyword">em</span>, но се отнася спрямо размера на шрифта на root елемента (елемента <b>html</b> за HTML езика).</dt>
 			<dt><span class="keyword">%</span> : <span class="note">Зависи от конкретното свойство!</span> За повечето свойства се изчислява като % от стойността на даденото свойство дефинирана в родителския елемент. </dt>
-			<dd>Пример за изключение: <a href="https://www.w3schools.com/cssref/pr_padding-top.asp"><code>padding-top</code></a></dd>			
+			<dd>Пример за изключение: <a href="https://www.w3schools.com/cssref/pr_padding-top.asp"><code>padding-top</code></a></dd>
 		</dl>
 	</section>
 	<section><h3>Релативни (спрямо viewport)</h3>
@@ -287,7 +296,7 @@
 			<dt><span class="keyword">vh</span> : 1% от височината на изгледа (viewport height)</dt>
 			<dt><span class="keyword">vmin:</span> : 1% от дължината на по-малката страна.</dt>
 			<dt><span class="keyword">vmax:</span> : 1% от дължината на по-голямата страна.</dt>
-		</dl>		
+		</dl>
 	</section>
 	<section><h3>Browser compatability</h3>
 		<p>Стойностите <code><b>rem, vw, vh, vmin, vmax</b></code> са въведени от CSS3 и не биха работили под по-стари браузери.</p>

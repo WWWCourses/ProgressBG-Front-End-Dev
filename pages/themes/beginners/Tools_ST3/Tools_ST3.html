@@ -25,7 +25,16 @@
 </head>
 <body>
 	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
-		<a class="home_link" href="/ProgressBG-Front-End-Dev/pages/agenda/beginners.html#Tools_ST3" target="_top"><i class="fa fa-home"></i></a>
+		<div class="top_links">
+			<a class="home_link" href="/ProgressBG-Front-End-Dev/pages/agenda/beginners.html#Tools_ST3" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Спейс</span><span>следващ слайд</span></div>
+				<div><span>P</span><span>предишен слайд</span></div>
+				<div><span>O</span><span>всички слайдове</span></div>
+				<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+			</div>
+		</div>
 		<div class="footer theme_switch">
 			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css'); return false;">Dark</a>
 			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/light.css'); return false;">Light</a>
@@ -92,7 +101,6 @@
 	<p>Повече информация: <a href="http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/getting_started/install.html">ST3 installation notes</a></p>
 </section>
 
-
 <section><h2>Запознаване с редактора</h2>
 	<section><h3>Основни панели</h3>
 		<a href="images/ST3MainPannels.png"><img src="images/ST3MainPannels.png"></a>
@@ -111,7 +119,7 @@
 			<dt>Open Files - списък с отворените файлове</dt>
 			<dd>Menu->View->Side Bar->Show/Hide Open Files</dd>
 			<dt>За повече възможности на Side Bar: <a href="https://packagecontrol.io/packages/SideBarEnhancements">Side​Bar​Enhancements Package</a></dt>
-		</dl>				
+		</dl>
 	</section>
 	<section><h3>The Editor Area</h3>
 		<dl class="fa">
@@ -122,7 +130,7 @@
 			<dd><kbd>CTRL+SHIFT+P</kbd>->UI: Select Color Scheme</dd>
 			<dt>Могат да се инсталират допълнително Color Scheme, по същия начин както Пакетите</dt>
 		</dl>
-	</section>	
+	</section>
 	<section><h3>Minimap</h3>
 		<dl class="fa">
 			<dt>Показва карта на кода, в която се запазва текущото оцветяване на кода.</dt>
@@ -137,7 +145,7 @@
 			<dt>Лента със статуса :)</dt>
 			<dt>Показва резултата от операциите, които се извършват. Като инсталиране на пакети и пр.</dt>
 		</dl>
-	</section>	
+	</section>
 </section>
 
 <!-- <section><h2>Работа с директории и папки</h2>
@@ -170,11 +178,11 @@
 		<dl class="fa">
 			<dt><code>Package Control: <span class="note">Install</span> Package</code></dt>
 			<dd>Инсталира пакет от <a href="https://packagecontrol.io/browse">основния канал</a> - необходима е интернет връзка.</dd>
-			<dd>Показва списък със всички налични, но неинсталирани пакети, от който можете да избере кой пакет да инсталирате</dd>			
+			<dd>Показва списък със всички налични, но неинсталирани пакети, от който можете да избере кой пакет да инсталирате</dd>
 		</dl>
 	</section>
-	<section><h3>Package Control Commands</h3>		
-		<dl class="fa">			
+	<section><h3>Package Control Commands</h3>
+		<dl class="fa">
 			<dt><code>Package Control: <span class="note">Remove</span> Package</code></dt>
 			<dd>Показва списък с всички инсталирани на системата пакети, от който можете да изберете кой пакет да бъде деинсталиран.</dd>
 			<dt><code>Package Control: <span class="note">List</span> Packages</code></dt>
@@ -183,26 +191,24 @@
 	</section>
 </section>
 
-<section><h2>Полезни пакети за Sublime Text 3</h2>
-	<a href="/ProgressBG-Front-End-Dev/pages/readings/beginners/UsefulResources.html#ST3_packages">Полезни пакети за Sublime Text 3</a>
-</section>
-
 <section><h2>Теми и цветови схеми</h2>
 	<section>
 		<dl class="fa">
 			<dt><span class="note">Color Scheme</span> - касае визията на Editor Area и оцветяването на кода.</dt>
-			<dd>Променя се чрез <code>Menu->Preferences->Color Scheme...</code></dd>	
+			<dd>Променя се чрез <code>Menu->Preferences->Color Scheme...</code></dd>
 			<dt><span class="note">Theme</span> - касае визията на SideBar,Status Bar и табовете.</dt>
 			<dd>Променя се чрез <code>Menu->Preferences->Theme...</code></dd>
 			<dt>Съществуват множество теми и цветови схеми за Sublime, които лесно се инсталират чрез Package Control</dt>
-			<dt><a href="https://scotch.io/@Viclotana/the-10-best-sublime-text-3-themes-of-2017">The 10 Best Sublime Text 3 Themes of 2017</a></dt>
 		</dl>
 	</section>
+</section>
 
+<section><h2>Полезни пакети за Sublime Text 3</h2>
+	<a href="/ProgressBG-Front-End-Dev/pages/readings/beginners/UsefulResources.html#ST3_packages">Полезни пакети за Sublime Text 3</a>
 </section>
 
 <section><h2>Настройки</h2>
-	<section><h3>Глобални настройки</h3>		
+	<section><h3>Глобални настройки</h3>
 		<dl class="fa">
 			<dt>Всички настройки в ST3, се записват в <a href="https://bg.wikipedia.org/wiki/JSON">JSON формат</a>. Използват се 2 файла, които са достъпни от:</dt>
 			<dd>Sublime Text 3 => Preferences => Settings</dd>
@@ -210,9 +216,9 @@
 			<dd><span class="note">Preferences.sublime-settings – User</span></dd>
 			<dd>Това гарантира, че настройките ни ще се запазят дори и след ъпдейт на Sublime</dd>
 			<dt>Голяма част (но не всички) от настройките на редактора са достъпни и от <code>Menu->Preferences</code>.</dt>
-			<dt>Настройките за Пакети са достъпни от: <br> <code>Preferences->Package Settings->"package"</code></dt>	
-		</dl>		
-	</section>	
+			<dt>Настройките за Пакети са достъпни от: <br> <code>Preferences->Package Settings->"package"</code></dt>
+		</dl>
+	</section>
 	<section><h3>Примерни потребителски настройки</h3>
 		<pre><code rel="JSON">
 			{
@@ -221,7 +227,7 @@
 				"draw_white_space": "all",
 				"rulers": [80],
 				"tab_size": 4,
-				"translate_tabs_to_spaces": true,				
+				"translate_tabs_to_spaces": true,
 				"show_encoding": true,
 			}
 		</code></pre>
