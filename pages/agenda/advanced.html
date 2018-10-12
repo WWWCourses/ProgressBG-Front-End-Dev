@@ -8,7 +8,9 @@
     <link rel="stylesheet" type="text/css" href="../../outfit/css/master.css">
     <link rel="stylesheet" type="text/css" href="../../outfit/css/agenda.css">
 </head>
-<body onload="calcTotalHours();showAllNodes( document.getElementsByClassName('iep_syllabus_sub_themes') );" class="background">
+<!-- <body onload="calcTotalHours();showAllNodes( document.getElementsByClassName('iep_syllabus_sub_themes') );" class="background"> -->
+<body class="background">
+
 <header>
     <h2>HTML, CSS, JavaScript</h2>
     <h3><a href="../../index.html">WebDesign/Front-end Dev Course</a></h3>
@@ -21,8 +23,8 @@
         <div class="show_hide_buttons">( <span class="btn_show" onclick="showAllNodes( document.getElementsByClassName('iep_syllabus_sub_themes'))">Show Subtopics</span>
         <span class="btn_hide"  onclick="hideAllNodes( document.getElementsByClassName('iep_syllabus_sub_themes'))">Hide Subtopics</span> )</div>
     </h4>
-    <ol class="iep_syllabus_themes list_numbers">
-        <li id="courseIntro"><h3><span class="label arrow_down">Introduction</span><span class="hours">2</span></h3>
+    <ol class="iep_syllabus_themes">
+        <li id="Course_Intro"><h3><a class="ready" href="/ProgressBG-Front-End-Dev/pages/themes/advanced/Course_Intro/Course_Intro.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">Introduction</span><span class="hours">2</span></h3>
             <ol class="iep_syllabus_sub_themes start">
                 <li>About the course and the online resources being used.</li>
                 <li>What happens with the Web, and the technologies behind it during the past years?</li>
