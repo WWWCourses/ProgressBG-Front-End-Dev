@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Course_Intro</title>
+	<title>git_overview</title>
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -26,7 +26,7 @@
 <body>
 	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
 		<div class="top_links">
-			<a class="home_link" href="/ProgressBG-Front-End-Dev/pages/agenda/advanced.html#Course_Intro" target="_top"><i class="fa fa-home"></i></a>
+			<a class="home_link" href="/ProgressBG-Front-End-Dev/pages/agenda/advanced.html#git_overview" target="_top"><i class="fa fa-home"></i></a>
 			<span class="help_link"><i class="fa fa-question"></i></span>
 			<div class="help_text">
 				<div><span>N/Space</span><span>next slide</span></div>
@@ -46,7 +46,7 @@
 ##################### SLIDES START #####################
 ########################################################
 -->
-<section><h1>About the course and the online resources being used.</h1></section>
+<section><h1>Practical introduction to git and GitHub/GitLab</h1></section>
 <section data-transition="zoom">
 	<section>
 		<div class="copyright">
@@ -73,115 +73,113 @@
 	</section>
 </section>
 
-<section data-min="5"><h1>About the course and the online resources being used</h1></section>
-<section><h2>About me</h2>
-	<section><h3>Name: Iva E. Popova</h3>
-		<dl class="fa">
-			<dt>First PC: <span class="keyword">Правец 8Д</span></dt>
-			<dt>First OS: <span class="keyword">DOS</span></dt>
-			<dt>First Programming Language: <span class="keyword">BASIC</span></dt>
-			<dt>First technical schools: <span class="keyword"><a href="http://uktc-bg.com/">УКТЦ по МТТ, гр. Правец</a></span></dt>
-			<dt>First Cat: <span class="keyword">black and yellow eyed</span></dt>
-		</dl>
-	</section>
-	<section><h3>Tech skills</h3>
-		<dl class="fa">
-			<dt>HTML, CSS, JavaScript, React.js, Vue.js, Angular,...</dt>
-			<dt>Python, Perl6, Perl5, C++, Prolog.</dt>
-			<dt>GraphDB, MongoDB, MySQL/Postgre.</dt>
-			<dt>Machine Learning</dt>
-			<dt>Knowledge representation, ontologies.</dt>
-		</dl>
-	</section>
-	<section><h3>Teaching Experience</h3>
-		<dl class="fa">
-			<dt><a href="https://tu-sofia.bg/">Technical University</a>:</dt>
-			<dd>Programming languages</dd>
-			<dd>Internet Programming</dd>
-			<dd>Discrete Mathematics</dd>
-			<dd>Artificial Intelligence and Expert Systems</dd>
-			<dt><a href="https://www.it-academy.bg/">IT-Academy</a>:</dt>
-			<dd>HTML, CSS</dd>
-			<dt><a href="http://progressbg.net/">ProgressBG</a>:</dt>
-			<dd>Front-End Development</dd>
-			<dd>MySQL</dd>
-			<dd>Python</dd>
-			<dd>Machine Learning</dd>
-		</dl>
-	</section>
-</section>
-
-<section><h2>Course Email</h2>
-	<p style="font-size: 1.3em; font-style: normal;" class="note">ProgressBG.WWW.Courses@gmail.com</p>
-	<dl class="fa">
-		<dt>use it to submit your HW</dt>
-		<dt>get access to the shared course calendar</dt>
-		<dt>ask any questions</dt>
-		<dt>give any feedback</dt>
-	</dl>
-</section>
-
-<section data-min="5"><h1>Resources</h1></section>
-<section><h2>Resources</h2>
+<section data-min="5"><h1>What is a VCS and how it makes life easier?</h1></section>
+<section><h2>What is a VCS and how it makes life easier?</h2>
   <section>
   	<dl class="fa">
-  		<dt>Usually, at the end of each topic, relative resources will be linked.</dt>
-  		<dt>But all of them will be listed separated, as well:</dt>
-  		<dd>Work in progress: <a href="/ProgressBG-Front-End-Dev/pages/readings/advanced/UsefulResources.html">Useful Resources</a></dd>
+  		<dt><abbr>VCS</abbr><dfn id="DB"><span>Version</span><span>Control</span><span>System</span></dfn></dt>
+  		<dd>a system that records changes to a file (or set of files) over time so that you can recall specific versions later</dd>
+  		<dt>You can version control <span class="note">all kind of work</span> you do:</dt>
+  		<dd>Poetry</dd>
+  		<dd>Images</dd>
+  		<dd>Music</dd>
+  		<dd>Programming</dd>
+  		<dd>...</dd>
+  		<dt><span class="note">Easily share</span> your work with other team members</dt>
   	</dl>
+  </section>
+  <section><h3>VCS Types</h3>
+  	<dl class="fa">
+  		<dt>centralized</dt>
+  		<dd>like <a href="http://subversion.tigris.org/">subversion</a></dd>
+  		<dt>decentralized (distributed)</dt>
+  		<dd>like <a href="https://git-scm.com/">git</a></dd>
+  		<dt>Pros and cons</dt>
+  	</dl>
+  </section>
+  <section><h3>Distributed VCS</h3>
+  	<a href="images/distributed_VCS.png"><img style="height:50vh;" src="images/distributed_VCS.png"></a>
+  </section>
+</section>
+
+<section data-min="5"><h1>Installing and configuring git.</h1></section>
+<section><h2>Installing and configuring git.</h2>
+  <section>
+  	<dl class="fa">
+  		<dt><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Installing Git</a></dt>
+  		<dt><span class="note">Note for Windows Users</span> - install from <a href="https://gitforwindows.org/">gitforwindows.org</a> which also brings a nice features like <code>git bash</code>, <code>shell integration</code> and more </dt>
+  	</dl>
+  </section>
+</section>
+
+<section data-min="5"><h1>Create and configure a git repository.</h1></section>
+<section><h2>Create and configure a git repository.</h2>
+
+</section>
+
+<section data-min="5"><h1>Adding files to repository and committing changes</h1></section>
+<section><h2>Adding files to repository and committing changes</h2>
+  <section>
+  	<p>Open a Terminal/Command Prompt</p>
+  	<pre><code rel="Terminal" class="bash" data-noescape style="font-size: .7em">
+  			# Create your project directory
+  			$ mkdir my_project
+
+  			# go into it
+  			$ cd my_project
+
+  			# initialize the new repository
+  			$ git init
+
+  			# do some work and save your files
+  			$ echo "I'm working hard..." > file1.txt
+
+  			# stage all your work
+  			$ git add -A
+
+  			# commit your work
+  			$ git commit -am'Work 1 Done'
+
+  	</code></pre>
+  </section>
+</section>
+
+<section data-min="5"><h1>Working with branches.</h1></section>
+<section><h2>Working with branches.</h2>
+  <section>
+
+  </section>
+</section>
+
+<section data-min="5"><h1>Merging and reverting changes</h1></section>
+<section><h2>Merging and reverting changes</h2>
+  <section>
 
   </section>
 </section>
 
 
-<section data-min="5"><h1>What happens with the Web, and the technologies behind it during the past years?</h1></section>
-<section><h2>What happens with the Web, and the technologies behind it during the past years?</h2>
-	<section><h3>JavaScript on the server</h3>
-		<dl class="fa">
-			<dt><span class="note">2009</span> <a href="https://nodejs.org/en/">node.js</a></dt>
-			<dt>But, for how long?
-				<iframe style="width: 70vw; height: 60vh;" src="https://www.youtube.com/embed/M3BM9TB-8yA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-			</dt>
-		</dl>
-	</section>
-  <section><h3>Pre-processors/Template Systems</h3>
-  	<dl class="fa">
-  		<dt><a href="https://www.slant.co/topics/5427/~html-preprocessors">HTML</a> => pug, HAML</dt>
-  		<dt><a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS_preprocessor">CSS</a> => Sass, LESS, Stylus</dt>
-  		<dt>JavaScript Templating Engines => <a href="https://github.com/janl/mustache.js/">mustache.js</a>, <a href="https://handlebarsjs.com/">Handlebars</a></dt>
-  	</dl>
-  </section>
-  <section><h3>Front-End Libraries and Frameworks</h3>
-  	<dl class="fa">
-  		<dt><a href="https://reactjs.org/">React</a></dt>
-  		<dt><a href="https://angularjs.org/">AngularJS</a></dt>
-  		<dt><a href="https://vuejs.org/">Vue.js</a></dt>
-  	</dl>
-  </section>
-  <section><h3>Web Platforms for building Apps</h3>
-  	<dl class="fa">
-  		<dt><a href="https://angular.io/">Angular</a></dt>
-  	</dl>
-  </section>
-  <section><h3>Build Tools</h3>
-  	<dl class="fa">
-  		<dt>Gulp</dt>
-  		<dt>Webpack</dt>
-  	</dl>
-  </section>
-  <section><h3>Web Standards</h3>
-  	<dl class="fa">
-  		<dt><a href="https://www.w3.org/standards/">Open Web Platform</a></dt>
-  		<dt>No more browser wars?</dt>
-  		<dd>Windows' Edge is no more enemy of the developers</dd>
-  		<dd>Can we forget about <a href="https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix">Vendor Prefix?</a></dd>
-  		<dt>Rapid evolvement</dt>
-  		<dd><a href="https://www.webcomponents.org/">Web Components</a></dd>
+<section data-min="5"><h1>Overview of GitHub/GitLab and setting-up an account</h1></section>
+<section><h2>Overview of GitHub/GitLab and setting-up an account</h2>
+  <section>
 
-  	</dl>
   </section>
 </section>
 
+
+<section data-min="5"><h1>Connect your local git repository to your GitHub/GitLab repository</h1></section>
+<section><h2>Connect your local git repository to your GitHub/GitLab repository</h2>
+  <section>
+
+  </section>
+</section>
+
+<section data-min="5"><h1>Using GitHub/GitLab pages as free hosting for your project</h1></section>
+<section><h2>Using GitHub/GitLab pages as free hosting for your project</h2>
+  <section>
+
+  </section>
+</section>
 
 
 <section class="disclaimer" data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
