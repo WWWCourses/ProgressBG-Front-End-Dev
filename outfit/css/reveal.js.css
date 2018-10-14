@@ -379,6 +379,7 @@ section.copyright>.license{
 
 .reveal section img{
   border: 0;
+  height: 60vh;
 }
 .reveal .inline{
   display: inline-block;

@@ -78,7 +78,7 @@
   <section>
   	<dl class="fa">
   		<dt><abbr>VCS</abbr><dfn id="DB"><span>Version</span><span>Control</span><span>System</span></dfn></dt>
-  		<dd>a system that records changes to a file (or set of files) over time so that you can recall specific versions later</dd>
+  		<dd>a system that records changes to a file (or directory) over time so that you can recall specific versions later</dd>
   		<dt>You can version control <span class="note">all kind of work</span> you do:</dt>
   		<dd>Poetry</dd>
   		<dd>Images</dd>
@@ -90,15 +90,22 @@
   </section>
   <section><h3>VCS Types</h3>
   	<dl class="fa">
+  		<dt>local</dt>
+  		<dd>really, not used by companies</dd>
   		<dt>centralized</dt>
   		<dd>like <a href="http://subversion.tigris.org/">subversion</a></dd>
   		<dt>decentralized (distributed)</dt>
   		<dd>like <a href="https://git-scm.com/">git</a></dd>
-  		<dt>Pros and cons</dt>
   	</dl>
   </section>
+  <section><h3>Local VCS</h3>
+  	<a href="images/local_vcs.png"><img src="images/local_vcs.png"></a>
+  </section>
+  <section><h3>Centralized VCS</h3>
+  	<a href="images/centralized_vcs.png"><img src="images/centralized_vcs.png"></a>
+  </section>
   <section><h3>Distributed VCS</h3>
-  	<a href="images/distributed_VCS.png"><img style="height:50vh;" src="images/distributed_VCS.png"></a>
+  	<a href="images/distributed_vcs.png"><img src="images/distributed_vcs.png" style="width: 50vw; height: 73vh;"></a>
   </section>
 </section>
 
@@ -112,18 +119,61 @@
   </section>
 </section>
 
-<section data-min="5"><h1>Basic Concepts</h1></section>
-<section><h2>Basic Concepts</h2>
+<section data-min="5"><h1>Distributed VCS - Basic Concepts</h1></section>
+<section><h2>Distributed VCS - Basic Concepts</h2>
+	<section><h3>Distributed VCS Concepts Overview</h3>
+		<a href="images/distributed_concepts_overview.png"><img src="images/distributed_concepts_overview.png"></a>
+	</section>
+	<section><h3 class="note">Initialize a Git repository</h3>
+		<pre><code rel="Terminal" class="bash" data-noescape>
+				$ git init
+			</code></pre>
+		<dl class="fa">
+			<dt>git will start to track the Current Working Directory (CWD).</dt>
+			<dt>A hidden <code>.git</code> folder is created.</dt>
+		</dl>
+	</section>
+	<section><h3 class="note">Stage files/changes</h3>
+		<p>Also known as <span class="note">adding files content to the index</span></p>
+		<pre><code rel="Terminal" class="bash" data-noescape>
+				# to stage only certain file/path:
+				$ git add <i>path</i>
+
+				# to stage all files in CWD:
+				git add -A
+			</code></pre>
+		<dl class="fa">
+			<dt>The staging are contains all the changes that will be added to the local repository after the <code>commit</code></dt>
+			<dt>You can remove (unstage) files from the index, with:
+				<pre><code rel="Terminal" class="bash" data-noescape>
+					git rm <i>file</i>
+				</code></pre>
+			</dt>
+		</dl>
+	</section>
+	<section><h3 class="note">Commit files to local repository</h3>
+		<pre><code rel="Terminal" class="bash" data-noescape>
+				# commit files - the default editor for git will be opened to write your Commit Message
+				$ git commit
+
+				# commit and write the Commit Message
+				$ git commit -m'Your Commit Message'
+			</code></pre>
+		<dl class="fa">
+			<dt>You can set a default editor by your choice:</dt>
+			<dd><a href="https://stackoverflow.com/questions/8951275/how-can-i-make-sublime-text-the-default-editor-for-git/23934471">How can I make Sublime Text the default editor for Git?</a></dd>
+		</dl>
+	</section>
   <section><h3>The Three States</h3>
   	<a href="images/git_areas.png"><img src="images/git_areas.png"></a>
   </section>
 </section>
 
-<section data-min="5"><h1>Create and configure a git repository.</h1></section>
+<!-- <section data-min="5"><h1>Create and configure a git repository.</h1></section>
 <section><h2>Create and configure a git repository.</h2>
 
 </section>
-
+ -->
 
 
 <section data-min="5"><h1>Adding files to repository and committing changes</h1></section>
@@ -148,7 +198,6 @@
 
   			# commit your work
   			$ git commit -am'Work 1 Done'
-
   	</code></pre>
   </section>
 </section>
@@ -156,7 +205,7 @@
 <section data-min="5"><h1>Working with branches.</h1></section>
 <section><h2>Working with branches.</h2>
   <section>
-
+  	<a href="https://www.atlassian.com/git/tutorials/using-branches">Git Branch</a>
   </section>
 </section>
 
