@@ -124,6 +124,18 @@
 			<dd>Elements, that mark up the structure of the Web content using the appropriate semantic elements</dd>
 		</dl>
 	</section>
+	<section><h3>Note about "custom elements"</h3>
+		<dl class="fa">
+			<dt>HTML5 is a <span class="note">predefined, restricted</span> set of HTML elements</dt>
+			<dd>Tags like: <code>&lt;person&gt;, &lt;developer&gt;, ...</code> will be ignored by the browsers.</dd>
+			<dt>But we can define our custom elements in the DOM</dt>
+			<dd><a href="https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements">Custom Elements</a> @whatwg</dd>
+			<dd><a href="https://www.w3.org/TR/custom-elements/">Custom Elements</a> @w3c</dd>
+			<dt>Custom Elements are part of a bigger effort: the Web Components, which will be discussed in next lectures.</dt>
+			<dd>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">Web Components</a> @MDN</dd>
+			<dt style="font-size: .8em">Discuss: Custom (DOM) Elements vs HTML elements in the context of SEO</dt>
+		</dl>
+	</section>
 	<section><h3>Resources</h3>
 		<dl class="fa">
 			<dt><a href="https://www.inboundnow.com/html5-semantic-elements-mean-seo/">The HTML5 Semantic Elements and What They Mean For SEO</a></dt>
@@ -149,7 +161,7 @@
   	<dl class="fa">
   		<dt>Where <span class="note">something</span> is string:</dt>
   		<dd>at least 1 letter</dd>
-  		<dd>Can not start with 'xml'</dd>
+  		<dd>Should not start with 'xml'</dd>
   		<dd>Rest symbols can be: <br> | "-" | "." | [0-9] | #xB7 | [#x0300-#x036F] | [#x203F-#x2040]</dd>
   		<dt>More on naming: <a href="https://www.w3.org/TR/2011/WD-html5-20110525/elements.html#embedding-custom-non-visible-data-with-the-data-attributes">data-*  attributes @w3c</a></dt>
   	</dl>
@@ -191,25 +203,14 @@
   		}
   	</code></pre>
   </section>
-  <section><h3>Use case 1</h3>
-  	<dl class="fa">
-  		<dt>Custom tooltips (CSS only with pseudo-elements)</dt>
-  		<dt><a href="examples/slides/data_attributes.html">Demo</a></dt>
-  	</dl>
-  	<pre><code rel="CSS" class="html">
-  		li[data-price]{
-  			position: relative;
-  		}
-  		li[data-price]:hover{
-  			background: #FFE8B8;
-  		}
-  		li[data-price]:hover:after{
-  			position: absolute;
-  			top:0; right: 0;
-  			display: block;
-  			content: " price " attr(data-price);
-  		}
-  	</code></pre>
+  <section><h3>data-* attributes with CSS pseudo-elements</h3>
+  	<iframe scrolling='no' title='data-* attributes with pseudo-elements' src='//codepen.io/webdesigncourse/embed/MPXXjV/?height=300&theme-id=20230&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/MPXXjV/'>data-* attributes with pseudo-elements</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+  	</iframe>
+  </section>
+  <section><h3><a href="https://codepen.io/css-tricks/pen/wFeaG">Styled Tooltips Using Psuedo Elements</a></h3>
+  	<iframe src="examples/slides/data_attributes/custom_tooltips_by_css_trics.html" style="height: 40vh"></iframe>
+  	<p>Example from <a href="https://codepen.io/css-tricks/pen/wFeaG/">Styled Tooltips Using Psuedo Elements</a> by CSS-Tricks Team (<a href="https://codepen.io/css-tricks">@css-tricks</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
   </section>
   <section><h3>JavaScript access</h3>
   	<dl class="fa">
@@ -218,6 +219,11 @@
   		<dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute">Element.getAttribute() @MDN</a></dt>
   		<dd>Longer way</dd>
   	</dl>
+  </section>
+  <section><h3>Example (labs)</h3>
+  	<iframe scrolling='no' title='Access data-* with JS: lab 20.11.2018' src='//codepen.io/webdesigncourse/embed/MPXXaQ/?height=300&theme-id=20230&default-tab=html,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/MPXXaQ/'>Access data-* with JS: lab 20.11.2018</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+  	</iframe>
+</iframe>
   </section>
   <section><h3>Resources</h3>
   	<dl class="fa">
