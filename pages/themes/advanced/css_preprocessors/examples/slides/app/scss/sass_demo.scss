@@ -1,0 +1,38 @@
+// ***********************************************
+// variables declaration
+	$color 		: #F100FF;
+	$bg_color : #952b2b;
+// ***********************************************
+
+
+// ***********************************************
+// mixin with arguments
+	@mixin border($width, $color){
+		border: $width solid $color;
+	}
+// ***********************************************
+
+
+// ***********************************************
+// mixin included in mixin
+	@mixin transform($transforms) {
+		   -moz-transform: $transforms;
+		     -o-transform: $transforms;
+		    -ms-transform: $transforms;
+		-webkit-transform: $transforms;
+	          transform: $transforms;
+	}
+	@mixin rotate ($deg) {
+	  @include transform(rotate(#{$deg}deg));
+	}
+// ***********************************************
+
+.test{
+	width: 50em;
+	height: 5em;
+
+	color: $color;
+	background: $bg_color;
+
+	@include border(5px, blue);
+}

@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>css_preprocessors</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="/ProgressBG-Front-End-Dev/lib/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/ProgressBG-Front-End-Dev/lib/reveal.js/css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="/ProgressBG-Front-End-Dev/pages/agenda/advanced.html#css_preprocessors" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>next slide</span></div>
+				<div><span>P</span><span>previous slide</span></div>
+				<div><span>O</span><span>Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/ProgressBG-Front-End-Dev/outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>CSS pre-processors and native CSS Custom properties</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://progressbg.net/kurs-po-web-design/">
+				<img src="/ProgressBG-Front-End-Dev/outfit/images/logos/ProgressBG_logo_529_127.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+<section data-min="5"><h1>Why to pre-process CSS?</h1></section>
+<section><h2>Why to pre-process CSS?</h2>
+  <section><h3></h3>
+  	<dl class="fa">
+  		<dt>CSS is difficult to be maintained in large code-bases.</dt>
+  		<dt>CSS Preprocessors offers advanced features:</dt>
+  		<dd>Write code quicker.</dd>
+  		<dd>Write clear-structured code</dd>
+  		<dd>Use Variable, Conditionals, Loops, Mixins</dd>
+  		<dt>Yes, CSS is evolving, and the knowledge you'll get from using CSS pre-processors will help you master the new CSS features.</dt>
+  		<dd>CSS variables are real, now!</dd>
+  	</dl>
+  </section>
+</section>
+
+<section data-min="5"><h1>What is CSS Preprocessor?</h1></section>
+<section><h2>What is CSS Preprocessor?</h2>
+  <section>
+  	<dl class="fa">
+  		<dt>A CSS preprocessor is a scripting language that extends CSS</dt>
+  		<dt>There are lots of CSS Preprocessor, but most popular among them sre:</dt>
+  		<dd>Less, SASS and Stylus</dd>
+  		<dd><a href="https://stackshare.io/stackups/less-vs-postcss-vs-sass">Sass vs. Less vs. PostCSS</a> @<a href="https://stackshare.io/">stackshare</a></dd>
+  		<dt>Browsers <span class="note">do not understand</span> any of them, so in order to use one, we need to have the corresponding compiler (to CSS).</dt>
+  	</dl>
+  </section>
+</section>
+
+<section data-min="5"><h1>LESS is more.</h1></section>
+<section><h2>LESS is more.</h2>
+  <section><h3>Overview</h3>
+  	<dl class="fa">
+  		<dt><a href="http://lesscss.org/">Less CSS</a></dt>
+  	</dl>
+  </section>
+</section>
+
+<section data-min="20"><h1>Sass Overview</h1></section>
+<section><h2>Sass Overview</h2>
+	<section>
+		<dl class="fa">
+			<dt>Sass = Syntactically Awesome StyleSheets</dt>
+			<dt>Sass = CSS with superpowers</dt>
+			<dd>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</dd>
+			<dt>Sass official page: <a href="https://sass-lang.com/">sass-lang.com</a></dt>
+		</dl>
+	</section>
+  <section><h3>Install Anywhere (Standalone) </h3>
+  	<dl class="fa">
+  		<dt>Go to: <a href="https://sass-lang.com/install">sass-lang.com/install</a> and download the package for your operating system</dt>
+  		<dt>Extract the archive where you want it to be "installed"</dt>
+  		<dt>Add that path to your OS $PATH</dt>
+  		<dd>Google for:<br> [windows|linux|mackos] how to add folder to path</code></dd>
+  	</dl>
+  </section>
+  <section><h3>Test it</h3>
+  	<dl class="fa">
+  		<dt>Create an HTML5 page with an empty <code>div.test</code> element.</dt>
+  		<dt>Create a simple sass file:</dt>
+  		<pre><code rel="sass_demo.scss" class="css" style="width: 70vw;">
+  			$color 	  : #F100FF;
+  			$bg_color : #5C5454;
+
+  			.test{
+  				width: 50em;
+  				height: 5em;
+  				color: $color;
+  				background: $bg_color;
+  			}
+  		</code></pre>
+  	</dl>
+  </section>
+  <section><h3>Test it</h3>
+  	<dl class="fa">
+  		<dt>Open your terminal and navigate to the folder where your .scss file lives.</dt>
+  		<dt>And just compile it into CSS by:</dt>
+  		<pre><code rel="Terminal" class="bash" data-noescape>
+  				$ sass sass_demo.scss sass_demo.css
+  		</code></pre>
+  		<dt>The CSS file is generated, along with the <a href="https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">Source Map</a> file</dt>
+  		<dd>If you wander, what for is that Source Map, go on and read <a href="https://robots.thoughtbot.com/sass-source-maps-chrome-magic">Sass Source Maps + Chrome = Magic</a></dd>
+  	</dl>
+  </section>
+  <section><h3><code>--watch</code> files</h3>
+  	<dl class="fa">
+  		<dt>Instead of manually compiling on each change, you can tell <code>sass</code> to <span class="note">--watch</span> your file or directory for changes and to <span class="note">compile automatically</span> on each change</dt>
+  		<dt>I.e. we can write in our Terminal:</dt>
+  		<pre><code rel="Terminal" class="bash" data-noescape>
+				$ sass --watch sass_demo.scss sass_demo.css
+			</code></pre>
+  	</dl>
+  </section>
+  <section><h3><code>--watch</code> folder</h3>
+  	<dl class="fa">
+  		<dt>SASS can also watch all files in a directory.</dt>
+  		<pre><code rel="Folder Structure" class="bash" data-noescape>
+  			├── app
+  			│  └── scss
+  			│      └── sass_demo.scss
+  			├── dist
+  			│  └── stylesheets
+  			└── sass_demo.html
+  		</code></pre>
+  		<pre><code rel="Terminal" class="bash" data-noescape>
+  			$ sass --watch app/scss:dist/stylesheets
+
+  			>Compiled app/scss/sass_demo.scss to dist/stylesheets/sass_demo.css.
+  			>Sass is watching for changes. Press Ctrl-C to stop.
+  		</code></pre>
+  	</dl>
+  </section>
+  <section><h3>Final note on compiling</h3>
+  	<dl class="fa">
+  		<dt>Of course, there are even more automated ways for compiling SASS</dt>
+  		<dt>You can use a plugin for your text editor.</dt>
+  		<dt>Or even better - you can setup a bundler, like webpack, which will be covered in next lectures.</dt>
+  	</dl>
+  </section>
+  <section><h3>Sass: the 2 syntaxes</h3>
+  	<dl class="fa">
+  		<dt>There are two syntaxes available for Sass</dt>
+  		<dt>The indented syntax, or just Sass</dt>
+  		<dd>files are with extension <code>.sass</code></dd>
+
+  		<dd>The first and older one is: <a href="">SCSS (Sassy CSS)</a></dd>
+  	</dl>
+  </section>
+  <section><h3>The indented syntax overview</h3>
+  	<dl class="fa">
+  		<dt></dt>
+  		<dd>is the older syntax which provides more concise way for writing code</dd>
+  		<dd>No brackets - just indentation</dd>
+  		<dd>No semicolon - new line is enough to separate declarations</dd>
+  	</dl>
+  </section>
+</section>
+
+<!-- <section data-min="20"><h1>SASS basic features</h1></section>
+<section><h2>SASS basic features</h2>
+
+</section> -->
+
+
+
+<section class="disclaimer" data-background="/ProgressBG-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="/ProgressBG-Front-End-Dev/outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
+	<script src="/ProgressBG-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			// width: '100%',
+			// height: '100%',
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '/ProgressBG-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true },
+				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+				// { src: 'plugin/remote-control/remote.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>
