@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 	<!-- css & themes include -->
 	<link rel="stylesheet" href="/ProgressBG-Front-End-Dev/lib/reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="/ProgressBG-Front-End-Dev/outfit/css/themes/dark.css" id="theme">
+	<link rel="stylesheet" href="/ProgressBG-Front-End-Dev/outfit/css/themes/light.css" id="theme">
 	<!-- Printing and PDF exports -->
 	<script>
 		var link = document.createElement( 'link' );
@@ -22,6 +22,14 @@
 	<![endif]-->
 	<!-- CUSTOM -->
 	<base target="_blank">
+	<style type="text/css">
+		.reveal section{
+			font-size: .9em;
+		}
+		.reveal section pre{
+			font-size: .6em;
+		}
+	</style>
 </head>
 <body>
 	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
@@ -191,29 +199,205 @@
   		<dt>Or even better - you can setup a bundler, like webpack, which will be covered in next lectures.</dt>
   	</dl>
   </section>
-  <section><h3>Sass: the 2 syntaxes</h3>
+  <section><h3>Sass: the two syntaxes</h3>
   	<dl class="fa">
   		<dt>There are two syntaxes available for Sass</dt>
-  		<dt>The indented syntax, or just Sass</dt>
-  		<dd>files are with extension <code>.sass</code></dd>
-
-  		<dd>The first and older one is: <a href="">SCSS (Sassy CSS)</a></dd>
+  		<dt>The <a href="http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html">indented syntax</a>, or just Sass</dt>
+  		<dd>files are with extension <code class="note">.sass</code></dd>
+  		<dt>SCSS (or Sassy CSS) is the newer version, as of Sass v3.</dt>
+  		<dd>files are with extension <code class="note">.scss</code></dd>
   	</dl>
   </section>
   <section><h3>The indented syntax overview</h3>
   	<dl class="fa">
-  		<dt></dt>
-  		<dd>is the older syntax which provides more concise way for writing code</dd>
+  		<dt>The indented syntax is the older syntax.</dt>
+  		<dt>It provides more concise way for writing code</dt>
   		<dd>No brackets - just indentation</dd>
   		<dd>No semicolon - new line is enough to separate declarations</dd>
+  		<dt>But it deviates away from CSS.</dt>
+  	</dl>
+  </section>
+  <section><h3>SCSS overview</h3>
+  	<dl class="fa">
+  		<dt>The newer syntax is a <span class="note">superset of CSS</span>, i.e each valid CSS is a valid SCSS.</dt>
   	</dl>
   </section>
 </section>
 
-<!-- <section data-min="20"><h1>SASS basic features</h1></section>
+<section data-min="20"><h1>SASS basic features</h1></section>
 <section><h2>SASS basic features</h2>
+	<section><h3>Variables</h3>
+		<dl class="fa">
+			<dt>A variable in Sass begins with <code>$</code> and its value is assigned like a CSS value to a property. I.e. with the column notation.</dt>
+			<pre><code rel="SCSS" class="scss">
+				// declare to variables:
+				$color: #F100FF;
+				$bg_color: #952b2b;
 
-</section> -->
+				// and use it, like that:
+				.test{
+					color: $color;
+					background: $bg_color;
+				}
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3>Nested Rules</h3>
+		<dl class="fa">
+			<dt>Sass allows CSS rules to be nested, and the inner rule only applies within the outer rule's selector.</dt>
+		</dl>
+		<pre><code rel="SCSS" class="scss" data-noescape>
+			.A{
+				/* A declarations */
+				.B{
+					/* B declarations */
+				}
+			}
+		</code></pre>
+		<pre><code rel="css" class="scss" data-noescape>
+			.A{
+				/* A declarations */
+			}
+			.A .B{
+				/* B declarations */
+			}
+		</code></pre>
+	</section>
+	<section><h3>Referencing Parent Selectors: <code>&</code></h3>
+		<dl class="fa">
+			<dt>We can point to the parent selector using the <code class="note">&</code> symbol. Like in</dt>
+		</dl>
+		<pre><code rel="SCSS" class="scss" data-noescape>
+			a{
+				text-decoration: none;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		</code></pre>
+		<pre><code rel="CSS" class="css" data-noescape>
+			a {
+			  text-decoration: none;
+			}
+			a:hover {
+			  text-decoration: underline;
+			}
+		</code></pre>
+	</section>
+	<section><h3>Referencing Parent Selectors: <code>&</code></h3>
+		<dl class="fa">
+			<dt>On deeper nesting, the parent selectors will be fully resolved before replacing the <code>&:</code></dt>
+		</dl>
+		<pre><code rel="SCS" class="scss" data-noescape>
+			a{
+				text-decoration: none;
+				&:hover{
+					text-decoration: underline;
+					&:after{
+						content: ">>";
+					}
+				}
+			}
+		</code></pre>
+		<pre><code rel="CSS" class="css" data-noescape>
+			a {
+			  text-decoration: none;
+			}
+			a:hover {
+			  text-decoration: underline;
+			}
+			a:hover:after {
+			  content: ">>";
+			}
+		</code></pre>
+	</section>
+	<section><h3>Referencing Parent Selectors: <code>&</code></h3>
+		<dl class="fa">
+			<dt><code>&</code> should be at the beginning of the selector, but  it can be followed by a suffix that will be added to the parent selector</dt>
+		</dl>
+		<pre><code rel="SCSS" class="scss" data-noescape>
+			.btn{
+				background: gray;
+				border-radius: 20%;
+				&-alert{
+					background: red;
+				}
+			}
+		</code></pre>
+		<pre><code rel="CSS" class="css" data-noescape>
+			.btn {
+			  background: gray;
+			  border-radius: 20%;
+			}
+			.btn-alert {
+			  background: red;
+			}
+		</code></pre>
+	</section>
+	<section><h3>Nested Properties</h3>
+		<dl class="fa">
+			<dt>The namespaced properties, like: background-image, background-size, etc. can be economically written is SCSS like:</dt>
+		</dl>
+		<pre><code rel="SCSS" class="scss" data-noescape>
+			.cover{
+				background:{
+					image:"img1.png";
+					size: 100% 100%;
+					position: center;
+				}
+			}
+		</code></pre>
+		<pre><code rel="CSS" class="css" data-noescape>
+			.cover {
+			  background-image: "img1.png";
+			  background-size: 100% 100%;
+			  background-position: center;
+			}
+		</code></pre>
+	</section>
+
+	<section><h3>Data Types</h3>
+		<pre><code rel="SCSS" class="scss" data-noescape>
+			// numbers
+			$number: 1.23;
+
+			// strings
+			$foo:"bar";
+			$foo:bar;
+
+			// colors:
+			$color:red;
+			$color:#F00;
+			$color:rgba(255,0,0,0.5);
+
+			// booleans
+			$shown:true;
+			$shown:false;
+
+			// null:
+			$test:null;
+
+			// lists
+			$border: 1px solid $color;
+			$font: "Helvetica", serif;
+
+			//maps (like dictionary)
+			$color_map: (
+			  light: #ccc,
+			  dark: #000
+			);
+		</code></pre>
+	</section>
+
+	<section><h3>SCSS Operations</h3></section>
+
+	<section><h3>@-Rules and Directives</h3></section>
+
+	<section><h3>Examples</h3>
+		<iframe  scrolling='no' title='SCSS demo' src='//codepen.io/webdesigncourse/embed/dgrqZB/?height=300&theme-id=20230&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/dgrqZB/'>SCSS demo</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+</section>
 
 
 
