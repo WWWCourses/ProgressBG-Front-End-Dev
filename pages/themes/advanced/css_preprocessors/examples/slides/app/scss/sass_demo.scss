@@ -1,5 +1,6 @@
 // ***********************************************
 
+
 // VARIABLES DECLARATION
 	$color 		: #F100FF;
 	$bg_color : rgba(255,0,0,0.5);
@@ -97,6 +98,7 @@
 // ***********************************************
 
 
+
 // ***********************************************
 // mixin with arguments
 	@mixin border($width, $color){
@@ -121,6 +123,7 @@
 // ***********************************************
 
 
+
 // .container{
 // 	position: relative;
 // 	width: 10em;
@@ -136,5 +139,6 @@
 // 		@include centered_box;
 // 		@include border(3px, green);
 // 	}
+
 // }
 
