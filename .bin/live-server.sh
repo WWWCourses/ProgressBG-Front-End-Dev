@@ -1,4 +1,5 @@
-nohup live-server --port=1111 --open=/ProgressBG-Front-End-Dev/pages/agenda/advanced.html \
+nohup live-server --port=1111 \
+--open=/ProgressBG-Front-End-Dev/pages/agenda/advanced.html \
 --watch=/ProgressBG-Front-End-Dev   \
 /home/nemsys/projects/courses/ProgressBG &
 
