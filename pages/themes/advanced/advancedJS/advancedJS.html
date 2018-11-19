@@ -141,6 +141,11 @@
 	<!-- <section><h3>Resources</h3></section> -->
 </section>
 
+<section><h1>JavaScript: The World's Most Misunderstood Programming Language</h1></section>
+<section><h2>JavaScript: The World's Most Misunderstood Programming Language</h2>
+	<section><a href="http://crockford.com/javascript/javascript.html">JavaScript: The World's Most Misunderstood Programming Language (by Douglas Crockford)</a></section>
+</section>
+
 <section data-notes="10min"><h1>JavaScript standards: ES5, ES6,ES2018, ... ES.Next?</h1></section>
 <section data-notes="10min"><h2>JavaScript standards: ES5, ES6,ES2018, ... ES.Next?</h2>
 		<section><h3><a href="http://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262%205th%20edition%20December%202009.pdf">ECMAScript 5 (ES5)</a>, 2009 year</h3>
@@ -158,8 +163,9 @@
 				</ul>
 			</aside>
 		</section>
-		<section><h3><a href="http://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262%206th%20edition%20June%202015.pdf">ECMAScript 6 (ES6)/ ECMAScript 2015 (ES2015)</a> year</h3>
+		<section><h3><a href="http://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262%206th%20edition%20June%202015.pdf">ECMAScript 6 (ES6)/ ECMAScript 2015 (ES2015)</a></h3>
 				<dl class="fa">
+					<dt>New versioning (ES2016, ES2017, ES2018, ...)</dt>
 						<dt>New Features:</dt>
 						<dd><a href="https://github.com/lukehoban/es6features#readme">git.io/es6features</a></dd>
 						<dd><a href="http://es6-features.org">es6-features.org</a></dd>
@@ -167,9 +173,9 @@
 				<aside class="notes">
 				</aside>
 		</section>
-		<section>
+		<section><h3>ES6 new features - the <span class="note">class keyword</span></h3>
+			<iframe style="height: 50vh;" src="https://www.youtube.com/embed/NJxB0Pp69IQ?list=PL-BwA4EWrxLAL9XzwMwLY2uLQFm68fJ4Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<p>Brendan Eich on designing JavaScript :)</p>
-			<iframe width="768" height="432" src="https://www.youtube.com/embed/NJxB0Pp69IQ?list=PL-BwA4EWrxLAL9XzwMwLY2uLQFm68fJ4Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<p> (<span class="note">Watch that first: <a href="https://youtu.be/lJx6cF-H__I">Jonathan Ive explaining the Unibody-Design</a></span>)</p>
 		</section>
 		<section><h3><a href="https://www.ecma-international.org/ecma-262/7.0/">ECMAScript 7 (ES7)/ ECMAScript 2016 (ES2016)</a></h3>
@@ -195,6 +201,7 @@
 				</ul>
 		</aside>
 </section>
+
 
 <section data-notes="20min"><h1>The difference between JavaScript and other OOP languages</h1></section>
 <section><h2>The difference between JavaScript and other OOP languages</h2>
@@ -337,16 +344,16 @@
 				};
 			</code></pre>
 			<dl class="fa">
-				<dt>Semicolons <span class="note">are required</span> after function declaration!</dt>
-				<dt>function name can be omitted in function expressions to create anonymous functions</dt>
-				<dt>a function expression can be immediately invoked (as IIFE)</dt>
+				<dt>Semicolons <span class="note">are required</span> after function expressions!</dt>
+				<dt>function name can be omitted in function expressions to create anonymous function.</dt>
+				<dt>a <span class="note">function expression can be immediately invoked</span> (i.e. as IIFE)</dt>
 			</dl>
 	</section>
 	<section><h3>Function expression</h3>
 			<pre><code rel="JS">
 					var f = function add(x,y){
 							return x+y
-					}
+					};
 
 					console.log("f(2,3):", f(2,3));		 // f(2,3):5
 					console.log("add(2,3):", add(2,3)); // ReferenceError: add is not defined
@@ -400,6 +407,24 @@
 	</section>
 </section>
 
+<section><h1>Scope</h1></section>
+<section><h2>Scope</h2>
+		<section>
+			<dl class="fa">
+				<dt>The context in which values and expressions are "visible," or can be referenced.</dt>
+				<dt>Scopes can be layered in a hierarchy, so that child scopes have access to parent scopes, but not vice versa.</dt>
+				<dt class="note">Each function in JavaScript creates its own scope!</dt>
+			</dl>
+		</section>
+		<section>
+			<img src="images/Scope1.png">
+			<dl class="fa">
+					<dt>Inner Scope can use the names in Outer Scope</dt>
+					<dt>Outer Scope <span class="note">can not</span> see the names defined in Inner Scope</dt>
+					<dt>If same name is defined in both Scopes, then the Inner Scope name <span class="note">shadows</span> the Outer Scope name</dt>
+			</dl>
+		</section>
+</section>
 
 <section><h1>Functions as first-class citizens</h1></section>
 <section><h2>Functions as first-class citizens</h2>
@@ -408,7 +433,6 @@
 		</section>
 		<section>
 				<blockquote cite="http://javascript.crockford.com/javascript.html">JavaScript's C-like syntax, including curly braces and the clunky for statement, makes it appear to be an ordinary procedural language. This is misleading because <span class="note"> JavaScript has more in common with functional languages like Lisp or Scheme</span> than with C or Java</blockquote>
-				<a href="http://javascript.crockford.com/javascript.html">JavaScript: The World's Most Misunderstood Programming Language (Douglas Crockford)</a>
 		</section>
 		<section>
 			 <dl class="fa">
@@ -461,20 +485,27 @@
 						<dd>Not intuitive for persons used with classical procedural languages.</dd>
 				</dl>
 	 </section>
+	 <section><h3>test yourself</h3>
+	 		<iframe	src="https://www.youtube.com/embed/hRJrp17WnOE?autoplay=0" frameborder="0" allowfullscreen></iframe>
+	 </section>
 </section>
 
+<section><h1>Immediately-invoked function expressions (IIFE)</h1></section>
 <section><h2>Immediately-invoked function expressions (IIFE)</h2>
-		<section>
-				<h3><abbr>IIFE</abbr><dfn id="IIFE"><span>Immediately</span><span>Invoked</span><span>Function</span><span>Expression</span></dfn></h3>
-				<p>When a function will be used only once, we do not need to define it first. It's more efficient to invoke it as an anonymous function</p>
+		<section><h3><abbr>IIFE</abbr><dfn id="IIFE"><span>Immediately</span><span>Invoked</span><span>Function</span><span>Expression</span></dfn></h3>
+			<dl class="fa">
+				<dt>When a function will be used only once (usually to scope local variables), we do not need to define it first.</dt>
+				<dt>The definition itself will expose a global variable (function name).</dt>
+				<dt>It's more efficient to invoke it as an anonymous function.</dt>
+			</dl>
 		</section>
 		<section>
 				<pre><code rel="JS">
 						( function(){} )();
 				</code></pre>
 				<dl class="fa">
-						<dt><code>function(){}</code> is an anonymous function declaration!</dt>
-						<dt><code>( function(){} )</code> is an anonymous function expression!</dt>
+						<dt><code class="note">function(){}</code> is an anonymous function <span class="note">declaration</span>!</dt>
+						<dt><code class="note">( function(){} )</code> is an anonymous function <span class="note">expression</span>!</dt>
 						<dt>We can only invoke <span class="note">function expressions</span>.</dt>
 				</dl>
 		</section>
@@ -493,158 +524,137 @@
 		</section>
 </section>
 
-<section><h2>Scope</h2>
-		<section>
-				<dl class="fa">
-						<dt>The context in which values and expressions are "visible," or can be referenced.</dt>
-						<dt>Scopes can be layered in a hierarchy, so that child scopes have access to parent scopes, but not vice versa.</dt>
-						<dt class="note">Each function in JavaScript creates its own scope!</dt>
-				</dl>
-		</section>
-		<section>
-				<img src="images/Scope1.png">
-				<dl class="fa">
-						<dt>Inner Scope can use the names in Outer Scope</dt>
-						<dt>Outer Scope <span class="note">can not</span> see the names defined in Inner Scope</dt>
-						<dt>If same name is defined in both Scopes, then the Inner Scope name <span class="note">shadows</span> the Outer Scope name</dt>
-				</dl>
-		</section>
-		<section>
-				<iframe	src="https://www.youtube.com/embed/hRJrp17WnOE?autoplay=0" frameborder="0" allowfullscreen></iframe>
-		</section>
-</section>
-
 <section><h2>Closures</h2>
-		<section>
-				<dl class="fa">
-						<dt>Allows a function which is executed outside its lexical scope, to preserve the values of scoped variables</dt>
-				</dl>
-				<pre><code rel="JS">
-						function outer(){
-								var x = 5;
-								function inner(){
-										console.log(x);
-								}
+	<section>
+			<dl class="fa">
+					<dt>Allows a function which is executed outside its lexical scope, to preserve the values of scoped variables</dt>
+			</dl>
+			<pre><code rel="JS">
+					function outer(){
+							var x = 5;
+							function inner(){
+									console.log(x);
+							}
 
-								return inner;
-						}
+							return inner;
+					}
 
-						var f = outer();
-						f(); // f can access the local x !
-				</code></pre>
-		</section>
-		<section><h3>Common problem: "closures in loops"</h3>
-				<pre><code rel="JS">
-						var cats = [];
+					var f = outer();
+					f(); // f can access the local x !
+			</code></pre>
+	</section>
+	<section><h3>Common problem: "closures in loops"</h3>
+			<pre><code rel="JS">
+					var cats = [];
 
-						for (var i = 0; i < 3; i++) {
-								cats[i] = function(){
-										console.log(`Cat ${i} is ready!`);
-								}
-						}
+					for (var i = 0; i < 3; i++) {
+							cats[i] = function(){
+									console.log(`Cat ${i} is ready!`);
+							}
+					}
 
-						cats[0](); //Cat 3 is ready!
-						cats[1](); //Cat 3 is ready!
-						cats[2](); //Cat 3 is ready!
-				</code></pre>
+					cats[0](); //Cat 3 is ready!
+					cats[1](); //Cat 3 is ready!
+					cats[2](); //Cat 3 is ready!
+			</code></pre>
 
-				<p class="note">the value of 'i' in the cats[i] function body is determined when the function is invoked!</p>
-		</section>
-		<section><h3>"closures in loops" - IIFE solution</h3>
-				<pre><code rel="JS">
-						var cats = [];
+			<p class="note">the value of 'i' in the cats[i] function body is determined when the function is invoked!</p>
+	</section>
+	<section><h3>"closures in loops" - IIFE solution</h3>
+			<pre><code rel="JS">
+					var cats = [];
 
-						for (var i = 0; i < 3; i++) {
-								(function(i){
-										cats[i] = function(){
-												console.log(`Cat ${i} is ready!`);
-										}
-								})(i)
-						}
+					for (var i = 0; i < 3; i++) {
+							(function(i){
+									cats[i] = function(){
+											console.log(`Cat ${i} is ready!`);
+									}
+							})(i)
+					}
 
-						cats[0](); //Cat 0 is ready!
-						cats[1](); //Cat 1 is ready!
-						cats[2](); //Cat 2 is ready!
-				</code></pre>
-		</section>
-		<section><h3>"closures in loops" - Factory solution</h3>
-				<pre><code rel="JS">
-						var cats = [];
+					cats[0](); //Cat 0 is ready!
+					cats[1](); //Cat 1 is ready!
+					cats[2](); //Cat 2 is ready!
+			</code></pre>
+	</section>
+	<section><h3>"closures in loops" - Factory solution</h3>
+			<pre><code rel="JS">
+					var cats = [];
 
-						function catMaker(i){
-								return function(){
-										console.log(`Cat ${i} is ready!`);
-								}
-						}
+					function catMaker(i){
+							return function(){
+									console.log(`Cat ${i} is ready!`);
+							}
+					}
 
-						for (var i = 0; i < 3; i++) {
-								cats[i] = catMaker(i);
-						}
+					for (var i = 0; i < 3; i++) {
+							cats[i] = catMaker(i);
+					}
 
-						cats[0](); //Cat 0 is ready!
-						cats[1](); //Cat 1 is ready!
-						cats[2](); //Cat 2 is ready!
-				</code></pre>
-		</section>
-		<section><h3>"closures in loops - timeout Problem"</h3>
-				<pre><code rel="JS">
-						var colors = ["red", "green", "blue"];
+					cats[0](); //Cat 0 is ready!
+					cats[1](); //Cat 1 is ready!
+					cats[2](); //Cat 2 is ready!
+			</code></pre>
+	</section>
+	<section><h3>"closures in loops - timeout Problem"</h3>
+			<pre><code rel="JS">
+					var colors = ["red", "green", "blue"];
 
-						for (var i = 0; i < colors.length; i++) {
-								setTimeout(function(){
-										changeBG("box", colors[i]);
-								}, 1000)
-						}
+					for (var i = 0; i < colors.length; i++) {
+							setTimeout(function(){
+									changeBG("box", colors[i]);
+							}, 1000)
+					}
 
-						function changeBG(id, color){
-								var node = document.getElementById(id);
-								node.style.background = color;
-						}
-				</code></pre>
-		</section>
-		<section><h3>"closures in loops - timeout IIFE fix"</h3>
-				<pre><code rel="JS">
-						var colors = ["red", "green", "blue"];
+					function changeBG(id, color){
+							var node = document.getElementById(id);
+							node.style.background = color;
+					}
+			</code></pre>
+	</section>
+	<section><h3>"closures in loops - timeout IIFE fix"</h3>
+			<pre><code rel="JS">
+					var colors = ["red", "green", "blue"];
 
-						for (var i = 0; i < colors.length; i++) {
-								(function(i){
-										setTimeout(function(){
-												changeBG("box", colors[i]);
-										}, 1000*i)
-								})(i);
-						}
+					for (var i = 0; i < colors.length; i++) {
+							(function(i){
+									setTimeout(function(){
+											changeBG("box", colors[i]);
+									}, 1000*i)
+							})(i);
+					}
 
-						function changeBG(id, color){
-								var node = document.getElementById(id);
-								node.style.background = color;
-						}
-				</code></pre>
-				<p class="note">setTimeout() is invoked immediately 3 times. The delay is for the inner function. If we pass same delay, they will be invoked simultaneously after the delay. So, we need to change the delay, as well, i.e. <code>i*1000</code></p>
-		</section>
-		<section><h3>"closures in loops - timeout separate call fix"</h3>
-				<pre><code rel="JS">
-						var colors = ["red", "green", "blue"];
+					function changeBG(id, color){
+							var node = document.getElementById(id);
+							node.style.background = color;
+					}
+			</code></pre>
+			<p class="note">setTimeout() is invoked immediately 3 times. The delay is for the inner function. If we pass same delay, they will be invoked simultaneously after the delay. So, we need to change the delay, as well, i.e. <code>i*1000</code></p>
+	</section>
+	<section><h3>"closures in loops - timeout separate call fix"</h3>
+			<pre><code rel="JS">
+					var colors = ["red", "green", "blue"];
 
-						for (var i = 0; i < colors.length; i++) {
-								doTimeout(i);
-						}
+					for (var i = 0; i < colors.length; i++) {
+							doTimeout(i);
+					}
 
-						function doTimeout(i){
-								setTimeout(function(){
-										changeBG("box", colors[i]);
-								}, i*1000)
-						}
+					function doTimeout(i){
+							setTimeout(function(){
+									changeBG("box", colors[i]);
+							}, i*1000)
+					}
 
-						function changeBG(id, color){
-								var node = document.getElementById(id);
-								node.style.background = color;
-						}
-				</code></pre>
-		</section>
-		<section><h3>Test it!</h3>
-				<iframe height='328' scrolling='no' title='Lab5: All Examples' src='https://codepen.io/ProgressWWWCourses/embed/JNydxy/?height=328&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ProgressWWWCourses/pen/JNydxy/'>Lab5: All Examples</a> by Iva E. Popova (<a href='http://codepen.io/ProgressWWWCourses'>@ProgressWWWCourses</a>) on <a href='http://codepen.io'>CodePen</a>.
-				</iframe>
-		</section>
+					function changeBG(id, color){
+							var node = document.getElementById(id);
+							node.style.background = color;
+					}
+			</code></pre>
+	</section>
+	<section><h3>Test it!</h3>
+			<iframe height='328' scrolling='no' title='Lab5: All Examples' src='https://codepen.io/ProgressWWWCourses/embed/JNydxy/?height=328&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ProgressWWWCourses/pen/JNydxy/'>Lab5: All Examples</a> by Iva E. Popova (<a href='http://codepen.io/ProgressWWWCourses'>@ProgressWWWCourses</a>) on <a href='http://codepen.io'>CodePen</a>.
+			</iframe>
+	</section>
 </section>
 
 <section><h2>Recursion</h2>
@@ -691,8 +701,6 @@
 				</iframe>
 		</section>
 </section>
-
-
 
 <section id="res" data-notes="0min"><h2>Resources</h2>
 		<dl class="fa">
