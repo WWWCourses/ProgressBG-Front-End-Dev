@@ -318,26 +318,28 @@
 
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<section><h1>Function Declaration vs. <br>Function Expression vs. <br>Function Constructor</h1></section>
 <section><h2>Function Declaration vs. Function Expression vs. Function Constructor</h2>
 	<section><h3>Function declaration</h3>
 			<pre><code rel="JS">
-					function add(x,y){
-							return x+y
-					}
+				function add(x,y){
+					return x+y
+				}
 			</code></pre>
 			<dl class="fa">
-					<dt>Semicolons are note required after function declaration!</dt>
+					<dt>Semicolons are <span class="note">not required</span> after function declaration!</dt>
 			</dl>
 	</section>
 	<section><h3>Function expression</h3>
 			<pre><code rel="JS">
-					var add = function(x,y){
-							return x+y
-					}
+				var add = function(x,y){
+					return x+y
+				};
 			</code></pre>
 			<dl class="fa">
-					<dt>function name can be omitted in function expressions to create anonymous functions</dt>
-					<dt>a function expression can be immediately invoked (as IIFE)</dt>
+				<dt>Semicolons <span class="note">are required</span> after function declaration!</dt>
+				<dt>function name can be omitted in function expressions to create anonymous functions</dt>
+				<dt>a function expression can be immediately invoked (as IIFE)</dt>
 			</dl>
 	</section>
 	<section><h3>Function expression</h3>
@@ -350,12 +352,12 @@
 					console.log("add(2,3):", add(2,3)); // ReferenceError: add is not defined
 			</code></pre>
 			<dl class="fa">
-					<dt>A function name can be given in function expression. But the function name is scoped to function body! Could be useful for debugging purposes.</dt>
+					<dt>A function name can be given in function expression. But the function name is scoped to function body! Could be useful for recursion or debugging purposes.</dt>
 			</dl>
 	</section>
 	<section><h3>Expression vs. declaration</h3>
 			<dl class="fa">
-					<dt>Hoisting</dt>
+					<dt><a href="https://developer.mozilla.org/en-US/docs/Glossary/Hoisting">Hoisting</a></dt>
 					<dd>Function declarations are hoisted</dd>
 					<dd>Function expressions are <span class="note">not</span>	hoisted</dd>
 			</dl>
@@ -398,6 +400,8 @@
 	</section>
 </section>
 
+
+<section><h1>Functions as first-class citizens</h1></section>
 <section><h2>Functions as first-class citizens</h2>
 		<section>
 				<p>From its creation back in 1995, JavaScript supports function as <span class="note">first-class</span> citizens (objects)</p>
