@@ -197,7 +197,7 @@ article>h4{
     }
     .iep_syllabus_themes .hours{
         float: right;
-        padding: 0 0 0 1em;
+        padding: 0 0 0 .3em;
         font-weight: normal;
         color: #999;
     }
