@@ -4,5 +4,24 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		// "spellright.parserByClass": {
+		//     "python": {
+		//         "parser": "code"
+		//     }
+		// },
+		// "spellright.spellContextByClass": {
+		// 	// "python": "body comments strings",
+		// 	"html": "comments"
+		// },
+		"spellright.language": [],
+		"spellright.spellContext": "body comments strings",
+		"spellright.notificationClass": "warning",
+		"spellright.ignoreRegExps": [
+			"/<[^>]*?>/",
+			"/<script>[^<]*?<\/script>/i",
+			// "/<script>[^<]*?<\/script>/",
+			// "/<head>[^<]*?<\/head>/i",
+		],
+	}
 }

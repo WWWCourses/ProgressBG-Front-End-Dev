@@ -71,13 +71,13 @@
 </section>
 
 
-<section><h2>CSS Visual Formating Model: the Box Model</h2>
+<section><h2>CSS Visual Formatting Model: the Box Model</h2>
 		<section><h3>Какво е The Box Model</h3>
 				<dl class="fa">
-						<dt>Съществен елемент от Визуалния Модел за Форматиране (Visual Formating Model)– алгоритъма по който браузера визуализира и подрежда елементите от страницата.</dt>
+					<dt>Съществен елемент от Визуалния Модел за Форматиране (Visual Formatting Model)– алгоритъма по който браузера визуализира и подрежда елементите от страницата.</dt>
 						<dt>Всеки елемент от дървото на HTML документа се интерпретира като правоъгълна кутийка.</dt>
 				</dl>
-				<p>Пример: <a href="slides_examples/DocumentVisualFormatingModel_single.html">Visual Formating Model Simplpe Example</a></p>
+				<p>Пример: <a href="slides_examples/DocumentVisualFormattingModel_single.html">Visual Formatting Model Simplpe Example</a></p>
 		</section>
 		<section>
 				<dl class="fa">
@@ -131,41 +131,48 @@
 		</section>
 </section>
 <section><h2>Как да зададем margin и padding?</h2>
-		<section><h4>За всяка една страна, поотделно:</h4><br>
-			<div class="text_left">
-				<dl class="fa">
-					<dt>Вътрешен отстъп (<code class="note">padding</code>):</dt>
-					<dd><code>padding­-top</code> : горен вътрешен отстъп</dd>
-					<dd><code>padding­-right</code> : десен вътрешен отстъп</dd>
-					<dd><code>padding­-bottom</code> : долен вътрешен отстъп</dd>
-					<dd><code>padding­-left</code> : ляв вътрешен отстъп</dd>
-				</dl>
-				<hr>
-				<dl class="fa">
-					<dt>Външен отстъп (<code class="note">margin</code>):</dt>
-					<dd><code>margin-top</code> : горен външен отстъп</dd>
-					<dd><code>margin-right</code> : десен външен отстъп</dd>
-					<dd><code>margin-bottom</code> : долен външен отстъп</dd>
-					<dd><code>margin-left</code> : ляв външен отстъп</dd>
-				</dl>
-			</div>
-		</section>
-		<section><h4>Често използвани обобщени записи:</h4>
-				<dl class="fa">
-						<p class="fontsize_07">Легенда: T - top, R - right, B - bottom, L - left</p>
-						<dt><code>padding: T R B L;</code></dt>
-								<dd>задава стойности за всяка една посока поотделно.</dd>
-								<dd><i>пример</i>: <code>padding: 2em 0 1.5em 1em;</code></dd>
-						<dt><code>padding: TB RL;</code></dt>
-								<dd>задава едновременно стойност за горе и долу, ляво и дясно.</dd>
-								<dd><i>пример</i>: <code>padding: 2em 1em;</code></dd>
-						<dt>padding: TBRL;</dt>
-								<dd>задава едновременно стойност за всички посоки.</dd>
-								<dd><i>пример</i>: <code>padding: 5px;</code></dd>
-				</dl>
-				<br>
-				<p class="fontsize_07"><span class="nb darkred">NB!</span> Тук са посочени само вариантите за padding. При margin записите са аналогични.</p>
-		</section>
+	<section><h4>За всяка една страна, поотделно:</h4><br>
+		<div class="text_left">
+			<dl class="fa">
+				<dt>Вътрешен отстъп (<code class="note">padding</code>):</dt>
+				<dd><code>padding­-top</code> : горен вътрешен отстъп</dd>
+				<dd><code>padding­-right</code> : десен вътрешен отстъп</dd>
+				<dd><code>padding­-bottom</code> : долен вътрешен отстъп</dd>
+				<dd><code>padding­-left</code> : ляв вътрешен отстъп</dd>
+			</dl>
+			<hr>
+			<dl class="fa">
+				<dt>Външен отстъп (<code class="note">margin</code>):</dt>
+				<dd><code>margin-top</code> : горен външен отстъп</dd>
+				<dd><code>margin-right</code> : десен външен отстъп</dd>
+				<dd><code>margin-bottom</code> : долен външен отстъп</dd>
+				<dd><code>margin-left</code> : ляв външен отстъп</dd>
+			</dl>
+		</div>
+	</section>
+	<section><h4>Често използвани обобщени записи:</h4>
+		<dl class="fa">
+				<p class="fontsize_07">Легенда: T - top, R - right, B - bottom, L - left</p>
+				<dt><code>padding: T R B L;</code></dt>
+						<dd>задава стойности за всяка една посока поотделно.</dd>
+						<dd><i>пример</i>: <code>padding: 2em 0 1.5em 1em;</code></dd>
+				<dt><code>padding: TB RL;</code></dt>
+						<dd>задава едновременно стойност за горе и долу, ляво и дясно.</dd>
+						<dd><i>пример</i>: <code>padding: 2em 1em;</code></dd>
+				<dt>padding: TBRL;</dt>
+						<dd>задава едновременно стойност за всички посоки.</dd>
+						<dd><i>пример</i>: <code>padding: 5px;</code></dd>
+		</dl>
+		<br>
+		<p class="fontsize_07"><span class="nb darkred">NB!</span> Тук са посочени само вариантите за padding. При margin записите са аналогични.</p>
+	</section>
+	<section><h3>margin:0 auto</h3>
+		<dl class="fa">
+			<dt>Ако зададем стойности:<br>
+				 <code class="note">margin-left:auto</code> и <code class="note">margin-right:auto</code> <br>
+				 на даден елемент, то той ще бъде хоризонтално центриран спрямо елемента, в който се намира. </dt>
+		</dl>
+	</section>
 </section>
 <section><h2>Блокови, поредови и замествани елементи</h2>
 		<section><h3>Блокови елементи</h3>
