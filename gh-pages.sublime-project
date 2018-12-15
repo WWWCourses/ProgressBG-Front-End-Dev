@@ -1,4 +1,13 @@
 {
+	"build_systems":
+	[
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Anaconda Python Builder",
+			"selector": "source.python",
+			"shell_cmd": "\"python\" -u \"$file\""
+		}
+	],
 	"folders":
 	[
 		{
@@ -7,34 +16,21 @@
 	],
 	"settings":
 	{
-		"spell_check": true,
-		"show_definitions": false,
-		"tab_size": 2,
-		// "font_face": "FreeMono",
-		// "font_face": "Courier 10 Pitch",
-		// "font_face": "GWMonospace",
-		// "font_face": "KacstPen",
-		// "font_face": "Liberation Mono",
-		// "font_face": "MathJax_Size1",
-		"font_face": "Noto Mono",
-		"translate_tabs_to_spaces": false,
-		// Set to true to removing trailing white space on save
-    "trim_trailing_white_space_on_save": true,
-		// "detect_indentation": true,
-		// "color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
-		// "font_size": 13,
-		// "theme": "iep.predawn.sublime-theme",
-		"highlight_line": true,
 		"auto_find_in_selection": true,
-		// Additional spacing at the top of each line, in pixels
-    "line_padding_top": 1,
-    // Additional spacing at the bottom of each line, in pixels
-    "line_padding_bottom": 1,
-    "ignored_packages":
+		"font_face": "Noto Mono",
+		"highlight_line": true,
+		"ignored_packages":
 		[
 			"Vintage",
 			"Anaconda"
 		],
+		"line_padding_bottom": 1,
+		"line_padding_top": 1,
+		"show_definitions": false,
+		"spell_check": true,
+		"tab_size": 2,
+		"translate_tabs_to_spaces": false,
+		"trim_trailing_white_space_on_save": true
 	},
 	"sublime-view-in-browser":
 	{
