@@ -1,40 +1,44 @@
+html{
+	font-size: 10px;
+}
 .bounceArea{
-	width: 20vw;
-	height: 40vh;
+	width: 50vw;
+	height: 80vh;
+	margin: 0 auto;
 	border: 1px solid #666;
+	background: #666;
 }
 .ball{
 	position: relative;
 	top: 0; left: 0;
-	width: 80%;
-	height: 0;
-	padding-top: 80%;
+	width: 10rem;
+	height: 10rem;
 	border-radius: 100%;
-	animation: bounce 1s infinite;
-}
-.red{
-	background: #940000;
+
+	/*set multiple animations, if you want */
+	animation:
+		bounce 3s linear infinite,
+		colorify 0.1s ease-in-out infinite;
 }
 
 @keyframes bounce{
-	0%{
+	0%, 100%{
 		top: 0; left: 0;
-		animation-timing-function: ease-in;
+
 	}
-	20%{
-		top: 20%; left: 0;
-		animation-timing-function: ease-in;
-	}
-	30%{
-		top: 50%; left: 0;
-		animation-timing-function: ease-in;
+	25%, 75%{
+		top: calc(100% - 10rem); left: calc((100% - 10rem)/2);
 	}
 	50%{
-		top: 30%; left: 0;
-		animation-timing-function: ease-in;
+		top: 0%; left: calc(100% - 10rem);
 	}
-	60%{
-		top: 0%; left: 0;
-		animation-timing-function: ease-in;
+}
+
+@keyframes colorify{
+	0%, 100%{
+		background: #00BDFF;
+	}
+	50%{
+		background: #00FFBD;
 	}
 }
