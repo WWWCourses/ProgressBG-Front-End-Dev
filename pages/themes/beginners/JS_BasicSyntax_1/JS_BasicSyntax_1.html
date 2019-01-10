@@ -80,6 +80,8 @@
   </div>
 </section>
 
+
+<section id="ProgramStrucutre"><h1>Структура на програмата</h1></section>
 <section id="ProgramStrucutre"><h2>Структура на програмата</h2>
   <section>
     <dl class="fa">
@@ -138,7 +140,7 @@
   </section>
 </section>
 
-
+<section id="Variables"><h1>Променливи (Variables)</h1></section>
 <section id="Variables"><h2>Променливи (Variables)</h2>
   <section><h3>Какво е променлива в JavaScript?</h3>
     <dl class="fa">
@@ -240,7 +242,8 @@
   </section>
 </section>
 
-<section id="PrimitiveTypes"><h2>Прости типове данни (Primitive types)</h2>
+<section id="PrimitiveTypes"><h1>Прости типове данни (Primitive types)</h1></section>
+<section><h2>Прости типове данни (Primitive types)</h2>
   <section>
     <p>По същество, всяка една компютърна програма касае обработката на данни. Ето защо е изключително важно да се запознаем с типовете данни в JavaScript и операциите които може да извършваме над тях.</p>
   </section>
@@ -362,13 +365,42 @@
       <dt>Разликата между <code>null</code> и <code>undefined</code> ще разгледаме след като се запознаем с обектите в JS.</dt>
     </dl>
   </section>
+  <section><h3>typeof оператор</h3>
+    <dl class="fa">
+      <dt>За да разберем какъв е типът данни на дадена стойност, може да използваме оператора <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code></dt>
+    </dl>
+    <pre><code rel="JS" class="js">
+      console.log( typeof 5 );
+      // number
+
+      console.log( typeof "Ada" );
+      // string
+
+      console.log( typeof true );
+      // boolean
+
+      console.log( typeof undefined );
+      // undefined
+
+      console.log( typeof null );
+      // object
+      // но това е споменатия вече бъг в JS
+
+    </code></pre>
+  </section>
 </section>
 
-<section id="Comments"><h2>Коментари</h2>
-  <a href="https://www.w3schools.com/js/js_comments.asp">JavaScript Comments</a>
+
+<section id="Comments"><h1>Коментари</h1></section>
+<section>
+  <dl class="fa">
+    <dt>Self learning section</dt>
+    <dd><a href="https://www.w3schools.com/js/js_comments.asp">JavaScript Comments</a></dd>
+  </dl>
 </section>
 
-<section id="Operators"><h2>Оператори</h2>
+<section id="Operators"><h1>Оператори</h1></section>
+<section><h2>Оператори</h2>
   <section>
     <p>или какво можем да правим с променливите?</p>
     <a href="http://www.w3schools.com/jsref/jsref_operators.asp">http://www.w3schools.com/jsref/jsref_operators.asp</a>
@@ -376,41 +408,51 @@
   <section><h3>Аритметични оператори (Aritmetic operators)</h3>
     <ul class="fa">
       <li>Събиране: '<code class="note">+</code>'
-        <pre><code>
-          var addition = 2 + 4; // 6
+        <pre><code rel="JS" class="js">
+          console.log(2 + 4); //6
+          console.log(2 + -4); //-2
         </code></pre>
       </li>
       <li>Изваждане: '<code class="note">-</code>'
-        <pre><code>
-          var subtraction = 20 – 4; // 16
+        <pre><code rel="JS" class="js">
+          console.log(20 - 4); //16
+          console.log(20 - -4); //24
         </code></pre>
       </li>
       <li>Умножаване: '<code class="note">*</code>'
-        <pre><code>
-          var multiplication = 2 * 4; // 8
+        <pre><code rel="JS" class="js">
+          console.log(2 * 4); //8
+          console.log(2 * -4); //-8
         </code></pre>
       </li>
       <li>Делене: '<code class="note">/</code>'
-        <pre><code>
-          var div1 = 100 / 5; // 25
-          var div2 =   7 / 4; // 1.75
+        <pre><code rel="JS" class="js">
+          console.log(100 / 5); //20
+          console.log(100 / -5); //-20
+          console.log(7 / 2); //3.5
         </code></pre>
       </li>
     </ul>
   </section>
   <section><h3>Аритметични оператори (Aritmetic operators)</h3>
     <ul class="fa">
-      <li>Делене по Модул: '<code class="note">%</code>'
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()">Делене по Модул (остатък)</a>: '<code class="note">%</code>'
         <p>Връща остатъка от целочислено делене</p>
-        <pre><code>
-          var reminder = 7 % 4; // 3
-          var reminder = 8 % 4; // 0
+        <pre><code rel="JS" class="js">
+          console.log(3%1); //0
+          console.log(3%2); //1
+          console.log(3%3); //0
+          console.log(3%4); //3
         </code></pre>
       </li>
-      <li>Степенуване: '<code class="note">**</code>'
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation_(**)">Степенуване</a>: '<code class="note">**</code>'
         <p class="note">Въвежда се от 2016г. в <b>ES7</b> и работи само с най-новите версии на браузерите </p>
-        <pre><code>
-          var exponent = 2**10; // 1024
+        <pre><code rel="JS" class="js">
+          console.log(2**10); //1024
+        </code></pre>
+        <p>За по-стари браузери използваме Math.power()</p>
+        <pre><code rel="JS" class="js">
+            console.log(Math.pow(2,10)); //1024
         </code></pre>
       </li>
     </ul>
@@ -419,7 +461,7 @@
     <ul class="fa">
 
       <li>Инкрементиране: '<code class="note">++</code>'
-        <pre><code>
+        <pre><code rel="JS" class="js">
           var i = 2;
 
           //postfix increment:
@@ -430,13 +472,13 @@
         </code></pre>
       </li>
       <li>Декрементиране: '<code class="note">--</code>'
-        <pre><code>
+        <pre><code rel="JS" class="js">
           var i = 2;
 
-          //postfix increment:
+          //postfix decrement:
           var j = i--; // j = 2, i = 1
 
-          //prefix increment:
+          //prefix decrement:
           var j = --i; // j = 1, i = 1
         </code></pre>
       </li>
@@ -444,9 +486,13 @@
   </section>
   <section><h3>Increment - examples</h3>
     <pre><code rel="JS" class="js">
-      var i = 1;
-      console.log(i++)
-      // 1
+      var x = 1;
+      console.log(x++); //1
+      console.log(x);   //2
+
+      var y = 1;
+      console.log(++y); //2
+      console.log(y);   //2
     </code></pre>
   </section>
   <section>
@@ -464,8 +510,8 @@
         <pre><code rel="Syntax" class="js">
           LHS = RHS;
         </code></pre>
-        <dd class="note" style="font-size: .8em">LHS: Left Hand Side: трябва да бъде декларирана променлива. В противен случай ще се създаде глобална променлива, което е изключително лоша практика.</dd>
-      <dd class="note" style="font-size: .8em">RHS: Right Hand Side: <strong>израз, който се изчислява</strong> и стойността му се записва в LHS променливата</dd>
+        <dd style="font-size: .8em">LHS: Left Hand Side: трябва да бъде декларирана променлива. В противен случай ще се създаде <span class="note">глобална променлива</span>, което е изключително лоша практика.</dd>
+      <dd style="font-size: .8em">RHS: Right Hand Side: <strong><span class="note">израз</span>, който се изчислява</strong> и стойността му се записва в LHS променливата</dd>
         <pre><code rel="JS" class="js" style="font-size: 1em">
           // декларираме променливите x и y:
           var x, y;
