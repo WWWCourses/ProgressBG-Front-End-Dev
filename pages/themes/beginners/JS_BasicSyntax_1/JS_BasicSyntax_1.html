@@ -501,6 +501,17 @@
       console.log(y);   //2
     </code></pre>
   </section>
+  <section><h3>Increment - examples</h3>
+      <pre><code rel="JS" class="js">
+        var x = 1;
+        var y = 1;
+
+        console.log( x++ + ++y); // 3
+
+        console.log(`x = ${x}`); // x = 2
+        console.log(`y = ${y}`); // y = 2
+      </code></pre>
+  </section>
   <section>
     <p>За по-сложни математически операции, може да използвате методите на вградения в езика <a href="https://www.w3schools.com/js/js_math.asp">Math object</a> </p>
     <pre><code rel="JS" class="js">
@@ -533,6 +544,23 @@
         </code></pre>
       </dt>
     </dl>
+  </section>
+  <section><h3>Оператор за присвояване (Assignment operator)</h3>
+    <dl class="fa">
+      <dt>Операцията "присвояване" връща стойност! И това е стойноста, която ще се запише в LHS променливата</dt>
+      <dt>Поради това, можем да имаме няколко оператора за присвояване в израз:</dt>
+    </dl>
+    <pre><code rel="JS" class="js">
+      // декларираме променливите x и y
+      let x;
+      let y;
+
+      // присвояваме и на двете стойността 1
+      y = x = 1;
+
+      console.log(`x = ${x}`); // x = 1
+      console.log(`y = ${y}`); // y = 1
+    </code></pre>
   </section>
   <section><h3>Оператор за присвояване (Assignment operator)</h3>
     <p style="font-size: 1.2em;">Понятията "LHS" и "RHS" се използват не само в контекста на assignment оператора. Най-общо, когато променлива се използва като "LHS", то  тогава <span class="note">записваме</span> стойност в нея. Когато се използва като "RHS", то тогава <span class="note">четем</span> стойност от нея. </p>
@@ -746,7 +774,7 @@
       if(x%2){
         console.log(`Odd`);
       }else{
-        console.log(`?`);
+        console.log(`Even`);
       }
     </code></pre>
   </section>
@@ -912,7 +940,7 @@
       }
     </code></pre>
     <p>резултата, видим в конзолата, е:</p>
-    <pre><code rel="Console">
+    <pre><code rel="Console" class="bash">
            *
           ***
          *****
@@ -923,7 +951,6 @@
           ***
     </code></pre>
   </section>
-
   <section><h3><code>while</code> statement: синтаксис</h3>
     <pre style="width: 75vw;"><code rel="Syntax">
       while ( condition) {
