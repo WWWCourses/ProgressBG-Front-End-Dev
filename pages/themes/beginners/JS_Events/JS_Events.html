@@ -84,7 +84,7 @@
             <dt>По-същество при всяко взаимодействие на потребителя с елементите се генерира така нареченото "събитие"(<code>DOM Event</code>).</dt>
             <dd>Например: <code>onclick</code>, <code>oncopy</code>, <code>onscroll</code></dd>
             <dt>Ние можем да дефинираме функция (<span class="note">event handler callback</span>), която да се извиква след като даденото събитие настъпи и така да направим нашата страница интерактивна.</dt>
-            <dt><code>DOM Events</code> е "жива" спецификация, като непрекъснато се добавят нови възможности (Touch Events, VR Events и пр.).</dt>
+            <dt><a href="https://www.w3.org/TR/uievents/">DOM Events / UI Events</a> е "жива" спецификация, като непрекъснато се добавят нови възможности (Touch Events, VR Events и пр.).</dt>
         </dl>
     </section>
     <section><h3>Пример - onclick</h3>
@@ -127,7 +127,7 @@
         <dl class="fa">
             <dt>където <strong>eventAttribute</strong> е някой от HTML Event атрибутите, посочени тук: <a href="https://www.w3schools.com/tags/ref_eventattributes.asp">HTML Event Attributes</a></dt>
             <dt>A <strong>JavaScript code</strong> е кодът, който ще се изпълни автоматично при настъпване на даденото събитие</dt>
-            <dt class="note">Този начин за асоцииране на събитие към елемнт е лесен за използване (и подходящ за навлизане в темата), но както ще видим в следващите слайдове,има и доста ограничения, поради това не се препоръчва да се използва в реални приложения. </dt>
+            <dt class="note">Този начин за асоцииране на събитие към елемент е лесен за използване (и подходящ за навлизане в темата), но както ще видим в следващите слайдове има и доста ограничения, поради това не се препоръчва да се използва в реални приложения. </dt>
         </dl>
     </section>
     <section><h3>Пример</h3>
@@ -169,7 +169,7 @@
         </code></pre>
         <dl class="fa">
             <dt>където <strong>eventName</strong> e име на събитие (<span class="note">без "on" префикс</span>)</dt>
-            <dd><a href="https://developer.mozilla.org/en-US/docs/Web/Events">Event reference @MDN</a></dd>
+            <dd><a href="https://www.w3schools.com/jsref/dom_obj_event.asp">DOM Events @w3schools</a></dd>
             <dt><strong>functionDefinition</strong> <span class="note">е дефиниция</span> на функцията (нарича се оше  "callback функция"), която ще се изпълни при настъпване на събитието. Много често се използва анонимна функция.</dt>
             <dt><strong>options</strong> не е задължителен параметър. Чрез него задаваме допълнителни характеристики за самото събитие</dt>
         </dl>
@@ -180,7 +180,16 @@
     </section>
     <section>
         <dl class="fa">
-            <dt>Важно е да се разбере, че функцията (анонимна или не), <span class="note">чиято дефиниция подадаваме като аргумент</span> на метода addEventListener ще се извика от този метод едва при настъпването на събитието!</dt>
+            <dt>Важно е да се разбере, че функцията (анонимна или не), <span class="note">чиято дефиниция поддаваме като аргумент</span> на метода addEventListener ще се извика от този метод едва при настъпването на събитието!</dt>
+            <dt>Честа грешка е ние да извикваме функцията:</dt>
+            <pre><code rel="JS" class="js">
+                var clickHandler = function() {
+                    console.log('click')
+                };
+
+                // тук ще подадем на addEventListener не нашата фунцкция, а резултата от нея (в случая - undefined),
+                document.body.addEventListener( "click", clickHandler() );
+            </code></pre>
         </dl>
     </section>
 </section>
@@ -209,6 +218,8 @@
 <section><h2>References</h2>
     <dl class="fa">
         <dt><a href="https://www.w3schools.com/js/js_htmldom_events.asp">JavaScript HTML DOM Events @w3schools</a></dt>
+        <dt><a href="https://www.w3schools.com/jsref/dom_obj_event.asp">DOM Events @w3schools</a></dt>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/Events">Event reference @MDN</a></dt>
         <dt class="advanced"><a href="https://eloquentjavascript.net/3rd_edition/15_event.html">Handling Events</a> - <span>Chapter 15 from the book "Eloquent JavaScript" by Marijn Haverbeke.</span></dt>
     </dl>
 </section>
