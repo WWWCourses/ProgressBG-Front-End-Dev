@@ -73,9 +73,9 @@
 		<dl class="fa">
 			<dt>Текстови редактори</dt>
 			<dd><a href="https://notepad-plus-plus.org/">Notepad++</a> (Windows)</dd>
-			<dd><a href="https://www.sublimetext.com/">Sublime Text</a> ( Linux/Unix, Windows, Mac OS X )</dd>
+			<dd style="font-size: 1.1em"><a href="https://www.sublimetext.com/"><span class="note">Sublime Text</span></a> ( Linux/Unix, Windows, Mac OS X )</dd>
 			<dd><a href="https://atom.io/">Atom</a> ( Linux/Unix, Windows, Mac OS X )</dd>
-			<dd><a href="https://code.visualstudio.com/">Visual Studio Code</a> ( Linux/Unix, Windows, Mac OS X )</dd>
+			<dd style="font-size: 1.1em"><a href="https://code.visualstudio.com/"><span class="note">Visual Studio Code</span></a> ( Linux/Unix, Windows, Mac OS X )</dd>
 			<dd><a href="http://brackets.io/">Brackets</a> ( Linux/Unix, Windows, Mac OS X )</dd>
 			<dt>WYSIWYG ( What You See Is What You Get) редактори</dt>
 			<dd>Adobe Dreamweaver</dd>
@@ -87,12 +87,20 @@
 </section>
 <section style="font-size: .9em"><h2>Защо избрах Sublime Text?</h2>
 	<dl class="fa">
-		<dt>Мултиплатформен: <span class="note">Linux</span>,<span class="note"> Windows</span>,<span class="note"> Mac OS X</span>.</dt>
+		<dt>Мулти-платформен: <span class="note">Linux</span>,<span class="note"> Windows</span>,<span class="note"> Mac OS X</span>.</dt>
 		<dt>Гъвкав, мощен и <span class="note">изключително бърз</span>!</dt>
 		<dt>Може да се използва за обучение безплатно, <strong>без ограничения във функционалността и времето</strong>.</dt>
 		<dt>Изчерпателна документация: <a href="http://docs.sublimetext.info/en/latest/">Sublime Text Unofficial Documentation</a>.</dt>
 		<dt>Многобройна общност, създаваща непрекъснато множество полезни добавки за най-новите технологии: <a href="https://packagecontrol.io/">Package Control - The Sublime Text package manager</a>.</dt>
 		<dt>Python-базиран, с добре разработен и документиран API позволяващ да добавяте нова функционалност.</dt>
+	</dl>
+</section>
+<section><h2>VSCode</h2>
+	<dl class="fa">
+		<dt>След ъпдейтите през втората половина на 2018, VSCode освен огромно количество features предлага и доста добра стабилност.</dt>
+		<dt>За начинаещи този редактор е също много добър избор</dt>
+		<dt>Без значение дали ще ползвате Sublime Text 3 или VSCode е важно да отделите време за да овладеете инструмента.</dt>
+		<dt>Почти без никакво усилие може да превключите от Sublime Text 3 към VSCode, ако инсталирате разширението: <br> <a href="https://github.com/Microsoft/vscode-sublime-keybindings">vscode-sublime-keybindings</a> от Microsoft</dt>
 	</dl>
 </section>
 
@@ -107,7 +115,7 @@
 	</section>
 	<section><h3>Menu</h3>
 		<dl class="fa">
-			<dt>Основно меню на Sublime Text 3</dt>
+			<dt>Основно меню на Sublime Text 3</dt>
 			<dd>Повечето от опциите в менюто са достъпни и чрез Командната Палитра, което гарантира по-бърз достъп.</dd>
 		</dl>
 	</section>
@@ -177,8 +185,8 @@
 		<p class="note">Всяка от посочените команди е достъпна чрез командната палитра (CTRL+SHIFT+P)</p>
 		<dl class="fa">
 			<dt><code>Package Control: <span class="note">Install</span> Package</code></dt>
-			<dd>Инсталира пакет от <a href="https://packagecontrol.io/browse">основния канал</a> - необходима е интернет връзка.</dd>
-			<dd>Показва списък със всички налични, но неинсталирани пакети, от който можете да избере кой пакет да инсталирате</dd>
+			<dd>Инсталира пакет от <a href="https://packagecontrol.io/browse">основния канал</a> - необходима е Интернет връзка.</dd>
+			<dd>Показва списък със всички налични, но не инсталирани пакети, от който можете да избере кой пакет да инсталирате</dd>
 		</dl>
 	</section>
 	<section><h3>Package Control Commands</h3>
@@ -203,8 +211,8 @@
 	</section>
 </section>
 
-<section><h2>Полезни пакети за Sublime Text 3</h2>
-	<a href="/ProgressBG-Front-End-Dev/pages/readings/beginners/UsefulResources.html#ST3_packages">Полезни пакети за Sublime Text 3</a>
+<section><h2>Полезни пакети за Sublime Text 3</h2>
+	<a href="/ProgressBG-Front-End-Dev/pages/readings/beginners/UsefulResources.html#ST3_packages">Полезни пакети за Sublime Text 3</a>
 </section>
 
 <section><h2>Настройки</h2>
@@ -222,13 +230,13 @@
 	<section><h3>Примерни потребителски настройки</h3>
 		<pre><code rel="JSON">
 			{
-				"font_face": "Courier New",
-				"font_size": 11,
-				"draw_white_space": "all",
-				"rulers": [80],
-				"tab_size": 4,
-				"translate_tabs_to_spaces": true,
-				"show_encoding": true,
+				"font_face": "Courier New",
+				"font_size": 11,
+				"draw_white_space": "all",
+				"rulers": [80],
+				"tab_size": 4,
+				"translate_tabs_to_spaces": true,
+				"show_encoding": true,
 			}
 		</code></pre>
 	</section>
@@ -247,17 +255,16 @@
 		<dl class="fa">
 			<dt>Разбира се, ние можем да променим и да добавим нови комбинации.</dt>
 			<dt>Отново се използват 2 файла (Default и User), достъпни чрез:</dt>
-			<dd>Sublime Text 3 => Preferences => Key Bindings</dd>
+			<dd>Sublime Text 3 => Preferences => Key Bindings</dd>
 			<dt>Детайлна информация: <a href="http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference/key_bindings.html">http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference/key_bindings.html</a></dt>
 		</dl>
 	</section>
 	<section><h3>Пример:</h3>
 		<p>В Sublime Text 3 => Preferences => Key Bindings - User:</p>
-		<!-- TODO: ident do not work here -->
-		<pre><code rel="JSON">
+		<pre style="font-size: .6em; width: 110%;"><code rel="JSON" class="json">
 			[
-				&nbsp;&nbsp;&nbsp;&nbsp;{ "keys": ["ctrl+shift+up"], "command": "select_lines", "args": {"forward": false} },
-				&nbsp;&nbsp;&nbsp;&nbsp;{ "keys": ["ctrl+shift+down"], "command": "select_lines", "args": {"forward": true} },
+				{ "keys": ["ctrl+shift+up"], "command": "select_lines", "args": {"forward": false} },
+				{ "keys": ["ctrl+shift+down"], "command": "select_lines", "args": {"forward": true} },
 			]
 		</code></pre>
 	</section>
