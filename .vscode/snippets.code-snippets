@@ -19,9 +19,35 @@
 		"prefix": "codejs",
 		"body": [
 			"<pre><code rel=\"JS\" class=\"js\">",
-			"	$1",
+			"\t$1",
 			"</code></pre>"
 		],
 		"description": ""
-	}
+	},
+	"codehtml": {
+		"prefix": "codejs",
+		"body": [
+			"<pre><code rel=\"HTML\" class=\"html\">",
+			"\t$1",
+			"</code></pre>"
+		],
+		"description": ""
+	},
+	"codecss": {
+		"prefix": "codejs",
+		"body": [
+			"<pre><code rel=\"CSS\" class=\"css\">",
+			"\t$1",
+			"</code></pre>"
+		],
+		"description": ""
+	},
+	"note": {
+			"scope": "html",
+			"prefix": "note!",
+			"body": [
+				"<span class=\"note\">$1</span>",
+			],
+			"description": "Log output to console"
+		}
 }
