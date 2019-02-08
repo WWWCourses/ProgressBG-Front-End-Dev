@@ -75,6 +75,7 @@
   /*width: 100vmax;*/
 }
 .reveal section div.semioticWrapper img{
+  display: inline-block;
 	height: 2em;
 	margin: 1em 0 0 .5em;
 	border-radius: 10%;

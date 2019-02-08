@@ -19,7 +19,8 @@
 		"spellright.notificationClass": "warning",
 		"spellright.ignoreRegExps": [
 			"/<[^>]*?>/",
-			"/<script>[^<]*?<\/script>/i",
+			"/<script>[^]*?</script>/gm",
+			"/<head>[^]*?</head>/gm",
 			// "/<script>[^<]*?<\/script>/",
 			// "/<head>[^<]*?<\/head>/i",
 		],
