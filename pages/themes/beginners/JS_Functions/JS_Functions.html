@@ -290,13 +290,14 @@
             <dt>Обхват (scope) на една променлива наричаме областта от кода, в която може да достъпим дадената променлива.</dt>
             <dt>В JavaScript различаваме 2 вида scope:</dt>
             <dd><span class="note">global</span></dd>
-            <dd><span class="note">local</span> </dd>
+            <dd><span class="note">local</span></dd>
+            <dd>*ES6 въвежда и <span class="note">block</span> scope (чрез <code>let</code> и <code>const</code>), разгледан в следвашите слайдове.</dd>
         </dl>
     </section>
     <section><h3>Local Scope</h3>
         <dl class="fa" style="font-size: .9em">
             <dt>Тялото на всяка една функция формира <span class="note">local scope.</span></dt>
-            <dt>Всяка променлива, декларирана с var или let, в тялото на една функция се нарича <span class="note">локална</span> и е видима само в тялото на функцията (не може да бъде достъпена извън тялото на функцията)</dt>
+            <dt>Всяка променлива, декларирана с <span class="note">var, let или const</span>, в тялото на една функция се нарича <span class="note">локална</span> и е видима само в тялото на функцията (не може да бъде достъпена извън тялото на функцията)</dt>
         </dl>
         <pre><code rel="JS">
             function f(){
@@ -368,6 +369,23 @@
                 console.log("global firstName: ", firstName);
             </code></pre>
             <p>firstName в тялото на функцията НЕ Е декларирана чрез var и така тя се счита за глобална променлива!</p>
+    </section>
+    <section><h3><code>let/const</code> vs. <code>var</code> scoping</h3>
+        <dl class="fa">
+            <dt>ES6 въвежда в JavaScript и <code class="note">block scope</code> за променливи дефинирани чрез ключовите думи <code class="note">let</code> и <code class="note">const</code></dt>
+            <dd><code>block</code> е всяка част от кода между <code>{</code> и <code>}</code></dd>
+        </dl>
+        <pre><code rel="JS" class="js">
+            {
+              var x = 2;           // x e глобална променлива
+              let y = 4;           // y e видима само в текущия блок
+              const alpha = 2.34;  // alpha e видима само в текущия блок
+            }
+
+            console.log(`x=${x}`);          // x=2
+            console.log(`y=${y}`);          // error: y is not defined
+            console.log(`alpha=${alpha}`);  // error: alpha is not defined
+        </code></pre>   
     </section>
 </section>
 
