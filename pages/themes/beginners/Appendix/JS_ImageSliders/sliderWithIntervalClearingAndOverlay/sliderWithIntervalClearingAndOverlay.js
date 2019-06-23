@@ -1,30 +1,18 @@
-function showOneElementOnly(imgs, i){
-  // first hide all
+function showImage(imgs, i){
+  // first hide all images
   for(let i=0; i<imgs.length; i++){
     imgs[i].style.opacity = "0";
   }
 
-  // now display the one you need
+  // now display the one we need
   let image = imgs[i];
-  if(image.complete){
+
+  if(image.complete){ // if the image is loaded
     image.style.opacity = "1";
     spinner_overlay.style.display = "none";
   }
 }
 
-function setNextElementIndex(arr,n){
-  // here we set the global images index
-  slidesIndex += n;
-
-  if(slidesIndex === -1  || slidesIndex===undefined){
-    slidesIndex = arr.length-1;
-  }
-  if(slidesIndex===arr.length){
-    slidesIndex = 0;
-  }
-
-  console.log(slidesIndex);
-}
 function getNextIndex(arr, increment){
   // here we set the global images index
   slidesIndex += increment;
@@ -53,7 +41,7 @@ function showNextOrPrevImage(event, next) {
   let slidesIndex = getNextIndex(imgs, increment);
 
   console.log(`slidesIndex: ${slidesIndex}`);
-  showOneElementOnly(imgs, slidesIndex);
+  showImage(imgs, slidesIndex);
 }
 
 let spinner_overlay = document.querySelector('.spinner_overlay');
@@ -73,10 +61,9 @@ btnPrev.addEventListener('click', function (event) {
 } );
 
 window.addEventListener('load', function () {
+  // start slide show:
   sliderIntervalId = setInterval(showNextOrPrevImage, 2000, undefined, true);
-})
 
-// start slide show:
-// sliderIntervalId = setInterval(showNextOrPrevImage, 2000, undefined, +1);
-// or if we just want an image to be shown:
-// showNextImage();
+  // or if we just want an image to be shown:
+  // showNextOrPrevImage(undefined, true);
+})
