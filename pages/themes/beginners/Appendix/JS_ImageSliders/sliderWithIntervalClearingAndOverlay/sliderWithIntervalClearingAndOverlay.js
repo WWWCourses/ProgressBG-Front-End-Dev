@@ -1,14 +1,11 @@
 function showOneElementOnly(imgs, i){
   // first hide all
   for(let i=0; i<imgs.length; i++){
-    // imgs[i].style.display = "none";
     imgs[i].style.opacity = "0";
-
   }
 
   // now display the one you need
-  // imgs[i].style.display = "block";
-  let image = img[i];
+  let image = imgs[i];
   if(image.complete){
     image.style.opacity = "1";
     spinner_overlay.style.display = "none";
@@ -25,52 +22,61 @@ function setNextElementIndex(arr,n){
   if(slidesIndex===arr.length){
     slidesIndex = 0;
   }
+
+  console.log(slidesIndex);
+}
+function getNextIndex(arr, increment){
+  // here we set the global images index
+  slidesIndex += increment;
+
+  if(slidesIndex === -1  || slidesIndex===undefined){
+    slidesIndex = arr.length-1;
+  }
+  if(slidesIndex===arr.length){
+    slidesIndex = 0;
+  }
+
+  return slidesIndex;
 }
 
-function showNextImage(event) {
+function showNextOrPrevImage(event, next) {
   // if the function is called from addEventListener event will be a non empyt object.
   // but if the function is called from setInterval, event will be an undefind
+
   // sliderIntervalId will be set, only if the interval was started
   if( event && sliderIntervalId ){
     clearInterval(sliderIntervalId);
     sliderIntervalId = undefined;
   }
-  showOneElementOnly(imgs,slidesIndex);
-  setNextElementIndex(imgs, +1);
-}
 
-function showPrevImage() {
-  // if the function is called from addEventListener event will be a non empyt object.
-  // but if the function is called from setInterval, event will be an undefind
-  // sliderIntervalId will be set, only if the interval was started
-  if( event && sliderIntervalId ){
-    clearInterval(sliderIntervalId);
-    sliderIntervalId = undefined;
-  }
-  showOneElementOnly(imgs,slidesIndex);
-  setNextElementIndex(imgs, -1);
-}
+  let increment = next ? +1 : -1;
+  let slidesIndex = getNextIndex(imgs, increment);
 
-function setTransitionEffect(imgs, time) {
-  for (let i = 0; i < imgs.length; i++) {
-    imgs[i].style.transition = time;
-  }
+  console.log(`slidesIndex: ${slidesIndex}`);
+  showOneElementOnly(imgs, slidesIndex);
 }
 
 let spinner_overlay = document.querySelector('.spinner_overlay');
 let imgs = document.querySelectorAll('.imgWrapper img');
 let btnNext = document.querySelector('.next');
 let btnPrev = document.querySelector('.prev');
+let sliderIntervalId;
 
 let slidesIndex = 0;
-spinner_overlay.style.display = "none";
+
+
+btnNext.addEventListener('click', function (event) {
+  showNextOrPrevImage(event, true)
+} );
+btnPrev.addEventListener('click', function (event) {
+  showNextOrPrevImage(event, false)
+} );
+
+window.addEventListener('load', function () {
+  sliderIntervalId = setInterval(showNextOrPrevImage, 2000, undefined, true);
+})
 
 // start slide show:
-let sliderIntervalId = setInterval(showNextImage, 2000);
-setTransitionEffect(imgs, '2s');
-
+// sliderIntervalId = setInterval(showNextOrPrevImage, 2000, undefined, +1);
 // or if we just want an image to be shown:
 // showNextImage();
-
-btnNext.addEventListener('click', showNextImage );
-btnPrev.addEventListener('click', showPrevImage );
