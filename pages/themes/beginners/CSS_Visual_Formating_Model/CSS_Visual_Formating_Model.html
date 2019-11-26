@@ -125,7 +125,7 @@
 					</ul>
 				</nav>
 			</code></pre>
-		<p>Да се напише CSS, така че списъка с линкове да изглежда така:</p>
+		<p>Да се напише CSS, така че списъка с линкове да изглежда като показания:</p>
 		<a href="images/TASK_horizontal_menu_start.png"><img src="images/TASK_horizontal_menu_start.png" style="height: auto;"></a>
 	</section>
 	<section>
@@ -141,7 +141,28 @@
 	</section>
 	<section><h3>Пример за flex</h3>
 		<iframe scrolling='no' title='horizontal menu with flex' src='//codepen.io/webdesigncourse/embed/ebNZor/?height=300&theme-id=20230&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/ebNZor/'>horizontal menu with flex</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+		</iframe>
+	</section>	
+</section>
+
+<section><h2 class="advanced">Повече за подреждане на inline-block елементи</h2>
+	<section><h3>Когато в елементите има поредово съдържание</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="Inline-block alignment" src="https://codepen.io/webdesigncourse/embed/yLLdjmL?height=300&theme-id=20230&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/yLLdjmL'>Inline-block alignment</a> by Iva Popova
+		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>	
+	<section><h3>Вертикално подравняване на inline-blocks</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="vertical align inline-blocks" src="https://codepen.io/webdesigncourse/embed/oNNrygo?height=300&theme-id=20230&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/oNNrygo'>vertical align inline-blocks</a> by Iva Popova
+		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3>Пример за промяна на base-line</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="base-line of  inline-block" src="https://codepen.io/webdesigncourse/embed/egRBoM?height=300&theme-id=20230&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/egRBoM'>base-line of  inline-block</a> by Iva Popova
+		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
 	</section>
 </section>
 
@@ -165,26 +186,45 @@
 </iframe>
 	</section>
 	<section><h3>Схеми за позициониране</h3>
-		<ul class="fa">
+		<ul class="fa" style="line-height: 1.3em;">
 			<li><strong class="note">static</strong>: Елементите се подреждат по реда на срещането им в HTML структурата. Това е нормалната (default) схема за позициониране. Елемент със зададено свойство: <code>position:static</code> <b>не се счита за позициониран елемент!</b></li>
 			<li><strong class="note">relative</strong>: Елементите се подреждат относително <strong>спрямо нормалната схема</strong> за позициониране и зададените стойности за <code>top</code>, <code>right</code>, <code>bottom</code> и <code>left</code>.</li>
 			<li><em>Елемент със зададено свойство <code>position: relative</code> се нарича релативно <b>позициониран елемент</b>.</em></li>
 		</ul>
 	</section>
+	<section><h3>Пример: Static vs. Relative Position</h3>
+		<iframe height='300' scrolling='no' src='http://codepen.io/webdesigncourse/embed/ORNakg/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/ORNakg/'>Static vs. Relative Position</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+	</section>
 	<section><h3>Схеми за позициониране</h3>
-		<ul class="fa">
+		<ul class="fa" style="line-height: 1.3em;">
 			<li><strong class="note">fixed</strong>: Елементът се <strong>„изважда“ от нормалната схема</strong> и се позиционира <i>относително спрямо прозореца на браузера (viewport)</i>.</li>
 			<li><strong class="note">absolute</strong>: Елементът се <strong>„изважда“ от нормалната схема</strong> и се позиционира относително <i>спрямо най-прекият си предшественик, който е позициониран</i> – т.е. има зададено свойство postion различно от static.</li>
 			<li><em>Елемент със зададено свойство <code>position:fixed</code> или <code>position:absolute</code> се нарича абсолютно <b>позициониран елемент</b>.</em></li>
 		</ul>
 	</section>
-	<section><h3>Схеми за позициониране</h3>
-		<p>Static vs. Relative Position:</p>
-		<iframe height='300' scrolling='no' src='http://codepen.io/webdesigncourse/embed/ORNakg/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/ORNakg/'>Static vs. Relative Position</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
-	</section>
-	<section><h3>Схеми за позициониране</h3>
-		<p>Absolute div in Relative:</p>
+	<section><h3>Пример: фиксиран бутон 'go to top'</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="Scroll to top btn" src="https://codepen.io/webdesigncourse/embed/gqzRvE?height=300&theme-id=20230&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/gqzRvE'>Scroll to top btn</a> by Iva Popova
+		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>	
+	<section><h3>Пример: Absolute div in Relative</h3>		
 		<iframe height='300' scrolling='no' src='http://codepen.io/webdesigncourse/embed/jbJORR/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/jbJORR/'>Absolute in relative</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+	</section>
+</section>
+
+<section><h2>Вертиклано центриране на блокове</h2>
+	<section><h3>How to centre an inline-block in a container</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="Vertical and horizontal centered block in block" src="https://codepen.io/webdesigncourse/embed/ozYbaL?height=300&theme-id=20230&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/ozYbaL'>Vertical and horizontal centered block in block</a> by Iva Popova
+		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3>Center an absolute/relative block in a container</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="Center an absolute/relative block in a container" src="https://codepen.io/webdesigncourse/embed/gwrOoL?height=300&theme-id=20230&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/gwrOoL'>Center an absolute/relative block in a container</a> by Iva Popova
+		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
 	</section>
 </section>
 
@@ -229,14 +269,20 @@
 			<li><b>Полезно четиво:</b> <a href="http://alistapart.com/article/css-floats-101">CSS Floats 101 by Noah Stokes</a> (<a href="http://alistapart.com/">A List Apart</a> article)</li>
 		</ul>
 	</section>
+	<section><h3>Пример за clear</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="grid with floats and clear" src="https://codepen.io/webdesigncourse/embed/qBBzKoo?height=300&theme-id=20230&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/webdesigncourse/pen/qBBzKoo'>grid with floats and clear</a> by Iva Popova
+  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+	</iframe>
+	</section>
 	<section>
 		<p><b>float</b> е често използвано свойство за подреждане на елементите и layout на страниците.</p>
 		<p>NB! При дизайна на layout се предпочита употребата на <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">flexbox</a> (за съвременните браузери)</p>
 	</section>
 </section>
-<section><h2>Примери в codepen</h2>
+<!-- <section><h2>Примери в codepen</h2>
 	<p>Колекция с примери върху темата, качени в <a href="http://codepen.io/collection/AYWrJg/2/">http://codepen.io/collection/AYWrJg/2/</a></p>
-</section>
+</section> -->
 
 <section id="hw"><h2>Задачa за упражнение: OlimpicRings</h2>
 	<section><h3>Демо</h3>
