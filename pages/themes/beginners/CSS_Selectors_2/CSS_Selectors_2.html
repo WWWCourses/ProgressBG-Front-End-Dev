@@ -97,8 +97,9 @@
 	<section><h3>Какво са псевдо-класовете</h3>
 		<dl class="fa">
 			<dt>Определят <span class="note">състояние</span> на елемент.</dt>
-			<dd>Например <span class="code">:hover</span>, определя елемент, когато е посочен от мишката.</dd>
-			<dd><span class="code">:first-child</span> определя елемент, само когато е първият елемент в родителя си.</dd>
+			<dt>Селектират целият елемент (за разлика от pseudo-elemements селекторите), но само когато елементът е в даденото състояние.</dt>
+			<dt>Например <span class="code">:hover</span>, определя елемент, когато е посочен от мишката.</dt>
+			<dt><span class="code">:first-child</span> определя елемент, само когато е първият елемент в родителя си.</dt>
 		</dl>
 	</section>
 	<section><h3>Hyperlinks Pseudo Classes - Пример</h3>
@@ -116,7 +117,7 @@
 			</code></pre>
 		</dl>
 	</section>
-	<section><a href="http://www.w3schools.com/cssref/sel_link.asp">:link</a>
+	<section><h3><a href="http://www.w3schools.com/cssref/sel_link.asp">:link</a></h3>
 		<dl class="fa">
 			<dt>Селектира <span class="note">линк</span>, който не е посетен от дадения браузер.</dt>
 			<dt>Пример:</dt>
@@ -124,10 +125,10 @@
 				a:link{
 					color: green;
 				}
-			</code></pre>
+			</code></pre>			
 		</dl>
 	</section>
-	<section><a href="http://www.w3schools.com/cssref/sel_visited.asp">:visited</a>
+	<section><h3><a href="http://www.w3schools.com/cssref/sel_visited.asp">:visited</a></h3>
 		<dl class="fa">
 			<dt>Селектира <span class="note">линк</span>, който вече е посетен от дадения браузер.</dt>
 			<dt>Пример:</dt>
@@ -138,7 +139,7 @@
 			</code></pre>
 		</dl>
 	</section>
-	<section><a href="http://www.w3schools.com/cssref/sel_visited.asp">:visited</a>
+	<section><h3><a href="http://www.w3schools.com/cssref/sel_visited.asp">:visited</a> - important note</h3>
 		<dl class="fa">
 			<dt>От съображения за сигурността на потребителя, върху посетените линкове могат да се прилагат само някои от CSS свойствата</dt>
 			<dt>Това са: color, background-color, border-color, border-bottom-color, border-left-color, border-right-color, border-top-color, outline-color, column-rule-color, fill and stroke.</dt>
@@ -148,6 +149,7 @@
 	<section><h3><a href="http://www.w3schools.com/cssref/sel_hover.asp">:hover</a></h3>
 		<dl class="fa">
 			<dt>Селектира <span class="note">елемент</span>, когато мишката се намира върху него.</dt>
+			<dd><code>:hover</code> може да се прилага не само върху хиперлинкове, но и всички останали HTML елементи.</dd>
 			<dt>Пример:</dt>
 			<pre><code rel="CSS">
 				a:hover{
@@ -158,17 +160,16 @@
 	</section>
 	<section><h3><a href="http://www.w3schools.com/cssref/sel_hover.asp">:hover</a><em> - кога няма да работи?</em></h3>
 		<dl class="fa">
-			<dt>Редът на прилагане на стилове за линкове <span class="note">има</span> значение.</dt>
-			<dt>За да се приложат правилно свойствата, трябва да подреждате правилата за линкове по следния ред:</dt>
-			<dd>:link , :visited , :hover ,  :active</dd>
-			<dt class="note">:hover трябва да бъде след :link и :visited!</dt>
+			<dt>Редът на записване на стилове за линкове <span class="note">има</span> значение!</dt>
+			<dt>За да се приложат правилно свойствата, трябва да подреждате CSS правилата за линкове, спазвайки следния ред:</dt>
+			<dd class="note" style="font-size: 1.5em;">:link , :visited , :hover ,  :active</dd>			
 		</dl>
 	</section>
-	<section><h3><a href="http://www.w3schools.com/cssref/sel_hover.asp">:hover</a><em> - кога няма да работи?</em></h3>
+	<section><h3><a href="http://www.w3schools.com/cssref/sel_hover.asp">:hover</a><em> - кога няма да работи? - пример</em></h3>
 		<iframe scrolling='no' title='hover not working on <a></a>' src='//codepen.io/webdesigncourse/embed/RyWYYo/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/RyWYYo/'>hover not working on &lt;a&rt;</a></a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
 	</iframe>
 	</section>
-	<section><h3>:hover - примери</h3>
+	<section><h3>:hover и CSS комбинатори- примери</h3>		
 		<iframe  scrolling='no' title='hoverExamples' src='http://codepen.io/webdesigncourse/embed/zpREJa/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;height: 70vh;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/zpREJa/'>hoverExamples</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>
 	</section>
 	<section><h3>:hover - приложение</h3>
@@ -199,24 +200,26 @@
 			</code></pre>
 		</dl>
 	</section>
-	<section><h3><a href="http://www.w3schools.com/cssref/sel_nth-child.asp">:nth-child(x)</a></h3>
-		<dl class="fa">
-			<dt>x може да бъде число, запазена дума или формула: <span class="code">an+b</span></dt>
-			<dt>Когато x е число, се селектира <span class="note">елемент</span>, който e x-то дете, <span class="note">без значение на неговия тип</span>.</dt>
-			<dt>Индексът на децата започва от 1</dt>
-		</dl>
+	<section><h3>:active and tabindex demo</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="active and tabindex demo" src="https://codepen.io/webdesigncourse/embed/qBBeWjV?height=300&theme-id=20230&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/qBBeWjV'>active and tabindex demo</a> by Iva Popova
+		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
 	</section>
+	<section><h3><a href="http://www.w3schools.com/cssref/sel_nth-child.asp">:nth-child(x)</a></h3>
+		<dl class="fa">			
+			<dt>Селектира поредно дете, с индекс x, <span class="note">без значение на неговия тип</span>.</dt>
+			<dt>Индексът на децата започва от 1</dt>
+			<dt>x може да бъде число, запазена дума или формула: <span class="code">an+b</span></dt>
+			<dt>Записът <code>:nth-child(x)</code> - се чете елемент/и (какъвто и да е), който е X-то дете</dt>
+			<dt>Записът <code>selector:nth-child(x)</code> - се чете елемент/и, селектиран от selector, който е X-то дете</dt>
+		</dl>
+	</section>	
 	<section><h3>:nth-child(x) - example</h3>
-		<pre><code rel="CSS">
-				/* селектира първия параграф в даден елемент */
-				p:nth-child(1){
-					color: red;
-				}
-				/* селектира всички нечетни параграфи */
-				p:nth-child(2n+1){
-					color: green;
-				}
-			</code></pre>
+		<iframe height="300" style="width: 100%;" scrolling="no" title=":nth-child(x) - example" src="https://codepen.io/webdesigncourse/embed/WNNVNKE?height=300&theme-id=20230&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/WNNVNKE'>:nth-child(x) - example</a> by Iva Popova
+		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
 	</section>
 	<section><h3><a href="http://www.w3schools.com/cssref/sel_nth-child.asp">:nth-child(an+b)</a></h3>
 		<dl class="fa">
@@ -231,6 +234,18 @@
 				}
 			</code></pre>
 		</dl>
+	</section>	
+	<section><h3>:nth-child(an+b) - example</h3>		
+		<iframe height="300" style="width: 100%;" scrolling="no" title="nth-child(an+b)" src="https://codepen.io/webdesigncourse/embed/BaaXamL?height=300&theme-id=20230&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/BaaXamL'>nth-child(an+b)</a> by Iva Popova
+		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3><code>selector:nth-child(x)</code> vs. <code>:nth-child(x)</code></h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="selector:nth-child(x) vs. :nth-child(x)" src="https://codepen.io/webdesigncourse/embed/PooMwjO?height=300&theme-id=20230&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/PooMwjO'>selector:nth-child(x) vs. :nth-child(x)</a> by Iva Popova
+		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
 	</section>
 	<section><h3><a href="http://www.w3schools.com/cssref/sel_nth-child.asp">:nth-last-child(x)</a></h3>
 		<dl class="fa">
@@ -244,8 +259,14 @@
 			</code></pre>
 		</dl>
 	</section>
-	<section><h3>Self-Learning Section</h3>
+	<section><h3>Self-Learning Section (nth-of-type(an+b)</h3>
 		<p><a href="https://developer.mozilla.org/en/docs/Web/CSS/:nth-of-type">nth-of-type(an+b)</a> at MDN</p>
+	</section>
+	<section><h3>:nth-of-type(an+b)</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title=":nth-of-type(an+b)" src="https://codepen.io/webdesigncourse/embed/Exxqaxz?height=300&theme-id=20230&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/Exxqaxz'>:nth-of-type(an+b)</a> by Iva Popova
+		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
 	</section>
 	<section><h3>Пример 1: nth-child() vs. nth-of-type()</h3>
 		<p data-height="300" data-theme-id="20230" data-slug-hash="PpJggv" data-default-tab="html,result" data-user="webdesigncourse" data-embed-version="2" data-pen-title="nth-child() vs. nth-of-type()" class="codepen">See the Pen <a href="http://codepen.io/webdesigncourse/pen/PpJggv/">nth-child() vs. nth-of-type()</a> by Iva Popova (<a href="http://codepen.io/webdesigncourse">@webdesigncourse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
