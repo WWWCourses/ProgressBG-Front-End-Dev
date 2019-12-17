@@ -669,6 +669,25 @@
       <dt class="note">Забележете, че всички оператори за сравнение винаги връщат Булев тип стойност (true/false)</dt>
     </dl>
   </section>
+  <section><h3>lexicographic ordering</h3>
+    <dl class="fa">
+      <dt>При сравняването на низове, се използва лексикографската им подредба (<a href="https://en.wikipedia.org/wiki/Lexicographical_order">Lexicographical_order @wikipedia</a>), базирана на кодовете на символите от използваната кодова таблица (unicode, по дефоулт).</dt>
+      <dt>При сравняване на низове с различна дължина, по-късият се попълва с "нулеви" символи до достигане на дължината на по-дългия. "Нулевите символи" са с възможно най-малък код.</dt>
+      <dt>Самото сравняване се извършва символ по символ. Ако символите са еднакви, се продължава със следващите символи.</dt>
+    </dl>
+    <pre><code rel="JS" class="js">
+      console.log( "1" < "11"); // true, as "none symbol" code is smaller than "1" symbol code
+      console.log( "2" > "11"); // true, as "2" code is bigger than "1" code 
+      console.log( 'a' > 'A'); // true, as 'a' code is bigger than 'A' code 
+      console.log( "1199" > "12"); // false, as "11">"12" is false
+      console.log( "1" == "12");  // false, as "none symbol" is not == "2"      
+    </code></pre>
+  </section>  
+  <section><h3>References</h3>
+    <dl class="fa">
+      <dt><a href="https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/ch2.md#equalish">Equal...ish @You don't know JS</a></dt>
+    </dl>
+  </section>
   <section><h3>логически оператори (Logical Operators)</h3>
     <dl class="fa">
       <dd><a href="https://www.w3schools.com/js/js_comparisons.asp">JavaScript Comparison and Logical Operators (by w3schools)</a></dd>
