@@ -314,7 +314,7 @@ section.copyright>.license{
   margin: 9em 0 0 0;
 }
 .copyright>.license img, .copyright>.author img{
-    height: .4em;
+    height: 1.2em;
     vertical-align: middle;
     box-shadow: none;
 }
