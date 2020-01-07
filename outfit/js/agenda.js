@@ -36,7 +36,7 @@ function init(){
     attachEvents();
     calcTotalHours();
     calcTotalDays();
-    // hideAllNodes( sub_themes_nodes );
+    hideAllNodes( sub_themes_nodes );
 }
 function attachEvents(){
     // get elements to attach events to
