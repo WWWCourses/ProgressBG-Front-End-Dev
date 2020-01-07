@@ -74,6 +74,9 @@
 	</section>
 	<section>
 		<a href="images/JS_Arrays_Overview.png"><img src="images/JS_Arrays_Overview.png" style=""></a>
+		<pre><code rel="JS" class="js" style="width:85%; margin: 0 auto;">
+			let fruits = ["apple", "banana", "strawberry", "banana", "orange"];
+		</code></pre>
 		<dl class="fa">
 			<dt>Редът на елементите в масива е важен!</dt>
 			<dt>Данните в масива се наричат негови <span class="note">елементи</span>.</dt>
@@ -88,29 +91,29 @@
 		<p>Елементите на масива се изброяват в квадратни скоби '[' и ']' и се разделят със запетайка.</p>
 		<pre><code rel="JS">
 			//  масив ,  чиито   елементи   са   низове :
-			var colors = ["red", "orange", "yellow", "green", "blue"];
+			let colors = ["red", "orange", "yellow", "green", "blue"];
 
 			//  масив ,  чиито   елементи   са   различни   типове :
-			var user= ["Ada", 34, true];
+			let user= ["Ada", 34, true];
 
 			//  празен   масив :
-			var arr= [];
+			let arr= [];
 		</code></pre>
 	</section>
 </section>
 <section><h2>Масиви - дефиниране (Arrays definition)</h2>
 	<section>
 		<pre><code rel="JS">
-			var fruits = ['apple', 'banana', 'strawberry'];
+			let fruits = ['apple', 'banana', 'strawberry'];
 		</code></pre>
-		<a href="images/arrayInRAM_1.png"><img src="images/arrayInRAM_1.png"></a>
+		<a href="images/arrayInRAM_1.png"><img src="images/arrayInRAM_1.png" style="background: #FFF;"></a>
 	</section>
 </section>
 
 <section><h2>Масиви – достъп до елементите (Array indexing)</h2>
 	<section>
 		<dl class="fa">
-			<dt>Даден елемент от масива достъпваме като след името на масива в квадратни скоби поставяме индексът на дадения елемент.</dt>
+			<dt>Даден елемент от масива достъпваме като след <span class="note">името на масива в квадратни скоби поставяме индексът на дадения елемент</span> .</dt>
 		</dl>
 		<pre><code rel="JS">
 			// дефинираме масива fruits:
@@ -122,14 +125,54 @@
 			// достъп до 3-я елемент (запис):
 			fruits[2] = 'orange';
 
+			// принтиране на целия масив:
 			console.log("fruits=", fruits);
 			// fruits=['apple', 'banana', 'orange']
 		</code></pre>
 	</section>
 </section>
+<section><h2>Масиви – достъп до елементите (Array indexing)</h2>
+	<dl class="fa">
+		<dt>Индексът на елемент на масива може да бъде единствено <span class="note">цяло положително число и 0</span>.</dt>
+		<dt>Ако се опитаме да <span class="note">четем</span> от масив с несъществуващ индекс, то JS ще върне <span class="note">undefined</span>
+			<pre><code rel="JS" class="js">
+				let arr = [2,4,6];
+				console.log( arr[4] )
+				// undefined
+			</code></pre>
+		</dt>
+		<dt>Ако се опитаме да <span class="note">пишем</span> в масив с несъществуващ индекс, то елементът ще се запише в посочения индекс, а междинните стойностите ще се попълнат с празни (empty) елементи:
+			<pre><code rel="JS" class="js">
+				let arr = [2,4,6];
+				arr[4] = 8;
+				console.log(arr);
+				// [ 2, 4, 6, <empty>, 8 ]
+			</code></pre>
+		</dt>
+	</dl>
+</section>
 <section><h2>Масива като обект</h2>
 	<section>
-		<p>В JavaScript, масивите са <span class="note">обекти</span> (по-детайлно са разгледани в следващите теми). Но притежават и някои своства, които са характерни само за масиви. Например:</p>
+		<dl class="fa">
+			<dt>В JavaScript <span class="note">масивите са обекти</span> (по-детайлно са разгледани в следващите теми), които притежават някои специфични свойства.
+				<pre><code rel="JS" class="js">
+					let arr = [2,4,6];
+					console.log(typeof(arr));
+					// object
+				</code></pre>
+			</dt>
+			<dt class="advanced">Поради тази причина, ако опитаме да използваме невалидни индекси няма да възникне грешка, а тези индекси ще се интерпретират като пропъртита на обекти
+				<pre><code rel="JS" class="js">
+					let arr = [2,4,6];
+					arr[-1] = 0;   // невалиден индекс (интерпретира се като пропърти)
+					arr['a'] = 10; // невалиден индекс (интерпретира се като пропърти)
+					// [ 2, 4, 6, '-1': 0, a: 10 ]					
+				</code></pre>
+			</dt>
+		</dl>
+	</section>
+	<section>
+		<p>Върху масивите са дефинирани някои специални пропъртита и методи. Например:</p>
 		<pre><code rel="JS">
 			var fruits = ['apple', 'banana', 'strawberry'];
 
@@ -153,56 +196,161 @@
 			// ["apple", "banana", "strawberry"]
 		</code></pre>
 	</section>
-</section>
+	<section><h3>lenght property</h3>
+		<dl class="fa">
+			<dt>Свойството <span class="note">length</span> съдържа броя на елементите на масива.</dt>
+			<dt>То е динамично, и ако се промени, то тази промяна ще рефлектира върху самият масив:
+				<pre><code rel="JS" class="js">
+					let arr = [2,4,6];
+					console.log( arr.length );
 
-<section><h2>Масива като обект</h2>
-	<section>
-		<p>Внимавайте със свойството length, тъй като при негова промяна в определени случаи бихте могли да изтриете елементи от масива:</p>
-		<pre><code rel="JS">
-			if ( fruits.length = 0 ){
-				console.log( fruits )
-			}
-		</code></pre>
-		<p>В примера, вместо сравнение (<code class="note">==</code>) погрешно е използван оператор за присвояване (<code class="note">=</code>), което води до изтриване на всички елементи на масива!</p>
+					// увеличаваме броя на елементите на мсаива
+					arr.length = 5;
+					console.log(arr);
+					// [ 2, 4, 6, <2 empty items> ]
+
+					// изтриваме елементите на масива
+					arr.length = 0;
+					console.log(arr);
+					// []
+				</code></pre>
+			</dt>
+		</dl>
+	</section>
+	<section><h3>lenght property</h3>
+		<dl class="fa">
+			<dt>Чрез length пропъртито lesno можем да достъпи последния елемент на масива, тъй като <span class="note">индекса на последния елемент е равен на броя на елементите минус 1</span>:
+				<pre><code rel="JS" class="js">
+					let arr = [2,4,6];
+					console.log( arr[arr.length - 1]);
+					// 6
+				</code></pre>
+			</dt>
+		</dl>
+	</section>
+	<section><h3>Често срещани грешки (бъгове)</h3>
+		<dl class="fa">
+			<dt>Неправилна проверка за празен масив:
+				<pre><code rel="JS">
+					let arr = [2,4,6];
+					if ( arr.length = 0 ){
+						console.log( "Empty array!")
+					}
+					// но без да желаем сме изтрили всички елементи на масива:
+					console.log( arr );
+					// []
+				</code></pre>
+			</dt>
+			<dd>В примера, вместо сравнение (<code class="note">==</code> или <span class="note">===</span>) погрешно е използван оператор за присвояване (<code class="note">=</code>), което води до изтриване на всички елементи на масива!</dd>	
+			<dt>Правилният код би бил:
+				<pre><code rel="JS" class="js">
+					let arr = [2,4,6];
+					if ( arr.length === 0 ){
+						console.log( "Empty array!")
+					}					
+					console.log( arr );
+					// [2,4,6]
+				</code></pre>
+			</dt>		
+		</dl>			
+	</section>
+	<section><h3>Често срещани грешки (бъгове)</h3>
+		<dl class="fa">
+			<dt>Ако погрешно изпишете length, то JS няма да върне грешка (ще видим защо, като стигнем до обекти), но би било потенциален бъг: 
+				<pre><code rel="JS" class="js">
+					let arr = [2,4,6];
+					if( arr.lenght){
+						console.log(`Non empty array`);
+					}else{
+						console.log(`Empty array`);
+					}
+					// Empty array					
+				</code></pre>
+				<dd>Проблемът тук, е че arr.leng<b>ht</b> връща undefined, вместо желаното от нас arr.leng<b>th</b>, което би върнало 3</dd>
+				<dt>Правилната проверка би била:
+					<pre><code rel="JS" class="js">
+						let arr = [2,4,6];
+						if( arr.length){
+							console.log(`Non empty array`);
+						}else{
+							console.log(`Empty array`);
+						}
+						// Non empty array
+					</code></pre>
+				</dt>
+			</dt>
+		</dl>
 	</section>
 </section>
 
-<section><h2>Примери</h2>
-	<section><h3>обхождане на елементите на масив, последователно</h3>
+<section><h2>Обхождане на елементите на масив (loop over array elements)</h2>
+	<section>
+		<dl class="fa">
+			<dt>Често в практиката се налага да изпълняваме едни и същи действия върху всички елементи на масива.</dt>
+			<dt>За целта може да използваме for(){} цъкъл по индексите на масива:
+				<pre><code rel="JS" class="js">
+					var fruits = ['apple', 'banana', 'strawberry'];
+
+					for (var i = 0; i < fruits.length; i++) {
+						console.log(`Елемент ${i}: ${fruits[i]}`);
+					}	
+					// Елемент 0: apple
+					// Елемент 1: banana
+					// Елемент 2: strawberry
+				</code></pre>
+			</dt>			
+		</dl>
+	</section>
+	<section><h3>Обхождане на елементите на масив в обратен ред</h3>
 		<pre><code rel="JS">
 			var fruits = ['apple', 'banana', 'strawberry'];
 
-			for (var i = 0; i < fruits.length; i++) {
-				console.log(`Елемент ${i}: ${fruits[i]}`);
-			}
-		</code></pre>
-	</section>
-	<section><h3>обхождане на елементите на масив в обратен ред</h3>
-		<pre><code rel="JS">
 			for (var i = fruits.length-1; i >= 0; i--) {
 				console.log(`Елемент ${i}: ${fruits[i]}`);
 			}
+			// Елемент 2: strawberry
+			// Елемент 1: banana
+			// Елемент 0: apple
 		</code></pre>
 	</section>
-	<section><h3>създаване на двумерен масив</h3>
-		<pre><code rel="JS">
+</section>
+<section><h2>"Двумерни" масиви:</h2>
+	<section>
+		<dl class="fa">
+			<dt>В JavaScript не са имплементирани двумерни(или многомерни) масиви, но тъй като елементите на един масив могат да са всеки един тип данни, включително и масиви, то можем да симулираме двумерен масив като <span class="note">масив, чийто елементи са масиви</span>:
+				<pre><code rel="JS" class="js">
+					var matrix = [
+						[ 'а', 'б', 'в' ],
+						[ 'г', 'д', 'е' ],
+						[ 'ж', 'з', 'и' ]
+					];
+					console.log("matrix:", matrix);
+					// matrix: [ [ 'а', 'б', 'в' ], [ 'г', 'д', 'е' ], [ 'ж', 'з', 'и' ] ]
+				</code></pre>				
+			</dt>
+		</dl>
+	</section>	
+	<section><h3>Достъп до елемент от "двумерен масив"</h3>`		
+		<pre><code rel="JS" class="js">
 			var matrix = [
 				[ 'а', 'б', 'в' ],
 				[ 'г', 'д', 'е' ],
 				[ 'ж', 'з', 'и' ]
 			];
-			console.log("matrix:", matrix);
-		</code></pre>
-	</section>
-	<section><h3>достъп до елемент от двумерен масив</h3>
-		<pre><code rel="JS">
-			console.log("row 0, col 2: ", matrix[0][2]);
-			console.log("row 1, col 1: ", matrix[1][1]);
-			console.log("row 2, col 0: ", matrix[2][0]);
+
+			console.log("row 0, col 2: ", matrix[0][2]); // 'в'
+			console.log("row 1, col 1: ", matrix[1][1]); // 'д' 
+			console.log("row 2, col 0: ", matrix[2][0]); // 'ж'
 		</code></pre>
 	</section>
 	<section><h3>обхождане на елементите на двумерен масив (по редове и колони)</h3>
 		<pre><code rel="JS" class="javascript">
+			var matrix = [
+				[ 'а', 'б', 'в' ],
+				[ 'г', 'д', 'е' ],
+				[ 'ж', 'з', 'и' ]
+			];
+
 			var rows = matrix.length;
 			var cols = matrix[0].length;
 
@@ -212,14 +360,25 @@
 					console.log( matrix[i][j] + ',');
 				}
 			}
+			// row: 0
+			// а,
+			// б,
+			// в,
+			// row: 1
+			// г,
+			// д,
+			// е,
+			// row: 2
+			// ж,
+			// з,
+			// и,
 		</code></pre>
 	</section>
 </section>
+
 <section><h2>Примери и задачи в codepen</h2>
 	<p><a href="https://codepen.io/collection/DObLNy/">JS_Loops_and_Arrays codepen колекция</a></p>
 </section>
-
-
 
 <section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
 	 <p>These slides are based on</p>
