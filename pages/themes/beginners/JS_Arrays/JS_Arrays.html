@@ -146,7 +146,7 @@
 				let arr = [2,4,6];
 				arr[4] = 8;
 				console.log(arr);
-				// [ 2, 4, 6, <empty>, 8 ]
+				// [ 2, 4, 6, empty, 8 ]
 			</code></pre>
 		</dt>
 	</dl>
@@ -164,8 +164,11 @@
 			<dt class="advanced">Поради тази причина, ако опитаме да използваме невалидни индекси няма да възникне грешка, а тези индекси ще се интерпретират като пропъртита на обекти
 				<pre><code rel="JS" class="js">
 					let arr = [2,4,6];
+					
 					arr[-1] = 0;   // невалиден индекс (интерпретира се като пропърти)
 					arr['a'] = 10; // невалиден индекс (интерпретира се като пропърти)
+
+					console.log(arr);
 					// [ 2, 4, 6, '-1': 0, a: 10 ]					
 				</code></pre>
 			</dt>
@@ -377,7 +380,27 @@
 </section>
 
 <section><h2>Примери и задачи в codepen</h2>
-	<p><a href="https://codepen.io/collection/DObLNy/">JS_Loops_and_Arrays codepen колекция</a></p>
+	<section><h3></h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="sumArrayElements" src="https://codepen.io/webdesigncourse/embed/owyBrG?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/owyBrG'>sumArrayElements</a> by Iva Popova
+		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3>twoDimensionalArray</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="twoDimensionalArray" src="https://codepen.io/webdesigncourse/embed/awKJEE?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/awKJEE'>twoDimensionalArray</a> by Iva Popova
+		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3>studentsDataAsArrays</h3>
+		<iframe height="326" style="width: 100%;" scrolling="no" title="studentsDataAsArrays" src="https://codepen.io/webdesigncourse/embed/LLgrQm?height=326&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/LLgrQm'>studentsDataAsArrays</a> by Iva Popova
+		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3>JS_Loops_and_Arrays codepen колекция</h3>
+		<p><a href="https://codepen.io/collection/DObLNy/">JS_Loops_and_Arrays codepen колекция</a></p>
+	</section>
 </section>
 
 <section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
