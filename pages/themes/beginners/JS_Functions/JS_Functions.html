@@ -214,7 +214,7 @@
                 console.log( x + y);
             }
 
-            sum(2); // undefined
+            sum(2); // NaN
         </code></pre>
         <pre style="width: 100%; font-size: .5em;"><code rel="JS">
             function sum(x){
@@ -355,7 +355,7 @@
         <p>За JavaScript това са 2 отделни променливи!</p>
     </section>
     <section>
-        <p>Внимавайте за следната възможна грешка:</p>
+        <p>Внимавайте за следният възможен бъг:</p>
             <pre><code rel="JS">
                 var firstName = "Ada";
 
@@ -458,9 +458,10 @@
 <section id="Hoisting"><h2>Variables Hoisting</h2>
     <section>
         <dl class="fa">
-            <dt>Декларирането на променливите в даден scope <span class="note">винаги</span> се изпълнява <span class="note">преди</span> всички изрази, без значение къде във scope се намират декларациите. </dt>
-            <dt>Тоест, декларациите на променливите се "издигат" (hoist) до началото на scope, без значение къде сме ги написали!</dt>
-            <dt>Това поведение на JavaScript е в сила само за <span class="note">декларациите</span> (декларациите НЕ са изрази!). Изразите се изпълняват последователно, така както сме ги написали в кода.</dt>
+            <dt>Декларирането на променливите <span class="note">в даден scope </span> винаги се изпълнява <span class="note">преди</span> всички изрази, без значение къде във scope се намират декларациите. </dt>            
+            <dt>Тоест, декларациите на променливите се "издигат" (hoist) до началото на съответния scope, без значение къде сме ги написали!</dt>
+            <dt>Това поведение на JavaScript е в сила само за <span class="note">декларациите</span> на променливи, зададени с <span class="note">var</span> и <span class="note">function declaration</span>. Изразите се изпълняват последователно, така както сме ги написали в кода.</dt>
+            <dt><span class="note">При декларация на променлива с <b>let</b> или <b>const</b> не се извършва hoisting.</span></dt>
 
         </dl>
     </section>
@@ -509,8 +510,8 @@
 <section><h2 class="advanced">First-class functions</h2>
     <section>
         <dl class="fa">
-            <dt>Свойството на функциите в JavaScript (анонимни или не) - да бъдат използвани като "обикновени" променливи, т.е. да бъдат подавани като параметър на функции или да бъдат връщани като резултат от функция, ги определя като <span class="note">first-class functions</span></dt>
-            <dt>Темата за "first-class functions" се разглежда задълбочено в <a href="http://wwwcourses.github.io../../../../pages/agenda/advanced.html#advancedJS">WebDesign/Front-End Dev - Advanced</a> курса. Но преди да навлезете в тази изключително важна за JavaScript тема е необходимо да усвоите добре основните, разгледани досега.</dt>
+            <dt>Свойството на функциите в JavaScript (анонимни или не) - да бъдат използвани като стойности, т.е. да бъдат записвани в промеливи, да бъдат подавани като аргументи на функции или да бъдат връщани като резултат от функция, ги определя като <span class="note">first-class functions</span></dt>
+            <dt>Темата за "first-class functions" се разглежда задълбочено в <a href="https://progressbg.net/javascript-advanced-with-reactjs/">WebDesign/Front-End Dev - Advanced</a> курса. Но преди да навлезете в тази изключително важна за JavaScript тема е необходимо да усвоите добре основните, разгледани досега.</dt>
         </dl>
     </section>
     <section><h3>Функция като стойност на параметър (callback functions)</h3>
@@ -527,7 +528,7 @@
                 }
 
                 function callback2(){
-                    console.log("I'm the callback1 function!")
+                    console.log("I'm the callback2 function!")
                 }
 
 
@@ -563,12 +564,13 @@
                 return function(){
                     console.log(`I'm the returned function`);
                 }
-            }
-
-            // var bar = foo();
-            // bar();
+            }            
 
             foo()();
+
+            // foo()() е концептуално еквивалентно на:
+            // var bar = foo();
+            // bar();
         </code></pre>
     </section>
     <section id="References"><h3>References</h3>
