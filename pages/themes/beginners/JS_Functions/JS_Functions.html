@@ -105,7 +105,7 @@
             <dd>Нула или повече параметъра разделени със запетая. Кръглите скоби са задължителни дори и ако функцията няма параметри. </dd>
             <dt><code>&lt;тяло на функцията&gt;</code></dt>
             <dd>Изрази, разделени с '<code>;</code>'</dd>
-            <dt class="note">Забележете, че след декларацията на функцията не се слага ';'</dt>
+            <dt>Забележете, че след декларацията на функцията не e необходимо да се слага ';', <b>но не пречи</b>!</dt>
         </dl>
     </section>
     <section><h3>Function Declarations - Примери</h3>
@@ -157,7 +157,7 @@
             <dd>Function <span class="note">call</span>, <span class="note">invocation</span>, <span class="note">execution</span>.</dd>
         </dl>
     </section>
-    <section>
+    <section><h3>Синтаксис</h3>
         <pre><code rel="Syntax">
             name(&lt;списък аргументи&gt;);
         </code></pre>
@@ -166,6 +166,7 @@
             <dd>името на функцията, която желаем да изпълним.</dd>
             <dt>&lt;списък аргументи&gt;</dt>
             <dd>стойности, които автоматично ще се подадат на параметрите.</dd>
+            <dt>Между името на функцията и отварящата скоба '(' не се оставя спейс!</dt>
         </dl>
     </section>
     <section><h3>Пример</h3>
@@ -174,14 +175,17 @@
                 console.log(`Hello ${userName}. Nice to see you.`);
             }
 
-            // едва тук ще се изпълнят действията, дефинирани във фунцкцията:
+            // едва при извикването ще се изпълнят действията, дефинирани във фунцкцията
+
+            // извикаване на функцията greet() с аргумент "Ada"
             greet("Ada");
+            // извикаване на функцията greet() с аргумент "John"
             greet("John");
         </code></pre>
     </section>
     <section><h3>Предаване на аргументи</h3>
         <dl class="fa">
-            <dd>съпоставянето на стойности между параметър и аргумент е в зависимост от последователността на изписване. Тоест - първия параметър приема стойността на първия аргумент, втория параметър - на втория аргумент и т.н</dd>
+            <dd>Съпоставянето (предаването) на стойности между параметър и аргумент е в зависимост от последователността на изписване. Тоест - <span class="note">първия параметър приема стойността на първия аргумент, втория параметър - на втория аргумент и т.н</span></dd>
         </dl>
     </section>
     <section><h3>Предаване на аргументи</h3>
@@ -369,24 +373,88 @@
                 console.log("global firstName: ", firstName);
             </code></pre>
             <p>firstName в тялото на функцията НЕ Е декларирана чрез var и така тя се счита за глобална променлива!</p>
-    </section>
-    <section><h3><code>let/const</code> vs. <code>var</code> scoping</h3>
-        <dl class="fa">
-            <dt>ES6 въвежда в JavaScript и <code class="note">block scope</code> за променливи дефинирани чрез ключовите думи <code class="note">let</code> и <code class="note">const</code></dt>
-            <dd><code>block</code> е всяка част от кода между <code>{</code> и <code>}</code></dd>
-        </dl>
+    </section>    
+</section>
+
+<section data-min="5"><h1>Разлики между <code>let</code>, <code>const</code> и <code>var</code></h1></section>
+<section><h2>Разлики между <code>let</code>, <code>const</code> и <code>var</code></h2>
+  <section><h3><code>let/const</code> vs. <code>var</code>: scoping</h3>
+      <dl class="fa">
+          <dt>ES6 въвежда в JavaScript и <code class="note">block scope</code> за променливи дефинирани чрез ключовите думи <code class="note">let</code> и <code class="note">const</code></dt>
+          <dd><code>block</code> е всяка част от кода между <code>{</code> и <code>}</code></dd>
+      </dl>
+      <pre><code rel="JS" class="js">
+          {
+            var x = 2;           // x e глобална променлива
+            let y = 4;           // y e видима само в текущия блок
+            const alpha = 2.34;  // alpha e видима само в текущия блок
+          }
+
+          console.log(`x=${x}`);          // x=2
+          console.log(`y=${y}`);          // error: y is not defined
+          console.log(`alpha=${alpha}`);  // error: alpha is not defined
+      </code></pre>
+  </section>
+  <section><h3><code>let/const</code> vs. <code>var</code>: scoping - пример</h3>
+    <pre><code rel="JS" class="js">
+        let status = "none",
+            userAge = 32;
+
+        if(userAge>=18){
+            //тук не променяме глобалната променлива status, а създаваме нова променлива видима единствено в този блок
+            let status = "Adult"
+        };
+
+        console.log(`status = ${status}`);
+        // status = none
+    </code></pre>
+  </section>
+  <section><h3><code>let/const</code> vs. <code>var</code>: redeclaring</h3>
+      <dl class="fa">
+          <dt>Друга разлика между <code>let/cont</code> и <code>var</code> е че ако една променлива вече е декларирана, то при повторна декларация (redeclaring) в съшия скоуп чрез <code>let</code> или <code>const</code> ще възникне грешка.</dt>
+          <dt>При редеклариране чрез <code>var</code> нe би възникнала грешка</dt>
+          <dt class="note">Дoбра практика е да предпочитаме използването на <code>let/const</code> за деклариране на променливи, вместо <code>var</code>!</dt>
+      </dl>
+  </section>
+  <section><h3>Особености на <code>const</code></h3>
+    <dl class="fa">
+        <dt>Чрез <code>const</code> създаваме променливи, които не бихме искали да ре-дефинираме по погрешка..</dt>
         <pre><code rel="JS" class="js">
-            {
-              var x = 2;           // x e глобална променлива
-              let y = 4;           // y e видима само в текущия блок
-              const alpha = 2.34;  // alpha e видима само в текущия блок
+            const GOLDEN_RATIO =  1.618;
+            GOLDEN_RATIO = 2; //TypeError: Assignment to constant variable.
+        </code></pre>
+        <dt>Променлива създадена чрез <code>const</code> задължително трябва да бъде инициализирана:</dt>
+        <pre><code rel="JS" class="js">
+            const GOLDEN_RATIO; // SyntaxError: Missing initializer in const declaration
+        </code></pre>        
+    </dl>
+  </section>
+  <section><h3 class="advanced">Особености на <code>const</code></h3>
+    <dl class="fa">
+        <dt><code>const</code> не гарантира създаването на константи в буквалния смисъл. А единствено, че при опит за re-assign ще възнине грешка!</dt>
+        <dt>Ако стойността на <code>const</code> променливата е съставна, т.е обект, то ние <code>можем</code> да променим някое негово пропърти без да възникне грешка</dt>
+        <pre><code rel="JS" class="js">
+            const someArray = [3.14];
+
+            // тук не re-assign-ваме someАrray, а променяме стойност в самия масив
+            someArray[0] = 99;
+            console.log( someArray[0] ); // 99
+
+            const someObject = {
+                "pi": 3.14, 
             }
 
-            console.log(`x=${x}`);          // x=2
-            console.log(`y=${y}`);          // error: y is not defined
-            console.log(`alpha=${alpha}`);  // error: alpha is not defined
+            // тук не re-assign-ваме someObject, а променяме пропърти в самия обект:
+            someObject.pi = 4;
+            console.log( someObject.pi ); // 4
+
+            // тук правим опит за re-assign:
+            someArray = 4;      // TypeError: Assignment to constant variable.
+            someObject = {};    // TypeError: Assignment to constant variable.
         </code></pre>
-    </section>
+    </dl>
+  </section>
+
 </section>
 
 <section><h1>Анонимни функции (Anonymous functions)</h1></section>
@@ -579,10 +647,57 @@
 </section>
 
 
-
+<section data-min="5"><h1>Примери и Задачи</h1></section>
 <section><h2>Примери и Задачи</h2>
-<a href="http://codepen.io/collection/DwWyQw/">codepen колекция с примери и задачи върху темата</a>
+    <section><h3>Function Definitions Examples</h3>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="Function Definitions" src="https://codepen.io/webdesigncourse/embed/LWyPvy?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href='https://codepen.io/webdesigncourse/pen/LWyPvy'>Function Definitions</a> by Iva Popova
+          (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>JS variables shadowing</h3>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="Scope &amp; Shadowing" src="https://codepen.io/webdesigncourse/embed/PpmYMd?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href='https://codepen.io/webdesigncourse/pen/PpmYMd'>Scope &amp; Shadowing</a> by Iva Popova
+          (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>JS variables shadowing</h3>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="JS variables shadowing" src="https://codepen.io/webdesigncourse/embed/vxZjaq?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href='https://codepen.io/webdesigncourse/pen/vxZjaq'>JS variables shadowing</a> by Iva Popova
+          (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>gameBoardDataStructure</h3>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="gameBoardDataStructure" src="https://codepen.io/webdesigncourse/embed/vmydQN?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href='https://codepen.io/webdesigncourse/pen/vmydQN'>gameBoardDataStructure</a> by Iva Popova
+          (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>getHigherScoreIndex</h3>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="HW: Max/Min student score" src="https://codepen.io/webdesigncourse/embed/wRRaej?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href='https://codepen.io/webdesigncourse/pen/wRRaej'>HW: Max/Min student score</a> by Iva Popova
+          (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+      </iframe>
+    </section>
+    <section><h3>SumEven2DimArrayElements</h3>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="HW: SumEvenArrayElements" src="https://codepen.io/webdesigncourse/embed/rPOXBe?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+        See the Pen <a href='https://codepen.io/webdesigncourse/pen/rPOXBe'>HW: SumEvenArrayElements</a> by Iva Popova
+        (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>autoChangeColor</h3>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="autoChangeColor" src="https://codepen.io/webdesigncourse/embed/qmWPdJ?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href='https://codepen.io/webdesigncourse/pen/qmWPdJ'>autoChangeColor</a> by Iva Popova
+          (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+
+
+  <section><h3>Всички примери в codepen:</h3>
+    <a href="http://codepen.io/collection/DwWyQw/">codepen колекция с примери и задачи върху темата</a>
+  </section>
 </section>
+
 
 <section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
      <p>These slides are based on</p>
