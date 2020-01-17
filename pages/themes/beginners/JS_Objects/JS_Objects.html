@@ -74,13 +74,31 @@
 </section>
 
 <section><h2>Въведение</h2>
-    <section>
+    <section><h3>Основни понятия</h3>
         <p class="note newterm bigestFont">Object = {properties + methods}</p><br>
         <dl class="fa">
             <dt><span class="note">Обект:</span>  структура от данни, която обединява в едно цяло данните и действията (функциите), които могат да се извършват върху тях.</dt>
             <dt>Данните в един обект се наричат <span class="note">свойства</span> (<span class="note">properties</span>), а функциите – <span class="note">методи</span> (<span class="note">methods</span>).</dt>
-            <dt>За разлика от масивите, които са <span class="note">посредена</span> структура от данни, то обектите са <span class="note">неподредена</span> структура. Т.е. при обектите не разграничаваме първи, втори и пр. елемент.</dt>
+            <dt>За разлика от масивите, които са <span class="note">подредена</span> структура от данни, то обектите са <span class="note">неподредена</span> структура. Т.е. при обектите не разграничаваме първи, втори и пр. елемент.</dt>
         </dl>
+    </section>
+    <!-- <section><h3>Notes on Class-based OOP vs. prototype-based OOP</h3>
+        <dl class="fa">
+            <dt>JS е prototype-based OOP език и понятия като class </dt>
+        </dl>
+    </section> -->
+    <section><h3>Обект - концептуална диаграма</h3>
+        <a href="images/objectConceptualDiagram.png"><img src="images/objectConceptualDiagram.png"></a>
+        <pre><code rel="JS" class="js">
+            // define student1 object:
+            let student1 = {
+                "firstName" : "Pesho",
+                "surName" : "Petrov",
+                "greet": function() {
+                    console.log(`Hello, I'm ${this.firstName}`);
+                }
+            };
+        </code></pre>
     </section>
     <section>
         <dl class="fa">
