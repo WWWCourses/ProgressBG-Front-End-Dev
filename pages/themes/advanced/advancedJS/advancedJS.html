@@ -178,13 +178,13 @@
 			<p>Brendan Eich on designing JavaScript :)</p>
 			<p> (<span class="note">Watch that first: <a href="https://youtu.be/lJx6cF-H__I">Jonathan Ive explaining the Unibody-Design</a></span>)</p>
 		</section>
-		<section><h3><a href="https://www.ecma-international.org/ecma-262/7.0/">ECMAScript 7 (ES7)/ ECMAScript 2016 (ES2016)</a></h3>
+		<!-- <section><h3><a href="https://www.ecma-international.org/ecma-262/7.0/">ECMAScript 7 (ES7)/ ECMAScript 2016 (ES2016)</a></h3>
 				<dl class="fa">
 						<dt>New Features:</dt>
 						<dd>Array.prototype.includes</dd>
 						<dd>Exponentiation Operator</dd>
 				</dl>
-		</section>
+		</section> -->
 		<section><h3>ES.Next</h3>
 				<p>Refers to next versions of JavaScript</p>
 				<p>Proposals are published in <a href="https://github.com/tc39/proposals">tc39/proposals</a> repo</p>
@@ -245,82 +245,132 @@
 
 <section data-notes="20min"><h1>The object oriented nature of JavaScript: "everything is an object" ?!?</h1></section>
 <section><h2>The object oriented nature of JavaScript: "everything is an object"?!?</h2>
-		<section data-notes="2min"><h3>Data types and structures</h3>
-			<dl class="fa">
-				<dt>Primitive types:</dt>
-					<dd>Boolean</dd>
-					<dd>Null</dd>
-					<dd>Undefined</dd>
-					<dd>Number</dd>
-					<dd>String</dd>
-					<dd>Symbol (new in ECMAScript 6)</dd>
-					<dt>Objects (Reference Data types):</dt>
-					<dd>Objects</dd>
-					<dd>Function</dd>
-					<dd>Indexed collections: Arrays and typed Arrays</dd>
-					<dd>Keyed collections: Maps, Sets, WeakMaps, WeakSets</dd>
-				</dl>
-		</section>
-		<section data-notes="1min" id="prim_types"><h3>Primitive types</h3>
-				<p>Primitive types <span class="note">are not</span> objects!</p>
-				<pre><code rel="JS">
-						console.log(typeof null); // "object" - A BUG, see bellow!
-						console.log(typeof true); // "boolean"
-						console.log(typeof undefined); // "undefined"
-						console.log(typeof 42); // "number"
-						console.log(typeof 'howdy'); // "string"
-						console.log(typeof Symbol()); // "symbol"
-				</code></pre>
-				<p id="a1">the 'typeof null' return "object" due to a bug in the first release in JavaScript <a href="#/refs" class="sup">3</a></p>
-		</section>
-		<section data-notes="2min"><h3>Primitives Boxing</h3>
-				<p>The primitive types <code>boolean</code>, <code>number</code>, <code>string</code> and <code>symbol</code> have corresponding object types (wrappers): <code>Boolean</code>, <code>Number</code>, <code>String</code> and <code>Symbol</code></p>
-				<p>Primitives do not have methods, but can borrow from their corresponding wrapper, when needed.</p>
-		</section>
-		<section data-notes="2min"><h3>Primitives Boxing: Example</h3>
+	<section data-notes="2min"><h3>Data types and structures</h3>
+		<dl class="fa">
+			<dt>Primitive types:</dt>
+			<dd>Boolean</dd>
+			<dd>Null</dd>
+			<dd>Undefined</dd>
+			<dd>Number</dd>
+			<dd>String</dd>
+			<dd>Symbol (new in ECMAScript 6)</dd>
+			<dt>Objects (Reference Data types):</dt>
+			<dd>Objects</dd>
+			<dd>Function</dd>
+			<dd>Indexed collections: Arrays and typed Arrays</dd>
+			<dd>Keyed collections: Maps, Sets, WeakMaps, WeakSets</dd>
+		</dl>
+	</section>
+	<section data-notes="1min" id="prim_types"><h3>Primitive types</h3>
+		<p>Primitive types <span class="note">are not</span> objects!</p>
 		<pre><code rel="JS">
-				console.log( 3.141592653589793.toFixed(4) );
-				//3.1416
-
-				console.log( 'ada byron'.length );
-				//9
-
-				console.log( true.toString() );
-				//"true"
+			console.log(typeof null); // "object" - A BUG, see bellow!
+			console.log(typeof true); // "boolean"
+			console.log(typeof undefined); // "undefined"
+			console.log(typeof 42); // "number"
+			console.log(typeof 'howdy'); // "string"
+			console.log(typeof Symbol()); // "symbol"
 		</code></pre>
-		</section>
-		<section data-notes="1min"><h3>Primitives Immutability</h3>
-				<p>All primitive types are immutable!</p>
-				<pre><code rel="JS">
-						var ada = 'Ada';
-						console.log(ada); // 'Ada'
+		<p id="a1">the 'typeof null' return "object" due to a bug in the first release in JavaScript</p>
+	</section>
+	<section data-notes="2min"><h3>Primitives Boxing</h3>
+		<p>The primitive types <code>boolean</code>, <code>number</code>, <code>string</code> and <code>symbol</code> have corresponding object types (wrappers): <code>Boolean</code>, <code>Number</code>, <code>String</code> and <code>Symbol</code></p>
+		<p>Primitives do not have methods, but can borrow from their corresponding wrapper, when needed.</p>
+	</section>
+	<section data-notes="2min"><h3>Primitives Boxing: Example</h3>
+		<pre><code rel="JS">
+			console.log( 3.141592653589793.toFixed(4) );
+			//3.1416
 
-						ada.surname = 'Byron';
-						console.log(ada.surname); // undefined
-				</code></pre>
-		</section>
-		<section data-notes="2min"><h3>Objects</h3>
-				<dl class="fa">
-						<dt>A collection of properties</dt>
-						<dt>Property values can be values of any type, including other objects</dt>
-						<dt>Properties are identified using key values</dt>
-						<dt>A key value is either a String or a Symbol value.</dt>
-				</dl>
-		</section>
-		<section data-notes="2min"><h3>Objects</h3>
-				<p>Objects are mutable!</p>
-				<pre><code rel="JS">
-						var ada = {};
-						console.log(ada); //Object {}
+			console.log( 'ada byron'.length );
+			//9
 
-						ada.surname = 'Byron';
-						console.log(ada.surname); //Byron
-				</code></pre>
-		</section>
-		<section data-notes="5min"><h3>Functions</h3></section>
-		<section data-notes="2min"><h3>Indexed collections: Arrays and typed Arrays</h3></section>
-		<section data-notes="2min"><h3>Keyed collections: Maps, Sets, WeakMaps, WeakSets</h3></section>
-		<aside class="notes">notes</aside>
+			console.log( true.toString() );
+			//"true"
+		</code></pre>
+	</section>
+	<section data-notes="1min"><h3>Primitives Immutability</h3>
+		<p>All primitive types are immutable!</p>
+		<pre><code rel="JS">
+			var ada = 'Ada';
+			console.log(ada); // 'Ada'
+
+			ada.surname = 'Byron';
+			console.log(ada.surname); // undefined
+		</code></pre>
+	</section>
+	<section data-notes="2min"><h3>Objects</h3>
+		<dl class="fa">
+			<dt>A collection of properties</dt>
+			<dt>Property values can be values of any type, including other objects</dt>
+			<dt>Properties are identified using key values</dt>
+			<dt>A key value is either a String or a Symbol value.</dt>
+		</dl>
+	</section>
+	<section data-notes="2min"><h3>Objects</h3>
+		<p>Objects are mutable!</p>
+		<pre><code rel="JS">
+			var ada = {};
+			console.log(ada); //Object {}
+
+			ada.surname = 'Byron';
+			console.log(ada.surname); //Byron
+		</code></pre>
+	</section>
+	<section data-notes="5min"><h3>Functions</h3>
+		<dl class="fa">
+			<dt>Functions are objects</dt>
+		</dl>
+		<pre><code rel="JS">
+			let foo = function(){
+				console.log(`This is foo!`);
+			}
+
+			foo.id = 1;
+			console.log(`foo.id: ${foo.id}`);
+			// foo.id: 1
+		</code></pre>
+	</section>
+	<section data-notes="2min"><h3>Indexed collections: Arrays and typed Arrays</h3>
+		<dl class="fa">
+			<dt>Arrays are objects</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			let arr = ['a','b','c'];
+			arr.id = 1;
+
+			console.log(`arr.id: ${arr.id}`);
+			// arr.id: 1
+		</code></pre>
+	</section>
+	<section data-notes="2min"><h3>Keyed collections: Maps</h3>
+		<dl class="fa">
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Maps</a> - the Map object holds key-value pairs and <span class="note">remembers the original insertion order</span> of the keys.</dt>			
+		</dl>
+		<pre><code rel="JS" class="js">
+			let fruits = new Map();
+			fruits.set('banana', 1);
+			fruits.set('orange', 2);
+			fruits.set('meat', 4);
+
+			console.dir(fruits);
+			// Map { 'banana' => 1, 'orange' => 2, 'meat' => 4 }
+		</code></pre>
+	</section>
+	<section><h3>Keyed collections: Sets</h3>
+		<dl class="fa">
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">Set</a> - the Set object is a collections of <span class="note">unique values</span>.</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			let arr = ['a','b','c', 'b','a','b','c'];
+
+			let someSet = new Set(arr);
+
+			console.dir(someSet);
+			//Set { 'a', 'b', 'c' }
+		</code></pre>
+	</section>
+	<aside class="notes">notes</aside>
 </section>
 
 
@@ -328,26 +378,26 @@
 <section><h1>Function Declaration vs. <br>Function Expression vs. <br>Function Constructor</h1></section>
 <section><h2>Function Declaration vs. Function Expression vs. Function Constructor</h2>
 	<section><h3>Function declaration</h3>
-			<pre><code rel="JS">
-				function add(x,y){
-					return x+y
-				}
-			</code></pre>
-			<dl class="fa">
-					<dt>Semicolons are <span class="note">not required</span> after function declaration!</dt>
-			</dl>
+		<pre><code rel="JS">
+			function add(x,y){
+				return x+y
+			}
+		</code></pre>
+		<dl class="fa">
+			<dt>Semicolons are <span class="note">not required</span> after function declaration (though they did not hurt.)</dt>
+		</dl>
 	</section>
 	<section><h3>Function expression</h3>
-			<pre><code rel="JS">
-				var add = function(x,y){
-					return x+y
-				};
-			</code></pre>
-			<dl class="fa">
-				<dt>Semicolons <span class="note">are required</span> after function expressions!</dt>
-				<dt>function name can be omitted in function expressions to create anonymous function.</dt>
-				<dt>a <span class="note">function expression can be immediately invoked</span> (i.e. as IIFE)</dt>
-			</dl>
+		<pre><code rel="JS">
+			var add = function(x,y){
+				return x+y
+			};
+		</code></pre>
+		<dl class="fa">
+			<dt>Semicolons <span class="note">are required</span> after function expressions!</dt>
+			<dt>function name can be omitted in function expressions to create anonymous function.</dt>
+			<dt>a <span class="note">function expression can be immediately invoked</span> (i.e. as IIFE)</dt>
+		</dl>
 	</section>
 	<section><h3>Function expression</h3>
 			<pre><code rel="JS">
@@ -369,7 +419,7 @@
 					<dd>Function expressions are <span class="note">not</span>	hoisted</dd>
 			</dl>
 	</section>
-	<section><h3>Why not to use the Function constructor</h3>
+	<!-- <section><h3>Why not to use the Function constructor</h3>
 	<dl class="fa">
 			<dt>Parsing</dt>
 			<dd>Functions defined by <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function constructor</a> are parsed each time the constructor is called.</dd>
@@ -378,7 +428,7 @@
 			<dd>Functions created by the Function constructor do not create closures.</dd>
 			<dd>Functions defined by function expressions and function declarations create closure to their creation context.</dd>
 	</dl>
-	</section>
+	</section> -->
 	<section><h3>Conditional function definition</h3>
 			<p>the strict ES2015 behaviour</p>
 			<pre><code rel="JS">
