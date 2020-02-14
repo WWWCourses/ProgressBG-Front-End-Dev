@@ -75,7 +75,6 @@
 
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~INTRO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
 <section data-notes="10min"><h1>Historical overview in 10 minutes</h1></section>
 <section><h2>Historical overview in 10 minutes (or how the history repeats itself)</h2>
     <section data-notes="3min/total 3"><h3>1995</h3>
@@ -207,7 +206,6 @@
         </aside>
 </section>
 
-
 <section data-min="10"><h1>The difference between JavaScript and other OOP languages</h1></section>
 <section><h2>The difference between JavaScript and other OOP languages</h2>
     <section><h3>Compilation</h3>
@@ -246,7 +244,6 @@
         </dl>
     </section>
 </section>
-
 
 <section data-min="20"><h1>The object oriented nature of JavaScript: "everything is an object"?</h1></section>
 <section><h2>The object oriented nature of JavaScript: "everything is an object"?</h2>
@@ -418,80 +415,114 @@
 		</dl>
 	</section>
 	<section><h3>Function expression</h3>
-			<pre><code rel="JS">
-					var f = function add(x,y){
-							return x+y
-					};
+		<pre><code rel="JS">
+			var f = function add(x,y){
+					return x+y
+			};
 
-					console.log("f(2,3):", f(2,3));		 // f(2,3):5
-					console.log("add(2,3):", add(2,3)); // ReferenceError: add is not defined
-			</code></pre>
-			<dl class="fa">
-					<dt>A function name can be given in function expression. But the function name is scoped to function body! Could be useful for recursion or debugging purposes.</dt>
-			</dl>
+			console.log("f(2,3):", f(2,3));		 // f(2,3):5
+			console.log("add(2,3):", add(2,3)); // ReferenceError: add is not defined
+		</code></pre>
+		<dl class="fa">
+			<dt>A function name can be given in function expression. But the function name is scoped to function body! Could be <span class="note">useful for recursion or debugging purposes</span>.</dt>
+		</dl>
 	</section>
 	<section><h3>Expression vs. declaration</h3>
-			<dl class="fa">
-					<dt><a href="https://developer.mozilla.org/en-US/docs/Glossary/Hoisting">Hoisting</a></dt>
-					<dd>Function declarations are hoisted</dd>
-					<dd>Function expressions are <span class="note">not</span>	hoisted</dd>
-			</dl>
+		<dl class="fa">
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Glossary/Hoisting">Hoisting</a></dt>
+			<dd>Function declarations are hoisted</dd>
+			<dd>Function expressions are <span class="note">not</span>	hoisted</dd>
+		</dl>
 	</section>
-	<!-- <section><h3>Why not to use the Function constructor</h3>
+	<section><h3>Function constructor</h3>
+		<pre><code rel="JS" class="js">
+			const sumLog = new Function('a', 'b', 'console.log(`a + b = ${a+b}`)');
+
+			sumLog(2,4);
+		</code></pre>
+		<dl class="fa">
+			<dt class="note">Do not use this way to create a function (unless you know exactly why you need it)!</dt>
+			<dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function">Function Constructor @MDN</a></dt>
+		</dl>
+	</section>
+	<section><h3>Why not to use the Function constructor</h3>
 	<dl class="fa">
-			<dt>Parsing</dt>
-			<dd>Functions defined by <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function constructor</a> are parsed each time the constructor is called.</dd>
-			<dd>Functions defined by function expressions and function declarations are parsed only once.</dd>
-			<dt>Closure</dt>
-			<dd>Functions created by the Function constructor do not create closures.</dd>
-			<dd>Functions defined by function expressions and function declarations create closure to their creation context.</dd>
+		<dt>Parsing</dt>
+		<dd>Functions defined by <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function constructor</a> are parsed each time the constructor is called.</dd>
+		<dd>Functions defined by function expressions and function declarations are parsed only once.</dd>
+		<dt>Closure</dt>
+		<dd>Functions created by the Function constructor do not create closures.</dd>
+		<dd>Functions defined by function expressions and function declarations create closure to their creation context.</dd>
 	</dl>
-	</section> -->
-	<section><h3>Conditional function definition</h3>
-			<p>the strict ES2015 behaviour</p>
-			<pre><code rel="JS">
-					if (0){
-							function add(x,y){
-									 x+y;
-							};
-					};
-
-					console.log("add:", add); // undefined
-			</code></pre>
-			<p class="note">Not browser compatible! Some older browser would defined the function.</p>
 	</section>
 	<section><h3>Conditional function definition</h3>
-			<p>Safer way:</p>
-			<pre><code rel="JS">
-					var add;
-					if (0){
-							add = function(x,y){
-									 x+y;
-							};
+		<p>the strict ES2015 behaviour</p>
+		<pre><code rel="JS">
+			if (0){
+					function add(x,y){
+							 x+y;
 					};
+			};
 
-					console.log("add:", add);
-			</code></pre>
+			console.log("add:", add); // undefined
+		</code></pre>
+		<p class="note">Not browser compatible! Some older browser would defined the function.</p>
+	</section>
+	<section><h3>Conditional function definition</h3>
+		<p>Safer way:</p>
+		<pre><code rel="JS">
+			var add;
+			if (0){
+					add = function(x,y){
+							 x+y;
+					};
+			};
+
+			console.log("add:", add);
+		</code></pre>
 	</section>
 </section>
 
 <section><h1>Scope</h1></section>
 <section><h2>Scope</h2>
-		<section>
-			<dl class="fa">
-				<dt>The context in which values and expressions are "visible," or can be referenced.</dt>
-				<dt>Scopes can be layered in a hierarchy, so that child scopes have access to parent scopes, but not vice versa.</dt>
-				<dt class="note">Each function in JavaScript creates its own scope!</dt>
-			</dl>
-		</section>
-		<section>
-			<img src="images/Scope1.png">
-			<dl class="fa">
-					<dt>Inner Scope can use the names in Outer Scope</dt>
-					<dt>Outer Scope <span class="note">can not</span> see the names defined in Inner Scope</dt>
-					<dt>If same name is defined in both Scopes, then the Inner Scope name <span class="note">shadows</span> the Outer Scope name</dt>
-			</dl>
-		</section>
+	<section>
+		<dl class="fa">
+			<dt>The context in which values and expressions are "visible," or can be referenced.</dt>
+			<dt>Scopes can be layered in a hierarchy, so that child scopes have access to parent scopes, but not vice versa.</dt>
+			<dt class="note">Each function in JavaScript creates its own scope!</dt>
+		</dl>
+	</section>
+	<section>
+		<img src="images/Scope1.png">
+		<dl class="fa">
+				<dt>Inner Scope can use the names in Outer Scope</dt>
+				<dt>Outer Scope <span class="note">can not</span> see the names defined in Inner Scope</dt>
+				<dt>If same name is defined in both Scopes, then the Inner Scope name <span class="note">shadows</span> the Outer Scope name</dt>
+		</dl>
+	</section>
+	<section><h3>Example</h3>
+		<pre><code rel="JS" class="js">
+			let x = 1, y=1; // x and y in global scope
+
+			function foo(){ 
+				let x = 2, y=2;  // x and y in foo scope
+
+				function bar(){ 
+					let y = 3;  // y in bar scope
+					x = 3; 		// uses x in foo scope 
+				}
+
+				bar();
+				console.log(`x,y in foo: ${x}, ${y}`);
+			}
+
+			foo();
+			console.log(`x in gloabl: ${x}, ${y}`);
+
+			// x,y in foo: 3, 2
+			// x in gloabl: 1, 1
+		</code></pre>
+	</section>
 </section>
 
 <section><h1>Functions as first-class citizens</h1></section>
