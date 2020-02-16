@@ -373,10 +373,11 @@
         </dl>
         <pre><code rel="JS" class="js">
             let arr = ['a','b','c', 'b','a','b','c'];
+            console.dir(arr);
 
-            let someSet = new Set(arr);
-
-            console.dir(someSet);
+            let uniqueValuesSet = new Set(arr);
+            console.dir(uniqueValuesSet);
+            
             //Set { 'a', 'b', 'c' }
         </code></pre>
     </section>
@@ -432,7 +433,10 @@
 			<dt><a href="https://developer.mozilla.org/en-US/docs/Glossary/Hoisting">Hoisting</a></dt>
 			<dd>Function declarations are hoisted</dd>
 			<dd>Function expressions are <span class="note">not</span>	hoisted</dd>
+            <dt class="note">It is a good practise always to declare first the variables (including the functions) first, before using them.</dt>
+            <dd>Following this practise you will not have to wander what is hoisted and what is not.</dd>
 		</dl>
+        
 	</section>
 	<section><h3>Function constructor</h3>
 		<pre><code rel="JS" class="js">
@@ -445,7 +449,7 @@
 			<dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function">Function Constructor @MDN</a></dt>
 		</dl>
 	</section>
-	<section><h3>Why not to use the Function constructor</h3>
+	<!-- <section><h3>Why not to use the Function constructor</h3>
 	<dl class="fa">
 		<dt>Parsing</dt>
 		<dd>Functions defined by <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function constructor</a> are parsed each time the constructor is called.</dd>
@@ -454,7 +458,7 @@
 		<dd>Functions created by the Function constructor do not create closures.</dd>
 		<dd>Functions defined by function expressions and function declarations create closure to their creation context.</dd>
 	</dl>
-	</section>
+	</section> -->
 	<section><h3>Conditional function definition</h3>
 		<p>the strict ES2015 behaviour</p>
 		<pre><code rel="JS">
