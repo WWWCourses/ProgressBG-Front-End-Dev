@@ -198,11 +198,11 @@
 		</section>
 
 		<aside class="notes">
-				<ul>
-						<li><a href="http://kangax.github.io/compat-table/es6/">ECMAScript compatibility table</a></li>
-						<li><a href="https://channel9.msdn.com/Events/MIX/MIX11/EXT13"></a>ECMAScript 5: The New Parts by Doug Crockford</li>
-						<li><a href="http://2ality.com/2016/01/ecmascript-2016.html">The final feature set of ECMAScript 2016 (ES7)</a></li>
-				</ul>
+			<ul>
+				<li><a href="http://kangax.github.io/compat-table/es6/">ECMAScript compatibility table</a></li>
+				<li><a href="https://channel9.msdn.com/Events/MIX/MIX11/EXT13"></a>ECMAScript 5: The New Parts by Doug Crockford</li>
+				<li><a href="http://2ality.com/2016/01/ecmascript-2016.html">The final feature set of ECMAScript 2016 (ES7)</a></li>
+			</ul>
 		</aside>
 </section>
 
@@ -355,7 +355,7 @@
 	</section>
 	<section data-notes="2min"><h3>Keyed collections: Maps</h3>
 		<dl class="fa">
-			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Maps</a> - the Map object holds key-value pairs and <span class="note">remembers the original insertion order</span> of the keys.</dt>           
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Maps</a> - the Map object holds key-value pairs and <span class="note">remembers the original insertion order</span> of the keys.</dt>
 		</dl>
 		<pre><code rel="JS" class="js">
 			let fruits = new Map();
@@ -377,12 +377,12 @@
 
 			let uniqueValuesSet = new Set(arr);
 			console.dir(uniqueValuesSet);
-			
+
 			//Set { 'a', 'b', 'c' }
 		</code></pre>
 	</section>
 	<section data-notes="2min"><h3>Keyed collections: WeakMaps, WeakSets</h3>
-		<dl class="fa">            
+		<dl class="fa">
 			<dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap">WeakMap Object @mdn</a></dt>
 			<dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet">WeaSetp Object @mdn</a></dt>
 		</dl>
@@ -418,7 +418,7 @@
 	<section><h3>Function expression</h3>
 		<pre><code rel="JS">
 			var f = function add(x,y){
-					return x+y
+				return x+y
 			};
 
 			console.log("f(2,3):", f(2,3));		// f(2,3):5
@@ -435,7 +435,7 @@
 			<dd>Function expressions are <span class="note">not</span>	hoisted</dd>
 			<dt class="note">It is a good practise always to declare first the variables (including the functions) first, before using them.</dt>
 			<dd>Following this practise you will not have to wander what is hoisted and what is not.</dd>
-		</dl>		
+		</dl>
 	</section>
 	<section><h3 class="advanced">Function constructor</h3>
 		<pre><code rel="JS" class="js">
@@ -463,7 +463,7 @@
 		<pre><code rel="JS">
 			if (0){
 				function add(x,y){
-						x+y;
+					x+y;
 				};
 			};
 
@@ -507,12 +507,12 @@
 		<pre><code rel="JS" class="js">
 			let x = 1, y=1; // x and y in global scope
 
-			function foo(){ 
+			function foo(){
 				let x = 2, y=2;  // x and y in foo scope
 
-				function bar(){ 
+				function bar(){
 					let y = 3;  // y in bar scope
-					x = 3; 		// uses x in foo scope 
+					x = 3; 		// uses x in foo scope
 				}
 
 				bar();
@@ -554,13 +554,13 @@
 	<section><h3>example - function passed as argument</h3>
 		<pre><code rel="JS" class="js">
 			function callback() {
-			    console.log(`I will be called!`);
+				console.log(`I will be called!`);
 			}
 
 			function caller( f ){
-			    console.log(`This is the CALLER`);
-			    f();
-			}			
+				console.log(`This is the CALLER`);
+				f();
+			}
 
 			caller( callback );
 
@@ -637,13 +637,13 @@
 		<section>
 			<pre><code rel="JS">
 				(function(x,y){
-						console.log( x+y );
+					console.log( x+y );
 				})(2,3);
 			</code></pre>
 			<p>is the same as</p>
 			<pre><code rel="JS">
 				(function(x,y){
-						console.log( x+y );
+					console.log( x+y );
 				}(2,3));
 			</code></pre>
 		</section>
@@ -660,39 +660,41 @@
 					let y = 3;
 
 					// other code
-
 				}
 			</code></pre>
 		</section>
 </section>
 
+<section><h1>Closures</h1></section>
 <section><h2>Closures</h2>
 	<section>
 		<dl class="fa">
-			<dt>Allows a function which is executed outside its lexical scope, to preserve the values of scoped variables</dt>
+			<dt>Allows a function which is executed outside its outer scope, to access the values of these scoped variables.</dt>
+			<dt>In other words, a closure is observed, when an inner function <span class="note">closes over</span> (captures, remembers) the variables from its outer lexical scope when it is called outside that scope.</dt>
+			<dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures">Closures @MDN</a></dt>
 		</dl>
 		<pre><code rel="JS">
 			function outer(){
-					var x = 5;
-					function inner(){
-							console.log(x);
-					}
+				var x = 5;
+				function inner(){
+					console.log(x);
+				}
 
-					return inner;
+				return inner;
 			}
 
 			var f = outer();
 			f(); // f can access the local x !
 		</code></pre>
 	</section>
-	<section><h3>Common problem: "closures in loops"</h3>
+	<section><h3>Common problem - "no closure in loop"</h3>
 		<pre><code rel="JS">
 			var cats = [];
 
 			for (var i = 0; i < 3; i++) {
-					cats[i] = function(){
-							console.log(`Cat ${i} is ready!`);
-					}
+				cats[i] = function(){
+					console.log(`Cat ${i} is ready!`);
+				}
 			}
 
 			cats[0](); //Cat 3 is ready!
@@ -704,33 +706,34 @@
 	</section>
 	<section><h3>"closures in loops" - IIFE solution</h3>
 			<pre><code rel="JS">
-					var cats = [];
+				var cats = [];
 
-					for (var i = 0; i < 3; i++) {
-							(function(i){
-									cats[i] = function(){
-											console.log(`Cat ${i} is ready!`);
-									}
-							})(i)
-					}
+				for (var i = 0; i < 3; i++) {
+					(function(i){
+						cats[i] = function(){
+							console.log(`Cat ${i} is ready!`);
+						}
+					})(i)
+				}
 
-					cats[0](); //Cat 0 is ready!
-					cats[1](); //Cat 1 is ready!
-					cats[2](); //Cat 2 is ready!
+				cats[0](); //Cat 0 is ready!
+				cats[1](); //Cat 1 is ready!
+				cats[2](); //Cat 2 is ready!
 			</code></pre>
+			<p>The value of i - <span class="note">which is a parameter to the IIFE</span>  is preserved in <code>cats[i]</code> functions, when they are called outside the IIFE scope.</p>
 	</section>
 	<section><h3>"closures in loops" - Factory solution</h3>
 			<pre><code rel="JS">
 					var cats = [];
 
 					function catMaker(i){
-							return function(){
-									console.log(`Cat ${i} is ready!`);
-							}
+						return function(){
+							console.log(`Cat ${i} is ready!`);
+						}
 					}
 
 					for (var i = 0; i < 3; i++) {
-							cats[i] = catMaker(i);
+						cats[i] = catMaker(i);
 					}
 
 					cats[0](); //Cat 0 is ready!
@@ -738,40 +741,56 @@
 					cats[2](); //Cat 2 is ready!
 			</code></pre>
 	</section>
-	<section><h3>"closures in loops - timeout Problem"</h3>
-			<pre><code rel="JS">
-					var colors = ["red", "green", "blue"];
+	<section><h3>"closures in loops" - "let" solution</h3>
+		<p>Definitely, this is the simplest solution :) </p>
+		<pre><code rel="JS" class="js">
+			var cats = [];
 
-					for (var i = 0; i < colors.length; i++) {
-							setTimeout(function(){
-									changeBG("box", colors[i]);
-							}, 1000)
-					}
+			for (let i = 0; i < 3; i++) {
+			    cats[i] = function(){
+			        console.log(`Cat ${i} is ready!`);
+			    }
+			}
 
-					function changeBG(id, color){
-							var node = document.getElementById(id);
-							node.style.background = color;
-					}
-			</code></pre>
+			cats[0](); //Cat 0 is ready!
+			cats[1](); //Cat 1 is ready!
+			cats[2](); //Cat 2 is ready!
+		</code></pre>
+	</section>
+	<section><h3>common problem - "timeout problem"</h3>
+		<pre><code rel="JS">
+			var colors = ["red", "green", "blue"];
+
+			for (var i = 0; i < colors.length; i++) {
+				setTimeout(function(){
+					changeBG("box", colors[i]);
+				}, 1000)
+			}
+
+			function changeBG(id, color){
+				var node = document.getElementById(id);
+				node.style.background = color;
+			}
+		</code></pre>
 	</section>
 	<section><h3>"closures in loops - timeout IIFE fix"</h3>
-			<pre><code rel="JS">
-					var colors = ["red", "green", "blue"];
+		<pre><code rel="JS">
+			var colors = ["red", "green", "blue"];
 
-					for (var i = 0; i < colors.length; i++) {
-							(function(i){
-									setTimeout(function(){
-											changeBG("box", colors[i]);
-									}, 1000*i)
-							})(i);
-					}
+			for (var i = 0; i < colors.length; i++) {
+				(function(i){
+					setTimeout(function(){
+						changeBG("box", colors[i]);
+					}, 1000*i)
+				})(i);
+			}
 
-					function changeBG(id, color){
-							var node = document.getElementById(id);
-							node.style.background = color;
-					}
-			</code></pre>
-			<p class="note">setTimeout() is invoked immediately 3 times. The delay is for the inner function. If we pass same delay, they will be invoked simultaneously after the delay. So, we need to change the delay, as well, i.e. <code>i*1000</code></p>
+			function changeBG(id, color){
+					var node = document.getElementById(id);
+					node.style.background = color;
+			}
+		</code></pre>
+		<p class="note">setTimeout() is invoked immediately 3 times. The delay is for the inner function. If we pass same delay, they will be invoked simultaneously after the delay. So, we need to change the delay, as well, i.e. <code>i*1000</code></p>
 	</section>
 	<section><h3>"closures in loops - timeout separate call fix"</h3>
 			<pre><code rel="JS">

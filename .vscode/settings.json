@@ -7,6 +7,15 @@
         "markdown",
         "latex",
         "plaintext",
-        "python"
-    ]
+        "python",
+        "javascript",
+        "html"
+    ],
+    // "spellright.spellContext": "body comments strings",
+    "spellright.spellContextByClass": {
+        "latex": "body",
+        "cpp": "comments",
+        "python": "strings",
+        "javascript": "body comments strings"
+    }
 }
