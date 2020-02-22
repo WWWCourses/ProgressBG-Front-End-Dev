@@ -74,169 +74,247 @@
 </section>
 
 
+
+
+<section data-min="5" id="let_const_var"><h1><code>let</code> and <code>const</code></h1></section>
+<section><h2><code>let</code> and <code>const</code></h2>
+	<p>Read more for <a href="http://wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Functions/JS_Functions.html#/let_const_var">let/const</a> in the Beginners Course Slides</p>
+</section>
+
 <section data-min="5"><h1>The arrow function syntax</h1></section>
 <section><h2>The arrow function syntax</h2>
 		<section><h3>arrow functions</h3>
 			<dl class="fa">
-				<dt>ES6 introduces a new function declaration syntax called <span class="note">arrow notation</span></dt>
+				<dt>ES6 introduces a new function declaration <b>syntax</b> called <span class="note">arrow notation</span></dt>
 				<dt>Synonyms:</dt>
 				<dd>Arrow functions</dd>
 				<dd>Fat arrow functions</dd>
-				<dt>Arrow functions are perfectly suited for Functional Programming constructs, like with map, filter, reduce...</dt>
-				<dd>Check <a href="https://github.com/getify/Functional-Light-JS" title="https://github.com/getify/Functional-Light-JS">Functional-Light-JS Book</a> by <a href="https://github.com/getify">Kyle Simpson</a></dd>
+				<dt>Arrow functions are perfectly suited for Callback functions and Functional Programming constructs, like map, filter, reduce...</dt>
+				<dd><span class="advanced"></span>Check <a href="https://github.com/getify/Functional-Light-JS" title="https://github.com/getify/Functional-Light-JS">Functional-Light-JS Book</a> by <a href="https://github.com/getify">Kyle Simpson</a></dd>
 				<!-- <dt>It is essentially syntactic sugar that reduces the number of times you have to type the word function, as well as the number of curly braces you have to type</dt> -->
 			</dl>
 		</section>
-		<section><h3>Function expression vs arrow syntax:</h3>
+		<section><h3>Function expression vs arrow syntax - demo</h3>
 			<pre><code rel="JS">
-					const pi = 3.14;
+				const pi = 3.14;
 
-					// function expression:
-					let circleAreaExp = function(r){
+				// function declaration with expression:
+				let circleAreaExp = function(r){
 							return r*r*pi;
-					}
+				}
 
-					// arrow function:
-					let circleAreaArr = r=>r*r*pi;
+				// function declaration with arrow syntax:
+				let circleAreaArr = r=>r*r*pi;
+
+				console.log( circleAreaArr(10) );
+				console.log( circleAreaExp(10) );
 			</code></pre>
 		</section>
-		<section><h3>syntax - examples</h3>
+		<section><h3>syntax - full</h3>
 			<pre><code rel="Basic Syntax">
-					(param1, param2, …, paramN) => { statements }
+				(param1, param2, …, paramN) => { statements }
 			</code></pre>
 			<pre><code rel="JS">
-					let circleArea = (r)=>{return r*r*pi};
+				let circleArea = (r)=>{return r*r*pi};
 
-					console.log(`circleArea(2) = ${circleArea(2)}`);
+				console.log(`circleArea(2) = ${circleArea(2)}`);
 			</code></pre>
 		</section>
-		<section><h3>syntax - examples</h3>
+		<section><h3>syntax - single parameter</h3>
 			<dl class="fa">
-					<dt>If the function takes a single argument, you can omit the parentheses</dt>
+				<dt>If the function has only one parameter, you can omit the parentheses</dt>
 			</dl>
 			<pre><code rel="Basic Syntax">
-					singleParam => { statements }
+				singleParam => { statements }
 			</code></pre>
 			<pre><code rel="JS">
-					let circleArea = r=>{return r*r*pi};
+				let circleArea = r=>{return r*r*pi};
 
-					console.log(`circleArea(2) = ${circleArea(2)}`);
+				console.log(`circleArea(2) = ${circleArea(2)}`);
 			</code></pre>
 		</section>
-		<section><h3>syntax - examples</h3>
+		<section><h3>syntax - single expression in body</h3>
 			<dl class="fa">
-					<dt>If the function body is a single expression, you can omit curly braces and the return statement</dt>
+				<dt>If the function body is a single expression, you can <span class="note">omit curly braces and the return statement</span></dt>
 			</dl>
 			<pre><code rel="Basic Syntax">
-					(param1, param2, …, paramN) => expression
+				(param1, param2, …, paramN) => expression
 			</code></pre>
 			<pre><code rel="JS">
-					let circleArea = r=>r*r*pi;
+				let circleArea = r=>r*r*pi;
 
-					console.log(`circleArea(2) = ${circleArea(2)}`);
+				console.log(`circleArea(2) = ${circleArea(2)}`);
+			</code></pre>
+		</section>
+		<section><h3>arrow syntax vs function definition - example</h3>
+			<pre><code rel="JS" class="js">
+				let calculator1 = {
+					'add': (a,b) => a+b,
+					'sub': (a,b) => a-b,
+					'mult': (a,b) => a*b,
+					'div': (a,b) => a/b,
+				}
+
+
+				let calculator2 = {
+					'add': function(a,b){return  a+b},
+					'sub': function(a,b){return  a-b},
+					'mult': function(a,b){return  a*b},
+					'div': function(a,b){return  a/b},
+				}
+
+
+				console.log( calculator1.add(2,3) );
+				console.log( calculator2.add(2,3) );
+
 			</code></pre>
 		</section>
 		<section><h3>lexical arguments</h3>
 			<dl class="fa">
-					<dt>the <code>arguments</code> object in arrow function is reference to the arguments object in the enclosing scope</dt>
+				<dt>the <code>arguments</code> object in arrow function is reference to the arguments object in the enclosing scope</dt>
+				<dt>Remember, that this is not the case with function definition/expression</dt>
 			</dl>
 			<pre><code rel="JS">
-					let logArgs = ()=>{
-							for (var i = 0; i < arguments.length; i++) {
-									console.log(arguments[i]);
-							}
-							console.dir(arguments);
-					}
+				const dirFuncExprArgs = function() {
+					console.dir(arguments);
+				}
 
-					logArgs(1,2,3);
+				let dirArrowArgs = ()=>{
+					console.dir(arguments);
+				}
+
+				dirFuncExprArgs(1,2,3); // [1,2,3]
+				dirArrowArgs(1,2,3);    // error in browsers
+			</code></pre>
+		</section>
+		<section><h3>lexical arguments - example</h3>
+			<pre><code rel="JS" class="js">
+				function foo() {
+					console.log(`arguments in foo:`);
+					console.dir(arguments);
+
+					const bar = () => {
+						console.log(`arguments in bar:`);
+						console.dir(arguments);
+					}
+					bar(4,5,6);
+				}
+
+				foo(1,2,3);
+
+				// arguments in foo:
+				// [Arguments] { '0': 1, '1': 2, '2': 3 }
+				// arguments in bar:
+				// [Arguments] { '0': 1, '1': 2, '2': 3 }
 			</code></pre>
 		</section>
 		<section><h3>lexical "this"</h3>
 			<dl class="fa">
-					<dt>"this" value in arrow functions is <span class="note">lexically scoped</span> in contrast to standard functions, whose "this" value is dynamically scoped.<br>I.e the value of "this" in arrow functions is this same as the value of "this" in the enclosing scope.</dt>
-					<dt>"this" in arrow functions can not be changed with <code>call/apply or bind</code> methods!</dt>
+				<dt>"this" value in arrow functions is <span class="note">lexically scoped</span> in contrast to standard functions, whose "this" value is dynamically scoped.<br>I.e the value of "this" in arrow functions is this same as the value of "this" in the enclosing scope.</dt>
+				<dt>"this" in arrow functions can not be changed with <code>call/apply or bind</code> methods!</dt>
+				<p class="note">the "this" value, as well as the <code>call/apply/bind</code> methods are discussed in further topics.</p>
 			</dl>
 		</section>
 		<section><h3>lexical "this" - example</h3>
 			<pre><code rel="JS">
-					lexicalThis = this;
+				lexicalThis = this;
 
-					var obj = {
-							'exp': function(){
-									console.log(this === lexicalThis);
-							},
-							'arr': ()=>{console.log(this === lexicalThis)}
-					}
+				var obj = {
+					'exp': function(){
+						console.log(this === lexicalThis);
+					},
+					'arr': ()=>{console.log(this === lexicalThis)}
+				}
 
-					obj.exp(); // false
-					obj.arr(); // true
+				obj.exp(); // false
+				obj.arr(); // true
 			</code></pre>
 		</section>
-		<section><h3>loose binding</h3>
-			<pre><code rel="JS">
-					const f = x => (x % 2) === 0 ? x : 0;
-					console.log(f(6));
+		<section><h3>lexical "this" - example</h3>
+			<pre><code rel="JS" class="js">
+				let user = {
+					'userName': 'Ada Byron',
+					'greet': function () {
+						console.log(`Hello, I'm ${this.userName}`);
+					},
+					'greetArr':  () =>  console.log(`Hello, I'm ${this.userName}`)
+				}
+
+				user.greet();
+				user.greetArr();
+
+				// Hello, I'm Ada Byron
+				// Hello, I'm undefined
 			</code></pre>
+		</section>
+		<section><h3 class="advanced">loose binding</h3>
 			<pre><code rel="JS">
-					let cb;
+				let cb;
 
-					cb = cb || function() {}; // ok
+				cb = cb || function() {}; // ok
 
-					cb = cb || () => {};
-					// SyntaxError: invalid arrow-function arguments
+				cb = cb || () => {};
+				// SyntaxError: invalid arrow-function arguments
 
-					cb = cb || (() => {});		// ok
+				cb = cb || (() => {});		// ok
 			</code></pre>
+			<!-- <pre><code rel="JS">
+				// here there is no problem
+				const oddOrEven = x => (x % 2) === 0 ? 'even' : 'odd';
+
+				console.log( oddOrEven(6) );
+				console.log( oddOrEven(5) );
+			</code></pre> -->
 		</section>
 		<section><h3>Notes</h3>
 			<dl class="fa">
-					<dt class="note">Arrow functions are always anonymous!</dt>
-					<dt>They are perfect for callbacks</dt>
-					<dt>Arrow functions cannot be used as constructors and will throw an error when used with new</dt>
-					<dt>Because of their lexical binding, no need to add <code>this.handleClick = this.handleClick.bind(this)</code> in the constructor.</dt>
+				<dt class="note">Arrow functions are always anonymous!</dt>
+				<dt>They are perfect for callbacks</dt>
+				<dt>Arrow functions cannot be used as constructors and will throw an error when used with new</dt>
+				<dt>Because of their lexical binding, no need to add <code>this.handleClick = this.handleClick.bind(this)</code> in the constructor.</dt>
 			</dl>
 		</section>
 </section>
 
 <section data-min="5"><h1>Default parameter values</h1></section>
 <section><h2>Default parameter values</h2>
-		<section><h3>Before ES6</h3>
-				<pre><code rel="JS">
-						function f(x, y, z){
-								var x = x || 1;
-								var y = y || 2;
-								var z = z || 3;
+	<section><h3>Before ES6</h3>
+		<pre><code rel="JS">
+			function f(x, y, z){
+				var x = x || 1;
+				var y = y || 2;
+				var z = z || 3;
 
-								console.log(x, y, z); //6,7,3
-						}
-						f(6, 7);
-				</code></pre>
-		</section>
-		<section><h3>After ES6</h3>
-				<pre><code rel="JS">
-						function f(x=1, y=2, z=3){
-								console.log(x, y, z); //6,7,3
-						}
-						f(6, 7);
-				</code></pre>
-		</section>
+				console.log(x, y, z); //6,7,3
+			}
+			f(6, 7);
+		</code></pre>
+	</section>
+	<section><h3>After ES6</h3>
+		<pre><code rel="JS">
+			function f(x=1, y=2, z=3){
+				console.log(x, y, z); //6,7,3
+			}
+			f(6, 7);
+		</code></pre>
+	</section>
 </section>
 
 <section data-min="5"><h1>The spread operator</h1></section>
 <section><h2>The spread operator</h2>
 	<section>
-		<pre><code rel="Syntax-Function call">
-				myFunction(...iterableObj);
+		<pre><code rel="Syntax - in Function call">
+			myFunction(...iterableObj);
 		</code></pre>
-		<pre><code rel="Syntax-Arrays">
-				[...iterableObj, 4, 5, 6];
+		<pre><code rel="Syntax - in Array literal">
+			[...iterableObj, 4, 5, 6];
 		</code></pre>
 		<dl class="fa">
-				<dt>Converts an iterable object (for now, you can simply think of it as of array) into a list of values</dt>
-				<dt><span class="advanced">Iterable objects are those which prototype implements an <code>@@iterator</code> method (<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Iteration_protocols">more on MDN...</a>)</span></dt>
+			<dt>Converts an iterable object (for now, you can simply think of it as an JS array or the DOM ) into a list of values</dt>
+			<dt><span class="advanced">Iterable objects are those which prototype implements an <code>@@iterator</code> method (<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Iteration_protocols">more on MDN...</a>)</span></dt>
 		</dl>
 	</section>
-	<section><h3>Example</h3>
+	<section><h3>spread operator in function call - example</h3>
 		<pre><code rel="JS" class="js">
 			function foo(a,b,c){
 				console.log(`a=${a}`)
@@ -252,25 +330,36 @@
 			//c=3
 		</code></pre>
 	</section>
+	<section><h3>spread operator in array literal - example</h3>
+		<pre><code rel="JS" class="js">
+			let arr1 = [1,2,3];
+			let arr2 = [4,5];
+
+			let arrNew = [ ...arr1, ...arr2];
+
+			console.log( arrNew );
+			// [ 1, 2, 3, 4, 5 ]
+		</code></pre>
+	</section>
 </section>
 
 <section data-min="5"><h1>The rest parameter</h1></section>
 <section><h2>The rest parameter</h2>
 	<section>
-			<dl class="fa">
-					<dt>The last parameter of a function prefixed with " ... " is called as <span class="note">a rest parameter</span></dt>
-					<dt>replaces the <code>arguments</code> object</dt>
-					<dt>In contrast with <code>arguments</code> object, the <code>...rest</code> parameter is an array type</dt>
-			</dl>
+		<dl class="fa">
+			<dt>The last parameter of a function prefixed with " ... " is called as <span class="note">a rest parameter</span></dt>
+			<dt>replaces the <code>arguments</code> object</dt>
+			<dt>In contrast with <code>arguments</code> object, the <code>...rest</code> parameter is an array type</dt>
+		</dl>
 	</section>
-	<section>
-			<pre><code rel="JS">
-					function f(a, b, ...args){
-							console.log(args); //"3, 4, 5"
-					}
+	<section><h3>example</h3>
+		<pre><code rel="JS">
+			function f(a, b, ...args){
+				console.log(args); //"3, 4, 5"
+			}
 
-					f(1, 2, 3, 4, 5);
-			</code></pre>
+			f(1, 2, 3, 4, 5);
+		</code></pre>
 	</section>
 </section>
 

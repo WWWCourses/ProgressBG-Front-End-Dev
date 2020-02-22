@@ -24,5 +24,6 @@
 			// "/<script>[^<]*?<\/script>/",
 			// "/<head>[^<]*?<\/head>/i",
 		],
+		"editor.fontSize": 20,
 	}
 }
