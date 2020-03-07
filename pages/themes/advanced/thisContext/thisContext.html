@@ -74,25 +74,32 @@
 	</section>
 </section>
 
-
+<section><h1>the "this" in global context (non-function context)</h1></section>
 <section><h2>the "this" in global context (non-function context)</h2>
-    <dl class="fa">
-            <dt><code class="note">this ≅ global object</code></dt>
-            <dd>in Browsers: <code class="note">Window</code></dd>
-            <dd>in Node:<code class="note">global</code></dd>
-            <dd>Note, that in nodejs, the top-level scope is not the global scope. Ref: <a href="https://nodejs.org/api/globals.html#globals_global">nodejs#globals_global</a>. Each JS file is treated as a module.</dd>
-    </dl>
+    <section><h3></h3>
+        <dl class="fa">
+                <dt><code class="note">this ≅ global object</code></dt>
+                <dd>in Browsers: <code class="note">Window</code></dd>
+                <dd>in Node:<code class="note">global</code></dd>
+                <dd>Note, that in nodejs, the top-level scope is not the global scope. Ref: <a href="https://nodejs.org/api/globals.html#globals_global">nodejs#globals_global</a>. Each JS file is treated as a module.</dd>
+        </dl>
+    </section>
 </section>
 
+
+
+<section><h1>the "this" in <span class="note">function call</span> context</h1></section>
 <section><h2>the "this" in <span class="note">function call</span> context</h2>
-    <dl class="fa">
-        <dt><code class="note">this</code> depends on <b>how</b> a function is invoked!</dt>
-        <dt>different ways of function invocation:</dt>
-        <dd>as a <strong>function</strong></dd>
-        <dd>as a <strong>method</strong></dd>
-        <dd>as a <strong>constructor</strong></dd>
-        <dd>with <span class="code">apply</span> or <span class="code">call</span> or <span class="code">bind</span> </dd>
-    </dl>
+    <section>
+        <dl class="fa">
+            <dt><code class="note">this</code> depends on <b>how</b> a function is invoked!</dt>
+            <dt>different ways of function invocation:</dt>
+            <dd>as a <strong>function</strong></dd>
+            <dd>as a <strong>method</strong></dd>
+            <dd>as a <strong>constructor</strong></dd>
+            <dd>with <span class="code">apply</span> or <span class="code">call</span> or <span class="code">bind</span> </dd>
+        </dl>
+    </section>
 </section>
 
 <section><h2>Invoke as a function</h2>
@@ -144,6 +151,33 @@
             // this = [object Object]
         </code></pre>
    </section>
+</section>
+
+<section><h2 class="advanced">In static (class) methods</h2>
+    <section>
+        <dl class="fa">
+            <dt>In static methods, <span class="note">this</span> refers to the class itself. Not to the object being created.</dt>
+            <dt>Note, that you can not invoke a static method from an object.</dt>
+            <dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static">Classes/static @mdn</a></dt>
+        </dl>
+    </section>
+    <section><h3>Example</h3>
+        <pre><code rel="JS">
+            class A{
+                method1(){
+                    console.log(`This in method: ${this}`);
+                }
+                static staticMethod(){
+                    console.log(`This in static method: ${this}`);
+                }
+            }
+
+            let obj = new A();
+
+            obj.method1()
+            A.staticMethod()
+        </code></pre>
+    </section>
 </section>
 
 <section><h2>Invoke as a constructor</h2>
@@ -258,6 +292,8 @@
         </code></pre>
     </section>
 </section>
+
+
 
 
 

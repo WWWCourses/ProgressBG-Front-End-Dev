@@ -27,6 +27,11 @@
 			f();
 		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
 		},
+		'IIFE':function(){
+			(function(){
+				console.log("This in IIFE", this);
+			})();
+		},
 		'asFunctionThoughLookingAsMethod': function(){
 		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
 			var obj = {
@@ -36,8 +41,8 @@
 			};
 
 			var bar = obj.foo;
-			obj.foo();
-			bar();
+			obj.foo(); // this is a method call
+			bar(); //this is a "normal" function call
 		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
 		},
 		'asMethod': function(){
@@ -55,11 +60,11 @@
 		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
 			function Constructor(id){
 				this.id = id;
-				console.log(`this = ${this}`);
+				console.log(`this in Constructor = ${this}`);
 
 				this.sayHello = function(){
 					console.log(`Oh, hello dear. I'm obj ${id}`);
-					console.log(`this = ${this}`);
+					console.log(`this in method = ${this}`);
 				}
 			};
 
@@ -154,10 +159,8 @@
 				this.age = age;
 			}
 
-			mariaNewRecord = ["Maria Ivanova", 23];
-
 			console.log("maria before", maria);
-			update.apply(maria, mariaNewRecord );
+			update.call(maria, "Maria Ivanova", 23 );
 			console.log("maria after", maria);
 		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
 		},
@@ -181,7 +184,13 @@
 		},
 	}
 
-	examples.asConstructorPitfallSolution();
+	// examples.asConstructorPitfallSolution();
+
+	for (const key in examples) {
+		if (examples.hasOwnProperty(key)) {
+			examples[key]();
+		}
+	}
 </script>
 </body>
 </html>
