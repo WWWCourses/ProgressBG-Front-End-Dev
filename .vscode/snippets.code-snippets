@@ -25,7 +25,7 @@
 		"description": ""
 	},
 	"codehtml": {
-		"prefix": "codejs",
+		"prefix": "codeHTML",
 		"body": [
 			"<pre><code rel=\"HTML\" class=\"html\">",
 			"\t$1",
@@ -43,11 +43,21 @@
 		"description": ""
 	},
 	"note": {
-			"scope": "html",
-			"prefix": "note!",
-			"body": [
-				"<span class=\"note\">$1</span>",
-			],
-			"description": "Log output to console"
-		}
+		"scope": "html",
+		"prefix": "note!",
+		"body": [
+			"<span class=\"note\">$1</span>",
+		],
+		"description": "Log output to console"
+	},
+	"dlfa": {
+		"scope": "html",
+		"prefix": "dlfa!",
+		"body": [
+			"<dl class=\"fa\">",
+			"\t<dt>$1</dt>",
+			"</dl>"
+		],
+		"description": "Log output to console"
+	}
 }

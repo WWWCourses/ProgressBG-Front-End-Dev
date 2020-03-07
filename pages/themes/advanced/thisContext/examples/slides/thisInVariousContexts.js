@@ -1,4 +1,4 @@
-var examples = {
+const examples = {
     'asFunction': function(){
     //▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
         function f(){
@@ -116,7 +116,7 @@ var examples = {
         }
 
         console.log("maria before", maria);
-        update.call(maria, "Maria Ivanova", 23);
+        update.apply(maria, ["Maria Ivanova", 23]);
         console.log("maria after", maria);
     //▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
     },
@@ -145,6 +145,7 @@ var examples = {
     'withCall': function(){
     //▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
         const maria = {name: "Maria", age:18};
+
         function update(name, age){
             this.name = name;
             this.age = age;
@@ -225,11 +226,11 @@ var examples = {
     },
 }
 
-examples.inClass_ShortDemo();
+// examples.inClass_ShortDemo();
 
-// for (const key in examples) {
-//     if (examples.hasOwnProperty(key)) {
-//         console.log(`\n~~~~~ ${examples[key].name} ~~~~~`);
-//         examples[key]();
-//     }
-// }
+for (const key in examples) {
+    if (examples.hasOwnProperty(key)) {
+        console.log(`\n~~~~~ ${examples[key].name} ~~~~~`);
+        examples[key]();
+    }
+}

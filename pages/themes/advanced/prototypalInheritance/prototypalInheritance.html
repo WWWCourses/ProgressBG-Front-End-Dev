@@ -108,13 +108,11 @@
 	</section>
 </section>
 
-
-<!-- /////////////// -->
-
+<section><h1>Object prototype</h1></section>
 <section style="font-size: .8em"><h2>Object prototype</h2>
 	<section style="font-size: .8em"><h3>intro</h3>
 		<dl class="fa">
-			<dt>In JavaScript every object is build on the top of a prototype object. I.e. every object has its prototype.</dt>
+			<dt>In JavaScript every object is build on the top of a <span class="note">prototype object</span>, from which it <span class="note">inherits</span> all properties and methods. </dt>
 		</dl>
 		<pre><code rel="JS" class="js">
 			var car = {};
@@ -122,9 +120,9 @@
 			console.dir(car);
 		</code></pre>
 		<p>The Object object (i.e. the object created by Object constructor) does not have prototype. You can think of it as the God of all objects.</p>
-		<a href="images/TheGodOfAllObjects.png"><img src="images/TheGodOfAllObjects.png" style="height: 30%;"></a>
+		<a href="images/TheGodOfAllObjects.png"><img src="images/TheGodOfAllObjects.png"></a>
 	</section>
-	<section><h2>the <code>__proto__</code> property</h2>
+	<section><h3>the <code>__proto__</code> property</h3>
 		<dl class="fa">
 			<dt>By ECMAScript standard, every object has the [[Prototype]] property, which points to its prototype.</dt>
 			<dt>Most JavaScript engines gives direct access to the [[Prototype]] property by the special property <code class="note">__proto__</code>.</dt>
@@ -138,6 +136,66 @@
 
 			console.dir(car.__proto__.__proto__);
 			// null
+		</code></pre>
+	</section>
+	<section><h3>the <code>prototype</code> property</h3>
+		<dl class="fa">
+			<dt>When a function is created, the JavaScript engine creates a new, empty object which is associated with that function object through the function <code>prototype</code> property.</dt>
+			<dt>The role of the <code>prototype</code> property will be discussed in next slides.</dt>
+		</dl>
+	</section>
+	<section><h3><code>__proto__</code> vs. <code>prototype</code></h3>
+		<dl class="fa">
+			<dt>Do not mix the <code>__proto__</code> with <code>prototype</code> properties</dt>
+			<dt><span class="note">Every object</span> has the <code>__proto__</code> property.</dt>
+			<dt><span class="note">Only function objets</span> has the <code>prototype</code> property</dt>
+		</dl>
+	</section>
+</section>
+
+
+<section><h1>Let's got deep - what's in a object?</h1></section>
+<section><h2>Let's got deep - what's in a object?</h2>
+	<section><h3>at Object Literal</h3>
+		<pre><code rel="JS" class="js">
+			var car = {};
+		</code></pre>
+		<img src="images/objectCreationInternals.png">
+	</section>
+	<section><h3>at  Constructor (what  does it do?)</h3>
+		<pre><code rel="JS" class="js">
+			var Car = function(){};
+			var ford = new Car();
+			var BMV = new Car();
+		</code></pre>
+		<a href="images/whatNewDo.png"><img src="images/whatNewDo.png"></a>
+	</section>
+	<section><h3>at Factory</h3>
+		<pre><code rel="JS" class="js">
+			var carFactory = function(){ return {} }
+			var ford = carFactory();
+			var BMV = carFactory();
+		</code></pre>
+		<a href="images/whatFactoryDo.png"><img src="images/whatFactoryDo.png"></a>
+	</section>
+	<section><h3>Factory vs Constructor</h3>
+		<pre><code rel="JS" class="js">
+			function CarConstructor(){};
+			CarConstructor.prototype.sayHello=()=>
+				console.log(`Hello from CarConstructor.prototype`);
+			var constructedCar = new CarConstructor();
+
+			function CarFactory(){
+				return {}
+			};
+			CarFactory.prototype.sayHello=()=>
+				console.log(`Hello from CarFactory.prototype`);
+			var fabricatedCar = CarFactory();
+
+			constructedCar.sayHello();
+			//Hello from CarConstructor.prototype
+			fabricatedCar.sayHello();
+			//TypeError: fabricatedCar.sayHello is not a function
 		</code></pre>
 	</section>
 </section>
@@ -190,66 +248,20 @@
 	</section>
 </section>
 
-<section><h2>Let's got deep - what's in a object?</h2>
-	<section><h3>at Object Literal</h3>
-		<pre><code rel="JS" class="js">
-			var car = {};
-		</code></pre>
-		<img src="images/objectCreationInternals.png">
-	</section>
-	<section><h3>at  Constructor (what  does it do?)</h3>
-		<pre><code rel="JS" class="js">
-			var Car = function(){};
-			var ford = new Car();
-			var BMV = new Car();
-		</code></pre>
-		<a href="images/whatNewDo.png"><img src="images/whatNewDo.png"></a>
-	</section>
-	<section><h3>at  Factory</h3>
-		<pre><code rel="JS" class="js">
-			var carFactory = function(){ return {} }
-			var ford = carFactory();
-			var BMV = carFactory();
-		</code></pre>
-		<a href="images/whatFactoryDo.png"><img src="images/whatFactoryDo.png"></a>
-	</section>
-	<section><h3>Factory vs Constructor</h3>
-		<pre><code rel="JS" class="js">
-			function CarConstructor(){};
-			CarConstructor.prototype.sayHello=()=>
-				console.log(`Hello from CarConstructor.prototype`);
-			var constructedCar = new CarConstructor();
-
-			function CarFactory(){
-				return {}
-			};
-			CarFactory.prototype.sayHello=()=>
-				console.log(`Hello from CarFactory.prototype`);
-			var fabricatedCar = CarFactory();
-
-			constructedCar.sayHello();
-			//Hello from CarConstructor.prototype
-			fabricatedCar.sayHello();
-			//TypeError: fabricatedCar.sayHello is not a function
-		</code></pre>
-	</section>
-</section>
-
-<!-- /////////////// -->
-
+<section><h1>Prototypal Inheritance in JavaScript</h1></section>
 <section><h2>Prototypal Inheritance in JavaScript</h2>
 	<section><h3>The Prototype Chain</h3>
-	<dl class="fa">
-		<dt>Each JavaScript object has a <span class="note">prototype object</span></dt>
-		<dt>An object "inherits" - i.e. has access to all members of its prototype.</dt>
-		<dt>An object prototype is just an object, so it can also have prototype from which to inherit from.</dt>
-		<dt>This is known as the <span class="note">prototype chain!</span></dt>
-	</dl>
+		<dl class="fa">
+			<dt>Each JavaScript object has a <span class="note">prototype object</span> (accessed by the <code>__proto__</code> property.)</dt>
+			<dt>An object "inherits" - i.e. has access to all members of its prototype.</dt>
+			<dt>An object prototype is just an object, so it can also have prototype from which to inherit from.</dt>
+			<dt>This is known as the <span class="note">prototype chain!</span></dt>
+		</dl>
 	</section>
 	<section><h3>Prototypal Inheritance of Object Literals using '__proto__'  - example</h3>
 		<pre style="width: 100%"><code rel="JS" class="js">
 			// create 'car' object
-			var car = {
+			const car = {
 				manufacturer: undefined,
 				speed: 100,
 				drive: function(){
@@ -262,21 +274,22 @@
 			}
 
 			// create the 'ford' object
-			var ford = {
-				// make 'ford' to inherit from 'car'
-				__proto__ : car,
+			const ford = {
 				manufacturer: "Ford",
 				speed: 200,
+				// make 'ford' to inherit from 'car'
+				__proto__ : car,
 			}
 
 			// create 'theFordOfPesho' object
-			var theFordOfPesho = {
-				// make 'theFordOfPesho' to inherit from 'ford'
-				__proto__ : ford,
+			const theFordOfPesho = {
 				wings: 2,
 				speed: 300,
+				// make 'theFordOfPesho' to inherit from 'ford'
+				__proto__ : ford,
 			}
 
+			car.drive();
 			ford.drive();
 			theFordOfPesho.drive();
 		</code></pre>
@@ -293,7 +306,7 @@
 	<section><h3>Prototypal Inheritance of Object Literals using Object.create() - example</h3>
 		<pre><code rel="JS" class="js">
 			// create 'car' object
-			var car = {
+			const car = {
 				manufacturer: undefined,
 				speed: 100,
 				drive: function(){
@@ -305,17 +318,18 @@
 				}
 			}
 			// create 'ford' and make it to inherit from 'car'
-			var ford = Object.create( car, {
+			const ford = Object.create( car, {
 				manufacturer: {value: "Ford"},
 				speed: {value: 200},
 			})
 
 			// create 'theFordOfPesho' and make it to inherit from 'ford'
-			var theFordOfPesho = Object.create(ford, {
+			const theFordOfPesho = Object.create(ford, {
 				wings: {value: 2},
 				speed: {value: 300},
 			})
 
+			car.drive();
 			ford.drive();
 			theFordOfPesho.drive();
 		</code></pre>
@@ -327,30 +341,51 @@
 			<dt>It's better and safe to use <code>Object.create() </code> aproach, instead of '<code>__proto__</code>'</dt>
 		</dl>
 	</section>
-	<section><h3>Prototypal Inheritance of constructed objects</h3>
+	<section><h3 class="important">Prototypal Inheritance of constructed objects</h3>
 		<pre><code rel="JS" class="js">
-			// Animal constructor
-			var Animal = function(food){
-				this.food = food;
+			// define Car Constructor:
+			function Car() {
+				this.manufacturer = undefined;
+				this.speed = 100;
 			}
-			Animal.prototype.eat = function(){
-				console.log(`${this.name} is eating ${this.food}`);
+			Car.prototype.drive = function () {
+				if (this.wings >= 2){
+					console.log(`Flying wiht ${this.speed} km/h`);
+				}else{
+					console.log(`Driving wiht ${this.speed} km/h`);
+				}
 			}
+			// define Ford Constructor:
+			function Ford(speed) {
+				this.manufacturer = "Ford";
+				this.speed = speed;
+			}
+			// Make Ford objects to inherit from Car.prototype:
+			Ford.prototype = Object.create(Car.prototype);
 
-			// Cat constructor
-			var Cat = function(name, food){
-				// reuse the Animal Constructor
-				Animal.call(this, food);
-				this.name = name || 'Tom';
-			}
-			// Cat objects will inherit from Animal.prototype
-			Cat.prototype = Object.create(Animal.prototype);
+			// create a Ford object
+			let ford = new Ford(200);
 
-			// Cat instance
-			var tom = new Cat('Tom', 'cheese');
-			tom.eat();
+			// create another Ford object, and attach wings to it:
+			let fordOfPesho = new Ford(300);
+			fordOfPesho.wings = 2;
+
+			// let's use the object:
+			ford.drive();
+			fordOfPesho.drive();
 		</code></pre>
 	</section>
+	<section><h3></h3>
+		<a href="images/prototypalInheritanceOfConstructedObjects.png"><img src="images/prototypalInheritanceOfConstructedObjects.png" alt="images/prototypalInheritanceOfConstructedObjects.png"></a>
+	</section>
+
+	<section><h3>Prototypal Inheritance with Class Syntax</h3>
+		<dl class="fa">
+			<dt>Live Demo</dt>
+			<dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">Classes @MDN</a></dt>
+		</dl>
+	</section>
+
 
 	<!-- <section><h2>Classical (class-based) Inheritance in JavaScript</h2>
 		<section><h3>example</h3>
@@ -401,11 +436,14 @@
 	</section> -->
 </section>
 
-<section><h2>Inheritance with Classes in ES6</h2>
-	<dl class="fa">
-		<dt>Live Demo</dt>
-		<dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">Classes @MDN</a></dt>
-	</dl>
+
+
+
+<section><h1>Exercises</h1></section>
+<section><h2>Exercises</h2>
+	<section><h3>createCatConstructor:</h3>
+		<script src="https://gist.github.com/WWWCourses/56fd395fce77a5df4cb38791ad54359e.js"></script>
+	</section>
 </section>
 
 

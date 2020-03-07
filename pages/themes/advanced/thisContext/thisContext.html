@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>prototypalInheritance</title>
+	<title>"this" context</title>
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -26,7 +26,7 @@
 <body>
 	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
 		<div class="top_links">
-			<a class="home_link" href="../../../../pages/agenda/advanced.html#__clicheTitle__" target="_top"><i class="fa fa-home"></i></a>
+			<a class="home_link" href="../../../../pages/agenda/advanced.html#thisContext" target="_top"><i class="fa fa-home"></i></a>
 			<span class="help_link"><i class="fa fa-question"></i></span>
 			<div class="help_text">
 				<div><span>N/Space</span><span>next slide</span></div>
@@ -231,8 +231,11 @@
     </section>
 </section>
 
-<section><h2>Invoke with apply()</h2>
+<section><h2>Function invocation with apply()</h2>
    <section>
+       <dl class="fa">
+           <dt>The <code>apply()</code> method <span class="note">calls a function</span> with a given this value, and <span class="note">arguments provided as an array</span></dt>
+       </dl>
         <pre><code rel="Syntax">
             func.apply(thisArg, [argsArray])
         </code></pre>
@@ -241,6 +244,7 @@
         </dl>
         <pre><code rel="JS">
             const maria = {name: "Maria", age:18};
+
             function update(name, age){
                 this.name = name;
                 this.age = age;
@@ -252,8 +256,11 @@
         </code></pre>
    </section>
 </section>
-<section><h2>Invoke with call()</h2>
+<section><h2>Function invocation call()</h2>
     <section>
+        <dl class="fa">
+            <dt>The <code>call()</code> method <span class="note">calls a function</span> with a given this value, and <span class="note">arguments provided individually (comma separated)</span></dt>
+        </dl>
         <pre><code rel="Syntax">
             func.call(thisArg, arg1, arg2, ...)
         </code></pre>
@@ -275,14 +282,16 @@
         </code></pre>
     </section>
 </section>
-<section><h2>Invoke through bind()</h2>
+<section><h2>Create new function with bind()</h2>
     <section>
+        <dl class="fa">
+            <dt>The <code>bind()</code> method <span class="note">creates a new function</span> that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.</dt>
+            <dt>the <code class="note">this</code> value inside function <code>func</code> will be equal to the object passed by <code class="note">thisArg</code> argument</dt>
+        </dl>
         <pre><code rel="Syntax">
             func.bind(thisArg[, arg1[, arg2[, ...]]])
         </code></pre>
-        <dl class="fa">
-            <dt>the <code class="note">this</code> value inside function <code>func</code> will be equal to the object passed by <code class="note">thisArg</code> argument</dt>
-        </dl>
+
         <pre><code rel="JS">
             const maria = {name: "Maria", age:18};
             function update(name, age){
@@ -299,7 +308,54 @@
     </section>
 </section>
 
+<section><h2>"this" in <code>addEventListener handler</code></h2>
+    <section>
+        <dl class="fa">
+            <dt>"this" in addEventListener handler is the object on which the event is fired</dt>
+        </dl>
+        <pre><code rel="HTML" class="html">
+            <button>Click me</button>
 
+            <script>
+                let btn = document.querySelector('button');
+
+                btn.addEventListener('click', function () {
+                    console.log(`this === btn : ${this === btn}`);
+                    // true
+                })
+            </script>
+        </code></pre>
+    </section>
+</section>
+
+<section><h2>"this" in <code>setTimeout/setInterval handler</code></h2>
+    <section>
+        <dl class="fa">
+            <dt>"this" in setTimeout/setInterval handler is the <span class="note">Window</span> object</dt>
+        </dl>
+        <pre><code rel="HTML" class="html">
+            <button>Click me</button>
+
+            <script>
+                setTimeout(function () {
+                    console.log(`this === window: ${this === window}`);
+                }, 1000);
+                // true
+            </script>
+        </code></pre>
+    </section>
+</section>
+
+<section><h2>Excercises</h2>
+    <section><h3>Task: setTieoutInEventListener</h3>
+        <pre><code rel="HTML" class="html">
+            <button class="btn">Click me</button>
+        </code></pre>
+        <dl class="fa">
+            <dt>Given the above HTML, write the JS code, which will change the button background to "red", but <span class="note">2 seconds after the button is clicked</span>.</dt>
+        </dl>
+    </section>
+</section>
 
 
 
