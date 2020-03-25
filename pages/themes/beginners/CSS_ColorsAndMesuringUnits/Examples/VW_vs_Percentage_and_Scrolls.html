@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vw and scrollbars</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .red{
+            /* 	90% от широчината на body елемента, която изключва вертиклания скролбар */
+            width: 90%;
+            height: 50vh;
+            background-color: red;
+        }
+        .blue{
+            /* 	90% от широчината на viewport-а, която включва и вертиклания скролбар */
+            width: 90vw;
+            height: 51vh;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="red"></div>
+    <div class="blue"></div>
+</body>
+</html>
