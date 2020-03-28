@@ -526,7 +526,7 @@
 			console.log( str.match(re2).toString() ); // Maria,zdravka
 		</code></pre>
 	</section>
-	<section><h3>RegExp Constructor</h3>
+	<section><h3 class="advanced">RegExp Constructor</h3>
 		<pre><code rel="JS" class="js">
 			var str = 'Maria, ivan, eli, zdravka, stoyan';
 
@@ -541,7 +541,7 @@
 		</code></pre>
 		<p class="note">As the Regex is given as string, we have to escape the backslash. I.e:  <code>\b</code> => <code>\\b</code></p>
 	</section>
-	<section><h3>RegEx Literal vs Constructor</h3>
+	<section><h3 class="advanced">RegEx Literal vs Constructor</h3>
 		<dl class="fa">
 		    	<dt>Literal:</dt>
 		    	<dd>Compiles only once - when <b>evaluated</b>.</dd>
@@ -551,7 +551,7 @@
 			<dd class="note"> Use the constructor function when you don't know the pattern in advance and will receive it from variable.</dd>
 		</dl>
 	</section>
-	<section><h3>Regex in a loop</h3>
+	<section><h3 class="advanced">Regex in a loop</h3>
 		<pre><code rel="JS" class="js">
 			var words = ["ябълка", "ария", "ягода", "ясен"];
 
@@ -594,7 +594,7 @@
 			});
 		</code></pre>
 	</section>
-	<section><h3>Regex in variable</h3>
+	<!-- <section><h3>Regex in variable</h3>
 		<pre><code rel="JS" class="js">
 			var str = `The RegExp constructor creates a regular expression object for matching text with a pattern.
 			For an introduction to regular expressions, read the Regular Expressions chapter in the JavaScript Guide`;
@@ -613,7 +613,7 @@
 			// regular expression
 			// Regular Expression
 		</code></pre>
-	</section>
+	</section> -->
 </section>
 
 <section data-min="5"><h1>Use Regex in <code>String</code> object methods</h1></section>
@@ -664,14 +664,47 @@
 			console.dir(resultGlobal);
 		</code></pre>
 	</section>
-	<section><h3>The replace() String method</h3></section>
-	<section><h3>The search() String method</h3></section>
-	<section><h3>The split() String method</h3></section>
+	<section><h3>The replace() String method</h3>
+		<pre><code rel="JS" class="js">
+			// Goal: remove all vocal letters in a string
+
+			// the input string:
+			let str = 'The quick brown fox jumps over the lazy dog';
+
+			// the regex:
+			const re = /[aeiouy]/gi; // global and case-insensitive
+
+			// replace all matches with empty string:
+			let newStr = str.replace(re, '');
+
+			// print output:
+			console.log(`str: ${str}`);
+			console.log(`newStr: ${newStr}`);
+
+		</code></pre>
+		<p>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace @mdn</a></p>
+	</section>
+	<section><h3>The split() String method</h3>
+		<pre><code rel="JS" class="js">
+			// Goal: split a string by any whitespace, or ',' or '.' sequences
+
+			// the input string:
+			let str = `word1, word2
+			word3	word4. Word5`;
+
+			// the regex: match any whitespace, or ',' or '.' sequences:
+			const re = /[\s,.]+/;
+			let words = str.split(re);
+
+			// print the words array:
+			console.log(words);
+		</code></pre>
+	</section>
 	<section><h3>by <code>RegExp</code> object methods</h3>
 		<dl class="fa">
-			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec">exec()</a></dt><dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test">test()</a></dt>
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec">exec()</a></dt>
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test">test()</a></dt>
 		</dl>
-
 	</section>
 </section>
 
