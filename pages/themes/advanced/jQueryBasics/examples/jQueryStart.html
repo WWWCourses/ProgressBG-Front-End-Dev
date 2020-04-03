@@ -13,10 +13,20 @@
 </head>
 <body>
 	<button id="btn">Click me</button>
+	<section class="selectorsDemo">
+		<div id="vip">#vip</div>
+		<div class="red big">.red and .big</div>
+		<div class="red">.red</div>
+		<div title="tooltip">title="tooltip"</div>
+
+	</section>
 	<script>
+
 		$("#btn").click(function( event ) {
-			alert("You are using jQuery now!");
+			// console.dir($('.red'));
+			$('.red').css("background-color", "red");
 		});
+
 	</script>
 </body>
 </html>
