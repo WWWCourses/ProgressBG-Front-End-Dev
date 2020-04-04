@@ -144,6 +144,14 @@
 
 			});
 		</code></pre>
+		<pre><code rel="JS" class="js">
+			// Shorthand for $( document ).ready()
+			$(function() {
+
+				// Your code here.
+
+			});
+		</code></pre>
 	</section>
 </section>
 
@@ -155,10 +163,134 @@
 			<dt>Reference: <a href="https://api.jquery.com/category/selectors/">Selectors @jquery.com</a></dt>
 		</dl>
 	</section>
+	<section><h3>Basic Selectors - Examples</h3>
+		<pre><code rel="JS" class="js">
+			// by ID:
+			$( "#vip" );
+
+			// by class name:
+			$( ".red" );
+
+			// by attribute selector:
+			$( "input[target='_blank']" );
+
+			// by pseudo-elemement selector:
+			$( "div:nth-of-type(1)" )
+		</code></pre>
+	</section>
 </section>
 
 
+<section data-min="10"><h1>Jquery Events</h1></section>
+<section><h2>Jquery Events</h2>
+	<section><h3></h3>
+		<dl class="fa">
+			<dt>jQuery provides simple methods for attaching event handlers to selections.</dt>
+			<dt>In jQuery, most DOM events have an equivalent jQuery method.</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			$(".title").click();
+		</code></pre>
+	</section>
+	<section><h3>Syntax</h3>
+		<pre><code rel="Syntax" class="js">
+			$( 'selector' ).eventMethod( eventHandlerFunction );
+		</code></pre>
+		<dl class="fa">
+			<dt><span class="note">eventMethd</span> is any of <a href="https://api.jquery.com/category/events/">jQuery Event Methods</a></dt>
+			<dt><span class="note">eventHandlerFunction</span> - definition of the function which will be executed when the event fires.</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			$('.title').click(function (e) {
+				$(this).css('color','red');
+			})
+		</code></pre>
+	</section>
+	<section><h3>The on() Method</h3>
+		<dl class="fa">
+			<dt>Attach an event handler function for one or more events to the selected elements</dt>
+			<dt>Reference: <a href="https://api.jquery.com/on/">on() @jquery</a></dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			$('.item').on('click', function (e) {
+				$(this).css('color','red');
+			})
+		</code></pre>
+	</section>
+	<section><h3>The Event Handler Function</h3>
+		<pre><code rel="Syntax" class="js">
+			$('.title').click(function (e) {
+				console.dir(e);
+				$(this).css('color','red');
+			})
+		</code></pre>
+		<dl class="fa">
+			<dt>The eventHandlerFunction can receive an event object.</dt>
+			<dd>Reference: <a href="https://api.jquery.com/category/events/event-object/">event object @jquery</a></dd>
+			<dt>Inside the function, '<code>this</code>' refers to the DOM element that initiated the event.</dt>
+			<dt>use: <code>$(this)</code> to convert the DOM object to jQuery Object</dt>
 
+		</dl>
+	</section>
+	<section><h3>Live Demo</h3></section>
+</section>
+
+<section data-min="10"><h1>jQuery Traversing</h1></section>
+<section><h2>jQuery Traversing</h2>
+	<section><h3>Overview</h3>
+		<dl class="fa">
+			<dt>The most common traversing operations is to get <span class="note">parents</span>, <span class="note">descendants</span>, and <span class="note">siblings</span> of element.s</dt>
+		</dl>
+	</section>
+	<section><h3>Parents</h3>
+		<dl class="fa">
+			<dt><code>parent()</code> - returns immediate parent</dt>
+			<dd>Reference: <a href="https://api.jquery.com/parent/">parent @jquery</a></dd>
+			<dt><code>parents()</code> - returns ancestors</dt>
+			<dd>Reference: <a href="https://api.jquery.com/parents/">parents @jquery</a></dd>
+			<dt><a href="https://api.jquery.com/parentsUntil/">parentsUntil()</a> and <a href="https://api.jquery.com/closest/">closest()</a></dt>
+
+		</dl>
+		<pre><code rel="JS" class="js">
+			// get parents of all selected children:
+			$('.child').parent().css('background', 'yellow');
+
+			// get parents with class='uncle' of all selected children:
+			$('.child').parent('.uncle').css('background', 'orange')
+		</code></pre>
+	</section>
+	<section><h3>Descendants</h3>
+		<dl class="fa">
+			<dt>Self-learning: <a href="https://www.w3schools.com/jquery/jquery_traversing_descendants.asp">Traversing - Descendants @w3schools</a></dt>
+		</dl>
+	</section>
+	<section><h3>Siblings</h3>
+		<dl class="fa">
+			<dt>Self-learning: <a href="https://www.w3schools.com/jquery/jquery_traversing_siblings.asp">Traversing - Siblings @w3schools</a></dt>
+		</dl>
+	</section>
+</section>
+
+<section data-min="10"><h1>get.set HTML content</h1></section>
+<section><h2>get.set HTML content</h2>
+	<section><h3>get</h3>
+		<dl class="fa">
+			<dt><code>text()</code> - Sets or returns the text content of selected elements</dt>
+			<dt><code>html()</code> - Sets or returns the content of selected elements (including HTML markup)</dt>
+			<dt><code>val()</code> - Sets or returns the value of form fields</dt>
+		</dl>
+	</section>
+</section>
+
+<section data-min="20"><h1>jQuery Effects</h1></section>
+<section><h2>jQuery Effects</h2>
+	<section><h3>Live Demos</h3>
+		<dl class="fa">
+			<dt>Simple Accordion Effect</dt>
+			<dt>Simple ToDo app</dt>
+		</dl>
+	</section>
+</section>
 
 <section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
 	<p>These slides are based on</p>
