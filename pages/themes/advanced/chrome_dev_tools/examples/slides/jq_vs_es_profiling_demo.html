@@ -27,18 +27,22 @@
 	repeat = 1000;
 
 	$('.jq>button').click(function(){
+		console.time('jq timer');
 		for(let i = 0; i < repeat; i++){
 			$(this).parent().css('background',"red");
 		}
 		$(this).parent().css('background',"darkred");
+		console.log(console.timeEnd('jq timer'))
 	})
 
 	document.querySelector('.es>button').
 		addEventListener('click', function(){
+			console.time('es timer');
 			for(let i = 0; i < repeat; i++){
 				this.parentNode.style.backgroundColor = "blue";
 			}
 			this.parentNode.style.backgroundColor = "darkblue";
+			console.log(console.timeEnd('es timer'))
 	})
 </script>
 </body>
