@@ -314,9 +314,16 @@ section.copyright>.license{
   margin: 9em 0 0 0;
 }
 .copyright>.license img, .copyright>.author img{
-    height: 1.2em;
-    vertical-align: middle;
     box-shadow: none;
+}
+.copyright>.author img{
+  display: inline-block;
+  margin: 0;
+  height: .3em;
+}
+.copyright .date{
+  display: inline-block;
+  font-size: .4em;
 }
 .copyright a{
   cursor: pointer;
