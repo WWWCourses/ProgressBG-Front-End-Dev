@@ -374,7 +374,7 @@
 				console.log("global firstName: ", firstName);
 			</code></pre>
 			<p>firstName в тялото на функцията НЕ Е декларирана чрез var и така тя се счита за глобална променлива!</p>
-	</section>    
+	</section>
 </section>
 
 <section data-min="5" id="let_const_var"><h1>Разлики между <code>let</code>, <code>const</code> и <code>var</code></h1></section>
@@ -427,7 +427,7 @@
 		<dt>Променлива създадена чрез <code>const</code> задължително трябва да бъде инициализирана:</dt>
 		<pre><code rel="JS" class="js">
 			const GOLDEN_RATIO; // SyntaxError: Missing initializer in const declaration
-		</code></pre>        
+		</code></pre>
 	</dl>
   </section>
   <section><h3 class="advanced">Особености на <code>const</code></h3>
@@ -442,7 +442,7 @@
 			console.log( someArray[0] ); // 99
 
 			const someObject = {
-				"pi": 3.14, 
+				"pi": 3.14,
 			}
 
 			// тук не re-assign-ваме someObject, а променяме пропърти в самия обект:
@@ -527,7 +527,7 @@
 <section id="Hoisting"><h2>Variables Hoisting</h2>
 	<section>
 		<dl class="fa">
-			<dt>Декларирането на променливите <span class="note">в даден scope </span> винаги се изпълнява <span class="note">преди</span> всички изрази, без значение къде във scope се намират декларациите. </dt>            
+			<dt>Декларирането на променливите <span class="note">в даден scope </span> винаги се изпълнява <span class="note">преди</span> всички изрази, без значение къде във scope се намират декларациите. </dt>
 			<dt>Тоест, декларациите на променливите се "издигат" (hoist) до началото на съответния scope, без значение къде сме ги написали!</dt>
 			<dt>Това поведение на JavaScript е в сила само за <span class="note">декларациите</span> на променливи, зададени с <span class="note">var</span> и <span class="note">function declaration</span>. Изразите се изпълняват последователно, така както сме ги написали в кода.</dt>
 			<dt><span class="note">При декларация на променлива с <b>let</b> или <b>const</b> не се извършва hoisting.</span></dt>
@@ -633,7 +633,7 @@
 				return function(){
 					console.log(`I'm the returned function`);
 				}
-			}            
+			}
 
 			foo()();
 
@@ -715,7 +715,7 @@
 	<!-- Custom processing -->
 	<script src="../../../../outfit/js/slides.js"></script>
 	<!-- external scripts -->
-	<script src="../../../../lib/reveal.js/lib/js/head.min.js"></script>
+
 	<script src="../../../../lib/reveal.js/js/reveal.js"></script>
 	<!-- init reveal -->
 	<script>

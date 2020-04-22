@@ -35,11 +35,11 @@ function  PrettyPreCode(){
 	for (var i = 0; i < codeNodes.length; i++)
 	{
 		var content = codeNodes[i].innerHTML;
-		console.log(`content: ${content}`);
+		// console.log(`content: ${content}`);
 
 		// get indent
 		var indent =  content.match(/^\n*(\s*)/)[1];
-		console.log(`indent: -->${indent}<--`);
+		// console.log(`indent: -->${indent}<--`);
 
 		// remove indent from all lines
 		var indentRE = new RegExp("^" + indent, "gm");

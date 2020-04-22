@@ -63,7 +63,7 @@
 <section><h1>JavaScript - основни синтактични елементи</h1>
   <h3>част 1</h3>
 </section>
-<section data-transition="zoom">
+<!-- <section data-transition="zoom">
   <div class="copyright">
     <div class="note">
       <p>Създаден за</p>
@@ -78,8 +78,18 @@
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
     </div>
   </div>
+</section> -->
+<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+  <div class="note">
+    <p>Created by</p>
+  </div>
+  <div class="company">
+     <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+  </div>
+  <div class="author">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+  </div>
 </section>
-
 
 
 
@@ -644,7 +654,7 @@
       <pre><code rel="JS" class="js">
         let x = "42";
 
-        console.log(x + 2);    // 422 защото в x имаме низ 
+        console.log(x + 2);    // 422 защото в x имаме низ
         console.log(typeof(x)) // string
 
         console.log(x*1 + 2); // 44  защото x*1 е число
@@ -770,7 +780,7 @@
       console.log( true || false ); // true
       console.log( true && false ); // false
 
-      console.log( 2>1 && "a">"b" ); // false ( true && false = false)      
+      console.log( 2>1 && "a">"b" ); // false ( true && false = false)
     </code></pre>
   </section>
   <section><h3>Изчисляване на истинностни стойности</h3>
@@ -1210,7 +1220,7 @@
   <!-- Custom processing -->
   <script src="../../../../outfit/js/slides.js"></script>
   <!-- external scripts -->
-  <script src="../../../../lib/reveal.js/lib/js/head.min.js"></script>
+
   <script src="../../../../lib/reveal.js/js/reveal.js"></script>
    <!-- init reveal -->
   <script>
@@ -1248,5 +1258,7 @@
       ]
     });
   </script>
+  <!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </body>
 </html>
