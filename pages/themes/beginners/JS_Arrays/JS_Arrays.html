@@ -48,20 +48,29 @@
 -->
 <section><h1>Javascript: масиви и операции с тях</h1></section>
 <section data-transition="zoom">
-	<div class="copyright">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://progressbg.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/ProgressBG_logo_529_127.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
 		<div class="note">
-			<p>Създаден за</p>
+			<p>Created by</p>
 		</div>
 		<div class="company">
-			<a href="http://progressbg.net/kurs-po-web-design/">
-			<img style="height:80%" src="../../../../outfit/images/logos/ProgressBG_logo_529_127.png">
-			</a>
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
 		</div>
 		<div class="author">
-			<span>Iva E. Popova, 2015 - 2020,</span>
 			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
 		</div>
-	</div>
+	</section>
 </section>
 
 
@@ -165,7 +174,7 @@
                     let arr = [2,4,6];
                     arr[-1] = 0;   // невалиден индекс (интерпретира се като пропърти)
                     arr['a'] = 10; // невалиден индекс (интерпретира се като пропърти)
-                    // [ 2, 4, 6, '-1': 0, a: 10 ]                  
+                    // [ 2, 4, 6, '-1': 0, a: 10 ]
                 </code></pre>
             </dt>
         </dl>
@@ -240,22 +249,22 @@
                     // []
                 </code></pre>
             </dt>
-            <dd>В примера, вместо сравнение (<code class="note">==</code> или <span class="note">===</span>) погрешно е използван оператор за присвояване (<code class="note">=</code>), което води до изтриване на всички елементи на масива!</dd> 
+            <dd>В примера, вместо сравнение (<code class="note">==</code> или <span class="note">===</span>) погрешно е използван оператор за присвояване (<code class="note">=</code>), което води до изтриване на всички елементи на масива!</dd>
             <dt>Правилният код би бил:
                 <pre><code rel="JS" class="js">
                     let arr = [2,4,6];
                     if ( arr.length === 0 ){
                         console.log( "Empty array!")
-                    }                   
+                    }
                     console.log( arr );
                     // [2,4,6]
                 </code></pre>
-            </dt>       
-        </dl>           
+            </dt>
+        </dl>
     </section>
     <section><h3>Често срещани грешки (бъгове)</h3>
         <dl class="fa">
-            <dt>Ако погрешно изпишете length, то JS няма да върне грешка (ще видим защо, като стигнем до обекти), но би било потенциален бъг: 
+            <dt>Ако погрешно изпишете length, то JS няма да върне грешка (ще видим защо, като стигнем до обекти), но би било потенциален бъг:
                 <pre><code rel="JS" class="js">
                     let arr = [2,4,6];
                     if( arr.lenght){
@@ -263,7 +272,7 @@
                     }else{
                         console.log(`Empty array`);
                     }
-                    // Empty array                  
+                    // Empty array
                 </code></pre>
                 <dd>Проблемът тук, е че arr.leng<b>ht</b> връща undefined, вместо желаното от нас arr.leng<b>th</b>, което би върнало 3</dd>
                 <dt>Правилната проверка би била:
@@ -291,12 +300,12 @@
 
                     for (var i = 0; i < fruits.length; i++) {
                         console.log(`Елемент ${i}: ${fruits[i]}`);
-                    }   
+                    }
                     // Елемент 0: apple
                     // Елемент 1: banana
                     // Елемент 2: strawberry
                 </code></pre>
-            </dt>           
+            </dt>
         </dl>
     </section>
     <section><h3>Обхождане на елементите на масив в обратен ред</h3>
@@ -324,11 +333,11 @@
                     ];
                     console.log("matrix:", matrix);
                     // matrix: [ [ 'а', 'б', 'в' ], [ 'г', 'д', 'е' ], [ 'ж', 'з', 'и' ] ]
-                </code></pre>               
+                </code></pre>
             </dt>
         </dl>
-    </section>  
-    <section><h3>Достъп до елемент от "двумерен масив"</h3>`        
+    </section>
+    <section><h3>Достъп до елемент от "двумерен масив"</h3>`
         <pre><code rel="JS" class="js">
             var matrix = [
                 [ 'а', 'б', 'в' ],
@@ -337,7 +346,7 @@
             ];
 
             console.log("row 0, col 2: ", matrix[0][2]); // 'в'
-            console.log("row 1, col 1: ", matrix[1][1]); // 'д' 
+            console.log("row 1, col 1: ", matrix[1][1]); // 'д'
             console.log("row 2, col 0: ", matrix[2][0]); // 'ж'
         </code></pre>
     </section>
@@ -474,6 +483,8 @@
 				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
 			]
 		});
-	</script>
+    </script>
+    <!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </body>
 </html>
