@@ -96,7 +96,7 @@
 }
 .reveal section dl.fa>dt{
   font-weight: normal;
-  margin: .5em 0 0 0;
+  margin: .5em 0 .3em 0;
   font-size: 1em;
   line-height: 1.2em;
 }
@@ -120,10 +120,11 @@
 
 .reveal section dl.fa>dd{
   font-size: 0.9em;
+  line-height: 1.2em;
 }
 .reveal section dl.fa>dd:before{
   position: relative;
-  bottom: .2em;
+  bottom: 0em;
   content: "\f0a4";
   /*fa-arrow-right "\f061"
   fa-hand-o-right "\f0a4"

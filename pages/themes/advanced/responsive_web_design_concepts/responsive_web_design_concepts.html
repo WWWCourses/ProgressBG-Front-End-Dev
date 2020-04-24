@@ -77,43 +77,43 @@
 <section data-min="10"><h1>Modern design strategies</h1></section>
 <section><h2>Design strategies</h2>
   <section><h3>Clear the concepts</h3>
-    <a href="images/Responsive_All_Strategies.png"><img src="images/Responsive_All_Strategies.png"></a>
+	<a href="images/Responsive_All_Strategies.png"><img src="images/Responsive_All_Strategies.png"></a>
   </section>
   <section><h3>Progressive enhancement</h3>
-    <blockquote cite="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement">Progressive enhancement is a design philosophy that centers around providing a <span class="note">baseline of essential content and functionality</span> to as many users as possible, while at the same time going further and delivering the best possible experience only to users of the most modern browsers that can run all the required code.</blockquote>
-    <a href="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement">Progressive_Enhancement @MDN</a>
+	<blockquote cite="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement">Progressive enhancement is a design philosophy that centers around providing a <span class="note">baseline of essential content and functionality</span> to as many users as possible, while at the same time going further and delivering the best possible experience only to users of the most modern browsers that can run all the required code.</blockquote>
+	<a href="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement">Progressive_Enhancement @MDN</a>
   </section>
   <section><h3>Graceful degradation</h3>
-    <blockquote cite="https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation">Graceful degradation is a design philosophy that centers around trying to build a <span class="note">modern web site/application that will work in the newest browsers</span>, but fall back to an experience that while not as good still delivers essential content and functionality in older browsers.</blockquote>
-    <a href="https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation">Graceful_degradation @MDN</a>
+	<blockquote cite="https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation">Graceful degradation is a design philosophy that centers around trying to build a <span class="note">modern web site/application that will work in the newest browsers</span>, but fall back to an experience that while not as good still delivers essential content and functionality in older browsers.</blockquote>
+	<a href="https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation">Graceful_degradation @MDN</a>
   </section>
   <section><h3>Mobile First</h3>
-    <dl class="fa">
-      <dt>Start prototyping your site for the smallest screen first and add features for larger displays</dt>
-      <dt>Mobile first == Content first (Extras later)</dt>
-    </dl>
+	<dl class="fa">
+	  <dt>Start prototyping your site for the smallest screen first and add features for larger displays</dt>
+	  <dt>Mobile first == Content first (Extras later)</dt>
+	</dl>
   </section>
   <section><h3>Desktop First</h3>
-    <dl class="fa">
-      <dt>Start prototyping for desktop first and then work your way down to tablet/mobile devices.</dt>
-    </dl>
+	<dl class="fa">
+	  <dt>Start prototyping for desktop first and then work your way down to tablet/mobile devices.</dt>
+	</dl>
   </section>
   <section><h3>Mobile First vs. Desktop First</h3>
-    <a href="images/responsive-vs-mobile-first-webdesign-022-1024x689.png"><img src="images/responsive-vs-mobile-first-webdesign-022-1024x689.png" width="80%"></a>
+	<a href="images/responsive-vs-mobile-first-webdesign-022-1024x689.png"><img src="images/responsive-vs-mobile-first-webdesign-022-1024x689.png" width="80%"></a>
   </section>
 </section>
 
 <section data-min="5"><h1>Essential Concepts</h1></section>
 <section><h2>Essential Concepts</h2>
   <section>
-    <p><abbr>RWD</abbr><dfn id="RWD"><span>Responsive</span><span>Web</span><span>Design</span></dfn></p>
-    <dl class="fa">
-      <dt>The Viewport</dt>
-      <dt>Media Queries</dt>
-      <dt>Responsive Units</dt>
-      <dt>Adaptive Images</dt>
-      <dt>Grid and Flexboxes</dt>
-    </dl>
+	<p><abbr>RWD</abbr><dfn id="RWD"><span>Responsive</span><span>Web</span><span>Design</span></dfn></p>
+	<dl class="fa">
+	  <dt>The Viewport</dt>
+	  <dt>Media Queries</dt>
+	  <dt>Responsive Units</dt>
+	  <dt>Adaptive Images</dt>
+	  <dt>Grid and Flexboxes</dt>
+	</dl>
   </section>
 </section>
 
@@ -129,7 +129,7 @@
   	</dl>
   </section>
   <section><h3>Example</h3>
-  	<a href="examples/slides/index.html">Simple page with screen and print styles</a>
+  	<a href="examples/slides/printCSSDemo/index.html">Simple page with screen and print styles</a>
   </section>
   <section><h3>Usage</h3>
   	<dl class="fa">
@@ -142,7 +142,7 @@
   </section>
   <section><h3>Syntax</h3>
   	<pre><code rel="Syntax" class="css">
-  		@media [media_type and] [(media_feature_expr)*]{
+  		@media [media_type and] [(media_feature_expr)*]{CSS Rules}
   	</code></pre>
   	<pre><code rel="CSS" class="css">
   		@media (min-width: 600px){}
@@ -154,7 +154,7 @@
   </section>
   <section><h3>Syntax</h3>
   	<pre><code rel="Syntax" class="css">
-  		@media [media_type and] [(media_feature_expr)*]{
+		@media [media_type and] [(media_feature_expr)*]{CSS Rules}
   	</code></pre>
   	<dl class="fa">
   		<dt>A media query is composed of an optional <span class="note">media type</span> and any number of <span class="note">media feature</span> expressions</dt>
@@ -181,15 +181,15 @@
 
   		@media (min-width: 375px) and (max-width: 812px) {
   		  .box {
-  		    width: 33%;
-  		    float: left;
-  		    background: blue;
+  			width: 33%;
+  			float: left;
+  			background: blue;
   		  }
   		}
   		@media (min-width: 812px) {
   		  .box {
-  		    width: 30%;
-  		    float: left;
+  			width: 30%;
+  			float: left;
   		  }
   		}
   	</code></pre>
@@ -226,134 +226,137 @@
   		@media only screen and (min-width: 375px){}
   	</code>
   </section>
-  <section><h3></h3></section>
 </section>
 
 <section data-min="10"><h1>Media Queries with Sass</h1></section>
 <section><h2>Media Queries with Sass</h2>
   <section><h3>Overview</h3>
-    	<dl class="fa">
-    		<dt>We can set our media queries into Sass variable and interpolate it on the desired place.</dt>
-    	</dl>
-    	<pre><code rel="Sass" class="scss">
-    		$iPhoneX: "(min-width: 375px) and (max-width: 812px)";
-    		$desktop: "(min-width: 812px)";
+		<dl class="fa">
+			<dt>We can set our media queries into Sass variable and interpolate it on the desired place.</dt>
+		</dl>
+		<pre><code rel="Sass" class="scss">
+			$iPhoneX: "(min-width: 375px) and (max-width: 812px)";
+			$desktop: "(min-width: 812px)";
 
-    		.box{
-    			width: 370px;
-    			float: none;
-    			border: 1px solid red;
-    			box-sizing: border-box;
-    		}
+			.box{
+				width: 370px;
+				float: none;
+				border: 1px solid red;
+				box-sizing: border-box;
+			}
 
-    		@media #{$iPhoneX}{
-    		  .box{
-    		  	width: 33%;
-    		  	float: left;
-    		  	background: blue;
-    		  }
-    		};
+			@media #{$iPhoneX}{
+			  .box{
+			  	width: 33%;
+			  	float: left;
+			  	background: blue;
+			  }
+			};
 
-    		@media #{$desktop}{
-    			.box{
-    				width: 30%;
-    				float: left;
-    			}
-    		}
-    	</code></pre>
+			@media #{$desktop}{
+				.box{
+					width: 30%;
+					float: left;
+				}
+			}
+		</code></pre>
   </section>
   <section><h3>Media query bubbling</h3>
   	<dl class="fa">
   		<dt>Other cool feature with Sass is "Media query bubbling": if a media query is nested inside a selector Sass will lift (bubble) this query out and will nest the selector rule.</dt>
   	</dl>
   	<pre><code rel="Sass" class="scss">
-    		$iPhoneX: "(min-width: 375px) and (max-width: 812px)";
-    		$desktop: "(min-width: 812px)";
+			$iPhoneX: "(min-width: 375px) and (max-width: 812px)";
+			$desktop: "(min-width: 812px)";
 
-    		.box{
-    			width: 370px;
-    			float: none;
-    			border: 1px solid red;
-    			box-sizing: border-box;
+			.box{
+				width: 370px;
+				float: none;
+				border: 1px solid red;
+				box-sizing: border-box;
 
-    			@media #{$iPhoneX}{
-    		    width: 33%;
-    		    float: left;
-    		    background: blue;
-    		  };
+				@media #{$iPhoneX}{
+				width: 33%;
+				float: left;
+				background: blue;
+			  };
 
-    		  @media #{$desktop}{
-    		  	width: 30%;
-    		  	float: left;
-    		  }
-    		}
-    	</code></pre>
+				@media #{$desktop}{
+					width: 30%;
+					float: left;
+				}
+			}
+		</code></pre>
   </section>
 </section>
 
 <section data-min="20"><h1>Manage the viewport for mobile design.</h1></section>
 <section><h2>Manage the viewport for mobile design.</h2>
   <section><h3>CSS pixels and device pixels</h3>
-    <dl class="fa">
-      <p>Or "Hardware pixels" and "Software pixels"</p>
-      <dt><span class="note">Hardware pixel</span> - an individual dot of light in the display</dt>
-      <dt><span class="note">CSS pixel</span> - a CSS measurement unit</dt>
-      <dt><span class="note">device pixel ratio</span> -  how many hardware pixels equals one software pixel</dt>
-      <dt>For instance, on a device with dpr=2, a font size of 14px will take up 14 CSS pixels but render at 28 hardware pixels. </dt>
-      <dt>Reading: <a href="https://www.quirksmode.org/blog/archives/2010/04/a_pixel_is_not.html">A pixel is not a pixel</a></dt>
-    </dl>
+	<dl class="fa">
+	  <p>Or "Hardware pixels" and "Software pixels"</p>
+	  <dt><span class="note">Hardware pixel</span> - an individual dot of light in the display</dt>
+	  <dt><span class="note">CSS pixel</span> - a CSS measurement unit</dt>
+	  <dt><span class="note">device pixel ratio</span> -  how many hardware pixels equals one software pixel</dt>
+	  <dt>For instance, on a device with dpr=2, a font size of 14px will take up 14 CSS pixels but render at 28 hardware pixels. </dt>
+	  <dt>Reading: <a href="https://www.quirksmode.org/blog/archives/2010/04/a_pixel_is_not.html">A pixel is not a pixel</a></dt>
+	</dl>
   </section>
   <section><h3>Hi-DPI</h3>
-    <dl class="fa">
-      <dt>Mobile devices reach more and more high <a href="https://en.wikipedia.org/wiki/Dots_per_inch">dpi</a></dt>
-      <dd><a href="https://pixensity.com/list/phone/">pixensity.com</a></dd>
-    </dl>
-    <a href="images/standard_vs_retina_pixels.png"><img src="images/standard_vs_retina_pixels.png"></a>
+	<dl class="fa">
+	  <dt>Mobile devices reach more and more high <a href="https://en.wikipedia.org/wiki/Dots_per_inch">dpi</a></dt>
+	  <dd><a href="https://pixensity.com/list/phone/">pixensity.com</a></dd>
+	</dl>
+	<a href="images/standard_vs_retina_pixels.png"><img src="images/standard_vs_retina_pixels.png"></a>
   </section>
   <section><h3>The problem</h3>
-    <dl class="fa">
-      <dt>Browsers on mobile devices render pages in a viewport, which is usually wider than the screen, and then shrink the rendered result down so it can all be seen at once.</dt>
-      <dt>That is good for pages, which are not mobile-optimized, but it's not good for optimized pages (using @media queries)</dt>
-      <dt>Check why the media query does not fire: <a href="examples/slides/viewport.html">viewport.html</a></dt>
-      <dt>Reference: <a href="https://www.quirksmode.org/mobile/viewports2.html">A tale of two viewports — part two</a> @quirksmode.org</dt>
-    </dl>
+	<dl class="fa">
+	  <dt>Browsers on mobile devices render pages in a viewport, which is usually wider than the screen, and then shrink the rendered result down so it can all be seen at once.</dt>
+	  <dt>That is good for pages, which are not mobile-optimized, but it's not good for optimized pages (using @media queries)</dt>
+	  <dt>Check why the media query does not fire: <a href="examples/slides/viewport.html">viewport.html</a></dt>
+	  <dt>Reference: <a href="https://www.quirksmode.org/mobile/viewports2.html">A tale of two viewports — part two</a> @quirksmode.org</dt>
+	</dl>
   </section>
   <section><h3>viewport meta tag</h3>
-    <dl class="fa">
-      <dt>Let web developers control the viewport's size and scale</dt>
-      <dt>Introduced by Apple for Safari iOS, but respected by most mobile browsers</dt>
-      <dt>Is not part of any web standard</dt>
-      <dt>No consistent documentation</dt>
-      <dt>Reference: </dt>
-      <dd><a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">Configuring the Viewport</a> @Safari Web Content Guide</dd>
-    </dl>
+	<dl class="fa">
+	  <dt>Let web developers control the viewport's size and scale</dt>
+	  <dt>Introduced by Apple for Safari iOS, but respected by most mobile browsers</dt>
+	  <dt>Is not part of any web standard</dt>
+	  <dt>No consistent documentation</dt>
+	  <dt>Reference: </dt>
+	  <dd><a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">Configuring the Viewport</a> @Safari Web Content Guide</dd>
+	</dl>
   </section>
   <section><h3>Syntax</h3>
-    <pre><code rel="Syntax" class="html">
-      <meta name="viewport" content="Viewport properties">
-    </code></pre>
-    <pre><code rel="HTML" class="html">
-      <meta name="viewport" content="width=480">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="width=480, initial-scale=1, user-scalable=no">
-    </code></pre>
-    <dl class="fa">
-      <dt>Cheatsheet: <a href="http://andreasbovens.github.io/understanding-viewport/">Understanding viewport: examples</a></dt>
-    </dl>
+	<pre><code rel="Syntax" class="html">
+	  <meta name="viewport" content="Viewport properties">
+	</code></pre>
+	<pre><code rel="HTML" class="html">
+	  <meta name="viewport" content="width=480">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta name="viewport" content="width=480, initial-scale=1, user-scalable=no">
+	</code></pre>
+	<dl class="fa">
+	  <dt>Cheatsheet: <a href="http://andreasbovens.github.io/understanding-viewport/">Understanding viewport: examples</a></dt>
+	</dl>
   </section>
 </section>
 
 <section data-min="5"><h1>Task</h1></section>
 <section><h2>Task</h2>
-  <section><h3>Mobile First Navigation Menu</h3>
-    <dl class="fa">
-      <dt>Create the CSS for the menu, as you want it to be displayed on mobile device</dt>
-      <a href="images/menu_mobile_proto.png"><img src="images/menu_mobile_proto.png"></a>
-      <dt>After, apply CSS for desktop</dt>
-      <a href="images/menu_desktop_proto_.png"><img src="images/menu_desktop_proto_.png"></a>
-    </dl>
+	<section><h3>Mobile First Navigation Menu</h3>
+		<dl class="fa">
+			<dt>Create the CSS for the menu, as you want it to be displayed on mobile device</dt>
+			<a href="images/menu_mobile_proto.png"><img src="images/menu_mobile_proto.png"></a>
+		</dl>
+		</section>
+		<section><h3></h3>
+			<dl class="fa">
+				<dt>After, apply CSS for desktop</dt>
+				<a href="images/menu_desktop_proto_.png"><img src="images/menu_desktop_proto_.png"></a>
+			</dl>
+		</section>
 
-  </section>
 </section>
 
 <section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
@@ -385,8 +388,8 @@
 			keyboard: true,
 			history: true,
 			center: true,
-			// width: '100%',
-			// height: '100%',
+			width: 1440,
+			height: 900,
 			// slide transition
 			transition: 'concave', // none/fade/slide/convex/concave/zoom
 			// Factor of the display size that should remain empty around the content
