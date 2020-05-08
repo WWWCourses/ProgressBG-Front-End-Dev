@@ -81,7 +81,7 @@
 		<a href="images/big/HTTP_ClientServerSystem.png"><img src="images/big/HTTP_ClientServerSystem.png"></a>
 </section>
 <section data-min="5"><h1>HTTP protocol overview</h1></section>
-<section><h2>HTTP protocol overview</h2>
+<section><h2 class="NB">HTTP protocol overview</h2>
 	<section><h3>in brief</h3>
 		<dl class="fa">
 			<dt>HTTP = HyperText Transfer Protocol</dt>
@@ -100,7 +100,7 @@
 	</section>
 </section>
 <section data-min="5"><h1>Request Message Format</h1></section>
-<section><h2>Request Message Format</h2>
+<section><h2 class="advanced">Request Message Format</h2>
 	<section>
 		<img src="images/small/HTTP_RequestMessage.png">
 	</section>
@@ -135,7 +135,7 @@
 	</section>
 </section>
 <section data-min="5"><h1>Response Message Format</h1></section>
-<section><h2>Response Message Format</h2>
+<section><h2 class="advanced">Response Message Format</h2>
 	<section>
 		<a href="images/small/HTTP_ResponseMessage.png"><img src="images/small/HTTP_ResponseMessage.png"></a>
 	</section>
@@ -189,7 +189,7 @@
 	<p>HTTP protocol defines a set of request methods, which a client can use to request a server resource.</p>
 </section>
 <section data-min="5"><h1>The "GET" Request Method</h1></section>
-<section><h2>The "GET" Request Method</h2>
+<section><h2 class="NB">The "GET" Request Method</h2>
 	<section>
 		<dl class="fa">
 			<dt>Used to request data from a specified resource</dt>
@@ -211,7 +211,7 @@
 	</section>
 </section>
 <section data-min="5"><h1>The "POST" Request Method</h1></section>
-<section><h2>The "POST" Request Method</h2>
+<section><h2 class="NB">The "POST" Request Method</h2>
 	<section>
 		<dl class="fa">
 			<dt>POST request method is used to sent data to the server, like customer information, file upload etc.</dt>
@@ -233,7 +233,7 @@
 	</section>
 </section>
 <section data-min="5"><h1>Other HTTP Request Methods</h1></section>
-<section><h2>Other HTTP Request Methods</h2>
+<section><h2 class="advanced">Other HTTP Request Methods</h2>
 	<section><h3>HEAD</h3>
 		<p>Same as GET, but transfers the status line and header section only. No document body is returned!</p>
 	</section>
@@ -265,11 +265,11 @@
   <section>
   	<a href="images/asynchronous_vs_synchronous_request_responce.jpg"><img src="images/asynchronous_vs_synchronous_request_responce.jpg"></a>
   </section>
-  <section><h3>Resources</h3>
+  <!-- <section><h3>Resources</h3>
   	<dl class="fa">
-  		<dt><a href="https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9">6 Reasons Why JavaScript’s Async/Await Blows Promises Away (Tutorial)</a> @<a href="https://hackernoon.com">hackernoon.com</a></dt>
+  		<dt><a href="https://dev.to/gafi/7-reasons-to-always-use-async-await-over-plain-promises-tutorial-4ej9?ref=hackernoon.com">7 Reasons Why JavaScript Async/Await Is Better Than Plain Promises (Tutorial)</a> @<a href="https://hackernoon.com">hackernoon.com</a></dt>
   	</dl>
-  </section>
+  </section> -->
 </section>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!-- What is AJAX?								 					-->
@@ -578,6 +578,24 @@
 		<pre><code rel="JS" class="js">
 			var json = JSON.stringify(obj);
 		</code></pre>
+	</section>
+</section>
+
+<section data-min="20"><h1>Client-Side vs Server-Side libraries and frameworks</h1></section>
+<section><h2>Client-Side vs Server-Side Rendering libraries and frameworks</h2>
+	<section>
+		<dl class="fa" style="font-size: .9em">
+			<dt>Ember</dt>
+			<dd><a href="https://www.emberjs.com/">Ember</a> - Client-Side rendering</dd>
+			<dd><a href="https://ember-fastboot.com/">Ember-Fastboot</a> - Server-Side rendering</dd>
+			<dt>Vue</dt>
+			<dd><a href="https://vuejs.org/">vue.js</a> - Client-Side rendering</dd>
+			<dd><a href="https://nuxtjs.org/">nuxt.js</a> - Server-Side rendering for vue.js</dd>
+			<dt><a href="https://reactjs.org/">React</a> - it can render on the client-side and on the server-side</dt>
+			<dt>Angular</dt>
+			<dd><a href="https://angular.io/">Angular</a> - - Client-Side rendering</dd>
+			<dd><a href="https://angular.io/guide/universal">Angular Universal</a> - Server-Side rendering</dd>
+		</dl>
 	</section>
 </section>
 
