@@ -78,33 +78,42 @@
 <section><h2>Overview</h2>
   <section><h3>What is node?</h3>
   	<dl class="fa">
-  		<dt>Node.js is <span class="note">a JavaScript runtime</span> built on Chrome’s V8 JavaScript engine.</dt>
-  		<dd>A set of libraries on top of V8, focused on doing networking correctly.</dd>
-  		<dt>Node.js uses an <span class="note">event-driven</span>, <span class="note">non-blocking I/O</span> model that makes it lightweight and efficient.</dt>
-  		<dt>Node.js, as JS itself, is a <span class="note">single-threaded</span> (<a href="https://html.spec.whatwg.org/multipage/workers.html#workers">Web Workers APIs</a> are another story).</dt>
-  		<dt>Node.js is created by <a href="http://tinyclouds.org/">Ryan Dahl</a> (leaves the project at 2012)</dt>
+			<dt>Node.js is <span class="note">a JavaScript runtime</span> built on Chrome’s V8 JavaScript engine.</dt>
+			<dt>Node.js has a standard library for IO, networking and other common back-end tasks.</dt>
+  		<dt>Its community provides a vast set of libraries easily installed and managed with NPM (Node Package Manager)</dt>
   	</dl>
-  </section>
-  <section><h3>Install/Update</h3>
+	</section>
+	<section><h3>What is node?</h3>
+		<dl class="fa">
+			<dt>Node.js uses an <span class="note">event-driven</span>, <span class="note">non-blocking I/O</span> model that makes it lightweight and efficient.</dt>
+			<dt>Node.js, as JS itself, is a <span class="note">single-threaded</span> (<a href="https://html.spec.whatwg.org/multipage/workers.html#workers">Web Workers APIs</a> are another story).</dt>
+		</dl>
+	</section>
+	<section><h3>What is node?</h3>
+		<dl class="fa">
+			<dt>Node.js is created by <a href="http://tinyclouds.org/">Ryan Dahl</a> (leaves the project at 2012)</dt>
+		</dl>
+		<iframe src="https://www.youtube.com/embed/jo_B4LTHi3I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</section>
+  <section><h3>Install</h3>
   	<dl class="fa">
   		<dt>Install from: <a href="https://nodejs.org/en/">nodejs official site</a></dt>
-  		<dt class="advanced">Manage multiple active node.js versions:</dt>
+  		<dt class="advanced"><span class="advanced"></span>	Manage multiple active node.js versions:</dt>
   		<dd><a href="https://github.com/creationix/nvm">Node Version Manager (nvm)</a></dd>
   		<dd><a href="https://github.com/coreybutler/nvm-windows">nvm-windows</a></dd>
   	</dl>
-  </section>
+	</section>
+	<section><h3>Update</h3>
+		<pre><code rel="Terminal" class="bash">
+			npm install npm@latest -g
+		</code></pre>
+	</section>
   <section><h3>Check installed versions</h3>
   	<pre><code rel="Terminal" class="bash">
   		$ node --version
   		# node -v
   		# you should see the installed node version
   	</code></pre>
-  </section>
-  <section>
-  	<iframe src="https://www.youtube.com/embed/jo_B4LTHi3I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  	<!-- <dl class="fa">
-  		<dt><a href="https://youtu.be/jo_B4LTHi3I?start=1404">A sparkling phrase about Mackintosh</a></dt>
-  	</dl> -->
   </section>
   <section><h3>Node and EcmaScript Support</h3>
   	<dl class="fa">
@@ -120,13 +129,91 @@
   </section>
 </section>
 
+<section data-min="20"><h1>Nodejs Basics</h1></section>
+<section><h2>Nodejs Basics</h2>
+	<section><h3>Blocking vs. Non-blocking</h3>
+		<a href="images/blocking_IO.gif"><img src="images/blocking_IO.gif" alt="" style="height: 30vh;"></a>
+		<a href="images/non_blocking_IO.gif"><img src="images/non_blocking_IO.gif" alt="" style="height: 30vh;"></a>
+		<p>Reference: <a href="https://sudonull.com/post/164210-Visualization-of-the-flow-of-work-in-Nodejs">Visualization of the flow of work in Node.js</a></p>
+	</section>
+	<section><h3>NodeJS Event Loop - Diagram</h3>
+		<a href="images/nodejs_eventloop.png"><img src="images/nodejs_eventloop.png" alt=""></a>
+	</section>
+	<section><h3>NodeJS Event Loop Overview</h3>
+		<dl class="fa">
+			<dt>NodeJS is <span class="note">a Single Thread application</span>. But it is built on top of a platform written in C++, which uses multi-thread to carry out tasks at the same time.</dt>
+			<dt>Each event (like user request) is placed into an Event Queue (organized as FIFO: First In First Out).</dt>
+			<dt>The Event Loop is an endless loop, which passes the requests to the C++ based Thread Pool and each request is registered a Callback function</dt>
+			<dt>When the request is finished handling, the corresponding  Callback function will be executed.</dt>
+		</dl>
+	</section>
+	<section><h3>Blocking vs Non-blocking IO - example</h3>
+		<pre><code rel="JS" class="js">
+			const fs = require('fs');
+
+			let fileName = './someData.txt';
+
+			function blockingRead(fileName) {
+				const data = fs.readFileSync(fileName, 'utf8');
+				// blocks here until file is read
+
+				console.log(`Sync data read:`);
+				console.log(data);
+			}
+
+			function nonBlocking(fileName) {
+				fs.readFile(fileName,'utf8', (err, data) => {
+					if (err) {
+						throw err;
+					}else{
+						console.log(`Async data read:`);
+						console.log(data);
+					}
+				});
+
+				// the callback  will be executed when data are readed.
+			}
+
+			console.log(`~~~ 1 ~~~ `);
+			blockingRead(fileName);
+			console.log(`~~~ 2 ~~~ `);
+
+			console.log(`~~~ 3 ~~~ `);
+			nonBlocking(fileName);
+			console.log(`~~~ 4 ~~~ `);
+		</code></pre>
+	</section>
+</section>
+
+<section data-min="50"><h1>Nodejs - server demo</h1></section>
+<section><h2>Nodejs - server demo</h2>
+	<section><h3>Creating simple server</h3>
+		<pre><code rel="JS" class="js">
+			const http = require('http');
+
+			const hostname = '127.0.0.1';
+			const port = process.env.PORT || 8080;
+
+			const server = http.createServer((req, res) => {
+				res.statusCode = 200
+				res.setHeader('Content-Type', 'text/plain')
+				res.end('Hello from My Server!\n')
+			});
+
+			server.listen(port, hostname, () => {
+				console.log(`Nodejs server is running at http://${hostname}:${port}/`)
+			});
+		</code></pre>
+	</section>
+</section>
+<!--
 <section data-min="5"><h1>Node Architecture</h1></section>
 <section><h2>Node Architecture</h2>
   <section><h3>Overview</h3>
 
   </section>
-</section>
-
+</section> -->
+<!--
 
 <section data-min="5"><h1>The Event Loop Model</h1></section>
 <section><h2>The Event Loop Model</h2>
@@ -135,26 +222,67 @@
 
   	</dl>
   </section>
-</section>
+</section> -->
 
-
-<section data-min="20"><h1>npm</h1></section>
-<section><h2>npm</h2>
+<section data-min="5"><h1>The node package manager (npm)</h1></section>
+<section><h2>The node package manager (npm)</h2>
 	<section><h3>Overview</h3>
-  	<dl class="fa">
-  		<dt><a href="https://www.npmjs.com/">npm</a> is the package manager for JavaScript</dt>
-  		<dt>It's the world’s largest software registry (<a href="http://www.modulecounts.com/">modulecounts.com</a>)</dt>
-  	</dl>
-  </section>
-  <section><h3>Install/Update</h3>
-  	<dt>Install</dt>
-  	<dt>Update:</dt>
-  		<pre><code rel="Linux" class="bash">
-  			# you may need sudo if you've installed node globally
-  			npm install npm@latest -g
-  		</code></pre>
-  </section>
+		<dl class="fa">
+			<dt><a href="https://www.npmjs.com/">npm</a> is an open source package manager for JavaScript code.</dt>
+			<dt>Helps the developers to share and re-use packages.</dt>
+			<dt>It's the world’s largest software registry (<a href="http://www.modulecounts.com/">modulecounts.com</a>)</dt>
+		</dl>
+	</section>
+	<section><h3>What is NPM?</h3>
+		<dl class="fa">
+			<dt>NPM allows you to <span class="note">install external node packages</span> (utility functions, libraries or whole frameworks) from the command line. They are the <span class="note">dependencies</span> of your application.</dt>
+			<dt>You can install these packages either to your global node package folder or to your local project folder.</dt>
+			<dd>Global node packages are accessible from everywhere in the terminal and you have to install them only once to your global directory</dd>
+			<dd>Local node packages are accessible only from your project folder</dd>
+		</dl>
+	</section>
+	<section><h3>What is NPM - official video</h3>
+		<iframe width="670" height="480" src="https://www.youtube.com/embed/x03fjb2VlGY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</section>
+	<section><h3>Install/Update</h3>
+		<dt>npm is installed with Node.js</dt>
+		<dt>Update:</dt>
+		<pre><code rel="Linux" class="bash">
+			# you may need sudo if you've installed node globally
+			npm install npm@latest -g
+		</code></pre>
+	</section>
+	<section><h3>initialize a npm project</h3>
+		<dl class="fa">
+			<dt>Before starting your project, which will use node modules, you have to initialize the project, and write the <span class="note">package.json</span> file</dt>
+			<dt>Only when you have that file, you can install new local packages via npm</dt>
+		</dl>
+		<pre><code rel="Terminal" class="bash">
+			#initialize a npm project (-y == defaults for package.json)
+			npm init -y
+		</code></pre>
+	</section>
+	<section><h3>share a npm project</h3>
+		<dl class="fa">
+			<dt>the <code>package.json</code> enables you to share your project with other developers without sharing all the node packages (the dependencies).</dt>
+			<dt>Someone who will use your project can simply install all packages by using <code>npm install</code> on the command line.</dt>
+			<dt><code>npm install</code> script takes all the dependencies listed in the package.json file and installs them in the node_modules folder</dt>
+		</dl>
+	</section>
+	<section><h3>package installation</h3>
+		<pre><code rel="Terminal" class="bash">
+			# Install package locally
+			npm install &lt;package&gt;
+
+			# Install package globally
+			npm install -g &lt;package&gt;
+		</code></pre>
+		<dl class="fa">
+			<dt>The installed package will automatically appear in a folder called <span class="note">node_modules</span> and will be listed in the package.json file next to your other dependencies.</dt>
+		</dl>
+	</section>
 </section>
+
 
 <section data-min="5"><h1>Nodejs Pros/Cons</h1></section>
 <section><h2>Nodejs Pros/Cons</h2>
@@ -216,8 +344,8 @@
 			keyboard: true,
 			history: true,
 			center: true,
-			// width: '100%',
-			// height: '100%',
+			width: 1280,
+			height: 1024,
 			// slide transition
 			transition: 'concave', // none/fade/slide/convex/concave/zoom
 			// Factor of the display size that should remain empty around the content
