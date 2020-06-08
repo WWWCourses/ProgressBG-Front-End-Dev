@@ -290,9 +290,11 @@ a.home_link{
     height: 5em;
     margin: 0 auto;
     margin: 0;
-    background: none;
+    background: #FFF3;
     vertical-align: middle;
     border: none;
+    border-radius:0%;
+    /* padding: .3em; */
     box-shadow: none;
     /*margin-bottom: -1px;*/
 }
