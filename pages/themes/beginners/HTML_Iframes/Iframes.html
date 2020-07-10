@@ -74,6 +74,8 @@
 	</section>
 </section>
 
+
+<section data-min="50"><h1>Какво е iframe?</h1></section>
 <section><h2>Какво е iframe?</h2>
     <section>
         <dl class="fa">
@@ -110,15 +112,16 @@
     </section>
 </section>
 
-<section><h2>Примери за употреба</h2></section>
-<section><h4>Iframe, в който се отваря съдържанието на различни линкове</h4>
+<section data-min="50"><h1>Iframe, в който се отваря съдържанието на различни линкове</h1></section>
+<section><h2>Iframe, в който се отваря съдържанието на различни линкове</h2>
     <section>
         <iframe class="resultFrame" scrolling='no' title='Multiple links targeted to one Iframe'
-        src='//codepen.io/webdesigncourse/embed/rWZqxR/?height=500&theme-id=20230&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/rWZqxR/'>Multiple links targeted to one Iframe</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+        src='//codepen.io/webdesigncourse/embed/rWZqxR/?height=500&theme-id=20230&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/rWZqxR/'>Multiple links targeted to one Iframe</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
     </section>
 </section>
-<section><h4>Вмъкване на карта от Google Maps</h4>
+
+<section data-min="50"><h1>Вмъкване на карта от Google Maps</h1></section>
+<section><h2>Вмъкване на карта от Google Maps</h2>
     <section>
         <p>За да намерим URL-а на отрязъка от картата, която желаем:</p>
         <dl class="fa">
@@ -127,17 +130,18 @@
             <dt>В показания модален прозорец избираме таба "Embed map"</dt>
             <dt>В прозореца се показва отново картата, като желания адрес е центриран в прозореца.</dt>
             <dt>Копираме HTML кода даден в текстовото поле.</dt>
-            <dt>В нашия HTML файл, поставяме копираният код и редактираме атрибутите на iframe-a</dt>
+            <dt>В нашия HTML файл, поставяме копираният код и редактираме атрибутите на iframe-a (ако е необходимо).</dt>
         </dl>
         <pre><code rel="HTML">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.523298557758!2d23.321390480093637!3d42.69263917926799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85729d853a49%3A0xc5257e42efdfe9b5!2spl.+%22Petko+R.+Slaveykov%22+11%2C+1000+Sofia!5e0!3m2!1sen!2sbg!4v1481210129500"></iframe>
         </code></pre>
     </section>
-    <section><h4>Резултат</h4>
+    <section><h3>Резултат</h3>
         <iframe class="resultFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.523298557758!2d23.321390480093637!3d42.69263917926799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85729d853a49%3A0xc5257e42efdfe9b5!2spl.+%22Petko+R.+Slaveykov%22+11%2C+1000+Sofia!5e0!3m2!1sen!2sbg!4v1481210129500" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </section>
 </section>
-<section><h4>Вмъкване на карта от bgmaps</h4>
+<section data-min="50"><h1>Вмъкване на карта от bgmaps</h1></section>
+<section><h2>Вмъкване на карта от bgmaps</h2>
     <section>
         <p>За да намерим URL-а на отрязъка от картата, която желаем:</p>
         <dl class="fa">
@@ -147,25 +151,14 @@
             <dt>Копираме кода и го поставяме в нашия код, като редактираме атрибутите на iframe-a</dt>
         </dl>
     </section>
-    <section><h4>Резултат</h4>
-        <iframe class="resultFrame" src="http://www.bgmaps.com/link/map/51902F222AFCB87E2EECFAD06BD01AB4"></iframe>
+    <section><h3>Резултат</h3>
+        <iframe width="300" height="250" frameborder="0" scrolling="no" src="https://www.bgmaps.com/link/map/16F5DC94DD2C7ECC0576301A8B988408"></iframe>
     </section>
 </section>
-<section><h4>Вмъкване на Pen от codepen.io</h4>
-    <section>
-        <ol>
-                <li>Влезте във страницата на избрания Pen.</li>
-                <li>В долния ляв край на страницата има бутон 'Embed', който натискате.</li>
-                <li>За да ползвате генериран от codepen.io <code><b>iframe</b></code> елемент, изберете таба <pre class="inline"><code class="html">iframe</code></pre></li>
-                <li>Копирате кодът във полето и го поставяте на желаното от вас място в страницата.</li>
-            </ol>
-    </section>
-    <section>
-        <p>Повече информация за вграждане на Pens   : </p>
-        <a href="https://blog.codepen.io/documentation/features/embedded-pens/">Embedded Pens - CodePen Blog</a>
-    </section>
-</section>
-<section><h4>Вмъкване на YouTube Видео</h4>
+
+
+<section data-min="50"><h1>Вмъкване на YouTube Видео</h1></section>
+<section><h2>Вмъкване на YouTube Видео</h2>
     <section>
         <dl class="fa">
             <dt>Кликваме с десния бутон на мишката, върху youtube видеото, което желаем да използваме.</dt>
@@ -173,6 +166,10 @@
             <dt>В нашия HTML файл, поставяме копираният код и редактираме атрибутите на ifram-a</dt>
             <dt class="note">За да има възможност видеото да се гледа на цял екран, трябва да присъства атрибута allowfullscreen</dt>
         </dl>
+    </section>
+    <section class="advanced">
+        <p>Повече настройки за това как да се изобрази YouTube видео: <a href="https://developers.google.com/youtube/player_parameters">YouTube Embedded Players and Player Parameters</a></p>
+        <p></p>
     </section>
     <section><h4>Пример</h4>
         <pre><code rel="HTML" class="html">
@@ -188,13 +185,35 @@
                 allowfullscreen
                 onload="onYouTubeIframeAPIReady(this)"></iframe>
     </section>
-    <section><h4>И отново - iframe, в който се отваря съдържанието на различни линкове</h4>
-        <iframe  title='youtubeTargetedInFrame' src='https://codepen.io/webdesigncourse/embed/OOeOow/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='min-height: 70vh;width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/OOeOow/'>youtubeTargetedInFrame</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+    <section><h4>iframe, в който се отваря съдържанието на различни видео клипове:</h4>
+        <iframe  title='youtubeTargetedInFrame' src='https://codepen.io/webdesigncourse/embed/OOeOow/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='min-height: 70vh;width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/OOeOow/'>youtubeTargetedInFrame</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>
+    </section>
+</section>
+
+<section data-min="50"><h1>Вмъкване на Pen от codepen.io</h1></section>
+<section><h2>Вмъкване на Pen от codepen.io</h2>
+    <section>
+        <ol>
+                <li>Влезте във страницата на избрания Pen.</li>
+                <li>В долния ляв край на страницата има бутон 'Embed', който натискате.</li>
+                <li>За да ползвате генериран от codepen.io <code><b>iframe</b></code> елемент, изберете таба <pre class="inline"><code class="html">iframe</code></pre></li>
+                <li>Копирате кодът във полето и го поставяте на желаното от вас място в страницата.</li>
+            </ol>
     </section>
     <section>
-        <p>Повече настройки за това как да се изобрази YouTube видео: <a href="https://developers.google.com/youtube/player_parameters">YouTube Embedded Players and Player Parameters</a></p>
-        <p></p>
+        <p>Повече информация за вграждане на Pens   : </p>
+        <a href="https://blog.codepen.io/documentation/features/embedded-pens/">Embedded Pens - CodePen Blog</a>
+    </section>
+</section>
+
+<section data-min="50"><h1>weather widget</h1></section>
+<section><h2>weather widget</h2>
+    <section>
+        <dl class="fa">
+            <dt>
+
+            </dt>
+        </dl>
     </section>
 </section>
 
