@@ -12,7 +12,7 @@
         }
         .section strong{
             display: block;
-            margin: 1em 0 .7em 0;
+            /* margin: 1em 0 .7em 0; */
         }
     </style>
 </head>
@@ -23,16 +23,16 @@
             <div><em><strong>Задача: </strong></em>Да се напише <a href="https://validator.w3.org/#validate_by_input">валиден</a> (пренебрегваме 'warnings') HTML код, който реализира <b>HTML Форма</b>, с функционалност, показана на следните изображения:</div>
             <div class="section">
                 <strong>1. Формата, преди да бъде попълнена:</strong>
-                <a href="InitialView.png" title="Click to view bigger image"><img src="InitialView.png" width="80%"></a>
+                <a href="InitialView.png" title="Click to view bigger image"><img src="InitialView.png" width="70%"></a>
             </div>
             <div class="section">
                 <strong>2. Попълнената форма, преди изпращането:</strong>
-                <a href="BeforeSendView.png" title="Click to view bigger image"><img src="BeforeSendView.png" width="80%"></a>
+                <a href="BeforeSendView.png" title="Click to view bigger image"><img src="BeforeSendView.png" width="70%"></a>
             </div>
             <div class="section">
-                <strong>3. Генерирания от браузера URL, след натискане на бутона "Изпрати" е:</strong>
+                <strong>3. Генерирания от браузера URL, след натискане на бутона "Изпрати" трябва да бъде:</strong>
                 <div>
-                    <code>file:///back-end/registration.py?userName=Iva&userSurName=Popova&gender=on&comment=Your+site+is+awesome%21</code>
+                    <code>http://127.0.0.1:5502/cgi-bin/registration.py?userName=Iva&userSurName=Popova&gender=f&comment=Your+site+is+awesome%21</code>
                 </div>
             </div>
         </div>

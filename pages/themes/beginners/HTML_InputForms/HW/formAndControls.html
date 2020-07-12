@@ -24,7 +24,7 @@
 </head>
 <body>
 	<h2>Регистрация</h2>
-	<form action="/back-end/registration.py" method="get">
+	<form action="/cgi-bin/registration.py" method="get">
 		<fieldset>
 			<legend>Лични данни</legend>
 			<div>
@@ -37,8 +37,8 @@
             </div>
 			<div>
 				<label>Пол:</label>
-				<label>мъж: <input type="radio" name="gender"></label>
-				<label>жена: <input type="radio" name="gender"></label>
+				<label>мъж: <input type="radio" name="gender" value="m"/label>
+				<label>жена: <input type="radio" name="gender" value="f"></label>
 			</div>
 		</fieldset>
         <div>
