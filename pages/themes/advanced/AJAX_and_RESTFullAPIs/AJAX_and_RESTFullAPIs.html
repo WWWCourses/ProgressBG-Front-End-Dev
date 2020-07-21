@@ -487,7 +487,7 @@
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!-- Preamble: Data exchange formats: XML, JSON 					-->
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-<section data-min="5"><h1>Preamble: Data exchange formats: XML, JSON</h1></section>
+<section data-min="5"><h1>Data exchange formats: XML, JSON</h1></section>
 <section><h2>Data exchange formats: XML, JSON</h2>
 	<section>
 		<dl class="fa">
@@ -578,6 +578,79 @@
 		<pre><code rel="JS" class="js">
 			var json = JSON.stringify(obj);
 		</code></pre>
+	</section>
+</section>
+
+
+<section data-min="20"><h1>Setup fake REST API json-server and DB</h1></section>
+<section><h2>Setup fake REST API json-server and DB</h2>
+	<section><h3>Overview</h3>
+		<dl class="fa">
+			<dt>We can use a fake REST API <a href="https://www.npmjs.com/package/json-server">json-server</a>, to mock the back-end endpoints.</dt>
+			<dt>It is freely  available on NPM and ready to use.</dt>
+			<dt>Please note, that this server is useful only for learning purposes and you must not use it for any production code.</dt>
+		</dl>
+	</section>
+	<section><h3>Installation</h3>
+		<dl class="fa">
+			<dt>Install <a href="https://www.npmjs.com/package/json-server">json-server</a></dt>
+			<dd>To prevent polluting your global environment, it's recommended to install NPM packages locally, i.e. without the <code>-g</code> option.</dd>
+		</dl>
+		<pre><code rel="Terminal" class="bash">
+			# navigate to your project root folder
+			$ cd /path/to/TodoApp
+
+			# install json-server package
+			npm install json-server
+		</code></pre>
+	</section>
+	<section><h3>Create the DB file</h3>
+		<dl class="fa">
+			<dt>In project root folder create the file <code>db.json</code> with next content:</dt>
+		</dl>
+		<pre><code rel="db.json" class="json">
+			{
+				"todos":[
+					{
+						"id": 1,
+						"title": "Learn HTML",
+						"completed": false
+					},
+					{
+						"id": 2,
+						"title": "Learn CSS",
+						"completed": false
+					},
+					{
+						"id": 3,
+						"title": "Learn JavaScript",
+						"completed": false
+					}
+				]
+			}
+		</code></pre>
+	</section>
+	<section><h3>Start the server</h3>
+		<dl class="fa">
+			<dt>All locally installed NPM packages place the executable commands in <code>./node-modules/.bin/</code> folder. You can start json-server by:</dt>
+			<pre><code rel="Terminal" class="bash">
+				$ ./node_modules/.bin/json-server --watch db.json
+			</code></pre>
+			<dt class="advanced">Or you can use <a href="https://www.npmjs.com/package/npx">npx</a> which executes 'command' either from a local node_modules/.bin, or from a central cache, installing any packages needed in order for 'command' to run.</dt>
+		</dl>
+	</section>
+	<section><h3>json-server usage notes</h3>
+		<dl class="fa">
+			<dt>Your request body JSON should be object enclosed, just like the GET output. (for example {"name": "Foobar"})</dt>
+			<dt>Id values are not mutable. Any id value in the body of your PUT or PATCH request will be ignored. Only a value set in a POST request will be respected, but only if not already taken.</dt>
+			<dt>A POST, PUT or PATCH request should include a Content-Type: application/json header to use the JSON in the request body. Otherwise it will result in a 200 OK but without changes being made to the data.</dt>
+		</dl>
+	</section>
+	<section><h3>References</h3>
+		<dl class="fa">
+			<dt>Video Tutorial: <a href="https://egghead.io/lessons/javascript-creating-demo-apis-with-json-server">Creating demo APIs with json-server</a></dt>
+			<dt>Official docs: <a href="https://www.npmjs.com/package/json-server">json-server</a></dt>
+		</dl>
 	</section>
 </section>
 
