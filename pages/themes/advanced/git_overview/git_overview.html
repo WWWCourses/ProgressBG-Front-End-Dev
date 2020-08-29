@@ -126,7 +126,7 @@
 	</section>
 	<section><h3 class="note">Initialize a Git repository</h3>
 		<pre><code rel="Terminal" class="bash" data-noescape>
-				$ git init
+				git init
 			</code></pre>
 		<dl class="fa">
 			<dt>git will start to track the Current Working Directory (CWD).</dt>
@@ -137,7 +137,7 @@
 		<p>Also known as <span class="note">adding files content to the index</span></p>
 		<pre><code rel="Terminal" class="bash" data-noescape>
 				# to stage only certain file/path:
-				$ git add <i>path</i>
+				git add <i>path</i>
 
 				# to stage all files in CWD:
 				git add -A
@@ -151,17 +151,47 @@
 			</dt>
 		</dl>
 	</section>
+	<section><h3>Setup your git identity</h3>
+		<dl class="fa">
+			<dt>Before your first commit, you have to provide your user name and email.</dt>
+			<dt>This information will be stamped in each of you commits and other git activities you make.</dt>
+		</dl>
+		<pre><code rel="Terminal" class="bash">
+			# per project - make sure you type next commands while you are in the root git folder
+			git config user.email "your_mail@mail.com"
+			git config user.name "User Name"
+
+			# or if you wish to setup your git identity on global level, you can use the --global option:
+			git config --global user.email "your_mail@mail.com"
+			git config --global user.name "User Name"
+		</code></pre>
+	</section>
 	<section><h3 class="note">Commit files to local repository</h3>
 		<pre><code rel="Terminal" class="bash" data-noescape>
-				# commit files - the default editor for git will be opened to write your Commit Message
-				$ git commit
+				# commit files - the default system editor for git will be opened to write your Commit Message
+				git commit
 
 				# commit and write the Commit Message
-				$ git commit -m'Your Commit Message'
+				git commit -m'Your Commit Message'
 			</code></pre>
 		<dl class="fa">
-			<dt>You can set a default editor by your choice:</dt>
-			<dd><a href="https://stackoverflow.com/questions/8951275/how-can-i-make-sublime-text-the-default-editor-for-git/23934471">How can I make Sublime Text the default editor for Git?</a></dd>
+			<dt>If you want to make VSCode your default git editor:</dt>
+			<pre><code rel="Terminal" class="bash">
+				git config --global core.editor "code --wait"
+			</code></pre>
+			<!-- <dd><a href="https://stackoverflow.com/questions/8951275/how-can-i-make-sublime-text-the-default-editor-for-git/23934471">How can I make Sublime Text the default editor for Git?</a></dd> -->
+		</dl>
+	</section>
+	<section><h3>Git status and commit history</h3>
+		<dl class="fa">
+			<dt>We often need to check a git repository status (if there are any non-commited changes and etc.) </dt>
+			<pre><code rel="Terminal" class="bash">
+				git status
+			</code></pre>
+			<dt>Or to check the repository commits history</dt>
+			<pre><code rel="Terminal" class="bash">
+				git log
+			</code></pre>
 		</dl>
 	</section>
   <section><h3>The Three States</h3>
@@ -182,22 +212,22 @@
   	<p>Open a Terminal/Command Prompt</p>
   	<pre><code rel="Terminal" class="bash" data-noescape style="font-size: .7em">
   			# Create your project directory
-  			$ mkdir my_project
+  			mkdir my_project
 
   			# go into it
-  			$ cd my_project
+  			cd my_project
 
   			# initialize the new repository
-  			$ git init
+  			git init
 
   			# do some work and save your files
-  			$ echo "I'm working hard..." > file1.txt
+  			echo "I'm working hard..." > file1.txt
 
   			# stage all your work
-  			$ git add -A
+  			git add -A
 
   			# commit your work
-  			$ git commit -am'Work 1 Done'
+  			git commit -am'Work 1 Done'
   	</code></pre>
   </section>
 </section>
