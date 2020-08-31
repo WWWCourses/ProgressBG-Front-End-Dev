@@ -70,7 +70,7 @@
 			</div>
 			<div class="company">
 				<a href="http://progressbg.net/kurs-po-web-design/">
-				<img src="../../../../outfit/images/logos/ProgressBG_logo_529_127.png">
+				<img src="../../../../outfit/images/logos/ProgressBG_logo_529_127.png" alt="ProgressBG_logo_529_127">
 				</a>
 			</div>
 		</div>
@@ -89,11 +89,11 @@
 	</section>
 </section>
 
-<section data-min="5"><h1>Как работи една компютърна програма</h1></section>
+<section data-min="5" id="whatsInAProgram"><h1>Как работи една компютърна програма</h1></section>
 <section><h2 class="advanced">Как работи една компютърна програма</h2>
 	<section>
 		<p>За да започнете с първият си език за програмиране, не е необходимо да сте запознати с понятията, дадени в следното видео, но все пак помага ;)</p>
-		<iframe  src="https://www.youtube.com/embed/QXjU9qTsYCc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<iframe  src="https://www.youtube.com/embed/QXjU9qTsYCc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</section>
 </section>
 
@@ -172,14 +172,14 @@
 			let y = 2;
 			let z;
 		</code></pre>
-		<a href="images/variables_in_RAM.png" title="click for bigger image"><img src="images/variables_in_RAM.png" style="height: 80vh"></a>
+		<a href="images/variables_in_RAM.png" title="click for bigger image"><img src="images/variables_in_RAM.png" alt="variables_in_RAM" style="height: 80vh"></a>
 	</section>
 	<section style="font-size: .9em"><h3>Деклариране/Дефиниране</h3>
 		<dl class="fa">
 			<dt>Създаването на една променлива се нарича <span class="note">деклариране</span> на променлива.
 			В JavaScript това става чрез запазената за езика дума <code class="note">var</code>.
 			</dt>
-			<dt></i>В ES 6, се въвеждат и нови думи за деклариране на променливи: <code class="note">let</code> и <code class="note">const</code>, които ще разгледаме след като изясним понятията "scope" и "hoisting".</dt>
+			<dt>В ES 6, се въвеждат и нови думи за деклариране на променливи: <code class="note">let</code> и <code class="note">const</code>, които ще разгледаме след като изясним понятията "scope" и "hoisting".</dt>
 			<dt>Ако желаем, може при създаването на променливата, да запишем в нея конкретна стойност - т.е. да <span class="note">дефинираме</span>(<span>инициализираме</span>) променливата.</dt>
 			<dt>В JavaScript, една променлива винаги е дефинирана, тъй като ако не зададем експлицитно стойност при декларацията, то в променливата се записва стойността <span class="note">undefined</span>.</dt>
 		</dl>
@@ -238,11 +238,11 @@
 	<section><h3>Конвенции за именуване на променливи</h3>
 		<p>Препоръчва се имената на променливите да описват данните, които възнамеряваме да съхраняваме в тях.</p>
 		<p>Не бихте искали програмата ви да изглежда така:</p>
-		<p><img src="images/Messy_storage_room_with_boxes.jpg" style="height: 60vh"><br><a class="resourseAttribution" href="https://upload.wikimedia.org/wikipedia/commons/3/39/Messy_storage_room_with_boxes.jpg">From Wikimedia Commons</a></p>
+		<p><img src="images/Messy_storage_room_with_boxes.jpg" alt="Messy_storage_room_with_boxes" style="height: 60vh"><br><a class="resourseAttribution" href="https://upload.wikimedia.org/wikipedia/commons/3/39/Messy_storage_room_with_boxes.jpg">From Wikimedia Commons</a></p>
 	</section>
 	<section><h3>Конвенции за именуване на променливи</h3>
 		<p>А по-скоро така: </p>
-		<img src="images/archive-1850170_640.jpg" style="height: 70vh;">
+		<img src="images/archive-1850170_640.jpg" alt="archive-1850170_640" style="height: 70vh;">
 	</section>
 	<section><h3>Конвенции за именуване на променливи</h3>
 		<dl class="fa">
@@ -461,13 +461,9 @@
 	</dl>
 </section>
 
-<section id="Operators"><h1>Оператори</h1></section>
-<section><h2>Оператори</h2>
-	<section>
-		<p>или какво можем да правим с променливите?</p>
-		<a href="http://www.w3schools.com/jsref/jsref_operators.asp">http://www.w3schools.com/jsref/jsref_operators.asp</a>
-	</section>
-	<section><h3>Аритметични оператори (Arithmetic operators)</h3>
+<section data-min="50" id="ArithmeticOperators"><h1>Аритметични оператори (Arithmetic operators)</h1></section>
+<section><h2>Аритметични оператори (Arithmetic operators)</h2>
+	<section id="ArithmeticOperatorsBasics"><h3>basics</h3>
 		<ul class="fa">
 			<li>Събиране: '<code class="note">+</code>'
 				<pre><code rel="JS" class="js">
@@ -496,57 +492,67 @@
 			</li>
 		</ul>
 	</section>
-	<section><h3>Аритметични оператори (Arithmetic operators)</h3>
-		<ul class="fa">
-			<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()">Делене по Модул (остатък)</a>: '<code class="note">%</code>'
-				<p>Връща остатъка от целочислено делене</p>
-				<pre><code rel="JS" class="js">
-					console.log(3%1); //0
-					console.log(3%2); //1
-					console.log(3%3); //0
-					console.log(3%4); //3
-				</code></pre>
-			</li>
-			<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation_(**)">Степенуване</a>: '<code class="note">**</code>'
-				<p class="note">Въвежда се от 2016г. в <b>ES7</b> и работи само с най-новите версии на браузерите </p>
-				<pre><code rel="JS" class="js">
-					console.log(2**10); //1024
-				</code></pre>
-				<p>За по-стари браузери използваме Math.power()</p>
-				<pre><code rel="JS" class="js">
-						console.log(Math.pow(2,10)); //1024
-				</code></pre>
-			</li>
-		</ul>
+	<section id="modulo"><h3>Делене по Модул (Modulo Operation): '<code class="note">%</code>'</h3>
+		<p>Връща остатъка от целочислено делене</p>
+		<pre><code rel="JS" class="js">
+			console.log( 0 % 3 ); // 0
+			console.log( 1 % 3 ); // 1
+			console.log( 2 % 3 ); // 2
+			console.log( 3 % 3 ); // 0
+			console.log( 4 % 3 ); // 1
+			console.log( 5 % 3 ); // 2
+			console.log( 6 % 3 ); // 0
+			console.log( 7 % 3 ); // 1
+			console.log( 8 % 3 ); // 2
+			console.log( 9 % 3 ); // 0
+		</code></pre>
+		<p>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder @MDN</a></p>
 	</section>
-	<section><h3>Аритметични оператори (Arithmetic operators)</h3>
-		<ul class="fa">
-
-			<li>Инкрементиране: '<code class="note">++</code>'
-				<pre><code rel="JS" class="js">
-					var i = 2;
-
-					//postfix increment:
-					var j = i++; // j = 2, i = 3
-
-					//prefix increment:
-					var j = ++i; // j = 3, i = 3
-				</code></pre>
-			</li>
-			<li>Декрементиране: '<code class="note">--</code>'
-				<pre><code rel="JS" class="js">
-					var i = 2;
-
-					//postfix decrement:
-					var j = i--; // j = 2, i = 1
-
-					//prefix decrement:
-					var j = --i; // j = 1, i = 1
-				</code></pre>
-			</li>
-		</ul>
+	<section id="exponention"><h3>Степенуване (Exponentiation): <code class="note">**</code></h3>
+		<p class="note">Въвежда се от 2016г. в <b>ES7</b>. Внимавайте, ако трябва да поддържате по-стари браузъри: <a href="https://caniuse.com/#search=**">caniuse **</a></p>
+		<pre><code rel="JS" class="js">
+			console.log(2**10); //1024
+		</code></pre>
+		<p>За по-стари браузери използваме Math.power()</p>
+		<pre><code rel="JS" class="js">
+				console.log(Math.pow(2,10)); //1024
+		</code></pre>
+		<p>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Степенуване</a> @MDN</p>
 	</section>
-	<section><h3>Increment - examples</h3>
+	<section id="increment"><h3>Инкрементиране (Increment)</h3>
+		<dl class="fa">
+			<dt>Увеличава стойността на променлива с 1 и връща стойност.</dt>
+			<dt>Има 2 записа:</dt>
+			<dd><span class="note">префиксен (++i)</span>: <span>променливата се увеличава с 1. Стойността на израза е <span class="note">i+1</span></span>.</dd>
+			<dd><span class="note">суфиксен (i++)</span>: <span>променливата се увеличава с 1. Стойността на израза е <span class="note">i</span></span></dd>
+			<pre><code rel="JS" class="js">
+				var i = 2;
+
+				//postfix increment:
+				var j = i++; // j = 2, i = 3
+
+				//prefix increment:
+				var j = ++i; // j = 3, i = 3
+			</code></pre>
+			<dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment">Increment @MDN</a></dt>
+		</dl>
+	</section>
+	<section id="decrement"><h3>Декрементиране (Decrement)</h3>
+		<dl class="fa">
+			<dt>Намалява стойността на променлив с 1. Аналогичен на инкремента.</dt>
+			<pre><code rel="JS" class="js">
+				var i = 2;
+
+				//postfix decrement:
+				var j = i--; // j = 2, i = 1
+
+				//prefix decrement:
+				var j = --i; // j = 1, i = 1
+			</code></pre>
+			<dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement">Increment @MDN</a></dt>
+		</dl>
+	</section>
+	<section id="incrementExamples1"><h3>Increment - examples</h3>
 		<pre><code rel="JS" class="js">
 			var x = 1;
 			console.log(x++); //1
@@ -557,7 +563,7 @@
 			console.log(y);   //2
 		</code></pre>
 	</section>
-	<section><h3>Increment - examples</h3>
+	<section id="incrementExamples2"><h3>Increment - examples</h3>
 			<pre><code rel="JS" class="js">
 				var x = 1;
 				var y = 1;
@@ -568,7 +574,7 @@
 				console.log(`y = ${y}`); // y = 2
 			</code></pre>
 	</section>
-	<section><h3>Math object methods</h3>
+	<section id="MathObject"><h3>Math object methods</h3>
 		<p>За по-сложни математически операции, може да използвате методите на вградения в езика <a href="https://www.w3schools.com/js/js_math.asp">Math object</a> </p>
 		<pre><code rel="JS" class="js">
 			Math.round(3.65); //4
@@ -577,71 +583,17 @@
 			Math.max(1,2,3,4,5); // 5
 		</code></pre>
 	</section>
-	<section><h3>Оператор за присвояване (Assignment operator)</h3>
-		<dl class="fa">
-			<dt>Assignment '<code class="note">=</code>'
-				<pre><code rel="Syntax" class="js">
-					LHS = RHS;
-				</code></pre>
-				<dd style="font-size: .8em">LHS: Left Hand Side: трябва да бъде декларирана променлива. В противен случай ще се създаде <span class="note">глобална променлива</span>, което е изключително лоша практика.</dd>
-			<dd style="font-size: .8em">RHS: Right Hand Side: <strong><span class="note">израз</span>, който се изчислява</strong> и стойността му се записва в LHS променливата</dd>
-				<pre><code rel="JS" class="js" style="font-size: 1em">
-					// декларираме променливите x и y:
-					var x, y;
+</section>
 
-					// записваме в паметта, сочена от x, числото 3:
-					x = 3;
-
-					// в y записваме стойността на x:
-					y = x;
-
-					// в x записваме стойността на x, повдигната на степен 2:
-					x = x ** 2; // след този израз в x имаме стойността 9
-				</code></pre>
-			</dt>
-		</dl>
-	</section>
-	<section><h3>Оператор за присвояване (Assignment operator)</h3>
-		<dl class="fa">
-			<dt>Операцията "присвояване" връща стойност! И това е стойноста, която ще се запише в LHS променливата</dt>
-			<dt>Поради това, можем да имаме няколко оператора за присвояване в израз:</dt>
-		</dl>
-		<pre><code rel="JS" class="js">
-			// декларираме променливите x и y
-			let x;
-			let y;
-
-			// присвояваме и на двете стойността 1
-			y = x = 1;
-
-			console.log(`x = ${x}`); // x = 1
-			console.log(`y = ${y}`); // y = 1
-		</code></pre>
-	</section>
-	<section><h3>Оператор за присвояване (Assignment operator)</h3>
-		<p style="font-size: 1.2em;">Понятията "LHS" и "RHS" се използват не само в контекста на assignment оператора. Най-общо, когато променлива се използва като "LHS", то  тогава <span class="note">записваме</span> стойност в нея. Когато се използва като "RHS", то тогава <span class="note">четем</span> стойност от нея. </p>
-	</section>
-	<section><h3>Оператор за присвояване (Assignment operator)</h3>
-		<ul class="fa">
-			<li>Съкратен запис на присвояване + аритметична операция
-				<pre><code>
-					var x = 4;
-					x += 3; // x = x + 3;
-					x ­-= 3; // x = x – 3;
-					x *= 3; // x = x * 3;
-					x /= 3; // x = x / 3;
-					x %= 3; // x = x % 3;
-				</code></pre>
-			</li>
-		</ul>
-	</section>
-	<section><h3>Слепване на низове (String concatenation)</h3>
+<section data-min="50" id="concatenation"><h1>Слепване на низове (String concatenation)</h1></section>
+<section><h2>Слепване на низове (String concatenation)</h2>
+	<section id="concatenationBasics">
 		<ul class="fa">
 			<li>Конкатенация (слепване) на низове: '<code class="note">+</code>'
 				<pre><code>
-					var firstName = "Ada";
-					var surName = "Byron";
-					console.log (firstName + " " + surName); // Ada Byron
+					let firstName = "Ada";
+					let surName = "Byron";
+					console.log (firstName + " " + surName); // "Ada Byron"
 				</code></pre>
 			</li>
 			<li>Ако от двете страни на '+' имаме различни типове, например number и string, то JavaScript преобразува числото до string и извършва concatenation, а не събиране!
@@ -652,7 +604,7 @@
 			<li>Такова скрито преобразуване на типове се нарича <span class="note">type coercion</span>.</li>
 		</ul>
 	</section>
-	<section><h3>Преобразуване на низ в число</h3>
+	<section id="stringToNumber"><h3>Преобразуване на низ в число</h3>
 		<dl class="fa">
 			<dt>Често в практиката се налага да преобразуваме явно низ до число. За целта в JS съществуват различни подходи, но като най-бърз и лесен е варианта чрез <span class="note">умножение по 1</span></dt>
 			<pre><code rel="JS" class="js">
@@ -668,17 +620,90 @@
 			</code></pre>
 		</dl>
 	</section>
-	<section><h3>Примери</h3>
+</section>
+
+<section data-min="50" id="Assignment"><h1>Оператор за присвояване (Assignment operator)</h1></section>
+<section><h2>Оператор за присвояване (Assignment operator)</h2>
+	<section id="AssignmentBasics">
+		<dl class="fa">
+			<dt>Assignment '<code class="note">=</code>'
+				<pre><code rel="Syntax" class="js">
+					LHS = RHS;
+				</code></pre></dt>
+			<dt style="font-size: .8em">LHS: Left Hand Side: трябва да бъде <span class="note">декларирана променлива</span>. Ако променливата не е декларирана ще се създаде <span class="note">глобална променлива</span>, което е изключително лоша практика.</dt>
+			<dt style="font-size: .8em">RHS: Right Hand Side: <strong><span class="note">израз</span>, който се изчислява</strong> и стойността му се записва в LHS променливата</dt>
+				<pre><code rel="JS" class="js" style="font-size: 1em">
+					// декларираме променливите x и y:
+					let x, y;
+
+					// записваме в паметта, сочена от x, числото 3:
+					x = 3;
+
+					// в x записваме стойността на x, повдигната на степен 2:
+					x = x ** 2; // след този израз в x имаме стойността 9
+				</code></pre>
+			</dt>
+		</dl>
+	</section>
+	<section id="LHS_vs_RHS">
+		<dl class="fa">
+			<dt>Понятията "LHS" и "RHS" се използват не само в контекста на assignment оператора.</dt>
+			<dt>Когато променлива се използва като <span class="note">LHS</span> то  тогава <span class="note">записваме</span> стойност в нея</dt>
+			<dt>Когато се използва като <span class="note">RHS</span> => <span class="note">четем</span> стойност от нея.</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			let x, y = 1;
+			x = y; // тук четем от y и записваме в x
+		</code></pre>
+	</section>
+	<section id="AssignmentValue"><h3>Резултат от операцята</h3>
+		<dl class="fa">
+			<dt>Операцията "присвояване" връща стойност! И това е стойността, която ще се запише в LHS променливата</dt>
+			<dt>Поради това, можем да имаме няколко оператора за присвояване в израз:</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			// декларираме променливите x и y
+			let x,y;
+
+			// присвояваме и на двете променливи стойността 1
+			y = x = 1;
+
+			console.log(`x = ${x}`); // x = 1
+			console.log(`y = ${y}`); // y = 1
+		</code></pre>
+	</section>
+	<section id="AssignmentShorthand"><h3>Съкратен запис</h3>
+		<dl class="fa">
+			<dt>Когато имаме една и съща променлива от двете страни на assignment оператора и знак за операция, то можем да запишем израза съкратено.</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			var x = 4;
+			x += 3; // x = x + 3;
+			x ­-= 3; // x = x - 3;
+			x *= 3; // x = x * 3;
+			x /= 3; // x = x / 3;
+			x %= 3; // x = x % 3;
+		</code></pre>
+	</section>
+</section>
+
+<section data-min="50" id="simpleOperatorsDemos"><h1>Примери</h1></section>
+<section><h2>Примери</h2>
+	<section>
 		<p>Създаване на променливи и основни операции с простите типове данни.</p>
 		<iframe height='300' scrolling='no' title='Simple variables and operations' src='//codepen.io/webdesigncourse/embed/VeZrQE/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/VeZrQE/'>Simple variables and operations</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>
 	</section>
-	<section id="comparisonOperators"><h3>Оператори за сравнение (Comparison Operators)</h3>
+</section>
+
+<section data-min="50" id="comparisonOperators"><h1>Оператори за сравнение (Comparison Operators)</h1></section>
+<section><h2>Оператори за сравнение (Comparison Operators)</h2>
+	<section id="comparisonOperatorsBasics">
 		<dl class="fa">
-			<dd><a href="https://www.w3schools.com/js/js_comparisons.asp">JavaScript Comparison and Logical Operators (by w3schools)</a></dd>
-			<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">Comparison operators (by MDN)</a></dd>
+			<dt><a href="https://www.w3schools.com/js/js_comparisons.asp">JavaScript Comparison and Logical Operators (by w3schools)</a></dt>
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">Comparison operators (by MDN)</a></dt>
 		</dl>
 	</section>
-	<section><h3>Оператори за сравнение - примери</h3>
+	<section id="comparisonOperatorsExamples"><h3>примери</h3>
 		<pre><code rel="JS" class="js">
 			console.log(2 == 2);    // true
 			console.log(2 == "2");  // true (the string is coerced to a number value.)
@@ -697,7 +722,7 @@
 			<dt class="note">Забележете, че всички оператори за сравнение винаги връщат Булев тип стойност (true/false)</dt>
 		</dl>
 	</section>
-	<section><h3>lexicographic ordering</h3>
+	<section id="lexicographicOrdering"><h3>lexicographic ordering</h3>
 		<dl class="fa">
 			<dt>При сравняването на низове, се използва лексикографската им подредба (<a href="https://en.wikipedia.org/wiki/Lexicographical_order">Lexicographical_order @wikipedia</a>), базирана на кодовете на символите от използваната кодова таблица (unicode, по дефоулт).</dt>
 			<dt>При сравняване на низове с различна дължина, по-късият се попълва с "нулеви" символи до достигане на дължината на по-дългия. "Нулевите символи" са с възможно най-малък код.</dt>
@@ -716,22 +741,26 @@
 			<dt><a href="https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/ch2.md#equalish">Equal...ish @You don't know JS</a></dt>
 		</dl>
 	</section>
-	<section id="logicalOperators"><h3>логически оператори (Logical Operators)</h3>
+</section>
+
+<section data-min="50" id="logicalOperators"><h1>логически оператори (Logical Operators)</h1></section>
+<section><h2>логически оператори (Logical Operators)</h2>
+	<section>
 		<dl class="fa">
 			<dt><a href="https://www.w3schools.com/js/js_comparisons.asp">JavaScript Comparison and Logical Operators (by w3schools)</a></dt>
 			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators">Logical Operators (by MDN)</a></dt>
 			<dt>Логическите оператори намират приложение предимно при условните изрази, разглеждани детайлно в следващата тема.</dt>
 		</dl>
 	</section>
-	<section><h3>логически оператори (Logical Operators)</h3>
+	<section>
 		<dl class="fa">
 			<dt>Обикновено, логическите оператори се използват над Булев тип операнди, за да съставим по-сложни изрази.</dt>
 			<dd>Например: "Вярно ли е, че потребителят е пълнолетен <span class="note">и</span> е от България"</dd>
 			<dt>Но логическите оператори могат да се използват и над друг тип данни. В такъв случай, <span class="note">те не връщат Булева стойност</span>.</dt>
 		</dl>
 	</section>
-	<section><h3>логически оператори (Logical Operators)</h3>
-		<table id="truethTable" style="margin: 1em 0 0 0">
+	<section id="truethTable">
+		<table  style="margin: 1em 0 0 0">
 			<caption style="margin-bottom: 1em;"><a href="https://en.wikipedia.org/wiki/Truth_table">Truth Table</a>, reflecting how JS works</caption>
 			<colgroup>
 				<col style="background-color:#777777; width: 10%;">
@@ -778,7 +807,7 @@
 		</table>
 		<p>Легенда: <b>T</b> - true; <b>F</b> - false</p>
 	</section>
-	<section><h3>логически оператори - примери</h3>
+	<section><h3>примери</h3>
 		<pre><code rel="JS" class="js">
 			console.log( !true ); // false
 			console.log( true || false ); // true
@@ -787,7 +816,7 @@
 			console.log( 2>1 && "a">"b" ); // false ( true && false = false)
 		</code></pre>
 	</section>
-	<section><h3>Изчисляване на истинностни стойности</h3>
+	<section id="truthValueInterpretation"><h3>Изчисляване на истинностни стойности</h3>
 		<p>Логическите оператори в JS могат да работят върху различни типове данни. За да се изчисли резултата, за всеки един от операндите трябва да се изчисли истинностната му стойност (true/false).<br>В сила са следните правила: </p>
 		<table>
 			<tr>
@@ -828,8 +857,10 @@
 	</section>
 </section>
 
-<section id="ConditionalStatements"><h2>Условни изрази (Conditional statements)</h2>
-	<section><h3><code>if</code> statement</h3>
+
+<section id="ConditionalStatements"><h1>Условни изрази (Conditional statements)</h1></section>
+<section><h2>Условни изрази (Conditional statements)</h2>
+	<section id="if"><h3><code>if</code> statement</h3>
 		<pre style=" font-size: .5em;"><code rel="Syntax">
 			if(условие){
 				изрази, които ще се изпълнят, ако условието е истина
@@ -841,7 +872,7 @@
 			}
 		</code></pre>
 	</section>
-	<section><h3><code>if-else</code> statement</h3>
+	<section id="if-else"><h3><code>if-else</code> statement</h3>
 		<pre style=" font-size: .5em;"><code rel="Syntax">
 			if( условие ){
 				изрази, които ще се изпълнят, ако условието е истина
@@ -857,7 +888,7 @@
 			}
 		</code></pre>
 	</section>
-	<section><h3>Examples</h3>
+	<section id="if-else_examples"><h3>Examples</h3>
 		<pre><code rel="JS" class="js">
 			let x = 5;
 
@@ -868,7 +899,7 @@
 			}
 		</code></pre>
 	</section>
-	<section><h3><code>if-else-if</code> statement</h3>
+	<section id="if-else-if"><h3><code>if-else-if</code> statement</h3>
 		<pre style=" font-size: .5em;"><code rel="Syntax" class="javascript">
 			if( условие1){
 				изрази, които ще се изпълнят, ако условие1 е истина
@@ -886,7 +917,7 @@
 			<dt><code>else{}</code> блока е винаги в края, като не е задължителен, но се препоръчва да присъства.</dt>
 		</dl>
 	</section>
-	<section><h3><code>if-else-if</code> statement - пример</h3>
+	<section id="if-else-if_examples"><h3><code>if-else-if</code> statement - пример</h3>
 		<pre><code rel="JS" class="javascript">
 			if( age > 18 ){
 				status = "adult";
@@ -898,7 +929,7 @@
 		</code></pre>
 		<p><span class="note">В примера, който е коректен синтактично, има бъг - можете ли да го откриете?</span></p>
 	</section>
-	<section><h3 class="advanced">Условен оператор (Conditional (ternary) Operator)</h3>
+	<section id="ternaryOperator"><h3 class="advanced">Условен оператор (Conditional (ternary) Operator)</h3>
 		<pre><code rel="Syntax" class="javascript">
 			Условие ? Израз1 : Израз2
 		</code></pre>
@@ -914,7 +945,8 @@
 	</section>
 </section>
 
-<section id="CycleOperators"><h2>Цикли (Loops/Iteration Statements)</h2>
+<section id="loops"><h1>Цикли (Loops/Iteration Statements)</h1></section>
+<section><h2>Цикли (Loops/Iteration Statements)</h2>
 	<section><h3><code>for</code> Statement: алгоритъм</h3>
 		<pre><code rel="Syntax">
 			for (init; condition; increment) {
@@ -1093,7 +1125,6 @@
 		</code></pre>
 		<p>Бихте ли могли да реализирате същата логика чрез <code>for</code> цикъл?</p>
 	</section>
-
 	<section><h3><code>do-while</code> statement: синтаксис</h3>
 		<pre style="width: 80vw"><code rel="Syntax">
 			do{
@@ -1117,7 +1148,6 @@
 			} while(userNumber != machineNumber)
 		</code></pre>
 	</section>
-
 	<section><h3><code>break</code> и <code>continue</code></h3>
 		<dl class="fa">
 			<dt>Self-learning section:</dt>
@@ -1126,7 +1156,9 @@
 	</section>
 </section>
 
-<section id="StatementsVsExpressions"><h2>Statements vs. Expressions</h2>
+
+<section id="StatementsVsExpressions"><h1>Statements vs. Expressions</h1></section>
+<section><h2>Statements vs. Expressions</h2>
 	<section>
 		<p>В JavaScript се прави разлика между <span class="note">Statement</span> и <span class="note">Expression</span></p>
 		<dl class="fa">
@@ -1153,7 +1185,8 @@
 	</section>
 </section>
 
-<section id="HW"><h2>Задачи за упражнение</h2>
+<section id="HW"><h1>Задачи за упражнение</h1>
+<section><h2>Задачи за упражнение</h2>
 	<section id="HW1"><h3>HW1: Increment and Comparison Operators</h3>
 		<dl class="fa">
 			<dt>Описанието на задачата е дадено като коментар в JS полето</dt>
