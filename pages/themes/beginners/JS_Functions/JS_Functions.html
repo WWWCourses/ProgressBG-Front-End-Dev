@@ -210,7 +210,7 @@
 		<pre><code rel="JS">
 			// декларация на функцията sum():
 			function sum(x, y){
-				// var x = 2, y = 3;
+				// let x = 2, y = 3;
 				console.log( x + y);
 			}
 
@@ -221,7 +221,7 @@
 	</section>
 	<section><h3>Особености</h3>
 		<dl class="fa">
-			<dt>Ако борят на параметрите не съответства на броя на аргументите, JavaScript не връща грешка!</dt>
+			<dt>Ако борят на параметрите не съответства на броя на аргументите, <span class="note">JavaScript не връща грешка</span>!</dt>
 		</dl>
 		<pre style="width: 100%; font-size: .5em;"><code rel="JS">
 			function sum(x, y){
@@ -311,7 +311,7 @@
 	</section>
 	<section><h3>Local Scope</h3>
 		<dl class="fa" style="font-size: .9em">
-			<dt>Тялото на всяка една функция формира <span class="note">local scope.</span></dt>
+			<dt><span class="note">Тялото на всяка една функция формира <b>local scope</b>.</span></dt>
 			<dt>Всяка променлива, декларирана с <span class="note">var, let или const</span>, в тялото на една функция се нарича <span class="note">локална</span> и е видима само в тялото на функцията (не може да бъде достъпена извън тялото на функцията)</dt>
 		</dl>
 		<pre><code rel="JS">
@@ -383,7 +383,7 @@
 
 				console.log("global firstName: ", firstName);
 			</code></pre>
-			<p>firstName в тялото на функцията НЕ Е декларирана чрез var и така тя се счита за глобална променлива!</p>
+			<p>firstName в тялото на функцията НЕ Е декларирана чрез var/let или const и така тя се счита за глобална променлива!</p>
 	</section>
 </section>
 
