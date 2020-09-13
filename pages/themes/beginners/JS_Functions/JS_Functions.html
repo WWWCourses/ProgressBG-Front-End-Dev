@@ -75,33 +75,42 @@
 </section>
 
 
-<section><h1>Въведение</h1></section>
+<section id="introduction" data-min="5"><h1>Въведение</h1></section>
 <section><h2>Въведение</h2>
 	<section>
 		<blockquote>"Really understanding functions in JavaScript is the single most important weapon you can wield"</blockquote>
-		<cite><a href="https://www.manning.com/books/secrets-of-the-javascript-ninja-second-edition">
+		<cite><a href="https://livebook.manning.com/book/secrets-of-the-javascript-ninja-second-edition">
 		<em>"Secrets of the JavaScript Ninja"</em><br>
 		<small>©2016 by Manning Publications Co</small></a></cite>
 	</section>
 	<section><h3>Какво са функциите?</h3>
 		<dl class="fa">
-			<dt>Последователност от действия изпълняващи дадена задача, които обединяваме под общо име</dt>
+			<dt>Последователност от действия изпълняващи дадена задача, които обединяваме под общо име.</dt>
 			<dd>Пример: кулинарна рецепта</dd>
 			<dt>Действията се изпълняват след указване на името а резултата може да зависи от допълнителни параметри.</dt>
-			<dd><q class="note">"Скъпи, направи палачинки"</q> vs. <q class="note">"Мамо, направи палачинки"</q> </dd>
+			<dd><q class="note">Палачинки (с мляко)</q> vs. <q class="note">Палачинки (с вода)</q> </dd>
+			<dt>В програмирането, може да разглеждаме функциите като под-програми, който извършват самостоятелно дадени действия.</dt>
 		</dl>
 	</section>
 	<section><h3>Защо да използваме функции?</h3>
 		<dl class="fa">
-			<dt>Отделяне на концептуално свързани действия в едно цяло</dt>
-			<dt>Избягваме повторението на код (DRY принцип)</dt>
-			<dt>По-добро структуриране на програмата</dt>
-			<dt>Увеличават изразителната сила на езика</dt>
+			<dt>Избягваме повторението на код (DRY принцип).</dt>
+			<dt>Отделяне на концептуално свързани действия в едно цяло.</dt>
+			<dt>По-добро структуриране на програмата.</dt>
+			<dt>Увеличават изразителната сила на езика.</dt>
+		</dl>
+	</section>
+	<section><h3>Функции или Процедури?</h3>
+		<dl class="fa">
+			<dt>В програмирането, понятията функция и процедура се разграничават.</dt>
+			<dt>Под <span class="note">процедура</span> се разбира просто последователност от дадени действия, която не връща резултат.</dt>
+			<dt>Под <span class="note">функция</span> - последователност от действия, на която се подават входни данни и връща изходен резултат.</dt>
+			<dt>В JavaScript, чрез функции можем да реализираме както процедури, така и функции.</dt>
 		</dl>
 	</section>
 </section>
 
-<section id="function_basics"><h1>Дефиниция на функция (<a href="https://www.w3schools.com/js/js_function_definition.asp">Function Definition</a>)</h1></section>
+<section id="function_definition" data-min="20"><h1>Дефиниция на функция (Function Definition)</h1></section>
 <section><h2>Дефиниция на функция (<a href="https://www.w3schools.com/js/js_function_definition.asp">Function Definition</a>)</h2>
 	<section><h3>Вариант 1: Function Declarations</h3>
 		<pre><code rel="Syntax">
@@ -158,7 +167,7 @@
 	</section>
 </section>
 
-<section><h1>извикване на функция (Function Invocation)</h1></section>
+<section id="function_call" data-min="20"><h1>извикване на функция (Function Invocation)</h1></section>
 <section><h2>Function Invocation</h2>
 	<section>
 		<dl class="fa">
@@ -170,15 +179,19 @@
 	</section>
 	<section><h3>Синтаксис</h3>
 		<pre><code rel="Syntax">
-			name(&lt;списък аргументи&gt;);
+			<име на функция>(&lt;списък аргументи&gt;);
 		</code></pre>
 		<dl class="fa">
-			<dt>name</dt>
+			<dt><име на функция></dt>
 			<dd>името на функцията, която желаем да изпълним.</dd>
 			<dt>&lt;списък аргументи&gt;</dt>
 			<dd>стойности, които автоматично ще се подадат на параметрите.</dd>
 			<dt>Между името на функцията и отварящата скоба '(' не се оставя спейс!</dt>
 		</dl>
+		<pre><code rel="JS" class="js">
+			greet(); // извикване на функцията greet, без аргументи
+			greet('Ada', 'Byron'); // извикване на функцията greet с 2 аргумента
+		</code></pre>
 	</section>
 	<section><h3>Пример</h3>
 		<pre><code rel="JS" class="js">
@@ -188,9 +201,9 @@
 
 			// едва при извикването ще се изпълнят действията, дефинирани във фунцкцията
 
-			// извикаване на функцията greet() с аргумент "Ada"
+			// извикване на функцията greet() с аргумент "Ada"
 			greet("Ada");
-			// извикаване на функцията greet() с аргумент "John"
+			// извикване на функцията greet() с аргумент "John"
 			greet("John");
 		</code></pre>
 	</section>
@@ -217,7 +230,7 @@
 			// извикване на функцията sum():
 			sum(2, 3); // 5
 		</code></pre>
-		<p>при предаването на стойности на параметрите, това което JS интерпретатора прави, е да създаде локални променливи и да им присвои стойностите зададени в аргументите.</p>
+		<p>Най-общо, при предаването на стойности на параметрите, това което JS интерпретатора прави, е да създаде локални за функцията променливи и да им присвои зададените като арументи стойности.</p>
 	</section>
 	<section><h3>Особености</h3>
 		<dl class="fa">
@@ -244,13 +257,13 @@
 	</section>
 </section>
 
-<section><h1>Return Statement</h1></section>
+<section id="return" data-min="20"><h1>Return Statement</h1></section>
 <section><h2>Return Statement</h2>
 	<section>
 		<dl class="fa">
 			<dt class="note">Всяка функция в JavaScript връща стойност.</dt>
 			<dt>На мястото на извикването на функцията ще се подаде връщаната от функцията стойност.</dt>
-			<dt>За да определим каква да бъде връщаната стойност използваме оператора <code class="note">return</code></dt>
+			<dt>За да определим каква да бъде връщаната стойност използваме оператора <code class="note">return</code>.</dt>
 			<dt>Ако във функцията не сме използвали оператора <code class="note">return</code>, то функцията връща <code class="note">undefined</code>!</dt>
 		</dl>
 	</section>
@@ -265,8 +278,8 @@
 		</code></pre>
 		<dl class="fa">
 			<dt><израз>  трябва да бъде изчислим.</dt>
-			<dt>Именно изчислената стойност ще се замести на мястото на извикване на функцията</dt>
-			<dt><span class="note">След оператора <code>return</code> се излиза от тялото на функцията</span>. Тоест, нито един израз във функцията, след <code>return</code> няма да се изпълни! </dt>
+			<dt>Именно изчислената стойност ще се замести на мястото на извикване на функцията.</dt>
+			<dt><span class="note">След оператора <code>return</code> се излиза от тялото на функцията</span>. Тоест, нито един израз във функцията, след <code>return</code> няма да се изпълни! .</dt>
 		</dl>
 	</section>
 	<section><h3>Example</h3>
@@ -298,7 +311,7 @@
 	</section>
 </section>
 
-<section id="Scope"><h1>Обхват на променливите (Variables Scope)</h1></section>
+<section id="scope" data-min="20"><h1>Обхват на променливите (Variables Scope)</h1></section>
 <section><h2>Обхват на променливите (Variables Scope)</h2>
 	<section><h3>Въведение</h3>
 		<dl class="fa">
@@ -312,7 +325,7 @@
 	<section><h3>Local Scope</h3>
 		<dl class="fa" style="font-size: .9em">
 			<dt><span class="note">Тялото на всяка една функция формира <b>local scope</b>.</span></dt>
-			<dt>Всяка променлива, декларирана с <span class="note">var, let или const</span>, в тялото на една функция се нарича <span class="note">локална</span> и е видима само в тялото на функцията (не може да бъде достъпена извън тялото на функцията)</dt>
+			<dt>Всяка променлива, декларирана с <span class="note">var, let или const</span>, в тялото на една функция се нарича <span class="note">локална</span> и е видима само в тялото на функцията (не може да бъде достъпена извън тялото на функцията).</dt>
 		</dl>
 		<pre><code rel="JS">
 			function f(){
@@ -387,7 +400,7 @@
 	</section>
 </section>
 
-<section data-min="5" id="let_const_var"><h1>Разлики между <code>let</code>, <code>const</code> и <code>var</code></h1></section>
+<section id="let_const_var" data-min="10"><h1>Разлики между <code>let</code>, <code>const</code> и <code>var</code></h1></section>
 <section><h2>Разлики между <code>let</code>, <code>const</code> и <code>var</code></h2>
   <section><h3><code>let/const</code> vs. <code>var</code>: scoping</h3>
 	  <dl class="fa">
@@ -423,7 +436,7 @@
   <section><h3><code>let/const</code> vs. <code>var</code>: redeclaring</h3>
 	  <dl class="fa">
 		  <dt>Друга разлика между <code>let/cont</code> и <code>var</code> е че ако една променлива вече е декларирана, то при повторна декларация (redeclaring) в съшия скоуп чрез <code>let</code> или <code>const</code> ще възникне грешка.</dt>
-		  <dt>При редеклариране чрез <code>var</code> нe би възникнала грешка</dt>
+		  <dt>При редеклариране чрез <code>var</code> нe би възникнала грешка.</dt>
 		  <dt class="note">Дoбра практика е да предпочитаме използването на <code>let/const</code> за деклариране на променливи, вместо <code>var</code>!</dt>
 	  </dl>
   </section>
@@ -443,7 +456,7 @@
   <section><h3 class="advanced">Особености на <code>const</code></h3>
 	<dl class="fa">
 		<dt><code>const</code> не гарантира създаването на константи в буквалния смисъл. А единствено, че при опит за re-assign ще възнине грешка!</dt>
-		<dt>Ако стойността на <code>const</code> променливата е съставна, т.е обект, то ние <code>можем</code> да променим някое негово пропърти без да възникне грешка</dt>
+		<dt>Ако стойността на <code>const</code> променливата е съставна, т.е обект, то ние <code>можем</code> да променим някое негово пропърти без да възникне грешка.</dt>
 		<pre><code rel="JS" class="js">
 			const someArray = [3.14];
 
@@ -468,15 +481,15 @@
 
 </section>
 
-<section><h1>Анонимни функции (Anonymous functions)</h1></section>
+<section id="anonymous_functions" data-min="10"><h1>Анонимни функции (Anonymous functions)</h1></section>
 <section><h2>Анонимни функции</h2>
 	<section>
 		<dl class="fa">
 			<dt>Функция, която няма име се нарича анонимна функция!</dt>
-			<dt>Обикновено, анонимните функции се използват като стойности: на променливи, на параметри, в return изрази.</dt>
+			<dt>Обикновено, анонимните функции се използват като стойности: на пропъртита на обекти (методи), на параметри на функции, в return изрази.</dt>
 		</dl>
 	</section>
-	<section><h3>Анонимна функция като стойност на променлива (function expression)</h3>
+	<section><h3>Анонимна функция като стойност на променлива (function expression) - пример</h3>
 		<pre><code rel="JS">
 			var a = function(){
 				console.log("I am in a!");
@@ -494,9 +507,39 @@
 			b(); //  ReferenceError: b is not defined
 		</code></pre>
 	</section>
+	<section><h3>Анонимна функция като елемент на масив:</h3>
+		<pre><code rel="JS" class="js">
+			let foobar = [
+				function () {
+					console.log(`Foo`);
+				},
+				function () {
+					console.log(`Bar`);
+				}
+			]
+
+			foobar[0](); // 'Foo'
+			foobar[1](); // 'Bar'
+		</code></pre>
+	</section>
+	<section><h3>Анонимна функция като пропърти на обект (method) - пример</h3>
+		<pre><code rel="JS" class="js">
+			let obj = {
+				'foo': function () {
+					console.log(`Foo`);
+				},
+				'bar': function () {
+					console.log(`Bar`);
+				}
+			};
+
+			obj.foo(); // 'Foo'
+			obj.bar(); // 'Bar'
+		</code></pre>
+	</section>
 	<section style="font-size: .9em"><h3 class="advanced">IIFE</h3>
 		<dl class="fa">
-			<dt>Единственият начин да се изпълни анонимна функция, която не е присвоена на променлива, е чрез конструкта, наречен <span class="note">IIFE</span> (Immediately Invoked Function Expression)</dt>
+			<dt>Единственият начин да се изпълни анонимна функция, която не е присвоена на променлива, е чрез конструкта, наречен <span class="note">IIFE</span> (Immediately Invoked Function Expression).</dt>
 		</dl>
 		<pre><code rel="Syntax" class="javascript" data-noescape>
 			<b>(</b>f(){}<b>)()</b>
@@ -533,11 +576,11 @@
 	</section>
 </section>
 
-<section><h1>Variables Hoisting</h1></section>
-<section id="Hoisting"><h2>Variables Hoisting</h2>
+<section id="hoisting" data-min="10"><h1>Variables Hoisting</h1></section>
+<section><h2 class="advanced">Variables Hoisting</h2>
 	<section>
 		<dl class="fa">
-			<dt>Декларирането на променливите <span class="note">в даден scope </span> винаги се изпълнява <span class="note">преди</span> всички изрази, без значение къде във scope се намират декларациите. </dt>
+			<dt>Декларирането на променливите <span class="note">в даден scope </span> винаги се изпълнява <span class="note">преди</span> всички изрази, без значение къде във scope се намират декларациите.</dt>
 			<dt>2 паса:</dt>
 			<dd>Compile time = > декларации</dd>
 			<dd>Run time = > изпълнение на програмата</dd>
@@ -588,12 +631,12 @@
 	</section>
 </section>
 
-<section><h1>First-class functions</h1></section>
+<section id="first-class_functions"	data-min="10"><h1>First-class functions</h1></section>
 <section><h2 class="advanced">First-class functions</h2>
 	<section>
 		<dl class="fa">
 			<dt>Свойството на функциите в JavaScript (анонимни или не) - да бъдат използвани като стойности, т.е. да бъдат записвани в промеливи, да бъдат подавани като аргументи на функции или да бъдат връщани като резултат от функция, ги определя като <span class="note">first-class functions</span></dt>
-			<dt>Темата за "first-class functions" се разглежда задълбочено в <a href="https://progressbg.net/javascript-advanced-with-reactjs/">WebDesign/Front-End Dev - Advanced</a> курса. Но преди да навлезете в тази изключително важна за JavaScript тема е необходимо да усвоите добре основните, разгледани досега.</dt>
+			<dt>Темата за "first-class functions" се разглежда задълбочено в <a href="http://wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/agenda/advanced.html">WebDesign/Front-End Dev - Advanced</a> курса. Но преди да навлезете в тази изключително важна за JavaScript тема е необходимо да усвоите добре основните, разгледани досега.</dt>
 		</dl>
 	</section>
 	<section><h3>Функция като стойност на параметър (callback functions)</h3>
@@ -660,45 +703,85 @@
 	</section>
 </section>
 
-<section data-min="5"><h1>Примери и Задачи</h1></section>
+<section id="references" data-min="0"><h1>References</h1></section>
+<section><h2>References</h2>
+	<section>
+		<dl class="fa">
+			<dt><a href="https://www.w3schools.com/js/js_function_definition.asp">Functions</a> @w3schools</dt>
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions">Functions</a> @MDN</dt>
+		</dl>
+	</section>
+</section>
+
+<section id="HW" data-min="5"><h1>Примери и Задачи</h1></section>
 <section><h2>Примери и Задачи</h2>
-	<section><h3>Function Definitions Examples</h3>
+	<section><h3>Function Definitions - Examples</h3>
 		<iframe height="300" style="width: 100%;" scrolling="no" title="Function Definitions" src="https://codepen.io/webdesigncourse/embed/LWyPvy?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/LWyPvy'>Function Definitions</a> by Iva Popova
 		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
 		</iframe>
 	</section>
-	<section><h3>JS variables shadowing</h3>
+	<section><h3>Variables Shadowing - Examples</h3>
 		<iframe height="300" style="width: 100%;" scrolling="no" title="Scope &amp; Shadowing" src="https://codepen.io/webdesigncourse/embed/PpmYMd?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/PpmYMd'>Scope &amp; Shadowing</a> by Iva Popova
 		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
 		</iframe>
 	</section>
-	<section><h3>JS variables shadowing</h3>
+	<section><h3>Variables Shadowing - Task</h3>
 		<iframe height="300" style="width: 100%;" scrolling="no" title="JS variables shadowing" src="https://codepen.io/webdesigncourse/embed/vxZjaq?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/vxZjaq'>JS variables shadowing</a> by Iva Popova
 		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
 		</iframe>
 	</section>
-	<section><h3>gameBoardDataStructure</h3>
-		<iframe height="300" style="width: 100%;" scrolling="no" title="gameBoardDataStructure" src="https://codepen.io/webdesigncourse/embed/vmydQN?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/vmydQN'>gameBoardDataStructure</a> by Iva Popova
-		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+	<section><h3>Calculate Rectangle Area - Task</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="Calculate Rectangle Area - Task" src="https://codepen.io/webdesigncourse/embed/JjXZKKe?height=300&theme-id=20230&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+		See the Pen <a href='https://codepen.io/webdesigncourse/pen/JjXZKKe'>Calculate Rectangle Area - Task</a> by Iva Popova
+		(<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
 		</iframe>
 	</section>
-	<section><h3>getHigherScoreIndex</h3>
+	<section><h3>Functions as properties values - Example</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="Functions as properties values - Example" src="https://codepen.io/webdesigncourse/embed/ZEWROVq?height=300&theme-id=20230&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+			See the Pen <a href='https://codepen.io/webdesigncourse/pen/ZEWROVq'>Functions as properties values - Example</a> by Iva Popova
+			(<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		  </iframe>
+	</section>
+	<section><h3>Functions as properties values - Task</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="Calculator object Task" src="https://codepen.io/webdesigncourse/embed/YzqvWvX?height=300&theme-id=20230&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+		See the Pen <a href='https://codepen.io/webdesigncourse/pen/YzqvWvX'>Calculator object Task</a> by Iva Popova
+		(<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3>logArrayEvenElements() - Example</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="logArrayEvenElements() Example" src="https://codepen.io/webdesigncourse/embed/oNxyLwR?height=300&theme-id=20230&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+			See the Pen <a href='https://codepen.io/webdesigncourse/pen/oNxyLwR'>logArrayEvenElements() Example</a> by Iva Popova
+			(<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		  </iframe>
+	</section>
+	<section><h3>findMaxEven() - Task</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="findMaxEven() Task" src="https://codepen.io/webdesigncourse/embed/bGpKeoq?height=300&theme-id=20230&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+			See the Pen <a href='https://codepen.io/webdesigncourse/pen/bGpKeoq'>findMaxEven() Task</a> by Iva Popova
+			(<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		  </iframe>
+	</section>
+	<section><h3>getHigherScoreIndex - Task</h3>
 		<iframe height="300" style="width: 100%;" scrolling="no" title="HW: Max/Min student score" src="https://codepen.io/webdesigncourse/embed/wRRaej?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/wRRaej'>HW: Max/Min student score</a> by Iva Popova
 		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
 	  </iframe>
 	</section>
-	<section><h3>SumEven2DimArrayElements</h3>
+	<section><h3>SumEven2DimArrayElements - Task</h3>
 		<iframe height="300" style="width: 100%;" scrolling="no" title="HW: SumEvenArrayElements" src="https://codepen.io/webdesigncourse/embed/rPOXBe?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 		See the Pen <a href='https://codepen.io/webdesigncourse/pen/rPOXBe'>HW: SumEvenArrayElements</a> by Iva Popova
 		(<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
 		</iframe>
 	</section>
-	<section><h3>autoChangeColor</h3>
+	<section><h3>gameBoardDataStructure - Demo and Task</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="gameBoardDataStructure" src="https://codepen.io/webdesigncourse/embed/vmydQN?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/vmydQN'>gameBoardDataStructure</a> by Iva Popova
+		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3>autoChangeColor - Example</h3>
 		<iframe height="300" style="width: 100%;" scrolling="no" title="autoChangeColor" src="https://codepen.io/webdesigncourse/embed/qmWPdJ?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/qmWPdJ'>autoChangeColor</a> by Iva Popova
 		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
