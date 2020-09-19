@@ -84,7 +84,7 @@
             console.log( Math.max(2,12,5)); // 12
 
             // using built in Date() constructor
-            var currentDate = new Date();
+            let currentDate = new Date();
             console.log( currentDate.getFullYear() ); // 2018
         </code></pre>
     </section>
@@ -104,7 +104,7 @@
             <dt>Текущата дата и време в компютърните системи се представят като брой <span class="note">милисекунди</span> изминали от началото на <em>епохата</em> (1 January 1970 UTC)</dt>
             <dt>За да работим с измерения, като година, месец, час и пр. трябва да използваме вградените методи на обект от тип Date, който създаваме като използваме конструктора <code>Date()</code></dt>
             <pre><code rel="JS" class="js">
-                var currentDateTimeObj = new Date();
+                let currentDateTimeObj = new Date();
             </code></pre>
             <dt>Справочник: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date @MDN</a></dt>
         </dl>
@@ -134,7 +134,7 @@
             // using built in arguments object - available within functions only!
             function sum(){
                 sum = 0;
-                for (var i = 0; i < arguments.length; i++){
+                for (let i = 0; i < arguments.length; i++){
                     sum += arguments[i];
                 }
                 console.log("sum = " + sum);
@@ -146,8 +146,8 @@
     <section><h3>built-in objects == primitive types?</h3>
         <p>Много често примитивните типове string, number, boolean се бъркат със съответните им "двойници - обекти: String, Number, Boolean</p>
         <pre><code rel="JS">
-            var str1 = new String("ada");
-            var str2 = "ada";
+            let str1 = new String("ada");
+            let str2 = "ada";
 
             console.log( typeof(str1) ); // object
             console.log( typeof(str2) ); // string
@@ -167,10 +167,10 @@
         <p>Например:</p>
         <pre><code rel="JS">
             // create number - the good way (as primitive)
-            var x = 42;
+            let x = 42;
 
             // create number - the bad way (as Number object)
-            var y = new Number(42);
+            let y = new Number(42);
 
             // we can use it the same way:
             console.log( x + 10 ); // 52
@@ -188,7 +188,7 @@
         <p>Разбира се, <span class="note">използването</span> на методите на вградените обекти е необходимо и се препоръчва (по важните от тях бяха разгледани в съответните теми за Strings и Arrays)</p>
         <p>Например:</p>
         <pre><code rel="JS">
-            var str = "ada";
+            let str = "ada";
             console.log( str.toUpperCase() ); // ADA
 
             var arr = [1,2,3];
