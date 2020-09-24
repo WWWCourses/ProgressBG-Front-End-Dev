@@ -21,10 +21,10 @@ If you scroll back to top, elements will animate to it's previous state and are 
 ### 🚀 [Demo](http://michalsnik.github.io/aos/)
 
 ### 🌟 Codepen Examples
-- [Different build in animations](http://codepen.io/michalsnik/pen/WxNdvq)
-- [With anchor setting in use](http://codepen.io/michalsnik/pen/jrOYVO)
-- [With anchor-placement and different easing](http://codepen.io/michalsnik/pen/EyxoNm)
-- [With simple custom animations](http://codepen.io/michalsnik/pen/WxvNvE)
+- [Different build in animations](//codepen.io/michalsnik/pen/WxNdvq)
+- [With anchor setting in use](//codepen.io/michalsnik/pen/jrOYVO)
+- [With anchor-placement and different easing](//codepen.io/michalsnik/pen/EyxoNm)
+- [With simple custom animations](//codepen.io/michalsnik/pen/WxvNvE)
 
 ---
 
