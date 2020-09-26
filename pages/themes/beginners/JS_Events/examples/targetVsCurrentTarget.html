@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>targetVsCurrentTarget</title>
+    <style type="text/css">
+    	.outer{
+    		width: 10em;
+    		height: 10em;
+    	}
+    	.inner{
+    		width: 5em;
+    		height: 5em;
+    	}
+		.outer, .inner{
+			cursor: pointer;
+		}
+		#red{
+			background: #F99;
+		}
+		#blue{
+			background: #99F;
+		}
+		#green{
+			background: #9F9;
+		}
+    </style>
+</head>
+<body>
+	<div class="outer" id="red">
+		<div id="green" class="inner"></div>
+		<div id="blue" class="inner"></div>
+	</div>
+	<div class="output"></div>
+</body>
+<script type="text/javascript">
+	let outerNode = document.querySelector('.outer');
+	let outputNode = document.querySelector('.output');
+
+	let clickHandle = function(e){
+		outputNode.innerHTML = `
+			<p><code>e.target</code> is: ${e.target.id}</p>
+			<p><code>e.currentTarget</code> is: ${e.currentTarget.id}</p>
+		`
+		console.log("");
+		console.log(e.target);
+		console.log("e.currentTarget is:");
+		console.log(e.currentTarget);
+	}
+
+	// note, that we attach event listener only to the parent node:
+	outerNode.addEventListener('click', clickHandle);
+
+
+</script>
+</html>

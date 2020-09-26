@@ -188,7 +188,7 @@
                     console.log('click')
                 };
 
-                // тук ще подадем на addEventListener не нашата фунцкция, а резултата от нея (в случая - undefined),
+                // тук ще подадем на addEventListener не нашата функция - clickHandler, а резултата от нея (в случая - undefined), а самата функция clickHandler() ще бъде извикана моментално:
                 document.body.addEventListener( "click", clickHandler() );
             </code></pre>
         </dl>
@@ -199,10 +199,26 @@
     <section>
         <dl class="fa">
             <dt>Информацията за настъпилото събитие се съхранява в обект от тип <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event">Event Object</a></dt>
-            <dt>Някои от най-често използваните му свойства са <a href="https://www.w3schools.com/jsref/event_target.asp">target</a> и <a href="https://www.w3schools.com/jsref/event_currenttarget.asp">currentTarget</a></dt>
+            <dt>Event обекта се подава като аргумент на handler функцията</dt>
         </dl>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="simpleEventObjectDemo" src="https://codepen.io/webdesigncourse/embed/ZEWPQvW?height=300&theme-id=20230&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href='https://codepen.io/webdesigncourse/pen/ZEWPQvW'>simpleEventObjectDemo</a> by Iva Popova
+            (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+          </iframe>
     </section>
-    <section><h3>Пример: target vs. currentTarget</h3>
+    <section><h3>Event objects properties</h3>
+        <dl class="fa">
+            <dt>Event обектите от различните групи (mouse events, keyboard events, etc) имат различни, специфични за ивента, свойства, но има и такива свойства, които са общи за всички ивенти.</dt>
+        </dl>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="simpleEventPropertiesDemo" src="https://codepen.io/webdesigncourse/embed/yLOwOBV?height=300&theme-id=20230&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href='https://codepen.io/webdesigncourse/pen/yLOwOBV'>simpleEventPropertiesDemo</a> by Iva Popova
+            (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+          </iframe>
+    </section>
+    <section><h3>target vs. currentTarget</h3>
+        <dl class="fa">
+            <dt>Някои от най-често използваните свойства, присъщи на всички евент обекти свойства са: <a href="https://www.w3schools.com/jsref/event_target.asp">target</a> и <a href="https://www.w3schools.com/jsref/event_currenttarget.asp">currentTarget</a></dt>
+        </dl>
         <iframe title='target vs. currentTarget' src='//codepen.io/webdesigncourse/embed/jZYvWy/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/jZYvWy/'>target vs. currentTarget</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
         </iframe>
     </section>

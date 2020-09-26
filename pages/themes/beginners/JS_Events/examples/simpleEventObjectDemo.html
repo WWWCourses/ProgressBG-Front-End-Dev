@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>simpleEventObjectDemo </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<style>
+		.example{
+			width: 80%;
+			height: 4em;
+			border: 1px solid #999;
+			margin: 1em auto;
+			padding: 1em;
+		}
+	</style>
+</head>
+<body>
+	<div class="example mouseEventDemo">
+		<button>click me</button>
+	</div>
+	<div class="example keyboardEventDemo">
+		<input type="text" placeholder="write in me">
+	</div>
+
+	<script>
+		let btnNode = document.querySelector(".mouseEventDemo button");
+		let inputNode = document.querySelector(".keyboardEventDemo input");
+
+		let eventHandler = function (event) {
+			console.log(`The Event object is`);
+			console.log(event);
+		};
+
+		btnNode.addEventListener("click", eventHandler);
+		inputNode.addEventListener("keyup", eventHandler);
+	</script>
+</body>
+</html>
