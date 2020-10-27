@@ -8,8 +8,7 @@
         "latex",
         "plaintext",
         "python",
-        "javascript",
-        "html"
+        "javascript"
     ],
     // "spellright.spellContext": "body comments strings",
     "spellright.spellContextByClass": {
