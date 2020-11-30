@@ -77,6 +77,7 @@
 	</section>
 </section>
 
+<section data-min="50"><h1>Накратко за Visual Formatting Model</h1></section>
 <section><h2>Накратко за Visual Formatting Model</h2>
 	<section>
 		<h3>Visual Formatting Model - алгоритъма, който браузерите използват за да визуализират HTML елементите.</h3>
@@ -93,22 +94,25 @@
 	</section>
 </section>
 
-<section><h2>Задаване на тип на елемента</h2>
+<section data-min="50"><h1>Задаване на тип на елемента <br>(display property)</h1></section>
+<section><h2>Задаване на тип на елемента (display property)</h2>
 	<section><h3>Свойство display</h3>
-	<p>Задава типа на кутийката, в която ще се изобрази HTML елементът.</p>
-	<pre><code rel=CSS class="tab3">
-	div.left_column {
-		display: inline-block;
-	}
-	</code></pre>
+		<p>Задава типа на кутийката, в която ще се изобрази HTML елементът.</p>
+		<pre><code rel=CSS class="tab3">
+		div.left_column {
+			display: inline-block;
+		}
+		</code></pre>
 	</section>
 	<section><h3>Основни стойности на свойството <code>display</code></h3>
 		<ul class="fa">
 			<li><strong><span class="note">display: none</span></strong> - елементът не се показва и <u>не заема</u> място в документа. Останалите елементи се позиционират сякаш той не съществува.</li>
-			<li><strong><span class="note">display: inline</span>:</strong> - елементът се интерпретира като поредов елемент. Свойствата <code>width</code> и <code>height</code> не оказват влияние.</li>
-			<li><strong><span class="note">display: block</span>:</strong> - елементът се интерпретира като блоков елемент</li>
-			<li><strong><span class="note">display: inline-block:</span></strong> - елементът се интерпретира като поредов елемент, на който могат да се зададат размери (width, height)</li>
+			<li><strong><span class="note">display: inline</span></strong> - елементът се интерпретира като поредов елемент. Свойствата <code>width</code> и <code>height</code> не оказват влияние.</li>
+			<li><strong><span class="note">display: block</span></strong> - елементът се интерпретира като блоков елемент</li>
+			<li><strong><span class="note">display: inline-block</span></strong> - елементът се интерпретира като поредов елемент, на който могат да се зададат размери (чрез width, height).</li>
 		</ul>
+		<hr>
+		<p>Всички стойности: <a href="http://www.w3schools.com/cssref/pr_class_display.asp">w3schools - CSS display Property</a></p>
 	</section>
 	<section><h3>display:none vs. visibility:hidden</h3>
 		<dl class="fa">
@@ -139,40 +143,42 @@
 		<p>Да се напише CSS, така че списъка с линкове да изглежда като показания:</p>
 		<a href="images/TASK_horizontal_menu_start.png"><img src="images/TASK_horizontal_menu_start.png" style="height: auto;"></a>
 	</section>
-	<section>
-		<p>Всички стойности: <a href="http://www.w3schools.com/cssref/pr_class_display.asp">w3schools - CSS display Property</a></p>
-	</section>
-	<section><h3 class="advansed">Flex and Grid displays</h3>
+
+	<section><h3 class="advanced">Flex and Grid</h3>
 		<dl class="fa">
 			<dt><code class="note">display:flex</code> е чудесен начин за задаване на гъвкаво подреждане на блокове в старницата. Вече се поддържа от всички съвремменни брауери: <a href="https://caniuse.com/#search=flex">flex on caniuse.com</a></dt>
 			<dd>Повече за <code>display:flex</code>: <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a> @CSS Tricks</dd>
 			<dt><code class="note">display:grid</code> е предпочитан начин за задаване на Grid Layouts за съвременните браузери: <a href="https://caniuse.com/#search=grid">grid on caniuse.com</a></dt>
 			<dd>Повече за <code>display:grid</code>: <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">A Complete Guide to Grid</a></dd>
 		</dl>
+		<hr>
+		<p style="font-size: .8em;">Flex и Grid моделите се разглеждат задълбочено в курса за напреднали: <a href="http://wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/agenda/advanced.html">Web-Design - Advanced</a>, в темата "Responsive Layouts with CSS Grid and Flexboxes".</p>
 	</section>
-	<section><h3>Пример за flex</h3>
+	<section><h3 class="advanced">Пример за flex</h3>
 		<iframe scrolling='no' title='horizontal menu with flex' src='//codepen.io/webdesigncourse/embed/ebNZor/?height=300&theme-id=20230&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/ebNZor/'>horizontal menu with flex</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
 		</iframe>
 	</section>
-	<section><h3>Колекция с примери за Grid и Flexbox</h3>
+	<section><h3 class="advanced">Колекция с примери за Grid и Flexbox</h3>
 		<a href="https://codepen.io/collection/XoWQEB/">CSS_FlexAndGridSystems @codepen</a>
 	</section>
 </section>
 
-<section><h2 class="advanced">Повече за подреждане на inline-block елементи</h2>
+<section><h2>Повече за подреждане на inline-block елементи</h2>
 	<section><h3>Когато в елементите има поредово съдържание</h3>
 		<iframe height="300" style="width: 100%;" scrolling="no" title="Inline-block alignment" src="https://codepen.io/webdesigncourse/embed/yLLdjmL?height=300&theme-id=20230&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/yLLdjmL'>Inline-block alignment</a> by Iva Popova
 		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
 		</iframe>
+		<p>Когато в елементите има поредово съдържание, вертикалното подравняване на кутийките се осъществява според base line.</p>
 	</section>
 	<section><h3>Вертикално подравняване на inline-blocks</h3>
 		<iframe height="300" style="width: 100%;" scrolling="no" title="vertical align inline-blocks" src="https://codepen.io/webdesigncourse/embed/oNNrygo?height=300&theme-id=20230&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/oNNrygo'>vertical align inline-blocks</a> by Iva Popova
 		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
 		</iframe>
+		<p>За да подравним вертикално inline-block елементите, може да използваме свойството vertical-align</p>
 	</section>
-	<section><h3>Пример за промяна на base-line</h3>
+	<section><h3 class="advanced">Пример за промяна на base-line</h3>
 		<iframe height="300" style="width: 100%;" scrolling="no" title="base-line of  inline-block" src="https://codepen.io/webdesigncourse/embed/egRBoM?height=300&theme-id=20230&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/egRBoM'>base-line of  inline-block</a> by Iva Popova
 		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
@@ -188,6 +194,7 @@
 	</section>
 </section> -->
 
+<section data-min="50"><h1>Свойство position</h1></section>
 <section><h2>Свойство position</h2>
 	<section>
 		<dl class="fa">
@@ -197,13 +204,14 @@
 	</section>
 	<section><h3>пример</h3>
 		<iframe height='300' scrolling='no' title='fixedBottomFooter' src='//codepen.io/webdesigncourse/embed/RgwObE/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/RgwObE/'>fixedBottomFooter</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+		</iframe>
 	</section>
 	<section><h3>Схеми за позициониране</h3>
 		<ul class="fa" style="line-height: 1.3em;">
-			<li><strong class="note">static</strong>: Елементите се подреждат по реда на срещането им в HTML структурата. Това е нормалната (default) схема за позициониране. Елемент със зададено свойство: <code>position:static</code> <b>не се счита за позициониран елемент!</b></li>
-			<li><strong class="note">relative</strong>: Елементите се подреждат относително <strong>спрямо нормалната схема</strong> за позициониране и зададените стойности за <code>top</code>, <code>right</code>, <code>bottom</code> и <code>left</code>.</li>
-			<li><em>Елемент със зададено свойство <code>position: relative</code> се нарича релативно <b>позициониран елемент</b>.</em></li>
+			<li><strong class="note">static</strong>: Елементите се подреждат по реда на срещането им в HTML структурата. Това е нормалната (default) схема за позициониране. Пропъртитата <code>top</code>, <code>right</code>, <code>bottom</code> и <code>left</code> не играят роля при подреждането.<br>
+			Елемент със зададено свойство: <code>position:static</code> <b>не се счита за позициониран елемент!</b></li>
+			<li><strong class="note">relative</strong>: Елементите се подреждат относително <strong>спрямо нормалната схема</strong> за позициониране и зададените стойности за <code>top</code>, <code>right</code>, <code>bottom</code> и <code>left</code>. <br>
+			<em>Елемент със зададено свойство <code>position: relative</code> се нарича релативно <b>позициониран елемент</b>.</em></li>
 		</ul>
 	</section>
 	<section><h3>Пример: Static vs. Relative Position</h3>
@@ -242,6 +250,7 @@
 	</section>
 </section>
 
+<section data-min="50"><h1>Свойство float</h1></section>
 <section><h2>Свойство float</h2>
 	<section><p>Класическа употреба:</p><br>
 		<div>
@@ -310,6 +319,7 @@
 	</section>
 </section>
 
+<section data-min="50"><h1>z-index</h1></section>
 <section><h2>z-index</h2>
 	<section><h3>Self-learning section</h3>
 		<dl class="fa">
@@ -334,7 +344,17 @@
 	<p>Колекция с примери върху темата, качени в <a href="//codepen.io/collection/AYWrJg/2/">//codepen.io/collection/AYWrJg/2/</a></p>
 </section> -->
 
-<section id="HW_FloatingImages"><h2>Задачa за упражнение: FloatingImages</h2>
+<section data-min="50"><h1>Задачи за упражнение</h1></section>
+<section id="HW_classicPageLayout"><h2>classicPageLayout</h2>
+	<section><h3>Задание</h3>
+		<dl class="fa">
+			<dt>Да се напише валиден код, който реализира layout на страницата показана на следната фигура:
+			<a href="homeworks/classicPageLayout/classicPageLayout.png"><img src="homeworks/classicPageLayout/classicPageLayout.png" alt="classicPageLayout.png"></a>
+			<dt>Бийте могли да използвате следния файл: <a href="https://github.com/WWWCourses/ProgressBG-Front-End-Dev/blob/gh-pages/pages/themes/beginners/CSS_Visual_Formating_Model/homeworks/classicPageLayout/classicPageLayoutStartup.html">classicPageLayoutStartup.html</a> за начало.</dt>
+		</dl>
+	</section>
+</section>
+<section id="HW_FloatingImages"><h2>FloatingImages</h2>
 	<section><h3>Демо</h3>
 		<img src="https://drive.google.com/uc?export=view&id=0B78rPN4WCkJEdW1IU2ZnQnc5Uk0">
 	</section>
@@ -346,7 +366,7 @@
 	</iframe>
 	</section>
 </section>
-<section id="HW_MatroskaSquares"><h2>Задачa за упражнение: MatroskaSquares</h2>
+<section id="HW_MatroskaSquares"><h2>MatroskaSquares</h2>
 	<section><h3>Демо</h3>
 		<img src="homeworks/matroska_square/images/result_crop.png" height="100%" width="100%">
 	</section>
@@ -365,7 +385,7 @@
 	</iframe>
 	</section>
 </section>
-<section id="HW_OlimpicRings"><h2>Задачa за упражнение: OlimpicRings</h2>
+<section id="HW_OlimpicRings"><h2>OlimpicRings</h2>
 	<section><h3>Демо</h3>
 		<img src="homeworks/olimpic_rings/images/OlimpicRings-Result.png" height="100%" width="100%">
 	</section>
