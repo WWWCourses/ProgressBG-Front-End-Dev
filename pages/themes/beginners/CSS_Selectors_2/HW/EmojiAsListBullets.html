@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EmojiAsListBullets</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<style>
+		h1{
+			text-align: center;
+			/* font-size: 1.5em; */
+		}
+		.todoList{
+			border:5px outset #999;
+			list-style-type: none;
+			padding: 1em;
+		}
+		.todoList>li{
+			line-height: 1.5em;
+		}
+		.emoji:before{
+			margin-right: .3em;
+			color:#999;
+		}
+		.emoji-smile:before{
+			content:"\1F603";
+		}
+		.emoji-sad:before{
+			content:"\1F625"
+		}
+		.emoji-loudly-crying:before {
+			content:"\1F62D"
+		}
+
+		.tip{
+			font-family: monospace;
+		}
+	</style>
+</head>
+<body>
+	<h1>My Todo List</h1>
+	<ul class="todoList">
+		<li class="emoji emoji-smile">Learn HTML </li>
+		<li class="emoji emoji-sad">Learn CSS</li>
+		<li class="emoji emoji-loudly-crying">Learn JavaScript</li>
+	</ul>
+	<!-- <hr>
+	<p><b>Unicode codes used:</b></p>
+	<ul class="tip">
+		<li>emoji-smile code: 1F603</li>
+		<li>emoji-sad code: 1F625</li>
+		<li>emoji-loudly-crying code: 1F62D</li>
+	</ul> -->
+</body>
+</html>
