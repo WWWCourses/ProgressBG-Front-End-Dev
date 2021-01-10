@@ -35,7 +35,7 @@
     }
     /*блок с подменю*/
     nav>ul>li>ul{
-        /*display: none;*/
+        display: none;
         background-color: #CCC;
     }
     /*подменюто, когато мишката е над елемента в главното меню*/
@@ -52,10 +52,20 @@
         font-weight: bold;
     }
 
+    main{
+      margin-top: 5em;
+    }
+
+    .clearfix{
+      content: "";
+      display: block;
+      clear: both;
+    }
+
   </style>
 </head>
 <body>
-  <nav>
+  <nav class="clearfix">
     <ul>
       <li><strong>Супи</strong>
         <ul>
@@ -78,5 +88,8 @@
       </li>
     </ul>
   </nav>
+  <main>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod harum, quasi tempora illo quae maiores quisquam sequi nulla repellendus alias eos ex autem molestias sint ratione dicta nostrum. Quia, suscipit.</p>
+  </main>
 </body>
 </html>

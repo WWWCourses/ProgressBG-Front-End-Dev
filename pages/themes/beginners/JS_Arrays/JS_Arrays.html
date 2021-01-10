@@ -76,6 +76,7 @@
 </section>
 
 
+<section data-min="50"><h1>Какво представлява масива?</h1></section>
 <section><h2>Какво представлява масива?</h2>
     <section>
         <dl class="fa">
@@ -85,18 +86,20 @@
         </dl>
     </section>
     <section>
-        <a href="images/JS_Arrays_Overview.png"><img src="images/JS_Arrays_Overview.png"></a>
-        <pre><code rel="JS" class="js" style="width:85%; margin: 0 auto;">
+        <a href="images/JS_Arrays_Overview.png"><img src="images/JS_Arrays_Overview.png" style="height: 40vh;"></a>
+        <pre><code rel="JS" class="js" >
             let fruits = ["apple", "banana", "strawberry", "banana", "orange"];
         </code></pre>
         <dl class="fa">
-            <dt>Редът на елементите в масива е важен!</dt>
             <dt>Данните в масива се наричат негови <span class="note">елементи</span>.</dt>
             <dt>Поредните номера на масива се наричат <span class="note">индекси</span>.</dt>
             <dt>В JS, както и при всички останали езици за програмиране, <span class="note">броенето започва от 0</span>.</dt>
+            <dt>Редът на елементите в масива е важен!</dt>
         </dl>
     </section>
 </section>
+
+<section data-min="50"><h1>Масиви - дефиниране (Arrays definition)</h1></section>
 <section><h2>Масиви - дефиниране (Arrays definition)</h2>
     <section>
         <p>Елементите на масива се задават в квадратни скоби '[' и ']' и се разделят със запетайка.</p>
@@ -111,8 +114,6 @@
             let arr= [];
         </code></pre>
     </section>
-</section>
-<section><h2>Масиви - дефиниране (Arrays definition)</h2>
     <section>
         <pre><code rel="JS">
             let fruits = ['apple', 'banana', 'strawberry'];
@@ -120,7 +121,9 @@
         <a href="images/arrayInRAM_1.png"><img src="images/arrayInRAM_1.png" style="background: #FFF;"></a>
     </section>
 </section>
-<section><h2>Масиви – достъп до елементите (Array indexing)</h2>
+
+<section data-min="50"><h1>Масиви - достъп до елементите (Array indexing)</h1></section>
+<section><h2>Масиви - достъп до елементите (Array indexing)</h2>
     <section>
         <dl class="fa">
             <dt>Даден елемент от масива достъпваме като след <span class="note">името на масива в квадратни скоби поставяме индексът на дадения елемент</span> .</dt>
@@ -140,27 +143,29 @@
             // fruits=['apple', 'banana', 'orange']
         </code></pre>
     </section>
+    <section>
+        <dl class="fa">
+            <dt>Индексът на елемент на масива може да бъде единствено <span class="note">цяло положително число и 0</span>.</dt>
+            <dt>Ако се опитаме да <span class="note">четем</span> от масив с несъществуващ индекс, то JS ще върне <span class="note">undefined</span>
+                <pre><code rel="JS" class="js">
+                    let arr = [2,4,6];
+                    console.log( arr[4] )
+                    // undefined
+                </code></pre>
+            </dt>
+            <dt>Ако се опитаме да <span class="note">пишем</span> в масив с несъществуващ индекс, то елементът ще се запише в посочения индекс, а междинните стойностите ще се попълнат с празни (empty) елементи:
+                <pre><code rel="JS" class="js">
+                    let arr = [2,4,6];
+                    arr[4] = 8;
+                    console.log(arr);
+                    // [ 2, 4, 6, empty, 8 ]
+                </code></pre>
+            </dt>
+        </dl>
+    </section>
 </section>
-<section><h2>Масиви – достъп до елементите (Array indexing)</h2>
-    <dl class="fa">
-        <dt>Индексът на елемент на масива може да бъде единствено <span class="note">цяло положително число и 0</span>.</dt>
-        <dt>Ако се опитаме да <span class="note">четем</span> от масив с несъществуващ индекс, то JS ще върне <span class="note">undefined</span>
-            <pre><code rel="JS" class="js">
-                let arr = [2,4,6];
-                console.log( arr[4] )
-                // undefined
-            </code></pre>
-        </dt>
-        <dt>Ако се опитаме да <span class="note">пишем</span> в масив с несъществуващ индекс, то елементът ще се запише в посочения индекс, а междинните стойностите ще се попълнат с празни (empty) елементи:
-            <pre><code rel="JS" class="js">
-                let arr = [2,4,6];
-                arr[4] = 8;
-                console.log(arr);
-                // [ 2, 4, 6, empty, 8 ]
-            </code></pre>
-        </dt>
-    </dl>
-</section>
+
+<section data-min="50"><h1>Масива като обект</h1></section>
 <section><h2>Масива като обект</h2>
     <section>
         <dl class="fa">
@@ -292,6 +297,8 @@
         </dl>
     </section>
 </section>
+
+<section data-min="50"><h1>Обхождане на елементите на масив (loop over array elements)</h1></section>
 <section><h2>Обхождане на елементите на масив (loop over array elements)</h2>
     <section>
         <dl class="fa">
@@ -323,7 +330,9 @@
         </code></pre>
     </section>
 </section>
-<section><h2>"Двумерни" масиви:</h2>
+
+<section data-min="50"><h1>"Двумерни" масиви</h1></section>
+<section><h2>"Двумерни" масиви</h2>
     <section>
         <dl class="fa">
             <dt>В JavaScript не са имплементирани двумерни(или многомерни) масиви, но тъй като елементите на един масив могат да са всеки един тип данни, включително и масиви, то можем да симулираме двумерен масив като <span class="note">масив, чийто елементи са масиви</span>:
@@ -384,34 +393,36 @@
         </code></pre>
     </section>
 </section>
-<section><h2>Примери и задачи в codepen</h2>
-    <section><h3>arrayAsObject</h3>
+
+<section data-min="50"><h1 id="hw">Примери и задачи</h1></section>
+<section><h2 id="hw">Примери и задачи</h2>
+    <section><h3>arrayAsObject - example</h3>
         <iframe height="300" style="width: 100%;" scrolling="no" title="arrayAsObject" src="https://codepen.io/webdesigncourse/embed/qqepxG?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
           See the Pen <a href='https://codepen.io/webdesigncourse/pen/qqepxG'>arrayAsObject</a> by Iva Popova
           (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
         </iframe>
     </section>
-    <section><h3>sumArrayElements</h3>
+    <section><h3>sumArrayElements -examples and task</h3>
         <iframe height="300" style="width: 100%;" scrolling="no" title="sumArrayElements" src="https://codepen.io/webdesigncourse/embed/owyBrG?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
           See the Pen <a href='https://codepen.io/webdesigncourse/pen/owyBrG'>sumArrayElements</a> by Iva Popova
           (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
         </iframe>
     </section>
-    <section><h3>negativeOddArrayNumbers</h3>
+    <section><h3>find Max array element - example</h3>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="find Max array element - algorithm demo" src="https://codepen.io/webdesigncourse/embed/XWjPbWy?height=300&theme-id=20230&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href='https://codepen.io/webdesigncourse/pen/XWjPbWy'>find Max array element - algorithm demo</a> by Iva Popova
+          (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>negativeOddArrayNumbers - example</h3>
         <iframe height="300" style="width: 100%;" scrolling="no" title="negativeOddArrayNumbers" src="https://codepen.io/webdesigncourse/embed/NjvKde?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
           See the Pen <a href='https://codepen.io/webdesigncourse/pen/NjvKde'>negativeOddArrayNumbers</a> by Iva Popova
           (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
         </iframe>
     </section>
-    <section><h3>separateArrayElementsInNewArrays</h3>
+    <section><h3>separateArrayElementsInNewArrays- task</h3>
         <iframe height="300" style="width: 100%;" scrolling="no" title="separateArrayElementsInNewArrays" src="https://codepen.io/webdesigncourse/embed/XgYNzy?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
           See the Pen <a href='https://codepen.io/webdesigncourse/pen/XgYNzy'>separateArrayElementsInNewArrays</a> by Iva Popova
-          (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
-        </iframe>
-    </section>
-    <section><h3>twoDimensionalArray</h3>
-        <iframe height="300" style="width: 100%;" scrolling="no" title="twoDimensionalArray" src="https://codepen.io/webdesigncourse/embed/awKJEE?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-          See the Pen <a href='https://codepen.io/webdesigncourse/pen/awKJEE'>twoDimensionalArray</a> by Iva Popova
           (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
         </iframe>
     </section>
@@ -424,6 +435,12 @@
     <section><h3>BulgarianRulersStat</h3>
         <iframe height="300" style="width: 100%;" scrolling="no" title="HW: Bulgarian Rulers Stat" src="https://codepen.io/webdesigncourse/embed/yXEVMv?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
           See the Pen <a href='https://codepen.io/webdesigncourse/pen/yXEVMv'>HW: Bulgarian Rulers Stat</a> by Iva Popova
+          (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>twoDimensionalArray</h3>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="twoDimensionalArray" src="https://codepen.io/webdesigncourse/embed/awKJEE?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href='https://codepen.io/webdesigncourse/pen/awKJEE'>twoDimensionalArray</a> by Iva Popova
           (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
         </iframe>
     </section>

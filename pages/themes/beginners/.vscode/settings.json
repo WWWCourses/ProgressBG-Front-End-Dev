@@ -9,5 +9,6 @@
         "plaintext",
         "python",
         "html"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
