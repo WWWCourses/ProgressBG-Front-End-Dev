@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>animatedHelloEffect</title>
+	<style>
+		.helloEffect{
+			position: relative;
+			height: 20em;
+			border: 2px solid #999;
+		}
+		.helloEffect .triger{
+			font-size: 2em;
+			position: absolute;
+			right: 0;
+			width: 70%;
+			height: 100%;
+			background: #666;
+			color:#DEDEDE;
+			padding: 3em;
+			box-sizing: border-box;
+			text-align: center;
+		}
+		.helloEffect .picture{
+			position: absolute;
+			top:4em;
+			left: 30%;
+			width: 10em;
+			z-index: -1;
+			transform: rotate(-30deg);
+			transition: 700ms;
+
+		}
+		.helloEffect:hover .picture{
+			transform: rotate(0deg);
+			/* to move picture next to the .triger div left side */
+			left: calc(30% - 10em);
+		}
+	</style>
+</head>
+<body>
+	<div class="helloEffect">
+		<div class="triger">
+			<div>You can place an entire form here</div>
+		</div>
+		<!-- <img class="picture" src="publicdomainq-business-man-guide.png" alt=""> -->
+		<img class="picture" src="https://openclipart.org/image/800px/285004" alt="">
+	</div>
+</body>
+</html>
