@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>multimpleContentInOneDiv </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<style>
+		/* style the main menu */
+		nav{
+			/* border:2px solid red; */
+		}
+		nav>ul{
+			display: flex;
+			margin: 1em auto;
+			width: 20em;
+		}
+		nav>ul>li{
+			padding: .5em;
+			border: 1px solid #999;
+		}
+		nav>ul>li:hover{
+			cursor: pointer;
+			background:#999;
+		}
+
+		/* style article's  */
+		.articleContainer>article{
+			margin: 1em;
+			display: none;
+		}
+		.articleContainer>article>h1{
+			font-size: 1.4em;
+			font-weight: bold;
+			margin: 1em 0;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li>Article 1</li>
+			<li>Article 2</li>
+			<li>Article 3</li>
+		</ul>
+	</nav>
+	<main class="articleContainer">
+		<article id="a1">
+			<h1>Article 1</h1>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, eum accusamus, labore cupiditate excepturi non recusandae totam voluptatem cum explicabo maiores magnam reiciendis mollitia facilis ea commodi! Eum, necessitatibus similique.</p>
+		</article>
+		<article id="a2">
+			<h1>Article 2</h1>
+			<p>Лорем ипсум долор сит амет, ан хас ерипуит пертинах инимицус, веро интеллегам мел ад. Татион поссим ут яуи, еирмод фиерент инцидеринт цу нам, нам либер цлита доценди ид. Ин еуисмод модератиус инструцтиор хас, еам но диам деленити детерруиссет. Не яуаеяуе ратионибус вим.</p>
+		</article>
+		<article id="a3">
+			<h1>Article 3</h1>
+			<p>Λορεμ ιπσθμ δολορ σιτ αμετ, περ εθ εφφιcιενδι θλλαμcορπερ δετερρθισσετ, φαλλι ρεcθσαβο τηεοπηραστθσ μει εθ. Ιδqθε δολορεσ ιδ προ, ηασ λθπτατθμ περιcθλισ εξ. Ειθσ ερρορ δολορεσ cθ πρι, σεντεντιαε cοτιδιεqθε αδ μει. Vιταε μαλορθμ δολορεσ θσθ cθ, πρι αφφερτ εξπετενδισ σιγνιφερθμqθε εξ.</p>
+		</article>
+	</main>
+
+	<script>
+		const navItems = document.querySelectorAll('nav>ul>li');
+		const articles = document.querySelectorAll('.articleContainer>article');
+
+		function hideAll(articles) {
+			for (let i = 0; i < articles.length; i++) {
+				articles[i].style.display = "none";
+			}
+		}
+
+		function showArticle(index) {
+			return function () {
+				hideAll(articles);
+				articles[index].style.display = "block";
+			}
+		}
+
+		for (let i = 0; i < navItems.length; i++) {
+			const item = navItems[i];
+			item.addEventListener("click", showArticle(i))
+		}
+	</script>
+</body>
+</html>
