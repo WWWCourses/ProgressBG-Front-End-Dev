@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Drop-Down Vertical Menu - show on Hover</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<style>
+		.menu{
+			width: 10em;
+		}
+
+		/* -----------------------------------------------------------------------/
+		/                    defaults for all menu's UL and LI                    /
+		/----------------------------------------------------------------------- */
+		.menu ul{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		.menu li{
+			padding: .5em 0;
+			padding-left: .5em;
+			/* cursor: pointer; */
+		}
+
+		/* -----------------------------------------------------------------------/
+		/                    style menu links                                     /
+		/----------------------------------------------------------------------- */
+		.menu a{
+			color: #333;
+		}
+		.menu a:hover{
+			font-weight: bold;
+		}
+
+		/* -----------------------------------------------------------------------/
+		/                    style the vertical main menu (level1)                /
+		/----------------------------------------------------------------------- */
+		ul.level1{
+			border:1px solid green;
+		}
+
+		ul.level1>li{
+			position: relative;
+			background-color: #ffdead;
+			border-bottom:1px solid green;
+			cursor: pointer;
+		}
+		ul.level1>li:hover{
+			background-color: #ffefd7;
+		}
+		ul.level1>li:last-child{
+			border-bottom:none;
+		}
+		ul.level1>li::after{
+			/* fa-caret-down */
+			content:"\f0d7";
+			font-family: "Font Awesome 5 Free"; font-weight: 900;
+			position: absolute;
+			display: block;
+			height: 100%;
+			top:0em;
+			right: 0em;
+			padding: .5em;
+		}
+		ul.level1>li:hover::after{
+			color:green;
+			/* fa-caret-up */
+			content:"\f0d8";
+		}
+
+
+		/* -----------------------------------------------------------------------/
+		/                    style the horisontal sub menus (level2)              /
+		/----------------------------------------------------------------------- */
+		ul.level2{
+			position:absolute;
+			/* move up -1px to align the top with the border of ul.level1  */
+			top:-1px;
+			left:100%;
+			width:100%;
+			/* background-color: green; */
+			background-color: inherit;
+			/* style borders - note the copy-paste of color - better to  use CSS vars */
+			border:1px solid green;
+			border-left:none;
+
+			/* hide the ul.level2 */
+			visibility:hidden;
+		}
+		/* show the ul.level2 - will be toggled by JS */
+		ul.level1>li:hover>ul.level2{
+			visibility: visible;
+		}
+
+		/* style borders - note the copy-paste of color - better to  use CSS vars */
+		ul.level2>li{
+			border-bottom:1px dotted green88;
+			border-left:1px solid green;
+		}
+		ul.level2>li:nth-child(1){
+			border-top:none;
+			border-left:none;
+		}
+		ul.level2>li:last-child{
+			border-bottom:none;
+		}
+
+	</style>
+</head>
+<body>
+	<nav class="menu">
+		<ul class="level1">
+			<li id="l1" class="toggleDropDown"><a href="#">Item1</a>
+				<ul class="level2">
+					<li><a href="#">Sub-Item 1</a></li>
+					<li><a href="#">Sub-Item 2</a></li>
+					<li><a href="#">Sub-Item 3</a></li>
+					<li><a href="#">Sub-Item 4</a></li>
+				</ul>
+			</li>
+			<li id="l2" class="toggleDropDown"><a href="#">Item2</a>
+				<ul class="level2">
+					<li><a href="#">Sub-Item 1</a></li>
+					<li><a href="#">Sub-Item 2</a></li>
+					<li><a href="#">Sub-Item 3</a></li>
+					<li><a href="#">Sub-Item 4</a></li>
+				</ul>
+			</li>
+			<li id="l3" class="toggleDropDown"><a href="#">Item3</a>
+				<ul class="level2">
+					<li><a href="#">Sub-Item 1</a></li>
+					<li><a href="#">Sub-Item 2</a></li>
+					<li><a href="#">Sub-Item 3</a></li>
+					<li><a href="#">Sub-Item 4</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<main>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda molestias recusandae deleniti ratione odio labore rerum vero ipsa, architecto eaque quisquam officia eius temporibus error. Consequuntur similique dolorem ipsa praesentium.</p>
+	</main>
+</body>
+</html>
