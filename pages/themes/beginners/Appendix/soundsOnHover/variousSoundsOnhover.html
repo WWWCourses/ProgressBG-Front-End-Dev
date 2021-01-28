@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sounds on hover - on various items</title>
+	<style>
+		ul.sounds {
+			width: 10em;
+			margin:1em 0;
+			padding: 0;
+			border: 1px solid #999;
+			list-style-type: none;
+		}
+
+		ul.sounds>li {
+			padding: .5em;
+			cursor: progress;
+		}
+
+		ul.sounds>li:nth-child(1) {
+			background-color: #faebd7;
+		}
+
+		ul.sounds>li:nth-child(2) {
+			background-color: #fabeb7;
+		}
+
+		ul.sounds>li:nth-child(3) {
+			background-color: #beb7fa;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Demo for playing various sounds on hover</h1>
+	<p>Just hover on the boxes bellow.<br><i>Please note, that browsers prevent playing sound, unless the user interacts with page first. So, before the test, just click somewhere on the page.</i></p>
+	<ul class="sounds">
+		<li id="alert">alert</li>
+		<li id="login">login</li>
+		<li id="logout">logout</li>
+	</ul>
+
+	<script>
+		//DOM cache:
+		const soundTriggerUL = document.querySelector('.sounds');
+
+		// initialize audio object:
+		const audio = new Audio();
+
+
+		// add event listeners to the whole UL container, but process only events triggered by LIs:
+		// play sound on mouseover
+		soundTriggerUL.addEventListener('mouseover', function (e) {
+			if(e.target.tagName !== "LI"){
+				return;
+			}
+
+			audio.src = `./sounds/${e.target.id}.wav`;
+			audio.play();
+		})
+
+		// pause sound on mouseleave
+		soundTriggerUL.addEventListener('mouseleave', function (e) {
+			if(e.target.tagName !== "LI"){
+				return;
+			}
+			audio.pause();
+			alertSound.currentTime = 0;
+		});
+	</script>
+</body>
+
+</html>

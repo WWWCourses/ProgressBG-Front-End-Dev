@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sound on hover - simplest</title>
+	<style>
+		.soundTrigger{
+			width: 7em;
+			padding: 1em;
+			background-color: #fabeb7;
+			cursor: progress;
+		}
+	</style>
+</head>
+<body>
+	<h1>Demo for playing a sound on hover</h1>
+	<p>Just hover on the box bellow.<br><i>Please note, that browsers prevent playing sound, unless the user interacts with page first. So, before the test, just click somewhere on the page.</i></p>
+	<div class="soundTrigger">Hover on me</button>
+
+	<script>
+		//DOM cache:
+		const soundTrigger = document.querySelector(".soundTrigger");
+
+		// initialize audio object:
+		const audio = new Audio("./sounds/login.wav");
+
+
+		// play sound on hover (mouseover)
+		soundTrigger.addEventListener("mouseover", function(e) {
+			audio.play();
+		})
+
+		// pause sound on mouseleave
+		soundTrigger.addEventListener("mouseleave", function(e) {
+			// console.log(audio.duration);
+			audio.pause();
+			audio.currentTime = 0;
+		})
+	</script>
+</body>
+</html>
