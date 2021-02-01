@@ -2,31 +2,40 @@ body{
 	margin: 0;
 	padding: 0;
 }
-header{
+header,footer{
 	height: 10vh;
 	background: #333;
-}
-footer{
-	height: 10vh;
-	background: #333;
+	color: #EEE;
+	font-size: 2em;
+	text-align: center;
+	padding: .5em 0;
+	box-sizing: border-box;
 }
 main{
+	/* to have the width calculated from its children */
+	display: inline-block;
+
+	/* center it (note that "margin:0 auto" would not work) */
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+
 	height: 80vh;
+	background: gray;
 }
 .col{
-	float: left;
+	display: inline-block;
+	vertical-align: top;
+
 	height: 100%;
-	width: 30vw;
+	width: 20vw;
 }
 .left{
-	left: 0;
-	background: yellow;
+	background: #F99;
 }
 .center{
-	left: 30vw;
-	background: orange;
+	background: #9F9;
 }
 .right{
-	left: 60vw;
-	background: green;
+	background: #99F;
 }

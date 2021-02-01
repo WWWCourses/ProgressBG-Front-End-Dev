@@ -2,16 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>test</title>
+    <title>centeredParent_WithFromChildren_FloatVariant</title>
     <link rel="stylesheet" type="text/css" href="test.css">
-    <script type="text/javascript" src="test.js"></script>
+
 	<style type="text/css">
-		body{
-			/* text-align: center; */
-		}
     	.container{
 			/* to have the width calculated from its children */
-			display: inline-block;
+			float: left;
 
 			/* center it (note that "margin:0 auto" would not work) */
 			position: relative;
@@ -23,18 +20,27 @@
     		background: #999;
     	}
     	.col{
-			display: inline-block;
+			float: left;
+			margin-right: .5em;
     		height: 100%;
     		width: 10em;
-			background: #F00;
-    	}
+			background: #F99;
+		}
+		.col:last-child{
+			margin-right: 0;
+		}
+		.clearfix::after{
+			content: "";
+			display: block;
+			clear: both;
+		}
     </style>
 </head>
 <body>
-<div class="container">
-	<div class="col">Content</div>
-	<div class="col">Content</div>
-	<div class="col">Content</div>
+<div class="container clearfix">
+	<div class="col">Col 1</div>
+	<div class="col">Col 2</div>
+	<div class="col">Col 3</div>
 </div>
 </body>
 </html>
