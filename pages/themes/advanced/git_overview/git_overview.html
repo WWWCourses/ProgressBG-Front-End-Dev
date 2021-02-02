@@ -136,7 +136,7 @@
 
 				# initialize git repo for that folder:
 				git init
-			</code></pre>
+		</code></pre>
 		<dl class="fa">
 			<dt>git will start to track your root project folder.</dt>
 			<dt>A hidden <code>.git</code> folder will be created. Do not touch it. If you delete it, your entire repo will be deleted!</dt>
@@ -157,20 +157,32 @@
 			git config --global user.name "User Name"
 		</code></pre>
 	</section>
+	<section><h3>All steps at a glance</h3>
+		<dl class="fa">
+			<dt>Remember, you need to initialize a git repo only once per project!</dt>
+		</dl>
+		<pre><code rel="Terminal" class="bash" data-noescape>
+			# make sure you are in your root project folder:
+			pwd
+
+			# initialize the git repo for that folder:
+			git init
+		</code></pre>
+	</section>
 </section>
 
-<section data-min="10"><h1>Create your first commit</h1></section>
-<section><h2>Create your first commit</h2>
+<section data-min="10"><h1>Create a git commit</h1></section>
+<section><h2>Create a git commit</h2>
 	<section><h3>The Three States in git</h3>
 		<a href="images/git_areas.png"><img src="images/git_areas.png"></a>
 	</section>
 	<section><h3 class="note">Stage files/changes</h3>
 		<p>Also known as <span class="note">adding files content to the index</span></p>
 		<pre><code rel="Terminal" class="bash" data-noescape>
-				# to stage only certain file/path:
+				# to stage changes only in certain file/path:
 				git add <i>path</i>
 
-				# to stage all files in CWD:
+				# to stage all changes:
 				git add -A
 			</code></pre>
 		<dl class="fa">
@@ -198,6 +210,18 @@
 			</code></pre>
 			<!-- <dd><a href="https://stackoverflow.com/questions/8951275/how-can-i-make-sublime-text-the-default-editor-for-git/23934471">How can I make Sublime Text the default editor for Git?</a></dd> -->
 		</dl>
+	</section>
+	<section><h3>All steps at a glance</h3>
+		<dl class="fa">
+			<dt>Each time, you want to commit (save) your changes, you'll need to:</dt>
+		</dl>
+		<pre><code rel="Terminal" class="bash" data-noescape>
+			# stage all changes:
+			git add -A
+
+			# commit and write the Commit Message
+			git commit -m'Your Commit Message'
+		</code></pre>
 	</section>
 </section>
 
@@ -274,15 +298,24 @@
 
  -->
 
-<section data-min="5"><h1>Connect your local git repository to your GitHub/GitLab repository</h1></section>
-<section><h2>Connect your local git repository to your GitHub repository</h2>
-	<section>
+<section data-min="5"><h1>Using GitHub as a remote service</h1></section>
+<section><h2>Using GitHub as a remote service</h2>
+	<section><h3>Connect your local git repository to your GitHub repository</h3>
 		<dl class="fa">
-			<dt>Create a local git repository</dt>
+			<dt>Create a local git repository (if you haven't done so)</dt>
 			<dt>Create a corresponding GitHub repo (preferably with the same name, as the root folder of your local repo).</dt>
 			<dt>Follow the instruction given in github page, in the section: "…or push an existing repository from the command line" section.</dt>
 		<dd>Or read the github docs: <a href="https://docs.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line">Adding an existing project to GitHub using the command line</a></dd>
 	</dl>
+	</section>
+	<section><h3>Pushing changes to GitHub</h3>
+		<dl class="fa">
+			<dt>Each time, you want to "store" your local repo changes to your remote GitHub repo, you'll need to <code>push</code> that changes</dt>
+			<pre><code rel="Terminal" class="bash">
+				# push your default local branch (master) to the corresponding remote (origin):
+				git push
+			</code></pre>
+		</dl>
 	</section>
 </section>
 
