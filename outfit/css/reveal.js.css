@@ -92,7 +92,8 @@
 }
 
 .reveal section dl.fa{
-  font-size: .9em;
+  font-size: .8em;
+  margin:.5em 0;
 }
 .reveal section dl.fa>dt{
   font-weight: normal;

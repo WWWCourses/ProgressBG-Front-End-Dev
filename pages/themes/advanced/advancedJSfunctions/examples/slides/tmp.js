@@ -1,20 +1,17 @@
-function factorielIterative(n) {
-    let res = 1;
+let x = 1, y=1; // x and y in global scope
 
-    for (let i = 1; i <= n; i++) {
-        res = res*i;
-    }
+function foo(){
+  let x = 2, y=2;  // x and y in foo scope
 
-    return res;
+  function bar(){
+    let y = 3;  // y in bar scope
+    x = 3;     // uses x in foo scope
+    console.log(`x,y in bar: ${x}, ${y}`);
+  }
+
+  bar();
+  console.log(`x,y in foo: ${x}, ${y}`);
 }
 
-console.log( factorielIterative(5) ); // 120
-
-function factorielRecursive(n) {
-    if(n===1){
-        return 1
-    }else{
-         return n*factorielRecursive(n-1)
-    }
-}
-console.log( factorielRecursive(5) );
+foo();
+console.log(`x,y in gloabl: ${x}, ${y}`);

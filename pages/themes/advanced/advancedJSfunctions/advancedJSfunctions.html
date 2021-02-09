@@ -89,7 +89,7 @@
 	</section>
 	<section><h3>Function expression</h3>
 		<pre><code rel="JS">
-			var add = function(x,y){
+			const add = function(x,y){
 				return x+y
 			};
 		</code></pre>
@@ -101,7 +101,7 @@
 	</section>
 	<section><h3>Function expression</h3>
 		<pre><code rel="JS">
-			var f = function add(x,y){
+			const f = function add(x,y){
 				return x+y
 			};
 
@@ -116,8 +116,8 @@
 		<dl class="fa">
 			<dt><a href="https://developer.mozilla.org/en-US/docs/Glossary/Hoisting">Hoisting</a></dt>
 			<dd>Function declarations are hoisted</dd>
-			<dd>Function expressions are <span class="note">not</span>	hoisted</dd>
-			<dt class="note">It is a good practise always to declare first the variables (including the functions) first, before using them.</dt>
+			<dd>Function expressions are <span class="note">not</span> hoisted</dd>
+			<dt class="note">It is a good practise always to declare the variables (including functions) first, before using them.</dt>
 			<dd>Following this practise you will not have to wander what is hoisted and what is not.</dd>
 		</dl>
 	</section>
@@ -153,24 +153,27 @@
 
 			console.log("add:", add); // undefined
 		</code></pre>
-		<p class="note">Not browser compatible! Some older browser would defined the function.</p>
+		<dl class="fa">
+			<dt class="note">Not browser compatible! Some browser would defined the function, because the function declaration is hoisted.</dt>
+		</dl>
 	</section>
 	<section><h3 class="advanced">Conditional function definition</h3>
 		<p>Safer way:</p>
 		<pre><code rel="JS">
 			var add;
 			if (0){
+				// function expressions are not hoisted
 				add = function(x,y){
 					x+y;
 				};
 			};
 
-			console.log("add:", add);
+			console.log("add:", add); // undefined
 		</code></pre>
 	</section>
 </section>
 
-<section><h1>Scope</h1></section>
+<section id="scope" data-min="10"><h1>Scope</h1></section>
 <section><h2>Scope</h2>
 	<section>
 		<dl class="fa">
@@ -196,7 +199,8 @@
 
 				function bar(){
 					let y = 3;  // y in bar scope
-					x = 3; 		// uses x in foo scope
+					x = 3;     // uses x in foo scope
+					console.log(`x,y in bar: ${x}, ${y}`);
 				}
 
 				bar();
@@ -204,22 +208,46 @@
 			}
 
 			foo();
-			console.log(`x in gloabl: ${x}, ${y}`);
+			console.log(`x,y in gloabl: ${x}, ${y}`);
 
-			// x,y in foo: 3, 2
-			// x in gloabl: 1, 1
+			// OUTPUT:
+			//x,y in bar: 3, 3
+			//x,y in foo: 3, 2
+			//x,y in gloabl: 1, 1
 		</code></pre>
 	</section>
 	<section><h3>References</h3>
 		<dl class="fa">
-			<dt><a href="/pages/themes/beginners/JS_Functions/JS_Functions.html#Scope"><span class="note">Scope notes</span> in JS_Beginners Course</a></dt>
+			<dt><a href="/pages/themes/beginners/JS_Functions/JS_Functions.html#scope"><span class="note">Scope notes</span> in JS_Beginners Course</a></dt>
 			<dt><a href="/pages/themes/beginners/JS_Functions/JS_Functions.html#let_const_var"><span class="note">let vs. const vs. var</span> in JS_Beginners Course</a></dt>
 			<dt><a href="/pages/themes/beginners/JS_Functions/JS_Functions.html#function_basics"><span class="note">Funcitons basics</span> in JS_Beginners Course</a></dt>
 		</dl>
 	</section>
 </section>
 
-<section><h1>Functions as first-class citizens</h1></section>
+<section data-min="50"><h1>A note on Programming Paradigms</h1></section>
+<section><h2 class="advanced">A note on Programming Paradigms</h2>
+	<section><h3>Overview</h3>
+		<dl class="fa">
+			<dt>Programming paradigms are a way to classify programming languages based on their features.</dt>
+			<dt>Languages can be classified into multiple paradigms.</dt>
+		</dl>
+	</section>
+	<section><h3>Common programming paradigms</h3>
+		<dl class="fa">
+			<dt>Procedural</dt>
+			<dd>Imperative programming with procedure calls</dd>
+			<dt>Object-oriented</dt>
+			<dd>Programming by defining objects that send messages to each other. Objects have their own internal (encapsulated) state and public interfaces</dd>
+			<dt>Functional</dt>
+			<dd>Programming with function calls that avoid any global state</dd>
+			<dt>Logic</dt>
+			<dd>Programming by specifying a set of facts and rules. An engine infers the answers to questions.</dd>
+		</dl>
+	</section>
+</section>
+
+<section id="functionsAsFirstClassCitizens" data-min="20"><h1>Functions as first-class citizens</h1></section>
 <section><h2>Functions as first-class citizens</h2>
 	<section>
 		<p>From its creation back in 1995, JavaScript supports function as <span class="note">first-class</span> citizens (objects)</p>
@@ -246,6 +274,7 @@
 				f();
 			}
 
+			// we pass the callback function to caller
 			caller( callback );
 
 			// This is the CALLER
@@ -254,7 +283,7 @@
 	</section>
 	<section><h3>example - function passed as argument</h3>
 		<pre><code rel="JS">
-			var greeting = function(){
+			const greeting = function(){
 				alert("Welcome");
 			}
 
@@ -265,19 +294,19 @@
 	<section><h3>example</h3>
 		<p>function as return value</p>
 		<pre><code rel="JS">
-			var greeting = function(name){
+			const greeting = function(name){
 				return function(){
 					alert("Welcome, "+ name);
 				}
 			}
 
-			setTimeout(greeting("iva"), 4000);
+			setTimeout(greeting("Ada"), 4000);
 		</code></pre>
 	</section>
 	<section><h3>example</h3>
 		<p class="advanced"><a href="https://en.wikipedia.org/wiki/Currying">currying</a></p>
 		<pre><code rel="JS">
-			var sum = function(x){
+			const sum = function(x){
 				return function(y){
 					return x+y;
 				}
@@ -298,7 +327,7 @@
 	</section>
 </section>
 
-<section><h1>Immediately-invoked function expressions (IIFE)</h1></section>
+<section id="IIFE" data-min="20"><h1>Immediately-invoked function expressions (IIFE)</h1></section>
 <section><h2>Immediately-invoked function expressions (IIFE)</h2>
 		<section><h3><abbr>IIFE</abbr><dfn id="IIFE"><span>Immediately</span><span>Invoked</span><span>Function</span><span>Expression</span></dfn></h3>
 			<dl class="fa">
@@ -349,7 +378,7 @@
 		</section>
 </section>
 
-<section><h1>Closures</h1></section>
+<section id="closures" data-min="20"><h1>Closures</h1></section>
 <section><h2>Closures</h2>
 	<section>
 		<dl class="fa">
@@ -359,7 +388,7 @@
 		</dl>
 		<pre><code rel="JS">
 			function outer(){
-				var x = 5;
+				const x = 5;
 				function inner(){
 					console.log(x);
 				}
@@ -367,7 +396,7 @@
 				return inner;
 			}
 
-			var f = outer();
+			const f = outer();
 			f(); // f can access the local x !
 		</code></pre>
 	</section>
@@ -502,7 +531,7 @@
 	</section>
 </section>
 
-<section><h1>Recursion</h1></section>
+<section id="recursion" data-min="20"><h1>Recursion</h1></section>
 <section><h2>Recursion</h2>
 	<section>
 		<dl class="fa">
@@ -623,8 +652,8 @@
 			keyboard: true,
 			history: true,
 			center: true,
-			// width: '100%',
-			// height: '100%',
+			width: '80%',
+			height: '100%',
 			// slide transition
 			transition: 'concave', // none/fade/slide/convex/concave/zoom
 			// Factor of the display size that should remain empty around the content

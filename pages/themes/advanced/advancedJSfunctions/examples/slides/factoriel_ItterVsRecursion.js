@@ -1,3 +1,5 @@
+// n! = 1 * 2 * 3 ... (n-2) * (n -1) * n, n>0
+// n! = 1, n=0
 function factorielIterative(n) {
     let res = 1;
 
@@ -7,11 +9,12 @@ function factorielIterative(n) {
 
     return res;
 }
-
 console.log( factorielIterative(5) ); // 120
 
+// n! = n * (n - 1)!, n>0
+// n! = 1, n=0
 function factorielRecursive(n) {
-    if(n===1){
+    if(n===0){
         return 1
     }else{
          return n*factorielRecursive(n-1)
