@@ -586,10 +586,83 @@
 			console.log(power(2, 10));
 		</code></pre>
 	</section>
-	<section><h3>Traversing the DOM</h3>
+
+	<section><h3>Power Calculator - Task</h3>
+		<p>Write down a function which uses the iterative approach (i.e. - loop) to solve the Power problem</p>
+	</section>
+
+	<section><h3>Traversing the DOM - TASK</h3>
+		<dl class="fa">
+			<dt>apply backgroundColor:"red" for each elelement in #startNode, which has class "red"</dt>
+			<dt>the code given bellow tries to solve the problem, but it has bugs. Can you fix them.</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			&lt;!DOCTYPE html&gt;
+			&lt;html lang=&quot;en&quot;&gt;
+
+			&lt;head&gt;
+				&lt;meta charset=&quot;UTF-8&quot;&gt;
+				&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+				&lt;title&gt;TASJ_DOM_Travers&lt;/title&gt;
+			&lt;/head&gt;
+
+			&lt;body&gt;
+				&lt;p&gt;TASK: apply backgroundColor:&quot;red&quot; for each elelement in #startNode, which has class &quot;red&quot;&lt;/p&gt;
+				&lt;p&gt;paragraph 2&lt;/p&gt;
+				&lt;ul id=&quot;startNode&quot;&gt;
+					&lt;li&gt;
+						&lt;ol&gt;
+							&lt;li class=&quot;red&quot;&gt;make me red&lt;/li&gt;
+							&lt;li&gt;do not make me red&lt;/li&gt;
+						&lt;/ol&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;red&quot;&gt;make me red&lt;/li&gt;
+				&lt;/ul&gt;
+
+				&lt;ol&gt;
+					&lt;li class=&quot;red&quot;&gt;do not make me red&lt;/li&gt;
+				&lt;/ol&gt;
+
+
+				&lt;script&gt;
+					function doSomething(node) {
+						if (node.classList.contains(&quot;red&quot;)) {
+							node.style.backgroundColor = &quot;red&quot;;
+							console.log(node.className);
+						}
+					};
+
+					// HW: fix it
+					function traverseDOM(node) {
+						// get all HTML child nodes of node
+						let children = node.children;
+
+						// loop over children:
+						for (let i = 0; i &lt; children.length; i++) {
+							let el = children[i];
+
+							// do something with each child element:
+							doSomething(el);
+
+							traverseDOM(el);
+						}
+
+					}
+
+					let startNode = document.querySelector(&quot;#startNode&quot;);
+
+					traverseDOM( startNode );
+
+				&lt;/script&gt;
+			&lt;/body&gt;
+
+			&lt;/html&gt;
+		</code></pre>
+	</section>
+	<!-- <section><h3>Traversing the DOM</h3>
 		<iframe height='204' scrolling='no' title='KmvZKv' src='https://codepen.io/ProgressWWWCourses/embed/KmvZKv/?height=204&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ProgressWWWCourses/pen/KmvZKv/'>KmvZKv</a> by Iva E. Popova (<a href='//codepen.io/ProgressWWWCourses'>@ProgressWWWCourses</a>) on <a href='//codepen.io'>CodePen</a>.
 		</iframe>
-	</section>
+	</section> -->
 </section>
 
 
