@@ -614,6 +614,130 @@
 	</section>
 </section>
 
+<section data-min="10"><h1>Solutions</h1></section>
+<section><h2>countEvenNumbers</h2>
+	<section><h3>Code</h3>
+		<pre><code rel="JS" class="js">
+			/* -------------------------------------------------------------------------- */
+			/*                           task: countEvenNumbers                           */
+			/* -------------------------------------------------------------------------- */
+			// Да се дефинира функция countEvenNumbers, която връща броя четни числа в
+			// подаденият й масив от числа:
+			function countEvenNumbers(arr) {
+				let evenCount = 0;
+				for (let i = 0; i < arr.length; i++) {
+					const number = arr[i];
+					if(number%2===0){
+						evenCount+=1;
+					}
+				}
+
+				return evenCount;
+			}
+
+			// примерно извикване:
+			let evenCount = countEvenNumbers( [1,4,2,3,5] );
+			console.log( evenCount );
+			// 2
+		</code></pre>
+	</section>
+</section>
+<section><h2>generateRandomNumber</h2>
+	<section><h3>Algorithm</h3>
+		<dl class="fa">
+			<dt>Reference: <a href="https://stackoverflow.com/a/1527820">Check this StackOverflow answer</a></dt>
+		</dl>
+	</section>
+	<section><h3>Code</h3>
+		<pre><code rel="JS" class="js">
+			/* -------------------------------------------------------------------------- */
+			/*                            task: generateRandomNumber                      */
+			/* -------------------------------------------------------------------------- */
+			// Да се дефинира функцията generateRandomNumber(start, end), която генерира
+			// цяло случайно число в интервала, зададен чрез параметрите start и end.
+			// Hint: използвайте Math.random() функцията за генериране на случайно число.
+			function generateRandomNumber(start,end) {
+				return Math.floor(Math.random() * (start - end + 1)) + end;
+			}
+			// примерно извикване:
+			let randomNumber = generateRandomNumber(1,100);
+			console.log( randomNumber );
+			// randomNumber трябва да е цяло число, 1 >= randomNumber <=100
+
+		</code></pre>
+	</section>
+</section>
+<section><h2>SumEven2DimArrayElements</h2>
+	<section><h3>Code</h3>
+		/* -------------------------------------------------------------------------- */
+		/*                                    task                                    */
+		/* -------------------------------------------------------------------------- */
+		// Да се дефинира функция SumEven2DimArrayElements(), която връща сумата от
+		// четните елементи на подаден й двумерен масив.
+
+		let arr = [
+					[1,2,3],
+					[4,5,6]
+		];
+
+		function SumEven2DimArrayElements(arr) {
+					let sum = 0;
+
+					for (let i = 0; i < arr.length; i++) {
+									const row = arr[i];
+									for (let j = 0; j < row.length; j++) {
+													const number = row[j];
+													if(number%2===0){
+																	sum+=number;
+													}
+									}
+					}
+
+					return sum;
+		}
+		// Примерно извикване на функцията:
+		let sum = SumEven2DimArrayElements(arr);
+		console.log(sum);
+		// expected output: 12
+	</section>
+</section>
+<section><h2>isPalindrome</h2>
+	<section><h3>Algorithm</h3>
+		<img src="./images/palindrome_algorith.png" alt="">
+	</section>
+	<section><h3>code</h3>
+		<pre><code rel="JS" class="js">
+			/* -------------------------------------------------------------------------- */
+			/*                             task: isPalindrome                             */
+			/* -------------------------------------------------------------------------- */
+			// Да се дефинира функция isPalindrome, която връща "true" ако подадената й
+			// като аргумент дума е палиндром, и "false" - ако думата не е палиндром.
+			// Палиндром е дума, която се чете по един и същ начин от ляво надясно и от
+			// дясно наляво. Пример за палиндром са: мадам, боб, капак.
+
+			function isPalindrome(word) {
+				// изчисляваме индекса, който маркира средата на думата:
+				let middle = Math.floor(word.length/2);
+				// console.log(`middle index of ${word} is: ${middle}`);
+
+				for (let i = 0; i < middle; i++) {
+					let j = word.length - 1 - i;
+					if(word[i]!==word[j]){
+						// the word is not palindrome
+						return false
+					}
+				}
+				// the word is palindrome
+				return true;
+			}
+
+			// примерно извикване:
+			console.log( isPalindrome("madam") );// true
+			console.log( isPalindrome("test") ); // false
+		</code></pre>
+	</section>
+</section>
+
 <!-- <section id="res" data-notes="0min"><h2>Resources</h2>
 	<dl class="fa">
 		<dt><a href="https://www.youtube.com/watch?v=UTEqr0IlFKY">Crockford on JavaScript - Level 7: ECMAScript 5: The New Parts</a></dt>

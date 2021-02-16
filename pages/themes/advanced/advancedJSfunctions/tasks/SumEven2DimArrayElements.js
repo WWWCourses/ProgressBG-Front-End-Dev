@@ -8,11 +8,22 @@ let arr = [
     [1,2,3],
     [4,5,6]
 ];
-// >>>> put your code bellow:
 
+function SumEven2DimArrayElements(arr) {
+    let sum = 0;
 
-// <<<< end of your code
+    for (let i = 0; i < arr.length; i++) {
+        const row = arr[i];
+        for (let j = 0; j < row.length; j++) {
+            const number = row[j];
+            if(number%2===0){
+                sum+=number;
+            }
+        }
+    }
 
+    return sum;
+}
 // Примерно извикване на функцията:
 let sum = SumEven2DimArrayElements(arr);
 console.log(sum);
