@@ -542,25 +542,30 @@
 	</section>
 	<section><h3>Factorial - formula</h3>
 		<pre><code rel="Factoriel Recursive definition">
-			n!=(n-1)!·n
-			1! = 1
+			n! = (n-1)!·n, if n>0
+			n! = 1,        if n = 0
 		</code></pre>
 		<p>Reference: <a href="https://bg.wikipedia.org/wiki/%D0%A4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%B5%D0%BB">Факториел @wikipedia</a></p>
 	</section>
 	<section><h3>Factorial - recursive demo</h3>
 		<pre><code rel="JS" class="php">
-			function factorial(n)
-			{
-				if (n == 1) {
-					// f(1) = 1 => the END condition
-					return 1;
-				}else {
-					// f(n) = n * f(n-1)
-					return (n * factorial(n - 1));
+			function factorial(n){
+				if(n===0){ // recursion end condiotion
+					return 1
+				}else{
+					return n*factorial(n-1) // recursive call
 				}
 			}
 
 			factorial(3);
+		</code></pre>
+		<dl class="fa">
+			<dt>Note that we can use the <a href="http://wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_BasicSyntax_1/JS_BasicSyntax_1.html#/ternaryOperator">ternary operator</a> to shorten the code above</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			function fact(n) {
+				return n===0? 1: n*factorial(n-1);
+			}
 		</code></pre>
 	</section>
 	<section><h3>Factoriel - execution stack diagram</h3>

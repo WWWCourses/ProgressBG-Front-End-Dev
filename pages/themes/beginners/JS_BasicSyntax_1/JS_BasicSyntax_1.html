@@ -937,16 +937,27 @@
 		<dl class="fa">
 			<dt>ако Условие е <span class="note">истина</span> (израз, който се изчислява до true) оператора връща стойността на <span class="note">Израз1</span></dt>
 			<dt>ако Условие е <span class="note">лъжа</span> (израз, който се изчислява до false) оператора връща стойността на <span class="note">Израз2</span></dt>
+			<dt><span class="note">Забележете, че оператора връща стойност</span> (която можем да присвоим на променлива), за разлика от if..else стейтмънта.</dt>
+			<dt>Разгледайте следните 2 примера, които са фунцкционално еквиваленти, но показват удобството от използването на ternary operator.</dt>
 		</dl>
 		<pre><code rel="JS" class="js">
 			var x = 42;
-			var numType = x%2==0 ? "even" : "odd";
+
+			var numType = x%2===0 ? "even" : "odd";
+
 			console.log(numType); // "even"
 		</code></pre>
-	</section>
-	<section id="conditionalStatementsTasks">
+		<pre><code rel="JS" class="js">
+			var x = 42, numType;
 
+			if(x%2===0){
+				numType = "even"
+			}else{
+				numType = "odd"
+			}
 
+			console.log(numType); // "even"
+		</code></pre>
 	</section>
 </section>
 
@@ -1280,7 +1291,7 @@
 			width: 1280,
 			height: 1024,
 			// Bounds for smallest/largest possible scale to apply to content
-			// minScale: .5,
+			minScale: .5,
 			maxScale: 1,
 			// slide transition
 			transition: 'concave', // none/fade/slide/convex/concave/zoom

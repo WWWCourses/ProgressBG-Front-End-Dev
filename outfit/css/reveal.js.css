@@ -25,9 +25,9 @@
 /*Main_Sections_Title*/
 .reveal>.slides>section>h2{
   position: relative;
-  /*top: -0.1em;*/
+  top: -0.4em;
   font-size: 1em;
-  opacity: .7;
+  opacity: .5;
   /*background: red;*/
 }
 .reveal>.slides>section>section{
@@ -37,6 +37,7 @@
 .reveal>.slides>section>section>h3{
   font-size: 1.1em;
   top: 0;
+  margin-top: .5em;
 }
 .reveal>.slides>section>section>h3:after{
   display: block;
