@@ -75,8 +75,6 @@
 </section>
 
 
-
-
 <section data-min="5" id="let_const_var"><h1><code>let</code> and <code>const</code></h1></section>
 <section><h2><code>let</code> and <code>const</code></h2>
 	<p>Read more for <a href="http://wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Functions/JS_Functions.html#/let_const_var">let/const</a> in the Beginners Course Slides</p>
@@ -364,26 +362,92 @@
 	</section>
 </section>
 
-<section data-min="5"><h1>De-structuring assignments</h1></section>
+<section data-min="10"><h1>De-structuring assignments</h1></section>
 <section><h2>De-structuring assignments</h2>
-	<section>
-		<dl class="fa">
-			<dt>The de-structuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.</dt>
-		</dl>
-		<pre><code rel="JS" class="js">
-			let [a, b, ...rest] = [1,2,3,4,5]
+  <section>
+    <dl class="fa">
+      <dt>The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.</dt>
+      <dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring_assignment @mdn</a></dt>
+    </dl>
+  </section>
+  <section><h3>Array destructuring - examples</h3>
+    <pre><code rel="JS" class="js">
+      // assign variables from array:
+      let [a, b] = [1,2];
+      console.log(`a = ${a}; b = ${b}`); // a = 1; b = 2
 
-			console.log(`a = ${a}`)
-			console.log(`b = ${b}`)
-			console.log(`rest = ${rest}`)
+      // same as above - no matter that we pass more elements:
+      let [a, b] = [1,2,3,4,5];
+      console.log(`a = ${a}; b = ${b}`); // a = 1; b = 2
 
-			// a = 1
-			// b = 2
-			// rest = 3,4,5
-		</code></pre>
-	</section>
+      // assign variables from array in conjunction with rest syntax:
+      let [a, ...rest] = [1,2,3];
+      console.log(a);     // 1
+      console.log(rest);  // [2, 3]
+    </code></pre>
+  </section>
+  <section><h3>use case: swapping variables values</h3>
+    <pre><code rel="JS" class="js">
+      let a = 1, b = 2;
+
+      // we do the swap without tmp variable, just with one line:
+      [a,b] = [b,a];
+
+      console.log(`a = ${a}; b = ${b}`); // a = 2; b = 1
+    </code></pre>
+  </section>
+  <section><h3>Object destructuring</h3>
+    <dl class="fa">
+      <dt>Destructuring on objects let us bind variables to different properties of an object.</dt>
+      <dt>There is a nice syntactical shortcut for when the property and variable names are the same</dt>
+    </dl>
+    <pre><code rel="JS" class="js">
+      let obj = {p1: 1, p2: 2};
+
+      // assign obj properties to variables with same name:
+      let {p1, p2} = obj;
+
+      console.log(p1);  // 1
+      console.log(p2);  // 2
+    </code></pre>
+  </section>
 </section>
 
+<section data-min="5"><h1>New object literal features</h1></section>
+<section><h2>New object literal features</h2>
+  <section><h3>Shorthand property names</h3>
+    <dl class="fa">
+      <dt>Declaring an object literal with keys that match variables is quite common use case. In such situations property values shorthands is quite useful: </dt>
+    </dl>
+    <pre><code rel="JS" class="js">
+      let userName = 'pesho';
+      let userAge = 23;
+
+      // ES6 way:
+      let p1 = {userName, userAge};
+
+      // ES5 way:
+      // let p1 = {userName:userName, userAge:userAge};
+
+      console.log(p1); // { userName: 'pesho', userAge: 23 }
+    </code></pre>
+  </section>
+  <section><h3>Method definitions</h3>
+    <dl class="fa">
+      <dt>ES6 introduces a shorter syntax for method definitions on objects initializers:</dt>
+    </dl>
+    <pre><code rel="JS" class="js">
+      let p1 = {
+        name: 'Pesho',
+        greet(){
+          console.log(`Hi, I'm ${this.name}`);
+        }
+      }
+
+      p1.greet(); // Hi, I'm Pesho
+    </code></pre>
+  </section>
+</section>
 
 <!--
 <section><h2>Enhanced object literals</h2></section>
