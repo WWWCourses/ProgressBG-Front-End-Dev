@@ -208,19 +208,19 @@
 			}
 
 			foo();
-			console.log(`x,y in gloabl: ${x}, ${y}`);
+			console.log(`x,y in global: ${x}, ${y}`);
 
 			// OUTPUT:
 			//x,y in bar: 3, 3
 			//x,y in foo: 3, 2
-			//x,y in gloabl: 1, 1
+			//x,y in global: 1, 1
 		</code></pre>
 	</section>
 	<section><h3>References</h3>
 		<dl class="fa">
 			<dt><a href="/pages/themes/beginners/JS_Functions/JS_Functions.html#scope"><span class="note">Scope notes</span> in JS_Beginners Course</a></dt>
 			<dt><a href="/pages/themes/beginners/JS_Functions/JS_Functions.html#let_const_var"><span class="note">let vs. const vs. var</span> in JS_Beginners Course</a></dt>
-			<dt><a href="/pages/themes/beginners/JS_Functions/JS_Functions.html#function_basics"><span class="note">Funcitons basics</span> in JS_Beginners Course</a></dt>
+			<dt><a href="/pages/themes/beginners/JS_Functions/JS_Functions.html#function_basics"><span class="note">Functions basics</span> in JS_Beginners Course</a></dt>
 		</dl>
 	</section>
 </section>
@@ -317,7 +317,7 @@
 	<section><h3>Pros and Cons</h3>
 		<dl class="fa">
 			<dt>Pros</dt>
-			<dd>The new (ES2015) arrow functions syntax make JavaScript a language suited for lamdba-calculus (functional programming paradigm)</dd>
+			<dd>The new (ES2015) arrow functions syntax make JavaScript a language suited for lambda-calculus (functional programming paradigm)</dd>
 			<dt>Cons</dt>
 			<dd>Not intuitive for persons used with classical procedural languages.</dd>
 		</dl>
@@ -537,12 +537,13 @@
 		<dl class="fa">
 			<dt>A recursive function is a function which <span class="note">calls itself</span> (directly or indirectly)</dt>
 			<dt>Each call creates a separate function stack!</dt>
-			<dt>Recursion can be endless if we do not take care when it has to stop!</dt>
+			<dt>Recursion can be endless if we do not take care <span class="note">when it has to stop to call itself</span>. I.e. a recursive function must have a <span class="note">base case</span> - a condition that makes the function to return a value, instead of calling itself.</dt>
 		</dl>
+		<a href="./images/Recursion_visual_factoriel.drawio.png"><img src="./images/Recursion_visual_factoriel.drawio.png" alt="Recursion_visual_factoriel"></a>
 	</section>
 	<section><h3>Factorial - formula</h3>
-		<pre><code rel="Factoriel Recursive definition">
-			n! = (n-1)!·n, if n>0
+		<pre><code rel="Factorial Recursive definition">
+			n! = (n-1)!*n, if n > 0
 			n! = 1,        if n = 0
 		</code></pre>
 		<p>Reference: <a href="https://bg.wikipedia.org/wiki/%D0%A4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%B5%D0%BB">Факториел @wikipedia</a></p>
@@ -550,7 +551,7 @@
 	<section><h3>Factorial - recursive demo</h3>
 		<pre><code rel="JS" class="php">
 			function factorial(n){
-				if(n===0){ // recursion end condiotion
+				if(n===0){ // recursion end condition
 					return 1
 				}else{
 					return n*factorial(n-1) // recursive call
@@ -568,7 +569,7 @@
 			}
 		</code></pre>
 	</section>
-	<section><h3>Factoriel - execution stack diagram</h3>
+	<section><h3>Factorial - execution stack diagram</h3>
 		<img src="images/Recursion.png">
 	</section>
 	<section><h3>Factorial - Task</h3>
@@ -582,10 +583,18 @@
 		</code></pre>
 		<pre><code rel="JS">
 			function power(base, exponent) {
-				if (exponent == 0)
+				if (exponent === 0)
 					return 1;
 				else
 					return base * power(base, exponent - 1);
+			}
+
+			console.log(power(2, 10));
+		</code></pre>
+		<pre><code rel="JS" class="js">
+			// same with ternary operator
+			function power(base, exponent) {
+				return exponent === 0 ? 1 : base * power(base, exponent - 1);
 			}
 
 			console.log(power(2, 10));
@@ -598,7 +607,7 @@
 
 	<section><h3>Traversing the DOM - TASK</h3>
 		<dl class="fa">
-			<dt>apply backgroundColor:"red" for each elelement in #startNode, which has class "red"</dt>
+			<dt>apply backgroundColor:"red" for each element in #startNode, which has class "red"</dt>
 			<dt>the code given bellow tries to solve the problem, but it has bugs. Can you fix them.</dt>
 		</dl>
 		<pre><code rel="JS" class="js">
@@ -668,6 +677,50 @@
 		<iframe height='204' scrolling='no' title='KmvZKv' src='https://codepen.io/ProgressWWWCourses/embed/KmvZKv/?height=204&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ProgressWWWCourses/pen/KmvZKv/'>KmvZKv</a> by Iva E. Popova (<a href='//codepen.io/ProgressWWWCourses'>@ProgressWWWCourses</a>) on <a href='//codepen.io'>CodePen</a>.
 		</iframe>
 	</section> -->
+	<section><h3>Traversing the DOM Element Nodes - Solution 1</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="traverseDOM_ElementNodes" src="https://codepen.io/webdesigncourse/embed/ExNmPBm?height=300&theme-id=20230&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+			See the Pen <a href='https://codepen.io/webdesigncourse/pen/ExNmPBm'>traverseDOM_ElementNodes</a> by Iva Popova
+			(<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		  </iframe>
+	</section>
+	<section><h3>Traversing the DOM Element Nodes - Solution 2</h3>
+		<dl class="fa">
+			<dt>This demo use the method given by Douglas Crockford in "JavaScript: The Good Parts"</dt>
+		</dl>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="traverseDOM_ElementNodes_Crockford" src="https://codepen.io/webdesigncourse/embed/oNYWbVp?height=300&theme-id=20230&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+			See the Pen <a href='https://codepen.io/webdesigncourse/pen/oNYWbVp'>traverseDOM_ElementNodes_Crockford</a> by Iva Popova
+			(<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		  </iframe>
+	</section>
+	<section><h3>Traversing ALL of DOM Nodes</h3>
+		<dl class="fa">
+			<dt>This demo use the method given by Douglas Crockford in "JavaScript: The Good Parts"</dt>
+		</dl>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="traverseDOM_AllNodes" src="https://codepen.io/webdesigncourse/embed/PobjKmO?height=300&theme-id=20230&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+			See the Pen <a href='https://codepen.io/webdesigncourse/pen/PobjKmO'>traverseDOM_AllNodes</a> by Iva Popova
+			(<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		  </iframe>
+	</section>
+
+
+	<section><h3>References</h3>
+		<dl class="fa">
+			<dt><a href="https://javascript.info/recursion">Recursion @javascript.info</a></dt>
+		</dl>
+	</section>
+</section>
+
+
+<section data-min="5"><h1>Functions - Best Practices</h1></section>
+<section><h2>Functions - Best Practices</h2>
+	<section><h3>Do One Thing and Do It Well (and Name It Well )</h3>
+		<dl class="fa">
+			<dt>Do one thing per function. Not many things. If you are doing many things, then you should divide it to many functions.</dt>
+			<dt>Why?</dt>
+			<dd>Ease of debugging</dd>
+		.	<dd>If you write a function for each task you do, giving it a good name, you'll not need to put comments.</dd>
+		</dl>
+	</section>
 </section>
 
 
@@ -747,36 +800,39 @@
 </section>
 <section><h2>SumEven2DimArrayElements</h2>
 	<section><h3>Code</h3>
-		/* -------------------------------------------------------------------------- */
-		/*                                    task                                    */
-		/* -------------------------------------------------------------------------- */
-		// Да се дефинира функция SumEven2DimArrayElements(), която връща сумата от
-		// четните елементи на подаден й двумерен масив.
+		<pre><code rel="JS" class="js">
+			/* -------------------------------------------------------------------------- */
+			/*                                    task                                    */
+			/* -------------------------------------------------------------------------- */
+			// Да се дефинира функция SumEven2DimArrayElements(), която връща сумата от
+			// четните елементи на подаден й двумерен масив.
 
-		let arr = [
-					[1,2,3],
-					[4,5,6]
-		];
+			let arr = [
+				[1,2,3],
+				[4,5,6]
+			];
 
-		function SumEven2DimArrayElements(arr) {
-					let sum = 0;
+			function SumEven2DimArrayElements(arr) {
+				let sum = 0;
 
-					for (let i = 0; i < arr.length; i++) {
-									const row = arr[i];
-									for (let j = 0; j < row.length; j++) {
-													const number = row[j];
-													if(number%2===0){
-																	sum+=number;
-													}
-									}
+				for (let i = 0; i < arr.length; i++) {
+					const row = arr[i];
+
+					for (let j = 0; j < row.length; j++) {
+						const number = row[j];
+						if(number%2===0){
+							sum+=number;
+						}
 					}
+				}
 
-					return sum;
-		}
-		// Примерно извикване на функцията:
-		let sum = SumEven2DimArrayElements(arr);
-		console.log(sum);
-		// expected output: 12
+				return sum;
+			}
+			// Примерно извикване на функцията:
+			let sum = SumEven2DimArrayElements(arr);
+			console.log(sum);
+			// expected output: 12
+		</code></pre>
 	</section>
 </section>
 <section><h2>isPalindrome</h2>
@@ -833,51 +889,52 @@
 </section>
 <!--
 ########################################################
-##################### SLIDES END	 #####################
+##################### SLIDES END   #####################
 ########################################################
 -->
-		</div>
-	</div>
-	<!-- Custom processing -->
-	<script src="../../../../outfit/js/slides.js"></script>
-	<!-- external scripts -->
-	<script src="../../../../lib/reveal.js/js/reveal.js"></script>
-	<!-- init reveal -->
-	<script>
-		// Full list of configuration options available at:
-		// https://github.com/hakimel/reveal.js#configuration
-		var highlightjsTabSize = '	';
-		Reveal.initialize({
-			controls: true,
-			progress: true,
-			slideNumber: 'c/t',
-			keyboard: true,
-			history: true,
-			center: true,
-			width: '80%',
-			height: '100%',
-			// slide transition
-			transition: 'concave', // none/fade/slide/convex/concave/zoom
-			// Factor of the display size that should remain empty around the content
-			// margin: 0.1,
-			// shift+maous click to zoom in/out element
-			zoomKey: 'ctrl',
-			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-			// transition: Reveal.getQueryHash().transition || 'default'
-			// Optional reveal.js plugins
-			dependencies: [
-				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
-				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
-				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
-				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
-				// { src: 'plugin/remote-control/remote.js', async: true }
-			]
-		});
-	</script>
-	<!-- linkedin badge -->
-	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</div>
+</div>
+<!-- Custom processing -->
+<script src="../../../../outfit/js/slides.js"></script>
+<!-- external scripts -->
+<script src="../../../../lib/reveal.js/js/reveal.js"></script>
+<!-- init reveal -->
+<script>
+	// Full list of configuration options available at:
+	// https://github.com/hakimel/reveal.js#configuration
+	var highlightjsTabSize = '  ';
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		slideNumber: 'c/t',
+		keyboard: true,
+		history: true,
+		center: true,
+		width: "80%",
+		height: "110%",
+		// Bounds for smallest/largest possible scale to apply to content
+		minScale: .5,
+		maxScale: 1,
+		// slide transition
+		transition: 'concave', // none/fade/slide/convex/concave/zoom
+		// Factor of the display size that should remain empty around the content
+		margin: 0.1,
+		// shift+maous click to zoom in/out element
+		zoomKey: 'ctrl',
+		// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+		// transition: Reveal.getQueryHash().transition || 'default'
+		// Optional reveal.js plugins
+		dependencies: [
+			{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+			{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+			{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+		]
+	});
+</script>
+<!-- linkedin badge -->
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </body>
 </html>

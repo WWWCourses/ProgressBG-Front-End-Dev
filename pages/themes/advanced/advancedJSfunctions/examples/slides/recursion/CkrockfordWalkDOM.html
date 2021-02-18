@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CkrockfordWalkDOM</title>
+</head>
+<body>
+	<ul>
+		<li>Item</li>
+		<li>Item</li>
+		<li class="red">Make me red</li>
+		<li>Item
+			<ul>
+				<li class="red">Make me red, too</li>
+			</ul>
+		</li>
+		<li>Item</li>
+	  </ul>
+
+	<script>
+		function doSomething(node) {
+			console.log(`Do something with: ${node.tagName}`);
+			if (node.classList.contains("red")) {
+				node.style.backgroundColor = "red";
+			}
+		}
+
+		function walkDOM(node, func) {
+			func(node);
+			node = node.firstElementChild;
+
+			while (node) {
+				walkDOM(node, func);
+				node = node.nextElementSibling;
+			}
+		}
+
+
+		walkDOM(document.body, doSomething);
+	</script>
+</body>
+</html>
+

@@ -400,7 +400,7 @@
 </section>
 <!--
 ########################################################
-##################### SLIDES END   #####################
+##################### SLIDES END	 #####################
 ########################################################
 -->
 </div>
@@ -413,7 +413,7 @@
 <script>
 	// Full list of configuration options available at:
 	// https://github.com/hakimel/reveal.js#configuration
-	var highlightjsTabSize = '  ';
+	var highlightjsTabSize = '	';
 	Reveal.initialize({
 		controls: true,
 		progress: true,
@@ -421,15 +421,12 @@
 		keyboard: true,
 		history: true,
 		center: true,
-		width: 1280,
-		height: 1024,
-		// Bounds for smallest/largest possible scale to apply to content
-		minScale: .5,
-		maxScale: 1,
+		width: '80%',
+		height: '100%',
 		// slide transition
 		transition: 'concave', // none/fade/slide/convex/concave/zoom
 		// Factor of the display size that should remain empty around the content
-		margin: 0.1,
+		// margin: 0.1,
 		// shift+maous click to zoom in/out element
 		zoomKey: 'ctrl',
 		// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
@@ -441,7 +438,9 @@
 			{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 			{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
 			{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
-			{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+			{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
+			// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+			// { src: 'plugin/remote-control/remote.js', async: true }
 		]
 	});
 </script>

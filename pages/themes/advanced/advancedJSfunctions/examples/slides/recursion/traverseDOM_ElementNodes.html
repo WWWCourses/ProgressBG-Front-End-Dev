@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>traverseDOM_ElementNodes</title>
+</head>
+<body>
+	<ul>
+		<li>Item</li>
+		<li>Item</li>
+		<li class="red">Make me red</li>
+		<li>Item
+			<ul>
+				<li class="red">Make me red, too</li>
+			</ul>
+		</li>
+		<li>Item</li>
+	</ul>
+
+	<script>
+		// Note that this example is prepared as a simple use case of DOM Traversing. In practise, the same task will be more easily accomplished using document.querySelectorAll() method
+
+		function setRedBorder(node) {
+			if (node.classList.contains("red")) {
+				node.style.border = "2px solid red";
+			}
+		}
+
+		function traverseDOM(node, func) {
+			// the action part
+			func(node);
+
+			// get all node's children
+			let children = node.children;
+
+			// do the same for each children:
+			for (let i = 0; i < children.length; i++) {
+				traverseDOM(children[i], func);
+				// note, that the base case is when a node have no children
+			}
+		}
+
+		function traverseDOM_CrockfordSolution(node, func) {
+			func(node);
+			node = node.firstElementChild;
+
+			while (node) {
+				traverseDOM_CrockfordSolution(node, func);
+				node = node.nextElementSibling;
+			}
+		}
+
+
+		traverseDOM_CrockfordSolution(document.body, setRedBorder);
+
+		// traverseDOM(document.body, setRedBorder);
+
+	</script>
+</body>
+</html>

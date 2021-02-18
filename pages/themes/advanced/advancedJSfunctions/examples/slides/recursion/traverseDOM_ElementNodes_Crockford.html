@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>traverseDOM_ElementNodes_Crockford</title>
+</head>
+<body>
+	<ul>
+		<li>Item</li>
+		<li>Item</li>
+		<li class="red">Make me red</li>
+		<li>Item
+			<ul>
+				<li class="red">Make me red, too</li>
+			</ul>
+		</li>
+		<li>Item</li>
+	</ul>
+
+	<script>
+		// Note that this example is prepared as a simple use case of DOM Traversing, using the method given by Douglas Crockford in "JavaScript: The Good Parts", but walking only on Element Node. In practise, the same task will be more easily accomplished using document.querySelectorAll() method
+
+		function setRedBorder(node) {
+			if (node.classList.contains("red")) {
+				node.style.border = "2px solid red";
+			}
+		}
+
+		function walkDOM(node, func) {
+			func(node);
+			node = node.firstElementChild;
+
+			while (node) {
+				walkDOM(node, func);
+				node = node.nextElementSibling;
+			}
+		}
+
+
+		walkDOM(document.body, setRedBorder);
+	</script>
+</body>
+</html>
