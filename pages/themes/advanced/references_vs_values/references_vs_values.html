@@ -136,9 +136,9 @@
 </section>
 
 
-<section data-min="10"><h1>Copy Reference objects</h1></section>
-<section><h2>Copy Reference objects</h2>
-	<section><h3>Shallow copy Array - <code>spread</code> operator</h3>
+<section data-min="10"><h1>Copy Reference types</h1></section>
+<section><h2>Copy Reference types</h2>
+	<section><h3>Shallow copy Array - <code>spread</code> operator - the easiest way </h3>
 		<pre><code rel="JS" class="js">
 			let arr1 = [1,2,3];
 			let arr2 = [...arr1];
@@ -160,13 +160,27 @@
 			console.log(`arr2: ${arr2}`);
 		</code></pre>
 	</section>
+	<section><h3>Shallow copy Object - <code>spread</code> operator - the easiest way</h3>
+		<pre><code rel="JS" class="js">
+			let user1 = {
+				name: "Maria",
+				age: 33
+			};
+			let user2 = {...user1}; // make shallow copy
+
+			// we change a value in "user1", and that WILL NOT reflect the "user2" object:
+			user1.name = "Pesho";
+			console.log(`user1: ${user1.name}`);
+			console.log(`user2: ${user2.name}`);
+		</code></pre>
+	</section>
 	<section><h3>Shallow copy Object - <code>Object.assign()</code> method</h3>
 		<pre><code rel="JS" class="js">
 			let user1 = {
 				name: "Maria",
 				age: 33
 			}
-			let user2 = Object.assign({}, user1);
+			let user2 = Object.assign({}, user1); // make shallow copy
 
 			// we change a value in "user1", and that WILL NOT reflect the "user2" object:
 			user1.name = "Pesho";
@@ -174,6 +188,26 @@
 			console.log(`user2: ${user2.name}`);
 		</code></pre>
 		<p>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">Object.assign()</a> @MDN</p>
+	</section>
+</section>
+
+<section data-min="5"><h1>Deep copy (clone) Reference types</h1></section>
+<section><h2>Deep copy (clone) Reference types</h2>
+	<section><h3>JSON.parse/stringify</h3>
+		<dl class="fa">
+			<dt>Shallow copies did not preserver the cahnge in inner levels, but deep copies does.</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			let user1 = {
+				name: "Maria",
+				age: 33,
+				colors:["red","green"]
+			}
+			let user2 = JSON.parse(JSON.stringify(user1));
+
+			user1.colors[0] = "black";
+			console.log(user2.colors);
+		</code></pre>
 	</section>
 </section>
 
@@ -248,7 +282,7 @@
 		transition: 'concave', // none/fade/slide/convex/concave/zoom
 		// Factor of the display size that should remain empty around the content
 		margin: 0.1,
-		// shift+maous click to zoom in/out element
+		// shift+mouse click to zoom in/out element
 		zoomKey: 'ctrl',
 		// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 		// transition: Reveal.getQueryHash().transition || 'default'
