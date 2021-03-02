@@ -121,8 +121,6 @@
     <section><h3>in Strict Mode</h3>
         <dl class="fa">
             <dt><code class="note">this = undefined</code></dt>
-            <dd>in Browsers <code>global = Window</code></dd>
-            <dd>in Node <code>global = global</code></dd>
         </dl>
         <pre><code rel="JS">
             "use strict";
@@ -180,7 +178,7 @@
     </section>
 </section>
 
-<section><h2>Invoke as a constructor</h2>
+<section><h2>Invoke as a Constructor</h2>
    <section>
         <p><code class="note">this = the object being constructed</code></p>
         <pre><code rel="JS">
@@ -232,7 +230,7 @@
             }
 
             console.log("maria before", maria);
-            update.call(maria, "Maria Ivanova", 23);
+            update.apply(maria, ["Maria Ivanova", 23]);
             console.log("maria after", maria);
         </code></pre>
    </section>
