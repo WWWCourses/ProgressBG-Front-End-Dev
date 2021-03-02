@@ -88,7 +88,6 @@
 </section>
 
 
-
 <section><h1>the "this" in <span class="note">function call</span> context</h1></section>
 <section><h2>the "this" in <span class="note">function call</span> context</h2>
     <section>
@@ -192,25 +191,6 @@
             };
 
             var obj1 = new Constructor(1);
-        </code></pre>
-   </section>
-   <section>
-        <p>in method call this will be bound to the object, as well</p>
-        <pre><code rel="JS">
-            function Constructor(id){
-                this.id = id;
-                console.log(`this = ${this}`);
-                // this = [object Object]
-
-                this.sayHello = function(){
-                    console.log(`Oh, hello dear. I'm obj ${id}`);
-                    console.log(`this = ${this}`);
-                    // this = [object Object]
-                }
-            };
-
-            var obj1 = new Constructor(1);
-            obj1.sayHello();
         </code></pre>
    </section>
 </section>
