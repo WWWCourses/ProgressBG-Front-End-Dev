@@ -6,19 +6,18 @@
     <title>This problem</title>
 </head>
 <body>
-    <button>Click</button>
+    <button id="btn1">Click</button>
+    <button id="btn2">Click</button>
 
     <script>
-        let btn = document.querySelector('button');
+        function changeToRed() {
+            this.style.background = "red";
+        }
+        let btn1 = document.querySelector('#btn1');
+        let btn2 = document.querySelector('#btn2');
 
-        btn.addEventListener('click', function () {
-            // console.dir(this);
-
-            setTimeout(function() {
-                console.dir(this);
-                this.style.background = "red";
-            }, 2000);
-        })
+        btn1.addEventListener('click', changeToRed);
+        btn2.addEventListener('click', changeToRed);
     </script>
 </body>
 </html>

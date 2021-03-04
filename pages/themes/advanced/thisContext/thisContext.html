@@ -101,7 +101,6 @@
         </dl>
     </section>
 </section>
-
 <section><h2>Invoke as a function</h2>
     <section><h3>in non Strict Mode</h3>
         <dl class="fa">
@@ -134,7 +133,6 @@
         <p>more on Strict Mode: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">MDN JavaScript Reference</a></p>
     </section>
 </section>
-
 <section><h2>Invoke as a method</h2>
    <section>
         <p><code class="note">this = the object </code> the method is called on</p>
@@ -150,7 +148,6 @@
         </code></pre>
    </section>
 </section>
-
 <section><h2 class="advanced">In static (class) methods</h2>
     <section>
         <dl class="fa">
@@ -177,7 +174,6 @@
         </code></pre>
     </section>
 </section>
-
 <section><h2>Invoke as a Constructor</h2>
    <section>
         <p><code class="note">this = the object being constructed</code></p>
@@ -192,14 +188,14 @@
         </code></pre>
    </section>
 </section>
-
 <section><h2>This in function call - cheatsheet</h2>
     <section>
         <a href="images/thisCheatsheet.png"><img src="images/thisCheatsheet.png" alt="thisCheatsheet.png"></a>
     </section>
 </section>
 
-<section><h2>the "this" Pitfall and "that" Solution</h2>
+<section><h1>The "this" Pitfall and "that" Solution</h1></section>
+<section><h2>The "this" Pitfall and "that" Solution</h2>
     <section><h3>the problem</h3>
         <iframe height='265' scrolling='no' title='the This Pitfall' src='//codepen.io/ProgressWWWCourses/embed/OmxEGw/?height=265&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ProgressWWWCourses/pen/OmxEGw/'>the This Pitfall</a> by Iva E. Popova (<a href='//codepen.io/ProgressWWWCourses'>@ProgressWWWCourses</a>) on <a href='//codepen.io'>CodePen</a>.
         </iframe>
@@ -209,7 +205,6 @@
         </iframe>
     </section>
 </section>
-
 <section><h2>Function invocation with apply()</h2>
    <section>
        <dl class="fa">
@@ -287,7 +282,8 @@
     </section>
 </section>
 
-<section><h2>"this" in <code>addEventListener handler</code></h2>
+<section><h1>"this" in <code>addEventListener callback</code></h1></section>
+<section><h2>"this" in <code>addEventListener callback</code></h2>
     <section>
         <dl class="fa">
             <dt>"this" in addEventListener handler is the object on which the event is fired</dt>
@@ -307,7 +303,8 @@
     </section>
 </section>
 
-<section><h2>"this" in <code>setTimeout/setInterval handler</code></h2>
+<section><h1>"this" in <code>setTimeout/setInterval callback</code></h1></section>
+<section><h2>"this" in <code>setTimeout/setInterval callback</code></h2>
     <section>
         <dl class="fa">
             <dt>"this" in setTimeout/setInterval handler is the <span class="note">Window</span> object</dt>
@@ -325,14 +322,19 @@
     </section>
 </section>
 
+<section id="hw"><h1>Excercises</h1></section>
 <section><h2>Excercises</h2>
-    <section><h3>Task: setTieoutInEventListener</h3>
-        <pre><code rel="HTML" class="html">
-            <button class="btn">Click me</button>
-        </code></pre>
-        <dl class="fa">
-            <dt>Given the above HTML, write the JS code, which will change the button background to "red", but <span class="note">2 seconds after the button is clicked</span>.</dt>
-        </dl>
+    <section><h3>Task1: Execute callback after 2 seconds ('this' problem) </h3>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="Task1: Execute callback after 2 seconds ('this' problem)" src="https://codepen.io/webdesigncourse/embed/abBjdvo?height=300&theme-id=20230&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href='https://codepen.io/webdesigncourse/pen/abBjdvo'>Task1: Execute callback after 2 seconds ('this' problem)</a> by Iva Popova
+          (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>Task2: Fix the bug ('this' problem)</h3>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="Task:Fix the bug ('this' problem)" src="https://codepen.io/webdesigncourse/embed/mdOjexV?height=300&theme-id=20230&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href='https://codepen.io/webdesigncourse/pen/mdOjexV'>Task:Fix the bug ('this' problem)</a> by Iva Popova
+          (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
     </section>
 </section>
 
