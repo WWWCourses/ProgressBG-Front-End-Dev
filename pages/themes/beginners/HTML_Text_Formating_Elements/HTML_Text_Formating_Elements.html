@@ -96,63 +96,7 @@
         </dl>
     </section>
 </section>
-<section><h2>Нов ред (new line)</h2>
-    <section><h3>HTML елемент: <span class="keyword">BR</span></h3>
-        <dl class="fa">
-            <dt>Независимо колко спейса и нови редове поставяме в кода, браузърите изобразяват текста на един ред, докато има място на реда (<span class="note fs-small">естествено, и това можем да регулираме със CSS</span>).</dt>
-            <dt>Ако желаем браузъра да постави нов ред - то използваме елемента <span class="keyword">BR</span>. Той няма съдържание и се състои само от отварящия таг: <span class="keyword"><br></span></dt>
-            <pre><code rel="HTML">
-                <p>Първи ред.<br>Втори ред.</p>
-            </code></pre>
-            <div class="results_h" rel="РЕЗУЛТАТ">
-                <p>Първи ред.<br>Втори ред.</p>
-            </div>
-        </dl>
-    </section>
-    <section><h3>Справочник</h3>
-        <dl>
-            <dt><a href="http://www.w3schools.com/tags/tag_br.asp">w3schools: HTML br Tag</a></dt>
-        </dl>
-    </section>
-</section>
-<section><h2>Преформатиран текст (preformated text)</h2>
-    <section><h3>HTML елемент: <span class="keyword">PRE</span></h3>
-        <dl class="fa">
-            <dt>Текстът в елемент <span class="keyword">PRE</span> се изобразява буквално, както е въведен в кода. Т.е. запазват се въведените спейсове и символи за нов ред.</dt>
-            <dt>Обикновено се изобразява със <a href="https://en.wikipedia.org/wiki/Monospaced_font">fixed-width</a> шрифт.</dt>
-        </dl>
-        <pre><code rel="HTML">
-            <pre>
 
-                Този     текст    ще   се
-                        представи
-
-                          така,
-                както е въведен в кода.
-
-            </pre>
-        </code></pre>
-        <p class="note fs-small">Изпробвайте и вижте сами резултата от горния примерен код!</p>
-    </section>
-    <section><h3>Справочник</h3>
-        <dl>
-            <dt><a href="http://www.w3schools.com/tags/tag_pre.asp">w3schools: HTML pre Tag</a></dt>
-        </dl>
-    </section>
-</section>
-<section><h2>Хоризонтална черта (horizontal line)</h2>
-    <section><h3>HTML елемент: <span class="keyword">HR</span></h3>
-        <dl class="fa">
-            <dt>В HTML5 използваме хоризонтална черта за да отделим съдържанието <span class="note">тематично</span>.</dt>
-            <dt>Атрибути: всички специфични за <span class="note">HR</span> атрибути са свързани с оформлението, и не се препоръчва да се използват в HTML5.</dt>
-        </dl>
-    </section>
-    <section><h3>Справочник</h3>
-        <dl>
-            <dt><a href="http://www.w3schools.com/tags/tag_hr.asp">w3schools: HTML hr Tag</a></dt>
-        </dl>
-    </section>
-</section>
 <section><h2>Заглавия (headings)</h2>
     <section><h3>HTML елементи: <span class="keyword">H1</span> - <span class="keyword">H6</span></h3>
         <dl class="fa">
@@ -186,6 +130,21 @@
         </dl>
     </section>
 </section>
+
+<section><h2>Хоризонтална черта (horizontal line)</h2>
+    <section><h3>HTML елемент: <span class="keyword">HR</span></h3>
+        <dl class="fa">
+            <dt>В HTML5 използваме хоризонтална черта за да отделим съдържанието <span class="note">тематично</span>.</dt>
+            <dt>Атрибути: всички специфични за <span class="note">HR</span> атрибути са свързани с оформлението, и не се препоръчва да се използват в HTML5.</dt>
+        </dl>
+    </section>
+    <section><h3>Справочник</h3>
+        <dl>
+            <dt><a href="http://www.w3schools.com/tags/tag_hr.asp">w3schools: HTML hr Tag</a></dt>
+        </dl>
+    </section>
+</section>
+
 <section><h2>Елементи за акцентиране на текст</h2>
     <section><h3>HTML елементи: <span class="keyword">I</span>,<span class="keyword">EM</span></h3>
         <dl class="fa" style="font-size:.8em">
@@ -224,7 +183,87 @@
         </div>
     </section>
 </section>
-<section><h2>Елементи за форматиране на текст.</h2>
+
+<section><h2>Как се изобразява текста от браузерите?</h2>
+    <section><h3></h3>
+        <dl class="fa">
+            <dt>Браузърите изобразяват текста на един ред, докато има място на реда, независимо от това дали в текста има символи за нов ред.</dt>
+            <dt>Всички последователни спейсове, табове, символи за нов ред и пр. (т.нар. <a href="https://en.wikipedia.org/wiki/Whitespace_character">Whitespace character</a> ) съществуващи в текста се представят от браузърите като <span class="note">един единствен спейс</span>.</dt>
+            <dt>Повече от един спейс може да изобразим чрез използването на HTML Entity: <code>&amp;nbsp;</code></dt>
+            <dd>Разбира се, когато изскаме да визуализираме няколко спейса за по-голямо разстояние между текст, се препоръчва да се използва CSS, а не чрез: <code>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</code></dd>
+            <dt>Съществуват и други <a href="https://www.w3schools.com/html/html_entities.asp">HTML Entities</a>, чрез които можем да укажем да се рендерират буквално служебни символи като '&lt;' (<code>&amp;lt;</code>) и '&gt;' (<code>&amp;gt;</code>) а да не се интерпретират като заграждащи тагове символи.</dt>
+        </dl>
+        <!-- <pre><code rel="HTML">
+            <p>
+                Line 1
+
+                Line 2
+                Line 3
+            </p>
+        </code></pre>
+        <div class="results_h" rel="РЕЗУЛТАТ">
+            <p>
+                Line 1
+
+                Line 2
+                Line 3
+            </p>
+        </div> -->
+        <iframe height="300" style="width: 100%;" scrolling="no" title="whitespace collapsing" src="https://codepen.io/webdesigncourse/embed/RwoqeEj?height=300&theme-id=20230&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href='https://codepen.io/webdesigncourse/pen/RwoqeEj'>whitespace collapsing</a> by Iva Popova
+            (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+</section>
+
+<section><h2>Нов ред (new line)</h2>
+    <section><h3>HTML елемент: <span class="keyword">BR</span></h3>
+        <dl class="fa">
+            <dt>Всички последователни спейсове, табове, символи за нов ред и пр. (т.нар. <a href="https://en.wikipedia.org/wiki/Whitespace_character">Whitespace character</a> ) съществуващи в текста се представят от браузърите като <span class="note">един единствен спейс</span>.</dt>
+            <dt>Браузърите изобразяват текста на един ред, докато има място на реда, независимо от това дали в текста има символи за нов ред. (<span class="note fs-small">естествено, и това можем да регулираме със CSS</span>).</dt>
+            <dt>Ако желаем браузъра да постави нов ред - то използваме елемента <span class="keyword">BR</span>. Той няма съдържание и се състои само от отварящия таг: <span class="keyword"><br></span></dt>
+            <pre><code rel="HTML">
+                <p>Първи ред.<br>Втори ред.</p>
+            </code></pre>
+            <div class="results_h" rel="РЕЗУЛТАТ">
+                <p>Първи ред.<br>Втори ред.</p>
+            </div>
+        </dl>
+    </section>
+    <section><h3>Справочник</h3>
+        <dl>
+            <dt><a href="http://www.w3schools.com/tags/tag_br.asp">w3schools: HTML br Tag</a></dt>
+        </dl>
+    </section>
+</section>
+
+<section><h2>Преформатиран текст (preformated text)</h2>
+    <section><h3>HTML елемент: <span class="keyword">PRE</span></h3>
+        <dl class="fa">
+            <dt>Текстът в елемент <span class="keyword">PRE</span> се изобразява буквално, както е въведен в кода. Т.е. запазват се въведените спейсове и символи за нов ред.</dt>
+            <dt>Обикновено се изобразява със <a href="https://en.wikipedia.org/wiki/Monospaced_font">fixed-width</a> шрифт.</dt>
+        </dl>
+        <pre><code rel="HTML">
+            <pre>
+
+                Този     текст    ще   се
+                        представи
+
+                          така,
+                както е въведен в кода.
+
+            </pre>
+        </code></pre>
+        <p class="note fs-small">Изпробвайте и вижте сами резултата от горния примерен код!</p>
+    </section>
+    <section><h3>Справочник</h3>
+        <dl>
+            <dt><a href="http://www.w3schools.com/tags/tag_pre.asp">w3schools: HTML pre Tag</a></dt>
+        </dl>
+    </section>
+</section>
+
+<section><h2>Други елементи за форматиране на текст.</h2>
     <section><h3>HTMl елементи <span class="keyword">small</span> и <span class="keyword">mark</span></h3>
         <dl class="fa">
             <dt>W3schools: <a href="http://www.w3schools.com/tags/tag_small.asp">HTML <code>small</code> Tag</a></dt>
@@ -276,7 +315,6 @@
         </div>
     </section>
     <section>
-        <p>Други</p>
         <pre><code rel="HTML">
             <code>A piece of computer code</code><br>
             <samp>Sample output from a computer program</samp><br>
