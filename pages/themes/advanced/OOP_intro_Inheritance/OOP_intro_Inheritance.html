@@ -220,7 +220,6 @@
 	</section>
 </section>
 
-
 <section><h1>Let's got deep - what's in a object?</h1></section>
 <section><h2>Let's got deep - what's in a object?</h2>
 	<section><h3>at Object Literal</h3>
@@ -233,7 +232,7 @@
 		<pre><code rel="JS" class="js">
 			var Car = function(){};
 			var ford = new Car();
-			var BMV = new Car();
+			var BMW = new Car();
 		</code></pre>
 		<a href="images/whatNewDo.png"><img src="images/whatNewDo.png"></a>
 	</section>
@@ -241,7 +240,7 @@
 		<pre><code rel="JS" class="js">
 			var carFactory = function(){ return {} }
 			var ford = carFactory();
-			var BMV = carFactory();
+			var BMW = carFactory();
 		</code></pre>
 		<a href="images/whatFactoryDo.png"><img src="images/whatFactoryDo.png"></a>
 	</section>
@@ -250,17 +249,17 @@
 			function CarConstructor(){};
 			CarConstructor.prototype.sayHello=()=>
 				console.log(`Hello from CarConstructor.prototype`);
-			var constructedCar = new CarConstructor();
 
-			function CarFactory(){
-				return {}
-			};
+			function CarFactory(){ return {} };
 			CarFactory.prototype.sayHello=()=>
 				console.log(`Hello from CarFactory.prototype`);
+
+			var constructedCar = new CarConstructor();
 			var fabricatedCar = CarFactory();
 
 			constructedCar.sayHello();
 			//Hello from CarConstructor.prototype
+
 			fabricatedCar.sayHello();
 			//TypeError: fabricatedCar.sayHello is not a function
 		</code></pre>
@@ -448,13 +447,11 @@
 	<section><h3></h3>
 		<a href="images/prototypalInheritanceOfConstructedObjects.png"><img src="images/prototypalInheritanceOfConstructedObjects.png" alt="images/prototypalInheritanceOfConstructedObjects.png"></a>
 	</section>
-
 	<section><h3>Prototypal Inheritance with Class Syntax</h3>
 		<dl class="fa">
 			<dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">Classes @MDN</a></dt>
 		</dl>
 	</section>
-
 	<section><h3>Prototypal Inheritance with Class Syntax - examples</h3>
 		<pre><code rel="JS" class="js">
 			// define Car Class:
@@ -464,7 +461,8 @@
 					this.speed = speed;
 				}
 
-				drive = function () {
+				//using shorter syntax for method definitions:
+				drive(){
 					if (this.wings >= 2) {
 						console.log(`Flying wiht ${this.speed} km/h`);
 					} else {
@@ -544,7 +542,6 @@
 		<img src="images/Prototype Inheritance.png">
 	</section> -->
 </section>
-
 
 
 
