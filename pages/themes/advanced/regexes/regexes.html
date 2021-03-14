@@ -74,17 +74,17 @@
 	</section>
 </section>
 
-<section data-min="5"><h1>Regular Expressions basis</h1></section>
-<section><h2>Regular Expressions basis</h2>
+<section data-min="5"><h1>What are Regular Expressions?</h1></section>
+<section><h2>What are Regular Expressions?</h2>
 	<section><h3>Intro</h3>
 		<dl class="fa">
-			<dt>Regular Expression synonyms:</dt>
-			<dd data-tooltip="/\breg(?:ular\s*)?exp?(?:ression)?\b/i">Regex, RegEx, RegExp</dd>
 			<dt>Regular Expression is a <span class="note">string pattern</span>, which can match or not other stings</dt>
 			<dt>You can think of it a as a kind of search mechanism.</dt>
+			<dt>Regular Expression synonyms:</dt>
+			<dd data-tooltip="/\breg(?:ular\s*)?exp?(?:ression)?\b/i">Regex, RegEx, RegExp</dd>
 		</dl>
 	</section>
-	<section>
+	<section><h3>Example</h3>
 		<pre><code rel="JS" class="js">
 			var userEmail = "prefix@domain.com";
 
@@ -99,21 +99,21 @@
 			}
 		</code></pre>
 	</section>
-	<section><h3>the language</h3>
+	<section><h3>The Language</h3>
 		<dl class="fa">
 			<dt>You can think of Regular Expressions as a separate language, with its own rules and specs.</dt>
 			<dt>In fact, the Regular Expressions are coming from the <span class="note">regular language</span> defined by <a href="https://en.wikipedia.org/wiki/Stephen_Cole_Kleene">Kleene</a> in the early 1950s</dt>
 			<dt>Nowadays, almost all programming languages implements the concept of Regex.</dt>
 		</dl>
 	</section>
-	<section>
+	<section><h3>The Grammar</h3>
 		<dl class="fa">
 			<dt>A regex grammar includes 2 types of symbols:</dt>
 			<dd><span class="note">Regular symbols</span>: they are matched literally on the matching string</dd>
 			<dd><span class="note">Meta-characters</span>: they have special meaning and gives the power of regex</dd>
 		</dl>
 	</section>
-	<section>
+	<section><h3>Example</h3>
 		<pre><code rel="JS" class="js">
 			var strings = [
 				'alabala',
@@ -131,14 +131,14 @@
 		</code></pre>
 		<dl class="fa">
 			<dt>The regex <code>/^a/</code> matches each string starting with 'a'</dt>
-		    	<dd>the <code>a</code> is a regular symbol</dd>
-		    	<dd>the <code>^</code> is a special symbol</dd>
+		    	<dd>the <code>a</code> is a <span class="note">regular symbol</span></dd>
+		    	<dd>the <code>^</code> is a <span class="note">special symbol</span></dd>
 		</dl>
 	</section>
 </section>
 
-<section data-min="5"><h1>Regex Syntax</h1></section>
-<section><h2>Regex Syntax</h2>
+<section data-min="5"><h1>Basic Regex Syntax</h1></section>
+<section><h2>Basic Regex Syntax</h2>
 	<section><h3>Special Characters</h3>
 		<p>Next characters has special meaning in Regex:</p>
 		<code class="note">^ $ \ . * + ? ( ) [ ] { } |</code>
@@ -309,14 +309,15 @@
 	<section><h3>Quantifiers</h3>
 		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#quantifiers">more on Quantifiers at MDN</a>
 	</section>
+</section>
 
-	<section><h3>Anchors and Boundaries</h3>
+<section data-min="5"><h1>Anchors and Boundaries</h1></section>
+<section><h2>Anchors and Boundaries</h2>
+	<section>
 		<dl class="fa">
 			<dt>They specify a <b>position</b> in the string where a match should occurs.</dt>
-			<dt>They are zero-width, i.e.when matched they do NOT consume characters from the string.</dt>
+			<dt>They are <span class="note">zero-width</span>, i.e.when matched they do NOT consume characters from the string.</dt>
 		</dl>
-	</section>
-	<section><h3>Anchors and Boundaries</h3>
 		<table style="font-size: .9em">
 			<tr><th>Anchor</th><th>Description</th></tr>
 			<tr><td class="note">^</td><td>Matches the <span class="note">beginning</span> of the string (or the line, if <b>m</b> flag is used)</td></tr>
@@ -324,7 +325,7 @@
 			<tr><td class="note">\b</td><td>Matches on word boundaries, i.e. between <i>word</i>(\w) and <i>non-word</i>(\W) characters.<br>Note that the <b>start</b> and <b>end</b> of string are considered as non-word characters.</td></tr>
 		</table>
 	</section>
-	<section><h3>Anchors and Boundaries example</h3>
+	<section><h3>Example</h3>
 		<pre><code rel="JS" class="js">
 			var re = /\b/g;
 			var strings = [
@@ -346,7 +347,7 @@
 			// 4 matches in 'a,a'
 		</code></pre>
 	</section>
-	<section><h3>Anchors and Boundaries example</h3>
+	<section><h3>Example</h3>
 		<pre><code rel="JS" class="js">
 			var re = /^a\w+\a$/g;
 			var strings = [
@@ -360,7 +361,7 @@
 			// 1 matches in 'ana'
 		</code></pre>
 	</section>
-	<section><h3>Anchors and Boundaries example</h3>
+	<section><h3>Example</h3>
 		<pre><code rel="JS" class="js">
 			var re = /\b[\w-]+\b/gi;
 			var strings = [
@@ -375,10 +376,10 @@
 			// 2 matches in 'one-two,three!'
 		</code></pre>
 	</section>
-	<section><h3>More on 	Anchors and Boundaries</h3>
-		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#boundaries">Boundaries</a>
-	</section>
+</section>
 
+<section data-min="5"><h1>Alternation</h1></section>
+<section>
 	<section><h3>Alternation</h3>
 		<dl class="fa">
 			<dt>With alternation we can match one <span class="note">or</span> another regexp!</dt>
@@ -411,7 +412,10 @@
 	<section><h3>More on Alternation</h3>
 		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#alternation">Alternation</a>
 	</section>
+</section>
 
+<section data-min="5"><h1>Grouping and back references</h1></section>
+<section>
 	<section><h3>Grouping and back references</h3>
 		<dl class="fa" style="font-size: .8em">
 			<dt>Brackets: <span class="note">(</span> and <span class="note">)</span>, play a dual role in regex!</dt>
@@ -487,9 +491,34 @@
 	<section><h3>More on Grouping and back references</h3>
 		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#grouping-back-references">Grouping and back references</a>
 	</section>
+</section>
+
+<section data-min="5"><h1>Assertions</h1></section>
+<section>
 	<section><h3>Assertions</h3>
-		<p>Gives the possibility to match a regex only if it is followed or not by something. I.e. we can make lookahead!</p>
+		<p>Gives the possibility to match a regex only if it is followed or not by something. I.e. we can make lookahead or lookbehind!</p>
 		<p class="advanced"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#assertions">Assertions on MDN</a></p>
+	</section>
+	<section><h3>Assertions - use case</h3>
+		<dl class="fa">
+			<dt></dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			const passwords = [
+				'alabala', 	// false
+				'alaba#a', 	// false
+				'alaba9a', 	// false
+				'a1aba#9', 	// true
+				'a1@', 		// false
+			];
+
+			const re = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*]).{6,}$/;
+
+			passwords.forEach(str=>{
+				let matched = re.test(str);
+				console.log(`'${str}' => ${matched}`)
+			});
+		</code></pre>
 	</section>
 </section>
 
