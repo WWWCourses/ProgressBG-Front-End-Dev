@@ -335,9 +335,9 @@
 				speed: 100,
 				drive: function(){
 					if (this.wings >= 2){
-						console.log(`Flying wiht ${this.speed} km/h`);
+						console.log(`Flying with ${this.speed} km/h`);
 					}else{
-						console.log(`Driving wiht ${this.speed} km/h`);
+						console.log(`Driving with ${this.speed} km/h`);
 					}
 				}
 			}
@@ -380,9 +380,9 @@
 				speed: 100,
 				drive: function(){
 					if (this.wings >= 2){
-						console.log(`Flying wiht ${this.speed} km/h`);
+						console.log(`Flying with ${this.speed} km/h`);
 					}else{
-						console.log(`Driving wiht ${this.speed} km/h`);
+						console.log(`Driving with ${this.speed} km/h`);
 					}
 				}
 			}
@@ -410,7 +410,7 @@
 			<dt>It's better and safe to use <code>Object.create() </code> aproach, instead of '<code>__proto__</code>'</dt>
 		</dl>
 	</section>
-	<section><h3 class="important">Prototypal Inheritance of constructed objects</h3>
+	<section id="PrototypalInheritanceOfConstructedObjects"><h3 class="important">Prototypal Inheritance of constructed objects</h3>
 		<pre><code rel="JS" class="js">
 			// define Car Constructor:
 			function Car() {
@@ -419,9 +419,9 @@
 			}
 			Car.prototype.drive = function () {
 				if (this.wings >= 2){
-					console.log(`Flying wiht ${this.speed} km/h`);
+					console.log(`Flying with ${this.speed} km/h`);
 				}else{
-					console.log(`Driving wiht ${this.speed} km/h`);
+					console.log(`Driving with ${this.speed} km/h`);
 				}
 			}
 			// define Ford Constructor:
@@ -464,9 +464,9 @@
 				//using shorter syntax for method definitions:
 				drive(){
 					if (this.wings >= 2) {
-						console.log(`Flying wiht ${this.speed} km/h`);
+						console.log(`Flying with ${this.speed} km/h`);
 					} else {
-						console.log(`Driving wiht ${this.speed} km/h`);
+						console.log(`Driving with ${this.speed} km/h`);
 					}
 				}
 			}
@@ -505,9 +505,9 @@
 				Car.prototype= {
 					drive: function(){
 						if (this.wings >= 2){
-							console.log(`Flying wiht ${this.speed} km/h`);
+							console.log(`Flying with ${this.speed} km/h`);
 						}else{
-							console.log(`Driving wiht ${this.speed} km/h`);
+							console.log(`Driving with ${this.speed} km/h`);
 						}
 					}
 				}
@@ -547,8 +547,9 @@
 
 <section><h1>Exercises</h1></section>
 <section><h2>Exercises</h2>
-	<section><h3>createCatConstructor:</h3>
+	<section><h3 id="createCatConstructor">createCatConstructor:</h3>
 		<script src="https://gist.github.com/WWWCourses/56fd395fce77a5df4cb38791ad54359e.js"></script>
+		<!-- <script src="https://gist.github.com/WWWCourses/56fd395fce77a5df4cb38791ad54359e#file-task-js"></script> -->
 	</section>
 </section>
 
