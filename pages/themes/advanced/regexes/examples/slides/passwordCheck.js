@@ -1,6 +1,6 @@
 // A valid password is:
 // 1. at least 6 symbols
-// 2. must contains letters [a-zA-Z], digits [\d] and symbols [!@#$%^&*]
+// 2. must contains letters [a-zA-Z] AND digits [\d] AND symbols [!@#$%^&*]
 
 const passwords = [
 	'alabala', 	// false
