@@ -755,8 +755,37 @@
 <section><h2>Regex UseCases</h2>
 	<section><h3>For "Hangman" game board</h3>
 		<dl class="fa">
-			<dt></dt>
+			<dt>The code bellow is a very simple demo for using a regexp in hangman game.</dt>
+			<dt>Full implementation of the game can be checked here: <a href="https://github.com/WWWCourses/hangman">hangman @github</a></dt>
 		</dl>
+		<pre><code rel="JS" class="js">
+			function guess(letter) {
+				// find all matches (and their indexes) of letter in wordToGuess
+				let matches = wordToGuess.matchAll(new RegExp(letter,"gi"));
+
+				// replace each matched position in board array with the letter
+				for (const match of matches) {
+					gameBoard.splice(match.index,1,letter);
+				}
+
+				console.log(gameBoard);
+			}
+
+			const wordToGuess = "orinoko";
+
+			// array of currently guessed letters. Each un-guessed letter is displayed as '_'
+			let gameBoard = wordToGuess.replace(/\w/g,'_').split('');
+
+			// Test
+			guess('o');
+			guess('m');
+			guess('r');
+			guess('n');
+			guess('p');
+			guess('k');
+
+
+		</code></pre>
 	</section>
 </section>
 
