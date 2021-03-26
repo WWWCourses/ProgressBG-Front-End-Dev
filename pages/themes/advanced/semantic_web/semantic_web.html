@@ -154,83 +154,110 @@
 			<dt>Shortly, they allows us to embed custom, non-visible data</dt>
 			<dd>Usually used with JS</dd>
 		</dl>
-  </section>
-  <section><h3>Syntax</h3>
-  	<pre><code rel="HTML" class="html">
-  		&lt;tag data-something&gt;&lt;/tag&gt;
-  	</code></pre>
-  	<dl class="fa">
-  		<dt>Where <span class="note">something</span> is string:</dt>
-  		<dd>at least 1 letter</dd>
-  		<dd>Should not start with 'xml'</dd>
-  		<dd>Rest symbols can be: <br> | "-" | "." | [0-9] | #xB7 | [#x0300-#x036F] | [#x203F-#x2040]</dd>
-  		<dt>More on naming: <a href="https://www.w3.org/TR/2011/WD-html5-20110525/elements.html#embedding-custom-non-visible-data-with-the-data-attributes">data-*  attributes @w3c</a></dt>
-  	</dl>
-  </section>
-  <section><h3>Benefits</h3>
-  	<dl class="fa">
-  		<dt>To replace the usage of HTML classes for storing data</dt>
-  		<dd>The purpose of <code>class</code> attribute is to assign a class for styling</dd>
-  		<dt>We can put as many <code>data-*</code> attributes as we need</dt>
-  		<dt>Easy access of the <code>data-*</code> value by JS</dt>
-  		<dt>Of course, we can use them for styling purposes, as well</dt>
-  	</dl>
-  </section>
-  <section><h3>Example</h3>
-  	<pre><code rel="HTML" class="html" style="height: 50vh;">
-  		<section>
-  			<h2>Resutrant Menu</h2>
-  			<h3>Main Courses</h3>
-  			<ol data-food_type="main">
-  				<li data-price="23.00">Short Ribs Braised with Mushrooms</li>
-  				<li data-price="31.20">Greek Lemon Chicken and Potatoes</li>
-  				<li data-price="35.50">Chef John's Italian Meatballs</li>
-  				<li data-price="18.80">Pizza a la Sardinia</li>
-  			</ol>
-  			<h3>Deserts</h3>
-  			<ol data-food_type="deserts">
-  				<li data-price="13.50">Holiday Sugar Cookie Cups</li>
-  				<li data-price="12.00">Easy Baked Alaska</li>
-  				<li data-price="16.10">Slow-Cooker Caramel-Toffee Bread Pudding</li>
-  			</ol>
-  		</section>
-  	</code></pre>
-  	<pre><code rel="CSS" class="css">
-  		ol[data-food_type="main"]{
-  			border: 1px solid red;
-  		}
-  		ol[data-food_type="deserts"]{
-  			border: 1px solid blue;
-  		}
-  	</code></pre>
-  </section>
-  <section><h3>data-* attributes with CSS pseudo-elements</h3>
-  	<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="css,result" data-user="webdesigncourse" data-slug-hash="MPXXjV/" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="data-* attributes with pseudo-elements">
-		<span>See the Pen <a href='https://codepen.io/webdesigncourse/pen/MPXXjV/'>data-* attributes with pseudo-elements</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
-  	</span>
+	</section>
+	<section><h3>Syntax</h3>
+		<pre><code rel="HTML" class="html" data-noescape>
+			&lt;tag data-<i>something</i>="value"&gt;&lt;/tag&gt;
+
+			&lt;!-- or if we need a boolean data-attribute (i.e. &#39;on&#39;/&#39;off&#39;) --&gt;
+			&lt;tag data-<i>something</i>&gt;&lt;/tag&gt;
+		</code></pre>
+		<dl class="fa">
+			<dt>Where <span class="note">something</span> must be:</dt>
+			<dd>at least 1 symbol</dd>
+			<dd>should not start with 'xml'</dd>
+			<dd>tt can contain only letters, numbers, dashes (-), periods (.), colons (:), and underscores (_). Any ASCII capital letters (A to Z) are ignored and converted to lowercase.</dd>
+			<dd>More on naming: <a href="https://www.w3.org/TR/2011/WD-html5-20110525/elements.html#embedding-custom-non-visible-data-with-the-data-attributes">data-*  attributes @w3c</a></dd>
+			<dt>Every HTML element may have any number of data attributes specified, with any value.</dt>
+		</dl>
+		<pre><code rel="Examples" class="html" data-trim data-noescape>
+			&lt;li data-isbn=&quot;0385333498&quot; data-book-id=&#39;1&#39;&gt;The Sirens of Titan&lt;/li&gt;
+			&lt;li data-isbn=&quot;0141189347&quot; data-book-id=&quot;2&quot; data-selected&gt;Cat&#39;s Cradle&lt;/li&gt;
+		</code></pre>
+	</section>
+	<section><h3>Benefits</h3>
+		<dl class="fa">
+			<dt>To replace the usage of HTML classes/id for storing data</dt>
+			<dd>The purpose of <code>class</code>/<code>id</code> attribute is for styling</dd>
+			<dt>We can put as many <code>data-*</code> attributes as we need</dt>
+			<dt>Easy access of the <code>data-*</code> values in JavaScript</dt>
+			<dt>Of course, we can use them for styling purposes, as well, using <a href="https://www.w3schools.com/css/css_attribute_selectors.asp">CSS Attribute Selectors</a></dt>
+		</dl>
+	</section>
+	<!-- <section><h3>Example</h3>
+		<pre><code rel="HTML" class="html" style="height: 50vh;">
+			<section>
+				<h2>Resutrant Menu</h2>
+				<h3>Main Courses</h3>
+				<ol data-food_type="main">
+					<li data-price="23.00">Short Ribs Braised with Mushrooms</li>
+					<li data-price="31.20">Greek Lemon Chicken and Potatoes</li>
+					<li data-price="35.50">Chef John's Italian Meatballs</li>
+					<li data-price="18.80">Pizza a la Sardinia</li>
+				</ol>
+				<h3>Deserts</h3>
+				<ol data-food_type="deserts">
+					<li data-price="13.50">Holiday Sugar Cookie Cups</li>
+					<li data-price="12.00">Easy Baked Alaska</li>
+					<li data-price="16.10">Slow-Cooker Caramel-Toffee Bread Pudding</li>
+				</ol>
+			</section>
+		</code></pre>
+		<pre><code rel="CSS" class="css">
+			ol[data-food_type="main"]{
+				border: 1px solid red;
+			}
+			ol[data-food_type="deserts"]{
+				border: 1px solid blue;
+			}
+		</code></pre>
+	</section> -->
+	<section><h3>Example: data-* attributes with CSS pseudo-elements</h3>
+		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="css,result" data-user="webdesigncourse" data-slug-hash="MPXXjV/" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="data-* attributes with pseudo-elements">
+			<span>See the Pen <a href='https://codepen.io/webdesigncourse/pen/MPXXjV/'>data-* attributes with pseudo-elements</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+			</span>
 		</p>
-  </section>
-  <section><h3><a href="https://codepen.io/css-tricks/pen/wFeaG">Styled Tooltips Using Psuedo Elements</a></h3>
-  	<iframe src="examples/slides/data_attributes/custom_tooltips_by_css_trics.html" style="height: 40vh"></iframe>
-  	<p>Example from <a href="https://codepen.io/css-tricks/pen/wFeaG/">Styled Tooltips Using Psuedo Elements</a> by CSS-Tricks Team (<a href="https://codepen.io/css-tricks">@css-tricks</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-  </section>
-  <section><h3>JavaScript access</h3>
-  	<dl class="fa">
-  		<dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset">HTMLElement.dataset @MDN</a></dt>
-  		<dd>The easy way</dd>
-  		<dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute">Element.getAttribute() @MDN</a></dt>
-  		<dd>Longer way</dd>
-  	</dl>
-  </section>
-  <section><h3>Example (labs)</h3>
-  	<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="html,result" data-user="webdesigncourse" data-slug-hash="MPXXaQ/" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Access data-* with JS: lab 20.11.2018">
-		<span>See the Pen <a href='https://codepen.io/webdesigncourse/pen/MPXXaQ/'>Access data-* with JS</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
-  	</span>
-	</p>
-  </section>
+	</section>
+	<section><h3><a href="https://codepen.io/css-tricks/pen/wFeaG">Styled Tooltips Using Psuedo Elements</a></h3>
+		<iframe src="examples/slides/data_attributes/custom_tooltips_by_css_trics.html" style="height: 40vh"></iframe>
+		<p>Example from <a href="https://codepen.io/css-tricks/pen/wFeaG/">Styled Tooltips Using Psuedo Elements</a> by CSS-Tricks Team (<a href="https://codepen.io/css-tricks">@css-tricks</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+	</section>
+	<section><h3>Access data-* attributes in JavaScript</h3>
+		<pre><code rel="HTML" class="html">
+			<tag data-something="abc" data-something-else="1"></tag>
+		</code></pre>
+		<pre><code rel="JS" class="js">
+			// read data-something value
+			let valueSomething = element.dataset.something;
+
+			// write to data-something value
+			element.dataset.something = 'xyz'
+
+			// read data-something-else value
+			let valueSomethingElse = element.dataset.somethingElse;
+
+			// write to data-something-else value
+			element.dataset.somethingElse = 9;
+		</code></pre>
+		<p class="note">Note, that when the part after <code>data-</code> prefix contains dashes it is converted to Camel Case and dashes are removed.</p>
+	</section>
+	<section><h3>Example: Access data-* attributes in JavaScript</h3>
+		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="js,result" data-user="webdesigncourse" data-slug-hash="jOyWQzp" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="read/write data-* attributes">
+		<span>See the Pen <a href="https://codepen.io/webdesigncourse/pen/jOyWQzp">
+		read/write data-* attributes</a> by Iva Popova (<a href="https://codepen.io/webdesigncourse">@webdesigncourse</a>)
+		on <a href="https://codepen.io">CodePen</a>.</span>
+		</p>
+	</section>
+	<section><h3>Example: Access data-* attributes in JavaScript</h3>
+		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="html,result" data-user="webdesigncourse" data-slug-hash="MPXXaQ/" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Access data-* with JS: lab 20.11.2018">
+			<span>See the Pen <a href='https://codepen.io/webdesigncourse/pen/MPXXaQ/'>Access data-* with JS</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+			</span>
+		</p>
+	</section>
   <section><h3>Resources</h3>
   	<dl class="fa">
   		<dt><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">Using data attributes @MDN</a></dt>
+		<dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset">HTMLElement.dataset @MDN</a></dt>
   		<dt><a href="https://www.w3schools.com/tags/att_global_data.asp">HTML data-* Attributes @w3schools</a></dt>
   	</dl>
   </section>
@@ -253,9 +280,18 @@
 </section> -->
 
 
-<section id="HW"><h1>Task - Simple Playlist</h1></section>
+<section id="HW"><h1>Exersises</h1></section>
+<section><h2>Task - Restaurant Menu</h2>
+	<section id="HW_restaurantMenu"><h3>Task - Restaurant Menu</h3>
+		<dl class="fa">
+			<dt>Implement the simple menu ordering page, as given in the gif bellow</dt>
+			<dt>Try to improve the User Experience.</dt>
+		</dl>
+		<a href="./HW/menuTask/menuTask.gif" title="click for bigger image"><img src="./HW/menuTask/menuTask.gif" alt="menuTask.gif"></a>
+	</section>
+</section>
 <section><h2>Task - Simple Playlist</h2>
-	<section>
+	<section id="HW_simplePlaylist"><h3>Task - Simple Playlist</h3>
 		<dl class="fa">
 			<dt>Imagine, you have to code a simple music player</dt>
 			<dt>For now, we are only interested in next UI components:</dt>
@@ -303,6 +339,7 @@
 		</dl>
 	</section>
 </section>
+
 
 <section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
 	 <p>These slides are based on</p>
