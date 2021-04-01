@@ -1,0 +1,46 @@
+/* reset list style */
+nav ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.clear::after{
+	content: "";
+	display: block;
+	clear:both
+}
+
+/* mobile devices = > show menu as hamburger menu */
+@media screen and (max-width:800px) {
+
+	nav::before{
+		content: "\2630";
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		font-size: 2em;
+		color: red;
+		cursor: pointer;
+	}
+
+	nav ul{
+		display: none;
+	}
+}
+
+/* large screen devices => show menu as floated boxes */
+@media screen and (min-width:800px) {
+	nav{
+		width: 800px;
+		/* border: 1px solid red; */
+		margin:1em auto;
+	}
+	nav ul{
+		margin: 0 auto;
+	}
+	nav ul li{
+		float: left;
+		width: 33%;
+	}
+}

@@ -291,19 +291,104 @@
 	</section>
 	<section><h3>Property Declarations</h3>
 		<dl class="fa">
-			<dt>In SASS, a  declaration's value can be any <a href="https://sass-lang.com/documentation/syntax/structure#expressions">SassScript expression</a>, which will be evaluated and included in the result.</dt>
+			<dt>In SASS, a property value can be any <a href="https://sass-lang.com/documentation/syntax/structure#literals">literal</a> or <a href="https://sass-lang.com/documentation/syntax/structure#expressions">expression</a>, which will be evaluated and included in the result.</dt>
 		</dl>
+		<pre><code rel="SCSS" class="scss" data-noescape>
+			$fs-normal:16px;
+
+			.test{
+				&lt;!-- string literal value --&gt;
+				color: red;
+				&lt;!-- expression value --&gt;
+				font-size: $fs-normal + 2px;
+			}
+		</code></pre>
+		<pre><code rel="CSS" class="css">
+			.test {
+				color: red;
+				font-size: 18px;
+			}
+		</code></pre>
+	</section>
+	<section><h3>Literals</h3>
+		<dl class="fa">
+			<dt>Referencce:  <a href="https://sass-lang.com/documentation/syntax/structure#literals">literals @sass-lang.com</a></dt>
+		</dl>
+		<pre><code rel="SCSS" class="scss" data-noescape>
+			// numbers
+			$number: 1.23;
+
+			// strings (can be quoted or unquoted)
+			$foo:"bar";
+			$foo:bar;
+
+			// colors:
+			$color:red;
+			$color:#F00;
+			$color:rgba(255,0,0,0.5);
+
+			// boolean
+			$shown:true;
+			$shown:false;
+
+			// null:
+			$test:null;
+
+			// lists (any expression, separated with spaces or commas )
+			$border: 1px solid $color;
+			$font: "Helvetica", serif;
+
+			//maps (like dictionary)
+			$color_map: (
+			  light: #ccc,
+			  dark: #000
+			);
+		</code></pre>
+	</section>
+	<section><h3>SCSS Operations</h3>
+		<dl class="fa">
+			<dt>Reference: <a href="https://sass-lang.com/documentation/operators">operators @sass-lang.com</a></dt>
+		</dl>
+		<pre><code rel="SASS" class="scss">
+			$box_width:200px;
+			$box_height:$box_width*2;
+
+			.parent{
+				width: $box_width;
+				height: $box_height;
+				background-color: red;
+
+				div{
+					width: $box_width/2;
+					height: $box_height/2;
+					background-color: blue;
+				}
+			}
+		</code></pre>
+
+		<pre><code rel="CSS" class="css">
+			.parent {
+				width: 200px;
+				height: 400px;
+				background-color: red;
+			}
+			.parent div {
+				width: 100px;
+				height: 200px;
+				background-color: blue;
+			}
+		</code></pre>
 	</section>
 	<section><h3>Hidden Declarations</h3>
 		<dl class="fa">
-			<dt>If a declaration’s value is false (or null or an empty unquoted string), Sass won’t compile that declaration to CSS at all.</dt>
+			<dt>If a declaration’s value is null or an empty unquoted string, Sass won’t compile that declaration to CSS at all.</dt>
 		</dl>
 		<pre><code rel="SASS" class="scss">
-			$rounded: false;
+			$rounded: null;
 
 			.button {
 				border: 1px solid #999;
-				border-radius: if($rounded, 5px, null);
+				border-radius: $rounded;
 			}
 		</code></pre>
 		<pre><code rel="CSS" class="css">
@@ -426,59 +511,7 @@
 		</code></pre>
 	</section>
 
-	<section><h3>Data Types</h3>
-		<pre><code rel="SCSS" class="scss" data-noescape>
-			// numbers
-			$number: 1.23;
 
-			// strings
-			$foo:"bar";
-			$foo:bar;
-
-			// colors:
-			$color:red;
-			$color:#F00;
-			$color:rgba(255,0,0,0.5);
-
-			// boolean
-			$shown:true;
-			$shown:false;
-
-			// null:
-			$test:null;
-
-			// lists
-			$border: 1px solid $color;
-			$font: "Helvetica", serif;
-
-			//maps (like dictionary)
-			$color_map: (
-			  light: #ccc,
-			  dark: #000
-			);
-		</code></pre>
-	</section>
-	<section><h3>SCSS Operations</h3>
-		<dl class="fa">
-			<dt>Reference: <a href="https://sass-lang.com/documentation/operators">operators @sass-lang.com</a></dt>
-		</dl>
-		<pre><code rel="SASS" class="scss">
-			$box_width:200px;
-			$box_height:$box_width*2;
-
-			.parent{
-				width: $box_width;
-				height: $box_height;
-				background-color: red;
-
-				div{
-					width: $box_width/2;
-					height: $box_height/2;
-					background-color: blue;
-				}
-			}
-		</code></pre>
-	</section>
 	<section><h3>@-Rules and Directives</h3>
 		<dl class="fa">
 			<dt>@mixin</dt>
