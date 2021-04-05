@@ -1,8 +1,12 @@
-/* reset list style */
-nav ul{
+/* for all devices */
+body{
+	margin: 0;
+}
+nav ul.nav-menu{
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	box-sizing: border-box;
 }
 
 .clear::after{
@@ -11,36 +15,76 @@ nav ul{
 	clear:both
 }
 
+
+
 /* mobile devices = > show menu as hamburger menu */
 @media screen and (max-width:800px) {
+	nav ul.nav-menu{
+		display: none;
+		position: fixed;
+		top: 0px;
+		right: -400px;
+		width: 400px;
+		padding: 2em ;
+		background-color: #666;
+		transition: right 1s linear 0s;
 
-	nav::before{
-		content: "\2630";
-		position: absolute;
-		right: 5px;
-		top: 5px;
-		font-size: 2em;
-		color: red;
-		cursor: pointer;
+	}
+	nav ul.nav-menu.active{
+		display: block;
+		right: 0;
 	}
 
-	nav ul{
-		display: none;
+	nav ul.nav-menu>li{
+		line-height: 2em;
+	}
+	nav ul.nav-menu>li:hover{
+		background-color:#999;
+	}
+
+	nav ul.nav-menu>li a{
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		color: #CCC;
+	}
+
+	.nav-responsive-icon{
+		display: block;
+		position: fixed;
+		right: .2em;
+		top: .2em;
+		z-index: 1;
+		font-size: 1.5em;
+		margin: 0;
+		padding: .2em;
+		outline: none;
+		border: none;
+		color: #CCC;
+		cursor: pointer;
+		background-color: transparent;
+	}
+
+	.nav-responsive-icon::before{
+		/* hamburger icon */
+		content: "\2630";
+	}
+	.nav-responsive-icon.active::before{
+		/* close icon */
+		content: "\2717";
 	}
 }
 
 /* large screen devices => show menu as floated boxes */
 @media screen and (min-width:800px) {
 	nav{
-		width: 800px;
-		/* border: 1px solid red; */
-		margin:1em auto;
+		height: 2em;
+		background-color:#999;
 	}
-	nav ul{
-		margin: 0 auto;
+	.nav-responsive-icon{
+		display: none;
 	}
-	nav ul li{
+	nav ul.nav-menu>li{
 		float: left;
-		width: 33%;
 	}
 }
