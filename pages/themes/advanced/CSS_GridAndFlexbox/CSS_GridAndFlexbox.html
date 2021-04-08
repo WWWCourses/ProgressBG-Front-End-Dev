@@ -81,28 +81,13 @@
 		<dl class="fa">
 			<dt>The Flexbox model is a  <span class="note">one-dimensional</span> method for laying out items in rows or columns.</dt>
 			<dt>It is a powerful layout model, which provides space distribution between items and alignment capabilities.</dt>
+			<dt>It can also be used as a layout mechanism, though for more complicated layouts the <span class="note">two-dimensional</span> <code>grid layout</code> is preferred.</dt>
 		</dl>
+		<a href=""><img src="./images/flex_vs_grid_dimessions.png" alt=""></a>
 	</section>
-	<section><h3>Demo: right-aligned menu (Flexboxes)</h3>
-		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="css,result" data-user="webdesigncourse" data-slug-hash="BGLqLy" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Right-aligned Menu (Flexboxes)">
-		<span>
-		See the Pen <a href='https://codepen.io/webdesigncourse/pen/BGLqLy'>Right-aligned Menu (Flexboxes)</a> by Iva Popova
-		(<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
-		</span>
-		</p>
-	</section>
-	<section><h3>Demo: 3 column layout with Flexboxes</h3>
-		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="html,result" data-user="webdesigncourse" data-slug-hash="JeRmex" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="HolyGrail_flexbox_layout">
-		<span>
-		See the Pen <a href='https://codepen.io/webdesigncourse/pen/JeRmex'>HolyGrail_flexbox_layout</a> by Iva Popova
-		(<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
-		</span>
-		</p>
-	</section>
-	<section><h3>The model</h3>
+
+	<section><h3>Flexbox: the Basics</h3>
 		<a href="images/flexbox_model.png"><img src="images/flexbox_model.png" alt="flexbox_model"></a>
-	</section>
-	<section><h3>The Basics</h3>
 		<dl class="fa">
 			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic concepts of flexbox @mdn</a></dt>
 		</dl>
@@ -125,6 +110,29 @@
 			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-self">align-self @mdn</a></dt>
 		</dl>
 	</section>
+	<section><h3>Demo 1: Holy Grail Layout</h3>
+		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="html,result" data-user="webdesigncourse" data-slug-hash="JeRmex" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="HolyGrail_flexbox_layout">
+		<span>
+		See the Pen <a href='https://codepen.io/webdesigncourse/pen/JeRmex'>HolyGrail_flexbox_layout</a> by Iva Popova
+		(<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</span>
+		</p>
+	</section>
+	<section><h3>Demo 2: Absolutely centered flex menu items</h3>
+		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="css,result" data-user="webdesigncourse" data-slug-hash="WNRXMqx" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="absolutelyCenteredFlexItems">
+			<span>See the Pen <a href="https://codepen.io/webdesigncourse/pen/WNRXMqx">
+			absolutelyCenteredFlexItems</a> by Iva Popova (<a href="https://codepen.io/webdesigncourse">@webdesigncourse</a>)
+			on <a href="https://codepen.io">CodePen</a>.</span>
+		  </p>
+	</section>
+	<section><h3>Demo 3: Proportionally spaced menu items</h3>
+		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="css,result" data-user="webdesigncourse" data-slug-hash="BGLqLy" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Proportionally spaced Menu (Flexboxes)">
+		<span>See the Pen <a href="https://codepen.io/webdesigncourse/pen/BGLqLy">
+		Proportionally spaced Menu (Flexboxes)</a> by Iva Popova (<a href="https://codepen.io/webdesigncourse">@webdesigncourse</a>)
+		on <a href="https://codepen.io">CodePen</a>.</span>
+		</p>
+		<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+	</section>
 	<section><h3>Flexbox - playground</h3>
 		<iframe height="300" style="width: 100%;" scrolling="no" title="Flexbox playground" src="https://codepen.io/enxaneta/embed/adLPwv?height=300&theme-id=20230&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
 		See the Pen <a href='https://codepen.io/enxaneta/pen/adLPwv'>Flexbox playground</a> by Gabi
@@ -135,25 +143,31 @@
 
 <section data-min="5"><h1>The Grid Layout model</h1></section>
 <section><h2>The Grid Layout model</h2>
-  <section><h3>Overview</h3>
-	<dl class="fa">
-		<dt>CSS Grid Layout is a <span class="note">two-dimensional</span> layout system</dt>
-		<dt>A grid is a collection of horizontal and vertical lines creating a pattern against which we can line up our design elements</dt>
-	</dl>
+  	<section><h3>Overview</h3>
+		<dl class="fa">
+			<dt>CSS Grid Layout is a <span class="note">two-dimensional</span> layout system</dt>
+			<dt>A grid is a collection of horizontal and vertical lines creating a pattern against which we can line up our design elements</dt>
+		</dl>
 	</section>
 	<section><h3>Basic concepts</h3>
 		<a href="images/grid-concepts.svg"><img src="images/grid-concepts.svg" alt=""></a>
 	</section>
+	<section><h3>Demo</h3>
+		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="css,result" data-user="webdesigncourse" data-slug-hash="vYYoNLw" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="grid with CSS Grid">
+		<span>See the Pen <a href="https://codepen.io/webdesigncourse/pen/vYYoNLw">
+		grid with CSS Grid</a> by Iva Popova (<a href="https://codepen.io/webdesigncourse">@webdesigncourse</a>)
+		on <a href="https://codepen.io">CodePen</a>.</span>
+		</p>
+	</section>
 </section>
 
-
-<section data-min="50"><h1>References</h1></section>
+<!-- <section data-min="50"><h1>References</h1></section>
 <section><h2>References</h2>
 	<section><h3>Video</h3>
 		<p>The Ultimate CSS3 Flexbox Tutorial - Colt's Code Camp</p>
 		<iframe width="1643" height="924" src="https://www.youtube.com/embed/qZv-rNx0jEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</section>
-</section>
+</section> -->
 <section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
 	 <p>These slides are based on</p>
 	 <p>customised version of </p>
@@ -211,5 +225,6 @@
 <!-- <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script> -->
 
 <!-- <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script> -->
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 </body>
 </html>
