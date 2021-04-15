@@ -1,0 +1,19 @@
+{
+	"userName": "Ada",
+	"userAge": 24,
+	"skills": [
+		"HTML", "CSS", "JavaScript"
+	],
+	"tasks": [
+		{
+			"id": 1,
+			"title":"Learn Sass",
+			"completed": true
+		},
+		{
+			"id": 1,
+			"title":"Learn React",
+			"completed": false
+		}
+	]
+}

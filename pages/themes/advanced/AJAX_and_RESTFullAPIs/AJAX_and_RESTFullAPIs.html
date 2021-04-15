@@ -114,7 +114,7 @@
 			<dt><span class="note">request-URI</span>: the URI of the resource requested</dt>
 			<dt><span class="note">HTTP-version</span>: latest version is <a href="https://en.wikipedia.org/wiki/HTTP/2">HTTP/2</a></dt>
 		</dl>
-		<pre><code rel="JS" class="js">
+		<pre><code rel="Examples" class="ascii">
 			GET /search?q=apple HTTP/1.1
 			HEAD /query.html HTTP/1.1
 			POST /index.html HTTP/1.1
@@ -125,10 +125,12 @@
 			field-name: field-value1[, field-value2, ...]
 		</code></pre>
 		<p>The request-header fields allow the client to pass additional information about the request, and about the client itself, to the server</p>
-		<pre><code rel="Examples" class="js">
+		<pre><code rel="Examples" class="ascii">
 			Host: google.com
 			User-Agent: curl/7.47.0
 			Accept: */*
+			cache-control: no-cache
+			cookie: OGPC=19022519-1:; OGP=-19022519:; OTZ=5933950_44_48_123900_44_436380;
 		</code></pre>
 	</section>
 	<section><h3>Request Body</h3>
@@ -193,22 +195,17 @@
 <section><h2 class="NB">The "GET" Request Method</h2>
 	<section>
 		<dl class="fa">
-			<dt>Used to request data from a specified resource</dt>
-			<dt class="note">The query string is sent in the URL</dt>
-		</dl>
-		<pre><code rel="Example" class="http">
-			https://duckduckgo.com/?q=http+get+request&t=hz&ia=web
-		</code></pre>
-	</section>
-	<section>
-		<dl class="fa">
 			<dt>GET requests should be used only to retrieve data, and not to change the server state</dt>
 			<dt>GET requests should NEVER be used with sensitive data</dt>
 			<dt>GET requests have length restrictions</dt>
 			<dt>GET requests can be cached</dt>
 			<dt>GET requests remain in the browser history</dt>
 			<dt>GET requests can be bookmarked</dt>
+			<dt class="note">The query string is sent in the URL</dt>
 		</dl>
+		<pre><code rel="Example" class="http">
+			https://duckduckgo.com/?q=http+get+request&t=hz&ia=web
+		</code></pre>
 	</section>
 </section>
 <section data-min="5"><h1>The "POST" Request Method</h1></section>
@@ -216,40 +213,54 @@
 	<section>
 		<dl class="fa">
 			<dt>POST request method is used to sent data to the server, like customer information, file upload etc.</dt>
-			<dt>POST request should change the server state</dt>
+			<dt>POST request <span class="note">should change the server state</span></dt>
 			<dt>the query string will be sent in the body of the request message</dt>
 			<dt>the request headers Content-Type and Content-Length are used to notify the server the type and the length of the query string</dt>
-		</dl>
-	</section>
-	<section>
-		<dl class="fa">
 			<dt>POST requests are never cached</dt>
 			<dt>POST requests do not remain in the browser history</dt>
 			<dt>POST requests cannot be bookmarked</dt>
 			<dt>POST requests have no restrictions on data length</dt>
 		</dl>
 	</section>
-	<section>
-		<p>Simply putted, POST is used to <span class="note">create</span> content on the server!</p>
-	</section>
 </section>
 <section data-min="5"><h1>Other HTTP Request Methods</h1></section>
 <section><h2 class="advanced">Other HTTP Request Methods</h2>
-	<section><h3>HEAD</h3>
-		<p>Same as GET, but transfers the status line and header section only. No document body is returned!</p>
+	<section>
+		<dl class="fa">
+			<dt>PUT</dt>
+			<dd>Replaces all current representations of the target resource with the uploaded content.</dd>
+			<dd>In other words, PUT is used to <span class="note">update</span> the content on server</dd>
+			<dt>DELETE</dt>
+			<dd>Deletes the specified resource</dd>
+			<dt>HEAD</dt>
+			<dd>Same as GET, but transfers the status line and header section only. No document body is returned!</dd>
+			<dt>OPTIONS</dt>
+			<dd>Ask the server to return the list of request methods it supports</dd>
+		</dl>
 	</section>
-	<section><h3>PUT</h3>
-		<p>Replaces all current representations of the target resource with the uploaded content.</p>
-		<p>In oder words, PUT is used to <span class="note">create or update</span> content on server</p>
+</section>
+
+<section data-min="5"><h1>Using HTTP Methods for RESTful Services</h1></section>
+<section><h2>Using HTTP Methods for RESTful Services</h2>
+	<section><h3>Overview</h3>
+		<dl class="fa">
+			<dt>RESTful (aka REST) services defines a way on how a resource can be accessed from the client and what will be done with that resource.</dt>
+			<dt>The standard operations on a resource are: Create, Read, Update, Delete (CRUD).</dt>
+			<dt>REST Services follow standardised HTTP methods for resource manipulation (POST, GET, PUT, PATCH, and DELETE.)</dt>
+		</dl>
 	</section>
-	<section><h3>DELETE</h3>
-		<p>Deletes the specified resource</p>
-	</section>
-	<section><h3>OPTIONS</h3>
-		<p>Ask the server to return the list of request methods it supports</p>
-	</section>
-	<section><h3>CONNECT</h3>
-		<p>Establishes a transparent TCP/IP tunnel to the server.</p>
+	<section><h3>Mapping REST methods to CRUD operations</h3>
+		<table>
+			<tr>
+				<th>HTTP Method</th>
+				<th>CRUD operation</th>
+			</tr>
+			<tr><td>GET</td><td>Read</td></tr>
+			<tr><td>POST</td><td>Create</td></tr>
+			<tr><td>PUT</td><td>Update/Replace</td></tr>
+			<tr><td>PATCH</td><td>Update/Modify</td></tr>
+			<tr><td>DELETE</td><td>Delete</td></tr>
+		</table>
 	</section>
 </section>
 
@@ -300,14 +311,16 @@
 		</dl>
 	</section>
 	<section>
+		<p>Conventional vs AJAX model of Web Application</p>
 		<a href="images/Ajax_vs_Conventinal_Model.png"><img src="images/Ajax_vs_Conventinal_Model.png"></a>
 	</section>
 	<section><h3>So, what is AJAX and what's behind it?</h3>
 		<dl class="fa">
 			<dt>AJAX is just the name for combination of technologies:</dt>
-			<dd>the use of the built-in <span class="note">XMLHttpRequest</span> object to request data from a web server</dd>
-			<dd>the use of JavaScript and HTML DOM (to display or use the data)</dd>
+			<dd>the use of the built-in <span class="note">XMLHttpRequest</span> object (aka XHR Object) to request data from a web server</dd>
+			<dd>the use of JavaScript and HTML DOM (to display the data)</dd>
 		</dl>
+		<a href="./images/AJAXWebApp.png"><img src="./images/AJAXWebApp.png" alt="AJAXWebApp.png"></a>
 	</section>
 </section>
 <section data-min="5"><h1>the XMLHttpRequest object</h1></section>
@@ -478,33 +491,26 @@
 		</dl>
 	</section> -->
 </section>
-<section data-min="5"><h1>Resources</h1></section>
-<section><h2>Resources</h2>
-	<dl class="fa">
-		<dt>List of public APIs</dt>
-		<dd><a href="https://github.com/toddmotto/public-apis">Public APIs list on GitHub</a></dd>
-	</dl>
-</section>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!-- The JSON Format								 					-->
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <section><h1>The JSON Format</h1></section>
 <section><h2>Overview</h2>
-	<section>
+	<section><h3>What is JSON?</h3>
 		<dl class="fa">
 			<dt>JSON = <b>J</b>ava<b>S</b>cript <b>O</b>bject <b>N</b>otation</dt>
-			<dt>A <span class="note">data-interchange format</span></dt>
+			<dt>A <span class="note">data-interchange format</span> between software systems.</dt>
 			<dt>Language agnostic</dt>
 			<dt>Proposed by <a href="https://en.wikipedia.org/wiki/Douglas_Crockford">Douglas Crockford</a> in early 2000s</dt>
 		</dl>
 	</section>
-	<section><h3>Why JSON</h3>
+	<section><h3>Why JSON?</h3>
 		<dl class="fa">
 			<dt>Easy for humans (and the machines) to read and write</dt>
-			<dt>Minimalistic syntax</dt>
-			<dt>A strict subset of JavaScript (could be passed directly to <code>eval()</code>)</dt>
-			<dt><a href="https://en.wikipedia.org/wiki/JSON#JSON_Schema">JSON Schema</a> defined</dt>
+			<dt>Minimalistic syntax (compared to other formats, like XML).</dt>
+			<dt>A strict subset of JavaScript syntax.</dt>
+			<dt>Well defined <a href="https://en.wikipedia.org/wiki/JSON#JSON_Schema">JSON Schema</a></dt>
 		</dl>
 	</section>
 	<section><h3>JSON vs XML</h3>
@@ -522,28 +528,61 @@
 		</code></pre>
 		<p><a href="http://json.org/example.html">JSON Example</a></p>
 	</section>
-	<section><h3>JSON's basic data types</h3>
+	<section><h3>JSON data types</h3>
 		<dl class="fa">
 			<dt class="note">Number</dt>
 			<dd>a signed decimal number that may contain a fractional part</dd>
 			<dt class="note">String</dt>
-			<dd>a sequence of zero or more Unicode characters, delimited by double quotation mark</dd>
+			<dd>a sequence of zero or more Unicode characters, delimited by <strong>double quotation mark</strong></dd>
 			<dt class="note">Boolean</dt>
 			<dd>either of the values true or false</dd>
 			<dt class="note">Array</dt>
 			<dd>an ordered list of zero or more values (may be of any type). Comma-separated elements in square brackets</dd>
 			<dt class="note">Object</dt>
-			<dd>an unordered collection of <code>name:value</code> pairs, delimited by curly braces, where the names (also called keys) are strings. Pairs are separated by comma.</dd>
+			<dd>an unordered collection of <code>key:value</code> pairs, separated by comma, delimited by curly braces. The keys must be strings.</dd>
 		</dl>
 	</section>
+	<section><h3>Example</h3>
+		<pre><code rel="JSON" class="json">
+			{
+				"userName": "Ada",
+				"userAge": 24,
+				"skills": [
+					"HTML", "CSS", "JavaScript"
+				],
+				"tasks": [
+					{
+						"id": 1,
+						"title":"Learn Sass",
+						"completed": true
+					},
+					{
+						"id": 1,
+						"title":"Learn React",
+						"completed": false
+					}
+				]
+			}
+		</code></pre>
+		<p>You can check your JSON online: <a href="https://jsonformatter.curiousconcept.com">jsonformatter.curiousconcept.com</a> or use a VSCode extension.</p>
+	</section>
 	<section><h3>Parse JSON (JSON to JS object)</h3>
+		<dl class="fa">
+			<dt>JSON data just <span class="note">describes</span> data. They are strings.</dt>
+			<dt>In order to use the data conveyed in a JSON string in our JS program, we must parse it's content to the corresponding JS data structure.</dt>
+			<dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">JSON.parse()</a></dt>
+		</dl>
 		<pre><code rel="JS" class="js">
-			var obj = JSON.parse(response);
+			var data = JSON.parse(jsonDataStr);
 		</code></pre>
 	</section>
 	<section><h3>Stingify JSON (JS obj to JSON)</h3>
+		<dl class="fa">
+			<dt>We can easily convey our JS data to other application, by converting it to a JSON string.</dt>
+			<dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify()</a></dt>
+		</dl>
 		<pre><code rel="JS" class="js">
-			var json = JSON.stringify(obj);
+			var jsonDataStr = JSON.stringify(obj);
 		</code></pre>
 	</section>
 	<section><h3>Public APIs returning JSON</h3>
@@ -552,93 +591,34 @@
 			<dd><a href="https://github.com/toddmotto/public-apis">Public APIs list on GitHub</a></dd>
 			<dt><a href="http://www.icndb.com/api/">The Internet Chuck Norris Database API</a></dt>
 			<dt><a href="https://opentdb.com/api_config.php">Open Trivia Database API</a></dt>
+			<dt><a href="https://jsonplaceholder.typicode.com/">{JSON} Placeholder</a> - Free fake API for testing and prototyping.</dt>
 		</dl>
 	</section>
 </section>
-
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-<!-- Preamble: Data exchange formats: XML, JSON 					-->
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-<section data-min="5"><h1>Data exchange formats: XML, JSON</h1></section>
-<section><h2>Data exchange formats: XML, JSON</h2>
-	<section>
+<section data-min="5"><h1>Task: todoApp with JSON Placeholder Service</h1></section>
+<section><h2>Task: todoApp with JSON Placeholder Service</h2>
+	<section><h3>The API endpoints</h3>
 		<dl class="fa">
-			<dt>JSON = <b>J</b>ava<b>S</b>cript <b>O</b>bject <b>N</b>otation</dt>
-			<dt>A <span class="note">data-interchange format</span></dt>
-			<dt>Language agnostic</dt>
-			<dt>Proposed by <a href="https://en.wikipedia.org/wiki/Douglas_Crockford">Douglas Crockford</a> in early 2000s</dt>
+			<dt>API Root: <code>https://jsonplaceholder.typicode.com</code></dt>
 		</dl>
-	</section>
-	<section><h3>Why JSON</h3>
-		<dl class="fa">
-			<dt>Easy for humans (and the machines) to read and write</dt>
-			<dt>Minimalistic syntax</dt>
-			<dt>A strict subset of JavaScript (could be passed directly to <code>eval()</code>)</dt>
-			<dt><a href="https://en.wikipedia.org/wiki/JSON#JSON_Schema">JSON Schema</a> defined</dt>
-		</dl>
-	</section>
-	<section><h3>JSON vs XML</h3>
-	<pre><code rel="JSON" class="js">
-		{
-			'fruits': ['apple', 'orange', 'banana'],
-		}
-	</code></pre>
-	<pre><code rel="XML" class="js">
-		<fruits>
-			<fruit>apple</fruit>
-			<fruit>orange</fruit>
-			<fruit>banane</fruit>
-		</fruits>
-	</code></pre>
-	<p><a href="http://json.org/example.html">JSON Example</a></p>
+		<table>
+			<tr><td>GET</td><td>/todos</td><td>Get all todos</td></tr>
+			<tr><td>GET</td><td>/todos/1</td><td>Get todo with id=1</td></tr>
+			<tr><td>POST</td><td>/todos</td><td>Create new Todo</td></tr>
+			<tr><td>PUT</td><td>/todos/1</td><td>Update Todo with id=1)</td></tr>
+			<tr><td>DELETE</td><td>/todos/1</td><td>Delete Todo with id=1)</td></tr>
+		</table>
 	</section>
 </section>
-<section data-min="5"><h1>Syntax</h1></section>
-<section style="font-size: 0.7em"><h2>Syntax</h2>
-	<section><h3>JSON's basic data types</h3>
-	<dl class="fa">
-		<dt class="note">Number</dt>
-		<dd>a signed decimal number that may contain a fractional part</dd>
-		<dt class="note">String</dt>
-		<dd>a sequence of zero or more Unicode characters, delimited by double quotation mark</dd>
-		<dt class="note">Boolean</dt>
-		<dd>either of the values true or false</dd>
-		<dt class="note">Array</dt>
-		<dd>an ordered list of zero or more values (may be of any type). Comma-separated elements in square brackets</dd>
-		<dt class="note">Object</dt>
-		<dd>an unordered collection of <code>name:value</code> pairs, delimited by curly braces, where the names (also called keys) are strings. Pairs are separated by comma.</dd>
-	</dl>
-	</section>
-</section>
-<section data-min="5"><h1>JSON WebServices</h1></section>
-<section><h2>Work with JSON in JS</h2>
-	<section><h3>JSON to JS object</h3>
-		<dl class="fa">
-			<dt>Parse data form JSON string</dt>
-		</dl>
-		<pre><code rel="JS" class="js">
-			var obj = JSON.parse(response);
-		</code></pre>
-	</section>
-	<section><h3>JS obj to JSON</h3>
-		<dl class="fa">
-			<dt>Convert JS data structure into JSON string (i.e. "stringify data")</dt>
-		</dl>
-		<pre><code rel="JS" class="js">
-			var json = JSON.stringify(obj);
-		</code></pre>
-	</section>
-</section>
-
 
 <section data-min="20"><h1>Setup fake REST API json-server and DB</h1></section>
-<section><h2>Setup fake REST API json-server and DB</h2>
+<section><h2 class="advanced">Setup fake REST API json-server and DB</h2>
 	<section><h3>Overview</h3>
 		<dl class="fa">
 			<dt>We can use a fake REST API <a href="https://www.npmjs.com/package/json-server">json-server</a>, to mock the back-end endpoints.</dt>
 			<dt>It is freely  available on NPM and ready to use.</dt>
 			<dt>Please note, that this server is useful only for learning purposes and you must not use it for any production code.</dt>
+			<dt>Before starting the project, make sure you have basic understanding of how to use npm ( <a href="http://wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/advanced/nodejs_intro/nodejs_intro.html#/">Nodejs and NPM intro</a> )</dt>
 		</dl>
 	</section>
 	<section><h3>Installation</h3>
