@@ -5,6 +5,69 @@
  @import url("https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css");
  /*@import url("https://cdn.linearicons.com/free/1.0.0/icon-font.min.css");*/
  @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+
+
+/* -------------------------------------------------------------------------- */
+/* SECTION TYPES                                                             */
+/* -------------------------------------------------------------------------- */
+/*marked for advanced*/
+.reveal section .advanced{
+  font-size: .7em;
+}
+.reveal section .advanced:before{
+  /*fa style*/
+  content: "\f19d";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*my style*/
+  margin-right: .3em;
+  /*color: rgba(250, 23,23, 0.3);*/
+  opacity: .8;
+  font-size: 1em;
+}
+
+/*marked for laugh*/
+.reveal section .smile{
+  font-size: .7em;
+}
+.reveal section .smile:before{
+  /*fa style*/
+  content: "\f118";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*my style*/
+  margin-right: .3em;
+  /*color: rgba(250, 23,23, 0.3);*/
+  opacity: .8;
+  font-size: 1em;
+}
+
+/*marked as important*/
+.reveal section .important{
+  font-size: .9em;
+}
+.reveal section .important:before{
+  /*triangle*/
+  content: "\f071";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*my style*/
+  margin-right: .3em;
+  /*color: rgba(250, 23,23, 0.3);*/
+  opacity: .8;
+  font-size: .8em;
+}
+
 /*********************************************
  * HEADERS
  *********************************************/
@@ -118,6 +181,10 @@
    /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.reveal section>ul.fa>li.advanced:before, .reveal section dl.fa>dt.advanced:before{
+  content: "\f19d";
+  margin: 0 .5em 0 -1.7em;
 }
 
 .reveal section dl.fa>dd{
@@ -415,63 +482,6 @@ section.copyright>.license{
 }
 .text_center{
   text-align: center !important;
-}
-
-/*marked for advanced*/
-.reveal section .advanced{
-  font-size: .7em;
-}
-.reveal section .advanced:before{
-  /*fa style*/
-  content: "\f19d";
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /*my style*/
-  margin-right: .3em;
-  /*color: rgba(250, 23,23, 0.3);*/
-  opacity: .8;
-  font-size: 1em;
-}
-
-/*marked for laugh*/
-.reveal section .smile{
-  font-size: .7em;
-}
-.reveal section .smile:before{
-  /*fa style*/
-  content: "\f118";
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /*my style*/
-  margin-right: .3em;
-  /*color: rgba(250, 23,23, 0.3);*/
-  opacity: .8;
-  font-size: 1em;
-}
-
-/*marked as important*/
-.reveal section .important{
-  font-size: .9em;
-}
-.reveal section .important:before{
-  /*triangle*/
-  content: "\f071";
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /*my style*/
-  margin-right: .3em;
-  /*color: rgba(250, 23,23, 0.3);*/
-  opacity: .8;
-  font-size: .8em;
 }
 
 /*custom tooltip:*/

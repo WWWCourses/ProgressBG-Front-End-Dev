@@ -81,6 +81,7 @@
 <section><h2>Client-Server Communications on HTTP</h2>
 		<a href="images/big/HTTP_ClientServerSystem.png"><img src="images/big/HTTP_ClientServerSystem.png"></a>
 </section>
+
 <section data-min="5"><h1>HTTP protocol overview</h1></section>
 <section><h2 class="NB">HTTP protocol overview</h2>
 	<section><h3>in brief</h3>
@@ -100,6 +101,7 @@
 		</dl>
 	</section>
 </section>
+
 <section data-min="5"><h1>Request Message Format</h1></section>
 <section><h2 class="advanced">Request Message Format</h2>
 	<section>
@@ -137,6 +139,7 @@
 		<p>Optional</p>
 	</section>
 </section>
+
 <section data-min="5"><h1>Response Message Format</h1></section>
 <section><h2 class="advanced">Response Message Format</h2>
 	<section>
@@ -187,13 +190,13 @@
 		<p>The response message body contains the resource data requested</p>
 	</section>
 </section>
+
 <section data-min="5"><h1>HTTP Request Methods</h1></section>
 <section><h2>HTTP Request Methods</h2>
-	<p>HTTP protocol defines a set of request methods, which a client can use to request a server resource.</p>
-</section>
-<section data-min="5"><h1>The "GET" Request Method</h1></section>
-<section><h2 class="NB">The "GET" Request Method</h2>
 	<section>
+		<p>HTTP protocol defines a set of request methods, which a client can use to request a server resource.</p>
+	</section>
+	<section><h3>The "GET" Request Method</h3>
 		<dl class="fa">
 			<dt>GET requests should be used only to retrieve data, and not to change the server state</dt>
 			<dt>GET requests should NEVER be used with sensitive data</dt>
@@ -207,10 +210,7 @@
 			https://duckduckgo.com/?q=http+get+request&t=hz&ia=web
 		</code></pre>
 	</section>
-</section>
-<section data-min="5"><h1>The "POST" Request Method</h1></section>
-<section><h2 class="NB">The "POST" Request Method</h2>
-	<section>
+	<section><h3>The "POST" Request Method</h3>
 		<dl class="fa">
 			<dt>POST request method is used to sent data to the server, like customer information, file upload etc.</dt>
 			<dt>POST request <span class="note">should change the server state</span></dt>
@@ -222,10 +222,7 @@
 			<dt>POST requests have no restrictions on data length</dt>
 		</dl>
 	</section>
-</section>
-<section data-min="5"><h1>Other HTTP Request Methods</h1></section>
-<section><h2 class="advanced">Other HTTP Request Methods</h2>
-	<section>
+	<section><h3>Other HTTP Request Methods</h3>
 		<dl class="fa">
 			<dt>PUT</dt>
 			<dd>Replaces all current representations of the target resource with the uploaded content.</dd>
@@ -264,33 +261,13 @@
 	</section>
 </section>
 
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-<!-- Preamble: Asynchronous vs Synchronous Communications			-->
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-<section data-min="5"><h1>Preamble: Asynchronous vs Synchronous Communications</h1></section>
-<section><h2>Preamble: Asynchronous vs Synchronous Communications</h2>
-  <section><h3>Synchronous vs. Asynchronous Processes</h3>
-  	<a href="images/asynchronous_vs_synchronous_process_comunication.png"><img src="images/asynchronous_vs_synchronous_process_comunication.png"></a>
-  </section>
-  <section><h3>Synchronous vs. Asynchronous Requests</h3>
-  	<a href="images/asynchronous_vs_synchronous_request_responce.jpg"><img src="images/asynchronous_vs_synchronous_request_responce.jpg"></a>
-  </section>
-  <!-- <section><h3>Resources</h3>
-  	<dl class="fa">
-  		<dt><a href="https://dev.to/gafi/7-reasons-to-always-use-async-await-over-plain-promises-tutorial-4ej9?ref=hackernoon.com">7 Reasons Why JavaScript Async/Await Is Better Than Plain Promises (Tutorial)</a> @<a href="https://hackernoon.com">hackernoon.com</a></dt>
-  	</dl>
-  </section> -->
-</section>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!-- What is AJAX?								 					-->
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <section data-min="5"><h1>What is AJAX?</h1></section>
 <section><h2>What is AJAX?</h2>
-	<section>
-		<p class="note">AJAX</p>
-		<p><hr></p>
-		<div style="text-align: center">
+	<section><h3>Overview</h3>
+		<div style="text-align: center; font-size: 1.3em;">
 			<p><span class="note">A</span>synchronous</p>
 			<p><span class="note">J</span>avaScript</p>
 			<p><span class="note">A</span>nd</p>
@@ -298,11 +275,16 @@
 		</div>
 		<p><em>In reality, these days, the use of JSON prevails over XML, but for backward compatibility we do not say AJAJ</em></p>
 	</section>
-	<section>
+	<section><h3>Overview</h3>
 		<p>With AJAX, Web applications can send and retrieve data from a Web server <span class="note">asynchronously</span> (in the background)  without refreshing the existent page </p>
 	</section>
-	<section>
-		<p>With AJAX we can:</p>
+	<section><h3>Synchronous vs. Asynchronous Processes</h3>
+		<a href="images/asynchronous_vs_synchronous_process_comunication.png"><img src="images/asynchronous_vs_synchronous_process_comunication.png"></a>
+	</section>
+	<section><h3>Synchronous vs. Asynchronous Requests</h3>
+		<a href="images/asynchronous_vs_synchronous_request_responce.jpg"><img src="images/asynchronous_vs_synchronous_request_responce.jpg"></a>
+	</section>
+	<section><h3>What can we do with AJAX</h3>
 		<dl class="fa">
 			<dt>Update a web page without reloading the page</dt>
 			<dt>Request data from a server - after the page has loaded</dt>
@@ -310,11 +292,10 @@
 			<dt>Send data to a server - in the background</dt>
 		</dl>
 	</section>
-	<section>
-		<p>Conventional vs AJAX model of Web Application</p>
+	<section><h3>Conventional vs AJAX model of Web Application</h3>
 		<a href="images/Ajax_vs_Conventinal_Model.png"><img src="images/Ajax_vs_Conventinal_Model.png"></a>
 	</section>
-	<section><h3>So, what is AJAX and what's behind it?</h3>
+	<section><h3>What's behind AJAX?</h3>
 		<dl class="fa">
 			<dt>AJAX is just the name for combination of technologies:</dt>
 			<dd>the use of the built-in <span class="note">XMLHttpRequest</span> object (aka XHR Object) to request data from a web server</dd>
@@ -323,12 +304,14 @@
 		<a href="./images/AJAXWebApp.png"><img src="./images/AJAXWebApp.png" alt="AJAXWebApp.png"></a>
 	</section>
 </section>
+
 <section data-min="5"><h1>the XMLHttpRequest object</h1></section>
 <section><h2>the XMLHttpRequest object</h2>
 	<section>
 		<dl class="fa">
 			<dt class="note">Note: sending Ajax Requests using XMLHttpRequest object directly is not recommended, as it is hard to imeplement and read. The preferred way is using the Fetch API, discussed in next slides</dt>
-			<dt>Reference: <a href="https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest">XMLHttpRequest at MDN</a></dt>
+			<dt>Reference: <a href="https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest">XMLHttpRequest @MDN</a></dt>
+			<dt class="advanced">Reference: <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">Asynchronous JavaScript: Choosing the right approach @MDN</a></dt>
 		</dl>
 	</section>
 	<section><h3>Simple example</h3>
@@ -375,6 +358,7 @@
 		</code></pre>
 	</section>
 </section>
+
 <section data-min="5"><h1>the Fetch API</h1></section>
 <section><h2>the Fetch API</h2>
 	<section>
@@ -400,6 +384,10 @@
 		</dl>
 	</section>
 	<section><h3 class="advanced">Fetch API with error checks</h3>
+		<dl class="fa">
+			<dt>Fetch promises only reject  with a TypeError (i.e. execute <code>catch</code> function) only when a network error occurs.</dt>
+			<dt>You'll need to throw an error yourself, if you want to use Promise#catch for 4xx and 5xx responses</dt>
+		</dl>
 		<pre><code rel="JS" class="js">
 			fetch(url)
 				.then(function (response) {
@@ -423,6 +411,7 @@
 	<a href="https://developer.mozilla.org/en-US/docs/Web/API/Response">Response interface at MDN</a>
 	</section>
 </section>
+
 <section data-min="5"><h1>Create HTTP request with jQuery</h1></section>
 <section><h2>Create HTTP request with jQuery</h2>
 	<section>
@@ -465,32 +454,7 @@
 		</code></pre>
 	</section>
 </section>
-<section data-min="5"><h1>Examples</h1></section>
-<section><h2>Examples</h2>
-	<section><h3>example: songs lyrics</h3>
-		<a href="examples/songLyricsAjaxLoad/songLyricsAjaxLoad.html">Load Song Lyrics By AJAX</a>
-	</section>
-	<section><h3>Task: songs lyrics</h3>
-		<dl class="fa">
-			<dt>Create a similar page, with your favorite artists and songs</dt>
-			<dt>For getting the lyrics data, use the three approaches for making AJAX requests:</dt>
-			<dd>by XMLHttpRequest object</dd>
-			<dd>by Fetch APIs</dd>
-			<dd>by jQuery get() or load() methods</dd>
-		</dl>
-	</section>
-	<!-- <section><h3>example: simple Shopping Cart</h3>
-		<a href="examples/ShoppingCart/index.html">Shopping Cart</a>
-		<p>* created by Martin Harsovski *</p>
-	</section>
-	<section><h3>task: simple Shopping Cart</h3>
-		<dl class="fa">
-			<dt>Create the simple Shopping Cart page by yourself, with the similar functionality, but <span class="note">fix the bug</span> of products disappearing from list after being added to shopping cart. Instead, fade them a little by css.</dt>
-			<dt>The products are generated dynamically, using the information in <code><a href="https://raw.githubusercontent.com/ProgressBG-WWW-Courses/JavaScript-Advanced/gh-pages/downloads/products.json">https://raw.githubusercontent.com/ProgressBG-WWW-Courses/JavaScript-Advanced/gh-pages/downloads/products.json</a> file</code></dt>
-			<dt>You can use the Martin's html and css (<a href="https://github.com/ProgressBG-WWW-Courses/JavaScript-Advanced/raw/gh-pages/downloads/ShoppingCartMartinBase.zip">ShoppingCartMartinBase.zip</a>), or create your own style.</dt>
-		</dl>
-	</section> -->
-</section>
+
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!-- The JSON Format								 					-->
@@ -595,8 +559,62 @@
 		</dl>
 	</section>
 </section>
-<section data-min="5"><h1>Task: todoApp with JSON Placeholder Service</h1></section>
-<section><h2>Task: todoApp with JSON Placeholder Service</h2>
+
+<section data-min="20"><h1>Client-Side vs Server-Side libraries and frameworks</h1></section>
+<section><h2>Client-Side vs Server-Side Rendering libraries and frameworks</h2>
+	<section>
+		<dl class="fa" style="font-size: .9em">
+			<dt>Ember</dt>
+			<dd><a href="https://www.emberjs.com/">Ember</a> - Client-Side rendering</dd>
+			<dd><a href="https://ember-fastboot.com/">Ember-Fastboot</a> - Server-Side rendering</dd>
+			<dt>Vue</dt>
+			<dd><a href="https://vuejs.org/">vue.js</a> - Client-Side rendering</dd>
+			<dd><a href="https://nuxtjs.org/">nuxt.js</a> - Server-Side rendering for vue.js</dd>
+			<dt><a href="https://reactjs.org/">React</a> - it can render on the client-side and on the server-side</dt>
+			<dt>Angular</dt>
+			<dd><a href="https://angular.io/">Angular</a> - - Client-Side rendering</dd>
+			<dd><a href="https://angular.io/guide/universal">Angular Universal</a> - Server-Side rendering</dd>
+		</dl>
+	</section>
+</section>
+
+<section data-min="5"><h1>Resources</h1></section>
+<section><h2>Resources</h2>
+  <section><h3>Tools</h3>
+  	<dl class="fa">
+  		<dt><a href="https://www.mockaroo.com/">Mockaroo</a> - <span>A free test/random data generator and API mocking tool (JSON, CSV, SQL, and Excel)</span></dt>
+  	</dl>
+  </section>
+</section>
+
+<section data-min="5" id="HW"><h1>Exercises && Tasks</h1></section>
+<section><h2>Exercises && Tasks</h2>
+	<section><h3>songsLyrics</h3>
+		<dl class="fa">
+			<dt>Create a web page similar to the one given bellow, with your favorite artists and songs</dt>
+			<a href="./HW/songLyrics/songLyricsTask.gif"><img src="./HW/songLyrics/songLyricsTask.gif" alt="songLyricsTask.gif"></a>
+			<dt>For getting the lyrics data, use the three approaches for making AJAX requests:</dt>
+			<dd>by XMLHttpRequest object</dd>
+			<dd>by Fetch APIs</dd>
+			<dd>by jQuery get() or load() methods</dd>
+			<dt>You can use the files in <a href="./HW/songLyrics/songLyrics.zip">songLyrics.zip</a> to bootstrap your program.</dt>
+		</dl>
+	</section>
+	<section><h3>TodoApp with jsonplaceholder API service</h3>
+		<dl class="fa">
+			<dt>Refactor the TodoApp, so that data to be fetched from <a href="https://jsonplaceholder.typicode.com/todos">jsonplaceholder.typicode.com/todos</a> endpoint</dt>
+			<dt>Use the FetchAPI to fetch the data</dt>
+		</dl>
+	</section>
+	<!-- <section><h3>GitHub: top 10 last updated</h3>
+		<p>Generate an HTML list with the top 10 repositories from a given user, sorted by <b>last-updated</b> order</p>
+		<p>Note: use the <a href="https://developer.github.com/v3/repos/#list-user-repositories">GitHub REST API v3 (List user repositories)</a></p>
+	</section> -->
+</section>
+
+
+<section data-min="5"><h1>Task: todoApp with local JSON Placeholder Service</h1></section>
+<section><h2>Task: todoApp with local  JSON Placeholder Service</h2>
 	<section><h3>The API endpoints</h3>
 		<dl class="fa">
 			<dt>API Root: <code>https://jsonplaceholder.typicode.com</code></dt>
@@ -684,44 +702,6 @@
 	</section>
 </section>
 
-<section data-min="20"><h1>Client-Side vs Server-Side libraries and frameworks</h1></section>
-<section><h2>Client-Side vs Server-Side Rendering libraries and frameworks</h2>
-	<section>
-		<dl class="fa" style="font-size: .9em">
-			<dt>Ember</dt>
-			<dd><a href="https://www.emberjs.com/">Ember</a> - Client-Side rendering</dd>
-			<dd><a href="https://ember-fastboot.com/">Ember-Fastboot</a> - Server-Side rendering</dd>
-			<dt>Vue</dt>
-			<dd><a href="https://vuejs.org/">vue.js</a> - Client-Side rendering</dd>
-			<dd><a href="https://nuxtjs.org/">nuxt.js</a> - Server-Side rendering for vue.js</dd>
-			<dt><a href="https://reactjs.org/">React</a> - it can render on the client-side and on the server-side</dt>
-			<dt>Angular</dt>
-			<dd><a href="https://angular.io/">Angular</a> - - Client-Side rendering</dd>
-			<dd><a href="https://angular.io/guide/universal">Angular Universal</a> - Server-Side rendering</dd>
-		</dl>
-	</section>
-</section>
-
-<section data-min="5"><h1>Resources</h1></section>
-<section><h2>Resources</h2>
-  <section><h3>Tools</h3>
-  	<dl class="fa">
-  		<dt><a href="https://www.mockaroo.com/">Mockaroo</a> - <span>A free test/random data generator and API mocking tool (JSON, CSV, SQL, and Excel)</span></dt>
-  	</dl>
-  </section>
-</section><section data-min="5"><h1>Exercises && Tasks</h1></section>
-<section><h2>Exercises && Tasks</h2>
-	<section><h3>TodoApp with jsonplaceholder</h3>
-		<dl class="fa">
-			<dt>Refactor the TodoApp, so that data to be fetched from <a href="https://jsonplaceholder.typicode.com/todos">jsonplaceholder.typicode.com/todos</a> endpoint</dt>
-			<dt>Use the FetchAPI to fetch the data</dt>
-		</dl>
-	</section>
-	<!-- <section><h3>GitHub: top 10 last updated</h3>
-		<p>Generate an HTML list with the top 10 repositories from a given user, sorted by <b>last-updated</b> order</p>
-		<p>Note: use the <a href="https://developer.github.com/v3/repos/#list-user-repositories">GitHub REST API v3 (List user repositories)</a></p>
-	</section> -->
-</section>
 
 
 
