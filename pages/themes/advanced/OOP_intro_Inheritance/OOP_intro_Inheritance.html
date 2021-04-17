@@ -553,6 +553,42 @@
 	</section>
 </section>
 
+<section data-min="5" id="Solutions"><h1>Solutions</h1></section>
+<section><h2>Solutions</h2>
+	<section id="createCatConstructor-Solution"><h3>createCatConstructor</h3>
+		<pre><code rel="JS" class="js">
+			// Animal constructor
+			const Animal = function(name, food){
+						this.name = name;
+						this.food = food;
+			}
+			// Animal methods
+			Animal.prototype.eat = function(){
+						console.log(`${this.name} is eating ${this.food}`);
+			}
+
+			// Create a Cat Constructor, which will inherit all methods from Animal:
+			// <<<<< your code start here
+			const Cat = function (name, food) {
+				// reuse parent constructor
+				Animal.call(this,name,food);
+			}
+			// inherit all parent's methods
+			Cat.prototype = Object.create(Animal.prototype);
+			// >>>>> your code ends here
+
+			// create tom object:
+			const tom = new Cat('Tom', 'cheese');
+
+			// use tom:
+			tom.eat();
+
+			// expected output:
+			// Tom is eating cheese
+		</code></pre>
+	</section>
+</section>
+
 
 <section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
 	 <p>These slides are based on</p>
