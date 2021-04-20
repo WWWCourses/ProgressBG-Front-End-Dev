@@ -1,0 +1,27 @@
+/* ----------------------------------- */
+/* cards styling with Flex             */
+/* ----------------------------------- */
+
+.card_container{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	justify-content: space-between;
+
+	/* set container size - large enough for 4 blocks (with side 5em) in a row and space (0.5em) between them */
+	width: calc(4*5em + 3*0.5em);
+	height: calc(4*5em + 3*0.5em);
+	padding: .5em;
+	border: 10px solid #666;
+}
+.card{
+	/* align text in a card*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	/* we MUST specify a flex item size */
+	width: 5em;
+	height: 5em;
+	background-color: #F99;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>randomOrderFlexItems </title>
+
+	<!-- ----------------------------------------- -->
+	<!-- styles for cards arrangment in a 4*4 Grid -->
+	<!-- ----------------------------------------- -->
+	<!-- <link rel="stylesheet" href="./arrangeCardsWithFlexbox.css"> -->
+	<link rel="stylesheet" href="./arrangeCardsWithGrid.css">
+
+	<!-- ----------------------------------------- -->
+	<!-- some basic styling 					   -->
+	<!-- ----------------------------------------- -->
+	<style>
+
+		body{
+			margin: 0 1em 0 2em ;
+		}
+		header{
+			/* height: 6em; */
+		}
+		main{
+			width: calc(4*6em);
+		}
+		.card_container{
+			margin: 0 auto;
+		}
+		.btnShuffle{
+			display: block;
+			margin: 1em auto;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Shuffle Cards Demo</h1>
+		<p>Note that this demo just shows how to shuffle the <b>order property</b> of a flex/grid item, but item position in DOM is not changed.</p>
+		<p>Make sure you've opened the DevTools Inspector and watch Elements tab, while clicking on  "Shuffle Cards" button.</p>
+	</header>
+	<main>
+		<div class="card_container">
+			<!-- note that it's more practical to generate next DIVs with JS, -->
+			<!-- instead of copy-pasting here -->
+			<div class="card">1</div>
+			<div class="card">2</div>
+			<div class="card">3</div>
+			<div class="card">4</div>
+			<div class="card">5</div>
+			<div class="card">6</div>
+			<div class="card">7</div>
+			<div class="card">8</div>
+			<div class="card">9</div>
+			<div class="card">10</div>
+			<div class="card">11</div>
+			<div class="card">12</div>
+			<div class="card">13</div>
+			<div class="card">14</div>
+			<div class="card">15</div>
+			<div class="card">16</div>
+		</div>
+		<button type="button" class="btnShuffle">Shuffle Cards</button>
+	</main>
+
+	<script src="randomOrderFlexItems.js"></script>
+</body>
+</html>

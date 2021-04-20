@@ -1,0 +1,22 @@
+.card_container{
+	display: grid;
+	grid-template-columns: repeat(4, 4fr);
+	grid-template-rows: repeat(4, 4fr);
+	/* gap between grid items */
+	grid-gap: .5em;
+
+	/* set container size - large enough for 4 blocks (with side 5em) in a row and space (0.5em) between them */
+	width: calc(4*5em + 3*0.5em);
+	height: calc(4*5em + 3*0.5em);
+	padding: .5em;
+	border: 10px solid #666;
+}
+.card{
+	/* align text in a card*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	/* we don't have to specify a grid item size */
+	background-color: #F99;
+}
