@@ -1,0 +1,37 @@
+body{
+	margin:0
+}
+header{
+	height: 10vh;
+	background-color: #F99;
+	color: #333;
+}
+nav{
+	height: 10vh;
+	background-color: #9F9;
+	color: #333;
+}
+main{
+	min-height: 70vh;
+	background:#999 url("./images/relax-108275_1920.jpg");
+	background-attachment: fixed;
+	/* background-size: cover;
+	background-position: center; */
+	color: #FFA9;
+
+	/* fix margin collapse: */
+	border: 1px solid #0000;
+	box-sizing: border-box;
+}
+main p{
+	/* to test the layout, when content there is less or no-content */
+	font-size: 0;
+
+	/* to test the layout, when content is long enough and we have vertical scroll:*/
+	font-size: 3em;
+}
+footer{
+	height: 10vh;
+	background-color: #99F;
+	color: #333;
+}
