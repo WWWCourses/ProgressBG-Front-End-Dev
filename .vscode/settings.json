@@ -18,5 +18,6 @@
         "cpp": "comments",
         "python": "strings",
         "javascript": "body comments strings"
-    }
+    },
+    "liveServer.settings.port": 5502
 }
