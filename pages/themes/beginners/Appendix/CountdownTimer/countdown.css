@@ -1,3 +1,61 @@
-body { font-family: sans-serif;color:#333;}
-#container { width:400px;margin:auto;}
-h1 { font-size:5em;}
+* {
+	box-sizing: border-box;
+}
+body{
+	background-color: #333;
+	color: #CCC;
+}
+.countdown-wrapper{
+	/* background-color: #F99; */
+}
+
+.countdown-finish{
+	display: none;
+	position: fixed;
+	top:0; bottom: 0; left: 0; right: 0;
+	/* z-index: 1; */
+	font-size: 5em;
+
+	/* display: flex; */
+	align-items: center;
+	justify-content: center;
+
+	color: #CCC;
+	background-color: #000;
+}
+
+.countdown-input{
+	/* display: none; */
+	font-size: 1.5em;
+	height: 4em;
+	padding: 1em;
+	text-align: center;
+	background-color: #F99;
+	color: #000;
+}
+.countdown-input input, .countdown-input select, .countdown-input button{
+	font-size: inherit;
+}
+.countdown-input input{
+	width: 5em;
+}
+
+.countdown-output{
+	height: 100vh;
+	font-size: 3em;
+	text-align: center;
+}
+.countdown-output h1{
+	height: 20%;
+	padding-top:2em;
+	/* background-color: #99F; */
+
+}
+
+.remaining-time-output{
+	height: 80%;
+	font-size: 2em;
+	padding-top: 1em;
+	color: aqua;
+	/* background-color: #F99 */
+}

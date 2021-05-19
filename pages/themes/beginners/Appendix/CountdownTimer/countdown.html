@@ -4,16 +4,31 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>countdown </title>
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel="stylesheet" href="./countdown.css">
 </head>
 <body>
-	<div id="container">
-		<div id="inputArea">
+	<div class="countdown-wrapper">
+		<div class="countdown-input">
+			<label>
+				<select class="countdown-type" autofocus>
+					<option value="start">Започваме</option>
+					<option value="continue">Продължаваме</option>
+				</select>
+				</label>
+			<label>
+				след: <input type="number" class="initial-time" value="10" >
+			</label>
+			минути
+			<button class="countdown-start-btn">Start</button>
 		</div>
-
-		<p>Започваме след: </p>
-		<h1 id="time">0:00</h1>
+		<div class="countdown-output">
+			<h1>Започваме след</h1>
+			<div class="remaining-time-output"></div>
+		</div>
+	</div>
+	<div class="countdown-finish">
+		Старт!!!
 	</div>
 	<script src="./countdown.js"></script>
 </body>

@@ -1,19 +1,7 @@
-var secondsRemaining;
-var intervalHandle;
-
-function resetPage(){
-
-	document.getElementById("inputArea").style.display = "block";
-
-}
-
 function tick(){
-	// grab the h1
-	var timeDisplay = document.getElementById("time");
-
 	// turn the seconds into mm:ss
-	var min = Math.floor(secondsRemaining / 60);
-	var sec = secondsRemaining - (min * 60);
+	var min = Math.floor(counter.remainingSeconds / 60);
+	var sec = counter.remainingSeconds - (min * 60);
 
 	//add a leading zero (as a string value) if seconds less than 10
 	if (sec < 10) {
@@ -24,65 +12,79 @@ function tick(){
 	var message = min.toString() + ":" + sec;
 
 	// now change the display
-	timeDisplay.innerHTML = message;
+	dom.remainingTimeOutput.innerHTML = message;
 
 	// stop is down to zero
-	if (secondsRemaining === 0){
-		alert("Done!");
-		clearInterval(intervalHandle);
-		resetPage();
+	if (counter.remainingSeconds === 0){
+		finishCountdown();
 	}
 
 	//subtract from seconds remaining
-	secondsRemaining--;
+	counter.remainingSeconds--;
 
 }
-
 function startCountdown(){
-
-	function resetPage(){
-		document.getElementById("inputArea").style.display = "block";
-	}
-
-	// get countents of the "minutes" text box
-	var minutes = document.getElementById("minutes").value;
-
-	// check if not a number
-	if (isNaN(minutes)){
-		alert("Please enter a number");
-		return; // stops function if true
-	}
-
-	// how many seconds
-	secondsRemaining = minutes * 60;
+	initCounter();
 
 	//every second, call the "tick" function
-	// have to make it into a variable so that you can stop the interval later!!!
-	intervalHandle = setInterval(tick, 1000);
+	counter.intervalID = setInterval(tick, 1000);
 
-	// hide the form
-	document.getElementById("inputArea").style.display = "none";
+	dom.countdownInput.style.display="none";
+	dom.countdownOutput.style.display="block";
 
+	// show countdown type message
+	const countdownTypeMessage = counter.type[dom.countdownType.value];
+	dom.countdownTypeMessage.innerHTML = countdownTypeMessage;
+	// dom.countdownType.value;
 
 }
+function finishCountdown() {
+	clearInterval(counter.intervalID);
+	// resetCountdown();
+	dom.countdownFinish.style.display = "flex";
+}
+function resetCountdown(){
+	dom.countdownInput.style.display="block";
+	dom.countdownOutput.style.display="none";
+}
+function initCounter() {
+	// set default value
+	counter = {...counterInitalState}
+
+	// get initial time and save it as seconds
+	counter.remainingSeconds = counter.initialSeconds = dom.initialTime.value * 60;
+}
+
+const dom = {
+	"countdownInput": document.querySelector('.countdown-input'),
+	"countdownType": document.querySelector('.countdown-type'),
+	"initialTime": document.querySelector('.initial-time'),
+	"countdownStartBtn": document.querySelector('.countdown-start-btn'),
+	"countdownOutput": document.querySelector('.countdown-output'),
+	"remainingSeconds": document.querySelector('.remaining-time'),
+	"countdownTypeMessage": document.querySelector('.countdown-output>h1'),
+	"remainingTimeOutput": document.querySelector('.remaining-time-output'),
+	"countdownFinish": document.querySelector('.countdown-finish'),
+}
+
+const counterInitalState = {
+	"type":{
+		"start": "Започваме след",
+		"continue": "Продължаваме след"
+	},
+	"initialSeconds": 0,
+	"remainingSeconds": 0,
+	"intervalID":undefined
+}
+
+let counter;
+
+dom.countdownStartBtn.addEventListener("click", function (e) {
+	startCountdown();
+})
 
 window.onload = function(){
-
-	// create input text box and give it an id of "min"
-	var inputMinutes = document.createElement("input");
-	inputMinutes.setAttribute("id", "minutes");
-	inputMinutes.setAttribute("type", "text");
-
-	//create a button
-	var startButton = document.createElement("input");
-	startButton.setAttribute("type","button");
-	startButton.setAttribute("value","Start Countdown");
-	startButton.onclick = function(){
-		startCountdown();
-	};
-
-	//add to the DOM, to the div called "inputArea"
-	document.getElementById("inputArea").appendChild(inputMinutes);
-	document.getElementById("inputArea").appendChild(startButton)
-
+	resetCountdown();
+	// dom.countdownInput.style.display="none";
+	// dom.countdownOutput.style.display="block";
 }
