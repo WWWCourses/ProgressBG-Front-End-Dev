@@ -125,22 +125,26 @@
 	<!-- <section><h3>Distributed VCS Concepts Overview</h3>
 		<a href="images/distributed_concepts_overview.png"><img src="images/distributed_concepts_overview.png"></a>
 	</section> -->
-	<section><h3 class="note">Initialize a Git repository</h3>
+	<section><h3>What is a git repository?</h3>
 		<dl class="fa">
-			<dt>A git repository can be any folder on your computer.</dt>
-			<dt>If we want git to track for us this project folder, first we need to tell git to initialize in that folder a git repository:</dt>
+			<dt>We can tell git to track the changes and keeps a history of them for any folder of our computer.</dt>
+			<dt>The tracked changes per folder with all the history will be saved by git in <code>.git</code> folder, which is called a <span class="note">git repository</span>.</dt>
+			<dt class="note">If you delete your git repository, i.e. the <code>.git</code> folder, then you'll delete your project’s history</dt>
+		</dl>
+	</section>
+	<section><h3>Initialize a Git repository</h3>
+		<dl class="fa">
+			<dt>If we want git to track the changes in a folder, first we need to tell git to initialize in that folder a git repository:</dt>
 		</dl>
 		<pre><code rel="Terminal" class="bash" data-noescape>
 				# make sure you are in your root project folder:
 				pwd
+				# the output should be the full path you are currently in
 
 				# initialize git repo for that folder:
 				git init
 		</code></pre>
-		<dl class="fa">
-			<dt>git will start to track your root project folder.</dt>
-			<dt>A hidden <code>.git</code> folder will be created. Do not touch it. If you delete it, your entire repo will be deleted!</dt>
-		</dl>
+
 	</section>
 	<section><h3>Setup your git identity</h3>
 		<dl class="fa">
@@ -157,7 +161,7 @@
 			git config --global user.name "User Name"
 		</code></pre>
 	</section>
-	<section><h3>All steps at a glance</h3>
+	<!-- <section><h3>All steps at a glance</h3>
 		<dl class="fa">
 			<dt>Remember, you need to initialize a git repo only once per project!</dt>
 		</dl>
@@ -168,7 +172,7 @@
 			# initialize the git repo for that folder:
 			git init
 		</code></pre>
-	</section>
+	</section> -->
 </section>
 
 <section data-min="10"><h1>Create a git commit</h1></section>
@@ -176,17 +180,18 @@
 	<section><h3>The Three States in git</h3>
 		<a href="images/git_areas.png"><img src="images/git_areas.png"></a>
 	</section>
-	<section><h3 class="note">Stage files/changes</h3>
+	<section><h3>Stage changes</h3>
 		<p>Also known as <span class="note">adding files content to the index</span></p>
 		<pre><code rel="Terminal" class="bash" data-noescape>
 				# to stage changes only in certain file/path:
 				git add <i>path</i>
 
-				# to stage all changes:
+				# to stage all changes (including deletion of files):
 				git add -A
 			</code></pre>
 		<dl class="fa">
 			<dt>The staging area contains all the changes that will be added to the local repository after the <code>commit</code></dt>
+			<br>
 			<dt class="advanced" style="font-size: .8em;">What is the difference between various <code>git add</code> options? <a href="https://stackoverflow.com/a/26039014">check this stackoverflow answer</a></dt>
 			<dt class="advanced" style="font-size: .8em;">You can remove (unstage) files from the index, with:
 				<pre><code rel="Terminal" class="bash" data-noescape>
@@ -195,7 +200,7 @@
 			</dt>
 		</dl>
 	</section>
-	<section><h3 class="note">Commit files to local repository</h3>
+	<section><h3>Commit changes to local repository</h3>
 		<pre><code rel="Terminal" class="bash" data-noescape>
 				# commit files - the default system editor for git will be opened to write your Commit Message
 				git commit
@@ -277,7 +282,10 @@
 <section data-min="5" class="advanced"><h1>Working with branches.</h1></section>
 <section><h2>Working with branches.</h2>
 	<section>
-		<a href="https://www.atlassian.com/git/tutorials/using-branches">Git Branch</a>
+		<dl class="fa">
+			<dt>Reference: <a href="https://www.atlassian.com/git/tutorials/using-branches">Git Branch</a></dt>
+			<dt>Live demo.</dt>
+		</dl>
 	</section>
 </section>
 
@@ -300,6 +308,15 @@
 
 <section data-min="5"><h1>Using GitHub as a remote service</h1></section>
 <section><h2>Using GitHub as a remote service</h2>
+	<section><h3>What is GitHub?</h3>
+		<dl class="fa">
+			<dt>GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</dt>
+			<dt>GitHub is not just a remote for storing git repositories, it also provides features like:</dt>
+			<dd>Fork a repo - you can create a new project based off of another project that already exists.</dd>
+			<dd>Pull Requests - if you have worked on a forked repo, you can contribute your changes to that project by opening a Pull Request. The authors of the original repository can see your work, and then choose whether or not to accept it into the official project.</dd>
+			<dt>GitHub alterantives: <a href="https://about.gitlab.com/">GitLab</a>, <a href="https://bitbucket.org/">Bitbucket</a></dt>
+		</dl>
+	</section>
 	<section><h3>Connect your local git repository to your GitHub repository</h3>
 		<dl class="fa">
 			<dt>Create a local git repository (if you haven't done so)</dt>
@@ -312,13 +329,13 @@
 		<dl class="fa">
 			<dt>Each time, you want to "store" your local repo changes to your remote GitHub repo, you'll need to <code>push</code> that changes</dt>
 			<pre><code rel="Terminal" class="bash">
-				# push your default local branch (master) to the corresponding remote (origin):
+				# push your default local branch (master/main) to the corresponding remote (origin):
 				git push
 			</code></pre>
 		</dl>
 	</section>
 </section>
-
+<!--
 <section data-min="5"><h1>Using GitHub/GitLab pages as free hosting for your project</h1></section>
 <section><h2>Using GitHub pages as free hosting for your project</h2>
 	<section>
@@ -336,7 +353,7 @@
 	<section>
 		<iframe width="853" height="480" src="https://www.youtube.com/embed/2MsN8gpT6jY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</section>
-</section>
+</section> -->
 
 <section data-min="5"><h1>Resources</h1></section>
 <section><h2>Recommended Videos</h2>
