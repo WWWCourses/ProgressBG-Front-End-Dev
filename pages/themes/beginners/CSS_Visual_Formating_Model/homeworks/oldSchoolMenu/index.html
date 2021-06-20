@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>nav </title>
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		nav ul{
+			font-size: 1.3em;
+			padding: 1em;
+			background-color:#555;
+			list-style-type: none;
+		}
+		nav ul li{
+			display: inline-block;
+
+			width: 19%;
+			height: 5rem;
+			margin-left: -0.33rem;
+
+			vertical-align: top;
+			border: 6px outset darksalmon;
+			background-color: bisque;
+
+		}
+		nav ul li.first{
+			margin-left:1em;
+		}
+		li.big{
+			border-color:lightsteelblue;
+			font-size: 1.5em;
+		}
+
+		nav ul li a{
+			display: block;
+			/* height: inherit; */
+			height: 100%;
+
+			padding: .8em;
+			border: 4px solid darkseagreen;
+			color: #666;
+		}
+		nav ul li.big a{
+			padding: .4em;
+		}
+
+
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li class="first"><a href="#">Home</a></li>
+			<li class="big"><a href="#">About</a></li>
+			<li><a href="#">Menu</a></li>
+			<li><a href="#">Gallery</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+</body>
+</html>
