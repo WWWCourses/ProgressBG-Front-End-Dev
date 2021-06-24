@@ -22,14 +22,14 @@ var modalDialog = document.createElement("div");
 modalDialog.style.position = "relative";
 modalDialog.style.width = "50vw";
 modalDialog.style.height = "50vh";
-modalDialog.style.lineHeight = "50vh";
+modalDialog.style.lineHeight = "2em";
 modalDialog.style.margin = "0 auto";
 modalDialog.style.marginTop = "25vh";
 modalDialog.style.background = "#FFF";
 modalDialog.style.border = ".2em inset rgba(69, 167, 114, 1";
 
 modalDialog.style.fontSize = "3vmax";
-modalDialog.style.padding = "0 .5em";
+modalDialog.style.padding = "0 2em";
 modalDialog.style.textAlign = "center";
 modalDialog.style.verticalAlign = "middle";
 
@@ -38,7 +38,7 @@ modalDialog.style.opacity = "1";
 // modalDialog.style.transition = "opacity 2s linear";
 
 modalDialog.innerHTML = `
-            За да видите кода натиснете <b>CTRL+U</b>
+    За да видите кода натиснете <b>CTRL+U</b>
 `;
 
 // Create the modal-dialog area:
@@ -49,6 +49,7 @@ modalDialogArea.style.left = "0";
 modalDialogArea.style.right = "0";
 modalDialogArea.style.bottom = "0";
 modalDialogArea.style.background = "rgba(0,0,0,0.8)";
+console.dir(modalDialogArea);
 
 //append to body
 modalDialog.appendChild(modalDialogClose);
@@ -62,7 +63,7 @@ modalDialogClose.addEventListener("click", function(){
 });
 
 //remove dialog after N seconds, if it exists:
-removeDialog(modalDialogArea, 5);
+removeDialog(modalDialogArea, 3);
 
 
 //functions
