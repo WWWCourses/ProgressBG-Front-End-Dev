@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>classicPageLayout</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		body{
+			margin: 0;
+			padding: 1em;
+			font-size: 20px;
+			background-color: #FDAFB1;
+		}
+
+		#header,#footer{
+			height: 10vh;
+			padding-top: 3vh;
+			font-size: 2em;
+			text-align: center;
+			color: #FFF;
+			background-color: #98D1C7;
+		}
+		#main{
+			margin: 1em 0;
+			height: calc(80vh - 2em - 2em);
+		}
+		#aside, #article{
+			float: left;
+			height: 100%;
+			margin: 0;
+		}
+		#aside{
+			width: 30%;
+			background-color: #62B7B6;
+		}
+		#article{
+			margin-left: 1em;
+			width: calc(100% - 30% - 1em);
+			background-color: #FA7A7B;
+		}
+		#img{
+			background-color: #D6D5D5;
+		}
+		.clear{
+			clear:both;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">header</div>
+	<div id="main">
+		<div id="aside">aside</div>
+		<div id="article">article
+			<div class="img">imgage</div>
+			<div class="img">imgage</div>
+			<div class="img">imgage</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div id="footer">footer</div>
+</body>
+</html>
