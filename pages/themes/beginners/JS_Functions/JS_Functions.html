@@ -487,26 +487,27 @@
 	<section>
 		<dl class="fa">
 			<dt>Функция, която няма име се нарича анонимна функция!</dt>
-			<dt>Обикновено, анонимните функции се използват като стойности: на пропъртита на обекти (методи), на параметри на функции, в return изрази.</dt>
+			<dt>Обикновено, анонимните функции се използват като стойности при предаване на аргуемнти на друга функция,  в return изрази, пропъртита на обекти (методи)).</dt>
+			<dt>Фактът че в JavaScript <span class="note">функциите са стойности</span> ги определя като "first-class citizens" (first-class function).</dt>
 		</dl>
 	</section>
-	<section><h3>Анонимна функция като стойност на променлива (function expression) - пример</h3>
+	<section><h3>Анонимна функция като стойност на променлива (function expression):</h3>
 		<pre><code rel="JS">
-			var a = function(){
-				console.log("I am in a!");
+			var foo = function(){
+				console.log("I am foo!");
 			}
 
-			a();
-			// "I am in a!"
+			foo();
+			// "I am foo!"
 		</code></pre>
-		<p>Внимавайте за следната възможна грешка:</p>
+		<!-- <p>Внимавайте за следната възможна грешка:</p>
 		<pre><code rel="JS">
 			var a = function b(){
 				console.log("I am in b!");
 			}
 
 			b(); //  ReferenceError: b is not defined
-		</code></pre>
+		</code></pre> -->
 	</section>
 	<section><h3>Анонимна функция като елемент на масив:</h3>
 		<pre><code rel="JS" class="js">
@@ -523,7 +524,7 @@
 			foobar[1](); // 'Bar'
 		</code></pre>
 	</section>
-	<section><h3>Анонимна функция като пропърти на обект (method) - пример</h3>
+	<!-- <section><h3>Анонимна функция като пропърти на обект (method) - пример</h3>
 		<pre><code rel="JS" class="js">
 			let obj = {
 				'foo': function () {
@@ -537,103 +538,11 @@
 			obj.foo(); // 'Foo'
 			obj.bar(); // 'Bar'
 		</code></pre>
-	</section>
-	<section style="font-size: .9em"><h3 class="advanced">IIFE</h3>
-		<dl class="fa">
-			<dt>Единственият начин да се изпълни анонимна функция, която не е присвоена на променлива, е чрез конструкта, наречен <span class="note">IIFE</span> (Immediately Invoked Function Expression).</dt>
-		</dl>
-		<pre><code rel="Syntax" class="javascript" data-noescape>
-			<b>(</b>f(){}<b>)()</b>
-		</code></pre>
-		<pre><code rel="JS">
-			(function(){
-				console.log("I am in nowhere, but I exist and work!");
-			})();
-
-			// "I am in nowhere, but I exist and work"
-		</code></pre>
-		<dl class="fa">
-			<dt>Обърнете внимание на кръглите скоби с който заграждаме декларацията на функцията (за да я превърнем в изпълним израз), както и на скобите след това, за да изпълним този израз.</dt>
-		</dl>
-	</section>
-	<section><h3 class="advanced">IIFE</h3>
-		<dl class="fa">
-			<dt>IIFE намира приложение за създаване на local scope в даден скрипт.</dt>
-			<pre style="width:110%"><code rel="IIFE.js" class="js">
-				(function(){
-					// нито една от променливите създадени чрез var или let, няма да бъде видима извън тази функция:
-
-					var x = 42;
-					console.log(`x in IIFE.js: ${x}`);
-				})()
-			</code></pre>
-			<pre style="width:110%"><code rel="index.html" class="html">
-				<script type="text/javascript" src="IIFE.js"></script>
-				<script type="text/javascript">
-					console.log(`x in main: ${x}`);
-				</script>
-			</code></pre>
-		</dl>
-	</section>
+	</section> -->
 </section>
 
-<section id="hoisting" data-min="10"><h1>Variables Hoisting</h1></section>
-<section><h2 class="advanced">Variables Hoisting</h2>
-	<section>
-		<dl class="fa">
-			<dt>Декларирането на променливите <span class="note">в даден scope </span> винаги се изпълнява <span class="note">преди</span> всички изрази, без значение къде във scope се намират декларациите.</dt>
-			<dt>2 паса:</dt>
-			<dd>Compile time = > декларации</dd>
-			<dd>Run time = > изпълнение на програмата</dd>
-			<!-- <dt>Тоест, декларациите на променливите се "издигат" (hoist) до началото на съответния scope, без значение къде сме ги написали!</dt>
-			<dt>Това поведение на JavaScript е в сила само за <span class="note">декларациите</span> на променливи, зададени с <span class="note">var</span> и <span class="note">function declaration</span>. Изразите се изпълняват последователно, така както сме ги написали в кода.</dt>
-			<dt><span class="note">При декларация на променлива с <b>let</b> или <b>const</b> не се извършва hoisting.</span></dt> -->
-
-		</dl>
-	</section>
-	<section>
-		<pre><code rel="JS">
-			// JavaScript "знае" за съществуването на x, тъй като декларацията "var x;" вече се е изпълнила! Но не и израза, чрез който записваме 10 в x.
-
-			console.log("x:", x); // undefined
-
-			var x;
-			x = 10;
-		</code></pre>
-		<pre><code rel="JS">
-			// Примерът е аналогичен на горния!
-			console.log("x:", x); // undefined
-
-			var x = 10; // тук имаме декларация, която се е изпълнила в началото и израз, който се изпълнява сега.
-		</code></pre>
-	</section>
-	<section><h3>Function Declaration vs. Function Expression</h3>
-		<dl class="fa">
-			<dt>Когато дефинираме функция чрез декларация (<a href="../../../../pages/themes/beginners/JS_Functions/JS_Functions.html#/3">Вариант 1</a>) то декларацията на функцията винаги се извършва в началото на scope.</dt>
-		</dl>
-		<pre><code rel="JS">
-			// foo() вече е декларирана и JS знае, че е функция!
-			console.log( foo() );
-
-			function foo() {
-				return "I am foo() and I work!";
-			}
-		</code></pre>
-	</section>
-	<section><h3>Function Declaration vs. Function Expression</h3>
-		<pre><code rel="JS">
-			// foo() вече е декларирана, но JS не знае все още че е функция!
-			console.log( foo() ); //TypeError: foo is not a function
-
-			var foo = function(){
-				return "I am foo() and I work!";
-			}
-		</code></pre>
-	</section>
-</section>
-
-<section id="first-class_functions"	data-min="10"><h1>First-class functions</h1></section>
-<section><h2 class="advanced">First-class functions</h2>
+<section id="first-class_functions"	data-min="10"><h1>Functions as First-Class Citizens</h1></section>
+<section><h2 class="advanced">Functions as First-Class Citizens</h2>
 	<section>
 		<dl class="fa">
 			<dt>Свойството на функциите в JavaScript (анонимни или не) - да бъдат използвани като стойности, т.е. да бъдат записвани в промеливи, да бъдат подавани като аргументи на функции или да бъдат връщани като резултат от функция, ги определя като <span class="note">first-class functions</span></dt>
@@ -699,10 +608,108 @@
 			// bar();
 		</code></pre>
 	</section>
-	<section id="References"><h3>References</h3>
+	<!-- <section id="References"><h3>References</h3>
 		<iframe src="https://www.youtube.com/embed/hRJrp17WnOE?list=PL-BwA4EWrxLAL9XzwMwLY2uLQFm68fJ4Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</section> -->
+</section>
+
+<section id="hoisting" data-min="10"><h1>Variables Hoisting</h1></section>
+<section><h2 class="advanced">Variables Hoisting</h2>
+	<section>
+		<dl class="fa">
+			<dt>Декларирането на променливите <span class="note">в даден scope </span> винаги се изпълнява <span class="note">преди</span> всички изрази, без значение къде във scope се намират декларациите.</dt>
+			<dt>2 паса:</dt>
+			<dd>Compile time = > декларации</dd>
+			<dd>Run time = > изпълнение на програмата</dd>
+			<!-- <dt>Тоест, декларациите на променливите се "издигат" (hoist) до началото на съответния scope, без значение къде сме ги написали!</dt>
+			<dt>Това поведение на JavaScript е в сила само за <span class="note">декларациите</span> на променливи, зададени с <span class="note">var</span> и <span class="note">function declaration</span>. Изразите се изпълняват последователно, така както сме ги написали в кода.</dt>
+			<dt><span class="note">При декларация на променлива с <b>let</b> или <b>const</b> не се извършва hoisting.</span></dt> -->
+
+		</dl>
+	</section>
+	<section>
+		<pre><code rel="JS">
+			// JavaScript "знае" за съществуването на x, тъй като декларацията "var x;" вече се е изпълнила! Но не и израза, чрез който записваме 10 в x.
+
+			console.log("x:", x); // undefined
+
+			var x;
+			x = 10;
+		</code></pre>
+		<pre><code rel="JS">
+			// Примерът е аналогичен на горния!
+			console.log("x:", x); // undefined
+
+			var x = 10; // тук имаме декларация, която се е изпълнила в началото и израз, който се изпълнява сега.
+		</code></pre>
+	</section>
+	<section><h3>Function Declaration vs. Function Expression</h3>
+		<dl class="fa">
+			<dt>Когато дефинираме функция чрез декларация (<a href="../../../../pages/themes/beginners/JS_Functions/JS_Functions.html#/3">Вариант 1</a>) то декларацията на функцията винаги се извършва в началото на scope.</dt>
+		</dl>
+		<pre><code rel="JS">
+			// foo() вече е декларирана и JS знае, че е функция!
+			console.log( foo() );
+
+			function foo() {
+				return "I am foo() and I work!";
+			}
+		</code></pre>
+	</section>
+	<section><h3>Function Declaration vs. Function Expression</h3>
+		<pre><code rel="JS">
+			// foo() вече е декларирана, но JS не знае все още че е функция!
+			console.log( foo() ); //TypeError: foo is not a function
+
+			var foo = function(){
+				return "I am foo() and I work!";
+			}
+		</code></pre>
 	</section>
 </section>
+
+<section data-min="50"><h1>Immediately Invoked Function Expression</h1></section>
+<section><h2 class="advanced">Immediately Invoked Function Expression</h2>
+	<section style="font-size: .9em"><h3 class="advanced">IIFE</h3>
+		<dl class="fa">
+			<dt>Единственият начин да се изпълни анонимна функция, която не е присвоена на променлива, е чрез конструкта, наречен <span class="note">IIFE</span> (Immediately Invoked Function Expression).</dt>
+		</dl>
+		<pre><code rel="Syntax" class="javascript" data-noescape>
+			<b>(</b>f(){}<b>)()</b>
+		</code></pre>
+		<pre><code rel="JS">
+			(function(){
+				console.log("I am in nowhere, but I exist and work!");
+			})();
+
+			// "I am in nowhere, but I exist and work"
+		</code></pre>
+		<dl class="fa">
+			<dt>Обърнете внимание на кръглите скоби с който заграждаме декларацията на функцията (за да я превърнем в изпълним израз), както и на скобите след това, за да изпълним този израз.</dt>
+		</dl>
+	</section>
+	<section><h3 class="advanced">IIFE</h3>
+		<dl class="fa">
+			<dt>IIFE намира приложение за създаване на local scope в даден скрипт.</dt>
+			<pre style="width:110%"><code rel="IIFE.js" class="js">
+				(function(){
+					// нито една от променливите създадени чрез var или let, няма да бъде видима извън тази функция:
+
+					var x = 42;
+					console.log(`x in IIFE.js: ${x}`);
+				})()
+			</code></pre>
+			<pre style="width:110%"><code rel="index.html" class="html">
+				<script type="text/javascript" src="IIFE.js"></script>
+				<script type="text/javascript">
+					console.log(`x in main: ${x}`);
+				</script>
+			</code></pre>
+		</dl>
+	</section>
+</section>
+
+
 
 <section id="references" data-min="0"><h1>References</h1></section>
 <section><h2>References</h2>
