@@ -148,6 +148,27 @@
 
         </dl>
     </section>
+    <section id="batch_resize_images"><h3 class="advanced">Преоразмеряване на изображения с ImageMagick</h3>
+        <dl class="fa">
+            <dt><a href="https://www.imagemagick.org/script/download.php#windows">Инсталиратите ImageMagick за Windows</a></dt>
+            <dt>Ако искате да преоразмерите всички изображения от дадена папка (big/) в друга папка (small), отворете някакъв терминал (GitBash) и следвайте инструкциите по-долу</dt>
+        </dl>
+        <pre><code rel="Terminal" class="bash">
+            # бъдете сигурни че имате подобма структура:
+            images/
+            ├── big
+            │   └── img1.jpg
+            └── small/
+
+
+            # влезте в папака big/
+            cd images/big
+
+            # преоразмеряване на всички изображения с разширение .jpg до такива с широчина 250 пиксела и запазване в папка "../small"
+            magick mogrify -resize 250 -path ../small *.jpg
+
+        </code></pre>
+    </section>
 </section>
 
 <section><h2>Хипервръзки</h2>
