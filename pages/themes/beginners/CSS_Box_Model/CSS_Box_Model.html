@@ -133,13 +133,19 @@
 	</section>
 	<section>
 		<dl class="fa">
-			<dt>Дефинирани са и свойствата <code class="note">min-width</code>, <code class="note">max-width</code>, <code class="note">min-heigh</code> и <code class="note">max-heigth</code>, чрез които по-детайлно можем да ограничим размерите на елемент.</dt>
-			<dt>Когато са зададени едновременно width, min-width и max-width, то приоритета е: </dt>
-			<dd>1.min-width</dd>
-			<dd>2.max-width</dd>
-			<dd>3.width</dd>
-			<dt>За височината е в сила същата приоритетна схема.</dt>
+			<dt>Дефинирани са и свойствата <a href="https://www.w3schools.com/cssref/pr_dim_min-width.asp">min-width</a>, <a href="https://www.w3schools.com/cssref/pr_dim_max-width.asp">max-width</a>, <a href="https://www.w3schools.com/cssref/pr_dim_min-height.asp">min-height</a> и <a href="https://www.w3schools.com/cssref/pr_dim_max-height.asp">max-height</a>, чрез които по-детайлно можем да ограничим размерите на елемент.</dt>
+			<dt>Когато са зададени едновременно width, min-width и max-width то широчината се изчислява по доста сложни правила: <a href="https://www.w3.org/TR/CSS21/visudet.html#:~:text=column%20groups%20is%20undefined.-,The%20following%20algorithm%20describes,-how%20the%20two%20properties">min-width/max-windth @w3.org</a>. Подобни правила касаят и изчисляването на височината.</dt>
+			<dt><span class="note">Добра практика</span>: не изпозлвайте min/max пропъртитата за width/height едновременно с фиксираните width/heigh (освен ако не се налага, т.е. знаете какво правите...)</dt>
+			<!-- <dt>За височината е в сила същата приоритетна схема.</dt> -->
 		</dl>
+	</section>
+	<section><h3>пример</h3>
+		<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="yLzBybP" data-user="webdesigncourse" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+		<span>See the Pen <a href="https://codepen.io/webdesigncourse/pen/yLzBybP">
+		min/max/width demo</a> by Iva Popova (<a href="https://codepen.io/webdesigncourse">@webdesigncourse</a>)
+		on <a href="https://codepen.io">CodePen</a>.</span>
+		</p>
+		<!-- <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script> -->
 	</section>
 </section>
 <section><h2>Как да зададем margin и padding?</h2>
@@ -315,6 +321,6 @@
 <!-- linkedin badge -->
 <!-- <!-- <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script> --> -->
 
-<!-- <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script> -->
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </body>
 </html>
