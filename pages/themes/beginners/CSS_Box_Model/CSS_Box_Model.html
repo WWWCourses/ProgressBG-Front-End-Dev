@@ -246,10 +246,13 @@
 </section>
 <section><h4>Margin Collapse (сливане на вертикалните външни отстъпи)</h4>
 	<section><h3>Adjacent siblings margin collapse</h3>
-		<p>В повечето случай, вертикалните външни отстъпи (margin-top и margin-bottom) се сливат в един, не като се сумират а като се вземе стойността на по-големия от тях. </p>
+		<p>При 2 съседни блока вертикалните външни отстъпи (margin-top и margin-bottom) се сливат в един, не като се сумират а като се вземе стойността на по-големия от тях. </p>
 		<p data-height="300" data-theme-id="20230" data-slug-hash="zENVaY" data-default-tab="css,result" data-user="webdesigncourse" data-embed-version="2" data-pen-title="Collapsing vertical margins" class="codepen">See the Pen <a href="https://codepen.io/webdesigncourse/pen/zENVaY/">Collapsing vertical margins</a> by Iva Popova (<a href="https://codepen.io/webdesigncourse">@webdesigncourse</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 		</section>
 	<section><h3>Child-parent margin collapse</h3>
+		<dl class="fa">
+			<dt>Когато имаме блок в друг блок и между тях няма разделител на съдържанието, като border, padding, поредово съдържание и пр., то горния външен отстъп на детето излиза извън родителя.</dt>
+		</dl>
 		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="html,result" data-user="webdesigncourse" data-slug-hash="YRxpPw/" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Margin collapsed">
 		<span>See the Pen <a href='https://codepen.io/webdesigncourse/pen/YRxpPw/'>Margin collapsed</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
 		</span>
