@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>classicPageLayout</title>
 	<style>
+		/* do not use '*' in production */
 		*{
 			box-sizing: border-box;
 		}
@@ -15,7 +16,7 @@
 			background-color: #FDAFB1;
 		}
 
-		#header,#footer{
+		header,footer{
 			height: 10vh;
 			padding-top: 3vh;
 			font-size: 2em;
@@ -23,43 +24,92 @@
 			color: #FFF;
 			background-color: #98D1C7;
 		}
-		#main{
+		main{
 			margin: 1em 0;
 			height: calc(80vh - 2em - 2em);
 		}
-		#aside, #article{
+		aside, article{
 			float: left;
 			height: 100%;
 			margin: 0;
 		}
-		#aside{
+		aside{
+			position: relative;
+			font-size: 2em;
 			width: 30%;
+
+			/* dirty workaround to "center" vertically */
+			/* line-height: 15; */
+
 			background-color: #62B7B6;
+			color: #FFF;
 		}
-		#article{
-			margin-left: 1em;
+		aside>div{
+			width: 100%;
+			text-align: center;
+		}
+		article{
+			position: relative;
 			width: calc(100% - 30% - 1em);
+			margin-left: 1em;
 			background-color: #FA7A7B;
 		}
-		#img{
+		.image-wrapper{
+			position: absolute;
+			bottom: 1em;
+			left:0; right: 1em;
+			height: 30vh;
+			/* border:2px solid red; */
+		}
+		.article-text{
+			height: 20%;
+			font-size: 2em;
+			color: #FFF;
+			text-align: center;
+
+		}
+		.img{
+			float: left;
+			margin-left:1em;
+			width: calc(33.3% - 1em);
+			height: 80%;
 			background-color: #D6D5D5;
 		}
-		.clear{
+		.img>div{
+			font-size: 2em;
+			color: #FFF;
+		}
+		.clearfix{
 			clear:both;
+		}
+		.v-centered{
+			/* the proper way to center vertically an element */
+			position: relative;
+			top: 50%;
+			transform: translate(0, -50%);
+			text-align: center;
 		}
 	</style>
 </head>
 <body>
-	<div id="header">header</div>
-	<div id="main">
-		<div id="aside">aside</div>
-		<div id="article">article
-			<div class="img">imgage</div>
-			<div class="img">imgage</div>
-			<div class="img">imgage</div>
-		</div>
-		<div class="clear"></div>
-	</div>
-	<div id="footer">footer</div>
+	<header>header</header>
+	<main>
+		<aside><div class="v-centered">aside</div></aside>
+		<article>
+			<div class="image-wrapper">
+				<div class="article-text">article</div>
+				<div class="img"><div class="v-centered">image</div></div>
+				<div class="img"><div class="v-centered">image</div></div>
+				<div class="img"><div class="v-centered">image</div></div>
+
+				<!-- should be done with ::after -->
+				<div class="clearfix"></div>
+			</div>
+		</article>
+
+		<!-- should be done with ::after -->
+		<div class="clearfix"></div>
+	</main>
+	<footer>footer</footer>
 </body>
 </html>

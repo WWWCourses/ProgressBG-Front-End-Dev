@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>nav </title>
 	<style>
+		/* do not use '*' in production */
 		*{
 			margin:0;
 			padding: 0;
@@ -17,17 +18,19 @@
 			list-style-type: none;
 		}
 		nav ul li{
+			/* better with float, best: with flexbox */
 			display: inline-block;
+			margin-left: -0.33rem;
+			vertical-align: top;
 
 			width: 19%;
 			height: 5rem;
-			margin-left: -0.33rem;
 
-			vertical-align: top;
 			border: 6px outset darksalmon;
 			background-color: bisque;
-
 		}
+
+		/* better: use nth-child(1) */
 		nav ul li.first{
 			margin-left:1em;
 		}
@@ -38,7 +41,6 @@
 
 		nav ul li a{
 			display: block;
-			/* height: inherit; */
 			height: 100%;
 
 			padding: .8em;
@@ -48,8 +50,6 @@
 		nav ul li.big a{
 			padding: .4em;
 		}
-
-
 	</style>
 </head>
 <body>
