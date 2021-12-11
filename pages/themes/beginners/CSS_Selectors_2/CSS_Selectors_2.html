@@ -334,6 +334,25 @@
 			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Dev Mozilla.org - Pseudo-classes</a></dt>
 		</dl>
 	</section>
+	<section><h2>Създаване на падащи менюта (вертикални и хоризонтални) от списък чрез CSS.</h2>
+		<section><h3>CSS drop-down menu - example 1</h3>
+			<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="css,result" data-user="webdesigncourse" data-slug-hash="ZbPxWm" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS drop-down menu - example 1">
+			<span>
+			  See the Pen <a href='https://codepen.io/webdesigncourse/pen/ZbPxWm'>CSS drop-down menu - example 1</a> by Iva Popova
+			  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+			</span>
+			</p>
+		</section>
+		<section><h3>CSS drop-down menu with Float over content</h3>
+			<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="css,result" data-user="webdesigncourse" data-slug-hash="XmGEBr" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS drop-down menu over content">
+			<span>
+			  See the Pen <a href='https://codepen.io/webdesigncourse/pen/XmGEBr'>CSS drop-down menu over content</a> by Iva Popova
+			  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+			</span>
+			</p>
+		</section>
+	</section>
+
 </section>
 
 <section><h2>Селектори за <a href="https://www.w3schools.com/css/css_pseudo_elements.asp">псевдо-елементи</a></h2>
@@ -384,23 +403,17 @@
 		</span>
 		</p>
 	</section>
-	<section><h3><a href="http://www.w3schools.com/CSSref/sel_before.asp">::before</a></h3>
+	<section><h3><a href="http://www.w3schools.com/CSSref/sel_before.asp">::before</a> и <a href="http://www.w3schools.com/CSSref/sel_after.asp">::after</a></h3>
 		<dl class="fa">
-			<dt>Вмъква анонимен елемент като <span class="note">първо дете</span> на селектирания елемент.</dt>
-			<dd>Съдържанието на вмъкнатият елемент се задава чрез свойството <code>content</code>, <span class="note">което е задължително да присъства</span></dd>
+			<dt><code class="note">::before</code> вмъква анонимен поредов елемент като <span class="note">първо дете</span> на селектирания елемент.</dt>
+			<dt><code class="note">::after</code> вмъква анонимен поредов елемент като <span class="note">последно дете</span> на селектирания елемент.</dt>
+			<dt>Съдържанието на вмъкнатият елемент се задава чрез свойството <code>content</code>, <span class="note">което е задължително да присъства</span></dt>
+			<dt>По дефоулт, вмъкнатият елемент ще бъде поредов (inline)</dt>
 			<pre><code rel="CSS" class="css">
 				.myQuote::before{
 					content: '❝';
 					color: gray;
 				}
-			</code></pre>
-		</dl>
-	</section>
-	<section><h3><a href="http://www.w3schools.com/CSSref/sel_after.asp">::after</a></h3>
-		<dl class="fa">
-			<dt>Вмъква анонимен елемент като <span class="note">последно дете</span> на селектирания елемент. </dt>
-			<dd>Съдържанието на вмъкнатият елемент се задава чрез свойството <code>content</code></dd>
-			<pre><code rel="CSS" class="css">
 				.myQuote::after{
 					content: '❞';
 					color: gray;
@@ -409,7 +422,8 @@
 			<p>Разбира се, в елементи, които нямат съдържание, като IMG или BR, не можем да вмъкваме други елементи.</p>
 		</dl>
 	</section>
-	<section><h3><code>::before</code> and <code>::after</code> examples</h3>
+
+	<section><h3><code>::before</code> and <code>::after</code> simple example</h3>
 		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="css,result" data-user="webdesigncourse" data-slug-hash="xxxvbBE" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="::before and ::after examples">
 		<span>
 		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/xxxvbBE'>::before and ::after examples</a> by Iva Popova
@@ -437,7 +451,7 @@
 		</p>
 	</section>
 	<section>
-		<p>Повече  за float и clearfix: <a href="https://css-tricks.com/all-about-floats/#article-header-id-4">CSS-Tricks: Techniques for Clearing Floats</a></p>
+		<p>Повече за float и clearfix: <a href="https://css-tricks.com/all-about-floats/#article-header-id-4">CSS-Tricks: Techniques for Clearing Floats</a></p>
 	</section>
 	<section><h3>Още прмери за ::before/::after</h3>
 		<p><a href="http://krasimirtsonev.com/blog/article/CSS-before-and-after-pseudo-elements-in-practice">CSS: :before and :after pseudo elements in practice - Krasimir Tsonev</a></p>
@@ -447,34 +461,15 @@
 	</section>
 </section>
 
-<section><h2>Създаване на падащи менюта (вертикални и хоризонтални) от списък чрез CSS.</h2>
-	<section><h3>CSS drop-down menu - example 1</h3>
-		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="css,result" data-user="webdesigncourse" data-slug-hash="ZbPxWm" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS drop-down menu - example 1">
-		<span>
-		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/ZbPxWm'>CSS drop-down menu - example 1</a> by Iva Popova
-		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
-		</span>
-		</p>
-	</section>
-	<section><h3>CSS drop-down menu with Float over content</h3>
-		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="css,result" data-user="webdesigncourse" data-slug-hash="XmGEBr" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS drop-down menu over content">
-		<span>
-		  See the Pen <a href='https://codepen.io/webdesigncourse/pen/XmGEBr'>CSS drop-down menu over content</a> by Iva Popova
-		  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
-		</span>
-		</p>
-	</section>
-</section>
-
 
 <section><h2>Ресурси</h2>
 	<section><h3>Codepen Collection</h3>
 		<p><a href="https://codepen.io/collection/XdEdgw/">CSS_Selectors</a></p>
 	</section>
-	<section><h3>Избрани видеа върху темата</h3>
+	<!-- <section><h3>Избрани видеа върху темата</h3>
 			<p><a href="https://www.youtube.com/watch?v=oh2JLo2yxCM">CSS Basics (Part5) — Advanced Selectors</a><span> by <a href="https://www.youtube.com/user/DevTipsForDesigners/featured">DevTips</a></span></p>
 			<iframe  src="https://www.youtube.com/embed/oh2JLo2yxCM" frameborder="0" allowfullscreen style="width: 100%;height: 70vh"></iframe>
-	</section>
+	</section> -->
 </section>
 
 <section id="HW"><h1>Задачи</h1></section>
