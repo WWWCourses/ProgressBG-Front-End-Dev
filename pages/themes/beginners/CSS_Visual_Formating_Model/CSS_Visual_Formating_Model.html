@@ -10,13 +10,26 @@
 	<!-- css & themes include -->
 	<link rel="stylesheet" href="../../../../lib/reveal.js/css/reveal.css">
 	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
-	<!-- Printing and PDF exports -->
+
 	<script>
+		// print pdf
 		var link = document.createElement( 'link' );
 		link.rel = 'stylesheet';
 		link.type = 'text/css';
 		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/css/print/pdf.css' : '../../../../lib/reveal.js/css/print/paper.css';
 		document.getElementsByTagName( 'head' )[0].appendChild( link );
+
+		// add/remove codepen script:
+		var script = document.createElement( 'script' )
+		script.async = true;
+		if(window.location.search.match( /no-codepen/gi )){
+			script.src = ''
+		}else{
+			script.src = 'https://production-assets.codepen.io/assets/embed/ei.js'
+		}
+		document.head.appendChild( script );
+		console.dir(window.location);
+
 	</script>
 	<!--[if lt IE 9]>o
 	<script src="lib/js/html5shiv.js"></script>
@@ -564,7 +577,5 @@
 	</script>
 	<!-- linkedin badge -->
 	<!-- <!-- <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script> --> -->
-
-	<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </body>
 </html>
