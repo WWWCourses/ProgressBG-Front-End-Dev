@@ -271,6 +271,9 @@
 			<dt>Започва да се използва терминът <b>ES.Next</b>, който касае текущите бъдещи версии на стандарта. Разработва се от комитета с име <b>tc33</b>, който публикуват работата си в github: <a href="https://github.com/tc39/proposals">tc39 - proposals</a></dt>
 		</dl>
 	</section>
+	<section><h3>JavaScript before ES6</h3>
+		<iframe id="reddit-embed" src="https://www.redditmedia.com/r/ProgrammerHumor/comments/621qrt/javascript_the_good_parts/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;"  scrolling="no"></iframe>
+	</section>
 	<!--
 	<section><h3>Brendan Eich on designing JavaScript (Part of the JSConf EU 4ß Keynote)</h3>
 		<p style="font-size: .6em">В този клип, това наистина е създателя на JavaScript - Brendan Eich, но демонстриращ голямо чувство за хумор, като имитира <a href="https://www.youtube.com/watch?v=lJx6cF-H__I">Jonathan Ive explaining the Unibody-Design of MacBook</a>.</p>
@@ -311,14 +314,27 @@
 			&lt;/script&gt;
 		</code></pre>
 	</section>
-	<section><h3>Къде да сложим <code><b>srcript</b></code> елемента</h3>
+	<section><h3>Къде да сложим <code><b>script</b></code> елемента</h3>
 		<dl class="fa">
-			<dt>Допустимо е както в HEAD, така и в BODY секцията.</dt>
-			<dt>Скрипта се изпълнява от браузера, веднага при срещането на script елемента.</dt>
+			<dt>Можем да вмъкваме колкото желаем <code>script</code> елемента.</dt>
+			<dt>Допустимо е както в HEAD, така и в BODY секцията</dt>
+			<dt>Не забравяйте, че браузера "чете" последователно елементите в един HTML файл, и кода в скрипт елемента ще се изпълни от браузера веднага при неговото срещане (освен ако не са използвани атрибутите <code>defer</code> или <code>async</code> ).</dt>
+			<dt>Браузъра няма да продължи с оставащите HTML елементи докато кода в даден script елемент не приключи работата си.</dt>
 			<dt>Добри практики:</dt>
-			<dd>в HEAD секцията, ако скрипта не взаимодейства със елементите в BODY.</dd>
+			<dd>в HEAD секцията, ако скрипта не взаимодейства със елементите в BODY и не блокира изпълнението.</dd>
 			<dd>в края на BODY елемента, преди затварящият &lt;/body&gt; таг.</dd>
 		</dl>
+	</section>
+	<section><h3>Пример</h3>
+		<pre><code rel="HTML" class="html">
+			&lt;body&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;script&gt;
+&#x9;&#x9;&#x9;&#x9;&#x9;alert(&apos;Where it the H1 element?&apos;)
+&#x9;&#x9;&#x9;&#x9;&lt;/script&gt;
+
+&#x9;&#x9;&#x9;&#x9;&lt;h1&gt;Welcome to my page!&lt;/h1&gt;
+&#x9;&#x9;&#x9;&lt;/body&gt;
+		</code></pre>
 	</section>
 </section>
 
@@ -331,7 +347,7 @@
 			<dt>В папката <code>WD_Course</code> създайте папка <code>.vscode</code> (ако такава не съществува).</dt>
 			<dt>В папка <code>.vscode</code> създайте файла <code>tasks.json</code> и в него поставете следното съдържание: <a href="https://raw.githubusercontent.com/WWWCourses/ProgressBG-Front-End-Dev-Beginners-Labs/master/.vscode/tasks.json">.vscode/tasks.json</a></dt>
 			<dt>Трябва да имате подобна структура:</dt>
-			<a href="./images/tasks.json_in_.png"><img src="./images/tasks.json_in_.png" alt="tasks.json_in_.png" style="height: 50vh;"></a>
+			<a href="./images/tasks.json_in_.png"><img src="./images/tasks.json_in_.png" alt="tasks.json_in_.png" style="height: 40vh;"></a>
 			<dt>Сега вече може да стартирате всеки един JS файл директно чрез VSCode, като използвате комбинацията <span class="note"><kbd>CTRL+SHIFT+B</kbd></span></dt>
 		</dl>
 	</section>
@@ -341,7 +357,7 @@
 <section data-min="50"><h1>References</h1></section>
 <section><h2>References</h2>
 	<section><h3>Brendan Eich - A Brief History of JavaScript</h3>
-		<p>Ако искате да разберете повече за историята на езика от неговият създател - Brendan Eich</p>
+		<p>Ако искате да разберете повече за историята на езика от неговият създател - Brendan Eich (ще бъде по-разбираемо ако изгледате клипа след края на курса :) )</p>
 		<iframe width="793" height="446" src="https://www.youtube.com/embed/aX3ZABCdC38" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</section>
 	<!-- <section><h3>Web Development in 2020 - A complete roadmap</h3>
