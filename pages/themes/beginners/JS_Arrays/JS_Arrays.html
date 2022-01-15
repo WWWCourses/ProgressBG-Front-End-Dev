@@ -92,8 +92,8 @@
         </code></pre>
         <dl class="fa">
             <dt>Данните в масива се наричат негови <span class="note">елементи</span>.</dt>
-            <dt>Поредните номера на масива се наричат <span class="note">индекси</span>.</dt>
-            <dt>В JS, както и при всички останали езици за програмиране, <span class="note">броенето започва от 0</span>.</dt>
+            <dt>Поредните номера на елементите на масива се наричат <span class="note">индекси</span>.</dt>
+            <dt>В JS, както и при всички останали езици за програмиране, <span class="note">броенето на елементите започва от 0</span>.</dt>
             <dt>Редът на елементите в масива е важен!</dt>
         </dl>
     </section>
@@ -114,7 +114,7 @@
             let arr= [];
         </code></pre>
     </section>
-    <section>
+    <section><h3>Представяне в паметта</h3>
         <pre><code rel="JS">
             let fruits = ['apple', 'banana', 'strawberry'];
         </code></pre>
@@ -126,7 +126,11 @@
 <section><h2>Масиви - достъп до елементите (Array indexing)</h2>
     <section>
         <dl class="fa">
-            <dt>Даден елемент от масива достъпваме като след <span class="note">името на масива в квадратни скоби поставяме индексът на дадения елемент</span> .</dt>
+            <dt>Даден елемент от масива достъпваме като след <span class="note">името на масива в квадратни скоби поставяме индексът на дадения елемент</span>.</dt>
+            <pre><code rel="Syntax" class="js">
+                arrayName[i]
+            </code></pre>
+            <dt>Операцията <code>arrayName[i]</code> се нарича индексиране</dt>
         </dl>
         <pre><code rel="JS">
             // дефинираме масива fruits:
@@ -165,66 +169,75 @@
     </section>
 </section>
 
-<section data-min="50"><h1>Масива като обект</h1></section>
-<section><h2>Масива като обект</h2>
+<section data-min="50"><h1 class="advanced">Масива като обект</h1></section>
+<section><h2 class="advanced">Масива като обект</h2>
     <section>
         <dl class="fa">
-            <dt>В JavaScript <span class="note">масивите са обекти</span> (по-детайлно са разгледани в следващите теми), които притежават някои специфични свойства.
+            <dt>В JavaScript <span class="note">масивите са имплементирани като обекти</span>.
                 <pre><code rel="JS" class="js">
                     let arr = [2,4,6];
                     console.log(typeof(arr));
                     // object
                 </code></pre>
             </dt>
-            <dt class="advanced">Поради тази причина, ако опитаме да използваме невалидни индекси няма да възникне грешка, а тези индекси ще се интерпретират като пропъртита на обекти
+            <dt>Поради тази причина, ако опитаме да използваме невалидни индекси няма да възникне грешка, а тези индекси ще се интерпретират като пропъртита на обекти (по-детайлно са разгледани в следващите теми).
                 <pre><code rel="JS" class="js">
                     let arr = [2,4,6];
-                    arr[-1] = 0;   // невалиден индекс (интерпретира се като пропърти)
-                    arr['a'] = 10; // невалиден индекс (интерпретира се като пропърти)
+                    arr[-1] = 0;   // невалиден индекс (но се интерпретира като пропърти на обект)
+                    arr['a'] = 10; // невалиден индекс (но се интерпретира като пропърти на обект)
                     // [ 2, 4, 6, '-1': 0, a: 10 ]
                 </code></pre>
             </dt>
         </dl>
     </section>
     <section>
-        <p>Върху масивите са дефинирани някои специални пропъртита и методи. Например:</p>
-        <pre><code rel="JS">
-            var fruits = ['apple', 'banana', 'strawberry'];
+        <dl class="fa">
+            <dt>Върху масивите са дефинирани някои специални пропъртита и методи, които може да използваме за най-често срещаните операции с масиви. <br>Например:</dt>
+            <pre><code rel="JS">
+                var fruits = ['apple', 'banana', 'strawberry'];
 
-            // брой на елементите на масив:
-            fruits.length; // 3
+                // брой на елементите на масив:
+                fruits.length; // 3
 
-            //добавяне на елемент в началото на масива:
-            fruits.unshift('orange');
-            // ["orange", "apple", "banana", "strawberry"]
+                //добавяне на елемент в началото на масива:
+                fruits.unshift('orange');
+                // ["orange", "apple", "banana", "strawberry"]
 
-            //добавяне на елемент в края на масива:
-            fruits.push('lemon');
-            // ["orange", "apple", "banana", "strawberry", "lemon"]
+                //добавяне на елемент в края на масива:
+                fruits.push('lemon');
+                // ["orange", "apple", "banana", "strawberry", "lemon"]
 
-            // премахване на елемент от началото на масива:
-            fruits.shift();
-            // ["apple", "banana", "strawberry", "lemon"]
+                // премахване на елемент от началото на масива:
+                fruits.shift();
+                // ["apple", "banana", "strawberry", "lemon"]
 
-            // премахване на елемент от края на масива:
-            fruits.pop();
-            // ["apple", "banana", "strawberry"]
-        </code></pre>
+                // премахване на елемент от края на масива:
+                fruits.pop();
+                // ["apple", "banana", "strawberry"]
+            </code></pre>
+            <dt>Тези, както и останалите вградени методи на масивите ще разгледаме детайлно след темата за Обекти в JS, но те са добре документирани (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array @mdn</a> ) и не е нужно да се запаметяват на изуст!</dt>
+        </dl>
+
     </section>
     <section><h3>lenght property</h3>
         <dl class="fa">
+            <pre><code rel="Syntax" class="js">
+                arrayName.length
+            </code></pre>
             <dt>Свойството <span class="note">length</span> съдържа броя на елементите на масива.</dt>
             <dt>То е динамично, и ако се промени, то тази промяна ще рефлектира върху самият масив:
                 <pre><code rel="JS" class="js">
                     let arr = [2,4,6];
+
+                    // показваме броя на елементите на масива:
                     console.log( arr.length );
 
-                    // увеличаваме броя на елементите на мсаива
+                    // увеличаваме броя на елементите на масива:
                     arr.length = 5;
                     console.log(arr);
                     // [ 2, 4, 6, <2 empty items> ]
 
-                    // изтриваме елементите на масива
+                    // изтриваме елементите на масива:
                     arr.length = 0;
                     console.log(arr);
                     // []
@@ -234,7 +247,7 @@
     </section>
     <section><h3>lenght property</h3>
         <dl class="fa">
-            <dt>Чрез length пропъртито lesno можем да достъпи последния елемент на масива, тъй като <span class="note">индекса на последния елемент е равен на броя на елементите минус 1</span>:
+            <dt>Чрез length пропъртито лесно можем да достъпим последния елемент на масива, тъй като <span class="note">индекса на последния елемент е равен на броя на елементите минус 1</span>:
                 <pre><code rel="JS" class="js">
                     let arr = [2,4,6];
                     console.log( arr[arr.length - 1]);
@@ -271,9 +284,10 @@
     </section>
     <section><h3>Често срещани грешки (бъгове)</h3>
         <dl class="fa">
-            <dt>Ако погрешно изпишете length, то JS няма да върне грешка (ще видим защо, като стигнем до обекти), но би било потенциален бъг:
+            <dt>Ако погрешно изпишете length, то JS няма да върне грешка, a undefined (ще видим защо, като стигнем до обекти), и би било потенциален бъг:
                 <pre><code rel="JS" class="js">
                     let arr = [2,4,6];
+
                     if( arr.lenght){
                         console.log(`Non empty array`);
                     }else{
@@ -285,6 +299,7 @@
                 <dt>Правилната проверка би била:
                     <pre><code rel="JS" class="js">
                         let arr = [2,4,6];
+
                         if( arr.length){
                             console.log(`Non empty array`);
                         }else{
@@ -302,7 +317,7 @@
 <section><h2>Обхождане на елементите на масив (loop over array elements)</h2>
     <section>
         <dl class="fa">
-            <dt>Често в практиката се налага да изпълняваме едни и същи действия върху всички елементи на масива.</dt>
+            <dt>Често в практиката се налага <span class="note">да изпълняваме едни и същи действия върху всички елементи на масива</span>.</dt>
             <dt>За целта може да използваме for(){} цъкъл по индексите на масива:
                 <pre><code rel="JS" class="js">
                     var fruits = ['apple', 'banana', 'strawberry'];
@@ -331,7 +346,7 @@
     </section>
 </section>
 
-<section data-min="50"><h1>"Двумерни" масиви</h1></section>
+<section data-min="50" id="arrayOfArrays"><h1>"Двумерни" масиви</h1></section>
 <section><h2>"Двумерни" масиви</h2>
     <section>
         <dl class="fa">
