@@ -200,7 +200,7 @@
 				console.log(`Hello ${userName}. Nice to see you.`);
 			}
 
-			// едва при извикването ще се изпълнят действията, дефинирани във фунцкцията
+			// едва при извикването ще се изпълнят действията, дефинирани във функцията
 
 			// извикване на функцията greet() с аргумент "Ada"
 			greet("Ada");
@@ -210,28 +210,29 @@
 	</section>
 	<section><h3>Предаване на аргументи</h3>
 		<dl class="fa">
-			<dd>Съпоставянето (предаването) на стойности между параметър и аргумент е в зависимост от последователността на изписване. Тоест - <span class="note">първия параметър приема стойността на първия аргумент, втория параметър - на втория аргумент и т.н</span></dd>
+			<dt>Съпоставянето (предаването) на стойности между параметър и аргумент е в зависимост от последователността на изписване. Тоест - <span class="note">първия параметър приема стойността на първия аргумент, втория параметър - на втория аргумент и т.н</span></dt>
+			<img src="images/argument-parameters mapping.png" alt="argument-parameters mapping"style="height: 30vh;"><br>
+
 		</dl>
-	</section>
-	<section><h3>Предаване на аргументи</h3>
-		<img src="images/argument-parameters mapping.png" alt="argument-parameters mapping"><br>
 		<ul>
 			<li>x = 2</li>
 			<li>y = 3</li>
 		</ul>
 	</section>
 	<section><h3>Предаване на аргументи</h3>
+		<dl class="fa">
+			<dt>Най-общо, при предаването на стойности на параметрите, това което JS интерпретатора прави, е да създаде локални за функцията променливи и да им присвои зададените като аргументи стойности.</dt>
+		</dl>
 		<pre><code rel="JS">
 			// декларация на функцията sum():
 			function sum(x, y){
-				// let x = 2, y = 3;
+				// let x = 2, y = 3; => това се прави от JS интерпретатора при извикването на функцията
 				console.log( x + y);
 			}
 
 			// извикване на функцията sum():
 			sum(2, 3); // 5
 		</code></pre>
-		<p>Най-общо, при предаването на стойности на параметрите, това което JS интерпретатора прави, е да създаде локални за функцията променливи и да им присвои зададените като арументи стойности.</p>
 	</section>
 	<section><h3>Особености</h3>
 		<dl class="fa">
@@ -264,7 +265,7 @@
 		<dl class="fa">
 			<dt class="note">Всяка функция в JavaScript връща стойност.</dt>
 			<dt>На мястото на извикването на функцията ще се подаде връщаната от функцията стойност.</dt>
-			<dd>Или казано по-конкретно, <b>извикаването на функция</b>: <code>funcName()</code> е операция, която внаги връща стойност.</dd>
+			<dd>Или казано по-конкретно, <b>извикването на функция</b>: <code>funcName()</code> е операция, която винаги връща стойност.</dd>
 			<dt>Ако във функцията не сме използвали оператора <code class="note">return</code>, то функцията връща <code class="note">undefined</code>!</dt>
 			<dt>За да определим каква да бъде връщаната стойност използваме оператора <code class="note">return</code>.</dt>
 		</dl>
@@ -282,6 +283,17 @@
 			<dt><израз>  трябва да бъде изчислим.</dt>
 			<dt>Именно изчислената стойност ще се замести на мястото на извикване на функцията.</dt>
 			<dt><span class="note">След оператора <code>return</code> се излиза от тялото на функцията</span>. Тоест, нито един израз във функцията, след <code>return</code> няма да се изпълни! .</dt>
+			<pre><code rel="JS">
+				function f(){
+					console.log("start");
+					return true;
+					console.log("end"); // никога няма да се изпълни!
+				}
+
+				f();
+
+				// "start"
+			</code></pre>
 		</dl>
 	</section>
 	<section><h3>Example</h3>
@@ -293,22 +305,6 @@
 			}
 
 			f();
-
-			// "start"
-		</code></pre>
-	</section>
-	<section><h3>Пример</h3>
-		<pre><code rel="JS" class="js">
-			function giveMeAnswer(){
-				console.log("and the answer is...");
-				return 42;
-			}
-
-			// giveMeAnswer() ще се замести с 42:
-			console.log( giveMeAnswer() );
-
-			// and the answer is...
-			// 42
 		</code></pre>
 	</section>
 </section>
@@ -321,8 +317,49 @@
 			<dt>В JavaScript различаваме 2 вида scope:</dt>
 			<dd><span class="note">global</span></dd>
 			<dd><span class="note">local</span></dd>
-			<dd>*ES6 въвежда и <span class="note">block</span> scope (чрез <code>let</code> и <code>const</code>), разгледан в следвашите слайдове.</dd>
+			<dd>*ES6 въвежда и <span class="note">block</span> scope (чрез <code>let</code> и <code>const</code>), разгледан в следващите слайдове.</dd>
 		</dl>
+		<pre><code rel="JS" class="js">
+			// x is defined in global scope
+			let x = 5;
+
+			function foo() {
+				// y is defined in local for 'foo()' scope
+				let y = 10;
+				console.log(`x in foo: ${x}`); // x in foo: 5
+				console.log(`y in foo: ${y}`); // y in foo: 10
+			}
+
+			foo();
+
+			console.log(`x in global: ${x}`); // x in global: 5
+			console.log(`y in global: ${y}`); // ReferenceError: y is not defined
+		</code></pre>
+	</section>
+	<section><h3>Global Scope</h3>
+		<dl class="fa">
+			 <dt>Когато скрипта се изпълнява от браузър, глобалният обхват (<span class="note">global scope</span>) е всичкия код принадлежащ към дадената страница. Ако имаме няколко включени в дадена страница, то всички те формират global scope.</dt>
+			<dt>Променлива, която не е декларирана в тялото на която и да е функция, се нарича <span class="note">глобална</span> и може да бъде достъпена от всяко едно място в global scope.</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			var x = 1
+		</code></pre>
+	</section>
+	<section><h3>Global Scope</h3>
+		<pre style="width: 110%"><code rel="lib.js" class="js">
+			// x е глобална променлива
+			var x = 5;
+		</code></pre>
+		<pre style="width: 110%"><code rel="index.html" class="js">
+			&lt;body&gt;
+				&lt;!-- ... --&gt;
+				&lt;script type=&quot;text/javascript&quot; src=&quot;lib.js&quot;&gt;&lt;/script&gt;
+				&lt;script type=&quot;text/javascript&quot;&gt;
+					console.log(`x = ${x}`)
+					// x = 5
+				&lt;/script&gt;
+			&lt;/body&gt;
+		</code></pre>
 	</section>
 	<section><h3>Local Scope</h3>
 		<dl class="fa" style="font-size: .9em">
@@ -339,28 +376,6 @@
 
 			f(); // "ada"
 			console.log( firstName ); // ReferenceError: firstName is not defined
-		</code></pre>
-	</section>
-	<section><h3>Global Scope</h3>
-		<dl class="fa">
-			 <dt>Когато скрипта се изпълнява от браузър, глобалният обхват (<span class="note">global scope</span>) е всичкия код принадлежащ към дадената страница. Ако имаме няколко включени в дадена страница, то всички те формират global scope.</dt>
-			<dt>Променлива, която не е декларирана в тялото на която и да е функция, се нарича <span class="note">глобална</span> и може да бъде достъпена от всяко едно място в global scope.</dt>
-		</dl>
-	</section>
-	<section><h3>Global Scope</h3>
-		<pre style="width: 110%"><code rel="lib.js" class="js">
-			// x е глобална променлива
-			var x = 5;
-		</code></pre>
-		<pre style="width: 110%"><code rel="index.html" class="js">
-			&lt;body&gt;
-				&lt;!-- ... --&gt;
-				&lt;script type=&quot;text/javascript&quot; src=&quot;lib.js&quot;&gt;&lt;/script&gt;
-				&lt;script type=&quot;text/javascript&quot;&gt;
-					console.log(`x = ${x}`)
-					// x = 5
-				&lt;/script&gt;
-			&lt;/body&gt;
 		</code></pre>
 	</section>
 	<section><h3>Shadowing</h3>
@@ -438,8 +453,8 @@
   <section><h3><code>let/const</code> vs. <code>var</code>: redeclaring</h3>
 	  <dl class="fa">
 		  <dt>Друга разлика между <code>let/cont</code> и <code>var</code> е че ако една променлива вече е декларирана, то при повторна декларация (redeclaring) в съшия скоуп чрез <code>let</code> или <code>const</code> ще възникне грешка.</dt>
-		  <dt>При редеклариране чрез <code>var</code> нe би възникнала грешка.</dt>
-		  <dt class="note">Дoбра практика е да предпочитаме използването на <code>let/const</code> за деклариране на променливи, вместо <code>var</code>!</dt>
+		  <dt>При ре-деклариране чрез <code>var</code> не би възникнала грешка.</dt>
+		  <dt class="note">Добра практика е да предпочитаме използването на <code>let/const</code> за деклариране на променливи, вместо <code>var</code>!</dt>
 	  </dl>
   </section>
   <section><h3>Особености на <code>const</code></h3>
@@ -457,12 +472,12 @@
   </section>
   <section><h3 class="advanced">Особености на <code>const</code></h3>
 	<dl class="fa">
-		<dt><code>const</code> не гарантира създаването на константи в буквалния смисъл. А единствено, че при опит за re-assign ще възнине грешка!</dt>
+		<dt><code>const</code> не гарантира създаването на константи в буквалния смисъл. А единствено, че при опит за re-assign ще възникне грешка!</dt>
 		<dt>Ако стойността на <code>const</code> променливата е съставна, т.е обект, то ние <code>можем</code> да променим някое негово пропърти без да възникне грешка.</dt>
 		<pre><code rel="JS" class="js">
 			const someArray = [3.14];
 
-			// тук не re-assign-ваме someАrray, а променяме стойност в самия масив
+			// тук не re-assign-ваме променливата someArray, а променяме стойност в самия масив
 			someArray[0] = 99;
 			console.log( someArray[0] ); // 99
 
@@ -488,7 +503,7 @@
 	<section>
 		<dl class="fa">
 			<dt>Функция, която няма име се нарича анонимна функция!</dt>
-			<dt>Обикновено, анонимните функции се използват като стойности при предаване на аргуемнти на друга функция,  в return изрази, пропъртита на обекти (методи)).</dt>
+			<dt>Обикновено, анонимните функции се използват като стойности при предаване на аргументи на друга функция,  в return изрази, пропъртита на обекти (методи)).</dt>
 			<dt>Фактът че в JavaScript <span class="note">функциите са стойности</span> ги определя като "first-class citizens" (first-class function).</dt>
 		</dl>
 	</section>
@@ -546,7 +561,7 @@
 <section><h2 class="advanced">Functions as First-Class Citizens</h2>
 	<section>
 		<dl class="fa">
-			<dt>Свойството на функциите в JavaScript (анонимни или не) - да бъдат използвани като стойности, т.е. да бъдат записвани в промеливи, да бъдат подавани като аргументи на функции или да бъдат връщани като резултат от функция, ги определя като <span class="note">first-class functions</span></dt>
+			<dt>Свойството на функциите в JavaScript (анонимни или не) - да бъдат използвани като стойности, т.е. да бъдат записвани в променливи, да бъдат подавани като аргументи на функции или да бъдат връщани като резултат от функция, ги определя като <span class="note">first-class functions</span></dt>
 			<dt>Темата за "first-class functions" се разглежда задълбочено в <a href="http://wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/agenda/advanced.html">WebDesign/Front-End Dev - Advanced</a> курса. Но преди да навлезете в тази изключително важна за JavaScript тема е необходимо да усвоите добре основните, разгледани досега.</dt>
 		</dl>
 	</section>
@@ -709,7 +724,6 @@
 		</dl>
 	</section>
 </section>
-
 
 
 <section id="references" data-min="0"><h1>References</h1></section>
