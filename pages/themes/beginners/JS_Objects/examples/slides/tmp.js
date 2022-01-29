@@ -1,21 +1,12 @@
-let student1 = {
-    "firstName" : "Pesho",
-    "surName" : "Petrov",
-    "greet": function() {
-        console.log(`Hello, I'm ${this.firstName}`);
-    }
-};
-
-let student2 = {
-    "firstName" : "Maria",
-    "surName" : "Popova",
-    "greet": function() {
-        console.log(`Hello, I'm ${this.firstName}`);
-    }
+const prices = {
+    'apples': 2.50,
+    'oranges': 3.45,
+    'bananas': 2.80
 }
 
-student1.greet();
-student2.greet();
+// името на пропъртито, което искаме да достъпим е дадено в променлива:
+const fruitName = 'apples'
 
-console.dir(student1);
-console.dir(student2);
+// използваме записът с квадратни скоби:
+console.log( prices[fruitName] );
+
