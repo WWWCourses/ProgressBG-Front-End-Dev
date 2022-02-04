@@ -155,40 +155,34 @@
             <dt>Целият HTML документ се представя чрез обекта: <span class="note code">document object</span>.</dt>
             <dt>В <span class="note code">document object</span> се съдържа всичката информация, касаеща дадения HTML документ. В него са дефинирани и множество методи за достъпване на всички възли в документа чрез JavaScript.</dt>
             <dd><a href="http://www.w3schools.com/jsref/dom_obj_document.asp">w3schools: The HTML DOM Document Object</a></dd>
+            <pre><code rel="HTML" style="font-size: 1.2em; min-height: 60vh;">
+                &lt;body&gt;
+                    <p id="p1">Paragraph <b>1</b>!</p>
+
+                    <script type="text/javascript">
+                        console.log("The Document node object:");
+                        console.dir(document);
+
+                        console.log( document.lastModified );
+
+                        console.log(document.doctype);
+
+                        // "взимаме" елемента с id="p1":
+                        const p = document.getElementById('p1');
+                        console.dir( p );
+
+                        // "взимаме" всички обекти (от тип HTML element) деца на body:
+                        const bodyChildren = document.body.children;
+                        console.dir(bodyChildren);
+
+                        // "взимаме" всички обекти (от всеки тип) деца на body:
+                        const childNodes = document.body.childNodes;
+                        console.dir(childNodes);
+
+                    </script>
+                &lt;/body&gt;
+            </code></pre>
         </dl>
-    </section>
-    <section><h3>Пример:</h3>
-        <pre><code rel="HTML">
-            console.log( document.lastModified );
-            // "02/17/2018 01:10:43"
-
-            console.log(document.doctype);
-            // &lt;!doctype html&gt;
-
-            console.log(document.location.protocol);
-            // http:
-        </code></pre>
-    </section>
-    <section><h3>Пример:</h3>
-        <pre><code rel="HTML">
-            &lt;body&gt;
-                <p id="p1">Paragraph <b>1</b>!</p>
-
-                <script type="text/javascript">
-                    console.log("The Document node object:");
-                    console.dir(document);
-
-                    console.log('The element with id="p1" object');
-                    console.dir( document.getElementById('p1') );
-
-                    console.log("The paragraph text content:");
-                    document.getElementById('p1').innerText;
-
-                    console.log("The paragraph HTML content:");
-                    document.getElementById('p1').innerHTML;
-                </script>
-            &lt;/body&gt;
-        </code></pre>
     </section>
 </section>
 
@@ -198,22 +192,21 @@
             <dt>В HTML DOM, на всеки един HTML елемент се съпоставя един обект от тип <span class="code note">element object</span>, който е възел в DOM.</dt>
             <dt>Всеки един <span class="code note">element node</span> може да бъде родител на: element nodes, text nodes или comment nodes</dt>
             <dt>element nodes притежават следните методи и свойства: <a href="http://www.w3schools.com/jsref/dom_obj_all.asp">The HTML DOM Element Object</a></dt>
+            <pre><code rel="HTML">
+                &lt;body&gt;
+                    <p id="p1">Paragraph <b>1</b>!</p>
+
+                    <script type="text/javascript">
+                        const elementNode = document.getElementById("p1");
+
+                        console.log("The p Element node object:");
+                        console.dir(elementNode);
+
+                        console.log( elementNode.innerHTML );
+                    </script>
+                &lt;/body&gt;
+            </code></pre>
         </dl>
-    </section>
-    <section><h3>Пример:</h3>
-        <pre><code rel="HTML">
-            &lt;body&gt;
-                <p id="p1">Paragraph <b>1</b>!</p>
-
-                <script type="text/javascript">
-                    console.log("The p Element node object:");
-                    var elementNode = document.getElementById("p1");
-                    console.dir(elementNode);
-
-                    console.log( elementNode.innerHTML );
-                </script>
-            &lt;/body&gt;
-        </code></pre>
     </section>
 </section>
 
@@ -223,21 +216,41 @@
             <dt>Всеки един HTMl атрибут в DOM се предсавя като <span class="note code">attribute object</span></dt>
             <dt>attribute object винаги се разглежда като част от element object.</dt>
             <dt>attribute objects притежават следните методи и свойства: <a href="http://www.w3schools.com/jsref/dom_obj_attributes.asp">The HTML DOM Attribute Object</a></dt>
-        </dl>
-    </section>
-    <section><h3>Пример:</h3>
-        <pre><code rel="HTML">
-            &lt;body&gt;
-                <p id="p1">Paragraph <b>1</b>!</p>
-                <!-- коментар -->
+            <pre><code rel="HTML">
+                &lt;body&gt;
+                    <p id="p1">Paragraph <b>1</b>!</p>
 
-                <script type="text/javascript">
-                    console.log("The id Attribute node object:");
-                    var atributeNode = document.body.childNodes[1].getAttributeNode('id');
-                    console.dir( atributeNode );
-                </script>
-            &lt;/body&gt;
-        </code></pre>
+                    <script type="text/javascript">
+                        const p = document.querySelector('p');
+
+                        const pID = p.getAttributeNode('id');
+
+                        console.log("The id Attribute node object:");
+                        console.dir( pID );
+                    </script>
+                &lt;/body&gt;
+            </code></pre>
+            <dt class="note">Стойностите на повечето стандартни HTML атрибути, като src, href, id, style, title и пр., могат да се достъпят директно като пропъртита на съответния обект чрез: <code>element.attributeName</code></dt>
+            <pre><code rel="HTML" class="html">
+                &lt;body&gt;
+                    <p id="p1">Paragraph <b>1</b>!</p>
+                    <img src="" alt="demo img">
+
+                    <script type="text/javascript">
+                        // "взимаме" елементите, които ни трябват:
+                        const p = document.querySelector('p');
+                        const img = document.querySelector('img');
+
+                        // "четем" от стойността на пропъртито id:
+                        console.log(p.id);
+
+                        // "записваме" в стойността на пропъртито src:
+                        img.src = 'https://picsum.photos/200/300'
+                    </script>
+                &lt;/body&gt;
+            </code></pre>
+            <dt>Забележете, че промяната на DOM пропърти, което съответства на HTML атрибут, води до динамична промяна на дадения HTML атрибут!</dt>
+        </dl>
     </section>
 </section>
 
@@ -247,21 +260,42 @@
             <dt class="note">Текстът е отделен възел в DOM!</dt>
             <dt>Text Object представя текстовото съдържание на елемент или атрибут.</dt>
             <dt>Text елементите притежават следните методи и свойства: <a href="https://www.w3schools.com/xml/dom_text.asp">XML DOM - The Text Object</a></dt>
-        </dl>
-    </section>
-    <section><h3>Пример:</h3>
-        <pre><code rel="HTML">
-            &lt;body&gt;
-                <p id="p1">Paragraph <b>1</b>!</p>
-                <!-- коментар -->
+            <pre><code rel="HTML">
+                &lt;body&gt;
+                    <p id="p1">Paragraph <b>1</b>!</p>
 
-                <script type="text/javascript">
-                    console.log("The 'Paragraph' text node object:");
-                    var textNode = document.body.childNodes[1].childNodes[0];
-                    console.dir( textNode );
+                    <script type="text/javascript">
+                        // "взимаме" обекта представящ p елемента:
+                                const p = document.getElementById('p1');
+
+                        // нека видим колко обекта-деца има в параграфа:
+                        console.dir( p.childNodes );
+
+                        // NodeList(3)
+                        // 0: text
+                        // 1: b
+                        // 2: text
+
+                        // нека достъпим и логнем обекта, представящ текста "Paragraph ":
+                        const textNode = p.childNodes[0];
+                        console.dir( textNode );
+                    </script>
+                &lt;/body&gt;
+            </code></pre>
+            <dt>На практика, рядко се налага да работим с Text Object. Когато искаме да достъпим текстовото съдържание на даден HTML елемент използваме <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp">element.innerHTML</a> или <a href="https://www.w3schools.com/jsref/prop_node_innertext.asp">element.innerText</a> пропъртитата.</dt>
+            <pre><code rel="HTML" class="html">
+                <p id="p1">Paragraph <b>1</b>!</p>
+
+                <script>
+                    // "взимаме" обекта представящ p елемента:
+                    const p = document.getElementById('p1');
+
+                    // логваме пропъртитата innerHTML и innerText:
+                    console.log(p.innerHTML); // Paragraph <b>1</b>!
+                    console.log(p.innerText); // Paragraph 1!
                 </script>
-            &lt;/body&gt;
-        </code></pre>
+            </code></pre>
+        </dl>
     </section>
 </section>
 
@@ -269,23 +303,22 @@
     <section>
         <dl class="fa">
             <dt class="note">Коментарите са отделни възли в DOM!</dt>
-            <dt>Comment Object представя съдържанието в XML/HTML коментар</dt>
+            <dt>Comment Object представя съдържанието в HTML коментар</dt>
             <dt><a href="https://www.w3schools.com/xml/dom_comment.asp">XML DOM - The Comment Object</a></dt>
-        </dl>
-    </section>
-    <section><h3>Пример:</h3>
-        <pre><code rel="HTML">
-            &lt;body&gt;
-                <p id="p1">Paragraph <b>1</b>!</p>
-                <!-- коментар -->
+            <pre><code rel="HTML">
+                &lt;body&gt;
+                    <p id="p1">Paragraph <b>1</b>!</p>
+                    <!-- коментар -->
 
-                <script type="text/javascript">
-                    console.log("The Comment node object:");
-                    var commentNode = document.body.childNodes[3];
-                    console.dir( commentNode );
-                </script>
-            &lt;/body&gt;
-        </code></pre>
+                    <script type="text/javascript">
+                        console.log("The Comment node object:");
+                        var commentNode = document.body.childNodes[3];
+                        console.dir( commentNode );
+                    </script>
+                &lt;/body&gt;
+            </code></pre>
+            <dt>В практиката, рядко се налага манипулирането на HTML коментари чрез JS!</dt>
+        </dl>
     </section>
 </section>
 
@@ -294,35 +327,34 @@
         <dl class="fa">
             <dt>На всеки тип възел/обект в DOM съответства число. Така лесно динамично можем да определим типът на дадения възел/обект.</dt>
             <dt><a href="https://www.w3schools.com/xml/dom_nodetype.asp">XML DOM Node Types</a></dt>
+            <pre><code rel="HTML" class="html">
+                &lt;body&gt;
+                    &lt;p id=&quot;p1&quot;&gt;Paragraph &lt;b&gt;1&lt;/b&gt;!&lt;/p&gt;
+                    &lt;!-- just an HTML comment, but it's a node. --&gt;
+                    &lt;script type=&quot;text/javascript&quot;&gt;
+                        const allNodes = document.body.childNodes;
+                        // console.dir(allNodes);
+                        for (let i = 0; i &lt; allNodes.length; i++) {
+                            const node = allNodes[i];
+                            console.log(`nodeName: ${node.nodeName}, nodeType: ${node.nodeType}`);
+                        }
+                    &lt;/script&gt;
+                &lt;/body&gt;
+            </code></pre>
+            <pre><code rel="Output" class="ascii">
+                nodeName: #text, nodeType: 3
+                nodeName: P, nodeType: 1
+                nodeName: #text, nodeType: 3
+                nodeName: #comment, nodeType: 8
+                nodeName: #text, nodeType: 3
+                nodeName: SCRIPT, nodeType: 1
+            </code></pre>
+            <dt>Забележете, че докато <code>element.childNodes</code>  връща децата обекти от всички типове, то <code>element.children</code> връща само децата от тип Element Object</dt>
         </dl>
-    </section>
-    <section><h3>Пример</h3>
-        <pre><code rel="HTML" class="html">
-            &lt;body&gt;
-                &lt;p id=&quot;p1&quot;&gt;Paragraph &lt;b&gt;1&lt;/b&gt;!&lt;/p&gt;
-                &lt;!-- just an HTML comment, but it's a node. --&gt;
-                &lt;script type=&quot;text/javascript&quot;&gt;
-                    let allNodes = document.body.childNodes;
-                    // console.dir(allNodes);
-                    for (let i = 0; i &lt; allNodes.length; i++) {
-                        const node = allNodes[i];
-                        console.log(`nodeName: ${node.nodeName}, nodeType: ${node.nodeType}`);
-                    }
-                &lt;/script&gt;
-            &lt;/body&gt;
-        </code></pre>
-        <pre><code rel="Output" class="ascii">
-            nodeName: #text, nodeType: 3
-            nodeName: P, nodeType: 1
-            nodeName: #text, nodeType: 3
-            nodeName: #comment, nodeType: 8
-            nodeName: #text, nodeType: 3
-            nodeName: SCRIPT, nodeType: 1
-        </code></pre>
     </section>
 </section>
 
-<section><h2>Methods for accessing Element Nodes</h2>
+<section><h2>Методи за достъпване на Element Objects</h2>
     <section><h3><a href="https://www.w3schools.com/jsref/met_document_getelementbyid.asp"></a>getElementById()</h3>
         <dl class="fa">
             <dt>Връща обект, представящ елемент с id = elementID</dt>
@@ -331,8 +363,15 @@
         <pre><code rel="Syntax">
             document.getElementById(elementID);
         </code></pre>
-        <pre><code rel="JS">
-            var node = document.getElementById('test');
+        <pre><code rel="HTML">
+            <ul>
+                <li id="test">Item 1</li>
+                <li>Item 2</li>
+            </ul>
+
+            <script>
+                const liTest = document.getElementById('test');
+            </script>
         </code></pre>
     </section>
     <section><h3><a href="https://www.w3schools.com/jsref/met_document_getelementsbyclassname.asp"></a>getElementsByClassName()</h3>
@@ -344,9 +383,19 @@
         <pre><code rel="Syntax">
             document.getElementsByClassName(classname)
         </code></pre>
-        <pre><code rel="JS">
-            var allRedNodes = document.getElementsByClassName('red');
-            var firstRedNode = allRedNodes[0];
+        <pre><code rel="HTML">
+            <h2 class="red">Heading 2</h2>
+            <ul>
+                <li class="red">Item 1</li>
+                <li class="blue">Item 2</li>
+            </ul>
+            <script>
+                const allRedNodes = document.getElementsByClassName('red');
+
+                for (let i = 0; i < allRedNodes.length; i++) {
+                    console.log( allRedNodes[i].innerHTML );
+                }
+            </script>
         </code></pre>
     </section>
     <section><h3><a href="https://www.w3schools.com/jsref/met_document_getelementsbytagname.asp">getElementsByTagName()</a></h3>
@@ -359,8 +408,17 @@
             document.getElementsByTagName(tagName)
         </code></pre>
         <pre><code rel="JS">
-            var allParagraphNodes = document.getElementsByTagName('p');
-            var firstParagraph = allParagraphNodes[0];
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+            </ul>
+            <script>
+                const liNodes = document.getElementsByTagName('li');
+
+                for (let i = 0; i < liNodes.length; i++) {
+                    console.log( liNodes[i].innerHTML );
+                }
+            </script>
         </code></pre>
     </section>
     <section><h3><a href="https://www.w3schools.com/jsref/met_document_queryselector.asp">querySelector()</a></h3>
@@ -371,8 +429,19 @@
         <pre><code rel="Syntax">
             document.querySelector(sel)
         </code></pre>
-        <pre><code rel="JS">
-            var firstLI = document.querySelector("ul>li:nth-of-type(1)");
+        <pre><code rel="HTML">
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+            <script>
+                const firstLi = document.querySelector('li');
+                console.log( firstLi.innerText );
+
+                const secondLi = document.querySelector("ul>li:nth-child(2)");
+                console.log( secondLi.innerText );
+            </script>
         </code></pre>
     </section>
     <section><h3><a href="https://www.w3schools.com/jsref/met_document_queryselectorall.asp">querySelectorAll()</a></h3>
@@ -384,8 +453,26 @@
         <pre><code rel="Syntax">
             document.querySelectorAll(sel)
         </code></pre>
-        <pre><code rel="JS">
-            var allFooterLI = document.querySelectorAll('footer ul>li');
+        <pre><code rel="HTML" style="min-height: 50vh;">
+            <header>
+                <ul>
+                    <li>Header Item 1</li>
+                </ul>
+            </header>
+            <footer>
+                <ul>
+                    <li>Footer Item 1</li>
+                    <li>Footer Item 2</li>
+                </ul>
+            </footer>
+
+            <script>
+                const allFooterLiNodes = document.querySelectorAll('footer>ul>li');
+                for (let i = 0; i < allFooterLiNodes.length; i++) {
+                    const li = allFooterLiNodes[i];
+                    console.log(li.innerHTML);
+                }
+            </script>
         </code></pre>
     </section>
 </section>
@@ -415,14 +502,14 @@
         </span>
 		</p>
     </section>
-    <section><h3>Simplest Todo App - Vanila JS</h3>
+    <!-- <section><h3>Simplest Todo App - Vanila JS</h3>
         <p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="js,result" data-user="webdesigncourse" data-slug-hash="LYEqZoo" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Simplest Todo App - Vanila JS">
 		<span>
           See the Pen <a href='https://codepen.io/webdesigncourse/pen/LYEqZoo'>Simplest Todo App - Vanila JS</a> by Iva Popova
           (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
         </span>
 		</p>
-    </section>
+    </section> -->
     <section><h3>Codepen Examples</h3>
         <p>Колекция с примери по темата:</p>
         <dl class="fa">
@@ -463,8 +550,8 @@
             keyboard: true,
             history: true,
             center: true,
-            width: 1280,
-            height: 1024,
+            width: 1920,
+            height: 1280,
             // Bounds for smallest/largest possible scale to apply to content
             // minScale: .5,
             maxScale: 1,
