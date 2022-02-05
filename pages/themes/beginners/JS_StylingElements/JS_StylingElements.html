@@ -74,67 +74,77 @@
 	</section>
 </section>
 
+
+<section id="HtmlDomStyleObject"><h1>HTML DOM Style Object</h1></section>
 <section><h2>HTML DOM Style Object</h2>
     <section>
         <dl class="fa">
             <dt>CSS декларациите се представят в DOM като свойства на обект от тип:</dt>
             <dd><a href="https://www.w3schools.com/jsref/dom_obj_style.asp">Style object (CSSStyleDeclaration)</a></dd>
+            <dt>Ето как изглежда обект от тип CSSStyleDeclaration:</dt>
+            <pre><code rel="HTML" class="js">
+                <p style="color:aqua;font-size: 30px;">Paragraph 1</p>
+
+                <script>
+                    const p = document.querySelector('p');
+                    console.dir(p.style);
+                </script>
+            </code></pre>
+            <a href="images/CSS_StyleObjectInConsole.png"><img src="images/CSS_StyleObjectInConsole.png"></a>
         </dl>
     </section>
     <section>
-        <p>Ето как изглежда обект от тип CSSStyleDeclaration:</p>
-        <a href="images/CSS_StyleObjectInConsole.png"><img src="images/CSS_StyleObjectInConsole.png"></a>
-    </section>
-    <section>
         <dl class="fa">
-            <dt>За всеки HTML елемент, стилът дефиниран чрез <span class="note"><code>style</code> атрибута</span>, се представя в отделен CSSStyleDeclaration обект.</dt>
-            <dt>Всичкият приложен CSS върху даден елемент, т.нар. <span class="note"><code>computed style</code></span> се представя в отделен CSSStyleDeclaration обект.</dt>
-            <dt>Стилът, зададен в head секцията, не може да бъде достъпен като CSSStyleDeclaration обект, а единствено като съдържание(<code>innerHTML</code> или <code>contentText</code>) на <code>style</code> елемента. </dt>
+            <dt>За всеки HTML елемент, inline стила (този дефиниран чрез <span class="note"><code>style</code> атрибута</span>), се представя в отделен CSSStyleDeclaration обект, асоцииран с този елемент.</dt>
+            <dt>Всичкият приложен CSS върху даден елемент, т.нар. <span class="note"><code>computed style</code></span> се представя в отделен CSSStyleDeclaration обект, който е асоцииран с глобалния window обект.</dt>
+            <dt>Стилът, зададен в head секцията, не може да бъде достъпен като CSSStyleDeclaration обект, а единствено като съдържание(<code>innerHTML</code> или <code>contentText</code>) на <code>style</code> елемента, но това рядко се налага на практика.</dt>
         </dl>
     </section>
 </section>
 
-<section><h2>element.style</h2>
+<section><h1>Достъп до inline стила чрез <code>element.style</code></h1></section>
+<section><h2>Достъп до inline стила чрез <code>element.style</code></h2>
     <section>
         <dl class="fa">
             <dt>Можем да достъпим inline стила на всеки HTML елемент, чрез свойството <code>style</code>, в което се съдържа обект от тип CSSStyleDeclaration</dt>
+            <pre><code rel="HTML" class="html">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang=&quot;en&quot;&gt;
+                &lt;head&gt;
+                    &lt;title&gt;demo&lt;/title&gt;
+                    &lt;style&gt;
+                        p{
+                            border:1px solid red;
+                        }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;p class=&quot;test&quot; style=&quot;color: aqua; font-size: 30px;&quot;&gt;Paragraph 1&lt;/p&gt;
+
+                    &lt;script&gt;
+                        const pNode = document.querySelector(&quot;.test&quot;);
+
+                        // get the inline style of the paragraph:
+                        const inlineStyleObj = pNode.style;
+
+                        console.dir(inlineStyleObj);
+                    &lt;/script&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code></pre>
+
+            <dt class="note">Забележете, че в <code>inlineStyleObj</code> е представен само inline стилът, но не и всички правила, които се прилагат върху елемента!</dt>
+            <dt>Но на практика, когато искаме да приложим чрез JS даден стил, ние бихме искали да променяме точно inline стилът, който е с по-висок приоритет.</dt>
         </dl>
-        <pre><code rel="HTML" class="html">
-            <p class="test" style="color: #00B4FD; font-size: 2em;">Paragraph 1</p>
-        </code></pre>
-        <pre><code rel="JS" class="js">
-            var pNode = document.querySelector(".test");
 
-            // get the inline style of the paragraph:
-            var inlineStyleObj = pNode.style;
 
-            console.dir(inlineStyleObj);
-        </code></pre>
-        <p class="note">Забележете, че в <code>inlineStyleObj</code> е представен само inline стилът, но не и всички правила, които се прилагат върху елемента!</p>
     </section>
-    <section><h3>Example - get inline element style in codepen</h3>
-        <p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="js,result&embed-version=2" data-user="webdesigncourse" data-slug-hash="zRpWoN/" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Example - get inline element style">
-		<span>See the Pen <a href='https://codepen.io/webdesigncourse/pen/zRpWoN/'>Example - get inline element style</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
-        </span>
-		</p>
-    </section>
-    <section><h3>Промяна на inline стила на елемент</h3>
-        <pre><code rel="HTML" class="html">
-            <p class="test" style="color: #00B4FD; font-size: 2em;">Paragraph 1</p>
-        </code></pre>
-        <pre><code rel="JS" class="js">
-            var pNode = document.querySelector(".test");
-
-            // set inline style of the paragraph:
-            pNode.style.color = "#FFF";
-            pNode.style.backgroundColor = "#933";
-        </code></pre>
-    </section>
-    <section><h3>Example - set element.style properties in codepen:</h3>
-        <p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="html,result&embed-version=2" data-user="webdesigncourse" data-slug-hash="RQxMaJ/" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="setInlineStyle">
-		<span>See the Pen <a href='https://codepen.io/webdesigncourse/pen/RQxMaJ/'>setInlineStyle</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
-        </span>
-		</p>
+    <section><h3>Пример - Промяна на inline стила на елемент</h3>
+        <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="zRpWoN" data-user="webdesigncourse" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+          <span>See the Pen <a href="https://codepen.io/webdesigncourse/pen/zRpWoN">
+          Example  - get inline element style</a> by Iva Popova (<a href="https://codepen.io/webdesigncourse">@webdesigncourse</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
     </section>
 </section>
 
@@ -149,18 +159,45 @@
         </code></pre>
     </section>
     <section>
-        <p>Например:</p>
-        <pre><code rel="HTML" class="html">
-            <p class="test" style="color: #00B4FD; font-size: 2em;">Paragraph 1</p>
-        </code></pre>
-        <pre><code rel="JS" class="js">
-            var pNode = document.querySelector(".test");
+        <dl class="fa">
+            <dt>Пример за разликата между <code>element.style</code> и <code>window.getComputedStyle( element )</code></dt>
+        </dl>
+        <pre><code rel="HTML" class="html" style="min-height: 70vh;">
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+                &lt;title&gt;demo&lt;/title&gt;
+                &lt;style&gt;
+                    p{
+                        border:1px solid red;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;p class=&quot;test&quot; style=&quot;color: aqua; font-size: 30px;&quot;&gt;Paragraph 1&lt;/p&gt;
 
-            var computedStyleObj = window.getComputedStyle( pNode );
-            console.dir(computedStyleObj);
+                &lt;script&gt;
+                    const pNode = document.querySelector(&quot;.test&quot;);
+
+                    // get the inline style of the paragraph:
+                    const inlineStyleObj = pNode.style;
+                    // read border property:
+                    console.log(inlineStyleObj.border); // ''
+
+                    // get the computed style of the paragraph:
+                    const computedStyleObj = window.getComputedStyle( pNode );
+                    // read border property:
+                    console.log(computedStyleObj.border); // '1px solid rgb(255, 0, 0)'
+                &lt;/script&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
         </code></pre>
     </section>
     <section><h3>Example - increase/decreas font-size in codepen</h3>
+        <dl class="fa">
+            <dt>Рядко се налага да достъпваме с JS computed стила за даден елемент.</dt>
+            <dt>Един възможен случай, е когато искаме чрез бутони потребителя да увеличи/намали рамера на шрифта в страницата. Но за целта, трябва първо да "прочетем" колко пиксела е текущия размер на шрифта</dt>
+        </dl>
         <p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="html,result&embed-version=2" data-user="webdesigncourse" data-slug-hash="wypGjE/" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Example - increase-decreasFontSize.html">
 		<span>See the Pen <a href='https://codepen.io/webdesigncourse/pen/wypGjE/'>Example - increase/decreas font-size.html</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
         </span>
@@ -177,11 +214,22 @@
             <dd><a href="https://www.w3schools.com/jsref/prop_element_classlist.asp">element.classList</a></dd>
         </dl>
     </section>
-    <section>
+    <section><h3>Пример за промяна на класа чрез <code>element.className</code></h3>
         <p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="html,result&embed-version=2" data-user="webdesigncourse" data-slug-hash="VQyXRV/" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Example - changing style by predefined class names rules">
 		<span>See the Pen <a href='https://codepen.io/webdesigncourse/pen/VQyXRV/'>Example - changing style by predefined class names rules</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
         </span>
 		</p>
+    </section>
+    <section><h3>Пример за промяна на класа чрез <code>element.classList</code> metodi</h3>
+        <dl class="fa">
+            <dt><a href="https://www.w3schools.com/jsref/prop_element_classlist.asp"><code>element.classList</code></a> връща обект, който има вградени методи за по-лесно добавяне/премахване/toggle на класове към елемент</dt>
+
+        </dl>
+        <p class="codepen" data-height="300" data-theme-id="light" data-default-tab="js,result" data-slug-hash="abVBdgp" data-user="webdesigncourse" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+          <span>See the Pen <a href="https://codepen.io/webdesigncourse/pen/abVBdgp">
+          toggle class example</a> by Iva Popova (<a href="https://codepen.io/webdesigncourse">@webdesigncourse</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
     </section>
 </section>
 

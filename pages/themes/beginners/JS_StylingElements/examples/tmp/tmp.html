@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>demo</title>
+	<style>
+		p{
+			border:1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<p class="test" style="color: aqua; font-size: 30px;">Paragraph 1</p>
+
+	<script>
+		const pNode = document.querySelector(".test");
+
+		// get the inline style of the paragraph:
+		const inlineStyleObj = pNode.style;
+		// read border property:
+		console.log(inlineStyleObj.border); // ''
+
+		// get the computed style of the paragraph:
+        const computedStyleObj = window.getComputedStyle( pNode );
+		// read border property:
+		console.log(computedStyleObj.border); //'1px solid rgb(255, 0, 0)'
+	</script>
+</body>
+</html>

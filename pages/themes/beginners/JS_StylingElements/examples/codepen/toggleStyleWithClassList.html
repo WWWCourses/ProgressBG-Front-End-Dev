@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>toggleStyleWithClassList </title>
+	<style>
+		section>h2{
+			padding: .5em 0;
+			background-color: #666;
+		}
+		section>h2:hover{
+			cursor: pointer;
+		}
+
+		section>article{
+			display: none;
+		}
+
+		/* this class will be set/unset by JS on respective elements  */
+		.visible{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<h2 title="click to read">Article 1</h2>
+		<article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus earum asperiores recusandae harum sunt, id nisi nemo possimus voluptate architecto molestiae incidunt, eos magni, nostrum blanditiis iusto sapiente officiis assumenda.</article>
+	</section>
+	<section>
+		<h2 title="click to read">Article 2</h2>
+		<article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus earum asperiores recusandae harum sunt, id nisi nemo possimus voluptate architecto molestiae incidunt, eos magni, nostrum blanditiis iusto sapiente officiis assumenda.</article>
+	</section>
+	<section>
+		<h2 title="click to read">Article 3</h2>
+		<article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus earum asperiores recusandae harum sunt, id nisi nemo possimus voluptate architecto molestiae incidunt, eos magni, nostrum blanditiis iusto sapiente officiis assumenda.</article>
+	</section>
+
+	<script>
+		// get all section object and attach click events to them:
+		const sections = document.querySelectorAll('section');
+		for (let i = 0; i < sections.length; i++) {
+			const section = sections[i];
+
+			section.addEventListener('click', function (e) {
+				// get article object in current section:
+				let article = section.querySelector('article');
+
+				// toglle class="visible":
+				article.classList.toggle('visible');
+			})
+
+		}
+	</script>
+</body>
+</html>
