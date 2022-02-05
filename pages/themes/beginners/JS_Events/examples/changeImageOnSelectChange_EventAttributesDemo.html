@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>changeImageOnSelect </title>
+	<style>
+		.product{
+			display: flex;
+			border: 1px solid #666;
+		}
+
+		.product-right{
+			padding-left:1em;
+		}
+	</style>
+</head>
+<body>
+	<h1>Change image on select change - demo using Event Attributes</h1>
+	<main>
+		<div class="products">
+			<div class="product">
+				<div class="product-left"><img src="https://picsum.photos/id/238/200/300" alt=""></div>
+				<div class="product-right">
+					<p>change option to change image</p>
+					<select name="select-product" onchange="changeImage(this)">
+						<option value="https://picsum.photos/id/238/200/300">Option 1</option>
+						<option value="https://picsum.photos/id/239/200/300">Option 2</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="products">
+			<div class="product">
+				<div class="product-left"><img src="https://picsum.photos/id/100/200/300" alt=""></div>
+				<div class="product-right">
+					<p>change option to change image</p>
+					<select name="select-product" onchange="changeImage(this)">
+						<option value="https://picsum.photos/id/100/200/300">Option 1</option>
+						<option value="https://picsum.photos/id/101/200/300">Option 2</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script>
+		// когато се извика changeImage(this), в select параметъра ще имаме element object за съответния select елемент
+		function changeImage(select){
+			// "взимаме" value стойността на избрания option:
+			let imagePath = select.value;
+
+			// трябва да вземем съответния img element object. Можем да изпозлваме DOM пропъртита за навигиране в DOM дървото
+			// https://www.w3schools.com/jsref/prop_node_parentelement.asp
+			// https://www.w3schools.com/jsref/prop_node_previoussibling.asp
+			const img = select.parentElement.previousElementSibling.children[0]
+			// console.log(img);
+
+			// сега можем лесно да променим стойността на src атрибута с imagePath:
+			img.src = imagePath
+		}
+	</script>
+</body>
+</html>
