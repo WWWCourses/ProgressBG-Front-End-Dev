@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>changeImageOnSelect </title>
+	<style>
+		.product{
+			display: flex;
+			border: 1px solid #666;
+		}
+
+		.product-right{
+			padding-left:1em;
+		}
+	</style>
+</head>
+<body>
+	<h1>Change image on select change - demo using addEventListener()</h1>
+	<main>
+		<div class="products">
+			<div class="product">
+				<div class="product-left"><img src="https://picsum.photos/id/238/200/300" alt=""></div>
+				<div class="product-right">
+					<p>change option to change image</p>
+					<select name="select-product">
+						<option value="https://picsum.photos/id/238/200/300">Option 1</option>
+						<option value="https://picsum.photos/id/239/200/300">Option 2</option>
+					</select>
+				</div>
+			</div>
+			<div class="product">
+				<div class="product-left"><img src="https://picsum.photos/id/100/200/300" alt=""></div>
+				<div class="product-right">
+					<p>change option to change image</p>
+					<select name="select-product">
+						<option value="https://picsum.photos/id/100/200/300">Option 1</option>
+						<option value="https://picsum.photos/id/101/200/300">Option 2</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script>
+		function productsClickHandler(e) {
+			// "взимаме" обекта, върху който е кликнато - ако не е select елемента, прекратяваме функцията
+			if(e.target.nodeName !== 'SELECT'){
+				return ;
+			}
+
+			// след като сме тук, значи в e.target имаме обекта, представящ select елемента
+			let select = e.target;
+			console.log(select);
+
+			// "взимаме" value стойността на избрания option:
+			let imagePath = select.value;
+
+			// трябва да вземем съответния img element object. Можем да изпозлваме DOM пропъртита за навигиране в DOM дървото
+			// https://www.w3schools.com/jsref/prop_node_parentelement.asp
+			// https://www.w3schools.com/jsref/prop_node_previoussibling.asp
+			const img = select.parentElement.previousElementSibling.children[0]
+			// console.log(img);
+
+			// сега можем лесно да променим стойността на src атрибута с imagePath:
+			img.src = imagePath
+
+		}
+
+		// "взимаме" <div class="products">, тъй като всички елементи, които ни трябват са в него:
+		let products = document.querySelector('.products');
+
+		// при клик върху products, искаме да се изпълни функцията productsClickHandler():
+		products.addEventListener('click', productsClickHandler);
+	</script>
+</body>
+</html>
