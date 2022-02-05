@@ -78,8 +78,9 @@
 </section>
 
 
-<section><h2>За какво и как се използват <code class="kw">event handlers.</code></h2>
-    <section class="normalFont"><h3>Intro</h3>
+<section id="eventsOverview"><h1>Въведение</h1></section>
+<section><h2>Въведение</h2>
+    <section class="normalFont">
         <dl class="fa">
             <dt>Потребителят може да взаимодейства с HTML елементите в страницата - клик с мишката, въвеждане на текст, скрол и пр.</dt>
             <dt>По-същество при всяко взаимодействие на потребителя с елементите се генерира така нареченото "събитие"(<code>DOM Event</code>).</dt>
@@ -121,7 +122,8 @@
     </section>
 </section>
 
-<section><h2>HTML Event Attributes</h2>
+<section id="htmlEventAttributes"><h1>Обработка на събития с HTML Event Attributes</h1></section>
+<section><h2>Обработка на събития с HTML Event Attributes</h2>
     <section>
         <dl class="fa">
             <dt>Можем да асоциираме събитие с JavaScript код, като използваме HTML Event атрибути</dt>
@@ -143,22 +145,31 @@
             // асоциираме 'ondblclick' event с P елемента:
             <p class="test" ondblclick="this.innerHTML='Bravo, you have double clicked!'">double click me</p>
         </code></pre>
+        <dl class="fa">
+            <dt class="note">Когато използваме <code>this</code> в стойността на ивент атрибут, то в <code>this</code> имаме обекта, представят съответния елемент.</dt>
+        </dl>
     </section>
     <section>
-        <p>Естествено, много по-удобно и ефективно е вместо да пишем JavaScript код в HTML атрибут, да го обособим като функция</p>
+        <dl class="fa">
+            <dt>Естествено, много по-удобно и ефективно е вместо да пишем JavaScript код в HTML атрибут, да го обособим като функция</dt>
+            <dt>В практиката, функции, които дефинираме, за да бъдат извикани при настъпване на даден ивент, наричаме <span class="note">event handlers</span></dt>
+        </dl>
         <pre><code rel="HTML" class="html">
-            <p class="test" ondblclick="handleDblClick(this);">double click me</p>
+            <p class="test" onclick="clickHandler(this);">double click me</p>
         </code></pre>
         <pre><code rel="JS" class="js">
-            function handleDblClick( node ){
-                node.innerHTML = "Bravo, you have double clicked!"
+            function clickHandler( node ){
+                node.innerHTML = "Bravo, you have clicked!"
             }
         </code></pre>
-        <p>Тук трябва да извикаме функцията експлицитно, тъй като единственото, което ще направи браузера е да <span class="note">изпълни</span> JavaScript кода подаден в атрибута 'ondblclick', когато даденото събитие настъпи.</p>
+        <dl class="fa">
+            <dt>Тук трябва да извикаме функцията експлицитно, тъй като единственото, което ще направи браузера е да <span class="note">изпълни</span> JavaScript кода подаден в атрибута 'onclick', когато даденото събитие настъпи.</dt>
+        </dl>
     </section>
 </section>
 
-<section><h2>element.addEventListener() method</h2>
+<section id="elementAddEventListenerMethod"><h1>Обработка на събития с HTML с <code>element.addEventListener()</code> метода</h1></section>
+<section><h2>Обработка на събития с HTML с <code>element.addEventListener()</code> метода</h2>
     <section>
         <dl class="fa">
             <dt>Обработването на събития в самия HTML, макар и лесно за разбиране и използване има няколко недостатъка:</dt>
