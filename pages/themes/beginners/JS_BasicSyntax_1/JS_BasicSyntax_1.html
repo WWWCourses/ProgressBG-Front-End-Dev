@@ -205,7 +205,7 @@
 	<section style="font-size: .9em"><h3>Деклариране/Дефиниране</h3>
 		<dl class="fa">
 			<dt>Създаването на една променлива се нарича <span class="note">деклариране</span> на променлива.
-			В JavaScript това става чрез запазената за езика дума <code class="note">let</code>.
+			В JavaScript това става чрез запазената за езика дума <code class="note">var</code>.
 			</dt>
 			<dt>В ES 6, се въвеждат и нови думи за деклариране на променливи: <code class="note">let</code> и <code class="note">const</code>, които ще разгледаме след като изясним понятията "scope" и "hoisting".</dt>
 			<dt>Ако желаем, може при създаването на променливата, да запишем в нея конкретна стойност - т.е. да <span class="note">дефинираме</span>(<span>инициализираме</span>) променливата.</dt>
@@ -220,7 +220,7 @@
 		</code></pre>
 	</section>
 	<section><h3>Глобални променливи</h3>
-		<p>В JavaScript, променлива може да се създаде и без указване на <code class="note">let</code>/<span class="note">let</span> или <span class="note">const</span>. Например:</p>
+		<p>В JavaScript, променлива може да се създаде и без да се декларира явно с <code class="note">var</code>/<span class="note">let</span> или <span class="note">const</span>. Например:</p>
 		<pre><code rel="JS" class="js">
 			x = 10; // (Error in strict mode)
 			console.log(x);
