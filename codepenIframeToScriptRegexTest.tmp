@@ -1,0 +1,62 @@
+// Replace Iframe with P+Script
+------>
+<iframe.*src=['"](https:)?//codepen.io/webdesigncourse/embed/([^?]+?)\?.*theme-id=(\d+).*default-tab=([^'"]+?)['"].+?>.*<a.+?>(.+?)</a>.*?([\s\S\r]+?)</iframe>
+<------
+<p class="codepen" data-height="300" data-theme-id="$3" data-default-tab="$4" data-user="ProgressWWWCourses" data-slug-hash="$2" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="$1">
+		<span>$5</span>
+		</p>
+------>
+
+<iframe height='400' scrolling='no' src='//codepen.io/webdesigncourse/embed/QKNxkd/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; '>See the Pen <a href='//codepen.io/webdesigncourse/pen/QKNxkd/'>Block, inline & inline-block elements</a> by Iva Popova (<a href='//codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='//codepen.io'>CodePen</a>.</iframe>
+
+<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="html,result" data-user="webdesigncourse" data-slug-hash="QKNxkd" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Display Property Examples 1">
+  <span>See the Pen <a href="https://codepen.io/webdesigncourse/pen/QKNxkd">
+  Display Property Examples 1</a> by Iva Popova (<a href="https://codepen.io/webdesigncourse">@webdesigncourse</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+
+<iframe height='328' scrolling='no' title='Lab5: All Examples' src='https://codepen.io/ProgressWWWCourses/embed/JNydxy/?height=328&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ProgressWWWCourses/pen/JNydxy/'>Lab5: All Examples</a> by Iva E. Popova (<a href='//codepen.io/ProgressWWWCourses'>@ProgressWWWCourses</a>) on <a href='//codepen.io'>CodePen</a>.
+			</iframe>
+
+
+// Remove codepen script
+------>
+<script.*src=['"].+?codepen.+?['"]></script>[\s\r]*
+<--------
+------>
+
+// Add unified codepen script
+------>
+([\s\r]*)<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>[\s\S\r]*
+</body>
+<--------
+$1<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+$1<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</body>
+------>
+
+
+// TODO:
+<p data-height="400" data-theme-id="20230" data-slug-hash="Pbxajb" data-default-tab="css,result" data-user="webdesigncourse" data-embed-version="2" data-pen-title="TransitionExample-GrowingBall" class="codepen">See the Pen <a href="//codepen.io/webdesigncourse/pen/Pbxajb/">TransitionExample-Growingball</a> by Iva Popova (<a href="//codepen.io/webdesigncourse">@webdesigncourse</a>) on <a href="//codepen.io">CodePen</a>.</p>
+~~~~~~~~~~~~~~~~~~~~~~~~From Original~~~~~~~~~~~~~~~~~~~~~~~~
+<iframe height="300" style="width: 100%;" scrolling="no" title="Multiple links targeted to one Iframe" src="https://codepen.io/webdesigncourse/embed/rWZqxR?height=300&theme-id=20230&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/webdesigncourse/pen/rWZqxR'>Multiple links targeted to one Iframe</a> by Iva Popova
+  (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+<iframe class="resultFrame" scrolling='no' title='Multiple links targeted to one Iframe'
+src='//codepen.io/webdesigncourse/embed/rWZqxR/?height=500&theme-id=20230&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='//codepen.io/webdesigncourse/pen/rWZqxR/'>Multiple links targeted to one Iframe</a> by Iva Popova (<a href='//codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='//codepen.io'>CodePen</a>.</iframe>
+
+~~~~~~~~~~~~~~~~~~~~~~~~To   Original~~~~~~~~~~~~~~~~~~~~~~~~
+<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="html,result" data-user="webdesigncourse" data-slug-hash="rWZqxR" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Multiple links targeted to one Iframe">
+  <span>See the Pen <a href="https://codepen.io/webdesigncourse/pen/rWZqxR">
+  Multiple links targeted to one Iframe</a> by Iva Popova (<a href="https://codepen.io/webdesigncourse">@webdesigncourse</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+
+
+
