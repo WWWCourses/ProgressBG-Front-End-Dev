@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
 	<!-- Printing and PDF exports -->
 	<script>
-		var link = document.createElement( 'link' );
+		let link = document.createElement( 'link' );
 		link.rel = 'stylesheet';
 		link.type = 'text/css';
 		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/css/print/pdf.css' : '../../../../lib/reveal.js/css/print/paper.css';
@@ -84,7 +84,7 @@
 			 <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
 		</div>
 		<div class="author">
-			<span class="date">2015 - 2020, </span>
+			<span class="date">2015 - 2023, </span>
 			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
 		</div>
 	</section>
@@ -92,7 +92,7 @@
 
 
 
-<section><h3>(; Въведение в JavaScript ;) </h3>
+<section><h3>JavaScript - the language no one can escape :)</h3>
 	<iframe width="1280" height="720" src="https://www.youtube.com/embed/JEpY9C49sqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="min-height:70vh" allowfullscreen></iframe>
 </section>
 
@@ -169,7 +169,7 @@
 			alert("Welcome");
 
 			// декларира променливата answer
-			var answer;
+			let answer;
 
 			// записва числото 42 в променливата answer
 			answer = 42;
@@ -220,7 +220,7 @@
 		</code></pre>
 	</section>
 	<section><h3>Глобални променливи</h3>
-		<p>В JavaScript, променлива може да се създаде и без указване на <code class="note">var</code>/<span class="note">let</span> или <span class="note">const</span>. Например:</p>
+		<p>В JavaScript, променлива може да се създаде и без да се декларира явно с <code class="note">var</code>/<span class="note">let</span> или <span class="note">const</span>. Например:</p>
 		<pre><code rel="JS" class="js">
 			x = 10; // (Error in strict mode)
 			console.log(x);
@@ -258,7 +258,7 @@
 				const     export   import      protected  true
 				continue  extends  in          public     try
 				debugger  false    instanceof  return     typeof
-				default   finally  interface   static     var
+				default   finally  interface   static     let
 			</code></pre>
 			<dt>Пълен списък: <a href="http://www.w3schools.com/js/js_reserved.asp">http://www.w3schools.com/js/js_reserved.asp</a></dt>
 		</dl>
@@ -560,8 +560,8 @@
 		<p>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Степенуване</a> @MDN</p>
 	</section>
 	<section><h3>Increment и Decrement</h3>
-		<!-- <iframe id="reddit-embed" src="https://www.redditmedia.com/r/ProgrammerHumor/comments/caj01i/you_know_you_updated_from_junior_to_senior/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" height="169" width="640" scrolling="no"></iframe> -->
-		<a href="https://www.reddit.com/r/ProgrammerHumor/comments/caj01i/you_know_you_updated_from_junior_to_senior/">You know you updated from Junior to Senior developer when ...</a>
+		<a href="https://www.reddit.com/r/ProgrammerHumor/comments/caj01i/you_know_you_updated_from_junior_to_senior/">:) You know you updated from Junior to Senior developer when:</a>
+		<img src="./images/increment_from_junior_to_denior.webp" alt="">
 	</section>
 	<section id="increment"><h3>Инкрементиране (Increment)</h3>
 		<dl class="fa">
@@ -570,13 +570,13 @@
 			<dd><span class="note">префиксен (++i)</span>: <span>променливата се увеличава с 1. Стойността на израза е <span class="note">i+1</span></span>.</dd>
 			<dd><span class="note">суфиксен (i++)</span>: <span>променливата се увеличава с 1. Стойността на израза е <span class="note">i</span></span></dd>
 			<pre><code rel="JS" class="js">
-				var i = 2;
+				let i = 2;
 
 				//postfix increment:
-				var j = i++; // j = 2, i = 3
+				let j = i++; // j = 2, i = 3
 
 				//prefix increment:
-				var j = ++i; // j = 3, i = 3
+				let j = ++i; // j = 3, i = 3
 			</code></pre>
 			<dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment">Increment @MDN</a></dt>
 		</dl>
@@ -585,32 +585,32 @@
 		<dl class="fa">
 			<dt>Намалява стойността на променлив с 1. Аналогичен на инкремента.</dt>
 			<pre><code rel="JS" class="js">
-				var i = 2;
+				let i = 2;
 
 				//postfix decrement:
-				var j = i--; // j = 2, i = 1
+				let j = i--; // j = 2, i = 1
 
 				//prefix decrement:
-				var j = --i; // j = 1, i = 1
+				let j = --i; // j = 1, i = 1
 			</code></pre>
 			<dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement">Increment @MDN</a></dt>
 		</dl>
 	</section>
 	<section id="incrementExamples1"><h3>Increment - examples</h3>
 		<pre><code rel="JS" class="js">
-			var x = 1;
+			let x = 1;
 			console.log(x++); //1
 			console.log(x);   //2
 
-			var y = 1;
+			let y = 1;
 			console.log(++y); //2
 			console.log(y);   //2
 		</code></pre>
 	</section>
 	<section id="incrementExamples2"><h3>Increment - examples</h3>
 			<pre><code rel="JS" class="js">
-				var x = 1;
-				var y = 1;
+				let x = 1;
+				let y = 1;
 
 				console.log( x++ + ++y); // 3
 
@@ -721,7 +721,7 @@
 			<dt>Когато имаме една и съща променлива от двете страни на assignment оператора и знак за операция, то можем да запишем израза съкратено.</dt>
 		</dl>
 		<pre><code rel="JS" class="js">
-			var x = 4;
+			let x = 4;
 			x += 3; // x = x + 3;
 			x ­-= 3; // x = x - 3;
 			x *= 3; // x = x * 3;
@@ -947,13 +947,13 @@
 		</span>
 		</p>
 	</section>
-	<section><h3 class="advanced">Short-circuit evaluation</h3>
+	<!-- <section><h3 class="advanced">Short-circuit evaluation</h3>
 		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#short-circuit_evaluation">Short-circuit_evaluation @MDN</a>
 		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="js,result" data-user="webdesigncourse" data-slug-hash="rpgOxG/" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="JS: Short-circuit evaluation">
 		<span>See the Pen <a href='https://codepen.io/webdesigncourse/pen/rpgOxG/'>JS: Short-circuit evaluation</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
 		</span>
 		</p>
-	</section>
+	</section> -->
 </section>
 
 <section id="conditionalStatements"><h1>Условни изрази (Conditional statements)</h1></section>
@@ -1042,14 +1042,14 @@
 			<dt>Разгледайте следните 2 примера, които са фунцкционално еквиваленти, но показват удобството от използването на ternary operator.</dt>
 		</dl>
 		<pre><code rel="JS" class="js">
-			var x = 42;
+			let x = 42;
 
-			var numType = x%2===0 ? "even" : "odd";
+			let numType = x%2===0 ? "even" : "odd";
 
 			console.log(numType); // "even"
 		</code></pre>
 		<pre><code rel="JS" class="js">
-			var x = 42, numType;
+			let x = 42, numType;
 
 			if(x%2===0){
 				numType = "even"
@@ -1100,7 +1100,7 @@
 	</section>
 	<section><h3><code>for</code> Statement: пример 1</h3>
 		<pre><code rel="JS">
-			for (var i = 0; i < 5; i++) {
+			for (let i = 0; i < 5; i++) {
 				console.log("i=" + i);
 			}
 		</code></pre>
@@ -1116,7 +1116,7 @@
 	<section><h3><code>for</code> Statement: пример 2</h3>
 		<pre><code rel="JS">
 			// i е четно число, в интервала [0-10]
-			for (var i = 2; i <= 10; i = i+2){
+			for (let i = 2; i <= 10; i = i+2){
 				console.log("i=", i);
 			}
 		</code></pre>
@@ -1132,11 +1132,11 @@
 	<section><h3><code>for</code> Statement: пример 3</h3>
 		<pre><code rel="JS">
 			// create the list element
-			var listNode = document.createElement(listType);
+			let listNode = document.createElement(listType);
 
 			//create list items
-			for (var i = 1; i <= listItemsCount; i++){
-				var listItem = document.createElement('li');
+			for (let i = 1; i <= listItemsCount; i++){
+				let listItem = document.createElement('li');
 				listItem.innerHTML = 'Item '+ i;
 				listNode.appendChild(listItem);
 			}
@@ -1149,8 +1149,8 @@
 	<section><h3><code>for</code> Statement: пример 4</h3>
 		<pre><code rel="JS">
 			// half tree print
-			var treeDeep = 5;
-			for (var i = 1; i <= treeDeep; i++) {
+			let treeDeep = 5;
+			for (let i = 1; i <= treeDeep; i++) {
 				console.log("*".repeat(i));
 			}
 		</code></pre>
@@ -1168,25 +1168,26 @@
 		<p><a href="https://codepen.io/webdesigncourse/pen/veMXKd">play with it on codepen</a></p>
 		<pre><code rel="JS">
 			// full tree print
-			var crownHeight = 6;
-			var boleHeight = 2;
-			var boleWidth = 3;
-			var spaceCount;
+			let crownHeight = 6;
+			let boleHeight = 2;
+			let boleWidth = 3;
+			let spaceCount;
 
 			// print the crown:
-			for (var i = 1; i <= crownHeight; i++) {
+			for (let i = 1; i <= crownHeight; i++) {
 				spaceCount = Math.floor(crownHeight) - i;
 				console.log(" ".repeat(spaceCount) + "*".repeat(i * 2 - 1));
 			}
 
 			// print the bole:
 			spaceCount = Math.floor((crownHeight * 2 - 1 - boleWidth) / 2);
-			for (var i = 1; i <= boleHeight; i++) {
+			for (let i = 1; i <= boleHeight; i++) {
 				console.log(" ".repeat(spaceCount) + "*".repeat(boleWidth));
 			}
 		</code></pre>
 		<p>резултата, видим в конзолата, е:</p>
 		<pre><code rel="Console" class="bash">
+
 					 *
 					***
 				 *****
@@ -1216,7 +1217,7 @@
 	</section>
 	<section><h3><code>while</code> statement: пример 1</h3>
 		<pre><code rel="JS" class="js">
-			var userTries = 5;
+			let userTries = 5;
 
 			while( userTries>0){
 				console.log(`Try: ${userTries}`);
@@ -1225,7 +1226,7 @@
 		</code></pre>
 		<p class="note">Забележете, че този пример, би било по-добре да бъде имплементиран чрез <code>for</code> statement</p>
 		<pre><code rel="JS" class="js">
-			for(var userTries = 5; userTries>0; userTries--){
+			for(let userTries = 5; userTries>0; userTries--){
 				console.log(`Try: ${userTries}`);
 			}
 		</code></pre>
@@ -1234,11 +1235,11 @@
 		<p>Но когато не знаем предварително колко пъти ще се повтори цикъла използваме <code>while</code></p>
 		<pre style="width: 70vw;"><code rel="JS" class="js">
 			// Машината си "намисля" число:
-			var machineNumber = Math.round(Math.random() * 10);
+			let machineNumber = Math.round(Math.random() * 10);
 			console.log(`machineNumber: ${machineNumber}`);
 
 			// Потребителя "въвежда" число:
-			var userNumber = Math.round(Math.random() * 10);
+			let userNumber = Math.round(Math.random() * 10);
 			console.log(`userNumber: ${userNumber}`);
 
 			while(userNumber != machineNumber){
@@ -1262,7 +1263,7 @@
 	<section><h3><code>do-while</code> statement: пример</h3>
 		<pre style="width: 75vw;"><code rel="JS" class="js">
 			// Машината си "намисля" число:
-			var machineNumber = Math.round(Math.random() * 10);
+			let machineNumber = Math.round(Math.random() * 10);
 			console.log(`machineNumber: ${machineNumber}`);
 
 			do{
@@ -1302,7 +1303,7 @@
 				<pre><code rel="JS" class="js">
 					if(1){return 0};  // if Statement
 					while(x = 2){console.log(x)}; // while Statement
-					var x; // variable declaration Statement
+					let x; // variable declaration Statement
 				</code></pre>
 			</dt>
 		</dl>
@@ -1365,9 +1366,9 @@
 	<!-- <a href="//codepen.io/collection/XOEQay/">codepen колекция с примери и задачи</a> -->
 </section>
 
-<section><h2>codepen examples</h2>
+<!-- <section><h2>codepen examples</h2>
 	<p>Повече примери и задачи: <a href="https://codepen.io/collection/XOEQay">JS_Basic_Syntax</a></p>
-</section>
+</section> -->
 
 <section><h2>допълнителни ресурси по темата</h2>
 	<dl class="fa">
@@ -1401,7 +1402,7 @@
 <script>
 	// Full list of configuration options available at:
 	// https://github.com/hakimel/reveal.js#configuration
-	var highlightjsTabSize = '  ';
+	let highlightjsTabSize = '  ';
 	Reveal.initialize({
 		controls: true,
 		progress: true,

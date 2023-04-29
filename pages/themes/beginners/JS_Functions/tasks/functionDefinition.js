@@ -49,6 +49,25 @@ const tasks = {
 		let numbers = [2,-4,5,3,9,0,1];
 		logArrayEvenElements(numbers);
 	},
+	'sumArrays': function() {
+		// Да се дефинира функция, която приема 2 масива и връща масив, чиито елементи са сумата от елементите на двата масива (елемент по елемент).
+
+		function sumArrays(arr1, arr2) {
+			let newArr = []
+			for (let i = 0; i < arr1.length; i++) {
+				let sum = arr1[i] + arr2[i]
+				newArr.push(sum)
+			}
+
+			return newArr;
+		}
+
+		// TEST:
+		console.log( sumArrays([1,2,3], [4,5,6]) );
+		// OUTPUT:
+		// [ 5, 7, 9 ]
+
+	},
 	'calculator':function () {
 		// Definition of object 'calc', with next properties and values:
 		// 'add' - a function, which returns the sum of 2 numbers
@@ -133,4 +152,4 @@ const tasks = {
 		foobar[1](); // 'Bar'
 	}
 }
-tasks.functionsAsArrayElements();
+tasks.sumArrays();

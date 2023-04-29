@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Filter on BG Image Only</title>
+	<style type="text/css">
+		body,p{
+			margin: 0;
+		}
+		header, footer{
+			height: 10vh;
+			background: #333;
+			color: #ccc;
+		}
+		.page{
+			position: relative;
+			min-height:80vh;
+			font-size: 2em;
+			color: #FFF;
+			background-color:#999;
+		}
+		.page:before{
+			/* add block element for the image */
+			content: "";
+			display: block;
+
+			/* make it same size as .page  */
+			position: absolute;
+			top:0; left: 0; bottom: 0; right: 0;
+
+			/* add bg image and effects */
+			background-image:url("https://picsum.photos/id/1/1024/800");
+			background-size: cover;
+			/* filter: blur(10px); */
+			opacity: .3;
+		}
+		.page>p{
+			/* needed to put it on top of the pseudo-element, i.e. to be in the same z-index stacking context. Check : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context */
+			position: relative;
+		}
+
+	</style>
+</head>
+<body>
+	<header>HEADER</header>
+	<div class="page">
+		<p>Please, be patient while loading the image...</p>
+	</div>
+	<footer>FOOTER</footer>
+</body>
+</html>
