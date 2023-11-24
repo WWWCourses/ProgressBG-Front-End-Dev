@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tmp </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<style>
+		.wrapper{
+			display: flow-root;
+			border: 5px solid #f99;
+		}
+
+		.wrapper div{
+			float: left;
+			width: 5em;
+			height: 5em;
+			margin: .5em;
+			border: 2px solid #99f;
+		}
+		.clearfix{
+			clear:both !important;
+			/* float: none !important; */
+			border-color: red;
+			/* float: none !important; */
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="clearfix"></div>
+	</div>
+	<p><b>Task</b>: как би излгеждала страницата, ако нямахме .clear елемент след последния floated .box?</p>
+</body>
+</html>
