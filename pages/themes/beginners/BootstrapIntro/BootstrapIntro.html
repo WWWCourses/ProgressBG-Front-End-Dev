@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+		<title>BootstrapIntro</title>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<!-- css & themes include -->
+		<link rel="stylesheet" href="../../../../lib/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+		<!-- Printing and PDF exports -->
+		<script>
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/css/print/pdf.css' : '../../../../lib/reveal.js/css/print/paper.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<!-- CUSTOM -->
+		<base target="_blank">
+</head>
+<body>
+		<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+				<div class="top_links">
+						<a class="home_link" href="../../../../pages/agenda/beginners.html#BootstrapIntro" target="_top"><i class="fa fa-home"></i></a>
+						<span class="help_link"><i class="fa fa-question"></i></span>
+						<div class="help_text">
+				<div><span>N/Спейс</span><span>следващ слайд</span></div>
+				<div><span>P</span><span>предишен слайд</span></div>
+				<div><span>O</span><span>всички слайдове</span></div>
+				<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+				<div class="print-howto"><br>If you want print version => add '<code>?print-pdf</code>' <br> at the end of slides URL (remove '#' fragment) and then print. <br>
+					Like: https://wwwcourses.github.io/...CourseIntro.html?print-pdf </div>
+			</div>
+				</div>
+				<div class="footer theme_switch">
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+				</div>
+				<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Въведение в Bootstrap</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Създаден за</p>
+			</div>
+			<div class="company">
+				<a href="http://progressbg.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/ProgressBG_logo_529_127.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Създаден от</p>
+		</div>
+		<div class="company">
+			 <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Ива Е. Попова</a></div>
+		</div>
+		<div class="author">
+			<span class="date">2015 - 2023, </span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+
+
+<section data-min="5"><h1>Въведение в Bootstrap</h1></section>
+<section><h2>Въведение в Bootstrap</h2>
+	<section><h3>Какво е Bootstrap?</h3>
+		<dl class="fa">
+			<dt>Bootstrap е свободен и отворен за използване набор от инструменти за разработване на уебсайтове и уеб приложения.</dt>
+			<dt>Той включва HTML и CSS базирани шаблони за типография, форми, бутони, навигация и други компоненти на интерфейса.</dt>
+			<dt>Също така включва опционални JavaScript разширения за допълнителна функционалност.</dt>
+		</dl>
+	</section>
+	<section><h3>Начало с Bootstrap</h3>
+		<dl class="fa">
+				<dt>За да започнете с Bootstrap, първо трябва да включите CSS файла във вашия HTML документ.</dt>
+				<dt>Това може да стане чрез добавяне на следния линк таг в секцията &lt;head&gt; на вашия HTML документ.</dt>
+		</dl>
+		<pre><code rel="HTML" class="html5">
+				&lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"&gt;
+		</code></pre>
+	</section>
+</section>
+
+<section data-min="5"><h1>Bootstrap Grid система</h1></section>
+<section><h2>Bootstrap Grid система</h2>
+	<section><h3>Основи на Bootstrap Grid</h3>
+		<dl class="fa">
+		<dt>Grid системата на Bootstrap ви позволява да създадете responsive layouts с лесни за използване класове.</dt>
+			<dt>Grid системата на Bootstrap използва контейнери, редове и колони за създаване на responsive layouts.</dt>
+			<dt>Тя е базирана на Flexbox и позволява лесно управление на лейаута на уебсайта на различни екранни размери.</dt>
+			<dt>Примери: <a href="https://getbootstrap.com/docs/5.3/examples/grid/">Bootstrap grid examples</a></dt>
+		</dl>
+	</section>
+</section>
+
+<section data-min="5"><h1>Компоненти на Bootstrap</h1></section>
+<section><h2>Компоненти на Bootstrap</h2>
+	<section><h3>Бутони и форми</h3>
+		<dl class="fa">
+			<dt>Bootstrap предлага различни стилове на бутони и форми, които могат да бъдат лесно интегрирани в уебсайтове.</dt>
+			<dt>Тези елементи са предварително стилизирани и могат да бъдат настроени чрез класове.</dt>
+			<dt>Примери: <a href="https://getbootstrap.com/docs/5.3/examples/buttons/">Bootstrap buttons examples</a></dt>
+			<dt>Примери: <a href="https://getbootstrap.com/docs/5.3/examples/checkout/">Bootstrap checkout form examples</a></dt>
+		</dl>
+	</section>
+	<section><h3>Пример за бутони и форми</h3>
+		<pre><code rel="HTML" class="html5">
+			&lt;button class="btn btn-primary"&gt;Основен бутон&lt;/button&gt;
+			&lt;form&gt;
+			&lt;div class="form-group"&gt;
+				&lt;label for="inputEmail"&gt;Email адрес&lt;/label&gt;
+				&lt;input type="email" class="form-control" id="inputEmail" placeholder="Email"&gt;
+			&lt;/div&gt;
+			&lt;/form&gt;
+		</code></pre>
+	</section>
+</section>
+
+<section data-min="5"><h1>JavaScript Плъгини в Bootstrap</h1></section>
+<section><h2>JavaScript Плъгини в Bootstrap</h2>
+	<section><h3>Модални прозорци и карусели</h3>
+		<dl class="fa">
+			<dt>Bootstrap включва JavaScript плъгини като модални прозорци и карусели, които добавят интерактивност на уебсайтовете.</dt>
+			<dt>Тези плъгини могат да бъдат лесно активирани с помощта на атрибути на данни или JavaScript.</dt>
+		</dl>
+	</section>
+	<section><h3>Пример за модален прозорец и карусел</h3>
+		<pre><code rel="HTML" class="html5">
+			&lt;!-- Примерен код за модален прозорец и карусел --&gt;
+		</code></pre>
+	</section>
+</section>
+
+<section data-min="5"><h1>Навигация и компоненти на Bootstrap</h1></section>
+<section><h2>Навигация и компоненти на Bootstrap</h2>
+	<section><h3>Навигационни ленти</h3>
+		<dl class="fa">
+			<dt>Bootstrap предлага гъвкави опции за навигационни ленти, които са responsive и лесни за персонализиране.</dt>
+			<dt>Те могат да включват лого, линкове, форми и други компоненти.</dt>
+		</dl>
+	</section>
+	<section><h3>Пример за навигационна лента</h3>
+		<pre><code rel="HTML" class="html5">
+			&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+			&lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
+			&lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"&gt;
+				&lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+			&lt;/button&gt;
+			&lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+				&lt;ul class="navbar-nav"&gt;
+				&lt;li class="nav-item active"&gt;
+					&lt;a class="nav-link" href="#"&gt;Home &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;
+				&lt;/li&gt;
+				&lt;!-- Останали линкове --&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+			&lt;/nav&gt;
+		</code></pre>
+	</section>
+</section>
+
+<section data-min="5"><h1>Персонализация на Bootstrap</h1></section>
+<section><h2>Персонализация на Bootstrap</h2>
+	<section><h3>Персонализиране на теми</h3>
+		<dl class="fa">
+			<dt>Bootstrap позволява лесно персонализиране на теми чрез промяна на вградените CSS променливи.</dt>
+			<dt>Може да се използва SASS за по-гъвкаво управление на стиловете.</dt>
+		</dl>
+	</section>
+	<section><h3>Пример за персонализиране на тема</h3>
+		<pre><code rel="CSS" class="css">
+			$theme-colors: (
+			"primary": #007bff,
+			"success": #28a745,
+			"info": #17a2b8
+			);
+
+			@import "node_modules/bootstrap/scss/bootstrap";
+		</code></pre>
+	</section>
+</section>
+
+<section data-min="5"><h1>responsive изображения и медия</h1></section>
+<section><h2>responsive изображения и медия</h2>
+	<section><h3>Изображения и медийни обекти</h3>
+		<dl class="fa">
+			<dt>Bootstrap съдържа класове за създаване на responsive изображения и медийни обекти, които се адаптират към размера на екрана.</dt>
+			<dt>Това включва изображения, видеоклипове и други медийни компоненти.</dt>
+		</dl>
+	</section>
+	<section><h3>Пример за responsive изображения</h3>
+		<pre><code rel="HTML" class="html5">
+			&lt;img src="image.jpg" class="img-fluid" alt="Отзивчиво изображение"&gt;
+		</code></pre>
+	</section>
+</section>
+
+
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+		 <p>These slides are based on</p>
+		 <p>customised version of </p>
+		 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+		 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+				</div>
+		</div>
+		<!-- Custom processing -->
+		<script src="../../../../outfit/js/slides.js"></script>
+		<!-- external scripts -->
+
+		<script src="../../../../lib/reveal.js/js/reveal.js"></script>
+	<!-- init reveal -->
+		<script>
+				// Full list of configuration options available at:
+				// https://github.com/hakimel/reveal.js#configuration
+				var highlightjsTabSize = '  ';
+				Reveal.initialize({
+						controls: true,
+						progress: true,
+						slideNumber: 'c/t',
+						keyboard: true,
+						history: true,
+						center: true,
+						width: 1280,
+						height: 1024,
+						// Bounds for smallest/largest possible scale to apply to content
+						// minScale: .5,
+						maxScale: 1,
+						// slide transition
+						transition: 'concave', // none/fade/slide/convex/concave/zoom
+						// Factor of the display size that should remain empty around the content
+						margin: 0.1,
+						// shift+maous click to zoom in/out element
+						zoomKey: 'ctrl',
+						// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+						// transition: Reveal.getQueryHash().transition || 'default'
+						// Optional reveal.js plugins
+						dependencies: [
+								{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+								{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+								{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+								{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+								{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+								{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+						]
+				});
+		</script>
+	<!-- <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script> -->
+
+	<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>
