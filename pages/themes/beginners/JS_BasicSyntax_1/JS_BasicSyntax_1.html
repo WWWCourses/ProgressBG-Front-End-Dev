@@ -96,7 +96,6 @@
 	<iframe width="1280" height="720" src="https://www.youtube.com/embed/JEpY9C49sqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="min-height:70vh" allowfullscreen></iframe>
 </section>
 
-
 <section data-min="5" id="whatsInAProgram"><h1>Как работи една компютърна програма</h1></section>
 <section><h2>Как работи една компютърна програма</h2>
 	<section>
@@ -1026,6 +1025,34 @@
 			}
 		</code></pre>
 		<p><span class="note">В примера, който е коректен синтактично, има бъг - можете ли да го откриете?</span></p>
+	</section>
+	<section id="switch-statement"><h3>Switch Statement</h3>
+		<dl class="fa">
+			<dt><code>switch</code> statement е алтернатива на множество <code>else-if...else-if</code>, подходящ в случаите, когато трябва да се сравняват множество конкретни стойности на една променлива.</dt>
+			<dt>Self Learning: <a href="https://www.w3schools.com/js/js_switch.asp">JavaScript Switch Statement</a></dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			let fruit = "apple";
+
+			switch (fruit) {
+				case "apple":
+					console.log("Apple is red.");
+					break;
+				case "banana":
+					console.log("Banana is yellow.");
+					break;
+				default:
+					console.log("Unknown fruit.");
+			}
+
+			// Извежда: Apple is red.
+		</code></pre>
+		<dl class="fa" style="font-size: 0.65em;">
+			<dt><code>switch</code> изразът сравнява стойността на fruit със стойностите във всеки <code>case</code>.</dt>
+			<dt>Ако е намерено съответствие (напр. fruit е "apple"), изпълнява се кодът в този <code>case</code> блок.</dt>
+			<dt><code>break</code> прекратява <code>switch</code> блока и предотвратява изпълнението на следващите <code>case</code> блокове.</dt>
+			<dt><code>default</code> блокът се изпълнява, ако никой от <code>case</code> блоковете не съответства на стойността на fruit.</dt>
+		</dl>
 	</section>
 </section>
 
