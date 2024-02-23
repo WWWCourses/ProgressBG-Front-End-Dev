@@ -18,7 +18,7 @@
 	"codejs": {
 		"prefix": "codejs",
 		"body": [
-			"<pre><code rel=\"JS\" class=\"js\">",
+			"<pre><code rel=\"JS\" class=\"js\" style=\"min-height: 1vh;\">",
 			"\t$1",
 			"</code></pre>"
 		],
@@ -27,7 +27,7 @@
 	"codehtml": {
 		"prefix": "codeHTML",
 		"body": [
-			"<pre><code rel=\"HTML\" class=\"html\">",
+			"<pre><code rel=\"HTML\" class=\"html\" style=\"min-height: 1vh;\">",
 			"\t$1",
 			"</code></pre>"
 		],
@@ -36,7 +36,7 @@
 	"codecss": {
 		"prefix": "codejs",
 		"body": [
-			"<pre><code rel=\"CSS\" class=\"css\">",
+			"<pre><code rel=\"CSS\" class=\"css\" style=\"min-height: 1vh;\">",
 			"\t$1",
 			"</code></pre>"
 		],
