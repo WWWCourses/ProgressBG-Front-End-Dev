@@ -360,7 +360,7 @@
 	<section style="font-size: .8em"><h3 class="advanced">Местоположение (location): official rule</h3>
 			<ol reversed>
 				<li>Стил, прилаган от Браузера.</li>
-				<li>Потребителски стил на Браузера (“reader/user style sheet”)</li>
+				<li>Потребителски стил на Браузера (user style sheet) <sup>1</sup></li>
 				<li><span>Стил, зададен в HEAD секцията:</span>
 					<ul>
 						<li>Външен стил, свързан със документа чрез елемента link.</li>
@@ -372,6 +372,8 @@
 				<li>Декларация, маркирана като !important от разработчика на страницата.</li>
 				<li>Декларация, маркирана като !important от потребителя</li>
 			</ol>
+			<hr>
+			<p style="font-size: .8em;"><sup>1</sup> Съвременните браузъри (засега с изключение на Firefox) не предлагат директна промяна на вградения user style sheet. Но това е възможно с разширения на браузера, като <a href="https://chromewebstore.google.com/detail/clngdbkpkpeebahjckkjfobafhncgmne">Stylus</a></p>
 	</section>
 	<section style="font-size: .95em"><h3>Местоположение (location) - пример</h3>
 			<pre><code rel="CSS (CSS_cascade_location_rule.css)" class="css">
@@ -401,7 +403,12 @@
 			<p>Какъв цвят ще бъде шрифта на всеки параграф?</p>
 			<a class="fragment" href="examples/CSS_cascade_location_rule.html">Резултат...</a>
 	</section>
-	<section><h3>Пример за !important</h3>
+	<section><h3>!important</h3>
+			<dl class="fa" style="min-width:80vw">
+				<dt>декларация маркирана с !important е с по-висок от всички останали.</dt>
+				<dt>!important е мощно правило, но трябва да се използва с повишено внимание, тъй като може да затрудни поддръжката на кода.</dt>
+			</dl>
+
 			<pre><code rel="CSS">
 				p{
 						background: red !important;
