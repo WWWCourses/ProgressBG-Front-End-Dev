@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Olympic Rings</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            background-image: url("https://wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Visual_Formating_Model/homeworks/olimpic_rings/images/ocean-through-window-frame.jpg");
+            background-size: 100% 100%;
+
+            /* за да фикснем vertical margin collapse */
+            border:1px solid #fff0;
+            box-sizing: border-box;
+        }
+
+        .rings_wrapper {
+            /* Ще използваме em за базова единица при определяне на размерите на кръгчетата и техните отстъпи. Това ще ни позволи лесно да променяме мащаба на кръгчетата - променяме само тук font-size. */
+            font-size: 20px;
+
+            /* задаваме размери на контейнера*/
+            width: 24em;   /* достатъчно за 3 кръгчета с радиус 8em */
+            height: 12em;  /* достатъчно за 1.5 кръгчета */
+
+            /* центрираме го хоризонтално */
+            margin: 0 auto;
+
+            /* преместваме го по-надолу */
+            margin-top:30vh;
+        }
+
+
+        .row1,.row2{
+            /* подсигуряваме контейнерите да отчитат float децата си. Работи вместо clear hack-a */
+            display: flow-root;
+        }
+
+        .row2 {
+            /* задаваме широчината да бъде 2/3 от rings_wrapper, за да бъде точно за 2 кръгчета */
+            width: 66.67%;
+            /* центрираме по хоризонтала */
+            margin: 0 auto;
+            /* преместваме реда нагоре */
+            margin-top: -4em;
+        }
+
+        .ring {
+            float: left;
+
+            /* задаваме размери за квадрат, като включваме в тях и рамките, за по-лесни изчисления */
+            box-sizing:border-box;
+            width: 8em;
+            height: 8em;
+
+
+            /* задаваме тук - в общия клас - рамката, за да може да променяме лесно размера/типът й при необходимост */
+            border-width: .5em;
+            border-style: solid;
+
+            /* центрираме хоризонтално текста в кръгчето */
+            text-align: center;
+
+            /* центрираме вертикално текста в кръгчето: трябва да зададем височина на реда равна на височината на кръгчето, но тъй като по-горе използваме box-sizing: border-box, то трябва да изключим сега рамката */
+            line-height:  7em;
+            vertical-align: middle;
+
+            /* от квадрата правим кръг */
+            border-radius: 100%;
+
+            /* задаваме прозрачност */
+            opacity: .4;
+
+            /* козметични оформления за текста в кръгчето */
+            font-weight: bold;
+            font-family: serif;
+        }
+
+        .blue{ border-color: blue; }
+        .yellow{ border-color: yellow; }
+        .black{ border-color: black; }
+        .green{ border-color: green; }
+        .red{ border-color: red; }
+    </style>
+</head>
+<body>
+    <div class="rings_wrapper">
+        <div class="row1">
+            <div class="ring blue"><span>Europe</span></div>
+            <div class="ring yellow"><span>Africa</span></div>
+            <div class="ring black"><span>America</span></div>
+        </div>
+        <div class="row2">
+            <div class="ring green"><span>Asia</span></div>
+            <div class="ring red"><span>Australia</span></div>
+        </div>
+    </div>
+</body>
+</html>
