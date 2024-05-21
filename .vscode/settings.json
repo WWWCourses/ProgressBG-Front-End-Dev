@@ -19,7 +19,7 @@
         "python": "strings",
         "javascript": "body comments strings"
     },
-    "liveServer.settings.port": 5502,
+    "liveServer.settings.port": 5503,
     "workbench.colorCustomizations": {
         "editorWhitespace.foreground": "#AAA"
     },
