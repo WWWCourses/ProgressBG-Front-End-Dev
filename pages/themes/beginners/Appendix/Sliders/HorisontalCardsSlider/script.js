@@ -1,16 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Function to auto-scroll the slider
-    function autoScroll() {
-        scrollAmount += cardWidth; // Increment scroll amount by card width
-        if (scrollAmount > sliderScrollableWidth) {
-            scrollAmount = 0; // Reset scroll amount to create a loop
+    function scrollProducts(width) {
+        // Increment scroll amount by card width
+        scrollAmount += width;
+
+        // Do not allow negative scrollAmount
+        if (scrollAmount<0){
+            scrollAmount=0
         }
-        slider.style.transform = `translateX(-${scrollAmount}px)`; // Apply the transform to slider
+        // Reset scroll amount to create a loop when last product reached
+        if (scrollAmount > sliderScrollableWidth) {
+            scrollAmount = 0;
+        }
+
+        console.log(`scrollAmount: ${scrollAmount}`);
+        // Move slider horizontaly by scrollAmount pixels
+        slider.style.transform = `translateX(-${scrollAmount}px)`;
     }
 
     // Function to start the auto-scrolling
     function startAutoScroll() {
-        autoScrollInterval = setInterval(autoScroll, 2000); // Scroll every 2 seconds
+        autoScrollInterval = setInterval(()=>{
+            scrollProducts(cardWidth)
+        }, 2000); // Scroll every 2 seconds
     }
 
     // Function to stop the auto-scrolling
@@ -27,27 +39,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardWidth = document.querySelector('.product-card').offsetWidth + 20; // card width + margin
     let scrollAmount = 0; // Initialize scroll amount
     let autoScrollInterval; // Variable to store the interval
-    const sliderScrollableWidth = slider.scrollWidth - slider.clientWidth;
+    const sliderScrollableWidth = slider.scrollWidth - slider.clientWidth + cardWidth;
 
 
     // Event listener for previous button
     prevButton.addEventListener('click', () => {
         stopAutoScroll();
-        scrollAmount -= cardWidth; // Decrement scroll amount by card width
-        if (scrollAmount < 0) {
-            scrollAmount = 0; // Ensure scroll amount doesn't go below 0
-        }
-        slider.style.transform = `translateX(-${scrollAmount}px)`; // Apply the transform to slider
+        scrollProducts(-cardWidth)
+
     });
 
     // Event listener for next button
     nextButton.addEventListener('click', () => {
         stopAutoScroll();
-        scrollAmount += cardWidth; // Increment scroll amount by card width
-        if (scrollAmount > sliderScrollableWidth) {
-            scrollAmount = sliderScrollableWidth; // Ensure scroll amount doesn't exceed slider width
-        }
-        slider.style.transform = `translateX(-${scrollAmount}px)`; // Apply the transform to slider
+        scrollProducts(+cardWidth)
     });
 
     // Start automatic scrolling on page load
