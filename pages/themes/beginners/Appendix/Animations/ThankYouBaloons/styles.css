@@ -1,0 +1,244 @@
+/* -------------------------------- main --------------------------------- */
+:root {
+    --rg-color-1: #777;
+    --rg-color-2: #555;
+
+    --bg-color-1: #cd97c699;
+    --sh-color-1: #cd97c6;
+
+    --bg-color-2: #83cee0CC;
+    --sh-color-2: #83cee0;
+
+    --bg-color-3: #feff99CC;
+    --sh-color-3: #feff99;
+
+    --bg-color-4: #a4fb9999;
+    --sh-color-4: #a4fb99;
+
+    --bg-color-5: #80efef99;
+    --sh-color-5: #80efef;
+
+    --bg-color-6: #5e87b899;
+    --sh-color-6: #5e87b8;
+
+    --bg-color-7: #f4c3b3AA;
+    --sh-color-7: #f4c3b3;
+
+    --bg-color-8: #fdffcdDD;
+    --sh-color-8: #fdffcd;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Wendy One', sans-serif;
+    height: 100vh;
+    background-image: radial-gradient(var(--rg-color-1), var(--rg-color-2));
+}
+
+span {
+    text-transform: uppercase;
+}
+
+/* --------------------------- balloons common --------------------------- */
+.balloons-row-container {
+    width: 100%;
+    height: 30em;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /* border: 1px solid red; */
+}
+
+.balloons-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    height: 15em;
+    width: 80%;
+    /* align-content: space-around; */
+    margin: 0 auto;
+
+}
+
+.balloons-row>div {
+    position: relative;
+    /* flex-shrink: 0; */
+    width: 8em;
+    height: 10em;
+    padding: 1em;
+    border-radius: 80%;
+}
+
+.balloons-row>div:before {
+    position: absolute;
+    bottom: -0.8em;
+    left: 3.5em;
+    content: "▲";
+    text-shadow:
+        0px 2px 3px,
+        0px 4px 6px;
+}
+
+.balloons-row>div>span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 4.8em;
+    color: white;
+}
+
+/* -------------------------- first row styling -------------------------- */
+.balloons-row:nth-child(1)>div:nth-child(1) {
+    background: var(--bg-color-1);
+    box-shadow: inset 10px 10px 10px var(--sh-color-1);
+    text-shadow: 5px 5px 5px var(--sh-color-1);
+    animation: balloon1 6s ease-in-out infinite;
+}
+
+.balloons-row:nth-child(1)>div:nth-child(1):before {
+    color: var(--sh-color-1)
+}
+
+.balloons-row:nth-child(1)>div:nth-child(2) {
+    background: var(--bg-color-2);
+    box-shadow: inset 10px 10px 10px var(--sh-color-2);
+    text-shadow: 5px 5px 5px var(--sh-color-2);
+    animation: balloon2 6s ease-in-out infinite;
+}
+
+.balloons-row:nth-child(1)>div:nth-child(2):before {
+    color: var(--sh-color-2)
+}
+
+.balloons-row:nth-child(1)>div:nth-child(3) {
+    background: var(--bg-color-3);
+    box-shadow: inset 10px 10px 10px var(--sh-color-3);
+    text-shadow: 5px 5px 5px var(--sh-color-3);
+    animation: balloon3 6s ease-in-out infinite;
+}
+
+.balloons-row:nth-child(1)>div:nth-child(3):before {
+    color: var(--sh-color-3)
+}
+
+.balloons-row:nth-child(1)>div:nth-child(4) {
+    background: var(--bg-color-4);
+    box-shadow: inset 10px 10px 10px var(--sh-color-4);
+    text-shadow: 5px 5px 5px var(--sh-color-4);
+    animation: balloon4 6s ease-in-out infinite;
+}
+
+.balloons-row:nth-child(1)>div:nth-child(4):before {
+    color: var(--sh-color-4)
+}
+
+.balloons-row:nth-child(1)>div:nth-child(5) {
+    background: var(--bg-color-5);
+    box-shadow: inset 10px 10px 10px var(--sh-color-5);
+    text-shadow: 5px 5px 5px var(--sh-color-5);
+    animation: balloon5 6s ease-in-out infinite;
+}
+
+.balloons-row:nth-child(1)>div:nth-child(5):before {
+    color: var(--sh-color-5)
+}
+
+/* -------------------------- second row styling -------------------------- */
+.balloons-row:nth-child(2)>div:nth-child(1) {
+    background: var(--bg-color-6);
+    box-shadow: inset 10px 10px 10px var(--sh-color-6);
+    text-shadow: 5px 5px 5px var(--sh-color-6);
+    animation: balloon2 6s ease-in-out infinite;
+}
+
+.balloons-row:nth-child(2)>div:nth-child(1):before {
+    color: var(--sh-color-6)
+}
+
+.balloons-row:nth-child(2)>div:nth-child(2) {
+    background: var(--bg-color-7);
+    box-shadow: inset 10px 10px 10px var(--sh-color-7);
+    text-shadow: 5px 5px 5px var(--sh-color-7);
+    animation: balloon4 6s ease-in-out infinite;
+}
+
+.balloons-row:nth-child(2)>div:nth-child(2):before {
+    color: var(--sh-color-7)
+}
+
+.balloons-row:nth-child(2)>div:nth-child(3) {
+    background: var(--bg-color-1);
+    box-shadow: inset 10px 10px 10px var(--sh-color-1);
+    text-shadow: 5px 5px 5px var(--sh-color-1);
+    animation: balloon5 6s ease-in-out infinite;
+}
+
+.balloons-row:nth-child(2)>div:nth-child(3):before {
+    color: var(--sh-color-1)
+}
+
+/* ----------------------------- animations ------------------------------ */
+@keyframes balloon1 {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-6deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(8deg);
+    }
+}
+
+@keyframes balloon2 {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(6deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(-8deg);
+    }
+}
+
+@keyframes balloon3 {
+
+    0%,
+    100% {
+        transform: translate(0, -10px) rotate(6deg);
+    }
+
+    50% {
+        transform: translate(-20px, 30px) rotate(-8deg);
+    }
+}
+
+@keyframes balloon4 {
+
+    0%,
+    100% {
+        transform: translate(10px, -10px) rotate(-8deg);
+    }
+
+    50% {
+        transform: translate(-15px, 10px) rotate(10deg);
+    }
+}
+
+@keyframes balloon5 {
+
+    0%,
+    100% {
+        transform: translate(0px, -20px) rotate(8deg);
+    }
+
+    50% {
+        transform: translate(-15px, 10px) rotate(4deg);
+    }
+}
