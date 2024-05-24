@@ -1,0 +1,75 @@
+/* -------------------------- common page elements -------------------------- */
+h1 {
+	height: 5vh;
+	margin-bottom: 1em;
+	text-align: center;
+	color: #666;
+}
+
+/* ---------------------------- slider-container ---------------------------- */
+.slider-container {
+	position: relative;
+	width: 20em;
+}
+
+.slider-buttons {
+	text-align: center;
+}
+.slider-buttons>button:hover{
+	cursor: pointer;
+}
+
+/* --------------------------------- spinner -------------------------------- */
+.spinner_overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	background-color: #999;
+	/* opacity: .3; */
+	z-index: 100;
+}
+.spinner_overlay>p {
+	font-size: 2em;
+	color: #fff;
+	text-align: center;
+}
+.spinner {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 60%;
+}
+.fa-spinner {
+	display: block;
+	font-size: 5em;
+	color: #fff;
+}
+
+/* --------------------------------- images --------------------------------- */
+.images-container {
+	position: relative;
+	width: 100%;
+	height: 15em;
+	margin: 0.2em 0 0 0;
+	border: 0.3em outset #666;
+	box-sizing: border-box;
+}
+.images-container img {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: 2s;
+}
+
+
+

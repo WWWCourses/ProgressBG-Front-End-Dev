@@ -1,4 +1,5 @@
 /* -------------------------------- main --------------------------------- */
+/* Define CSS Variables  */
 :root {
     --rg-color-1: #777;
     --rg-color-2: #555;
@@ -28,9 +29,6 @@
     --sh-color-8: #fdffcd;
 }
 
-* {
-    box-sizing: border-box;
-}
 
 body {
     font-family: 'Wendy One', sans-serif;
@@ -44,40 +42,35 @@ span {
 
 /* --------------------------- balloons common --------------------------- */
 .balloons-row-container {
-    width: 100%;
-    height: 30em;
     position: relative;
+
+    /* center vertically */
     top: 50%;
     transform: translateY(-50%);
-    /* border: 1px solid red; */
 }
 
 .balloons-row {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
     justify-content: center;
-    height: 15em;
-    width: 80%;
-    /* align-content: space-around; */
-    margin: 0 auto;
-
+    align-content: center;
+    height: 15vw;
 }
 
 .balloons-row>div {
     position: relative;
     /* flex-shrink: 0; */
-    width: 8em;
-    height: 10em;
+    width: 8vw;
+    height: 10vw;
     padding: 1em;
     border-radius: 80%;
 }
 
 .balloons-row>div:before {
-    position: absolute;
-    bottom: -0.8em;
-    left: 3.5em;
     content: "▲";
+    position: absolute;
+    bottom: -0.7em;
+    left: 47%;
+
     text-shadow:
         0px 2px 3px,
         0px 4px 6px;
@@ -88,11 +81,13 @@ span {
     align-items: center;
     justify-content: center;
     height: 100%;
-    font-size: 4.8em;
+    font-size: 3vw;
     color: white;
 }
 
 /* -------------------------- first row styling -------------------------- */
+/* Note the copy-paste, because CSS itself doesn't support loops directly.
+CSS preprocessors like Sass or Less can help to eliminate code redunduncy */
 .balloons-row:nth-child(1)>div:nth-child(1) {
     background: var(--bg-color-1);
     box-shadow: inset 10px 10px 10px var(--sh-color-1);
@@ -184,7 +179,6 @@ span {
 
 /* ----------------------------- animations ------------------------------ */
 @keyframes balloon1 {
-
     0%,
     100% {
         transform: translateY(0) rotate(-6deg);
@@ -196,7 +190,6 @@ span {
 }
 
 @keyframes balloon2 {
-
     0%,
     100% {
         transform: translateY(0) rotate(6deg);
@@ -208,7 +201,6 @@ span {
 }
 
 @keyframes balloon3 {
-
     0%,
     100% {
         transform: translate(0, -10px) rotate(6deg);
@@ -220,7 +212,6 @@ span {
 }
 
 @keyframes balloon4 {
-
     0%,
     100% {
         transform: translate(10px, -10px) rotate(-8deg);
@@ -232,7 +223,6 @@ span {
 }
 
 @keyframes balloon5 {
-
     0%,
     100% {
         transform: translate(0px, -20px) rotate(8deg);

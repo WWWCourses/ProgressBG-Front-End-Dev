@@ -9,7 +9,7 @@ header{
     padding: 1em 0 0 0;
     background: #999;
     z-index: 1;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 header>nav{
     position: absolute;
@@ -19,7 +19,7 @@ header>nav{
     height: 3em;
     padding: 1em 1em 0 0;
     background: #333;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 header>nav>a{
     display: block;
@@ -31,26 +31,17 @@ main{
     height: 80vh;
     margin-top: 20vh;
 }
-main>section.articles{
-    /*border: 5px solid yellow;
-    box-sizing: border-box;*/
+main>section.pages{
     height: 100%;
 }
-main>section.articles>article{
+main>section.pages>article{
     height: 100%;
     padding: 1em;
-    color: #FFF;
-    transition: 1s;
-    opacity: 0.5;
-    box-sizing: border-box;
-}
-main>section.articles>article:focus{
-    opacity: 1;
-    outline: none;
+    color: #000;
 }
 
-main>section.articles>article:nth-child(1){background: hsla(0, 60%, 70%, 0.9)}
-main>section.articles>article:nth-child(2){background: hsla(45, 60%, 70%, 0.9)}
-main>section.articles>article:nth-child(3){background: hsla(90, 60%, 70%, 0.9)}
-main>section.articles>article:nth-child(4){background: hsla(135, 60%, 70%, 0.9)}
-main>section.articles>article:nth-child(5){background: hsla(180, 60%, 70%, 0.9)}
+main>section.pages>article:nth-child(1){background: hsl(0, 60%, 70%)}
+main>section.pages>article:nth-child(2){background: hsl(45, 60%, 70%)}
+main>section.pages>article:nth-child(3){background: hsl(90, 60%, 70%)}
+main>section.pages>article:nth-child(4){background: hsl(135, 60%, 70%)}
+main>section.pages>article:nth-child(5){background: hsl(180, 60%, 70%)}
