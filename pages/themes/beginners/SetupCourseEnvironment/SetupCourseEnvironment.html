@@ -80,17 +80,17 @@
 <section data-min="50" id="courseFolderStrucutre"><h1>Структура на директориите</h1></section>
 <section><h2>Структура на директориите</h2>
     <section><h3>Основна директория за курса</h3>
-        <p>Създайте папка <code>WD_Course</code> на вашият компютър и в нея създайте показаните 3 папки</p>
+        <p>Създайте папка <code>FE_Course</code> на вашият компютър и в нея създайте показаните 3 папки</p>
         <pre><code rel="" class="bash">
             FE_Course/
             ├── HW # папка с файлове за задачите за домашно
-            ├── labs # папка с файлове за упражнения в часовете
-            └── project # папка с файлове за курсовия проект
+            ├── Labs # папка с файлове за упражнения в часовете
+            └── ProjectName # папка с файлове за курсовия проект, когато стигнем до там...
         </code></pre>
     </section>
     <section><h3>Структура на директориите за курсовия проект</h3>
         <pre><code rel="" class="bash" style="line-height: 1.5">
-            project/
+            ProjectName/
             ├── design_notes # папка с файлове касаещи дизайна на сайта
             └── site_root # главната (root) папка за сайта
                 ├── images # папка с файлове с изображения за сайта
@@ -102,7 +102,7 @@
     </section>
     <section><h3>Структура на директориите за курсовия проект - пример</h3>
         <pre><code rel="" class="bash" style="min-height: 50vh;">
-            project/
+            mysite.com/
             ├── design_notes
             │   ├── about_sketch.png
             │   ├── contacts_sketch.png
@@ -124,7 +124,7 @@
         </code></pre>
     </section>
     <section><h3>Конвенции за имена на файловете</h3>
-        <p class="note" style="font-size: .7em;">Файловете за вашият Web сайт ще бъдат качени на сървър. За да си спестите излишни усложнения, спазвайте следните конвенции.</p>
+        <p class="note" style="font-size: .8em;">Файловете за вашият Web сайт ще бъдат качени на сървър. За да си спестите излишни усложнения, спазвайте следните конвенции за имена на директории/файлове.</p>
         <dl class="fa">
             <dt>Използвайте само латински букви, цифри, тире (<kbd>-</kbd>) и подчертавка (<kbd>_</kbd>)</dt>
             <dt>За четимост на отделните думи, не използвайте спейс, a тире (<kbd>-</kbd>) или подчертавка (<kbd>_</kbd>) или <a href="https://en.wikipedia.org/wiki/Camel_case">Camel Case</a> конвенцията.</dt>
@@ -200,7 +200,7 @@
             <dt>Документация: <a href="https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette">Command Palette</a></dt>
         </dl>
     </section>
-    <section><h3>VSCode - Клавиатурни комбинации</h3>
+    <section><h3 class="advanced">VSCode - Клавиатурни комбинации</h3>
         <dl class="fa">
             <dt><a href="https://www.wearedevelopers.com/magazine/vs-code-shortcuts">15 Great VS Code Keyboard Shortcuts</a></dt>
             <dt><a href="https://code.visualstudio.com/docs/editor/codebasics">Basic Editing</a></dt>
@@ -219,11 +219,6 @@
         </ul>
         <p>Полезни са за споделяне на малки "парчета" код (code snippets). Всяка една предлага и LivePreview.</p>
     </section>
-    <section>
-        <p>В този курс ще използваме <a href="//codepen.io">codepen.io</a></p>
-        <p><i><i class="fa fa-codepen img"></i></i></p>
-        <a href="https://codepen.io/accounts/signup/user/free">Безплатна регистрация</a>
-    </section>
     <section><h3>GitHub</h3>
         <dl class="fa">
             <dt>GitHub e най-популярната cloud услуга за споделяне и съвместна разработка на open-source проекти, базирани на git</dt>
@@ -239,13 +234,14 @@
         <dl class="fa">
             <dt>Инсталирайте git: <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Installing Git</a></dt>
             <dt>Отворете VSCode и бъдете сигурни, че сте заредили папката с проекта (например - HW), като workspace.</dt>
-            <dt>Създайте празен файл <code>.gitignore</code>. В него може да зададете кой файлове/директории ще бъдат игнорирани от  git.</dt>
+            <dt>Създайте празен файл <code>.gitignore</code>. В него може да зададете кой файлове/директории ще бъдат игнорирани от  git. Няма проблем и да бъде празен, засега.</dt>
             <dt>Изберете 'Source Control' от Activity Bar.</dt>
             <dt>Натиснете 'Initialize Repository' за да "кажете" на git да следи файловете/директориите в проекта (прави се еднократно за проект)</dt>
             <dt>Работете върху проекта (HW) - когато решите да запазите работата си, върнете се отново в 'Source Control', в полето за 'message' напишете с 2-3 думи върху какво сте работили (например: 'HW1-done') и натиснете бутона 'Commit'.</dt>
             <dd>Ако се появи прозорец, който ви пита: "Would you like to stage all your changes and commit them directly" - изберете 'Yes'.</dd>
             <dt>Публикувайте кода си в github, като изберете "Publish Branch" (в последващите промени ще виждате 'Sync Changes')</dt>
             <dd>VSCode ще ви предложи име за проекта в Github и варианти да бъде публикуван като 'private' или 'public' репозитори. Изберете 'public'.</dd>
+            <dt>Reference: <a href="https://github.com/geekcourses/GitHubTutorial-Using-VSCode?tab=readme-ov-file#how-to-upload-files-on-github-using-vscode">How To upload Files on GitHub (using VSCode)</a></dt>
         </dl>
     </section>
 </section>
@@ -265,9 +261,6 @@
     <section><h3>Visual Studio Code Tutorial for Beginners - Introduction</h3>
         <p>Доста по-пълно въведение от <a href="https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w">Academind</a> - популярен Youtube канал посветен на Web Development</p>
         <iframe width="853" height="480" src="https://www.youtube.com/embed/VqCgcpAypFQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </section>
-    <section><h3>Using Git with Visual Studio Code (Official Beginner Tutorial)</h3>
-        <iframe width="1280" height="720" src="https://www.youtube.com/embed/i_23KUAEtUM" title="Using Git with Visual Studio Code (Official Beginner Tutorial)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </section>
     <!-- <section><h3>Videos</h3>
         <p>А ето и цял Youtube playlist: <a href="https://www.youtube.com/playlist?list=PLC3y8-rFHvwhleivq1QohBZN4d8IdzG3c">Visual Studio Code Tutorial</a>, ако нямате против лекият индийски акцент ;)</p>
