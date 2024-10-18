@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <title>Guess_The_Number</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>Познай числото!</h1>
+    <h3>Избери ниво на трудност:</h3>
+    <div class="level">
+        <i class="fas fa-smile"></i>
+        <button onclick="writeMachineNum10()">0-10</button>
+        <i class="fas fa-grin"></i>
+        <button onclick="writeMachineNum100()">0-100</button>
+        <i class="fas fa-laugh-beam"></i>
+        <button onclick="writeMachineNum1000()">0-1000</button>
+        <p style="text-align: center;"></p>
+    </div>
+
+    <img  src="./images/kisspng-computer-cartoon-vector-to-play-computer-girl-5aa6610866bad7.9461477615208532564208.png">
+    <img src="./images/kisspng-laptop-royalty-free-clip-art-girls-play-computer-5aac10ec5a39e0.7243666615212259643696.png">
+    <div class="playfield">
+        <b><label>Въведи число: </label></b>
+        <input onkeyup="checkForEnter(event)" type="number" min="0" max="1000" id="input" style="width: 3rem;">
+        <button onclick="guessMe()">Познай!</button>
+
+        <p id="history"></p>
+        <p id="end"></p>
+    </div>
+
+    <img src="./images/balloon_blue.png" class="balloon" id="balloon_blue">
+    <img src="./images/balloon_green.png" class="balloon" id="balloon_green">
+    <img src="./images/balloon_purple.png" class="balloon" id="balloon_purple">
+    <img src="./images/balloon_red.png" class="balloon" id="balloon_red">
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,50 +1,70 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Въведение в WebDesign курса</title>
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-	<link rel="icon" type="image/png" href="../../../../favicon.ico">
-	<!-- css & themes include -->
-	<link rel="stylesheet" href="../../../../lib/reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
-	<!-- Printing and PDF exports -->
-	<script>
-		var link = document.createElement( 'link' );
-		link.rel = 'stylesheet';
-		link.type = 'text/css';
-		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/css/print/pdf.css' : '../../../../lib/reveal.js/css/print/paper.css';
-		document.getElementsByTagName( 'head' )[0].appendChild( link );
-	</script>
-	<!--[if lt IE 9]>
-	<script src="lib/js/html5shiv.js"></script>
-	<![endif]-->
-	<!-- custom -->
-	<link rel="stylesheet" href="../../../../outfit/css/reveal.js.css">
-	<base target="_blank">
+    <meta charset="utf-8">
+    <title>Въведение в WebDesign курса</title>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="icon" type="image/png" href="../../../../favicon.ico">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="../../../../lib/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/css/print/pdf.css' : '../../../../lib/reveal.js/css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- custom -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="../../../../outfit/css/reveal.js.css">
+    <base target="_blank">
+    <style>
+
+        #about_me>h3>a{
+            font-size: .7em;
+            position: relative;
+            bottom:.1em;
+            margin-left: .6em;
+            vertical-align: middle;
+            color:#FFF;
+            background-color:#3c8bda;
+            border-radius:5px;
+        }
+        #about_me>h3>a:hover{
+            background-color:#0a66c2;
+        }
+        #about_me>h3>a>i{
+            padding: 3px 5px;
+        }
+    </style>
 </head>
 <body>
-	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
-		<div class="top_links">
-			<a class="home_link" href="../../../../pages/agenda/beginners.html#Course_Intro" target="_top"><i class="fa fa-home"></i></a>
-			<span class="help_link"><i class="fa fa-question"></i></span>
-			<div class="help_text">
-				<div><span>N/Спейс</span><span>следващ слайд</span></div>
-				<div><span>P</span><span>предишен слайд</span></div>
-				<div><span>O</span><span>всички слайдове</span></div>
-				<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
-				<div class="print-howto"><br>If you want print version => add '<code>?print-pdf</code>' <br> at the end of slides URL (remove '#' fragment) and then print. <br>
-					Like: https://wwwcourses.github.io/...CourseIntro.html?print-pdf </div>
-			</div>
-		</div>
-		<div class="footer theme_switch">
-			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
-			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
-			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
-		</div>
-		<div class="slides">
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <div class="top_links">
+            <a class="home_link" href="../../../../pages/agenda/beginners.html#Course_Intro" target="_top"><i class="fa fa-home"></i></a>
+            <span class="help_link"><i class="fa fa-question"></i></span>
+            <div class="help_text">
+                <div><span>N/Спейс</span><span>следващ слайд</span></div>
+                <div><span>P</span><span>предишен слайд</span></div>
+                <div><span>O</span><span>всички слайдове</span></div>
+                <div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+                <div class="print-howto"><br>If you want print version => add '<code>?print-pdf</code>' <br> at the end of slides URL (remove '#' fragment) and then print. <br>
+                    Like: https://wwwcourses.github.io/...CourseIntro.html?print-pdf </div>
+            </div>
+        </div>
+        <div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+        </div>
+        <div class="slides">
 <!--
 ########################################################
 ##################### SLIDES START #####################
@@ -52,249 +72,237 @@
 -->
 <section><h1>Въведение в курса</h1></section>
 <section data-transition="zoom">
-	<section>
-		<div class="copyright">
-			<div class="note">
-				<p>Създаден за</p>
-			</div>
-			<div class="company">
-				<a href="http://progressbg.net/kurs-po-web-design/">
-				<img src="../../../../outfit/images/logos/ProgressBG_logo_529_127.png">
-				</a>
-			</div>
-		</div>
-	</section>
-	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
-		<div class="note">
-			<p>Създаден от</p>
-		</div>
-		<div class="company">
-		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href="https://bg.linkedin.com/in/ivapopova?trk=profile-badge">Ива Е. Попова</a></div>
-		</div>
-		<div class="author">
-			<span class="date">2015 - 2023, </span>
-			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
-		</div>
-	</section>
+    <section>
+        <div class="copyright">
+            <div class="note">
+                <p>Създаден за</p>
+            </div>
+            <div class="company">
+                <a href="http://progressbg.net/kurs-po-web-design/">
+                <img src="../../../../outfit/images/logos/ProgressBG_logo_529_127.png">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+        <div class="note">
+            <p>Създаден от</p>
+        </div>
+        <div class="company">
+           <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href="https://bg.linkedin.com/in/ivapopova?trk=profile-badge">Ива Е. Попова</a></div>
+        </div>
+        <div class="author">
+            <span class="date">2015 - 2023, </span>
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
+        </div>
+    </section>
 </section>
 
 <section><h1>За мен</h1></section>
 <section><h2>За мен</h2>
-	<section><h3>Ива Е. Попова</h3>
-		<dl class="fa">
-			<dt>First PC: <i>Правец 8Д</i></dt>
-			<dt>First OS: <i>DOS</i></dt>
-			<dt>First Programming Language: <i>BASIC</i></dt>
-			<dt>First technical schools: <i><a href="http://uktc-bg.com/">УКТЦ по МТТ, гр. Правец</a></i></dt>
-			<dt>First Cat: <i>black and yellow eyed</i></dt>
-		</dl>
-	</section>
-	<section><h3>Технологии</h3>
-		<dl class="fa">
-			<dt>HTML, CSS, JavaScript, Vue.js,Angular, React.js,Svelte, ...</dt>
-			<dt>Python, Perl, C++, Prolog.</dt>
-			<dt>MySQL/Postgre, MongoDB, </dt>
-			<dt>Machine Learning</dt>
-			<dt>Natural Language Processing</dt>
-			<dt>Knowledge representation, ontologies.</dt>
-		</dl>
-	</section>
-	<section><h3>Преподавателски опит</h3>
-		<dl class="fa">
-			<dt>Курсове водени в <a href="https://tu-sofia.bg/">Technical University</a>:</dt>
-			<dd>Programming languages</dd>
-			<dd>Internet Programming</dd>
-			<dd>Discrete Mathematics</dd>
-			<dd>Artificial Intelligence and Expert Systems</dd>
-			<dt>Курсове водени в частни учебни центрове</dt>
-			<dd>Front-End Development</dd>
-			<dd>JavaScript, Angular, React</dd>
-			<dd>MySQL</dd>
-			<dd>Python</dd>
-			<dd>Machine Learning</dd>
-		</dl>
-	</section>
+    <section id="about_me"><h3>Ива Е. Попова <a href="https://www.linkedin.com/in/ivapopova/" id="link_linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></h3>
+        <dl class="fa">
+            <dt><b>Преподавателски опит</b>:
+                <dd>5 години като асистент в <a href="https://tu-sofia.bg/faculties/read/27">Технически Университет, гр. София</a>.
+                <div style="margin-left: 2em;">Курсове: "Програмни Езици", "Програмиране в Интернет", "Дискретна математика", "Експертни системи и Изкуствен Интелект".</div></dd>
+                <dd>7+ години към водещи частни учебни центрове.
+                    <div style="margin-left: 2em;">Курсове: "Data Bases (MySQL)", "Front-End Development", "JavaScript && TypeScript" "Python", "Machine Learning".</div>
+                </dd>
+            </dt>
+            <dt><b>Професионален опит</b>:
+                <dd>7+ години като софтуерен инженер и Уеб разработчик (4 от които като старши инженер и ръководител на екип) в международни IT компании (<a href="https://en.wikipedia.org/wiki/Comptel">Comptel(&lt;Nokia)</a>, <a href="https://dev.bg/company/internet-securities-bulgaria/">Internet Securities</a>, <a href="https://www.datamax.bg/?p=about">Datamax</a>, <a href="https://www.experian.bg/about">Experian</a>).</dd>
+                <dd>6+ години като изследовател и консултант в стартъп компания в областта на Изкуствения Интелект (Sentiment Analysis , Ontologies, NLP(+LLMs)).</dd>
+            </dt>
+            <dt><b>Образование</b>:
+                <dd>Средно образование, <span class="keyword"><a href="http://uktc-bg.com/">НПГ по КТС - гр. Правец</a></span></dd>
+                <dd>Маг. инж. по Компютърни Системи, <a href="https://tu-sofia.bg/faculties/read/27">Технически Университет, гр. София</a>:</dd>
+                <dd>Докторант по Системи с Изкуствен Интелект, <a href="https://tu-sofia.bg/faculties/read/27">Технически Университет, гр. София</a></dd>
+            </dt>
+
+        </dl>
+    </section>
 </section>
 
 <section><h1>Цели на курса</h1></section>
 <section><h2>Цели на курса</h2>
-	<section>
-		<h3>Какво може</h3>
-		<h3>(и трябва!)</h3>
-		<h3>да очаквате от курса</h3>
-	</section>
-	<section>
-		<ul class="fa text_center">
-			<li>Да даде основополагащите познания относно съвременните HTML, CSS и JavaScript (ECMAScript6 && beyond)
-			спецификации.</li>
-		</ul>
-		<div class="semioticWrapper">
-			<img src="images/HTML5_logo.png">
-			<img src="images/CSS3_logo_and_wordmark.svg.png">
-			<img src="images/JS_logo_and_text.jpg"><br>
-			<img src="images/ecma-logo.svg">
-		</div>
-		<!-- <i class="ionicons ion-social-html5-outline img" style="color: #e44d26"></i>
-		<i class="ionicons ion-social-javascript-outline img" style="color: #D6BA33"></i>
-		<i class="ionicons ion-social-css3-outline img" style="color: #007CC3"></i> -->
-	</section>
-	<section>
-		<ul class="fa text_center">
-			<li>Да въведе основните принципи на JavaScript и взаимодействието му с HTML/DOM и CSS/CSSOM.</li>
-		</ul>
-		<div class="semioticWrapper">
-			<a href="images/RenderingPipeline.png"><img style="height: 20vh;" src="images/RenderingPipeline.png"></a>
-		</div>
-		<!-- <i class="icomoon icon-tree"></i> -->
-		<!-- <i class="material-icons img">business</i> -->
-	</section>
-	<section>
-		<ul class="fa text_center">
-			<li>Да усвоите добрите практики за разработка препоръчвани от W3C и да създавате качествен и оптимизиран код.</li>
-		</ul>
-		<div class="semioticWrapper">
-			<img src="images/w3clogo.png">
-			<img src="images/seologo.png">
-		</div>
-		<!-- <i class="fa fa-thumbs-o-up img"></i> -->
-		<!-- <i class="fa fa-thumbs-up img"></i> -->
-	</section>
-	<section>
-		<!-- <img src="images/two_dolphin_live.jpg" height="500px" class="fragment shrink"> -->
-		<ul class="fa text_center">
-			<li class="text_center">Да обясни по достъпен начин необходимата терминология, така че да се почуствате в свои води в контекста на разработването на Уеб приложения.</li>
-		</ul>
-		<i class="fa fa-life-ring img"></i>
-		<i class="fa fa-code img"></i>
-		<i class="material-icons img">pool</i>
-	</section>
-	<section>
-		<ul class="fa text_center">
-			<li>Чрез интензивното решаване на разнообразни реални практически проблеми да създаде увереност у вас за бъдещите ви Уеб проекти.</li>
-		</ul>
-		<i class="material-icons img">art_track</i>
-		<i class="ionicons ion-code-working img"></i>
-		<i class="material-icons img">sync</i>
-		<i class="material-icons img">developer_board</i>
-		<i class="ionicons ion-ios-wineglass img"></i>
-	</section>
-	<section>
-		<ul class="fa text_center">
-			<li>Да ви улесни и вдъхнови да учите сами като ви представи препоръчани онлайн справочници, форуми, блогове, статии.</li>
-		</ul>
-		<i class="fa fa-stack-overflow img"></i>
-		<i class="material-icons img">local_library</i>
-		<i class="ionicons ion-university img"></i>
-	</section>
-	<section>
-		<a href="images/Learning_Retention_Pyramid.JPG"><img src="images/Learning_Retention_Pyramid.JPG"></a>
-		<div class="resourceCredit">image from <a href="https://commons.wikimedia.org/wiki/File:Learning_Retention_Pyramid.JPG">commons.wikimedia.org</a></div>
-	</section>
+    <section>
+        <h3>Какво може</h3>
+        <h3>(и трябва!)</h3>
+        <h3>да очаквате от курса</h3>
+    </section>
+    <section>
+        <ul class="fa text_center">
+            <li>Да даде основополагащите познания относно съвременните HTML, CSS и JavaScript (ECMAScript6 && beyond)
+            спецификации.</li>
+        </ul>
+        <div class="semioticWrapper">
+            <img src="images/HTML5_logo.png">
+            <img src="images/CSS3_logo_and_wordmark.svg.png">
+            <img src="images/JS_logo_and_text.jpg"><br>
+            <img src="images/ecma-logo.svg">
+        </div>
+        <!-- <i class="ionicons ion-social-html5-outline img" style="color: #e44d26"></i>
+        <i class="ionicons ion-social-javascript-outline img" style="color: #D6BA33"></i>
+        <i class="ionicons ion-social-css3-outline img" style="color: #007CC3"></i> -->
+    </section>
+    <section>
+        <ul class="fa text_center">
+            <li>Да въведе основните принципи на JavaScript и взаимодействието му с HTML/DOM и CSS/CSSOM.</li>
+        </ul>
+        <div class="semioticWrapper">
+            <a href="images/RenderingPipeline.png"><img style="height: 20vh;" src="images/RenderingPipeline.png"></a>
+        </div>
+        <!-- <i class="icomoon icon-tree"></i> -->
+        <!-- <i class="material-icons img">business</i> -->
+    </section>
+    <section>
+        <ul class="fa text_center">
+            <li>Да усвоите добрите практики за разработка препоръчвани от W3C и да създавате качествен и оптимизиран код.</li>
+        </ul>
+        <div class="semioticWrapper">
+            <img src="images/w3clogo.png">
+            <img src="images/seologo.png">
+        </div>
+        <!-- <i class="fa fa-thumbs-o-up img"></i> -->
+        <!-- <i class="fa fa-thumbs-up img"></i> -->
+    </section>
+    <section>
+        <!-- <img src="images/two_dolphin_live.jpg" height="500px" class="fragment shrink"> -->
+        <ul class="fa text_center">
+            <li class="text_center">Да обясни по достъпен начин необходимата терминология, така че да се почуствате в свои води в контекста на разработването на Уеб приложения.</li>
+        </ul>
+        <i class="fa fa-life-ring img"></i>
+        <i class="fa fa-code img"></i>
+        <i class="material-icons img">pool</i>
+    </section>
+    <section>
+        <ul class="fa text_center">
+            <li>Чрез интензивното решаване на разнообразни реални практически проблеми да създаде увереност у вас за бъдещите ви Уеб проекти.</li>
+        </ul>
+        <i class="material-icons img">art_track</i>
+        <i class="ionicons ion-code-working img"></i>
+        <i class="material-icons img">sync</i>
+        <i class="material-icons img">developer_board</i>
+        <i class="ionicons ion-ios-wineglass img"></i>
+    </section>
+    <section>
+        <ul class="fa text_center">
+            <li>Да ви улесни и вдъхнови да учите сами като ви представи препоръчани онлайн справочници, форуми, блогове, статии.</li>
+        </ul>
+        <i class="fa fa-stack-overflow img"></i>
+        <i class="material-icons img">local_library</i>
+        <i class="ionicons ion-university img"></i>
+    </section>
+    <section>
+        <a href="images/Learning_Retention_Pyramid.JPG"><img src="images/Learning_Retention_Pyramid.JPG"></a>
+        <div class="resourceCredit">image from <a href="https://commons.wikimedia.org/wiki/File:Learning_Retention_Pyramid.JPG">commons.wikimedia.org</a></div>
+    </section>
 </section>
 
-<section><section><h2>Да подредим бъркотията от понятия</h2>
-	<a href="./images/UX_UI_FE_BE_FS_phases.webp"><img src="./images/UX_UI_FE_BE_FS_phases.webp" alt=""></a>
-	</section>
-	<section><h3>UI/UX</h3>
-		<dl class="fa">
-			<dt>UX (User Experience) специалистите трябва да познават отлично продукта, маркетинг стратегиите и потребителите за да моделират сайта така, че да предполага по-добро потребителско изживяване.</dt>
-			<dt>UI (User Interface) дизайнерите са фокусирани върху визията на един сайт (цветове, шрифтове, размери на бутони и други визуални елементи)</dt>
-			<dt>Ключови умения</dt>
-			<dd>Графичен дизайн (<span class="note">Photoshop/Illustrator</span>)</dd>
-			<dd>Моделиране, създаване на прототип на сайт (<a href="https://www.figma.com/">figma</a>, <a href="https://www.sketch.com/">sketch</a>). <br>
-			</dd>
-			<dt>Допълнителни умения</dt>
-			<dd>Уеб Стандарти (HTML, CSS, JavaScript)</dd>
-		</dl>
-	</section>
-	<section><h3>Front-end Developer</h3>
-		<dl class="fa">
-			<dt>Основни умения</dt>
-			<dd>Уеб Стандарти (<span class="note">HTML, CSS, JavaScript (ECMAScript6+)</span>)</dd>
-			<dd>Front-end библиотеки, фреймуърк, инструменти (<span class="note">Pug,LESS/Sass, Bootstrap, webpack, JQuery,Angular,React,...</span>)</dd>
-			<dt>Допълнителни умения</dt>
-			<dd>Photoshop/Illustrator</dd>
-		</dl>
-	</section>
-	<section>
-		<a href="images/WebDesignerVsFrontEndDeveloper.jpg"><img src="images/WebDesignerVsFrontEndDeveloper_short.png" ></a>
-	</section>
-	<section><h3>Back-end Developer</h3>
-		<dl class="fa">
-			<dt>Основни умения</dt>
-			<dd>Програмиране (<span class="note">Python | PHP | Ruby | Perl | Java | .NET | JavaScript</span>)</dd>
-			<dd>Бази данни (<span class="note">MySQL | PostgreSQL, MongoDB</span>)</dd>
-			<dd>Мрежови протоколи (<span class="note">HTTP, FTP, ...</span>)</dd>
-			<dd>Server-side frameworks (<span class="note">Django | Rails | Catalist</span>)</dd>
-			<dd>WebServices(<span class="note">RESTFull | SOAP</span>)</dd>
-			<dt>Допълнителни умения</dt>
-			<dd>HTML/CSS/JavaScript</dd>
-		</dl>
-	</section>
-	<section><h3>Full-Stack Developer</h3>
-		<dl class="fa">
-			<dt>Основни умения</dt>
-			<dd>Уеб Стандарти (<span class="note">HTML, CSS, JavaScript (ECMAScript6+)</span>)</dd>
-			<dd>Front-end библиотеки, фреймуърк, инструменти (<span class="note">Pug,LESS/Sass, Bootstrap, Webpack, JQuery,Angular,React,...</span>)</dd>
-			<dd>Програмиране (<span class="note">Python | PHP | Ruby | Perl | Java | .NET | JavaScript</span>)</dd>
-			<dd>Бази данни (<span class="note">MySQL | PostgreSQL, MongoDB</span>)</dd>
-			<dd>Мрежови протоколи (<span class="note">HTTP, FTP, ...</span>)</dd>
-			<dd>Server-side frameworks (<span class="note">Django | Rails | Catalist</span>)</dd>
-			<dd>WebServices(<span class="note">RESTFull | SOAP</span>)</dd>
-		</dl>
-	</section>
-	<section><h3>IT Jobs Explained With A Broken Light bulb</h3>
-		<dl class="fa">
-			<dt>Вижте цялата история тук: <a href="https://blog.toggl.com/lightbulb-cartoon-developers/">IT Jobs Explained With A Broken Light bulb</a></dt>
-		</dl>
-		<a href="images/toggl-it-jobs-explained-with-changing-lightbulb_mod.png"><img src="images/toggl-it-jobs-explained-with-changing-lightbulb_mod.png" style="height: 80vh"></a>
-	</section>
-	<!-- <section><section><h2>Front-end < <i class="fa fa-question"></i> > Back-end</h2></section>
-	<section>
-		<img src="images/FE-BE_Technologies.png">
-	</section> -->
+<section><h1>Да подредим бъркотията от понятия</h1></section>
+<section><h2>Да подредим бъркотията от понятия</h2>
+    <section>
+    <a href="./images/UX_UI_FE_BE_FS_phases.webp"><img src="./images/UX_UI_FE_BE_FS_phases.webp" alt="" style="width: 50vw;"></a>
+    </section>
+    <section><h3>UI/UX</h3>
+        <dl class="fa">
+            <dt>UX (User Experience) специалистите трябва да познават отлично продукта, маркетинг стратегиите и потребителите за да моделират сайта така, че да предполага по-добро потребителско изживяване.</dt>
+            <dt>UI (User Interface) дизайнерите са фокусирани върху визията на един сайт (цветове, шрифтове, размери на бутони и други визуални елементи)</dt>
+            <dt>Ключови умения</dt>
+            <dd>Графичен дизайн (<span class="note">Photoshop/Illustrator</span>)</dd>
+            <dd>Моделиране, създаване на прототип на сайт (<a href="https://www.figma.com/">figma</a>, <a href="https://www.sketch.com/">sketch</a>). <br>
+            </dd>
+            <dt>Допълнителни умения</dt>
+            <dd>Уеб Стандарти (HTML, CSS, JavaScript)</dd>
+        </dl>
+    </section>
+    <section><h3>Front-end Developer</h3>
+        <dl class="fa">
+            <dt>Основни умения:</dt>
+            <dd>Уеб Стандарти (<span class="note">HTML, CSS, JavaScript (TypeScript)</span>)</dd>
+            <dd>Библиотеки, фреймуъркс, инструменти, като:
+                <ul>
+                    <li><span class="note">Template Engines</span>: Pug, Handlebars</li>
+                    <li><span class="note">CSS Preprocessing</span>: LESS, Sass</li>
+                    <li><span class="note">CSS Libraries</span>: Bootstrap, TailwindCSS</li>
+                    <li><span class="note">JavaScript Libraries/Frameworks</span>: React, Vue.js, Angular, Svelte</li>
+                    <li><span class="note">Build Tools</span>: webpack, Parcel, Rollup</li>
+                    <li><span class="note">JavaScript Utilities</span>: lodash, D3.js</li>
+                    <li><span class="note">State Management</span>: Redux, MobX, Recoil</li>
+                </ul>
+            </dd>
+        </dl>
+    </section>
+    <section><h3>Front-End Developer vs Web Designer</h3>
+        <a href="images/WebDesignerVsFrontEndDeveloper.jpg"><img src="images/WebDesignerVsFrontEndDeveloper_short.png" ></a>
+    </section>
+    <section><h3>Back-end Developer</h3>
+        <dl class="fa">
+            <dt>Основни умения</dt>
+            <dd>Програмиране (<span class="note">Python | PHP | JavaScript | Ruby | Java | .NET | Go</span>)</dd>
+            <dd>Бази данни (<span class="note">MySQL | PostgreSQL | MongoDB | Redis</span>)</dd>
+            <dd>Мрежови протоколи (<span class="note">HTTP | HTTPS | FTP | WebSocket</span>)</dd>
+            <dd>Server-side frameworks (<span class="note">Django | Rails | Express.js | Spring</span>)</dd>
+            <dd>WebServices (<span class="note">RESTful | SOAP | GraphQL</span>)</dd>
+            <dt>Допълнителни умения</dt>
+            <dd>HTML/CSS/JavaScript</dd>
+        </dl>
+    </section>
+    <section><h3>Full-Stack Developer</h3>
+        <p style="font-size: 2em;">Full-Stack = Front-End + Back-End</p>
+    </section>
+    <section><h3>IT Jobs Explained With A Broken Light bulb</h3>
+        <dl class="fa">
+            <dt>Вижте цялата история тук: <a href="https://blog.toggl.com/lightbulb-cartoon-developers/">IT Jobs Explained With A Broken Light bulb</a></dt>
+        </dl>
+        <a href="images/toggl-it-jobs-explained-with-changing-lightbulb_mod.png"><img src="images/toggl-it-jobs-explained-with-changing-lightbulb_mod.png" style="height: 80vh"></a>
+    </section>
+    <!-- <section><section><h2>Front-end < <i class="fa fa-question"></i> > Back-end</h2></section>
+    <section>
+        <img src="images/FE-BE_Technologies.png">
+    </section> -->
 </section>
 
 <section><h1>Онлайн ресурси за курса</h1></section>
 <section><h2>Онлайн ресурси за курса</h2>
-	<section><h3>Mail за курса</h3>
-		<p style="font-family:monospace; font-size: 1.3em"><a href="mailto:Progressbg.WWW.Courses@gmail.com">progressbg.www.courses<span class="note">@</span>gmail.com</a></p>
-		<dl class="fa">
-			<dt>Изполвайте го за всякакви въпроси и обратна връзка (какво не ви харесва, какво ви затруднява,...)</dt>
-		</dl>
-	</section>
-	<section><h3>Github акаунт за курса</h3>
-		<dl class="fa">
-			<dt>Github Repo: <a href="https://github.com/WWWCourses/ProgressBG-Front-End-Dev-Beginners-Labs">ProgressBG-Front-End-Dev-Beginners-Labs</a></dt>
-			<dd>Тук ще бъдат качвани всички примери, които пишем на живо в часовете.</dd>
-		</dl>
-	</section>
-	<section><h3>Други ресурси</h3>
-		<dl class="fa">
-			<dt><a href="../../../../pages/readings/beginners/UsefulResources.html" title="Свободни ресурси">Справочници, самоучители, инструменти и пр.</a></dt>
-		</dl>
-	</section>
-	<section><h3></h3>
-		<dl class="fa">
-			<dt>Facebook страница на <a href="https://www.facebook.com/progressbg/">Компютърно образователен център "Прогрес"</a></dt>
-		</dl>
-	</section>
+    <section><h3>Mail за курса</h3>
+        <p style="font-family:monospace; font-size: 1.3em"><a href="mailto:Progressbg.WWW.Courses@gmail.com">progressbg.www.courses<span class="note">@</span>gmail.com</a></p>
+        <dl class="fa">
+            <dt>Използвайте го за всякакви въпроси и обратна връзка (какво може да се подобри, какво ви затруднява,...)</dt>
+        </dl>
+    </section>
+    <section><h3>Github акаунт за курса</h3>
+        <dl class="fa">
+            <dt>Github Repo: <a href="https://github.com/WWWCourses/ProgressBG-Front-End-Dev-Beginners-Labs">ProgressBG-Front-End-Dev-Beginners-Labs</a></dt>
+            <dd>Тук ще бъдат качвани всички примери, които пишем на живо в часовете.</dd>
+        </dl>
+    </section>
+    <section><h3>Други ресурси</h3>
+        <dl class="fa">
+            <dt><a href="../../../../pages/readings/beginners/UsefulResources.html" title="Свободни ресурси">Справочници, самоучители, инструменти и пр.</a></dt>
+        </dl>
+    </section>
+    <section><h3></h3>
+        <dl class="fa">
+            <dt>Facebook страница на <a href="https://www.facebook.com/progressbg/">Компютърно образователен център "Прогрес"</a></dt>
+        </dl>
+    </section>
 </section>
 
 
 
 <!-- <section><h3>Кои са се вдъхновили от програмата разработена за този курс</h3>
-		<dl class="fa">
-			<dt>МАКС ПЛЮС: HTML, CSS Начинаещи / Web Design - frontend</a></dt>
-			<dd><a href="https://web-beta.archive.org/web/20161029043832/http://maxplus-bg.com/courses/web-design/">Wayback Machine capture of 16 Oct 2016 </a></dd>
-			<dd><a href="https://web-beta.archive.org/web/20160327132618/http://progressbg.net:80/kurs-po-web-design/">Wayback Machine capture of 27 Mar 2016</a></dd>
-		</dl>
+        <dl class="fa">
+            <dt>МАКС ПЛЮС: HTML, CSS Начинаещи / Web Design - frontend</a></dt>
+            <dd><a href="https://web-beta.archive.org/web/20161029043832/http://maxplus-bg.com/courses/web-design/">Wayback Machine capture of 16 Oct 2016 </a></dd>
+            <dd><a href="https://web-beta.archive.org/web/20160327132618/http://progressbg.net:80/kurs-po-web-design/">Wayback Machine capture of 27 Mar 2016</a></dd>
+        </dl>
 </section> -->
 <section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
-	 <p>These slides are based on</p>
-	 <p>customized version of </p>
-	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
-	 <p>framework</p>
+     <p>These slides are based on</p>
+     <p>customized version of </p>
+     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+     <p>framework</p>
 </section>
 <!--
 ########################################################
@@ -309,39 +317,39 @@
 <script src="../../../../lib/reveal.js/js/reveal.js"></script>
 <!-- init reveal -->
 <script>
-	// Full list of configuration options available at:
-	// https://github.com/hakimel/reveal.js#configuration
-	var highlightjsTabSize = '  ';
-	Reveal.initialize({
-		controls: true,
-		progress: true,
-		slideNumber: 'c/t',
-		keyboard: true,
-		history: true,
-		center: true,
-		width: 1280,
-		height: 1024,
-		// Bounds for smallest/largest possible scale to apply to content
-		minScale: .5,
-		maxScale: 1,
-		// slide transition
-		transition: 'concave', // none/fade/slide/convex/concave/zoom
-		// Factor of the display size that should remain empty around the content
-		margin: 0.1,
-		// shift+maous click to zoom in/out element
-		zoomKey: 'ctrl',
-		// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-		// transition: Reveal.getQueryHash().transition || 'default'
-		// Optional reveal.js plugins
-		dependencies: [
-			{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-			{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
-			{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
-			{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
-		]
-	});
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    var highlightjsTabSize = '  ';
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        slideNumber: 'c/t',
+        keyboard: true,
+        history: true,
+        center: true,
+        width: 1280,
+        height: 1024,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: .5,
+        maxScale: 1,
+        // slide transition
+        transition: 'concave', // none/fade/slide/convex/concave/zoom
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+        // shift+maous click to zoom in/out element
+        zoomKey: 'ctrl',
+        // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        // transition: Reveal.getQueryHash().transition || 'default'
+        // Optional reveal.js plugins
+        dependencies: [
+            { src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+            { src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+            { src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+        ]
+    });
 </script>
 <!-- linkedin badge -->
 <!-- <!-- <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script> --> -->
