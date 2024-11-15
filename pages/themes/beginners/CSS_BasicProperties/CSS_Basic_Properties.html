@@ -421,19 +421,13 @@
         </table>
         <p>Reference: <a href="http://www.w3schools.com/css/css_background.asp">w3schools: CSS Backgrounds</a></p>
     </section>
-    <section><h3></h3>
-        <div class="scroll" style="height: 200px; overflow: auto; background: url('./images/red_star.png') no-repeat center center; background-attachment: scroll;">
-          Това е пример с <code>scroll</code>. Скролирайте, за да видите ефекта.
-        </div>
+    <section><h3>Паралакс ефект с <code>background-fixed</code></h3>
+        <dl class="fa" style="min-width:80vw">
+           <dt> Паралакс ефектът е визуален ефект, при който различни елементи на страницата изглеждат, че се движат с различна скорост при скролиране. Например, фоновото изображение може да изглежда неподвижно или да се движи по-бавно от съдържанието на страницата. Това създава усещане за дълбочина и динамика на сайта.</dt>
+            <dt>Често се използва за подобряване на потребителското изживяване и визуалната привлекателност на уеб страниците.</dt>
 
-        <div class="fixed" style="height: 200px; background: url('./images/red_star.png') no-repeat center center; background-attachment: fixed;">
-          Това е пример с <code>fixed</code>. Скролирайте, за да видите ефекта.
-        </div>
-
-        <div class="local" style="height: 200px; overflow: auto; background: url('./images/red_star.png') no-repeat center center; background-attachment: local;">
-          Това е пример с <code>local</code>. Скролирайте, за да видите ефекта.
-        </div>
-
+            <dt>Пример: <a href="./slides_examples/backgrounds/simpleParalaxEffect.html">simpleParalaxEffect.html</a></dt>
+        </dl>
     </section>
     <section id="background_examples"><h3>Задаване на фон за цялата страница.</h3>
         <dl class="fa">
@@ -441,11 +435,10 @@
             <dt>Височината на елемента <b>body</b> се определя динамично, в зависимост от съдържанието!</dt>
             <dt>За да сме сигурни, че елемента <b>body</b> ше бъде висок поне колкото viewport-a, трябва да зададем:</dt>
             <pre><code rel="CSS">
-                html, body{
-                    min-height: 100%;
-                }
+                margin:0;
+                padding: 0;
+                min-height: 100vh;
             </code></pre>
-            <dt class="note">Бихме могли да използваме и <b>vh</b> еденици, вместо процент.</dt>
         </dl>
     </section>
     <section><h3>Задаване на фон за цялата страница - примери</h3>
@@ -464,38 +457,83 @@
     </section>
 </section>
 
-<section><h2>CSS свойства за рамка на елемент</h2>
-    <section>
-        <a href="http://www.w3schools.com/css/css_border.asp">w3schools: CSS Borders</a>
-    </section>
-    <section><h3>Border Style</h3>
-        <p>Свойство: border-style</p>
-        <p><a href="http://www.w3schools.com/cssref/pr_border-style.asp">w3schools: CSS border-style Property</a></p>
-    </section>
-    <section><h3>Border Width</h3>
-        <p>Свойство: border-width</p>
-        <p><a href="http://www.w3schools.com/cssref/pr_border-width.asp">w3schools: CSS border-width Property</a></p>
-    </section>
-    <section><h3>Border Color</h3>
-        <p>Свойство: border-color</p>
-        <p><a href="http://www.w3schools.com/cssref/pr_border-color.asp">w3schools: CSS border-color Property</a></p>
-    </section>
-    <section><h3>Border - съкратен запис за всички Border свойства</h3>
-        <p>Свойство: border</p>
-        <p><a href="http://www.w3schools.com/cssref/pr_border.asp">w3schools: CSS border Property</a></p>
+<section class="main-section-title" id="borderProperties"><h1>CSS свойства за рамка на елемент</h1></section>
+<section><h2 class="sub-sections">CSS свойства за рамка на елемент</h2>
+    <section><h3></h3>
+        <table border="1" style="font-size: .8em; width: 100%; text-align: left;">
+            <thead>
+                <tr>
+                    <th>Свойство</th>
+                    <th>Описание</th>
+                    <th>Пример</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="https://www.w3schools.com/cssref/pr_border.php" target="_blank"><code>border</code></a></td>
+                    <td>Определя стил, дебелина и цвят на рамката на елемента. Кратка форма за задаване на всички свойства за рамка.</td>
+                    <td><code>border: 2px solid black;</code></td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.w3schools.com/cssref/pr_border-width.php" target="_blank"><code>border-width</code></a></td>
+                    <td>Определя дебелината на рамката.</td>
+                    <td><code>border-width: 5px;</code></td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.w3schools.com/cssref/pr_border-style.php" target="_blank"><code>border-style</code></a></td>
+                    <td>Определя стила на рамката (<code>solid</code>, <code>dashed</code>, <code>dotted</code>, <code>double</code>...)</td>
+                    <td border-style: dashed;><code>border-style: dashed;</code></td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.w3schools.com/cssref/pr_border-color.php" target="_blank"><code>border-color</code></a></td>
+                    <td>Определя цвета на рамката.</td>
+                    <td><code>border-color: red;</code></td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.w3schools.com/cssref/pr_border-top.php" target="_blank"><code>border-top</code></a></td>
+                    <td>Задава рамката за горната част на елемента (дебелина, стил и цвят).</td>
+                    <td><code>border-top: 2px solid blue;</code></td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.w3schools.com/cssref/pr_border-right.php" target="_blank"><code>border-right</code></a></td>
+                    <td>Задава рамката за дясната част на елемента.</td>
+                    <td><code>border-right: 5px dashed green;</code></td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.w3schools.com/cssref/pr_border-bottom.php" target="_blank"><code>border-bottom</code></a></td>
+                    <td>Задава рамката за долната част на елемента.</td>
+                    <td><code>border-bottom: 3px dotted orange;</code></td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.w3schools.com/cssref/pr_border-left.php" target="_blank"><code>border-left</code></a></td>
+                    <td>Задава рамката за лявата част на елемента.</td>
+                    <td><code>border-left: 4px solid purple;</code></td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.w3schools.com/cssref/pr_border-radius.php" target="_blank"><code>border-radius</code></a></td>
+                    <td>Омекотява ъглите на рамката, като им дава заоблена форма.</td>
+                    <td><code>border-radius: 10px;</code></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Reference: <a href="http://www.w3schools.com/css/css_border.asp">w3schools: CSS Borders</a></p>
     </section>
 </section>
-<section><h4>Задачи за упражнение</h4>
-    <section style="font-size:.9em"><h5>The Crow</h5>
-        <div class="text_left fontsize_08">
-        <p>Да се състави страница, наподобяваща максимално точно показаната на <a href="homework/the_crow/TheCrow Solution-Screen1.png">фиг.1</a>. Кодът трябва да е <a href="https://validator.w3.org/nu/#textarea">валиден HTML5</a>!</p>
-        <p>Забележете, че всеки текст, който е заграден в кавички е оформен различно от останалият: шрифтът е наклонен, а разстоянието между буквите е 2px. Отделно, всяка фраза "никой друг!" е подчертана с оранжево (преливащо към кафяво -  може да увеличите изгледа за да видите по-ясно).Също така, обърнете внимание на типа шрифт (serif, sans-serif) и задайте съответния.</p>
-        <p>Текстът на стихотворението може да копирате и от тук: <a href="https://chitanka.info/text/2384-garvanyt">https://chitanka.info/text/2384-garvanyt</a> (използвани са само първите 4 куплета.)</p>
-        <p>Използваното за фон изображение, може да изтеглите от тук: <a href="https://pixabay.com/en/raven-crow-night-creepy-darkness-1002849">https://pixabay.com/en/raven-crow-night-creepy-darkness-1002849</a>. То заема цялото съдържание на страницата, като пропорциите НЕ СЕ запазват.</p>
-        <hr>
-        <p class="fontsize_08">Едно от възможните решения може да видите тук:  <a href="homework/the_crow/TheCrow-Solution.html">TheCrow-Solution.html</a></p>
-        </div>
-    </section>
+
+<section class="main-section-title" id="HW"><h1>Задачи за упражнение</h1></section>
+<section><h2 class="sub-sections">Задачи за упражнение</h2>
+    <section><h3>The Crow</h3>
+        <dl class="fa" style="min-width:80vw">
+            <dt>Да се състави страница, наподобяваща максимално точно показаната на <a href="homework/the_crow/TheCrow Solution-Screen1.png">фиг.1</a>. Кодът трябва да е <a href="https://validator.w3.org/nu/#textarea">валиден HTML5</a>!</dt>
+            <dt>Забележете, че всеки текст, който е заграден в кавички е оформен различно от останалият: шрифтът е наклонен, а разстоянието между буквите е 2px. Отделно, всяка фраза "никой друг!" е подчертана с оранжево (преливащо към кафяво -  може да увеличите изгледа за да видите по-ясно).Също така, обърнете внимание на типа шрифт (serif, sans-serif) и задайте съответния.</dt>
+            <dt>Текстът на стихотворението може да копирате и от тук: <a href="https://chitanka.info/text/2384-garvanyt">https://chitanka.info/text/2384-garvanyt</a> (използвани са само първите 4 куплета.)</dt>
+            <dt>Използваното за фон изображение, може да изтеглите от тук: <a href="https://pixabay.com/en/raven-crow-night-creepy-darkness-1002849">https://pixabay.com/en/raven-crow-night-creepy-darkness-1002849</a>. То заема цялото съдържание на страницата, като пропорциите НЕ СЕ запазват.</dt>
+            <!-- <hr>
+            <dt class="fontsize_08">Едно от възможните решения може да видите тук:  <a href="homework/the_crow/TheCrow-Solution.html">TheCrow-Solution.html</a></dt> -->
+        </dl>
+
+
+        </section>
 </section>
 
 <section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">

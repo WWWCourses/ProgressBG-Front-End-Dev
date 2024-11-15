@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <title>bg_image_to_viewport</title>
     <style type="text/css">
-        html,body{
+        body{
+            /* Задаваме размери на body: висок поне колкото вюпорта */
             margin:0;
             padding: 0;
-            /*за да бъде body елемента висок поне колкото viewport-a*/
-            min-height: 100%;
-        }
-        body{
+            min-height: 100vh;
+
+            /* Задаваме фоновото изображение */
             background: red url("checkmate-1511866_640.jpg");
             background-size: 100% 100%;
             background-position: center center;
