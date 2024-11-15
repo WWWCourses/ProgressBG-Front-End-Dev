@@ -102,7 +102,8 @@
 	</section>
 </section>
 
-<section id="textStylingProperties"><h2>CSS свойства за оформление на текст</h2>
+<section class="main-section-title" id="textStylingProperties"><h1>CSS свойства за оформление на текст</h1></section>
+<section class="sub-sections"><h2>CSS свойства за оформление на текст</h2>
     <section><h3>Overview</h3>
         <a href="http://www.w3schools.com/css/css_text.asp">w3schools: CSS Text</a>
         <div class="results_h" style="color: #555; padding: .6em;">
@@ -182,9 +183,12 @@
     </section>
 </section>
 
-<section><h2>CSS свойства за оформление на шрифт</h2>
-    <section>
-        <a href="http://www.w3schools.com/css/css_font.asp">w3schools: CSS Fonts</a>
+<section class="main-section-title" id="fontProperties"><h1>CSS свойства за оформление на шрифт</h1></section>
+<section><h2 class="sub-sections">CSS свойства за оформление на шрифт</h2>
+    <section><h3>Въведение</h3>
+        <dl class="fa" style="min-width:80vw">
+            <dt>Повече за шрифтовете: <a href="http://www.w3schools.com/css/css_font.asp">w3schools: CSS Fonts</a></dt>
+        </dl>
         <div class="results_h" style="color: #555; padding: .6em;">
             <p style="font-family: 'Marck Script', cursive; font-size: 1.5em; border: 1px solid #999;">Можем да задаваме тип на шрифта</p>
             <p style="font-size: 3em; border: 1px solid #999;">Можем да управляваме размера на шрифта</p>
@@ -192,7 +196,7 @@
             <p style="font-size: 1em; border: 1px solid #999; font-weight: 900;">Можем да управляваме дебелината на шрифта.</p>
         </div>
     </section>
-    <section>
+    <section><h3>Основни свойства</h3>
         <table border="1" style="font-size: .8em;">
           <thead>
             <tr>
@@ -227,7 +231,6 @@
             </tr>
           </tbody>
         </table>
-
     </section>
     <section><h3>Примери</h3>
         <table border="1" style="width: 100%; border-collapse: collapse; font-size: 20px;">
@@ -271,14 +274,16 @@
             </tr>
           </tbody>
         </table>
-
-
     </section>
     <section><h3>Font - съкратен запис за всички Font свойства</h3>
         <p>Свойство: font</p>
         <p><a href="http://www.w3schools.com/cssref/pr_font_font.asp">w3schools: CSS font Property</a></p>
     </section>
-    <section id="customFontsInclude"><h3>Включване на custom шрифтове</h3>
+</section>
+
+<section class="main-section-title" id="usingCustomFonts"><h1>Включване на custom шрифтове</h1></section>
+<section class="sub-sections"><h2>Включване на custom шрифтове</h2>
+	<section id="customFontsInclude"><h3>Включване на custom шрифтове</h3>
         <dl class="fa">
             <dt>Когато искаме да използваме нестандартен шрифт то освен да го посочим в <code>font-family</code>, трябва да включим и съответния файл с шрифта към страницата, за да бъде достъпен за потребителите.</dt>
             <dt>Това се осъществява, чрез CSS правилото <a href="https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp">@font-face </a></dt>
@@ -310,24 +315,28 @@
         </code></pre>
         <p>Самите файлове със шрифта, може да свалите от <a href="https://www.wfonts.com/font/chasing-embers-demo-version">тук</a></p>
     </section>
-    <section><h3>Включване на Google Fonts</h3>
-        <dl class="fa" style="font-size: .9em">
-            <dt>Отворете <a href="https://fonts.google.com/">fonts.google.com</a></dt>
-            <dt>От менюто "Categories" (в дясно), маркирайте категориите шрифтове, които ви интересуват.</dt>
-            <dt>Ако желаете само шрифтове, които да поддържат кирилица, то задайте език "Cyrillic" чрез менюто "Languages"</dt>
-            <dt>Може да прегледате отделните шрифтове като зададете ваш текст, от настройките за съответния шрифт:</dt>
-            <dd>От падащото меню за дадения шриф, изберете "custom" (<a href="images/googleFonts/select_custom_preview_1.png">ето как</a>)</dd>
-            <dd>След като въведете текста, може да го приложите върху всички шрифтове, като изберете "APPLY TO AL FONTS" (<a href="images/googleFonts/select_custom_preview_2.png">ето как</a>)</dd>
+</section>
+
+<section class="main-section-title" id="GoogleFonts"><h1>Използване на Google Fonts</h1></section>
+<section class="sub-sections"><h2>Използване на Google Fonts</h2>
+    <section><h3>Въведение</h3>
+        <dl class="fa" style="min-width:80vw">
+            <dt>Google Fonts е безплатна онлайн библиотека, която предоставя колекция от над 1,400 шрифта, които могат да се използват в уебсайтове.</dt>
+            <dt>Предимства:</dt>
+            <dd><em>Безплатни за ползване</em> - без лицензионни ограничения.</dd>
+            <dd><em>Лесна интеграция</em> - шрифтовете се добавят с линк или CSS <code>@import</code>.</dd>
+            <dd><em>Многообразие от стилове</em> - налични са различни семейства, дебелини и варианти.</dd>
+            <dd><em>Облачна услуга (cloud)</em> - хоствани на сървърите на Google, осигурявайки глобална достъпност и оптимизирано зареждане.</dd>
+            <dd><em>Автоматични актуализации</em> - винаги се ползва последната версия на шрифта.</dd>
+            <dd><em>Спестяване на ресурси</em> - не изисква хостване на шрифтовете на собствения сървър.</dd>
+            <dd><em>Кеширане</em> - шрифтовете се съхраняват локално, което ускорява зареждането при повторно посещение или на друг сайт, използващ същия шрифт.</dd>
         </dl>
     </section>
-    <section><h3>Включване на Google Fonts</h3>
-        <dl class="fa" style="font-size: .9em">
-            <dt>За да използвате даден шрифт във вашата страница: </dt>
-            <dd>Натиснете бутона '+' към избрания от вас шрифт.</dd>
-            <dd>Отворете появилият се в дъното на страницата блок с текст: "1 Family Selected" (<a href="images/googleFonts/select_custom_preview_3.png">ето как</a>)</dd>
-            <dd>Следвайте посочените там инструкции :)</dd>
-        </dl>
-    </section>
+</section>
+
+
+<section class="main-section-title" id="FontAwesome"><h1>Включване на шрифтове-икони</h1></section>
+<section class="sub-sections"><h2>Включване на шрифтове-икони</h2>
     <section><h3>Включване на шрифтове-икони</h3>
         <dl class="fa">
             <dt>Предпочитан вариант за икони е да използвате някоя от библиотеките, които предлагат векторни икони като шрифтове, вместо 'jpg', 'png' и пр. растерни изображения.</dt>
@@ -339,58 +348,92 @@
     </section>
     <section><h3>Font Awesome Icons- howto</h3>
         <dl class="fa">
+            <dt>Търсене на икони: <a href="https://fontawesome.com/search">fontawesome.com/search</a></dt>
             <dt>Вместо да сваляме  Font Awesome на нашия сървър, ще използваме CDN (Content Delivery Network), тъй като те са cloud базирани. Може да използвате:</dt>
-            <dd><a href="https://fontawesomecdn.com/">Font Awesome CDN</a></dd>
-            <dd><a href="https://www.bootstrapcdn.com/fontawesome/">BootstrapCDN</a></dd>
+            <dd><a href="https://cdnjs.com/libraries/font-awesome">Font Awesome CDN @cdnjs.com</a></dd>
             <dd>Или да се регистрирате с мейл към <a href="https://cdn.fontawesome.com/">Font Awesome CDN</a> за да получите персонализирана библиотека.</dd>
-            <dt>Без значение кой източник ще използвате, бъдете сигурни, че сте избрали <span class="note">min</span> версията на съответния файл.</dt>
+            <dt>Без значение кой източник ще използвате, бъдете сигурни, че сте избрали <span class="note">min</span> версията на съответния файл, както и че версията е >= на версията на иконите, които ще използвате.</dt>
         </dl>
     </section>
     <section><h3>Font Awesome Icons- howto</h3>
             <pre><code rel="HTML">
-                <!-- включваме Font Awesome min css : -->
                 &lt;head&gt;
-                    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css">
+                <!-- включваме Font Awesome: -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+                <style></style>
                 &lt;/head&gt;
                 &lt;body&gt;
-                    <!-- слагаме елемента, който ще генерира иконката -->
-                    <i class="fa fa-smile-o"></i>
+                    <!-- слагаме елемента, който ще генерира иконката. Може да добавим и стил -->
+                    <i class="fa-brands fa-html5" style="font-size: 50px; color:red"></i>
                 &lt;/body&gt;
             </code></pre>
     </section>
 </section>
 
-<section><h2>CSS свойства за фон на елемент</h2>
-    <section>
-        <a href="http://www.w3schools.com/css/css_background.asp">w3schools: CSS Backgrounds</a>
+<section class="main-section-title" id="backgroundProperties"><h1>CSS свойства за фон на елемент</h1></section>
+<section><h2 class="sub-sections">CSS свойства за фон на елемент</h2>
+    <section><h3>Основни свойства</h3>
+        <table border="1" style="font-size: .7em;">
+            <thead>
+                <tr>
+                    <th>Свойство</th>
+                    <th>Описание</th>
+                    <th>Пример</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="https://www.w3schools.com/cssref/pr_background-color.asp" target="_blank"><code>background-color</code></a></td>
+                    <td>Определя фоновия цвят на елемента.</td>
+                    <td><code>background-color: red;</code></td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.w3schools.com/cssref/pr_background-image.asp" target="_blank"><code>background-image</code></a></td>
+                    <td>Задава фоновото изображение за елемента.</td>
+                    <td><code>background-image: url('./images/red_star.png');</code></td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.w3schools.com/cssref/pr_background-repeat.asp" target="_blank"><code>background-repeat</code></a></td>
+                    <td>Определя дали фоновото изображение ще се повтори (повторение по хоризонтала, вертикала или не).<br>Възможни стойности: <code>repeat</code>, <code>no-repeat</code>, <code>repeat-x</code>, <code>repeat-y</code></td>
+                    <td><code>background-repeat: no-repeat;</code></td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.w3schools.com/cssref/pr_background-position.asp" target="_blank"><code>background-position</code></a></td>
+                    <td>Определя началната позиция на фоновото изображение.</td>
+                    <td><code>background-position: center;</code></td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.w3schools.com/cssref/pr_background-size.asp" target="_blank"><code>background-size</code></a></td>
+                    <td>Определя размера на фоновото изображение. Възможни стойности: <code>cover</code>, <code>contain</code>, или конкретни размери (напр. <code>100px 200px</code>).</td>
+                    <td><code>background-size: cover;</code></td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.w3schools.com/cssref/pr_background-attachment.asp" target="_blank"><code>background-attachment</code></a></td>
+                    <td>Определя дали фоновото изображение ще се движи при скролиране на страницата.<br>Възможни стойности: <code>scroll</code>, <code>fixed</code></td>
+                    <td><code>background-attachment: fixed;</code></td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.w3schools.com/cssref/pr_background.asp" target="_blank"><code>background</code></a></td>
+                    <td>Кратка форма за задаване на всички гореспоменати свойства.</td>
+                    <td><code>background: #fff url('./images/red_star.png') no-repeat center/cover fixed;</code></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Reference: <a href="http://www.w3schools.com/css/css_background.asp">w3schools: CSS Backgrounds</a></p>
     </section>
-    <section><h3>Background Color</h3>
-        <p>Свойство: background-color</p>
-        <p><a href="http://www.w3schools.com/cssref/pr_background-color.asp">w3schools: CSS background-color Property</a></p>
-    </section>
-    <section><h3>Background Image</h3>
-        <p>Свойство: background-image</p>
-        <p><a href="http://www.w3schools.com/cssref/pr_background-image.asp">w3schools: CSS background-image Property</a></p>
-    </section>
-    <section><h3>Background Image - Size</h3>
-        <p>Свойство: background-size</p>
-        <p><a href="http://www.w3schools.com/cssref/css3_pr_background-size.asp">w3schools: CSS background-size Property</a></p>
-    </section>
-    <section><h3>Background Image - Repeat</h3>
-        <p>Свойство: background-repeat</p>
-        <p><a href="http://www.w3schools.com/cssref/pr_background-repeat.asp">w3schools: CSS background-repeat Property</a></p>
-    </section>
-    <section><h3>Background Image - Position</h3>
-        <p>Свойство: background-position</p>
-        <p><a href="http://www.w3schools.com/cssref/pr_background-position.asp">w3schools: CSS background-position Property</a></p>
-    </section>
-    <section><h3>Background Image - Attachment</h3>
-        <p>Свойство: background-attachment</p>
-        <p><a href="http://www.w3schools.com/cssref/pr_background-attachment.asp">w3schools: CSS background-attachment Property</a></p>
-    </section>
-    <section><h3>Background - съкратен запис за всички Backgrounds свойства</h3>
-        <p>Свойство: background</p>
-        <p><a href="http://www.w3schools.com/cssref/css3_pr_background.asp">w3schools: CSS background Property</a></p>
+    <section><h3></h3>
+        <div class="scroll" style="height: 200px; overflow: auto; background: url('./images/red_star.png') no-repeat center center; background-attachment: scroll;">
+          Това е пример с <code>scroll</code>. Скролирайте, за да видите ефекта.
+        </div>
+
+        <div class="fixed" style="height: 200px; background: url('./images/red_star.png') no-repeat center center; background-attachment: fixed;">
+          Това е пример с <code>fixed</code>. Скролирайте, за да видите ефекта.
+        </div>
+
+        <div class="local" style="height: 200px; overflow: auto; background: url('./images/red_star.png') no-repeat center center; background-attachment: local;">
+          Това е пример с <code>local</code>. Скролирайте, за да видите ефекта.
+        </div>
+
     </section>
     <section id="background_examples"><h3>Задаване на фон за цялата страница.</h3>
         <dl class="fa">

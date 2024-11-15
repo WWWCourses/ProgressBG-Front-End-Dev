@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect with Nature Image</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .parallax {
+            background-image: url('../../images/ramiro-pianarosa-xUpbQ9GX7SQ-unsplash.jpg');
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .content {
+            height: 200px;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax"></div>
+    <div class="content">
+        <h2>Scroll Down to See the Parallax Effect</h2>
+        <p>As you scroll, the background image will stay fixed while the content moves.</p>
+    </div>
+    <div class="parallax"></div>
+</body>
+</html>
