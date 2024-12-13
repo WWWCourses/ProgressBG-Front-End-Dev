@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>PixiJS</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<link rel="icon" type="image/png" href="../../../../favicon.ico">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/css/print/pdf.css' : '../../../../lib/reveal.js/css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/advanced.html#PixiJS" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>next slide</span></div>
+				<div><span>P</span><span>previous slide</span></div>
+				<div><span>O</span><span>Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Web Graphics and Animations with PixiJS</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://progressbg.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/ProgressBG_logo_529_127.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+
+<section data-min="5"><h1>What is WebGL?</h1></section>
+<section><h2>What is WebGL?</h2>
+	<section><h3>Overview</h3>
+		<dl class="fa">
+			<dt><q cite="https://en.wikipedia.org/wiki/WebGL">WebGL (Web Graphics Library) is a JavaScript API for rendering interactive 2D and 3D graphics within any compatible web browser <span class="note">without the use of plug-ins</span>.</q> (<cite><a href="https://en.wikipedia.org/wiki/WebGL">WebGL @wikipedia</a></cite>), like Adobe Flash Player.</dt>
+			<dt>WebGL is an API based on OpenGL ES 2.0 and allows a web page to perform 3D rendering in an HTML &lt;canvas&gt; element.</dt>
+			<dt>WebGL programs consist of control code written in JavaScript and <span class="note">special effects code that is executed on a computer's GPU</span> (Graphics Processing Unit).</dt>
+			<dt>Creating astonishing animations with WebGl <span class="note">requires knowledge of 2D/3D Graphics</span> and mathematics behind.</dt>
+			<dt>What can we do with WebGL? Check <a href="https://webglsamples.org/">WebGL Samples</a></dt>
+		</dl>
+	</section>
+	<section><h3>WebGL Application Structure</h3>
+		<a href="./images/webGlApplicationStructure.png"><img src="./images/webGlApplicationStructure.png" alt="webGlApplicationStructure.png"></a>
+	</section>
+	<section><h3>WebGL - simple demo</h3>
+		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="html,result" data-user="webdesigncourse" data-slug-hash="BapOJxE" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="basic 2D WebGL animation example">
+			<span>See the Pen <a href="https://codepen.io/webdesigncourse/pen/BapOJxE">
+			basic 2D WebGL animation example</a> by Iva Popova (<a href="https://codepen.io/webdesigncourse">@webdesigncourse</a>)
+			on <a href="https://codepen.io">CodePen</a>.</span>
+		  </p>
+	</section>
+</section>
+
+<section data-min="5"><h1>PixiJS:introduction and setup</h1></section>
+<section><h2>PixiJS:introduction and setup</h2>
+	<section><h3>What is Pixi.js</h3>
+		<dl class="fa">
+			<dt>PixiJS is a rendering library which allows you to create rich, interactive graphics, cross platform applications, and games <span class="note">without having to dive into the WebGL APIs</span></dt>
+			<dt>Resources:</dt>
+			<dd><a href="https://pixijs.download/release/docs/index.html">Official docs</a></dd>
+			<dd><a href="https://www.pixijs.com/gallery">PixiJS Galery</a></dd>
+		</dl>
+  	</section>
+	<section><h3>Create your first PixiJS app with CDN</h3>
+		<dl class="fa">
+			<dt>Get the latest pixi version from a CDN.</dt>
+			<dt>Include it in your HEAD section</dt>
+			<pre><code rel="HTML" class="html">
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.0.2/browser/pixi.min.js"></script>
+			</code></pre>
+			<dt>Test pixi</dt>
+			<pre><code rel="JS" class="js">
+				function testPixi() {
+					let type = "WebGL"
+					if(!PIXI.utils.isWebGLSupported()){
+							type = "canvas"
+					}
+
+					PIXI.utils.sayHello(type);
+				}
+
+				testPixi()
+			</code></pre>
+		</dl>
+	</section>
+</section>
+
+<section data-min="5"><h1>Pixi Basic concepts</h1></section>
+<section><h2>Pixi Basic concepts</h2>
+	<section><h3>Application</h3>
+		<dl class="fa">
+			<dt>The <code>PIXI.Application</code> objects is the start point of our pixi app.</dt>
+			<dt>It initialize the area for aour PIXI animation</dt>
+			<dt>Reference: <a href="https://pixijs.download/release/docs/PIXI.Application.html">PIXI.Application</a></dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			// Create a Pixi Application Object
+			let app = new PIXI.Application({width: 256, height: 256});
+
+			// Let Pixi create a canvas attach it in the  HTML document
+			document.body.appendChild(app.view);
+
+			// console.dir(app.view);
+		</code></pre>
+	</section>
+	<section><h3><code>stage object</code></h3>
+		<dl class="fa">
+			<dt>The <code>stage object</code> is the root container for all the visible things in our scene.</dt>
+			<dt>We put all of our sprites inside the stage and they will be rendered on the canvas</dt>
+			<dd><span class="note">sprite</span> is an image that we can control with code</dd>
+			<dt>the <code>stage object</code> is a <code>PIXI.Container</code> object</dt>
+			<dt>Reference: <a href="https://pixijs.download/release/docs/PIXI.Application.html#stage">stage object</a></dt>
+			<dt>Reference: <a href="https://pixijs.download/release/docs/PIXI.Container.html">PIXI.Container</a></dt>
+		</dl>
+	</section>
+	<section><h3>Sprites</h3>
+		<dl class="fa">
+			<dt><q>In computer graphics, a sprite is a two-dimensional bitmap that is integrated into a larger scene, most often in a 2D video game.</q> ( <cite><a href="https://en.wikipedia.org/wiki/Sprite_(computer_graphics)">Sprite @wikipedia</a></cite> )</dt>
+			<dt>A Sprite can be moved on-screen and otherwise manipulated as a single entity.</dt>
+			<dt>There are three main ways to create a Pixi Sprite object:</dt>
+			<dd>From a single image file.</dd>
+			<dd>From a sub-image on a tileset. A tileset is a single, big image that includes all the images you'll need in your game.</dd>
+			<dd>From a texture atlas (A JSON file that defines the size and position of an image on a tileset.)</dd>
+			<dt class="note">After a sprite is created we must add it to the stage in order to see it!</dt>
+		</dl>
+	</section>
+	<section><h3>Simplest Sprite - Example</h3>
+		<pre><code rel="JS" class="js">
+			let catImagePath = "../../assets/images/Siberian_cat_patronus.png";
+
+			// create sprite
+			let sprite = PIXI.Sprite.from(catImagePath);
+
+			// add sprite to the stage
+			app.stage.addChild(sprite);
+		</code></pre>
+	</section>
+	<section><h3>Texture</h3>
+		<dl class="fa">
+			<dt>Before we can make a sprite, we need to convert an ordinary image file into a WebGL texture</dt>
+			<dt>A Texture stores the information that represents an image</dt>
+			<dt>Pixi uses a <span class="note">texture cache</span> to store and reference all the textures your sprites will nee</dt>
+			<dt>For optimization and efficiency it’s always best to make a sprite from a texture that’s been pre-loaded into Pixi’s texture cache</dt>
+		</dl>
+	</section>
+	<section><h3><code>loader object</code></h3>
+		<dl class="fa">
+			<dt>Pixi <code>loader object</code> loads an image file and convert it into a texture</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			PIXI.loader
+				.add("path/to/image.png")
+				.load(build);
+
+			function build() {
+				//This callback will run when the loader has finished loading the image
+			}
+		</code></pre>
+	</section>
+	<section><h3>loader object - example</h3>
+		<pre><code rel="JS" class="js">
+			let catImagePath = "../../assets/images/Siberian_cat_patronus.png";
+
+			app.loader
+				.add('cat',catImagePath)
+				.load(build);
+
+			function build() {
+				// Create a new texture
+				const texture = app.loader.resources.cat.texture;
+
+				// create sprite
+				let sprite = new PIXI.Sprite(texture);
+
+				// add the srite to the stage
+				app.stage.addChild(sprite);
+			}
+		</code></pre>
+	</section>
+	<section><h3><code>ticker object</code></h3>
+		<dl class="fa">
+			<dt>A <code>ticker object</code> is an animation loop that you can add callbacks to</dt>
+			<dt>Reference: <a href="https://pixijs.download/release/docs/PIXI.Ticker.html">PIXI.Ticker</a></dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			app.ticker.add(() => {
+				// each frame we spin the cat around a bit
+				sprite1.rotation += 0.01;
+			});
+		</code></pre>
+	</section>
+</section>
+
+<section data-min="5"><h1>PixiJS Examples</h1></section>
+<section><h2>PixiJS Examples</h2>
+	<section><h3>Self-Learning && Live Demo</h3>
+		<dl class="fa">
+			<dt>Resources: <a href="https://pixijs.io/examples">pixijs.io/examples</a></dt>
+		</dl>
+	</section>
+</section>
+
+<!-- <section data-min="5"><h1>Setup pixi project with npm and webpack</h1></section>
+<section><h2>Setup pixi project with npm and webpack</h2>
+	<section><h3>What to install?</h3>
+		<dl class="fa">
+			<dt>NPM Install</dt>
+		</dl>
+		<pre><code rel="Terminal" class="bash">
+			# create and navigate to your root project folder
+			mkdir pixiDemoProject && cd pixiDemoProject
+
+			# make sure you're in:
+			pwd
+
+			# init your project for NPM (-y => with 'yes' as default answer):
+			npm init -y
+
+			# install pixi.js locally:
+			npm install pixi.js
+
+			# create project structure:
+			mkdir src
+			touch src/{index.html,main.css,script.js}
+		</code></pre>
+		<p>Your main project folder should now look like</p>
+		<pre><code rel="Terminal" class="bash">
+			pixiDemoProject/
+			├── node_modules [14 entries exceeds filelimit, not opening dir]
+			├── package.json
+			├── package-lock.json
+			└── src
+						├── index.html
+						├── main.css
+						└── script.js
+
+		</code></pre>
+	</section>
+</section> -->
+
+
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+</div>
+</div>
+<!-- Custom processing -->
+<script src="../../../../outfit/js/slides.js"></script>
+<!-- external scripts -->
+<script src="../../../../lib/reveal.js/js/reveal.js"></script>
+<!-- init reveal -->
+<script>
+	// Full list of configuration options available at:
+	// https://github.com/hakimel/reveal.js#configuration
+	var highlightjsTabSize = '  ';
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		slideNumber: 'c/t',
+		keyboard: true,
+		history: true,
+		center: true,
+		width: 1280,
+		height: 1024,
+		// Bounds for smallest/largest possible scale to apply to content
+		minScale: .5,
+		maxScale: 1,
+		// slide transition
+		transition: 'concave', // none/fade/slide/convex/concave/zoom
+		// Factor of the display size that should remain empty around the content
+		margin: 0.1,
+		// shift+maous click to zoom in/out element
+		zoomKey: 'ctrl',
+		// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+		// transition: Reveal.getQueryHash().transition || 'default'
+		// Optional reveal.js plugins
+		dependencies: [
+			{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+			{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+			{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+		]
+	});
+</script>
+<!-- linkedin badge -->
+<!-- <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script> -->
+
+<!-- <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script> -->
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>
