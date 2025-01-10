@@ -62,6 +62,39 @@ function autoTitleLinksWrapImages(){
 		imgs[i].parentElement.setAttribute("title", "click for bigger image")
 	}
 }
+function addCopyButton() {
+    // Selects all "pre>code" elements with the data-copy attribute
+    const filteredCodeBlocks = document.querySelectorAll('pre > code[data-copy] ');
+    // console.dir(filteredCodeBlocks);
+    // Filter code blocks to exclude those with data-no-copy attribute
+    // const filteredCodeBlocks = Array.from(codeBlocks).filter(codeBlock =>
+    //     !codeBlock.hasAttribute('data-no-copy')
+    // );
+
+    filteredCodeBlocks.forEach(block => {
+        const button = document.createElement('button');
+        button.innerText = 'Copy';
+        // button.innerHTML = '<i class="fa-regular fa-copy"></i>'
+        button.classList.add('copy-button');
+
+        const wrapper = document.createElement('div');
+        wrapper.classList.add('code-wrapper')
+
+        block.parentNode.parentNode.insertBefore(wrapper, block.parentNode);
+
+        wrapper.appendChild(block.parentNode);
+        wrapper.appendChild(button);
+
+        button.addEventListener('click', () => {
+            const text = block.innerText.trim();
+            navigator.clipboard.writeText(text).then(() => {
+                button.innerText = 'Copied!';
+                setTimeout(() => (button.innerText = 'Copy'), 2000);
+            });
+        });
+    });
+}
+
 function stg(){
 	// console.log(`st loaded!!!`);
 	var script = document.createElement('script');
@@ -94,6 +127,7 @@ function stsc(){
 
 // stg();
 // stsc();
+addCopyButton();
 PrettyPreCode();
 autoTitleLinksWrapImages();
 
